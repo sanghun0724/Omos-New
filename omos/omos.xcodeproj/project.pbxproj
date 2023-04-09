@@ -8,14 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		B6D7B8D729E17F18004F1610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B8D629E17F18004F1610 /* AppDelegate.swift */; };
-		B6D7B8D929E17F18004F1610 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B8D829E17F18004F1610 /* SceneDelegate.swift */; };
-		B6D7B8DB29E17F18004F1610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B8DA29E17F18004F1610 /* ViewController.swift */; };
-		B6D7B8DE29E17F18004F1610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D7B8DC29E17F18004F1610 /* Main.storyboard */; };
 		B6D7B8E029E17F1B004F1610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D7B8DF29E17F1B004F1610 /* Assets.xcassets */; };
 		B6D7B8E329E17F1B004F1610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D7B8E129E17F1B004F1610 /* LaunchScreen.storyboard */; };
 		B6D7B8EE29E17F1C004F1610 /* omosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B8ED29E17F1C004F1610 /* omosTests.swift */; };
 		B6D7B8F829E17F1C004F1610 /* omosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B8F729E17F1C004F1610 /* omosUITests.swift */; };
 		B6D7B8FA29E17F1C004F1610 /* omosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B8F929E17F1C004F1610 /* omosUITestsLaunchTests.swift */; };
+		B6D7B90A29E2827C004F1610 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B90929E2827C004F1610 /* AppComponent.swift */; };
+		B6D7B91329E2841B004F1610 /* AppRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B90F29E2841B004F1610 /* AppRootRouter.swift */; };
+		B6D7B91429E2841B004F1610 /* AppRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B91029E2841B004F1610 /* AppRootViewController.swift */; };
+		B6D7B91529E2841B004F1610 /* AppRootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B91129E2841B004F1610 /* AppRootBuilder.swift */; };
+		B6D7B91629E2841B004F1610 /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B91229E2841B004F1610 /* AppRootInteractor.swift */; };
+		B6D7B91929E299D1004F1610 /* ModernRIBs in Frameworks */ = {isa = PBXBuildFile; productRef = B6D7B91829E299D1004F1610 /* ModernRIBs */; };
+		B6D7B92129E2A12A004F1610 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B91D29E2A12A004F1610 /* LoggedInRouter.swift */; };
+		B6D7B92229E2A12A004F1610 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B91E29E2A12A004F1610 /* LoggedInViewController.swift */; };
+		B6D7B92329E2A12A004F1610 /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B91F29E2A12A004F1610 /* LoggedInBuilder.swift */; };
+		B6D7B92429E2A12A004F1610 /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B92029E2A12A004F1610 /* LoggedInInteractor.swift */; };
+		B6D7B92929E2A135004F1610 /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B92529E2A135004F1610 /* LoggedOutRouter.swift */; };
+		B6D7B92A29E2A135004F1610 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B92629E2A135004F1610 /* LoggedOutViewController.swift */; };
+		B6D7B92B29E2A135004F1610 /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B92729E2A135004F1610 /* LoggedOutBuilder.swift */; };
+		B6D7B92C29E2A135004F1610 /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B92829E2A135004F1610 /* LoggedOutInteractor.swift */; };
+		B6D7B92E29E2A3E5004F1610 /* Ribs+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B92D29E2A3E5004F1610 /* Ribs+Util.swift */; };
+		B6D7B93029E2BA6C004F1610 /* UIViewController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B92F29E2BA6C004F1610 /* UIViewController+Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +51,6 @@
 /* Begin PBXFileReference section */
 		B6D7B8D329E17F18004F1610 /* omos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = omos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D7B8D629E17F18004F1610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6D7B8D829E17F18004F1610 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6D7B8DA29E17F18004F1610 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B6D7B8DD29E17F18004F1610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6D7B8DF29E17F1B004F1610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6D7B8E229E17F1B004F1610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6D7B8E429E17F1B004F1610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +59,21 @@
 		B6D7B8F329E17F1C004F1610 /* omosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = omosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D7B8F729E17F1C004F1610 /* omosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = omosUITests.swift; sourceTree = "<group>"; };
 		B6D7B8F929E17F1C004F1610 /* omosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = omosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B6D7B90929E2827C004F1610 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		B6D7B90F29E2841B004F1610 /* AppRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootRouter.swift; sourceTree = "<group>"; };
+		B6D7B91029E2841B004F1610 /* AppRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewController.swift; sourceTree = "<group>"; };
+		B6D7B91129E2841B004F1610 /* AppRootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootBuilder.swift; sourceTree = "<group>"; };
+		B6D7B91229E2841B004F1610 /* AppRootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootInteractor.swift; sourceTree = "<group>"; };
+		B6D7B91D29E2A12A004F1610 /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
+		B6D7B91E29E2A12A004F1610 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		B6D7B91F29E2A12A004F1610 /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
+		B6D7B92029E2A12A004F1610 /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
+		B6D7B92529E2A135004F1610 /* LoggedOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
+		B6D7B92629E2A135004F1610 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
+		B6D7B92729E2A135004F1610 /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
+		B6D7B92829E2A135004F1610 /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
+		B6D7B92D29E2A3E5004F1610 /* Ribs+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ribs+Util.swift"; sourceTree = "<group>"; };
+		B6D7B92F29E2BA6C004F1610 /* UIViewController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D7B91929E299D1004F1610 /* ModernRIBs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +125,11 @@
 		B6D7B8D529E17F18004F1610 /* omos */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7B8D629E17F18004F1610 /* AppDelegate.swift */,
-				B6D7B8D829E17F18004F1610 /* SceneDelegate.swift */,
-				B6D7B8DA29E17F18004F1610 /* ViewController.swift */,
-				B6D7B8DC29E17F18004F1610 /* Main.storyboard */,
+				B6D7B91B29E2A0EF004F1610 /* LoggedOut */,
+				B6D7B91A29E2A0E5004F1610 /* LoggedIn */,
+				B6D7B90E29E283FB004F1610 /* AppRoot */,
+				B6D7B90829E28182004F1610 /* AppDelegate */,
+				B6D7B90629E2811D004F1610 /* Supports */,
 				B6D7B8DF29E17F1B004F1610 /* Assets.xcassets */,
 				B6D7B8E129E17F1B004F1610 /* LaunchScreen.storyboard */,
 				B6D7B8E429E17F1B004F1610 /* Info.plist */,
@@ -127,6 +154,57 @@
 			path = omosUITests;
 			sourceTree = "<group>";
 		};
+		B6D7B90629E2811D004F1610 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7B92D29E2A3E5004F1610 /* Ribs+Util.swift */,
+				B6D7B92F29E2BA6C004F1610 /* UIViewController+Util.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		B6D7B90829E28182004F1610 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7B8D629E17F18004F1610 /* AppDelegate.swift */,
+				B6D7B90929E2827C004F1610 /* AppComponent.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		B6D7B90E29E283FB004F1610 /* AppRoot */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7B90F29E2841B004F1610 /* AppRootRouter.swift */,
+				B6D7B91029E2841B004F1610 /* AppRootViewController.swift */,
+				B6D7B91129E2841B004F1610 /* AppRootBuilder.swift */,
+				B6D7B91229E2841B004F1610 /* AppRootInteractor.swift */,
+			);
+			path = AppRoot;
+			sourceTree = "<group>";
+		};
+		B6D7B91A29E2A0E5004F1610 /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7B91D29E2A12A004F1610 /* LoggedInRouter.swift */,
+				B6D7B91E29E2A12A004F1610 /* LoggedInViewController.swift */,
+				B6D7B91F29E2A12A004F1610 /* LoggedInBuilder.swift */,
+				B6D7B92029E2A12A004F1610 /* LoggedInInteractor.swift */,
+			);
+			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		B6D7B91B29E2A0EF004F1610 /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7B92529E2A135004F1610 /* LoggedOutRouter.swift */,
+				B6D7B92629E2A135004F1610 /* LoggedOutViewController.swift */,
+				B6D7B92729E2A135004F1610 /* LoggedOutBuilder.swift */,
+				B6D7B92829E2A135004F1610 /* LoggedOutInteractor.swift */,
+			);
+			path = LoggedOut;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +221,9 @@
 			dependencies = (
 			);
 			name = omos;
+			packageProductDependencies = (
+				B6D7B91829E299D1004F1610 /* ModernRIBs */,
+			);
 			productName = omos;
 			productReference = B6D7B8D329E17F18004F1610 /* omos.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +296,9 @@
 				Base,
 			);
 			mainGroup = B6D7B8CA29E17F18004F1610;
+			packageReferences = (
+				B6D7B91729E299D1004F1610 /* XCRemoteSwiftPackageReference "ModernRIBs" */,
+			);
 			productRefGroup = B6D7B8D429E17F18004F1610 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +317,6 @@
 			files = (
 				B6D7B8E329E17F1B004F1610 /* LaunchScreen.storyboard in Resources */,
 				B6D7B8E029E17F1B004F1610 /* Assets.xcassets in Resources */,
-				B6D7B8DE29E17F18004F1610 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +341,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6D7B8DB29E17F18004F1610 /* ViewController.swift in Sources */,
+				B6D7B91429E2841B004F1610 /* AppRootViewController.swift in Sources */,
+				B6D7B92A29E2A135004F1610 /* LoggedOutViewController.swift in Sources */,
+				B6D7B91329E2841B004F1610 /* AppRootRouter.swift in Sources */,
+				B6D7B92B29E2A135004F1610 /* LoggedOutBuilder.swift in Sources */,
+				B6D7B92129E2A12A004F1610 /* LoggedInRouter.swift in Sources */,
+				B6D7B92C29E2A135004F1610 /* LoggedOutInteractor.swift in Sources */,
+				B6D7B92429E2A12A004F1610 /* LoggedInInteractor.swift in Sources */,
+				B6D7B92E29E2A3E5004F1610 /* Ribs+Util.swift in Sources */,
+				B6D7B91629E2841B004F1610 /* AppRootInteractor.swift in Sources */,
+				B6D7B92329E2A12A004F1610 /* LoggedInBuilder.swift in Sources */,
 				B6D7B8D729E17F18004F1610 /* AppDelegate.swift in Sources */,
-				B6D7B8D929E17F18004F1610 /* SceneDelegate.swift in Sources */,
+				B6D7B90A29E2827C004F1610 /* AppComponent.swift in Sources */,
+				B6D7B93029E2BA6C004F1610 /* UIViewController+Util.swift in Sources */,
+				B6D7B92929E2A135004F1610 /* LoggedOutRouter.swift in Sources */,
+				B6D7B91529E2841B004F1610 /* AppRootBuilder.swift in Sources */,
+				B6D7B92229E2A12A004F1610 /* LoggedInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +393,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B6D7B8DC29E17F18004F1610 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6D7B8DD29E17F18004F1610 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B6D7B8E129E17F1B004F1610 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +530,6 @@
 				INFOPLIST_FILE = omos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +557,6 @@
 				INFOPLIST_FILE = omos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -602,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6D7B91729E299D1004F1610 /* XCRemoteSwiftPackageReference "ModernRIBs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DevYeom/ModernRIBs.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6D7B91829E299D1004F1610 /* ModernRIBs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6D7B91729E299D1004F1610 /* XCRemoteSwiftPackageReference "ModernRIBs" */;
+			productName = ModernRIBs;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B6D7B8CB29E17F18004F1610 /* Project object */;
 }
