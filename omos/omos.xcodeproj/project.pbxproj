@@ -3,140 +3,270 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B6D7B8D729E17F18004F1610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B8D629E17F18004F1610 /* AppDelegate.swift */; };
-		B6D7B8D929E17F18004F1610 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B8D829E17F18004F1610 /* SceneDelegate.swift */; };
-		B6D7B8DB29E17F18004F1610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B8DA29E17F18004F1610 /* ViewController.swift */; };
-		B6D7B8DE29E17F18004F1610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D7B8DC29E17F18004F1610 /* Main.storyboard */; };
-		B6D7B8E029E17F1B004F1610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D7B8DF29E17F1B004F1610 /* Assets.xcassets */; };
-		B6D7B8E329E17F1B004F1610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D7B8E129E17F1B004F1610 /* LaunchScreen.storyboard */; };
-		B6D7B8EE29E17F1C004F1610 /* omosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B8ED29E17F1C004F1610 /* omosTests.swift */; };
-		B6D7B8F829E17F1C004F1610 /* omosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B8F729E17F1C004F1610 /* omosUITests.swift */; };
-		B6D7B8FA29E17F1C004F1610 /* omosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B8F929E17F1C004F1610 /* omosUITestsLaunchTests.swift */; };
+		04188CE00DE49EC8A3E8B549 /* UIViewController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C23CB20C21E93828F99912 /* UIViewController+Util.swift */; };
+		1696D46D8F494E894A62543E /* AppRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78D6CE284375721D50D924 /* AppRootRouter.swift */; };
+		1BDC44B5B34036C8EB4DCADD /* TuistBundle+Omos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B34F760DB56E5423989688D /* TuistBundle+Omos.swift */; };
+		25D7978C8569B46CA0D46E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6BCBB01414B88C6CC51501 /* Assets.xcassets */; };
+		2C8C7F0EBCA27D10816A19AD /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A61348CFACE0D70B5257DA /* LoggedOutRouter.swift */; };
+		339AC3CD705AE5ED1D5C1B7E /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68826E78B2062257603E5BF /* LoggedOutViewController.swift */; };
+		35FCCB393FA418E1875AE748 /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4D71CCE1625CCE075B1B3 /* LoggedOutBuilder.swift */; };
+		36413F02A77241023B0A7563 /* AppRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC5C26CAC2C92EC820E725 /* AppRootViewController.swift */; };
+		3D5DC9B1B4F4F20D1E805A7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEB41F9383BDF450C911653 /* AppDelegate.swift */; };
+		65A4E79BAAB79E741F630BD4 /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9D093D55345521CAF83267 /* LoggedInInteractor.swift */; };
+		660BCEB68566F5819A6D65B6 /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47846FFDCB77F81CA67C9D1 /* LoggedOutInteractor.swift */; };
+		7372F88859B394F0ABA110B4 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65190C700D71A65206668E /* AppComponent.swift */; };
+		80718E588959C2EF764DAAEC /* TuistAssets+Omos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB851767C736D0AE441C133 /* TuistAssets+Omos.swift */; };
+		9BCA6CBF12260F7569A1C539 /* ModernRIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022B6CDB08E38549A69F088D /* ModernRIBs.framework */; platformFilter = ios; };
+		ACC081B43B591760A5672759 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEAEC033E56F37FB7731574 /* test.swift */; };
+		AE2A75B8A60B61385B655F01 /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B91DDF260805CCAACA7F50 /* AppRootInteractor.swift */; };
+		B6BF90AD2923B0011A2A7B1B /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF363DC654A07BB9914F7A23 /* LoggedInViewController.swift */; };
+		B8DE5FD50DFCD06513AA2541 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22209C46493147811919C76F /* LoggedInRouter.swift */; };
+		B9788B4B5E6C3749AA85BB5D /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D56CFC7C278B402C6E053C /* LoggedInBuilder.swift */; };
+		DBE91B06C828809136611DE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A780E49512F7F50945E1487 /* LaunchScreen.storyboard */; };
+		E7C5E36C232D7C174D8F3D45 /* AppRootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99BD174C930B37F8E8F39CC /* AppRootBuilder.swift */; };
+		EE26FD7055BBE9D1E081D4D4 /* Ribs+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0CA400B4B1EDE22940FAE4 /* Ribs+Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B6D7B8EA29E17F1C004F1610 /* PBXContainerItemProxy */ = {
+		86E642F2E942E3F126631AF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B6D7B8CB29E17F18004F1610 /* Project object */;
+			containerPortal = 5DEA71E25D18D73949C7649D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B6D7B8D229E17F18004F1610;
-			remoteInfo = omos;
-		};
-		B6D7B8F429E17F1C004F1610 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B6D7B8CB29E17F18004F1610 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B6D7B8D229E17F18004F1610;
+			remoteGlobalIDString = 211EF7312EEAB1391F0D7EE5;
 			remoteInfo = omos;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		16A7493489B8C28317497A61 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9A37ADEB240450F85691E03 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		B6D7B8D329E17F18004F1610 /* omos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = omos.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6D7B8D629E17F18004F1610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6D7B8D829E17F18004F1610 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6D7B8DA29E17F18004F1610 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B6D7B8DD29E17F18004F1610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B6D7B8DF29E17F1B004F1610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B6D7B8E229E17F1B004F1610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B6D7B8E429E17F1B004F1610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6D7B8E929E17F1C004F1610 /* omosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = omosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6D7B8ED29E17F1C004F1610 /* omosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = omosTests.swift; sourceTree = "<group>"; };
-		B6D7B8F329E17F1C004F1610 /* omosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = omosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6D7B8F729E17F1C004F1610 /* omosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = omosUITests.swift; sourceTree = "<group>"; };
-		B6D7B8F929E17F1C004F1610 /* omosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = omosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		022B6CDB08E38549A69F088D /* ModernRIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModernRIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048909F3094F5071D77E6628 /* omos-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "omos-Info.plist"; sourceTree = "<group>"; };
+		173B1E7E8FEA64A73F153BFB /* omosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = omosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B91DDF260805CCAACA7F50 /* AppRootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootInteractor.swift; sourceTree = "<group>"; };
+		22209C46493147811919C76F /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
+		27D56CFC7C278B402C6E053C /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
+		3BC4D71CCE1625CCE075B1B3 /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
+		3DC4045518C0B25EB2D9004C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5FB851767C736D0AE441C133 /* TuistAssets+Omos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Omos.swift"; sourceTree = "<group>"; };
+		6B34F760DB56E5423989688D /* TuistBundle+Omos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Omos.swift"; sourceTree = "<group>"; };
+		6DB26A50C053ACA16DD11CCF /* omosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "omosTests-Info.plist"; sourceTree = "<group>"; };
+		74C23CB20C21E93828F99912 /* UIViewController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
+		7E65190C700D71A65206668E /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		7FEC5C26CAC2C92EC820E725 /* AppRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewController.swift; sourceTree = "<group>"; };
+		96A61348CFACE0D70B5257DA /* LoggedOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
+		9BEAEC033E56F37FB7731574 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		9CEB41F9383BDF450C911653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A397C03B7E8B63F41EB20E23 /* omos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = omos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B99BD174C930B37F8E8F39CC /* AppRootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootBuilder.swift; sourceTree = "<group>"; };
+		C68826E78B2062257603E5BF /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
+		CB78D6CE284375721D50D924 /* AppRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootRouter.swift; sourceTree = "<group>"; };
+		CD0CA400B4B1EDE22940FAE4 /* Ribs+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ribs+Util.swift"; sourceTree = "<group>"; };
+		DF363DC654A07BB9914F7A23 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		DF9D093D55345521CAF83267 /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
+		F47846FFDCB77F81CA67C9D1 /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
+		FC6BCBB01414B88C6CC51501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B6D7B8D029E17F18004F1610 /* Frameworks */ = {
+		0FA06A5E74443D0D2C753A78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6D7B8E629E17F1C004F1610 /* Frameworks */ = {
+		38C54D209B1FD6E17AABE3BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B6D7B8F029E17F1C004F1610 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				9BCA6CBF12260F7569A1C539 /* ModernRIBs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B6D7B8CA29E17F18004F1610 = {
+		0B93830186555FC3F45C6D9F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7B8D529E17F18004F1610 /* omos */,
-				B6D7B8EC29E17F1C004F1610 /* omosTests */,
-				B6D7B8F629E17F1C004F1610 /* omosUITests */,
-				B6D7B8D429E17F18004F1610 /* Products */,
+				9BEAEC033E56F37FB7731574 /* test.swift */,
 			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		B6D7B8D429E17F18004F1610 /* Products */ = {
+		0EEB7EBAF86E0C23BDC32C70 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7B8D329E17F18004F1610 /* omos.app */,
-				B6D7B8E929E17F1C004F1610 /* omosTests.xctest */,
-				B6D7B8F329E17F1C004F1610 /* omosUITests.xctest */,
+				022B6CDB08E38549A69F088D /* ModernRIBs.framework */,
+				A397C03B7E8B63F41EB20E23 /* omos.app */,
+				173B1E7E8FEA64A73F153BFB /* omosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B6D7B8D529E17F18004F1610 /* omos */ = {
+		26596345A23282B6D5F0457D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7B8D629E17F18004F1610 /* AppDelegate.swift */,
-				B6D7B8D829E17F18004F1610 /* SceneDelegate.swift */,
-				B6D7B8DA29E17F18004F1610 /* ViewController.swift */,
-				B6D7B8DC29E17F18004F1610 /* Main.storyboard */,
-				B6D7B8DF29E17F1B004F1610 /* Assets.xcassets */,
-				B6D7B8E129E17F1B004F1610 /* LaunchScreen.storyboard */,
-				B6D7B8E429E17F1B004F1610 /* Info.plist */,
+				2B8294F98C3DE75021633301 /* AppDelegate */,
+				D34D802BA2EFCF60F85D866C /* AppRoot */,
+				F4CFBD3E1736863663D435FF /* LoggedIn */,
+				8026B77EB96245963B985521 /* LoggedOut */,
+				EC627B980286759F328FFE73 /* Supports */,
 			);
-			path = omos;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		B6D7B8EC29E17F1C004F1610 /* omosTests */ = {
+		2B8294F98C3DE75021633301 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7B8ED29E17F1C004F1610 /* omosTests.swift */,
+				7E65190C700D71A65206668E /* AppComponent.swift */,
+				9CEB41F9383BDF450C911653 /* AppDelegate.swift */,
 			);
-			path = omosTests;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		B6D7B8F629E17F1C004F1610 /* omosUITests */ = {
+		35449E7134268712F43EEBFB /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7B8F729E17F1C004F1610 /* omosUITests.swift */,
-				B6D7B8F929E17F1C004F1610 /* omosUITestsLaunchTests.swift */,
+				3C17AD186D87AA29732AC4EF /* Derived */,
+				D6BBE73D83E3BBEB53819776 /* Resources */,
+				26596345A23282B6D5F0457D /* Sources */,
+				0B93830186555FC3F45C6D9F /* Tests */,
 			);
-			path = omosUITests;
+			name = Project;
+			sourceTree = "<group>";
+		};
+		3C17AD186D87AA29732AC4EF /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				D47EF9E815CD0B9FE1023AD5 /* InfoPlists */,
+				B0B8BDF88FD15DB70C8CB99C /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		8026B77EB96245963B985521 /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				3BC4D71CCE1625CCE075B1B3 /* LoggedOutBuilder.swift */,
+				F47846FFDCB77F81CA67C9D1 /* LoggedOutInteractor.swift */,
+				96A61348CFACE0D70B5257DA /* LoggedOutRouter.swift */,
+				C68826E78B2062257603E5BF /* LoggedOutViewController.swift */,
+			);
+			path = LoggedOut;
+			sourceTree = "<group>";
+		};
+		9915091795ADCF643EE797F5 = {
+			isa = PBXGroup;
+			children = (
+				35449E7134268712F43EEBFB /* Project */,
+				FCCF4094B9186F65C125D6C1 /* Frameworks */,
+				0EEB7EBAF86E0C23BDC32C70 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0B8BDF88FD15DB70C8CB99C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5FB851767C736D0AE441C133 /* TuistAssets+Omos.swift */,
+				6B34F760DB56E5423989688D /* TuistBundle+Omos.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D34D802BA2EFCF60F85D866C /* AppRoot */ = {
+			isa = PBXGroup;
+			children = (
+				B99BD174C930B37F8E8F39CC /* AppRootBuilder.swift */,
+				19B91DDF260805CCAACA7F50 /* AppRootInteractor.swift */,
+				CB78D6CE284375721D50D924 /* AppRootRouter.swift */,
+				7FEC5C26CAC2C92EC820E725 /* AppRootViewController.swift */,
+			);
+			path = AppRoot;
+			sourceTree = "<group>";
+		};
+		D47EF9E815CD0B9FE1023AD5 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				048909F3094F5071D77E6628 /* omos-Info.plist */,
+				6DB26A50C053ACA16DD11CCF /* omosTests-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		D6BBE73D83E3BBEB53819776 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A780E49512F7F50945E1487 /* LaunchScreen.storyboard */,
+				FC6BCBB01414B88C6CC51501 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC627B980286759F328FFE73 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				CD0CA400B4B1EDE22940FAE4 /* Ribs+Util.swift */,
+				74C23CB20C21E93828F99912 /* UIViewController+Util.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		F4CFBD3E1736863663D435FF /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
+				27D56CFC7C278B402C6E053C /* LoggedInBuilder.swift */,
+				DF9D093D55345521CAF83267 /* LoggedInInteractor.swift */,
+				22209C46493147811919C76F /* LoggedInRouter.swift */,
+				DF363DC654A07BB9914F7A23 /* LoggedInViewController.swift */,
+			);
+			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		FCCF4094B9186F65C125D6C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B6D7B8D229E17F18004F1610 /* omos */ = {
+		211EF7312EEAB1391F0D7EE5 /* omos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B6D7B8FD29E17F1C004F1610 /* Build configuration list for PBXNativeTarget "omos" */;
+			buildConfigurationList = 0886036C042AE353C701B8E1 /* Build configuration list for PBXNativeTarget "omos" */;
 			buildPhases = (
-				B6D7B8CF29E17F18004F1610 /* Sources */,
-				B6D7B8D029E17F18004F1610 /* Frameworks */,
-				B6D7B8D129E17F18004F1610 /* Resources */,
+				BB9194623CCB3F31896A6F50 /* Sources */,
+				CC11AA4A046933D8D9D2458D /* Resources */,
+				A9A37ADEB240450F85691E03 /* Embed Frameworks */,
+				38C54D209B1FD6E17AABE3BA /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,171 +274,128 @@
 			);
 			name = omos;
 			productName = omos;
-			productReference = B6D7B8D329E17F18004F1610 /* omos.app */;
+			productReference = A397C03B7E8B63F41EB20E23 /* omos.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B6D7B8E829E17F1C004F1610 /* omosTests */ = {
+		A4222463553B5FC75AE27802 /* omosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B6D7B90029E17F1C004F1610 /* Build configuration list for PBXNativeTarget "omosTests" */;
+			buildConfigurationList = 35CA39FD789F209E79698590 /* Build configuration list for PBXNativeTarget "omosTests" */;
 			buildPhases = (
-				B6D7B8E529E17F1C004F1610 /* Sources */,
-				B6D7B8E629E17F1C004F1610 /* Frameworks */,
-				B6D7B8E729E17F1C004F1610 /* Resources */,
+				FB958F91BBE6C96E743B395C /* Sources */,
+				327D5C9F99E0F72660645505 /* Resources */,
+				16A7493489B8C28317497A61 /* Embed Frameworks */,
+				0FA06A5E74443D0D2C753A78 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B6D7B8EB29E17F1C004F1610 /* PBXTargetDependency */,
+				81DA7AADB25C78FDF9AB633C /* PBXTargetDependency */,
 			);
 			name = omosTests;
 			productName = omosTests;
-			productReference = B6D7B8E929E17F1C004F1610 /* omosTests.xctest */;
+			productReference = 173B1E7E8FEA64A73F153BFB /* omosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B6D7B8F229E17F1C004F1610 /* omosUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B6D7B90329E17F1C004F1610 /* Build configuration list for PBXNativeTarget "omosUITests" */;
-			buildPhases = (
-				B6D7B8EF29E17F1C004F1610 /* Sources */,
-				B6D7B8F029E17F1C004F1610 /* Frameworks */,
-				B6D7B8F129E17F1C004F1610 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B6D7B8F529E17F1C004F1610 /* PBXTargetDependency */,
-			);
-			name = omosUITests;
-			productName = omosUITests;
-			productReference = B6D7B8F329E17F1C004F1610 /* omosUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B6D7B8CB29E17F18004F1610 /* Project object */ = {
+		5DEA71E25D18D73949C7649D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					B6D7B8D229E17F18004F1610 = {
-						CreatedOnToolsVersion = 14.2;
-					};
-					B6D7B8E829E17F1C004F1610 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = B6D7B8D229E17F18004F1610;
-					};
-					B6D7B8F229E17F1C004F1610 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = B6D7B8D229E17F18004F1610;
+					A4222463553B5FC75AE27802 = {
+						TestTargetID = 211EF7312EEAB1391F0D7EE5;
 					};
 				};
 			};
-			buildConfigurationList = B6D7B8CE29E17F18004F1610 /* Build configuration list for PBXProject "omos" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = 53F229950C0556698530BD4D /* Build configuration list for PBXProject "omos" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = B6D7B8CA29E17F18004F1610;
-			productRefGroup = B6D7B8D429E17F18004F1610 /* Products */;
+			mainGroup = 9915091795ADCF643EE797F5;
+			productRefGroup = 0EEB7EBAF86E0C23BDC32C70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B6D7B8D229E17F18004F1610 /* omos */,
-				B6D7B8E829E17F1C004F1610 /* omosTests */,
-				B6D7B8F229E17F1C004F1610 /* omosUITests */,
+				211EF7312EEAB1391F0D7EE5 /* omos */,
+				A4222463553B5FC75AE27802 /* omosTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B6D7B8D129E17F18004F1610 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B6D7B8E329E17F1B004F1610 /* LaunchScreen.storyboard in Resources */,
-				B6D7B8E029E17F1B004F1610 /* Assets.xcassets in Resources */,
-				B6D7B8DE29E17F18004F1610 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B6D7B8E729E17F1C004F1610 /* Resources */ = {
+		327D5C9F99E0F72660645505 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6D7B8F129E17F1C004F1610 /* Resources */ = {
+		CC11AA4A046933D8D9D2458D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25D7978C8569B46CA0D46E7A /* Assets.xcassets in Resources */,
+				DBE91B06C828809136611DE3 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B6D7B8CF29E17F18004F1610 /* Sources */ = {
+		BB9194623CCB3F31896A6F50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6D7B8DB29E17F18004F1610 /* ViewController.swift in Sources */,
-				B6D7B8D729E17F18004F1610 /* AppDelegate.swift in Sources */,
-				B6D7B8D929E17F18004F1610 /* SceneDelegate.swift in Sources */,
+				80718E588959C2EF764DAAEC /* TuistAssets+Omos.swift in Sources */,
+				1BDC44B5B34036C8EB4DCADD /* TuistBundle+Omos.swift in Sources */,
+				7372F88859B394F0ABA110B4 /* AppComponent.swift in Sources */,
+				3D5DC9B1B4F4F20D1E805A7A /* AppDelegate.swift in Sources */,
+				E7C5E36C232D7C174D8F3D45 /* AppRootBuilder.swift in Sources */,
+				AE2A75B8A60B61385B655F01 /* AppRootInteractor.swift in Sources */,
+				1696D46D8F494E894A62543E /* AppRootRouter.swift in Sources */,
+				36413F02A77241023B0A7563 /* AppRootViewController.swift in Sources */,
+				B9788B4B5E6C3749AA85BB5D /* LoggedInBuilder.swift in Sources */,
+				65A4E79BAAB79E741F630BD4 /* LoggedInInteractor.swift in Sources */,
+				B8DE5FD50DFCD06513AA2541 /* LoggedInRouter.swift in Sources */,
+				B6BF90AD2923B0011A2A7B1B /* LoggedInViewController.swift in Sources */,
+				35FCCB393FA418E1875AE748 /* LoggedOutBuilder.swift in Sources */,
+				660BCEB68566F5819A6D65B6 /* LoggedOutInteractor.swift in Sources */,
+				2C8C7F0EBCA27D10816A19AD /* LoggedOutRouter.swift in Sources */,
+				339AC3CD705AE5ED1D5C1B7E /* LoggedOutViewController.swift in Sources */,
+				EE26FD7055BBE9D1E081D4D4 /* Ribs+Util.swift in Sources */,
+				04188CE00DE49EC8A3E8B549 /* UIViewController+Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6D7B8E529E17F1C004F1610 /* Sources */ = {
+		FB958F91BBE6C96E743B395C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6D7B8EE29E17F1C004F1610 /* omosTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B6D7B8EF29E17F1C004F1610 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B6D7B8FA29E17F1C004F1610 /* omosUITestsLaunchTests.swift in Sources */,
-				B6D7B8F829E17F1C004F1610 /* omosUITests.swift in Sources */,
+				ACC081B43B591760A5672759 /* test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B6D7B8EB29E17F1C004F1610 /* PBXTargetDependency */ = {
+		81DA7AADB25C78FDF9AB633C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B6D7B8D229E17F18004F1610 /* omos */;
-			targetProxy = B6D7B8EA29E17F1C004F1610 /* PBXContainerItemProxy */;
-		};
-		B6D7B8F529E17F1C004F1610 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B6D7B8D229E17F18004F1610 /* omos */;
-			targetProxy = B6D7B8F429E17F1C004F1610 /* PBXContainerItemProxy */;
+			name = omos;
+			target = 211EF7312EEAB1391F0D7EE5 /* omos */;
+			targetProxy = 86E642F2E942E3F126631AF4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B6D7B8DC29E17F18004F1610 /* Main.storyboard */ = {
+		2A780E49512F7F50945E1487 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B6D7B8DD29E17F18004F1610 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B6D7B8E129E17F1B004F1610 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6D7B8E229E17F1B004F1610 /* Base */,
+				3DC4045518C0B25EB2D9004C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,13 +403,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B6D7B8FB29E17F1C004F1610 /* Debug */ = {
+		202DE5BFC7849AF4612F4124 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/omos-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon.Omos;
+				PRODUCT_NAME = omos;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2C530D164CACB25AFCBC4E02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -349,6 +459,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -366,23 +477,67 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		B6D7B8FC29E17F1C004F1610 /* Release */ = {
+		70B45F590B0240815BCD45A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/omosTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon.Omos;
+				PRODUCT_NAME = omosTests;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/omos.app/omos";
+				TEST_TARGET_NAME = omos;
+			};
+			name = Debug;
+		};
+		AAF58A0E772879CADA27BA72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/omos-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon.Omos;
+				PRODUCT_NAME = omos;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B6FF8466683E2C7D47C3D717 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -409,6 +564,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -420,144 +576,31 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		B6D7B8FE29E17F1C004F1610 /* Debug */ = {
+		E47E10853A8BFCD4C285B4D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2L2K3UD2LK;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = omos/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/omosTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon0724.omos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon.Omos;
+				PRODUCT_NAME = omosTests;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B6D7B8FF29E17F1C004F1610 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2L2K3UD2LK;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = omos/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon0724.omos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B6D7B90129E17F1C004F1610 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2L2K3UD2LK;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon0724.omosTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/omos.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/omos";
-			};
-			name = Debug;
-		};
-		B6D7B90229E17F1C004F1610 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2L2K3UD2LK;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon0724.omosTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/omos.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/omos";
-			};
-			name = Release;
-		};
-		B6D7B90429E17F1C004F1610 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2L2K3UD2LK;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon0724.omosUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = omos;
-			};
-			name = Debug;
-		};
-		B6D7B90529E17F1C004F1610 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2L2K3UD2LK;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon0724.omosUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/omos.app/omos";
 				TEST_TARGET_NAME = omos;
 			};
 			name = Release;
@@ -565,43 +608,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B6D7B8CE29E17F18004F1610 /* Build configuration list for PBXProject "omos" */ = {
+		0886036C042AE353C701B8E1 /* Build configuration list for PBXNativeTarget "omos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6D7B8FB29E17F1C004F1610 /* Debug */,
-				B6D7B8FC29E17F1C004F1610 /* Release */,
+				AAF58A0E772879CADA27BA72 /* Debug */,
+				202DE5BFC7849AF4612F4124 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B6D7B8FD29E17F1C004F1610 /* Build configuration list for PBXNativeTarget "omos" */ = {
+		35CA39FD789F209E79698590 /* Build configuration list for PBXNativeTarget "omosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6D7B8FE29E17F1C004F1610 /* Debug */,
-				B6D7B8FF29E17F1C004F1610 /* Release */,
+				70B45F590B0240815BCD45A7 /* Debug */,
+				E47E10853A8BFCD4C285B4D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B6D7B90029E17F1C004F1610 /* Build configuration list for PBXNativeTarget "omosTests" */ = {
+		53F229950C0556698530BD4D /* Build configuration list for PBXProject "omos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6D7B90129E17F1C004F1610 /* Debug */,
-				B6D7B90229E17F1C004F1610 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B6D7B90329E17F1C004F1610 /* Build configuration list for PBXNativeTarget "omosUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B6D7B90429E17F1C004F1610 /* Debug */,
-				B6D7B90529E17F1C004F1610 /* Release */,
+				2C530D164CACB25AFCBC4E02 /* Debug */,
+				B6FF8466683E2C7D47C3D717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B6D7B8CB29E17F18004F1610 /* Project object */;
+	rootObject = 5DEA71E25D18D73949C7649D /* Project object */;
 }
