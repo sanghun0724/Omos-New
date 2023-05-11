@@ -27,7 +27,11 @@ let project = Project(
                 .SPM.LogFlume,
                 .SPM.RIBs,
                 .SPM.NeedleFoundation,
-                .SPM.ReactorKit
+                .SPM.ReactorKit,
+                .SPM.Kingfisher,
+                .SPM.Alamofire,
+                .SPM.SkeletonView,
+                .SPM.SnapKit
             ]
         ),
         Target(
