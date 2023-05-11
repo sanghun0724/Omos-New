@@ -1,4 +1,5 @@
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 // MARK: - Project
 
@@ -21,7 +22,11 @@ let project = Project(
             sources: ["Sources/**"],
             resources: ["Resources/**"],
             dependencies: [
-                .external(name: "ModernRIBs")
+                .SPM.RxSwift,
+                .SPM.RxCocoa,
+                .SPM.LogFlume,
+                .SPM.RIBs,
+                .SPM.NeedleFoundation
             ]
         ),
         Target(
