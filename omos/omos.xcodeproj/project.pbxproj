@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,6 @@
 		0C282D69FBFD0AD02099558D /* PropertyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA64DAC5BB28F3DC61EDEC /* PropertyBuilder.swift */; };
 		0C96D1D06D10653811A88D5C /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257869088AD644D722A844B3 /* LoggedOutRouter.swift */; };
 		0E66226F61E3DF2E081BADB5 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53CAE1C623A5B3B330A8281 /* BaseLabel.swift */; };
-		0F583EC06B0B75A53AADEE42 /* moya+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58CFAD871B9D6A1424F9E0 /* moya+rx.swift */; };
 		1032EF3C9FB9C627CF639423 /* HasConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990C1B07AA394C504117EC29 /* HasConfigure.swift */; };
 		1054BD7D0C924BEFB18A2F49 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6261BADFA1F04C8D725E34F /* UIImageViewExtension.swift */; };
 		10C73B30A9081751D0E7D6ED /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922884FEF3AB616D7CB307BC /* AppComponent.swift */; };
@@ -166,7 +165,6 @@
 		6B34F760DB56E5423989688D /* TuistBundle+Omos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Omos.swift"; sourceTree = "<group>"; };
 		6BD4A3F0105F7907A17CDCFC /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB26A50C053ACA16DD11CCF /* omosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "omosTests-Info.plist"; sourceTree = "<group>"; };
-		6E58CFAD871B9D6A1424F9E0 /* moya+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "moya+rx.swift"; sourceTree = "<group>"; };
 		74E920469DD4165A62823BBB /* HasElementKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasElementKind.swift; sourceTree = "<group>"; };
 		76951FE92E5042A52C58CB84 /* RxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
 		7C096CCDA6B2754E75B20FEF /* HasSetupConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasSetupConstraints.swift; sourceTree = "<group>"; };
@@ -355,6 +353,7 @@
 		5C41CA70762ACF0880E596FA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B6A0B1892A0D1CE700022532 /* OmosUIKit */,
 				CCE766B42E30EC316A1B4392 /* AppStart */,
 				A799F9BBDEDD2315007962E5 /* BaseComponent */,
 				F05725C443B81C04269495D5 /* Extension */,
@@ -423,6 +422,13 @@
 				6B34F760DB56E5423989688D /* TuistBundle+Omos.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		B6A0B1892A0D1CE700022532 /* OmosUIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OmosUIKit;
 			sourceTree = "<group>";
 		};
 		C0B808B1DC55BB2C46048C0F /* LoggedOut */ = {
@@ -505,7 +511,6 @@
 			children = (
 				640A25A9044C6D6C3A471E47 /* ArrayExtension.swift */,
 				D4D35D6B3E3D208D47E21B8F /* ISO8610DataFormatter+Extensions.swift */,
-				6E58CFAD871B9D6A1424F9E0 /* moya+rx.swift */,
 				576C080EF872782B719F50CC /* UICollectionViewExtension.swift */,
 				A6261BADFA1F04C8D725E34F /* UIImageViewExtension.swift */,
 				21A364872A90EF3546CB5605 /* UINavigationControllerExtensions.swift */,
@@ -646,7 +651,6 @@
 				D58C09ED46DC6C6CCE6A68D4 /* UINavigationControllerExtensions.swift in Sources */,
 				D47055D9E279696C9550CB03 /* UITableViewExtension.swift in Sources */,
 				C47EDA8F4D1138042945439A /* ViewControllerExtension.swift in Sources */,
-				0F583EC06B0B75A53AADEE42 /* moya+rx.swift in Sources */,
 				393F8AB03B531E71B339BBFD /* BaseViewable.swift in Sources */,
 				88DB6F738E27B8395749F75F /* CloseButtonBindable.swift in Sources */,
 				FA09E4413DD40DA369515DD0 /* CloseButtonBuindable.swift in Sources */,

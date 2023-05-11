@@ -97,9 +97,3 @@ public extension ViewControllable {
         return top
    }
 }
-
-public extension Array {
-  subscript(safe index: Int) -> Element? {
-    return indices ~= index ? self[index] : nil
-  }
-}
