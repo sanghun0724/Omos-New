@@ -6,10 +6,15 @@
 //
 
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 let dependencies = Dependencies(
     swiftPackageManager: [
-        .remote(url: "https://github.com/DevYeom/ModernRIBs", requirement: .branch("1.0.2"))
+        .remote(url: "https://github.com/ReactiveX/RxSwift.git", requirement: .exact("6.5.0")),
+        .remote(url: "https://github.com/sanghun0724/LogFlume.git", requirement: .exact("0.1.0")),
+        .remote(url: "https://github.com/RxSwiftCommunity/RxDataSources.git", requirement: .exact("5.0.0")),
+        .remote(url: "https://github.com/uber/needle.git", requirement: .exact("0.23.0")),
+        .remote(url: "https://github.com/uber/RIBs", requirement: .exact("0.14.1"))
     ],
     platforms: [.iOS]
 )
