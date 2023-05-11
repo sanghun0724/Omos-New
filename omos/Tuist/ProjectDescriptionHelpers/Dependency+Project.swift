@@ -18,6 +18,7 @@ public extension TargetDependency.SPM {
     static let NeedleFoundation = TargetDependency.external(name: "NeedleFoundation")
     static let RxDataSources = TargetDependency.external(name: "RxDataSources")
     static let RIBs = TargetDependency.external(name: "RIBs")
+    static let ReactorKit = TargetDependency.external(name: "ReactorKit")
 }
 
 

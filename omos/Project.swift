@@ -26,7 +26,8 @@ let project = Project(
                 .SPM.RxCocoa,
                 .SPM.LogFlume,
                 .SPM.RIBs,
-                .SPM.NeedleFoundation
+                .SPM.NeedleFoundation,
+                .SPM.ReactorKit
             ]
         ),
         Target(
