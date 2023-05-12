@@ -8,24 +8,24 @@
 import UIKit
 import SnapKit
 
-//TODO: 네비게이션 추가 
+// TODO: 제거 검토 
 protocol HasCustomNavigationBarView {
-    var needHeaderView: Bool { get }
-    var navigationBarView: UIView { get }
+    var isNeedNavigationBarView: Bool { get }
+    var navigationBarView: CustomNavigationBarView { get }
 }
 
 extension HasCustomNavigationBarView where Self: BaseViewController {
-    var needHeaderView: Bool {
+    var isNeedNavigationBarView: Bool {
         navigationController == nil
     }
     
-    func addHeaderViewIfNeeded(to view: UIView) {
-        guard self.needHeaderView else { return }
+    func addNavigationViewIfNeeded(to view: UIView) {
+        guard self.isNeedNavigationBarView else { return }
         contentView.addSubview(navigationBarView)
     }
     
-    func makeHeaderViewConstraintsIfNeeded() {
-        guard self.needHeaderView else { return }
+    func makeNavigationViewConstraintsIfNeeded() {
+        guard self.isNeedNavigationBarView else { return }
         navigationBarView.snp.makeConstraints {
             $0.height.equalTo(52)
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)

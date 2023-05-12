@@ -28,7 +28,7 @@ final class AppRootInteractor: PresentableInteractor<AppRootPresentable>, AppRoo
     weak var router: AppRootRouting?
     weak var listener: AppRootListener?
     
-    var tempLogggedIn: Bool = false
+    var tempLogggedIn: Bool = true
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.

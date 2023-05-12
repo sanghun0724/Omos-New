@@ -14,16 +14,21 @@ protocol LoggedInPresentableListener: AnyObject {
     // interactor class.
 }
 
-final class LoggedInViewController: UIViewController, LoggedInPresentable, LoggedInViewControllable {
+final class LoggedInViewController:
+    BaseViewController,
+    LoggedInPresentable,
+    LoggedInViewControllable
+{
 
     weak var listener: LoggedInPresentableListener?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
-        
-        setupNavigationItem(with: .close, target: self, action: #selector(didTapClose))
+        contentView.backgroundColor = .blue
+    
         title = "테스트입니다"
+//        addNavigationViewIfNeeded(to: self.view)
+//        makeNavigationViewConstraintsIfNeeded()
     }
     
     @objc
