@@ -86,6 +86,7 @@
 		B6A0B1B02A0D265000022532 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A0B19F2A0D265000022532 /* Category.swift */; };
 		B6A0B1B12A0D265000022532 /* MyRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A0B1A02A0D265000022532 /* MyRecord.swift */; };
 		B6A0B1B22A0D265000022532 /* OneMusicRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A0B1A12A0D265000022532 /* OneMusicRecord.swift */; };
+		B6A0B4A92A0DA83700022532 /* CustomNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A0B4A82A0DA83700022532 /* CustomNavigationBarView.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
 		C47EDA8F4D1138042945439A /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C6496677F92D19AE5A526 /* ViewControllerExtension.swift */; };
@@ -224,6 +225,7 @@
 		B6A0B19F2A0D265000022532 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B6A0B1A02A0D265000022532 /* MyRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRecord.swift; sourceTree = "<group>"; };
 		B6A0B1A12A0D265000022532 /* OneMusicRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneMusicRecord.swift; sourceTree = "<group>"; };
+		B6A0B4A82A0DA83700022532 /* CustomNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarView.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA6DA87E7B74B08993B772C /* UIViewController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 		BDC646295BAAC9FF2C74B9FD /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 		B6A0B1892A0D1CE700022532 /* OmosUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B6A0B4A82A0DA83700022532 /* CustomNavigationBarView.swift */,
 			);
 			path = OmosUIKit;
 			sourceTree = "<group>";
@@ -794,6 +797,7 @@
 				FA76CB421A1BA62CD86DC830 /* AppRootInteractor.swift in Sources */,
 				B6A0B1B02A0D265000022532 /* Category.swift in Sources */,
 				A167EF7A726463EB2FD8FF6D /* AppRootRouter.swift in Sources */,
+				B6A0B4A92A0DA83700022532 /* CustomNavigationBarView.swift in Sources */,
 				C97F1C1AD9192511B08F6332 /* AppRootViewController.swift in Sources */,
 				5F32693226822D911CE071DD /* LoggedInBuilder.swift in Sources */,
 				D4386AA248E4DEF7F4E2E6BE /* LoggedInInteractor.swift in Sources */,

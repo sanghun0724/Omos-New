@@ -14,9 +14,11 @@ class BaseViewController:
     UIViewController,
     HasSetupConstraints,
     HasDetachAction,
-    HasDisposeBag,
-    HasCustomNavigationBarView
+    HasDisposeBag
 {
+    
+    private(set) var navigationBarView = CustomNavigationBarView()
+    
     // MARK: Views
     
     private lazy var layoutGuideView = UIView()
@@ -48,8 +50,8 @@ class BaseViewController:
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideOriginNavigationBar()
         view.setNeedsUpdateConstraints()
-        baseLayoutSetupConstraints()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -75,29 +77,43 @@ class BaseViewController:
     private func setupConstraintsIfNeeded() {
         guard !self.didSetupConstrints else { return }
         self.setupConstraints()
+        self.baseLayoutSetupConstraints()
         self.didSetupConstrints = true
     }
     
     private func baseLayoutSetupConstraints() {
         view.addSubview(layoutGuideView)
+        
         layoutGuideView.snp.makeConstraints {
-            $0.top.equalTo(view.safeArea.top)
-            $0.left.equalTo(view.safeArea.left)
-            $0.right.equalTo(view.safeArea.right)
-            $0.bottom.equalTo(view.safeArea.bottom)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.left.equalTo(view.safeAreaLayoutGuide.snp.left)
+            $0.right.equalTo(view.safeAreaLayoutGuide.snp.right)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
         
-        layoutGuideView.addSubview(customTopNavigationBarView)
+        layoutGuideView.addSubview(navigationBarView)
         layoutGuideView.addSubview(contentView)
-        customTopNavigationBarView.snp.makeConstraints {
+        
+        navigationBarView.snp.makeConstraints {
             $0.left.top.right.equalToSuperview()
-            $0.height.equalTo(topAppBarIsShow() ? 60 : 0)
+            $0.height.equalTo(isNeedCustomNavigationBarView() ? 60 : 0)
         }
         contentView.snp.makeConstraints {
-            $0.top.equalTo(customTopNavigationBarView.snp.bottom)
+            $0.top.equalTo(navigationBarView.snp.bottom)
             $0.left.right.equalToSuperview()
             $0.bottom.equalTo(layoutGuideView)
         }
+    }
+    
+    private func hideOriginNavigationBar() {
+        if isNeedCustomNavigationBarView() {
+            navigationController?.setNavigationBarHidden(true, animated: false)
+        }
+    }
+    
+    /// if you need custom NavigaiotionBarView, when doesn't have navigation stack you can override it
+    func isNeedCustomNavigationBarView() -> Bool {
+        navigationController != nil
     }
     
 }
