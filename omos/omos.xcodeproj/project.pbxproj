@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -91,6 +91,8 @@
 		B5AD39CEEB333500C247DF4E /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5B7D641C61A6FDFFB94DB1 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5DA3B2CE3CD0CCE6CB77AC3 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C95D1204A60CC92EC66C9E /* LoggedInRouter.swift */; };
 		B65FCB48F3C8B236C783B3CF /* SkeletonViewsAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F89C46FCCEC76D8D98FF09A /* SkeletonViewsAnimatable.swift */; };
+		B66FAC712A0F74B3000B4ABF /* OnBoardingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FAC702A0F74B3000B4ABF /* OnBoardingHeaderView.swift */; };
+		B66FAC752A0F7D0F000B4ABF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FAC742A0F7D0F000B4ABF /* Constant.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
 		C47EDA8F4D1138042945439A /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C6496677F92D19AE5A526 /* ViewControllerExtension.swift */; };
@@ -237,6 +239,8 @@
 		AD88183ECC96C184FC2B4F88 /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
 		AE510802DE9B2369FAE850D4 /* AppRootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootBuilder.swift; sourceTree = "<group>"; };
 		B64CBF38A341291E36F0AAFB /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66FAC702A0F74B3000B4ABF /* OnBoardingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingHeaderView.swift; sourceTree = "<group>"; };
+		B66FAC742A0F7D0F000B4ABF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA6DA87E7B74B08993B772C /* UIViewController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 		BDC646295BAAC9FF2C74B9FD /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
@@ -536,6 +540,30 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		B66FAC6F2A0F747C000B4ABF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B66FAC722A0F74BD000B4ABF /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B66FAC722A0F74BD000B4ABF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B66FAC702A0F74B3000B4ABF /* OnBoardingHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B66FAC732A0F7CF1000B4ABF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B66FAC742A0F7D0F000B4ABF /* Constant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		B922E553E95D60E1EE24E7BF /* Platform */ = {
 			isa = PBXGroup;
 			children = (
@@ -604,6 +632,7 @@
 		E8126E765F27CF385708DDCC /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
+				B66FAC6F2A0F747C000B4ABF /* Common */,
 				2AA0AF27E4F309A595D1E0F9 /* LoggedIn */,
 				C0B808B1DC55BB2C46048C0F /* LoggedOut */,
 			);
@@ -634,6 +663,7 @@
 		EC627B980286759F328FFE73 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				B66FAC732A0F7CF1000B4ABF /* Constants */,
 				E47F50C99C66ADAE034B3903 /* Manager */,
 				110554969C2A10EFCB2C174B /* Utilities */,
 			);
@@ -789,6 +819,7 @@
 				7C96AACFD251B44E929435CB /* Category.swift in Sources */,
 				6A56A893B3D3F20F71A99A84 /* MyDJ.swift in Sources */,
 				864EDBDBFC117207B468E8FF /* MyRecord.swift in Sources */,
+				B66FAC712A0F74B3000B4ABF /* OnBoardingHeaderView.swift in Sources */,
 				7D77CFEF7440BA4D0A838A27 /* OneMusicRecord.swift in Sources */,
 				22054BDFB8249A8DA76F526E /* Select.swift in Sources */,
 				57329FA15E89BFE05A80E17A /* Album.swift in Sources */,
@@ -807,6 +838,7 @@
 				807AF7FFB7E83DE254699EDC /* BaseViewController.swift in Sources */,
 				68AD4B4E48A5FFE125C0CF90 /* RxViewController.swift in Sources */,
 				709FD9620603AA2AE41CF70A /* ArrayExtension.swift in Sources */,
+				B66FAC752A0F7D0F000B4ABF /* Constant.swift in Sources */,
 				33DA0E71B25DBCBDC3EE9AF2 /* ISO8610DataFormatter+Extensions.swift in Sources */,
 				AFB1575A970ACF3F92A3328D /* UICollectionViewExtension.swift in Sources */,
 				1054BD7D0C924BEFB18A2F49 /* UIImageViewExtension.swift in Sources */,
