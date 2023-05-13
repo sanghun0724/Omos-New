@@ -19,20 +19,74 @@ final class LoggedInViewController:
     LoggedInPresentable,
     LoggedInViewControllable
 {
-
+    
+    // MARK: UI Components
+    
+    private lazy var scrollView = UIScrollView()
+    
+    private lazy var scrollContentView = UIView()
+    
+    private lazy var headerView = OnBoardingHeaderView()
+    
     weak var listener: LoggedInPresentableListener?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentView.backgroundColor = .blue
-    
-        title = "테스트입니다"
-//        addNavigationViewIfNeeded(to: self.view)
-//        makeNavigationViewConstraintsIfNeeded()
+
+        setupUI()
     }
     
-    @objc
-    private func didTapClose() {
-        print("DidTapClose")
+    // MARK: Override
+    
+    override func isNeedCustomNavigationBarView() -> Bool {
+        false
     }
 }
+
+
+// MARK: Layout
+
+extension LoggedInViewController {
+    private func setupUI() {
+        contentView.addSubview(scrollView)
+        scrollView.addSubview(scrollContentView)
+        contentView.addSubview(headerView)
+    
+        self.layout()
+    }
+    
+    private func layout() {
+        scrollView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        scrollContentView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        headerView.snp.makeConstraints {
+            $0.height.equalTo(173)
+            $0.left.right.top.equalToSuperview()
+        }
+    }
+    
+}
+
+
+#if canImport(SwiftUI) && DEBUG
+    import SwiftUI
+
+struct LoggedInViewControllerPreView: PreviewProvider {
+    static var previews: some SwiftUI.View {
+        ForEach(Device.deviceNames, id: \.self) { deviceName in
+        UIViewControllerPreview {
+          let viewController = LoggedInViewController().builder
+            .build()
+
+          return UINavigationController(rootViewController: viewController)
+        }
+        .previewDevice(PreviewDevice(rawValue: deviceName))
+        .previewDisplayName(deviceName)
+      }
+    }
+}
+
+#endif
