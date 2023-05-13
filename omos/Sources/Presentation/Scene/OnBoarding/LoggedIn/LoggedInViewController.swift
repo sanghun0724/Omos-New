@@ -19,6 +19,11 @@ final class LoggedInViewController:
     LoggedInPresentable,
     LoggedInViewControllable
 {
+    // MARK: Constants
+    
+    private enum UI {
+        static let headerViewHeight = 173
+    }
     
     // MARK: UI Components
     
@@ -28,11 +33,29 @@ final class LoggedInViewController:
     
     private lazy var headerView = OnBoardingHeaderView()
     
+    private lazy var emailTextFieldView = CustomTextFieldView()
+        .builder
+        .with {
+            $0.fetchLeftTopLabelText(text: "@@@")
+            $0.fetchRightTopLabelText(text: "@@@")
+        }
+        .build()
+    
+    private lazy var passwordTextFieldView = CustomTextFieldView()
+        .builder
+        .with {
+            $0.fetchLeftTopLabelText(text: "@@@")
+            $0.fetchRightTopLabelText(text: "@@@")
+        }
+        .build()
+    
+    private lazy var bottomLoginButtonsStackView = UIView()
+    
     weak var listener: LoggedInPresentableListener?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
     }
     
@@ -43,7 +66,6 @@ final class LoggedInViewController:
     }
 }
 
-
 // MARK: Layout
 
 extension LoggedInViewController {
@@ -51,7 +73,9 @@ extension LoggedInViewController {
         contentView.addSubview(scrollView)
         scrollView.addSubview(scrollContentView)
         contentView.addSubview(headerView)
-    
+        contentView.addSubview(emailTextFieldView)
+        contentView.addSubview(passwordTextFieldView)
+        
         self.layout()
     }
     
@@ -63,29 +87,36 @@ extension LoggedInViewController {
             $0.edges.equalToSuperview()
         }
         headerView.snp.makeConstraints {
-            $0.height.equalTo(173)
+            $0.height.equalTo(UI.headerViewHeight)
             $0.left.right.top.equalToSuperview()
+        }
+        emailTextFieldView.snp.makeConstraints {
+            $0.top.equalTo(headerView.snp.bottom)
+            $0.left.right.equalToSuperview().inset(16)
+        }
+        passwordTextFieldView.snp.makeConstraints {
+            $0.top.equalTo(emailTextFieldView.snp.bottom)
+            $0.left.right.equalToSuperview().inset(16)
         }
     }
     
 }
 
-
 #if canImport(SwiftUI) && DEBUG
-    import SwiftUI
+import SwiftUI
 
 struct LoggedInViewControllerPreView: PreviewProvider {
     static var previews: some SwiftUI.View {
         ForEach(Device.deviceNames, id: \.self) { deviceName in
-        UIViewControllerPreview {
-          let viewController = LoggedInViewController().builder
-            .build()
-
-          return UINavigationController(rootViewController: viewController)
+            UIViewControllerPreview {
+                let viewController = LoggedInViewController().builder
+                    .build()
+                
+                return UINavigationController(rootViewController: viewController)
+            }
+            .previewDevice(PreviewDevice(rawValue: deviceName))
+            .previewDisplayName(deviceName)
         }
-        .previewDevice(PreviewDevice(rawValue: deviceName))
-        .previewDisplayName(deviceName)
-      }
     }
 }
 
