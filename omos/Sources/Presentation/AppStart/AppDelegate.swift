@@ -10,6 +10,9 @@ import UIKit
 import RIBs
 import KakaoSDKAuth
 import KakaoSDKCommon
+import LogFlume
+
+let log = LogFlume.self
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: initial setting
         
         setKakaoSDK()
+        let xcode = XcodeLoggingChannel()
+        log.addChannels(xcode)
         
         let result = AppRootBuilder(dependency: AppComponent()).build()
         self.launchRouter = result.launchRouter

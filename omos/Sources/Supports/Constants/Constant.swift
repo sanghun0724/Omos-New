@@ -14,3 +14,10 @@ enum CommonUI {
     static let mainWidth = UIScreen.main.bounds.width
     static var statuBarHeight: CGFloat = 0.0
 }
+
+enum Device {
+    static let deviceNames: [String] = [
+        "iPhone SE",
+        "iPhone 11 Pro Max"
+    ]
+}

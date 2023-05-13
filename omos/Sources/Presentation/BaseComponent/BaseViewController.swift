@@ -22,7 +22,7 @@ class BaseViewController:
     // MARK: Views
     
     private lazy var layoutGuideView = UIView()
-    lazy var contentView = UIView()
+    private(set) lazy var contentView = UIView()
     
     // MARK: Properties
     
@@ -106,9 +106,7 @@ class BaseViewController:
     }
     
     private func hideOriginNavigationBar() {
-        if isNeedCustomNavigationBarView() {
-            navigationController?.setNavigationBarHidden(true, animated: false)
-        }
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     /// if you need custom NavigaiotionBarView, when doesn't have navigation stack you can override it

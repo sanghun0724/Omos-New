@@ -93,6 +93,7 @@
 		B65FCB48F3C8B236C783B3CF /* SkeletonViewsAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F89C46FCCEC76D8D98FF09A /* SkeletonViewsAnimatable.swift */; };
 		B66FAC712A0F74B3000B4ABF /* OnBoardingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FAC702A0F74B3000B4ABF /* OnBoardingHeaderView.swift */; };
 		B66FAC752A0F7D0F000B4ABF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FAC742A0F7D0F000B4ABF /* Constant.swift */; };
+		B66FAC792A0FBA87000B4ABF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FAC782A0FBA87000B4ABF /* CustomTextField.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
 		C47EDA8F4D1138042945439A /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C6496677F92D19AE5A526 /* ViewControllerExtension.swift */; };
@@ -241,6 +242,7 @@
 		B64CBF38A341291E36F0AAFB /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66FAC702A0F74B3000B4ABF /* OnBoardingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingHeaderView.swift; sourceTree = "<group>"; };
 		B66FAC742A0F7D0F000B4ABF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B66FAC782A0FBA87000B4ABF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA6DA87E7B74B08993B772C /* UIViewController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 		BDC646295BAAC9FF2C74B9FD /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				A6428DDB81548B89698622E8 /* CustomNavigationBarView.swift */,
+				B66FAC782A0FBA87000B4ABF /* CustomTextField.swift */,
 			);
 			path = OmosUIKit;
 			sourceTree = "<group>";
@@ -846,6 +849,7 @@
 				D47055D9E279696C9550CB03 /* UITableViewExtension.swift in Sources */,
 				C47EDA8F4D1138042945439A /* ViewControllerExtension.swift in Sources */,
 				88488EE902725CD02AD9726A /* CustomNavigationBarView.swift in Sources */,
+				B66FAC792A0FBA87000B4ABF /* CustomTextField.swift in Sources */,
 				393F8AB03B531E71B339BBFD /* BaseViewable.swift in Sources */,
 				88DB6F738E27B8395749F75F /* CloseButtonBindable.swift in Sources */,
 				FA09E4413DD40DA369515DD0 /* CloseButtonBuindable.swift in Sources */,
