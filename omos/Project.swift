@@ -31,7 +31,8 @@ let project = Project(
                 .SPM.Kingfisher,
                 .SPM.Alamofire,
                 .SPM.SkeletonView,
-                .SPM.SnapKit
+                .SPM.SnapKit,
+                .SPM.KakaoSDK
             ]
         ),
         Target(
