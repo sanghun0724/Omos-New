@@ -29,7 +29,9 @@ let dependencies = Dependencies(
         .remote(url: "https://github.com/Juanpe/SkeletonView.git",
                 requirement: .upToNextMajor(from: "1.0.0")),
         .remote(url: "https://github.com/Alamofire/Alamofire.git",
-                requirement: .upToNextMajor(from: "5.6.4"))
+                requirement: .upToNextMajor(from: "5.6.4")),
+        .remote(url: "https://github.com/kakao/kakao-ios-sdk",
+                requirement: .branch("master"))
     ],
     platforms: [.iOS]
 )
