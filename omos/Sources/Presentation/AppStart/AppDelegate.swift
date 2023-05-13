@@ -8,6 +8,8 @@
 import UIKit
 
 import RIBs
+import KakaoSDKAuth
+import KakaoSDKCommon
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,12 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         
+        // MARK: initial setting
+        
+        setKakaoSDK()
+        
         let result = AppRootBuilder(dependency: AppComponent()).build()
         self.launchRouter = result.launchRouter
         self.urlHandler = result.urlHandler
         launchRouter?.launch(from: window)
         
         return true
+    }
+    
+    private func setKakaoSDK() {
+        KakaoSDK.initSDK(appKey: "")
     }
 
 }

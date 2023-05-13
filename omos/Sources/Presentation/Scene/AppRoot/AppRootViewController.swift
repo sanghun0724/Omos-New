@@ -12,11 +12,45 @@ protocol AppRootPresentableListener: AnyObject {
     
 }
 
-final class AppRootViewController: UIViewController, AppRootPresentable, AppRootViewControllable {
+final class AppRootViewController:
+    BaseViewController,
+    AppRootPresentable,
+    AppRootViewControllable {
     
-    // MARK: Views
+    // MARK: UI Components
     
+    private lazy var splashImageView = UIImageView()
+        .builder
+        .contentMode(.scaleAspectFill)
+        .backgroundColor(.gray)
+        .build()
     
-
+    // MARK: - View Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+    
     weak var listener: AppRootPresentableListener?
+    
+}
+
+// MARK: - Layout
+
+extension AppRootViewController {
+    private func setupUI() {
+        contentView.addSubview(splashImageView)
+        
+        self.layout()
+    }
+    
+    private func layout() {
+        splashImageView.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview().multipliedBy(0.9)
+            $0.height.equalToSuperview().multipliedBy(0.133)
+            $0.width.equalToSuperview().multipliedBy(0.32)
+        }
+    }
 }
