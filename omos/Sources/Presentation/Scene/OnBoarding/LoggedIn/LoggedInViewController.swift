@@ -49,7 +49,10 @@ final class LoggedInViewController:
         }
         .build()
     
-    private lazy var bottomLoginButtonsStackView = UIView()
+    private lazy var button1 = UIButton()
+    private lazy var seperatedLine = UIView()
+    private lazy var button2 = UIButton()
+    private lazy var button3 = UIButton()
     
     weak var listener: LoggedInPresentableListener?
     

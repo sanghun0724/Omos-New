@@ -96,6 +96,8 @@
 		B66FAC792A0FBA87000B4ABF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FAC782A0FBA87000B4ABF /* CustomTextField.swift */; };
 		B66FAC7D2A0FC1E3000B4ABF /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FAC7C2A0FC1E3000B4ABF /* CustomTextFieldView.swift */; };
 		B69633DE2A10A13F00F5FE7E /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69633DD2A10A13F00F5FE7E /* Assets.swift */; };
+		B69633E22A10B6DA00F5FE7E /* BottomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69633E12A10B6DA00F5FE7E /* BottomButtonsView.swift */; };
+		B69633E42A10B70600F5FE7E /* DecoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69633E32A10B70600F5FE7E /* DecoView.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
 		C47EDA8F4D1138042945439A /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C6496677F92D19AE5A526 /* ViewControllerExtension.swift */; };
@@ -247,6 +249,8 @@
 		B66FAC782A0FBA87000B4ABF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B66FAC7C2A0FC1E3000B4ABF /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
 		B69633DD2A10A13F00F5FE7E /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		B69633E12A10B6DA00F5FE7E /* BottomButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtonsView.swift; sourceTree = "<group>"; };
+		B69633E32A10B70600F5FE7E /* DecoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoView.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA6DA87E7B74B08993B772C /* UIViewController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 		BDC646295BAAC9FF2C74B9FD /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
@@ -415,6 +419,7 @@
 		2AA0AF27E4F309A595D1E0F9 /* LoggedIn */ = {
 			isa = PBXGroup;
 			children = (
+				B69633E02A10B6D400F5FE7E /* View */,
 				BDC646295BAAC9FF2C74B9FD /* LoggedInBuilder.swift */,
 				C88F98730631B56A97F85B62 /* LoggedInInteractor.swift */,
 				C2C95D1204A60CC92EC66C9E /* LoggedInRouter.swift */,
@@ -579,6 +584,15 @@
 				B69633DD2A10A13F00F5FE7E /* Assets.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		B69633E02A10B6D400F5FE7E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B69633E12A10B6DA00F5FE7E /* BottomButtonsView.swift */,
+				B69633E32A10B70600F5FE7E /* DecoView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B922E553E95D60E1EE24E7BF /* Platform */ = {
@@ -846,6 +860,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69633E22A10B6DA00F5FE7E /* BottomButtonsView.swift in Sources */,
 				80718E588959C2EF764DAAEC /* TuistAssets+Omos.swift in Sources */,
 				1BDC44B5B34036C8EB4DCADD /* TuistBundle+Omos.swift in Sources */,
 				4007A0394F7C69838CDB139D /* Login.swift in Sources */,
@@ -895,6 +910,7 @@
 				DC31A078E173CAA1115BFA64 /* HasCollectionView.swift in Sources */,
 				CA5E7E2D2FFC42FAA20EC5C8 /* HasCompositeDisposable.swift in Sources */,
 				B66FAC7D2A0FC1E3000B4ABF /* CustomTextFieldView.swift in Sources */,
+				B69633E42A10B70600F5FE7E /* DecoView.swift in Sources */,
 				1032EF3C9FB9C627CF639423 /* HasConfigure.swift in Sources */,
 				C6952FBFC7A893053A4B36A8 /* HasDetachAction.swift in Sources */,
 				BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */,
