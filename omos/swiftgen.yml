@@ -1,0 +1,10 @@
+input_dir: Resources
+output_dir: Sources/Supports/Utilities/Generated/
+xcassets:
+  inputs:
+    - Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: Assets.swift
+      params:
+        forceProvidesNamespaces: true
