@@ -95,6 +95,7 @@
 		B66FAC752A0F7D0F000B4ABF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FAC742A0F7D0F000B4ABF /* Constant.swift */; };
 		B66FAC792A0FBA87000B4ABF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FAC782A0FBA87000B4ABF /* CustomTextField.swift */; };
 		B66FAC7D2A0FC1E3000B4ABF /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66FAC7C2A0FC1E3000B4ABF /* CustomTextFieldView.swift */; };
+		B69633DE2A10A13F00F5FE7E /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69633DD2A10A13F00F5FE7E /* Assets.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
 		C47EDA8F4D1138042945439A /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C6496677F92D19AE5A526 /* ViewControllerExtension.swift */; };
@@ -245,6 +246,7 @@
 		B66FAC742A0F7D0F000B4ABF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B66FAC782A0FBA87000B4ABF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B66FAC7C2A0FC1E3000B4ABF /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
+		B69633DD2A10A13F00F5FE7E /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA6DA87E7B74B08993B772C /* UIViewController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 		BDC646295BAAC9FF2C74B9FD /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 		110554969C2A10EFCB2C174B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B66FAC802A109CCF000B4ABF /* Generated */,
 				4BFA64DAC5BB28F3DC61EDEC /* PropertyBuilder.swift */,
 				823851B1D3CB46CA00BD5A89 /* PropertyBuilderCompatible.swift */,
 				EB475C16BC12091CE8F3E564 /* Ribs+Util.swift */,
@@ -570,6 +573,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		B66FAC802A109CCF000B4ABF /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				B69633DD2A10A13F00F5FE7E /* Assets.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		B922E553E95D60E1EE24E7BF /* Platform */ = {
 			isa = PBXGroup;
 			children = (
@@ -729,6 +740,7 @@
 				CC11AA4A046933D8D9D2458D /* Resources */,
 				A9A37ADEB240450F85691E03 /* Embed Frameworks */,
 				38C54D209B1FD6E17AABE3BA /* Frameworks */,
+				B66FAC7E2A109BF2000B4ABF /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -808,6 +820,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B66FAC7E2A109BF2000B4ABF /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftgen > /dev/null; then\n  if [[ \"$(uname -m)\" == 'arm64' ]]; then\n    arch -x86_64 swiftgen\n  else\n    swiftgen\n  fi\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB9194623CCB3F31896A6F50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -842,6 +875,7 @@
 				20088B1FD89CFA7CECD0E2F2 /* BaseTableViewCell.swift in Sources */,
 				97BB1C51BE64F469D3BA9686 /* BaseView.swift in Sources */,
 				807AF7FFB7E83DE254699EDC /* BaseViewController.swift in Sources */,
+				B69633DE2A10A13F00F5FE7E /* Assets.swift in Sources */,
 				68AD4B4E48A5FFE125C0CF90 /* RxViewController.swift in Sources */,
 				709FD9620603AA2AE41CF70A /* ArrayExtension.swift in Sources */,
 				B66FAC752A0F7D0F000B4ABF /* Constant.swift in Sources */,
@@ -936,6 +970,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 956ZG6VVZR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Derived/InfoPlists/omos-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1040,6 +1075,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 956ZG6VVZR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Derived/InfoPlists/omos-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
