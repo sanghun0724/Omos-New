@@ -16,7 +16,7 @@ class OnBoardingHeaderView: BaseView {
         static let logoImageWidth = CommonUI.mainWidth * 0.201_5
     }
     
-    private lazy var logoImageView = UIImageView()
+    private lazy var logoImageView = UIImageView(image: Asset.Images.loginlogo.image)
         .builder
         .contentMode(.scaleAspectFit)
         .build()
@@ -25,12 +25,12 @@ class OnBoardingHeaderView: BaseView {
         .builder
         .text("로그인")
         .font(.systemFont(ofSize: 22))
-        .textColor(.orange)
+        .textColor(Asset.Colors.mainOrange.color)
         .build()
     
     override func initialize() {
         super.initialize()
-        backgroundColor = .systemMint
+        backgroundColor = .clear
         addSubview(logoImageView)
         addSubview(titleLabel)
     }

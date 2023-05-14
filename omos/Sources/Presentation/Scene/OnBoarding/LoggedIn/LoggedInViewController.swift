@@ -23,6 +23,8 @@ final class LoggedInViewController:
     
     private enum UI {
         static let headerViewHeight = 173
+        static let authSupportedViewHeight = 64
+        static let leadingTrailingMargin = 16
     }
     
     // MARK: UI Components
@@ -49,10 +51,9 @@ final class LoggedInViewController:
         }
         .build()
     
-    private lazy var button1 = UIButton()
-    private lazy var seperatedLine = UIView()
-    private lazy var button2 = UIButton()
-    private lazy var button3 = UIButton()
+    private lazy var authSupportedView = AuthSupportedView()
+    
+    private lazy var bottmButtonView = BottomButtonsView()
     
     weak var listener: LoggedInPresentableListener?
     
@@ -73,11 +74,14 @@ final class LoggedInViewController:
 
 extension LoggedInViewController {
     private func setupUI() {
+        view.backgroundColor = Asset.Colors.mainBackground.color
         contentView.addSubview(scrollView)
         scrollView.addSubview(scrollContentView)
-        contentView.addSubview(headerView)
-        contentView.addSubview(emailTextFieldView)
-        contentView.addSubview(passwordTextFieldView)
+        scrollContentView.addSubview(headerView)
+        scrollContentView.addSubview(emailTextFieldView)
+        scrollContentView.addSubview(passwordTextFieldView)
+        scrollContentView.addSubview(authSupportedView)
+        scrollContentView.addSubview(bottmButtonView)
         
         self.layout()
     }
@@ -87,19 +91,31 @@ extension LoggedInViewController {
             $0.edges.equalToSuperview()
         }
         scrollContentView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.bottom.equalToSuperview()
+            $0.leading.trailing.equalTo(contentView)
         }
         headerView.snp.makeConstraints {
             $0.height.equalTo(UI.headerViewHeight)
-            $0.left.right.top.equalToSuperview()
+            $0.leading.trailing.top.equalToSuperview()
         }
         emailTextFieldView.snp.makeConstraints {
             $0.top.equalTo(headerView.snp.bottom)
-            $0.left.right.equalToSuperview().inset(16)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
         }
         passwordTextFieldView.snp.makeConstraints {
             $0.top.equalTo(emailTextFieldView.snp.bottom)
-            $0.left.right.equalToSuperview().inset(16)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+        }
+        authSupportedView.snp.makeConstraints {
+            $0.top.equalTo(passwordTextFieldView.snp.bottom)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+            $0.height.equalTo(64)
+        }
+        bottmButtonView.snp.makeConstraints {
+            $0.top.greaterThanOrEqualTo(authSupportedView.snp.bottom).offset(100)
+                .priority(249)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+            $0.bottom.greaterThanOrEqualToSuperview().offset(-34)
         }
     }
     

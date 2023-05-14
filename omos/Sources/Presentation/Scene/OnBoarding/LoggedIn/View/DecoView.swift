@@ -43,19 +43,19 @@ class DecoView: BaseView {
     
     private func makeLeftSepartedLineConstraints() {
         leftSepartedLine.snp.makeConstraints { make in
-            make.left.equalToSuperview()
+            make.leading.equalToSuperview()
             make.centerY.equalToSuperview()
             make.height.equalTo(1)
-            make.right.equalTo(orLabel.snp.left).offset(-14)
+            make.trailing.equalTo(orLabel.snp.leading).offset(-14)
         }
     }
     
     private func makeRightSepartedLineConstraints() {
         rightSepartedLine.snp.makeConstraints { make in
-            make.right.equalToSuperview()
+            make.trailing.equalToSuperview()
             make.centerY.equalToSuperview()
             make.height.equalTo(1)
-            make.left.equalTo(orLabel.snp.right).offset(14)
+            make.leading.equalTo(orLabel.snp.trailing).offset(14)
         }
     }
 }

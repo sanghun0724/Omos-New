@@ -30,7 +30,7 @@ class CustomTextFieldView: BaseView {
     lazy var rightTopLabel: UILabel = {
         let label = UILabel()
         label.isHidden = false
-        label.textColor = .orange
+        label.textColor = Asset.Colors.mainOrange.color
         return label
     }()
     

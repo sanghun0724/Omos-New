@@ -18,15 +18,16 @@ class BottomButtonsView: BaseView {
     }
     
     lazy var loginButton = UIButton().builder
-        .backgroundColor(.orange)
+        .backgroundColor(Asset.Colors.mainOrange.color)
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .with {
+            $0.setTitle("로그인", for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         }
         .isEnabled(false)
         .build()
-
+    
     private lazy var decoView = DecoView()
     
     private lazy var kakaoImageView = UIImageView(image: Asset.Images.Login.kakao.image)
@@ -35,20 +36,21 @@ class BottomButtonsView: BaseView {
         .text("카카오로 로그인")
         .build()
     lazy var kakaoButton = UIButton().builder
-        .backgroundColor(.orange)
+        .backgroundColor(Asset.Colors.kakaoYellow.color)
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .with {
             $0.setTitle("  Kakao로 로그인", for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         }
-        .backgroundColor(.orange)
+        .backgroundColor(Asset.Colors.mainOrange.color)
         .build()
-
+    
     let appleButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .white)
     
     override func initialize() {
         super.initialize()
+        backgroundColor = .clear
         addSubview(loginButton)
         addSubview(decoView)
         addSubview(appleButton)
@@ -58,49 +60,49 @@ class BottomButtonsView: BaseView {
     }
     
     override func setupConstraints() {
-      super.setupConstraints()
+        super.setupConstraints()
         self.makeLoginButtonConstraints()
         self.makeDecoViewConstraints()
         self.makeKakaoButtonConstraints()
         self.makeAppleButtonConstraints()
     }
-
+    
     private func makeLoginButtonConstraints() {
-        loginButton.snp.makeConstraints { make in
-            make.left.right.top.equalToSuperview()
-            make.height.equalTo(UI.buttonHeight)
+        loginButton.snp.makeConstraints {
+            $0.left.right.top.equalToSuperview()
+            $0.height.equalTo(UI.buttonHeight)
         }
     }
     
     private func makeDecoViewConstraints() {
-        decoView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview()
-            make.top.equalTo(loginButton.snp.bottom)
-            make.height.equalTo(UI.separatedHeight)
+        decoView.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.top.equalTo(loginButton.snp.bottom)
+            $0.height.equalTo(UI.separatedHeight)
         }
     }
     
     private func makeKakaoButtonConstraints() {
-        kakaoButton.snp.makeConstraints { make in
-            make.left.right.equalToSuperview()
-            make.top.equalTo(decoView.snp.bottom)
-            make.height.equalTo(UI.buttonHeight)
+        kakaoButton.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.top.equalTo(decoView.snp.bottom)
+            $0.height.equalTo(UI.buttonHeight)
         }
         
-        kakaoImageView.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+        kakaoImageView.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
             kakaoImageView.translatesAutoresizingMaskIntoConstraints = false
             kakaoImageView.rightAnchor.constraint(equalTo: kakaoButton.titleLabel!.leftAnchor).isActive = true
-            make.height.width.equalTo(12)
+            $0.height.width.equalTo(12)
         }
     }
     
     private func makeAppleButtonConstraints() {
-        appleButton.snp.makeConstraints { make in
-            make.left.right.equalToSuperview()
-            make.top.equalTo(kakaoButton.snp.bottom).offset(14)
-            make.height.equalTo(UI.buttonHeight)
+        appleButton.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.top.equalTo(kakaoButton.snp.bottom).offset(14)
+            $0.height.equalTo(UI.buttonHeight)
+            $0.bottom.equalToSuperview()
         }
     }
-    
 }
