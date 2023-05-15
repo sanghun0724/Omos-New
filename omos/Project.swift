@@ -26,13 +26,15 @@ let project = Project(
                 .SPM.RxCocoa,
                 .SPM.LogFlume,
                 .SPM.RIBs,
+                .SPM.RxDataSources,
                 .SPM.NeedleFoundation,
                 .SPM.ReactorKit,
                 .SPM.Kingfisher,
                 .SPM.Alamofire,
                 .SPM.SkeletonView,
                 .SPM.SnapKit,
-                .SPM.KakaoSDK
+                .SPM.KakaoSDK,
+                .SPM.RxGesture
             ]
         ),
         Target(
