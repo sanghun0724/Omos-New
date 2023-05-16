@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -104,6 +104,10 @@
 		B5AD39CEEB333500C247DF4E /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5B7D641C61A6FDFFB94DB1 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5DA3B2CE3CD0CCE6CB77AC3 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C95D1204A60CC92EC66C9E /* LoggedInRouter.swift */; };
 		B65FCB48F3C8B236C783B3CF /* SkeletonViewsAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F89C46FCCEC76D8D98FF09A /* SkeletonViewsAnimatable.swift */; };
+		B69633FA2A12E89200F5FE7E /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69633F92A12E89200F5FE7E /* ConfirmButton.swift */; };
+		B69633FC2A12EE3500F5FE7E /* PasswordTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69633FB2A12EE3500F5FE7E /* PasswordTextFieldView.swift */; };
+		B69634002A13975F00F5FE7E /* LoggedInPresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69633FF2A13975F00F5FE7E /* LoggedInPresentableState.swift */; };
+		B69634032A143A1700F5FE7E /* ReactiveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634022A143A1700F5FE7E /* ReactiveExtension.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
 		C47EDA8F4D1138042945439A /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C6496677F92D19AE5A526 /* ViewControllerExtension.swift */; };
@@ -263,6 +267,10 @@
 		B075088527D0317499D9E91E /* AuthSupportedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSupportedView.swift; sourceTree = "<group>"; };
 		B5E6131E8E5AE67E6E196A01 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		B64CBF38A341291E36F0AAFB /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B69633F92A12E89200F5FE7E /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
+		B69633FB2A12EE3500F5FE7E /* PasswordTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldView.swift; sourceTree = "<group>"; };
+		B69633FF2A13975F00F5FE7E /* LoggedInPresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInPresentableState.swift; sourceTree = "<group>"; };
+		B69634022A143A1700F5FE7E /* ReactiveExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveExtension.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA6DA87E7B74B08993B772C /* UIViewController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 		BDC646295BAAC9FF2C74B9FD /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
@@ -428,6 +436,7 @@
 		26596345A23282B6D5F0457D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B69633FD2A1396F300F5FE7E /* Domain */,
 				B922E553E95D60E1EE24E7BF /* Platform */,
 				5C41CA70762ACF0880E596FA /* Presentation */,
 				EC627B980286759F328FFE73 /* Supports */,
@@ -484,6 +493,8 @@
 				A6428DDB81548B89698622E8 /* CustomNavigationBarView.swift */,
 				E5482DF2A871AB9EAE742E8B /* CustomTextField.swift */,
 				0E6E0BD07C2F5944176C905F /* CustomTextFieldView.swift */,
+				B69633F92A12E89200F5FE7E /* ConfirmButton.swift */,
+				B69633FB2A12EE3500F5FE7E /* PasswordTextFieldView.swift */,
 			);
 			path = OmosUIKit;
 			sourceTree = "<group>";
@@ -590,6 +601,30 @@
 				6B34F760DB56E5423989688D /* TuistBundle+Omos.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		B69633FD2A1396F300F5FE7E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B69634012A13BC7200F5FE7E /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B69633FE2A1396F900F5FE7E /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				B69633FF2A13975F00F5FE7E /* LoggedInPresentableState.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		B69634012A13BC7200F5FE7E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B69633FE2A1396F900F5FE7E /* OnBoarding */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B922E553E95D60E1EE24E7BF /* Platform */ = {
@@ -747,6 +782,7 @@
 				21A364872A90EF3546CB5605 /* UINavigationControllerExtensions.swift */,
 				55D548F8E1035C2E2377A4F0 /* UITableViewExtension.swift */,
 				539C6496677F92D19AE5A526 /* ViewControllerExtension.swift */,
+				B69634022A143A1700F5FE7E /* ReactiveExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -881,6 +917,7 @@
 				646C659D3888FC087677A9D4 /* UserDetail.swift in Sources */,
 				5086E9CD87C1C9C8205D4245 /* Lists.swift in Sources */,
 				CC2DC4257ACEEA28AC24BCC0 /* MyProfile.swift in Sources */,
+				B69633FA2A12E89200F5FE7E /* ConfirmButton.swift in Sources */,
 				5DF4383335C8BD64C82FD772 /* Today.swift in Sources */,
 				7C96AACFD251B44E929435CB /* Category.swift in Sources */,
 				6A56A893B3D3F20F71A99A84 /* MyDJ.swift in Sources */,
@@ -905,6 +942,8 @@
 				709FD9620603AA2AE41CF70A /* ArrayExtension.swift in Sources */,
 				33DA0E71B25DBCBDC3EE9AF2 /* ISO8610DataFormatter+Extensions.swift in Sources */,
 				AFB1575A970ACF3F92A3328D /* UICollectionViewExtension.swift in Sources */,
+				B69633FC2A12EE3500F5FE7E /* PasswordTextFieldView.swift in Sources */,
+				B69634032A143A1700F5FE7E /* ReactiveExtension.swift in Sources */,
 				1054BD7D0C924BEFB18A2F49 /* UIImageViewExtension.swift in Sources */,
 				D58C09ED46DC6C6CCE6A68D4 /* UINavigationControllerExtensions.swift in Sources */,
 				D47055D9E279696C9550CB03 /* UITableViewExtension.swift in Sources */,
@@ -918,6 +957,7 @@
 				7C6ACB8F1778216A004C0792 /* DisposablesManageable.swift in Sources */,
 				01B915308FB52170E848C346 /* HasCloseButtonHeaderView.swift in Sources */,
 				DC31A078E173CAA1115BFA64 /* HasCollectionView.swift in Sources */,
+				B69634002A13975F00F5FE7E /* LoggedInPresentableState.swift in Sources */,
 				CA5E7E2D2FFC42FAA20EC5C8 /* HasCompositeDisposable.swift in Sources */,
 				1032EF3C9FB9C627CF639423 /* HasConfigure.swift in Sources */,
 				C6952FBFC7A893053A4B36A8 /* HasDetachAction.swift in Sources */,

@@ -13,11 +13,26 @@ import RxCocoa
 import RxDataSources
 import RxSwift
 
-protocol LoggedInPresentableListener: AnyObject {
-    // TODO: Declare properties and methods that the view controller can invoke to perform
-    // business logic, such as signIn(). This protocol is implemented by the corresponding
-    // interactor class.
+// MARK: - LoggedInPresentableAction
+
+enum LoggedInPresentableAction {
+    case viewDidLoad
+    case localLoginButtonDidTap
+    case kakaoLoginButtonDidTap
+    case appleLoginButtonDidTap
 }
+
+// MARK: - LoggedInPresentableListener
+
+protocol LoggedInPresentableListener: AnyObject {
+   typealias Action = LoggedInPresentableAction
+   typealias State = LoggedInPresentableState
+    
+    func sendAction(_ action: Action)
+    var state: Observable<State> { get }
+}
+
+// MARK: - LoggedInViewController
 
 final class LoggedInViewController:
     BaseViewController,
@@ -60,7 +75,13 @@ final class LoggedInViewController:
     
     private lazy var bottmButtonView = BottomButtonsView()
     
+    // MARK: - Properties
+    
     weak var listener: LoggedInPresentableListener?
+    
+    private let actionRelay = PublishRelay<LoggedInPresentableListener.Action>()
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +95,55 @@ final class LoggedInViewController:
         false
     }
 }
+
+// MARK: Private methods
+
+extension LoggedInViewController {}
+
+// MARK: Bind UI
+
+extension LoggedInViewController {}
+
+// MARK: - Bind listener
+
+extension LoggedInViewController {}
+
+// MARK: - Binding Action
+
+extension LoggedInViewController {
+    private func bindActions() {
+        bindViewDidLoadAction()
+    }
+    
+    private func bindViewDidLoadAction() {
+        rx.viewDidLoad
+            .throttle(.seconds(1), latest: false, scheduler: MainScheduler.instance)
+            .map { _ in .viewDidLoad }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindLocalButtonDidTapAction() {
+        bottmButtonView.loginButton
+            .rx
+            
+    }
+    
+    private func bindKakaoButtonDidTapAction() {
+        
+    }
+    
+    private func bindAppleButtonDidTapAction() {
+        
+    }
+    
+    
+    
+}
+
+// MARK: - Binding State
+
+extension LoggedInViewController {}
 
 // MARK: Layout
 
