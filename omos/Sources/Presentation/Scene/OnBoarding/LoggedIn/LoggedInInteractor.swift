@@ -5,40 +5,88 @@
 //  Created by sangheon on 2023/04/09.
 //
 
+import ReactorKit
 import RIBs
+import RxSwift
 
 protocol LoggedInRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+  
 }
+
+// MARK: - LoggedInPresentable
 
 protocol LoggedInPresentable: Presentable {
     var listener: LoggedInPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
+
+// MARK: - LoggedInListener
 
 protocol LoggedInListener: AnyObject {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+   
 }
 
-final class LoggedInInteractor: PresentableInteractor<LoggedInPresentable>, LoggedInInteractable, LoggedInPresentableListener {
+// MARK: - LgogedInInteractor
 
+final class LoggedInInteractor:
+    PresentableInteractor<LoggedInPresentable>,
+    LoggedInInteractable,
+    LoggedInPresentableListener,
+    Reactor
+{
+    
+    var initialState: LoggedInPresentableState
+    
+    // MARK: - Reactor
+    
+    typealias Action = LoggedInPresentableAction
+    typealias State = LoggedInPresentableState
+    
+    enum Mutation {
+        case detach 
+    }
+    
+    // MARK: - Properties
+    
     weak var router: LoggedInRouting?
     weak var listener: LoggedInListener?
 
-    // TODO: Add additional dependencies to constructor. Do not perform any logic
-    // in constructor.
-    override init(presenter: LoggedInPresentable) {
+    
+    // MARK: Initializition & Deinitialization
+    
+    init(
+        presenter: LoggedInPresentable,
+        initialState: LoggedInPresentableState
+    ) {
+        self.initialState = initialState
+        
         super.init(presenter: presenter)
         presenter.listener = self
     }
-
-    override func didBecomeActive() {
-        super.didBecomeActive()
-        // TODO: Implement business logic here.
+    
+    deinit {
+        Log.verbose(type(of: self))
     }
 
-    override func willResignActive() {
-        super.willResignActive()
-        // TODO: Pause any business logic.
+}
+
+// MARK: - Reactor
+
+extension LoggedInInteractor {
+    
+    func sendAction(_ action: Action) {
+        self.action.on(.next(action))
     }
+    
+    // MARK: - mutate
+    
+    func mutate(action: LoggedInPresentableAction) -> Observable<Mutation> {
+        switch action {
+        case .viewDidLoad: return .empty()
+        case .localLoginButtonDidTap: return .empty()
+        case .kakaoLoginButtonDidTap: return .empty()
+        case .appleLoginButtonDidTap: return .empty()
+        }
+    }
+    
+    
 }

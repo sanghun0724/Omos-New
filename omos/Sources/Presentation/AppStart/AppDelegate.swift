@@ -12,7 +12,7 @@ import KakaoSDKAuth
 import KakaoSDKCommon
 import LogFlume
 
-let log = LogFlume.self
+let Log = LogFlume.self
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
