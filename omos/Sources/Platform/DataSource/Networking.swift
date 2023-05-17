@@ -12,10 +12,28 @@ class Networking<Target: TargetType> {
     
     func request<D: Decodable>(
         _ target: Target,
-        responseType: D.Type
+        type: D.Type,
+        file: String = #file,
+        function: String = #function,
+        line: UInt = #line
     ) -> Single<D> {
-            
-        return .never()
+        #if DEBUG
+        let requestString = "\(target.method.rawValue) \(target.path)"
+        let request = rxRequest(target, type: type)
+            .do(onSuccess: { response in
+                let message = "SUCCESS: \(requestString) (\(response))"
+                Log.debug(message, file: file, function: function, line: line)
+            }, onError: { error in
+                let message = "FAILURE \(Self.logging())"
+                Log.warning(message, file: file, function: function, line: line)
+            }, onSubscribed: {
+                let message = "REQUEST: \(requestString)"
+                Log.debug(message, file: file, function: function, line: line)
+            })
+                
+                
+        #endif
+        return rxRequest(target, type: type)
     }
     
     
@@ -33,6 +51,19 @@ class Networking<Target: TargetType> {
             
             return Disposables.create()
         }
+    }
+    
+    private static func logging(error: Error) -> String {
+        let networkError = NetworkError(error: error)
+        guard let afError = networkError.afError else { return error.localizedDescription }
+        
+        var messages = [String]()
+        
+        if !network
+        
+        
+        
+        
     }
     
 }
