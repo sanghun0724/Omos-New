@@ -32,7 +32,7 @@ final class LoggedInBuilder: Builder<LoggedInDependency>, LoggedInBuildable {
     func build(withListener listener: LoggedInListener) -> LoggedInRouting {
         let component = LoggedInComponent(dependency: dependency)
         let viewController = LoggedInViewController()
-        let interactor = LoggedInInteractor(presenter: viewController)
+        let interactor = LoggedInInteractor(presenter: viewController, initialState: .init())
         interactor.listener = listener
         return LoggedInRouter(interactor: interactor, viewController: viewController)
     }

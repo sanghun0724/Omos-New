@@ -84,7 +84,6 @@ extension LoggedInInteractor {
         case .viewDidLoad: return .empty()
         case .localLoginButtonDidTap: return .empty()
         case .kakaoLoginButtonDidTap: return .empty()
-        case .appleLoginButtonDidTap: return .empty()
         }
     }
     
