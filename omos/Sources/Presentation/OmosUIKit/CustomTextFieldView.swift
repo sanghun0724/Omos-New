@@ -29,7 +29,7 @@ class CustomTextFieldView: BaseView {
     
     lazy var rightTopLabel: UILabel = {
         let label = UILabel()
-        label.isHidden = false
+        label.isHidden = true
         label.textColor = Asset.Colors.mainOrange.color
         return label
     }()
@@ -43,11 +43,13 @@ class CustomTextFieldView: BaseView {
     }
     
     func setWarningState() {
-        print("setWarningState")
+        rightTopLabel.isHidden = false
+        textField.layer.borderColor = Asset.Colors.mainOrange.color.cgColor
     }
     
     func setNomalState() {
-        print("setNomalState")
+        rightTopLabel.isHidden = true
+        textField.layer.borderColor = UIColor.clear.cgColor
     }
     
     override func initialize() {

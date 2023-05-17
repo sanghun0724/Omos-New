@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setKakaoSDK()
         let xcode = XcodeLoggingChannel()
-        log.addChannels(xcode)
+        Log.addChannels(xcode)
         
         let result = AppRootBuilder(dependency: AppComponent()).build()
         self.launchRouter = result.launchRouter

@@ -19,14 +19,13 @@ enum LoggedInPresentableAction {
     case viewDidLoad
     case localLoginButtonDidTap
     case kakaoLoginButtonDidTap
-    case appleLoginButtonDidTap
 }
 
 // MARK: - LoggedInPresentableListener
 
 protocol LoggedInPresentableListener: AnyObject {
-   typealias Action = LoggedInPresentableAction
-   typealias State = LoggedInPresentableState
+    typealias Action = LoggedInPresentableAction
+    typealias State = LoggedInPresentableState
     
     func sendAction(_ action: Action)
     var state: Observable<State> { get }
@@ -58,22 +57,22 @@ final class LoggedInViewController:
     private lazy var emailTextFieldView = CustomTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: "@@@")
-            $0.fetchRightTopLabelText(text: "@@@")
+            $0.fetchLeftTopLabelText(text: "이메일")
+            $0.fetchRightTopLabelText(text: "이메일을 입력해주세요.")
         }
         .build()
     
     private lazy var passwordTextFieldView = CustomTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: "@@@")
-            $0.fetchRightTopLabelText(text: "@@@")
+            $0.fetchLeftTopLabelText(text: "비밀번호")
+            $0.fetchRightTopLabelText(text: "비밀번호를 입력해주세요.")
         }
         .build()
     
     private lazy var authSupportedView = AuthSupportedView()
     
-    private lazy var bottmButtonView = BottomButtonsView()
+    private lazy var bottomButtonView = BottomButtonsView()
     
     // MARK: - Properties
     
@@ -106,13 +105,31 @@ extension LoggedInViewController {}
 
 // MARK: - Bind listener
 
-extension LoggedInViewController {}
+extension LoggedInViewController {
+    private func bind(listener: LoggedInPresentableListener?) {
+        guard let listener = listener else { return }
+        self.bindActionRelay()
+        bindActions()
+        
+    }
+    
+    private func bindActionRelay() {
+        self.actionRelay.asObservable()
+            .bind(with: self, onNext: { owner, action in
+                owner.listener?.sendAction(action)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+}
 
 // MARK: - Binding Action
 
 extension LoggedInViewController {
     private func bindActions() {
         bindViewDidLoadAction()
+        bindLocalButtonDidTapAction()
+        bindKakaoButtonDidTapAction()
     }
     
     private func bindViewDidLoadAction() {
@@ -124,26 +141,40 @@ extension LoggedInViewController {
     }
     
     private func bindLocalButtonDidTapAction() {
-        bottmButtonView.loginButton
+        bottomButtonView.loginButton
             .rx
-            
+            .tapWithPreventDuplication()
+            .map {_ in .localLoginButtonDidTap }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
     }
     
     private func bindKakaoButtonDidTapAction() {
-        
+        bottomButtonView.kakaoButton
+            .rx
+            .tapWithPreventDuplication()
+            .map { _ in .kakaoLoginButtonDidTap }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
     }
-    
-    private func bindAppleButtonDidTapAction() {
-        
-    }
-    
-    
     
 }
 
 // MARK: - Binding State
 
-extension LoggedInViewController {}
+extension LoggedInViewController {
+    private func bindState(from listener: LoggedInPresentableListener) {
+        self.bindValidationState(from: listener)
+    }
+    
+    private func bindValidationState(from listener: LoggedInPresentableListener) {
+        listener.state.map(\.isValidateInputInfo)
+            .distinctUntilChanged()
+            .asDriver(onErrorDriveWith: .never())
+            .drive()
+    }
+    
+}
 
 // MARK: Layout
 
@@ -156,7 +187,7 @@ extension LoggedInViewController {
         scrollContentView.addSubview(emailTextFieldView)
         scrollContentView.addSubview(passwordTextFieldView)
         scrollContentView.addSubview(authSupportedView)
-        scrollContentView.addSubview(bottmButtonView)
+        scrollContentView.addSubview(bottomButtonView)
         
         self.layout()
     }
@@ -186,7 +217,7 @@ extension LoggedInViewController {
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
             $0.height.equalTo(64)
         }
-        bottmButtonView.snp.makeConstraints {
+        bottomButtonView.snp.makeConstraints {
             $0.top.greaterThanOrEqualTo(authSupportedView.snp.bottom).offset(100)
                 .priority(249)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
