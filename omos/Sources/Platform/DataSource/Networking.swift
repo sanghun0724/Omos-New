@@ -24,14 +24,12 @@ class Networking<Target: TargetType> {
                 let message = "SUCCESS: \(requestString) (\(response))"
                 Log.debug(message, file: file, function: function, line: line)
             }, onError: { error in
-                let message = "FAILURE \(Self.logging())"
+                let message = "FAILURE \(Self.logging(error: error))"
                 Log.warning(message, file: file, function: function, line: line)
             }, onSubscribed: {
                 let message = "REQUEST: \(requestString)"
                 Log.debug(message, file: file, function: function, line: line)
             })
-                
-                
         #endif
         return rxRequest(target, type: type)
     }
@@ -59,11 +57,13 @@ class Networking<Target: TargetType> {
         
         var messages = [String]()
         
-        if !network
+        if !networkError.isAfUnderlyingError, let errorDescription = afError.errorDescription {
+            messages.append("Alamofire Error Description: \(errorDescription)")
+        }
         
+        messages.append(networkError.afErrorDebugDescription().joined(separator: "\n"))
+        messages.append(networkError.urlErrorDebugDescription().joined(separator: "\n"))
         
-        
-        
+        return messages.joined(separator: "\n")
     }
-    
 }

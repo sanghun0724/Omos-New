@@ -21,6 +21,10 @@ final class NetworkError {
         self.afError?.underlyingError
     }
     
+    var isAfUnderlyingError: Bool {
+        self.afUnderlyingError != nil
+    }
+    
     var urlError: URLError? {
         self.afUnderlyingError as? URLError
     }

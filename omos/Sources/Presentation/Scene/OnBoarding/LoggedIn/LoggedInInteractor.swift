@@ -49,16 +49,18 @@ final class LoggedInInteractor:
     
     weak var router: LoggedInRouting?
     weak var listener: LoggedInListener?
+    private let onboardingRepositoryService: OnboardingRepository
 
     
     // MARK: Initializition & Deinitialization
     
     init(
         presenter: LoggedInPresentable,
-        initialState: LoggedInPresentableState
+        initialState: LoggedInPresentableState,
+        onboardingRepositoryService: OnboardingRepository
     ) {
         self.initialState = initialState
-        
+        self.onboardingRepositoryService = onboardingRepositoryService
         super.init(presenter: presenter)
         presenter.listener = self
     }

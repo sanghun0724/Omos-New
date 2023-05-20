@@ -168,7 +168,7 @@ extension LoggedInViewController {
     }
     
     private func bindValidationState(from listener: LoggedInPresentableListener) {
-        listener.state.map(\.isValidateInputInfo)
+        listener.state.map(\.isValidLoggedIn)
             .distinctUntilChanged()
             .asDriver(onErrorDriveWith: .never())
             .drive()

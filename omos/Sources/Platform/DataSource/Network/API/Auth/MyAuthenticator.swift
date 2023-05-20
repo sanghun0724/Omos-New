@@ -29,24 +29,24 @@ class MyAuthenticator: Authenticator {
     func refresh(_ credential: Credential, for session: Session, completion: @escaping (Result<MyAuthenticationCredential, Error>) -> Void) {
         print("refresh token here@@")
         let requeust = RefreshRequest(accessToken: UserDefaults.standard.string(forKey: "access") ?? "", refreshToken: UserDefaults.standard.string(forKey: "refresh") ?? "", userId: UserDefaults.standard.integer(forKey: "user") )
-        LoginAPI.doRefresh(request: requeust) { response in
-            switch response {
-            case .success(let data):
-                print("is successssss")
-                print(data)
-                let accessToken = data.accessToken
-                let refreshToken = data.refreshToken
-                let userId = data.userId
-                UserDefaults.standard.set(accessToken, forKey: "access")
-                UserDefaults.standard.set(refreshToken, forKey: "refresh")
-                UserDefaults.standard.set(userId, forKey: "user")
-               // Account.currentUser = UserDefaults.standard.integer(forKey: "user")
-                let newCredential = MyAuthenticationCredential(accessToken: accessToken, refreshToken: refreshToken, userID: userId)
-                completion(.success(newCredential))
-            case .failure(let error):
-                completion(.failure(error))
-                print("기존의 가지고 있던 토큰정보가 잘못되었음")
-            }
-        }
+//        LoginAPI.doRefresh(request: requeust) { response in
+//            switch response {
+//            case .success(let data):
+//                print("is successssss")
+//                print(data)
+//                let accessToken = data.accessToken
+//                let refreshToken = data.refreshToken
+//                let userId = data.userId
+//                UserDefaults.standard.set(accessToken, forKey: "access")
+//                UserDefaults.standard.set(refreshToken, forKey: "refresh")
+//                UserDefaults.standard.set(userId, forKey: "user")
+//               // Account.currentUser = UserDefaults.standard.integer(forKey: "user")
+//                let newCredential = MyAuthenticationCredential(accessToken: accessToken, refreshToken: refreshToken, userID: userId)
+//                completion(.success(newCredential))
+//            case .failure(let error):
+//                completion(.failure(error))
+//                print("기존의 가지고 있던 토큰정보가 잘못되었음")
+//            }
+//        }
     }
 }
