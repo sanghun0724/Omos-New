@@ -23,15 +23,16 @@ class OnboardingRespositoryServiceImpl: OnboardingRespositoryService {
     }
     
     func login(email: String, password: String) -> Observable<Bool> {
-        return Observable.create { [weak self] observer in
-            guard let _self = self else { return }
-//            _self.onboardingRepository.login(request: .init(email: email, password: password))
-//                .bind(with: self, onNext: { owner, res in
-//                    <#Some..#>
-//                })
-//                .disposed(by: disposeBag)
-        }
-            
+        onboardingRepository.login(request: .init(email: email, password: password))
+            .asObservable()
+            .withUnretained(self)
+            .map { owner, response in
+                let tk = TokenUtils()
+                tk.create("accessToken", account: "accessToken", value: response.accessToken)
+                tk.create("refreshToken", account: "refreshToken", value: response.refreshToken)
+                return true
+            }
+            .catchAndReturn(false)
     }
     
 }
