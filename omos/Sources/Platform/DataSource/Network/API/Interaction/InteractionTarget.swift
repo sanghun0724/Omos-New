@@ -18,8 +18,7 @@ enum InteractionTarget {
 
 extension InteractionTarget: TargetType {
     var baseURL: String {
-        //RestApiUrl.restUrl
-        ""
+        RestApiUrl.restUrl
     }
 
     var method: HTTPMethod {

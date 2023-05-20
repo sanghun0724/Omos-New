@@ -54,7 +54,7 @@ class CustomTextField: UITextField, UITextFieldDelegate {
         leftViewMode = .always
         leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 50))
         textColor = .white
-        backgroundColor = .black
+        backgroundColor = Asset.Colors.mainBlack.color
         layer.borderColor = .some(UIColor.orange.cgColor)
     }
     
