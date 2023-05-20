@@ -42,22 +42,22 @@ final class LoggedInInteractor:
     typealias State = LoggedInPresentableState
     
     enum Mutation {
-        case detach 
+        case setLoading(Bool)
+        case setValidation(Bool)
     }
     
     // MARK: - Properties
     
     weak var router: LoggedInRouting?
     weak var listener: LoggedInListener?
-    private let onboardingRepositoryService: OnboardingRepository
-
+    private let onboardingRepositoryService: OnboardingRespositoryService
     
     // MARK: Initializition & Deinitialization
     
     init(
         presenter: LoggedInPresentable,
         initialState: LoggedInPresentableState,
-        onboardingRepositoryService: OnboardingRepository
+        onboardingRepositoryService: OnboardingRespositoryService
     ) {
         self.initialState = initialState
         self.onboardingRepositoryService = onboardingRepositoryService
@@ -83,11 +83,45 @@ extension LoggedInInteractor {
     
     func mutate(action: LoggedInPresentableAction) -> Observable<Mutation> {
         switch action {
-        case .viewDidLoad: return .empty()
-        case .localLoginButtonDidTap: return .empty()
-        case .kakaoLoginButtonDidTap: return .empty()
+        case .viewDidLoad:
+            return .empty()
+        case let .localLoginButtonDidTap(email, password):
+            return self.validationMutation(email: email, password: password)
+        case .kakaoLoginButtonDidTap:
+            return .empty()
         }
     }
     
+    private func validationMutation(email: String, password: String) -> Observable<Mutation> {
+        let validationMutation: Observable<Mutation> = self.onboardingRepositoryService
+            .login(email: email, password: password)
+            .map { .setValidation($0) }
+            .catchAndReturn(.setLoading(false))
+        
+        let sequence: [Observable<Mutation>] = [
+            .just(.setLoading(true)),
+            validationMutation,
+            .just(.setLoading(false))
+        ]
+        
+        return .concat(sequence)
+    }
     
+}
+
+// MARK: reduce
+
+extension LoggedInInteractor {
+    func reduce(state: LoggedInPresentableState, mutation: Mutation) -> LoggedInPresentableState {
+        var newState = state
+        
+        switch mutation {
+        case let .setLoading(loading):
+            newState.isLoading = loading
+        case let .setValidation(validation):
+            newState.isValidLoggedIn = validation
+        }
+        
+        return newState
+    }
 }

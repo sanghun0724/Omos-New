@@ -7,6 +7,8 @@
 
 import UIKit
 
+import MyConstants
+
 enum CommonUI {
     static let loginCorner = 4.0
     static let LoginTopViewHeight = 0.6
@@ -21,3 +23,16 @@ enum Device {
         "iPhone 11 Pro Max"
     ]
 }
+
+enum RestApiUrl {
+#if DEBUG
+    static let restUrl = URLConstants.debugUrl
+#else
+    static let restUrl = URLConstants.relaseURL
+#endif
+}
+
+enum KakaoKey {
+    static let kakaoKey = KAKAO.Key
+}
+

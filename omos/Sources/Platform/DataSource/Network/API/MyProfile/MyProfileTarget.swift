@@ -16,8 +16,7 @@ enum MyProfileTarget {
 
 extension MyProfileTarget: TargetType {
     var baseURL: String {
-       // RestApiUrl.restUrl + "/user"
-        ""
+        RestApiUrl.restUrl + "/user"
     }
     
     var method: HTTPMethod {

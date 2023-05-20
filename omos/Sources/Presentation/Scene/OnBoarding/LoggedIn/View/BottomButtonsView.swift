@@ -25,7 +25,7 @@ class BottomButtonsView: BaseView {
             $0.setTitle("로그인", for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         }
-        .isEnabled(false)
+        .isEnabled(true) // TODO: TEMP
         .build()
     
     private lazy var decoView = DecoView()

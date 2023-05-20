@@ -16,9 +16,7 @@ class OnboardingRespositoryServiceImpl: OnboardingRespositoryService {
     
     private let onboardingRepository: OnboardingRepository
     
-    init(
-        onboardingRepository: OnboardingRepository
-    ) {
+    init(onboardingRepository: OnboardingRepository) {
         self.onboardingRepository = onboardingRepository
     }
     

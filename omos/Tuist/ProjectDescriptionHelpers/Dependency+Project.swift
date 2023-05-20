@@ -25,6 +25,7 @@ public extension TargetDependency.SPM {
     static let Alamofire = TargetDependency.external(name: "Alamofire")
     static let KakaoSDK = TargetDependency.external(name: "KakaoSDK")
     static let RxGesture = TargetDependency.external(name: "RxGesture")
+    static let MyConstants = TargetDependency.external(name: "MyConstants")
 }
 
 
