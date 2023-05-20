@@ -134,6 +134,7 @@
 		B69634412A14F82C00F5FE7E /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634402A14F82C00F5FE7E /* NetworkRepository.swift */; };
 		B69634432A14FFC900F5FE7E /* OnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634422A14FFC900F5FE7E /* OnboardingRepository.swift */; };
 		B69634482A164C8600F5FE7E /* OnboardingRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634472A164C8600F5FE7E /* OnboardingRepositoryService.swift */; };
+		B696344B2A188B4600F5FE7E /* TokenUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696344A2A188B4600F5FE7E /* TokenUtil.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
 		C47EDA8F4D1138042945439A /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C6496677F92D19AE5A526 /* ViewControllerExtension.swift */; };
@@ -323,6 +324,7 @@
 		B69634402A14F82C00F5FE7E /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
 		B69634422A14FFC900F5FE7E /* OnboardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepository.swift; sourceTree = "<group>"; };
 		B69634472A164C8600F5FE7E /* OnboardingRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepositoryService.swift; sourceTree = "<group>"; };
+		B696344A2A188B4600F5FE7E /* TokenUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtil.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA6DA87E7B74B08993B772C /* UIViewController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 		BDC646295BAAC9FF2C74B9FD /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 				BCA6DA87E7B74B08993B772C /* UIViewController+Util.swift */,
 				68D9FDDA78E97CF886E6D408 /* UIViewControllerPreview.swift */,
 				02C69473A71652E436326AE3 /* UIViewPreview.swift */,
+				B696344A2A188B4600F5FE7E /* TokenUtil.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1132,6 +1135,7 @@
 				B69634322A14F26400F5FE7E /* TodayTarget.swift in Sources */,
 				81E07EA926FB05E337F3A744 /* ArtistDetail.swift in Sources */,
 				4C339F53DDEAFA785C5C1601 /* Track.swift in Sources */,
+				B696344B2A188B4600F5FE7E /* TokenUtil.swift in Sources */,
 				10C73B30A9081751D0E7D6ED /* AppComponent.swift in Sources */,
 				9298D6EE6E9C05171BCA8569 /* AppDelegate.swift in Sources */,
 				2E76E1EF6BE09E2ABD22D458 /* BaseCollectionReuseableView.swift in Sources */,
