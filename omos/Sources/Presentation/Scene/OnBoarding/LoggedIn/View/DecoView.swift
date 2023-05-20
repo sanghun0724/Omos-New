@@ -46,7 +46,7 @@ class DecoView: BaseView {
             make.leading.equalToSuperview()
             make.centerY.equalToSuperview()
             make.height.equalTo(1)
-            make.trailing.equalTo(orLabel.snp.leading).offset(-14)
+            make.trailing.equalTo(orLabel.snp.leading).offset(-14).priority(.high)
         }
     }
     
@@ -55,7 +55,7 @@ class DecoView: BaseView {
             make.trailing.equalToSuperview()
             make.centerY.equalToSuperview()
             make.height.equalTo(1)
-            make.leading.equalTo(orLabel.snp.trailing).offset(14)
+            make.leading.equalTo(orLabel.snp.trailing).offset(14).priority(.high)
         }
     }
 }

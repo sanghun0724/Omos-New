@@ -16,23 +16,18 @@ class CustomTextFieldView: BaseView {
       static let textFieldHeight: CGFloat = 48
     }
     
-    lazy var textField: CustomTextField = {
-        let textField = CustomTextField()
-        return textField
-    }()
+    lazy var textField = CustomTextField()
     
-    lazy var leftTopLabel: UILabel = {
-        let label = UILabel()
-        label.isHidden = false
-        return label
-    }()
+    lazy var leftTopLabel = UILabel().builder
+        .font(.systemFont(ofSize: 14, weight: .regular))
+        .textColor(.white)
+        .build()
     
-    lazy var rightTopLabel: UILabel = {
-        let label = UILabel()
-        label.isHidden = true
-        label.textColor = Asset.Colors.mainOrange.color
-        return label
-    }()
+    lazy var rightTopLabel = UILabel().builder
+        .font(.systemFont(ofSize: 12, weight: .regular))
+        .textColor(Asset.Colors.mainOrange.color)
+        .isHidden(true)
+        .build()
     
     func fetchLeftTopLabelText(text: String) {
         leftTopLabel.text = text

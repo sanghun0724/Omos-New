@@ -18,23 +18,22 @@ class BottomButtonsView: BaseView {
     }
     
     lazy var loginButton = UIButton().builder
-        .backgroundColor(Asset.Colors.mainOrange.color)
+        .backgroundColor(Asset.Colors.mainGray4.color)
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .with {
             $0.setTitle("로그인", for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+            $0.setTitleColor(Asset.Colors.mainGray6.color, for: .disabled)
+            $0.setTitleColor(.white, for: .normal)
         }
-        .isEnabled(true) // TODO: TEMP
+        .isEnabled(false) // TODO: TEMP
         .build()
     
     private lazy var decoView = DecoView()
     
     private lazy var kakaoImageView = UIImageView(image: Asset.Images.Login.kakao.image)
     
-    private let kakaoLabel = UILabel().builder
-        .text("카카오로 로그인")
-        .build()
     lazy var kakaoButton = UIButton().builder
         .backgroundColor(Asset.Colors.kakaoYellow.color)
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
@@ -42,8 +41,8 @@ class BottomButtonsView: BaseView {
         .with {
             $0.setTitle("  Kakao로 로그인", for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+            $0.setTitleColor(Asset.Colors.kakaoBrownLabel.color, for: .normal)
         }
-        .backgroundColor(Asset.Colors.mainOrange.color)
         .build()
     
     let appleButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .white)
@@ -56,7 +55,6 @@ class BottomButtonsView: BaseView {
         addSubview(appleButton)
         addSubview(kakaoButton)
         kakaoButton.addSubview(kakaoImageView)
-        kakaoButton.addSubview(kakaoLabel)
     }
     
     override func setupConstraints() {

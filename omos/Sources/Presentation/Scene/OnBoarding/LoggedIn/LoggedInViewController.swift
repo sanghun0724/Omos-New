@@ -62,11 +62,11 @@ final class LoggedInViewController:
         }
         .build()
     
-    private lazy var passwordTextFieldView = CustomTextFieldView()
+    private lazy var passwordTextFieldView = PasswordTextFieldView()
         .builder
         .with {
             $0.fetchLeftTopLabelText(text: "비밀번호")
-            $0.fetchRightTopLabelText(text: "비밀번호를 입력해주세요.")
+            $0.fetchRightTopLabelText(text: "8~16자의 영문 대소문자, 숫자, 특수문자만 가능해요.")
         }
         .build()
     
@@ -146,7 +146,6 @@ extension LoggedInViewController {
         bottomButtonView.loginButton
             .rx
             .tapWithPreventDuplication()
-            .debug("tap")
             .flatMapLatest { [emailTextFieldView, passwordTextFieldView] in
                 Observable.combineLatest(emailTextFieldView.textField.rx.text.orEmpty,
                                          passwordTextFieldView.textField.rx.text.orEmpty)
@@ -179,7 +178,7 @@ extension LoggedInViewController {
         listener.state.map(\.isValidLoggedIn)
             .distinctUntilChanged()
             .asDriver(onErrorDriveWith: .never())
-            .drive(self.bottomButtonView.kakaoButton.rx.isHidden)
+            .drive(self.bottomButtonView.kakaoButton.rx.isEnabled)
             .disposed(by: disposeBag)
     }
     
@@ -214,11 +213,11 @@ extension LoggedInViewController {
             $0.leading.trailing.top.equalToSuperview()
         }
         emailTextFieldView.snp.makeConstraints {
-            $0.top.equalTo(headerView.snp.bottom)
+            $0.top.equalTo(headerView.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
         }
         passwordTextFieldView.snp.makeConstraints {
-            $0.top.equalTo(emailTextFieldView.snp.bottom)
+            $0.top.equalTo(emailTextFieldView.snp.bottom).offset(22)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
         }
         authSupportedView.snp.makeConstraints {
@@ -230,7 +229,7 @@ extension LoggedInViewController {
             $0.top.greaterThanOrEqualTo(authSupportedView.snp.bottom).offset(100)
                 .priority(249)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
-            $0.bottom.greaterThanOrEqualToSuperview().offset(-34)
+            $0.bottom.greaterThanOrEqualToSuperview().offset(-34).priority(750)
         }
     }
     

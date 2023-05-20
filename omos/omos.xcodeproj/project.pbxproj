@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1030,6 +1030,7 @@
 				CC11AA4A046933D8D9D2458D /* Resources */,
 				A9A37ADEB240450F85691E03 /* Embed Frameworks */,
 				38C54D209B1FD6E17AABE3BA /* Frameworks */,
+				B696344C2A18C08C00F5FE7E /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -1108,6 +1109,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B696344C2A18C08C00F5FE7E /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftgen > /dev/null; then\n  if [[ \"$(uname -m)\" == 'arm64' ]]; then\n    arch -x86_64 swiftgen\n  else\n    swiftgen\n  fi\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BB9194623CCB3F31896A6F50 /* Sources */ = {
@@ -1276,6 +1298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 956ZG6VVZR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Derived/InfoPlists/omos-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1380,6 +1403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 956ZG6VVZR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Derived/InfoPlists/omos-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
