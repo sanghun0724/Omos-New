@@ -132,7 +132,8 @@
 		B696343C2A14F61500F5FE7E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696343B2A14F61500F5FE7E /* NetworkError.swift */; };
 		B696343F2A14F70200F5FE7E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696343E2A14F70200F5FE7E /* Networking.swift */; };
 		B69634412A14F82C00F5FE7E /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634402A14F82C00F5FE7E /* NetworkRepository.swift */; };
-		B69634432A14FFC900F5FE7E /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634422A14FFC900F5FE7E /* LoginRepository.swift */; };
+		B69634432A14FFC900F5FE7E /* OnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634422A14FFC900F5FE7E /* OnboardingRepository.swift */; };
+		B69634482A164C8600F5FE7E /* OnboardingRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634472A164C8600F5FE7E /* OnboardingRepositoryService.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
 		C47EDA8F4D1138042945439A /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C6496677F92D19AE5A526 /* ViewControllerExtension.swift */; };
@@ -320,7 +321,8 @@
 		B696343B2A14F61500F5FE7E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		B696343E2A14F70200F5FE7E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		B69634402A14F82C00F5FE7E /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
-		B69634422A14FFC900F5FE7E /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		B69634422A14FFC900F5FE7E /* OnboardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepository.swift; sourceTree = "<group>"; };
+		B69634472A164C8600F5FE7E /* OnboardingRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepositoryService.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA6DA87E7B74B08993B772C /* UIViewController+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 		BDC646295BAAC9FF2C74B9FD /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
@@ -656,23 +658,24 @@
 		B69633FD2A1396F300F5FE7E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				B69634462A16497B00F5FE7E /* Service */,
 				B69634012A13BC7200F5FE7E /* Models */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		B69633FE2A1396F900F5FE7E /* OnBoarding */ = {
+		B69633FE2A1396F900F5FE7E /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
 				B69633FF2A13975F00F5FE7E /* LoggedInPresentableState.swift */,
 			);
-			path = OnBoarding;
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		B69634012A13BC7200F5FE7E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B69633FE2A1396F900F5FE7E /* OnBoarding */,
+				B69633FE2A1396F900F5FE7E /* Onboarding */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -807,9 +810,17 @@
 			isa = PBXGroup;
 			children = (
 				B69634402A14F82C00F5FE7E /* NetworkRepository.swift */,
-				B69634422A14FFC900F5FE7E /* LoginRepository.swift */,
+				B69634422A14FFC900F5FE7E /* OnboardingRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		B69634462A16497B00F5FE7E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B69634472A164C8600F5FE7E /* OnboardingRepositoryService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		B922E553E95D60E1EE24E7BF /* Platform */ = {
@@ -1169,7 +1180,7 @@
 				B696342A2A14F26400F5FE7E /* AWSHelper.swift in Sources */,
 				0429ED3964E4D812A02C8874 /* MapRegionSettable.swift in Sources */,
 				2931DB0DD41694749801F717 /* PullToRefreshable.swift in Sources */,
-				B69634432A14FFC900F5FE7E /* LoginRepository.swift in Sources */,
+				B69634432A14FFC900F5FE7E /* OnboardingRepository.swift in Sources */,
 				B696342C2A14F26400F5FE7E /* SessionProtocol.swift in Sources */,
 				E11FE826B2BCE0B6052E6E76 /* HasRefreshState.swift in Sources */,
 				1CD9818EE6605013607BA855 /* RefreshStreamBindable.swift in Sources */,
@@ -1197,6 +1208,7 @@
 				393791D00F84DC60219F4A01 /* LoggedOutInteractor.swift in Sources */,
 				0C96D1D06D10653811A88D5C /* LoggedOutRouter.swift in Sources */,
 				B69634262A14F26400F5FE7E /* LoginTarget.swift in Sources */,
+				B69634482A164C8600F5FE7E /* OnboardingRepositoryService.swift in Sources */,
 				552CBAD9BF68E886779F68FD /* LoggedOutViewController.swift in Sources */,
 				2F5978D73708EADA1B8272C4 /* SignUpBuilder.swift in Sources */,
 				9634B4B94B65E3BF324AAB86 /* SignUpInteractor.swift in Sources */,

@@ -13,7 +13,7 @@ struct SignUpRequest: Codable {
     let password: String
 }
 
-struct SignUpRespone: Codable {
+struct SignUpResponse: Codable {
     let state: Bool
 }
 
@@ -21,7 +21,7 @@ struct CheckEmailRequest: Codable {
     let email: String
 }
 
-struct CheckEmailRespone: Codable {
+struct CheckEmailResponse: Codable {
     let state: Bool
 }
 
@@ -37,10 +37,10 @@ struct SNSSignUpResponse: Codable {
     let refreshToken: String
 }
 
-struct EmailCheckRequest: Codable {
+struct EmailValidationRequest: Codable {
     let email: String
 }
 
-struct EmailCheckResponse: Codable {
+struct EmailValidationResponse: Codable {
     let code: String
 }
