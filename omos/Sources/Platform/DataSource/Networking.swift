@@ -18,7 +18,7 @@ class Networking<Target: TargetType> {
         line: UInt = #line
     ) -> Single<D> {
         #if DEBUG
-        let requestString = "\(target.method.rawValue) \(target.path)"
+        let requestString = "\(target.baseURL), \(target.method.rawValue) \(target.path)"
         let request = rxRequest(target, type: type)
             .do(onSuccess: { response in
                 let message = "SUCCESS: \(requestString) (\(response))"
@@ -30,8 +30,10 @@ class Networking<Target: TargetType> {
                 let message = "REQUEST: \(requestString)"
                 Log.debug(message, file: file, function: function, line: line)
             })
-        #endif
+        return request
+        #else
         return rxRequest(target, type: type)
+        #endif
     }
     
     

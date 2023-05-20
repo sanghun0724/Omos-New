@@ -24,8 +24,7 @@ enum LoginTarget {
 
 extension LoginTarget: TargetType {
     var baseURL: String {
-        //RestApiUrl.restUrl + "/auth"
-        ""
+        RestApiUrl.restUrl + "/auth"
     }
 
     var method: HTTPMethod {

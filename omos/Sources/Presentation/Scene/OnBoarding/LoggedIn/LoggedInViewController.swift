@@ -17,7 +17,7 @@ import RxSwift
 
 enum LoggedInPresentableAction {
     case viewDidLoad
-    case localLoginButtonDidTap
+    case localLoginButtonDidTap(email: String, password: String)
     case kakaoLoginButtonDidTap
 }
 
@@ -86,6 +86,7 @@ final class LoggedInViewController:
         super.viewDidLoad()
         
         setupUI()
+        bind(listener: self.listener)
     }
     
     // MARK: Override
@@ -110,7 +111,7 @@ extension LoggedInViewController {
         guard let listener = listener else { return }
         self.bindActionRelay()
         bindActions()
-        
+        bindState(from: listener)
     }
     
     private func bindActionRelay() {
@@ -141,10 +142,16 @@ extension LoggedInViewController {
     }
     
     private func bindLocalButtonDidTapAction() {
+        //TODO: 원리 체크
         bottomButtonView.loginButton
             .rx
             .tapWithPreventDuplication()
-            .map {_ in .localLoginButtonDidTap }
+            .debug("tap")
+            .flatMapLatest { [emailTextFieldView, passwordTextFieldView] in
+                Observable.combineLatest(emailTextFieldView.textField.rx.text.orEmpty,
+                                         passwordTextFieldView.textField.rx.text.orEmpty)
+                }
+            .map { .localLoginButtonDidTap(email: $0.0, password: $0.1) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
@@ -168,10 +175,12 @@ extension LoggedInViewController {
     }
     
     private func bindValidationState(from listener: LoggedInPresentableListener) {
+        //TODO: TEMP
         listener.state.map(\.isValidLoggedIn)
             .distinctUntilChanged()
             .asDriver(onErrorDriveWith: .never())
-            .drive()
+            .drive(self.bottomButtonView.kakaoButton.rx.isHidden)
+            .disposed(by: disposeBag)
     }
     
 }

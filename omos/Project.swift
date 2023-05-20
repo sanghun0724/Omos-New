@@ -34,7 +34,8 @@ let project = Project(
                 .SPM.SkeletonView,
                 .SPM.SnapKit,
                 .SPM.KakaoSDK,
-                .SPM.RxGesture
+                .SPM.RxGesture,
+                .SPM.MyConstants
             ]
         ),
         Target(
