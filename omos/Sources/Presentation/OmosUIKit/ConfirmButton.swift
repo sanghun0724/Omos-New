@@ -36,12 +36,14 @@ class ConfirmButton: UIButton {
     
     private func setup() {
         titleLabel?.font = .systemFont(ofSize: 16, weight: .regular)
+        setTitleColor(Asset.Colors.mainGray6.color, for: .disabled)
+        setTitleColor(.white, for: .normal)
+        backgroundColor = Asset.Colors.mainGray4.color
     }
     
     private func setEnable(_ isEnable: Bool) {
         backgroundColor = isEnable ? Asset.Colors.mainOrange.color : Asset.Colors.mainGray4.color
         setTitle(isEnable ? enableText : disableText, for: .normal)
-        //setTitleColor(isEnable ? .black : Asset.Colors.mainGray6.color, for: .normal)
     }
 }
 
