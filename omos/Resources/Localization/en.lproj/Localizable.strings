@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  RIBsReactorKit
+
+  Created by elon on 2021/03/01.
+  Copyright © 2021 Elon. All rights reserved.
+*/
+
+// MARK: - Onboarding
+
+"onboarding.loginButton"=""
+"onboarding.loggedIn"=""
+"onboarding.email"=""
+"onboarding.password"=""
+"onboarding.emailwarning"=""
+"onboarding.passwordwarning"=""
+"onboarding.kakao"=""
+
