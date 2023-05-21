@@ -23,7 +23,7 @@ class OnBoardingHeaderView: BaseView {
     
     private lazy var titleLabel = UILabel()
         .builder
-        .text("로그인")
+        .text(Strings.Onboarding.loggedIn)
         .font(.systemFont(ofSize: 22))
         .textColor(Asset.Colors.mainOrange.color)
         .build()

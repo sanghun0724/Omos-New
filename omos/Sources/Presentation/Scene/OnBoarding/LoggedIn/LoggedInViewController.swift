@@ -58,16 +58,16 @@ final class LoggedInViewController:
     private lazy var emailTextFieldView = CustomTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: "이메일")
-            $0.fetchRightTopLabelText(text: "이메일을 확인해주세요.")
+            $0.fetchLeftTopLabelText(text: Strings.Onboarding.email)
+            $0.fetchRightTopLabelText(text: Strings.Onboarding.emailwarning)
         }
         .build()
     
     private lazy var passwordTextFieldView = PasswordTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: "비밀번호")
-            $0.fetchRightTopLabelText(text: "8~16자의 영문 대소문자, 숫자, 특수문자만 가능해요.")
+            $0.fetchLeftTopLabelText(text: Strings.Onboarding.password)
+            $0.fetchRightTopLabelText(text: Strings.Onboarding.passwordwarning)
         }
         .build()
     
@@ -142,10 +142,8 @@ extension LoggedInViewController {
         bottomButtonView.loginButton
             .rx
             .tapWithPreventDuplication()
-            .flatMapLatest { [emailTextFieldView, passwordTextFieldView] in
-                Observable.combineLatest(emailTextFieldView.textField.rx.text.orEmpty,
-                                         passwordTextFieldView.textField.rx.text.orEmpty)
-                }
+            .withLatestFrom (Observable.combineLatest(emailTextFieldView.textField.rx.text.orEmpty,
+                                                        passwordTextFieldView.textField.rx.text.orEmpty))
             .map { .localLoginButtonDidTap(email: $0.0, password: $0.1) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
@@ -182,7 +180,6 @@ extension LoggedInViewController {
     
     private func bindLoggedInbuttonIsEnable(from listener: LoggedInPresentableListener) {
         listener.state.map(\.hasLoggedInInput)
-            .debug("TEST")
             .distinctUntilChanged()
             .asDriver(onErrorDriveWith: .never())
             .drive(self.bottomButtonView.loginButton.rx.isEnabled)
@@ -190,7 +187,6 @@ extension LoggedInViewController {
     }
     
     private func bindValidationTextState(from listener: LoggedInPresentableListener) {
-        
         listener.state
             .map(\.isValidEmailFormat)
             .asDriver(onErrorDriveWith: .empty())
@@ -198,13 +194,12 @@ extension LoggedInViewController {
             .disposed(by: disposeBag)
 
         listener.state
+            .debug("password")
             .map(\.isValidPasswordFormat)
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.passwordTextFieldView.rx.isNormalState)
             .disposed(by: disposeBag)
-
     }
-    
 }
 
 // MARK: Layout
