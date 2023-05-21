@@ -16,9 +16,10 @@ import RxSwift
 // MARK: - LoggedInPresentableAction
 
 enum LoggedInPresentableAction {
-    case viewDidLoad
+    case textDidChanged(email: String, password: String)
     case localLoginButtonDidTap(email: String, password: String)
     case kakaoLoginButtonDidTap
+    case appleLoginButtonDidTap
 }
 
 // MARK: - LoggedInPresentableListener
@@ -100,10 +101,6 @@ final class LoggedInViewController:
 
 extension LoggedInViewController {}
 
-// MARK: Bind UI
-
-extension LoggedInViewController {}
-
 // MARK: - Bind listener
 
 extension LoggedInViewController {
@@ -128,15 +125,14 @@ extension LoggedInViewController {
 
 extension LoggedInViewController {
     private func bindActions() {
-        bindViewDidLoadAction()
+        bindTextFieldsAction()
         bindLocalButtonDidTapAction()
         bindKakaoButtonDidTapAction()
     }
     
-    private func bindViewDidLoadAction() {
-        rx.viewDidLoad
-            .throttle(.seconds(1), latest: false, scheduler: MainScheduler.instance)
-            .map { _ in .viewDidLoad }
+    private func bindTextFieldsAction() {
+        Observable.combineLatest(emailTextFieldView.textField.rx.text.orEmpty, passwordTextFieldView.textField.rx.text.orEmpty)
+            .map { .textDidChanged(email: $0.0, password: $0.1) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
@@ -170,16 +166,43 @@ extension LoggedInViewController {
 
 extension LoggedInViewController {
     private func bindState(from listener: LoggedInPresentableListener) {
-        self.bindValidationState(from: listener)
+        self.bindLoggedInState(from: listener)
+        self.bindLoggedInbuttonIsEnable(from: listener)
+        self.bindValidationTextState(from: listener)
     }
     
-    private func bindValidationState(from listener: LoggedInPresentableListener) {
+    private func bindLoggedInState(from listener: LoggedInPresentableListener) {
         //TODO: TEMP
         listener.state.map(\.isValidLoggedIn)
             .distinctUntilChanged()
             .asDriver(onErrorDriveWith: .never())
             .drive(self.bottomButtonView.kakaoButton.rx.isEnabled)
             .disposed(by: disposeBag)
+    }
+    
+    private func bindLoggedInbuttonIsEnable(from listener: LoggedInPresentableListener) {
+        listener.state.map(\.hasLoggedInInput)
+            .debug("TEST")
+            .distinctUntilChanged()
+            .asDriver(onErrorDriveWith: .never())
+            .drive(self.bottomButtonView.loginButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindValidationTextState(from listener: LoggedInPresentableListener) {
+        
+        listener.state
+            .map(\.isValidEmailFormat)
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.emailTextFieldView.rx.isNormalState)
+            .disposed(by: disposeBag)
+
+        listener.state
+            .map(\.isValidPasswordFormat)
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.passwordTextFieldView.rx.isNormalState)
+            .disposed(by: disposeBag)
+
     }
     
 }

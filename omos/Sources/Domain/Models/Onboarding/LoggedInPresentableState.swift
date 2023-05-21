@@ -10,4 +10,8 @@ import Foundation
 struct LoggedInPresentableState: Equatable {
     var isValidLoggedIn = true
     var isLoading = false
+    var hasLoggedInInput = false 
+    var isValidEmailFormat = false
+    var isValidPasswordFormat = false
 }
+

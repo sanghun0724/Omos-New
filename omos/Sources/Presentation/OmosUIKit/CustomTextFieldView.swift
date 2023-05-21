@@ -16,6 +16,14 @@ class CustomTextFieldView: BaseView {
       static let textFieldHeight: CGFloat = 48
     }
     
+    // MARK: - Propoerties
+    
+    var isNormalState: Bool = true {
+        didSet {
+            isNormalState ? self.setNomalState() : self.setWarningState()
+        }
+    }
+    
     lazy var textField = CustomTextField()
     
     lazy var leftTopLabel = UILabel().builder

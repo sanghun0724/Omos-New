@@ -6,10 +6,14 @@
 //
 // Domain Service ~= Usecase
 
+import Foundation
+
 import RxSwift
 
 protocol OnboardingRespositoryService {
     func login(email: String, password: String) -> Observable<Bool>
+    func isValidEmail(email: String) -> Observable<Bool>
+    func isValidPassword(password: String) -> Observable<Bool>
 }
 
 class OnboardingRespositoryServiceImpl: OnboardingRespositoryService {
@@ -33,6 +37,21 @@ class OnboardingRespositoryServiceImpl: OnboardingRespositoryService {
 //            }
 //            .catchAndReturn(false)
         return .just(false)
+    }
+    
+    
+    // MARK: - business logic 
+    
+    func isValidEmail(email: String) -> Observable<Bool> {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return .just(emailTest.evaluate(with: email))
+    }
+    
+    func isValidPassword(password: String) -> Observable<Bool> {
+        let passwordRegEx = "^(?=.[A-Z])(?=.[a-z])(?=.[0-9])(?=.[!@#%^&()_+]{8,16}$"
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
+        return .just(passwordTest.evaluate(with: password))
     }
     
 }

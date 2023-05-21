@@ -17,17 +17,9 @@ class BottomButtonsView: BaseView {
         static let separatedHeight = 41
     }
     
-    lazy var loginButton = UIButton().builder
-        .backgroundColor(Asset.Colors.mainGray4.color)
+    lazy var loginButton = ConfirmButton("로그인").builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
-        .with {
-            $0.setTitle("로그인", for: .normal)
-            $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-            $0.setTitleColor(Asset.Colors.mainGray6.color, for: .disabled)
-            $0.setTitleColor(.white, for: .normal)
-        }
-        .isEnabled(false) // TODO: TEMP
         .build()
     
     private lazy var decoView = DecoView()
@@ -56,7 +48,7 @@ class BottomButtonsView: BaseView {
         addSubview(kakaoButton)
         kakaoButton.addSubview(kakaoImageView)
     }
-    
+
     override func setupConstraints() {
         super.setupConstraints()
         self.makeLoginButtonConstraints()
