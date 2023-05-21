@@ -59,7 +59,7 @@ final class LoggedInViewController:
         .builder
         .with {
             $0.fetchLeftTopLabelText(text: "이메일")
-            $0.fetchRightTopLabelText(text: "이메일을 입력해주세요.")
+            $0.fetchRightTopLabelText(text: "이메일을 확인해주세요.")
         }
         .build()
     

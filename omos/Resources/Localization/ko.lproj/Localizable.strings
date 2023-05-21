@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  RIBsReactorKit
+
+  Created by elon on 2021/03/01.
+  Copyright © 2021 Elon. All rights reserved.
+*/
+
+// MARK: - Onboarding
+
+"onboarding.loginButton"="로그인"
+"onboarding.loggedIn"="로그인"
+"onboarding.email"="이메일"
+"onboarding.password"="비밀번호"
+"onboarding.emailwarning"="이메일을 확인해주세요."
+"onboarding.passwordwarning"="8~16자의 영문 대소문자, 숫자, 특수문자만 가능해요."
+"onboarding.kakao"="  Kakao로 로그인"
+

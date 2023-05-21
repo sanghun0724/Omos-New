@@ -123,6 +123,7 @@
 		B5AD39CEEB333500C247DF4E /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5B7D641C61A6FDFFB94DB1 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5DA3B2CE3CD0CCE6CB77AC3 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C95D1204A60CC92EC66C9E /* LoggedInRouter.swift */; };
 		B65FCB48F3C8B236C783B3CF /* SkeletonViewsAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F89C46FCCEC76D8D98FF09A /* SkeletonViewsAnimatable.swift */; };
+		B69634542A1A339F00F5FE7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B69634512A1A339F00F5FE7E /* Localizable.strings */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BEB30C518C14D5A9F7C6E076 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF615D6B2520666E3D0AE9 /* NetworkRepository.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
@@ -318,6 +319,8 @@
 		B3E1190E9BDD67DE850D9787 /* TokenUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtil.swift; sourceTree = "<group>"; };
 		B5E6131E8E5AE67E6E196A01 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		B64CBF38A341291E36F0AAFB /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B69634522A1A339F00F5FE7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B69634532A1A339F00F5FE7E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B9A4BE28B75662E97ACA7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BA27A0591654709FC08253DC /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
@@ -771,6 +774,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B69634502A1A339F00F5FE7E /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				B69634512A1A339F00F5FE7E /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		B922E553E95D60E1EE24E7BF /* Platform */ = {
 			isa = PBXGroup;
 			children = (
@@ -853,6 +864,7 @@
 		D6BBE73D83E3BBEB53819776 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B69634502A1A339F00F5FE7E /* Localization */,
 				2A780E49512F7F50945E1487 /* LaunchScreen.storyboard */,
 				FC6BCBB01414B88C6CC51501 /* Assets.xcassets */,
 			);
@@ -1079,6 +1091,7 @@
 			knownRegions = (
 				Base,
 				en,
+				ko,
 			);
 			mainGroup = 9915091795ADCF643EE797F5;
 			productRefGroup = 0EEB7EBAF86E0C23BDC32C70 /* Products */;
@@ -1104,6 +1117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25D7978C8569B46CA0D46E7A /* Assets.xcassets in Resources */,
+				B69634542A1A339F00F5FE7E /* Localizable.strings in Resources */,
 				DBE91B06C828809136611DE3 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1288,6 +1302,15 @@
 				3DC4045518C0B25EB2D9004C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B69634512A1A339F00F5FE7E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B69634522A1A339F00F5FE7E /* en */,
+				B69634532A1A339F00F5FE7E /* ko */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
