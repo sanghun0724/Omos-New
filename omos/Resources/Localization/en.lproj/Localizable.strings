@@ -8,11 +8,11 @@
 
 // MARK: - Onboarding
 
-"onboarding.loginButton"=""
-"onboarding.loggedIn"=""
-"onboarding.email"=""
-"onboarding.password"=""
-"onboarding.emailwarning"=""
-"onboarding.passwordwarning"=""
-"onboarding.kakao"=""
+"onboarding.loginButton"="";
+"onboarding.loggedIn"="";
+"onboarding.email"="";
+"onboarding.password"="";
+"onboarding.emailwarning"="";
+"onboarding.passwordwarning"="";
+"onboarding.kakao"="";
 

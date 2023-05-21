@@ -49,9 +49,16 @@ class OnboardingRespositoryServiceImpl: OnboardingRespositoryService {
     }
     
     func isValidPassword(password: String) -> Observable<Bool> {
-        let passwordRegEx = "^(?=.[A-Z])(?=.[a-z])(?=.[0-9])(?=.[!@#%^&()_+]{8,16}$"
+        let passwordRegEx = "[A-Za-z0-9!_@$%^&+=]{8,16}"
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
         return .just(passwordTest.evaluate(with: password))
+    }
+    
+    // 패스워드
+    func validatePassword() -> Bool {
+        let passwordRegEx = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,16}$"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
+        return predicate.evaluate(with: self)
     }
     
 }

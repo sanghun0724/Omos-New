@@ -17,7 +17,7 @@ class BottomButtonsView: BaseView {
         static let separatedHeight = 41
     }
     
-    lazy var loginButton = ConfirmButton("로그인").builder
+    lazy var loginButton = ConfirmButton(Strings.Onboarding.loggedIn).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .build()
@@ -31,7 +31,7 @@ class BottomButtonsView: BaseView {
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .with {
-            $0.setTitle("  Kakao로 로그인", for: .normal)
+            $0.setTitle(Strings.Onboarding.kakao, for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
             $0.setTitleColor(Asset.Colors.kakaoBrownLabel.color, for: .normal)
         }

@@ -114,32 +114,29 @@ extension LoggedInInteractor {
     
     private func loggedInInputValidatioMutation(email: String, password: String) -> Observable<Mutation> {
         let validations = [emailValidationMutation(email: email), passwordValidationMutation(password: password)]
-        if isValidLoggedInInputs(validations) {
-            return self.loggedInMutation(email: email, password: password)
-        }
         
-        return .concat(validations)
+        return isValidLoggedInInputs(validations)
+            .flatMap { isValidate -> Observable<Mutation> in
+                isValidate
+                ? .concat(validations)
+                : .concat(validations + [self.loggedInMutation(email: email, password: password)])
+            }
     }
     
     /// 유효성을 검사한 후 로그인 Request 를 날리기 위함
-    private func isValidLoggedInInputs(_ mutations: [Observable<Mutation>]) -> Bool {
-        var isValidEmail = false
-        var isValidPassword = false
-        
-        mutations.forEach { mutation in
-            let _ = mutation.map {
-                switch $0 {
+    private func isValidLoggedInInputs(_ mutations: [Observable<Mutation>]) -> Observable<Bool> {
+        return Observable.combineLatest(mutations) { mutations -> Bool in
+            return mutations.allSatisfy { mutation in
+                switch mutation {
                 case let .setEmailValidation(emailValidation):
-                    isValidEmail = emailValidation
+                    return emailValidation
                 case let .setPasswordValidation(passwordValidation):
-                    isValidPassword = passwordValidation
+                    return passwordValidation
                 default:
-                    return
+                    return true
                 }
             }
         }
-        
-        return isValidEmail && isValidPassword
     }
     
     private func emailValidationMutation(email: String) -> Observable<Mutation> {
@@ -154,6 +151,7 @@ extension LoggedInInteractor {
         let passwordValidationMutation: Observable<Mutation> = self.onboardingRepositoryService.isValidPassword(password: password)
             .map { .setPasswordValidation($0) }
             .catchAndReturn(.setPasswordValidation(false))
+            .debug("what")
         
         return passwordValidationMutation
     }
