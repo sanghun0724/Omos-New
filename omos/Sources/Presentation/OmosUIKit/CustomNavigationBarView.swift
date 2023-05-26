@@ -50,7 +50,6 @@ class CustomNavigationBarView: UIView {
         super.init(frame: .zero)
         
         setupAppBar()
-        self.backgroundColor = .red 
     }
     
     required init?(coder: NSCoder) {

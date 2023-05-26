@@ -125,6 +125,11 @@
 		B65FCB48F3C8B236C783B3CF /* SkeletonViewsAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F89C46FCCEC76D8D98FF09A /* SkeletonViewsAnimatable.swift */; };
 		B69634542A1A339F00F5FE7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B69634512A1A339F00F5FE7E /* Localizable.strings */; };
 		B69634562A1A45C000F5FE7E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634552A1A45C000F5FE7E /* Strings.swift */; };
+		B696348A2A1CE19000F5FE7E /* ComponentizedBuilderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634892A1CE19000F5FE7E /* ComponentizedBuilderExtensions.swift */; };
+		B69634AF2A1CE9BC00F5FE7E /* TodayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634AB2A1CE9BC00F5FE7E /* TodayRouter.swift */; };
+		B69634B02A1CE9BC00F5FE7E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634AC2A1CE9BC00F5FE7E /* TodayViewController.swift */; };
+		B69634B12A1CE9BC00F5FE7E /* TodayBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634AD2A1CE9BC00F5FE7E /* TodayBuilder.swift */; };
+		B69634B22A1CE9BC00F5FE7E /* TodayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634AE2A1CE9BC00F5FE7E /* TodayInteractor.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BEB30C518C14D5A9F7C6E076 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF615D6B2520666E3D0AE9 /* NetworkRepository.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
@@ -323,6 +328,11 @@
 		B69634522A1A339F00F5FE7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B69634532A1A339F00F5FE7E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B69634552A1A45C000F5FE7E /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		B69634892A1CE19000F5FE7E /* ComponentizedBuilderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentizedBuilderExtensions.swift; sourceTree = "<group>"; };
+		B69634AB2A1CE9BC00F5FE7E /* TodayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRouter.swift; sourceTree = "<group>"; };
+		B69634AC2A1CE9BC00F5FE7E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		B69634AD2A1CE9BC00F5FE7E /* TodayBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBuilder.swift; sourceTree = "<group>"; };
+		B69634AE2A1CE9BC00F5FE7E /* TodayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayInteractor.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B9A4BE28B75662E97ACA7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BA27A0591654709FC08253DC /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
@@ -784,6 +794,26 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		B69634572A1B7CD400F5FE7E /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				B69634AB2A1CE9BC00F5FE7E /* TodayRouter.swift */,
+				B69634AC2A1CE9BC00F5FE7E /* TodayViewController.swift */,
+				B69634AD2A1CE9BC00F5FE7E /* TodayBuilder.swift */,
+				B69634AE2A1CE9BC00F5FE7E /* TodayInteractor.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		B69634882A1CE16300F5FE7E /* Ribs+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				539C6496677F92D19AE5A526 /* ViewControllerExtension.swift */,
+				B69634892A1CE19000F5FE7E /* ComponentizedBuilderExtensions.swift */,
+			);
+			path = "Ribs+Extension";
+			sourceTree = "<group>";
+		};
 		B922E553E95D60E1EE24E7BF /* Platform */ = {
 			isa = PBXGroup;
 			children = (
@@ -924,6 +954,7 @@
 		E8126E765F27CF385708DDCC /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
+				B69634572A1B7CD400F5FE7E /* Today */,
 				20E3BFDF8858B5E06264761C /* Common */,
 				2AA0AF27E4F309A595D1E0F9 /* LoggedIn */,
 				C0B808B1DC55BB2C46048C0F /* LoggedOut */,
@@ -986,6 +1017,7 @@
 		F05725C443B81C04269495D5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B69634882A1CE16300F5FE7E /* Ribs+Extension */,
 				640A25A9044C6D6C3A471E47 /* ArrayExtension.swift */,
 				D4D35D6B3E3D208D47E21B8F /* ISO8610DataFormatter+Extensions.swift */,
 				75064D5D47A72DF0603A8C1B /* ReactiveExtension.swift */,
@@ -993,7 +1025,6 @@
 				A6261BADFA1F04C8D725E34F /* UIImageViewExtension.swift */,
 				21A364872A90EF3546CB5605 /* UINavigationControllerExtensions.swift */,
 				55D548F8E1035C2E2377A4F0 /* UITableViewExtension.swift */,
-				539C6496677F92D19AE5A526 /* ViewControllerExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1155,6 +1186,7 @@
 			files = (
 				80718E588959C2EF764DAAEC /* TuistAssets+Omos.swift in Sources */,
 				1BDC44B5B34036C8EB4DCADD /* TuistBundle+Omos.swift in Sources */,
+				B696348A2A1CE19000F5FE7E /* ComponentizedBuilderExtensions.swift in Sources */,
 				C7545454FE9537A34B5581C8 /* LoggedInPresentableState.swift in Sources */,
 				9129854BFFDDA169EED1F937 /* OnboardingRepositoryService.swift in Sources */,
 				F5979DD1B598AE9B761EB13E /* MyAuthenticationCredential.swift in Sources */,
@@ -1194,6 +1226,7 @@
 				22054BDFB8249A8DA76F526E /* Select.swift in Sources */,
 				57329FA15E89BFE05A80E17A /* Album.swift in Sources */,
 				069C9AC9D984CCFBC3915489 /* AlbumDetail.swift in Sources */,
+				B69634B02A1CE9BC00F5FE7E /* TodayViewController.swift in Sources */,
 				37B87CD53C0A5D28103D3CB9 /* Artist.swift in Sources */,
 				B69634562A1A45C000F5FE7E /* Strings.swift in Sources */,
 				81E07EA926FB05E337F3A744 /* ArtistDetail.swift in Sources */,
@@ -1204,6 +1237,7 @@
 				9298D6EE6E9C05171BCA8569 /* AppDelegate.swift in Sources */,
 				2E76E1EF6BE09E2ABD22D458 /* BaseCollectionReuseableView.swift in Sources */,
 				AA406633E451919221B9FBE3 /* BaseCollectionViewCell.swift in Sources */,
+				B69634B12A1CE9BC00F5FE7E /* TodayBuilder.swift in Sources */,
 				470F4D70250BB61B7DE0EDD5 /* BaseImageView.swift in Sources */,
 				0E66226F61E3DF2E081BADB5 /* BaseLabel.swift in Sources */,
 				20088B1FD89CFA7CECD0E2F2 /* BaseTableViewCell.swift in Sources */,
@@ -1270,8 +1304,10 @@
 				DE57949716BBD538D65A0B17 /* Constant.swift in Sources */,
 				D2C1B17BE3986FA70FE65786 /* SocialAuthManager.swift in Sources */,
 				34D3A76B39BD398CDEA9751E /* Assets.swift in Sources */,
+				B69634B22A1CE9BC00F5FE7E /* TodayInteractor.swift in Sources */,
 				0C282D69FBFD0AD02099558D /* PropertyBuilder.swift in Sources */,
 				7C707D07B7A1DCE348B932C2 /* PropertyBuilderCompatible.swift in Sources */,
+				B69634AF2A1CE9BC00F5FE7E /* TodayRouter.swift in Sources */,
 				E524958E92AE8E038305F77B /* Ribs+Util.swift in Sources */,
 				68CF702F21D11FF73170C011 /* TokenUtil.swift in Sources */,
 				9514233900B51B347851FD0D /* UIViewController+Util.swift in Sources */,

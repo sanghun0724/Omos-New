@@ -11,12 +11,17 @@ import ReactorKit
 import RIBs
 import RxSwift
 
+// MARK: - LoggedInRouting
+
 protocol LoggedInRouting: ViewableRouting {
-    
+    func attachSignUpRIB()
+    func detachSignUpRIB()
+    func attachTodayRIB()
+    func detachTodayRIB()
 }
 
 // MARK: - LoggedInPresentable
-
+// 인터렉터 들끼리 소통하기 위해 프로토콜 채택 
 protocol LoggedInPresentable: Presentable {
     var listener: LoggedInPresentableListener? { get set }
 }
@@ -49,6 +54,8 @@ final class LoggedInInteractor:
         case setHasLoggedInInput(Bool)
         case setEmailValidation(Bool)
         case setPasswordValidation(Bool)
+        case attachSignUpRIB
+        case attachTodayRIB(Bool)
     }
     
     // MARK: - Properties
@@ -118,8 +125,8 @@ extension LoggedInInteractor {
         return isValidLoggedInInputs(validations)
             .flatMap { isValidate -> Observable<Mutation> in
                 isValidate
-                ? .concat(validations)
-                : .concat(validations + [self.loggedInMutation(email: email, password: password)])
+                ? .concat(validations + [self.loggedInMutation(email: email, password: password)])
+                : .concat(validations)
             }
     }
     
@@ -151,7 +158,6 @@ extension LoggedInInteractor {
         let passwordValidationMutation: Observable<Mutation> = self.onboardingRepositoryService.isValidPassword(password: password)
             .map { .setPasswordValidation($0) }
             .catchAndReturn(.setPasswordValidation(false))
-            .debug("what")
         
         return passwordValidationMutation
     }
@@ -159,7 +165,12 @@ extension LoggedInInteractor {
     private func loggedInMutation(email: String, password: String) -> Observable<Mutation> {
         let loggedInMutation: Observable<Mutation> = self.onboardingRepositoryService
             .login(email: email, password: password)
-            .map { .setLoggedIn($0) }
+            .flatMap { isSuccess in
+                return Observable.concat(
+                    Observable.just(Mutation.setLoggedIn(isSuccess)),
+                    Observable.just(Mutation.attachTodayRIB(isSuccess))
+                )
+            }
             .catchAndReturn(.setLoading(false))
         
         let sequence: [Observable<Mutation>] = [
@@ -177,6 +188,32 @@ extension LoggedInInteractor {
 
 extension LoggedInInteractor {
     
+    func transform(mutation: Observable<Mutation>) -> Observable<Mutation> {
+        return mutation
+            .withUnretained(self)
+            .flatMap { owner, mutation -> Observable<Mutation> in
+                switch mutation {
+                case .attachSignUpRIB:
+                    return owner.attachSignUpRIBTransform()
+                case let .attachTodayRIB(isLoggedIn) where isLoggedIn:
+                    return owner.attachTodayRIBTransform()
+                default:
+                    return .just(mutation)
+                }
+            }
+    }
+    
+    /// Show SignUp Page
+    private func attachSignUpRIBTransform() -> Observable<Mutation> {
+      self.router?.attachSignUpRIB()
+      return .empty()
+    }
+    
+    /// Show Today Page
+    private func attachTodayRIBTransform() -> Observable<Mutation> {
+        self.router?.attachTodayRIB()
+        return .empty()
+    }
 }
 
 // MARK: reduce
@@ -196,6 +233,10 @@ extension LoggedInInteractor {
             newState.isValidPasswordFormat = passwordValidation
         case let .setHasLoggedInInput(validation):
             newState.hasLoggedInInput = validation
+        case .attachSignUpRIB:
+            break
+        case .attachTodayRIB:
+            break
         }
         
         return newState

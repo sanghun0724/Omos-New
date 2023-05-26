@@ -32,7 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let xcode = XcodeLoggingChannel()
         Log.addChannels(xcode)
         
-        let result = AppRootBuilder(dependency: AppComponent()).build()
+        let result = AppRootBuilder {
+            AppRootComponent(parent: self)
+        }
         self.launchRouter = result.launchRouter
         self.urlHandler = result.urlHandler
         launchRouter?.launch(from: window)

@@ -36,7 +36,7 @@ class OnboardingRespositoryServiceImpl: OnboardingRespositoryService {
 //                return true
 //            }
 //            .catchAndReturn(false)
-        return .just(false)
+        return .just(true)
     }
     
     

@@ -18,9 +18,20 @@ class CustomTextFieldView: BaseView {
     
     // MARK: - Propoerties
     
-    var isNormalState: Bool = true {
+    var isValidFormatted: Bool = true {
         didSet {
-            isNormalState ? self.setNomalState() : self.setWarningState()
+            isValidFormatted ? self.setNomalState() : self.setWarningState()
+        }
+    }
+    
+    var isSuccessLoggedIn: Bool = false {
+        didSet {
+            if isSuccessLoggedIn {
+                self.setNomalState()
+            } else {
+                fetchRightTopLabelText(text: " 로그인 실패")
+                self.setWarningState()
+            }
         }
     }
     
@@ -47,6 +58,7 @@ class CustomTextFieldView: BaseView {
     
     func setWarningState() {
         rightTopLabel.isHidden = false
+        textField.layer.borderWidth = 1
         textField.layer.borderColor = Asset.Colors.mainOrange.color.cgColor
     }
     

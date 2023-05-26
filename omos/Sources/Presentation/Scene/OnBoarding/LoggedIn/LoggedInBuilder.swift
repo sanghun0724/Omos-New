@@ -5,37 +5,56 @@
 //  Created by sangheon on 2023/04/09.
 //
 
+import NeedleFoundation
 import RIBs
 
-protocol LoggedInDependency: Dependency {
+// MARK: - LoggedInDependency
+
+protocol LoggedInDependency: NeedleFoundation.Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
 }
 
-final class LoggedInComponent: Component<LoggedInDependency> {
+// MARK: - LoggedInComponent
 
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+final class LoggedInComponent: NeedleFoundation.Component<LoggedInDependency> {
+    fileprivate var todayBuilder: TodayBuildable {
+      TodayBuilder {
+        TodayComponent(parent: self)
+      }
+    }
+}
+
+// MARK: - LoggedInBuildDependency
+
+struct LoggedInBuildDependency {
+    let listener: LoggedInListener
 }
 
 // MARK: - Builder
 
 protocol LoggedInBuildable: Buildable {
-    func build(withListener listener: LoggedInListener) -> LoggedInRouting
+    func build(with dynamicBuildDependency: LoggedInBuildDependency) -> LoggedInRouting
 }
 
-final class LoggedInBuilder: Builder<LoggedInDependency>, LoggedInBuildable {
+// MARK: - LoggedInBuilder
 
-    override init(dependency: LoggedInDependency) {
-        super.init(dependency: dependency)
-    }
+final class LoggedInBuilder:
+    ComponentizedBuilder<LoggedInComponent, LoggedInRouting, LoggedInBuildDependency, Void>,
+    LoggedInBuildable {
 
-    func build(withListener listener: LoggedInListener) -> LoggedInRouting {
-        let component = LoggedInComponent(dependency: dependency)
+    override func build(
+      with component: LoggedInComponent,
+      _ payload: LoggedInBuildDependency
+    ) -> LoggedInRouting {
         let viewController = LoggedInViewController()
         let interactor = LoggedInInteractor(presenter: viewController,
                                             initialState: .init(),
                                             onboardingRepositoryService: OnboardingRespositoryServiceImpl(onboardingRepository: OnboardingRepositoryImpl(networkingProvider: Networking())))
-        interactor.listener = listener
-        return LoggedInRouter(interactor: interactor, viewController: viewController)
+        interactor.listener = payload.listener
+        
+        return LoggedInRouter(todayBuilder: component.todayBuilder,
+                              interactor: interactor,
+                              viewController: viewController)
     }
 }

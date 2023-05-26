@@ -157,7 +157,6 @@ extension LoggedInViewController {
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
-    
 }
 
 // MARK: - Binding State
@@ -170,11 +169,17 @@ extension LoggedInViewController {
     }
     
     private func bindLoggedInState(from listener: LoggedInPresentableListener) {
-        //TODO: TEMP
+        
         listener.state.map(\.isValidLoggedIn)
             .distinctUntilChanged()
-            .asDriver(onErrorDriveWith: .never())
-            .drive(self.bottomButtonView.kakaoButton.rx.isEnabled)
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.emailTextFieldView.rx.isSuccessLoggedIn)
+            .disposed(by: disposeBag)
+        
+        listener.state.map(\.isValidLoggedIn)
+            .distinctUntilChanged()
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.passwordTextFieldView.rx.isSuccessLoggedIn)
             .disposed(by: disposeBag)
     }
     
@@ -190,14 +195,13 @@ extension LoggedInViewController {
         listener.state
             .map(\.isValidEmailFormat)
             .asDriver(onErrorDriveWith: .empty())
-            .drive(self.emailTextFieldView.rx.isNormalState)
+            .drive(self.emailTextFieldView.rx.isValidFormatted)
             .disposed(by: disposeBag)
 
         listener.state
-            .debug("password")
             .map(\.isValidPasswordFormat)
             .asDriver(onErrorDriveWith: .empty())
-            .drive(self.passwordTextFieldView.rx.isNormalState)
+            .drive(self.passwordTextFieldView.rx.isValidFormatted)
             .disposed(by: disposeBag)
     }
 }
