@@ -17,10 +17,8 @@ protocol AppRootViewControllable: ViewControllable {
 }
 
 final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControllable>, AppRootRouting {
-
-    private let loggedOutBuilder: LoggedOutBuildable
-    private let loggedInBuilder: LoggedInBuildable
     
+    private let loggedInBuilder: LoggedInBuildable
     
     private var loggedInRouting: ViewableRouting?
     
@@ -51,9 +49,5 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
         attachChild(router)
         let navigation = NavigationControllerable(root: router.viewControllable)
         viewController.presentFullScreen(navigation, animated: false, completion: nil)
-    }
-    
-    func attachLoggedOut() {
-        
     }
 }

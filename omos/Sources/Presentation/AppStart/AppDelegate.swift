@@ -29,8 +29,7 @@ class AppDelegate:
         // MARK: initial setting
         
         setKakaoSDK()
-        let xcode = XcodeLoggingChannel()
-        Log.addChannels(xcode)
+        setLoggingChannel()
         
         setWindow()
         setLaunchRouter()
@@ -38,16 +37,20 @@ class AppDelegate:
         
         return true
     }
-    
-    private func setKakaoSDK() {
-        KakaoSDK.initSDK(appKey: "")
-    }
-
 }
 
 // MARK: Private methods
 
 extension AppDelegate {
+    private func setKakaoSDK() {
+        KakaoSDK.initSDK(appKey: "")
+    }
+    
+    private func setLoggingChannel() {
+        let xcode = XcodeLoggingChannel()
+        Log.addChannels(xcode)
+    }
+    
     private func setWindow() {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window

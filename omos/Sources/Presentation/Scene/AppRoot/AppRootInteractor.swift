@@ -11,7 +11,6 @@ import RIBs
 protocol AppRootRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
     func attachLoggedIn()
-    func attachLoggedOut()
 }
 
 protocol AppRootPresentable: Presentable {
@@ -27,8 +26,6 @@ final class AppRootInteractor: PresentableInteractor<AppRootPresentable>, AppRoo
 
     weak var router: AppRootRouting?
     weak var listener: AppRootListener?
-    
-    var tempLogggedIn: Bool = true
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
@@ -39,12 +36,7 @@ final class AppRootInteractor: PresentableInteractor<AppRootPresentable>, AppRoo
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        
-        if tempLogggedIn {
-            router?.attachLoggedIn()
-        } else {
-            router?.attachLoggedOut()
-        }
+        router?.attachLoggedIn()
     }
 
     override func willResignActive() {

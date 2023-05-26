@@ -131,6 +131,7 @@
 		B69634B12A1CE9BC00F5FE7E /* TodayBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634AD2A1CE9BC00F5FE7E /* TodayBuilder.swift */; };
 		B69634B22A1CE9BC00F5FE7E /* TodayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634AE2A1CE9BC00F5FE7E /* TodayInteractor.swift */; };
 		B69634BC2A208F2600F5FE7E /* TodayPresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634BB2A208F2600F5FE7E /* TodayPresentableState.swift */; };
+		B69634BF2A2095CB00F5FE7E /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634BE2A2095CB00F5FE7E /* NeedleGenerated.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BEB30C518C14D5A9F7C6E076 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF615D6B2520666E3D0AE9 /* NetworkRepository.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
@@ -335,6 +336,7 @@
 		B69634AD2A1CE9BC00F5FE7E /* TodayBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBuilder.swift; sourceTree = "<group>"; };
 		B69634AE2A1CE9BC00F5FE7E /* TodayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayInteractor.swift; sourceTree = "<group>"; };
 		B69634BB2A208F2600F5FE7E /* TodayPresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPresentableState.swift; sourceTree = "<group>"; };
+		B69634BE2A2095CB00F5FE7E /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B9A4BE28B75662E97ACA7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BA27A0591654709FC08253DC /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
@@ -992,6 +994,7 @@
 			children = (
 				B69634552A1A45C000F5FE7E /* Strings.swift */,
 				325FA77A23BDC51F3545CC94 /* Assets.swift */,
+				B69634BE2A2095CB00F5FE7E /* NeedleGenerated.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -1080,6 +1083,7 @@
 				A9A37ADEB240450F85691E03 /* Embed Frameworks */,
 				38C54D209B1FD6E17AABE3BA /* Frameworks */,
 				B696344C2A18C08C00F5FE7E /* SwiftGen */,
+				B69634BD2A2092F300F5FE7E /* NeedleFoundation */,
 			);
 			buildRules = (
 			);
@@ -1179,6 +1183,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftgen > /dev/null; then\n  if [[ \"$(uname -m)\" == 'arm64' ]]; then\n    arch -x86_64 swiftgen\n  else\n    swiftgen\n  fi\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
+		B69634BD2A2092F300F5FE7E /* NeedleFoundation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = NeedleFoundation;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SOURCE_ROOT=\"Sources\"\nFILE_PATH=\"${SOURCE_ROOT}/Supports/Utilities/Generated\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate ${FILE_PATH}/NeedleGenerated.swift ${SOURCE_ROOT}/\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1306,6 +1328,7 @@
 				431F86C266D5A1995FC70168 /* SignUpRouter.swift in Sources */,
 				2649A3B657EAF93476786BA2 /* SignUpViewController.swift in Sources */,
 				DE57949716BBD538D65A0B17 /* Constant.swift in Sources */,
+				B69634BF2A2095CB00F5FE7E /* NeedleGenerated.swift in Sources */,
 				D2C1B17BE3986FA70FE65786 /* SocialAuthManager.swift in Sources */,
 				34D3A76B39BD398CDEA9751E /* Assets.swift in Sources */,
 				B69634B22A1CE9BC00F5FE7E /* TodayInteractor.swift in Sources */,

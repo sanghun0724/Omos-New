@@ -11,7 +11,7 @@ import RIBs
 // MARK: - TodayDependency
 
 protocol TodayDependency: NeedleFoundation.Dependency {
-    var TodayViewController: TodayViewControllable { get }
+
 }
  
 // MARK: - TodayBuildDependency
@@ -48,6 +48,6 @@ final class TodayBuilder:
         let interactor = TodayInteractor(presenter: viewController, initialState: component.initialState)
         
         interactor.listener = payload.listener
-        return TodayRouter(interactor: interactor, viewController: component.TodayViewController)
+        return TodayRouter(interactor: interactor, viewController: viewController)
     }
 }
