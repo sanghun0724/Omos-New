@@ -13,8 +13,7 @@ import RIBs
 protocol TodayDependency: NeedleFoundation.Dependency {
     var TodayViewController: TodayViewControllable { get }
 }
-
-struct TodayPresentableState {} 
+ 
 // MARK: - TodayBuildDependency
 
 struct TodayBuildDependency {
@@ -41,7 +40,6 @@ final class TodayBuilder:
     ComponentizedBuilder<TodayComponent, TodayRouting, TodayBuildDependency, Void>,
     TodayBuildable
 {
-
     override func build(
       with component: TodayComponent,
       _ payload: TodayBuildDependency

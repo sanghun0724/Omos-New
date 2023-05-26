@@ -12,19 +12,19 @@ import KakaoSDKAuth
 import KakaoSDKCommon
 import LogFlume
 
-let Log = LogFlume.self
+/// import once and use it globally
+public typealias Log = LogFlume
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+@UIApplicationMain
+class AppDelegate:
+    UIResponder,
+    UIApplicationDelegate
+{
     
     var window: UIWindow?
     private var launchRouter: LaunchRouting?
-    private var urlHandler: URLHandler?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        self.window = window
         
         // MARK: initial setting
         
@@ -32,12 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let xcode = XcodeLoggingChannel()
         Log.addChannels(xcode)
         
-        let result = AppRootBuilder {
-            AppRootComponent(parent: self)
-        }
-        self.launchRouter = result.launchRouter
-        self.urlHandler = result.urlHandler
-        launchRouter?.launch(from: window)
+        setWindow()
+        setLaunchRouter()
+    
         
         return true
     }
@@ -46,6 +43,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         KakaoSDK.initSDK(appKey: "")
     }
 
+}
+
+// MARK: Private methods
+
+extension AppDelegate {
+    private func setWindow() {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        self.window = window
+    }
+    
+    private func setLaunchRouter() {
+        guard let window = self.window else { return }
+        let appComponent = AppComponent()
+        self.launchRouter = appComponent.appRootBuilder.build()
+        self.launchRouter?.launch(from: window)
+    }
 }
 
 protocol URLHandler: AnyObject {
