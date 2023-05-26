@@ -21,16 +21,14 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
     private let loggedOutBuilder: LoggedOutBuildable
     private let loggedInBuilder: LoggedInBuildable
     
-    private var loggedOutRouting: ViewableRouting?
+    
     private var loggedInRouting: ViewableRouting?
     
     init(
         interactor: AppRootInteractable,
         viewController: AppRootViewControllable,
-        loggeddOutBuilder: LoggedOutBuildable,
         loggedInBuilder: LoggedInBuildable
     ) {
-        self.loggedOutBuilder = loggeddOutBuilder
         self.loggedInBuilder = loggedInBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
@@ -46,7 +44,9 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
             return
         }
         
-        let router = loggedInBuilder.build(withListener: interactor)
+        let router = loggedInBuilder.build(
+            with: LoggedInBuildDependency(
+                listener: interactor))
         self.loggedInRouting = router
         attachChild(router)
         let navigation = NavigationControllerable(root: router.viewControllable)
@@ -54,13 +54,6 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
     }
     
     func attachLoggedOut() {
-        if loggedOutRouting != nil {
-            return
-        }
         
-        let router = loggedOutBuilder.build(withListener: interactor)
-        self.loggedOutRouting = router
-        attachChild(router)
-        viewController.presentFullScreen(router.viewControllable, animated: false, completion: nil)
     }
 }

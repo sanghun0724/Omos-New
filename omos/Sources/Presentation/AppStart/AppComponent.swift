@@ -5,15 +5,26 @@
 //  Created by sangheon on 2023/04/09.
 //
 
-import Foundation
+import NeedleFoundation
 
-import RIBs
-//import NeedleFoundation
+// MARK: AppComponent
 
-final class AppComponent: AppRootDependency {
-  
-    init() {
-       
+final class AppComponent: BootstrapComponent ,AppRootDependency {
+    var appRootBuilder: AppRootBuildable {
+        AppRootBuilder {
+            AppRootComponent(parent: self)
+        }
     }
   
+    var onboardIngRepositoryService: OnboardingRespositoryService {
+        OnboardingRespositoryServiceImpl(
+            onboardingRepository: onboardingRepository
+        )
+    }
+}
+
+extension AppComponent {
+    private var onboardingRepository: OnboardingRepository {
+        OnboardingRepositoryImpl(networkingProvider: Networking())
+    }
 }
