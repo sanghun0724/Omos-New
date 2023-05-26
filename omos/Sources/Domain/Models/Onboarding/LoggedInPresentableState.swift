@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - LoggedInPresentableState
+
 struct LoggedInPresentableState: Equatable {
     var isValidLoggedIn = true
     var isLoading = false
