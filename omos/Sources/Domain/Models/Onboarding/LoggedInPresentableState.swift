@@ -10,7 +10,7 @@ import Foundation
 // MARK: - LoggedInPresentableState
 
 struct LoggedInPresentableState: Equatable {
-    var isValidLoggedIn = true
+    var hasError = false
     var isLoading = false
     var hasLoggedInInput = false 
     var isValidEmailFormat = true

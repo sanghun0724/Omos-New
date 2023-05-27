@@ -41,6 +41,10 @@ final class LoggedInRouter:
     }
     
     func detachSignUpRIB() {
+    
+    }
+    
+    func attachTodayRIB() {
         guard self.todayRouter == nil else { return }
         let router = self.todayBuilder.build(
             with: TodayBuildDependency(
@@ -50,10 +54,6 @@ final class LoggedInRouter:
         self.todayRouter = router
         attachChild(router)
         viewController.push(viewController: router.viewControllable)
-    }
-    
-    func attachTodayRIB() {
-        
     }
     
     func detachTodayRIB() {

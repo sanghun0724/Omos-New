@@ -62,6 +62,7 @@ final class TodayViewController:
         setupUI()
         bindUI()
         bind(listener: self.listener)
+        contentView.backgroundColor = .purple
     }
 }
 

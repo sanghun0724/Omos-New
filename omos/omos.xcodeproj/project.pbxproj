@@ -132,6 +132,8 @@
 		B69634B22A1CE9BC00F5FE7E /* TodayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634AE2A1CE9BC00F5FE7E /* TodayInteractor.swift */; };
 		B69634BC2A208F2600F5FE7E /* TodayPresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634BB2A208F2600F5FE7E /* TodayPresentableState.swift */; };
 		B69634BF2A2095CB00F5FE7E /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634BE2A2095CB00F5FE7E /* NeedleGenerated.swift */; };
+		B69634C32A21FC5B00F5FE7E /* HasErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634C22A21FC5B00F5FE7E /* HasErrorState.swift */; };
+		B69634C52A21FC6400F5FE7E /* ErrorStreamBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634C42A21FC6400F5FE7E /* ErrorStreamBindable.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BEB30C518C14D5A9F7C6E076 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF615D6B2520666E3D0AE9 /* NetworkRepository.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
@@ -337,6 +339,8 @@
 		B69634AE2A1CE9BC00F5FE7E /* TodayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayInteractor.swift; sourceTree = "<group>"; };
 		B69634BB2A208F2600F5FE7E /* TodayPresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPresentableState.swift; sourceTree = "<group>"; };
 		B69634BE2A2095CB00F5FE7E /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
+		B69634C22A21FC5B00F5FE7E /* HasErrorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasErrorState.swift; sourceTree = "<group>"; };
+		B69634C42A21FC6400F5FE7E /* ErrorStreamBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStreamBindable.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B9A4BE28B75662E97ACA7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BA27A0591654709FC08253DC /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
@@ -629,15 +633,16 @@
 				A799F9BBDEDD2315007962E5 /* BaseComponent */,
 				F05725C443B81C04269495D5 /* Extension */,
 				59C5BDDFE5FBD7BFAAEA85FA /* OmosUIKit */,
-				62C625C49AE1625E3B7A8BA7 /* Protocol */,
+				62C625C49AE1625E3B7A8BA7 /* Protocols */,
 				F3EF5D3E7C58F4029CE5269E /* Scene */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		62C625C49AE1625E3B7A8BA7 /* Protocol */ = {
+		62C625C49AE1625E3B7A8BA7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B69634C12A21FC4300F5FE7E /* Error */,
 				25E28C8E0DCF5D4D51503613 /* Loading */,
 				EACCECA9CD9CDD07E54A6869 /* Refresh */,
 				0A88ED4FA99C0AE7AD490D1C /* Skeleton */,
@@ -660,7 +665,7 @@
 				A5515346541229DEEE4D401B /* PullToRefreshable.swift */,
 				7D4130110D8C4A643A2F504B /* Reusable.swift */,
 			);
-			path = Protocol;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		6990E18AE7290BA84328342A /* Interaction */ = {
@@ -817,6 +822,15 @@
 				B69634892A1CE19000F5FE7E /* ComponentizedBuilderExtensions.swift */,
 			);
 			path = "Ribs+Extension";
+			sourceTree = "<group>";
+		};
+		B69634C12A21FC4300F5FE7E /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				B69634C22A21FC5B00F5FE7E /* HasErrorState.swift */,
+				B69634C42A21FC6400F5FE7E /* ErrorStreamBindable.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		B922E553E95D60E1EE24E7BF /* Platform */ = {
@@ -1299,9 +1313,11 @@
 				387EE97732E83DA14D0B6293 /* HasLoadingState.swift in Sources */,
 				8793A084FCC837EC0F5A99BB /* LoadingStreamBindable.swift in Sources */,
 				1C074E85123054C3DD6C2311 /* MapAnnotationAddable.swift in Sources */,
+				B69634C52A21FC6400F5FE7E /* ErrorStreamBindable.swift in Sources */,
 				0429ED3964E4D812A02C8874 /* MapRegionSettable.swift in Sources */,
 				2931DB0DD41694749801F717 /* PullToRefreshable.swift in Sources */,
 				E11FE826B2BCE0B6052E6E76 /* HasRefreshState.swift in Sources */,
+				B69634C32A21FC5B00F5FE7E /* HasErrorState.swift in Sources */,
 				1CD9818EE6605013607BA855 /* RefreshStreamBindable.swift in Sources */,
 				43BB40935EACC76F94333166 /* Reusable.swift in Sources */,
 				F772D0C48B092859896FD0B1 /* SkeletonControllable.swift in Sources */,

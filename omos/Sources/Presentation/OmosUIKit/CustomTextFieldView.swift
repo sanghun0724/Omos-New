@@ -24,18 +24,10 @@ class CustomTextFieldView: BaseView {
         }
     }
     
-    var isSuccessLoggedIn: Bool = false {
-        didSet {
-            if isSuccessLoggedIn {
-                self.setNomalState()
-            } else {
-                fetchRightTopLabelText(text: " 로그인 실패")
-                self.setWarningState()
-            }
-        }
-    }
-    
-    lazy var textField = CustomTextField()
+    lazy var textField = CustomTextField().builder
+        .set(\.layer.borderWidth, to: 1)
+        .set(\.layer.borderColor, to: UIColor.clear.cgColor)
+        .build()
     
     lazy var leftTopLabel = UILabel().builder
         .font(.systemFont(ofSize: 14, weight: .regular))
@@ -58,7 +50,6 @@ class CustomTextFieldView: BaseView {
     
     func setWarningState() {
         rightTopLabel.isHidden = false
-        textField.layer.borderWidth = 1
         textField.layer.borderColor = Asset.Colors.mainOrange.color.cgColor
     }
     

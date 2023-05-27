@@ -131,14 +131,14 @@ extension LoggedInViewController {
     }
     
     private func bindTextFieldsAction() {
-        Observable.combineLatest(emailTextFieldView.textField.rx.text.orEmpty, passwordTextFieldView.textField.rx.text.orEmpty)
+        Observable.combineLatest(emailTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged(),
+                                 passwordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged())
             .map { .textDidChanged(email: $0.0, password: $0.1) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
     
     private func bindLocalButtonDidTapAction() {
-        //TODO: 원리 체크
         bottomButtonView.loginButton
             .rx
             .tapWithPreventDuplication()
@@ -169,17 +169,13 @@ extension LoggedInViewController {
     }
     
     private func bindLoggedInState(from listener: LoggedInPresentableListener) {
-        
-        listener.state.map(\.isValidLoggedIn)
-            .distinctUntilChanged()
+        listener.state
+            .map(\.hasError)
+            .filter { !$0 }
             .asDriver(onErrorDriveWith: .empty())
-            .drive(self.emailTextFieldView.rx.isSuccessLoggedIn)
-            .disposed(by: disposeBag)
-        
-        listener.state.map(\.isValidLoggedIn)
-            .distinctUntilChanged()
-            .asDriver(onErrorDriveWith: .empty())
-            .drive(self.passwordTextFieldView.rx.isSuccessLoggedIn)
+            .drive(with: self, onNext: { owner, _ in
+                owner.alert("로그인 실패\n 비밀번호 및 이메일을 확인해주세요.")
+            })
             .disposed(by: disposeBag)
     }
     
@@ -194,7 +190,7 @@ extension LoggedInViewController {
     private func bindValidationTextState(from listener: LoggedInPresentableListener) {
         listener.state
             .map(\.isValidEmailFormat)
-            .asDriver(onErrorDriveWith: .empty())
+            .asDriver(onErrorDriveWith: .never())
             .drive(self.emailTextFieldView.rx.isValidFormatted)
             .disposed(by: disposeBag)
 

@@ -25,15 +25,15 @@ class AppDelegate:
     private var launchRouter: LaunchRouting?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         // MARK: initial setting
+        
+        registerProviderFactories()
         
         setKakaoSDK()
         setLoggingChannel()
         
         setWindow()
         setLaunchRouter()
-    
         
         return true
     }
