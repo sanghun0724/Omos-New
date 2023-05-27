@@ -236,7 +236,7 @@ extension LoggedInInteractor {
         case .attachSignUpRIB:
             break
         case .attachTodayRIB:
-            break
+            Log.debug("Do Nothing when \(mutation)")
         }
         
         return newState

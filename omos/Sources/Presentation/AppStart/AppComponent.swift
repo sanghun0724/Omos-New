@@ -15,11 +15,13 @@ final class AppComponent: BootstrapComponent ,AppRootDependency {
             AppRootComponent(parent: self)
         }
     }
-  
+    
     var onboardIngRepositoryService: OnboardingRespositoryService {
-        OnboardingRespositoryServiceImpl(
-            onboardingRepository: onboardingRepository
-        )
+        shared {
+            OnboardingRespositoryServiceImpl(
+                onboardingRepository: onboardingRepository
+            )
+        }
     }
 }
 
