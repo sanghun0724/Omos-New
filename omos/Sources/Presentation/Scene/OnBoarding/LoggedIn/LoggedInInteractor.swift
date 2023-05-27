@@ -226,7 +226,8 @@ extension LoggedInInteractor {
         case let .setLoading(loading):
             newState.isLoading = loading
         case let .setLoggedIn(loggedIn):
-            newState.isValidLoggedIn = loggedIn
+           // newState.isValidLoggedIn = loggedIn
+            print()
         case let .setEmailValidation(emailValidation):
             newState.isValidEmailFormat = emailValidation
         case let .setPasswordValidation(passwordValidation):

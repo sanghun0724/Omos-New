@@ -134,6 +134,10 @@
 		B69634BF2A2095CB00F5FE7E /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634BE2A2095CB00F5FE7E /* NeedleGenerated.swift */; };
 		B69634C32A21FC5B00F5FE7E /* HasErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634C22A21FC5B00F5FE7E /* HasErrorState.swift */; };
 		B69634C52A21FC6400F5FE7E /* ErrorStreamBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634C42A21FC6400F5FE7E /* ErrorStreamBindable.swift */; };
+		B69634C72A22046700F5FE7E /* HasAlertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634C62A22046700F5FE7E /* HasAlertable.swift */; };
+		B69634C92A2249E400F5FE7E /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634C82A2249E400F5FE7E /* MyError.swift */; };
+		B69634CB2A22503800F5FE7E /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634CA2A22503800F5FE7E /* LoadingIndicator.swift */; };
+		B69634CF2A2255EF00F5FE7E /* ViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634CE2A2255EF00F5FE7E /* ViewController+Rx.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BEB30C518C14D5A9F7C6E076 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF615D6B2520666E3D0AE9 /* NetworkRepository.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
@@ -341,6 +345,10 @@
 		B69634BE2A2095CB00F5FE7E /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		B69634C22A21FC5B00F5FE7E /* HasErrorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasErrorState.swift; sourceTree = "<group>"; };
 		B69634C42A21FC6400F5FE7E /* ErrorStreamBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStreamBindable.swift; sourceTree = "<group>"; };
+		B69634C62A22046700F5FE7E /* HasAlertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasAlertable.swift; sourceTree = "<group>"; };
+		B69634C82A2249E400F5FE7E /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
+		B69634CA2A22503800F5FE7E /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		B69634CE2A2255EF00F5FE7E /* ViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Rx.swift"; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B9A4BE28B75662E97ACA7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BA27A0591654709FC08253DC /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
@@ -494,6 +502,7 @@
 				BCA6DA87E7B74B08993B772C /* UIViewController+Util.swift */,
 				68D9FDDA78E97CF886E6D408 /* UIViewControllerPreview.swift */,
 				02C69473A71652E436326AE3 /* UIViewPreview.swift */,
+				B69634CA2A22503800F5FE7E /* LoadingIndicator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -660,6 +669,7 @@
 				7C096CCDA6B2754E75B20FEF /* HasSetupConstraints.swift */,
 				CE45E5C71D721757437C84DA /* HasTableView.swift */,
 				CAF2C8C315426AAE1E43D9AB /* HasViewModel.swift */,
+				B69634C62A22046700F5FE7E /* HasAlertable.swift */,
 				9FF16FA851A66912D95808B6 /* MapAnnotationAddable.swift */,
 				E0E62E308E1C460B9CC4C2AD /* MapRegionSettable.swift */,
 				A5515346541229DEEE4D401B /* PullToRefreshable.swift */,
@@ -818,6 +828,7 @@
 		B69634882A1CE16300F5FE7E /* Ribs+Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B69634CE2A2255EF00F5FE7E /* ViewController+Rx.swift */,
 				539C6496677F92D19AE5A526 /* ViewControllerExtension.swift */,
 				B69634892A1CE19000F5FE7E /* ComponentizedBuilderExtensions.swift */,
 			);
@@ -827,6 +838,7 @@
 		B69634C12A21FC4300F5FE7E /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				B69634C82A2249E400F5FE7E /* MyError.swift */,
 				B69634C22A21FC5B00F5FE7E /* HasErrorState.swift */,
 				B69634C42A21FC6400F5FE7E /* ErrorStreamBindable.swift */,
 			);
@@ -1301,6 +1313,7 @@
 				FA09E4413DD40DA369515DD0 /* CloseButtonBuindable.swift in Sources */,
 				7C6ACB8F1778216A004C0792 /* DisposablesManageable.swift in Sources */,
 				01B915308FB52170E848C346 /* HasCloseButtonHeaderView.swift in Sources */,
+				B69634C92A2249E400F5FE7E /* MyError.swift in Sources */,
 				DC31A078E173CAA1115BFA64 /* HasCollectionView.swift in Sources */,
 				CA5E7E2D2FFC42FAA20EC5C8 /* HasCompositeDisposable.swift in Sources */,
 				1032EF3C9FB9C627CF639423 /* HasConfigure.swift in Sources */,
@@ -1346,8 +1359,11 @@
 				DE57949716BBD538D65A0B17 /* Constant.swift in Sources */,
 				B69634BF2A2095CB00F5FE7E /* NeedleGenerated.swift in Sources */,
 				D2C1B17BE3986FA70FE65786 /* SocialAuthManager.swift in Sources */,
+				B69634CB2A22503800F5FE7E /* LoadingIndicator.swift in Sources */,
 				34D3A76B39BD398CDEA9751E /* Assets.swift in Sources */,
 				B69634B22A1CE9BC00F5FE7E /* TodayInteractor.swift in Sources */,
+				B69634C72A22046700F5FE7E /* HasAlertable.swift in Sources */,
+				B69634CF2A2255EF00F5FE7E /* ViewController+Rx.swift in Sources */,
 				0C282D69FBFD0AD02099558D /* PropertyBuilder.swift in Sources */,
 				7C707D07B7A1DCE348B932C2 /* PropertyBuilderCompatible.swift in Sources */,
 				B69634AF2A1CE9BC00F5FE7E /* TodayRouter.swift in Sources */,

@@ -37,7 +37,10 @@ protocol LoggedInPresentableListener: AnyObject {
 final class LoggedInViewController:
     BaseViewController,
     LoggedInPresentable,
-    LoggedInViewControllable
+    LoggedInViewControllable,
+    HasAlertable,
+    ErrorStreamBindable,
+    LoadingStreamBindable
 {
     // MARK: Constants
     
@@ -163,6 +166,7 @@ extension LoggedInViewController {
 
 extension LoggedInViewController {
     private func bindState(from listener: LoggedInPresentableListener) {
+        bindLoadingStream(from: listener)
         self.bindLoggedInState(from: listener)
         self.bindLoggedInbuttonIsEnable(from: listener)
         self.bindValidationTextState(from: listener)
