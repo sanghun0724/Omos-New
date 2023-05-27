@@ -34,3 +34,12 @@ extension LoadingStreamBindable where Self: HasCollectionView & HasDisposeBag & 
             .disposed(by: disposeBag)
     }
 }
+
+extension LoadingStreamBindable where Self: BaseViewController & HasDisposeBag {
+    func bindLoadingStream(from listener: HasLoadingStream) {
+        listener.isLoadingStream
+            .distinctUntilChanged()
+            .bind(to: self.rx.isLoadingAnimating)
+            .disposed(by: disposeBag)
+    }
+}
