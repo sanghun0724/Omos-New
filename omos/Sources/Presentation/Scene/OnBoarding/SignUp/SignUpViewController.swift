@@ -2,66 +2,135 @@
 //  SignUpViewController.swift
 //  omos
 //
-//  Created by sangheon on 2023/05/15.
+//  Created by sangheon on 2023/05/28.
 //
 
-import RIBs
-import RxSwift
 import UIKit
 
-protocol SignUpPresentableListener: AnyObject {
+import RIBs
+import RxCocoa
+import RxSwift
 
+// MARK: - SignUpPresentableAction
+
+enum SignUpPresentableAction {
+    
 }
+
+// MARK: - SignUpPresentableListener
+
+protocol SignUpPresentableListener: AnyObject {
+    typealias Action = SignUpPresentableAction
+    typealias State = SignUpPresentableState
+    
+    func sendAction(_ action: Action)
+    var state: Observable<State> { get }
+}
+
+// MARK: - SignUpViewController
 
 final class SignUpViewController:
     BaseViewController,
     SignUpPresentable,
-    SignUpViewControllable {
+    SignUpViewControllable
+{
     
-    // MARK: Constants
+    // MARK: - Constants
     
     private enum UI {
-        static let headerViewHeight = 173
+        
     }
     
-    private lazy var headerView = OnBoardingHeaderView()
-    
-    private lazy var emailTextFieldView = CustomTextFieldView()
+    // MARK: - Properties
     
     weak var listener: SignUpPresentableListener?
     
+    private let actionRelay = PublishRelay<SignUpPresentableListener.Action>()
     
+    // MARK: - UI Components
+    
+    // MARK: - Initialization & Deinitialization
+    
+    override init() {
+        super.init()
+    }
+    
+    // MARK: - View Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        bindUI()
+        bind(listener: self.listener)
+    }
 }
 
-// MARK: Layout
+
+// MARK: Private methods
+
+extension SignUpViewController {}
+
+// MARK: - Bind UI
+
+extension SignUpViewController {
+    private func bindUI() {
+        
+    }
+}
+
+// MARK: - Bind listener
+
+extension SignUpViewController {
+    private func bind(listener: SignUpPresentableListener?) {
+        guard let listener = listener else { return }
+    }
+    
+    private func bindActionRelay() {
+        self.actionRelay.asObservable()
+          .bind(with: self) { onwer, action in
+            onwer.listener?.sendAction(action)
+          }
+          .disposed(by: disposeBag)
+    }
+}
+
+// MARK: - Binding Action
+
+extension SignUpViewController {
+    private func bindActions() {
+        
+    }
+}
+
+// MARK: - Binding State
+
+extension SignUpViewController {
+    private func bindState(from listener: SignUpListener) {
+        
+    }
+}
+
+// MARK: - Layout
 
 extension SignUpViewController {
     private func setupUI() {
-        contentView.addSubview(headerView)
-        contentView.addSubview(emailTextFieldView)
         
         self.layout()
     }
     
     private func layout() {
-        headerView.snp.makeConstraints {
-            $0.height.equalTo(UI.headerViewHeight)
-            $0.left.right.top.equalToSuperview()
-        }
+        
     }
-    
 }
-
 
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-struct SignUpViewControllerPreView: PreviewProvider {
+struct SignUpPreView: PreviewProvider {
     static var previews: some SwiftUI.View {
         ForEach(Device.deviceNames, id: \.self) { deviceName in
             UIViewControllerPreview {
-                let viewController = SignUpViewController().builder
-                    .build()
+                let viewController = SignUpViewController()
                 
                 return UINavigationController(rootViewController: viewController)
             }

@@ -36,6 +36,15 @@ final class LoggedInRouter:
         interactor.router = self
     }
     
+    func attachFindRIB() {
+        
+    }
+    
+    func detachFindRIB() {
+        
+    }
+    
+    
     func attachSignUpRIB() {
         
     }

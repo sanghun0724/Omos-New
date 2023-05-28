@@ -2,44 +2,87 @@
 //  SignUpInteractor.swift
 //  omos
 //
-//  Created by sangheon on 2023/05/15.
+//  Created by sangheon on 2023/05/28.
 //
 
+import ReactorKit
 import RIBs
 import RxSwift
 
+// MARK: - SignUpRouting
+
 protocol SignUpRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    
 }
+
+// MARK: - SignUpPresentable
 
 protocol SignUpPresentable: Presentable {
     var listener: SignUpPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol SignUpListener: AnyObject {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
-}
+// MARK: - SignUpListener
 
-final class SignUpInteractor: PresentableInteractor<SignUpPresentable>, SignUpInteractable, SignUpPresentableListener {
+protocol SignUpListener: AnyObject {}
 
+// MARK: - SignUpInteractor
+
+final class SignUpInteractor:
+    PresentableInteractor<SignUpPresentable>,
+    SignUpInteractable,
+    SignUpPresentableListener,
+    Reactor
+{
+    
+    // MARK: - Reactor
+    
+    typealias Action = SignUpPresentableAction
+    typealias State = SignUpPresentableState
+    
+    enum Mutation {
+        
+    }
+    
+    // MARK: - Properties
+    
     weak var router: SignUpRouting?
     weak var listener: SignUpListener?
-
-    // TODO: Add additional dependencies to constructor. Do not perform any logic
-    // in constructor.
-    override init(presenter: SignUpPresentable) {
+    
+    let initialState: SignUpPresentableState
+    
+    // MARK: - Initialization & Deinitialization
+    
+    init(
+        presenter: SignUpPresentable,
+        initialState: SignUpPresentableState
+    ) {
+        self.initialState = initialState
+        
         super.init(presenter: presenter)
         presenter.listener = self
     }
-
-    override func didBecomeActive() {
-        super.didBecomeActive()
-        // TODO: Implement business logic here.
+    
+    // MARK: - SignUpPresentableListener
+    
+    func sendAction(_ action: Action) {
+        self.action.on(.next(action))
     }
+}
 
-    override func willResignActive() {
-        super.willResignActive()
-        // TODO: Pause any business logic.
+// MARK: - mutate
+
+extension SignUpInteractor {
+    func mutate(action: Action) -> Observable<Mutation> {
+        
+    }
+}
+
+// MARK: - reduce
+
+extension SignUpInteractor {
+    func reduce(state: State, mutation: Mutation) -> State {
+        var newState = state
+        
+        return newState
     }
 }

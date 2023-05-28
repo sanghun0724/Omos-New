@@ -14,6 +14,8 @@ import RxSwift
 // MARK: - LoggedInRouting
 
 protocol LoggedInRouting: ViewableRouting {
+    func attachFindRIB()
+    func detachFindRIB()
     func attachSignUpRIB()
     func detachSignUpRIB()
     func attachTodayRIB()
@@ -56,6 +58,7 @@ final class LoggedInInteractor:
         case setPasswordValidation(Bool)
         case attachSignUpRIB
         case attachTodayRIB
+        case attachFindRIB
     }
     
     // MARK: - Properties
@@ -97,6 +100,10 @@ extension LoggedInInteractor {
         switch action {
         case let .textDidChanged(email, password):
             return self.loggedInButtonEnableMutation(email: email, password: password)
+        case .findButtonDidTap:
+            return .just(.attachFindRIB)
+        case .signUpButtonDidTap:
+            return .just(.attachSignUpRIB)
         case let .localLoginButtonDidTap(email, password):
             return self.loggedInInputValidatioMutation(email: email, password: password)
         case .kakaoLoginButtonDidTap:
@@ -204,6 +211,11 @@ extension LoggedInInteractor {
             }
     }
     
+    private func attachFindRIBTransform() -> Observable<Mutation> {
+        self.router?.attachFindRIB()
+        return .empty()
+    }
+    
     /// Show SignUp Page
     private func attachSignUpRIBTransform() -> Observable<Mutation> {
       self.router?.attachSignUpRIB()
@@ -235,9 +247,7 @@ extension LoggedInInteractor {
             newState.isValidPasswordFormat = passwordValidation
         case let .setHasLoggedInInput(validation):
             newState.hasLoggedInInput = validation
-        case .attachSignUpRIB:
-            break
-        case .attachTodayRIB:
+        default:
             Log.debug("Do Nothing when \(mutation)")
         }
         
