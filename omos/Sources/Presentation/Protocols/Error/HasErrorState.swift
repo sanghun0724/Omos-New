@@ -11,23 +11,23 @@ import RxSwift
 // MARK: - HasErrorState
 
 protocol HasErrorState {
-    var myError: MyError { get }
+    var myError: ReactorValue<MyError> { get }
 }
 
 // MARK: - HasErrorStream
 
-protocol MyErrorStream {
-    var myErrorStream: Observable<MyError> { get }
+protocol HasErrorStream {
+    var myErrorStream: Observable<ReactorValue<MyError>> { get }
 }
 
-extension MyErrorStream where Self: Reactor, Self.State: HasErrorState {
-    var myErrorStream: Observable<MyError> {
+extension HasErrorStream where Self: Reactor, Self.State: HasErrorState {
+    var myErrorStream: Observable<ReactorValue<MyError>> {
         state.map(\.myError)
     }
 }
 
-extension MyErrorStream where Self: HasViewModel, Self.ViewModel: HasErrorState {
-    var hasErrorStream: Observable<MyError> {
+extension HasErrorStream where Self: HasViewModel, Self.ViewModel: HasErrorState {
+    var myErrorStream: Observable<ReactorValue<MyError>> {
         viewModel.map(\.myError)
     }
 }

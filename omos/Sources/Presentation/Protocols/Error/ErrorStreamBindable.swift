@@ -8,13 +8,15 @@
 import Foundation
 
 protocol ErrorStreamBindable: AnyObject {
-    func bindErrorStream(from listener: MyErrorStream)
+    func bindErrorStream(from listener: HasErrorStream)
 }
 
 extension ErrorStreamBindable where Self: BaseViewController & HasAlertable & HasDisposeBag {
-    func bindErrorStream(from listener: MyErrorStream) {
+    func bindErrorStream(from listener: HasErrorStream) {
         listener.myErrorStream
             .distinctUntilChanged()
+            .compactMap(\.value)
+            .filter({ $0 != .noError })
             .withUnretained(self)
             .bind { owner, myError in
                 owner.showAlert(title: myError.title, message: myError.messaage)

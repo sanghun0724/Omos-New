@@ -24,7 +24,7 @@ enum LoggedInPresentableAction {
 
 // MARK: - LoggedInPresentableListener
 
-protocol LoggedInPresentableListener: AnyObject {
+protocol LoggedInPresentableListener: AnyObject, HasLoadingStream, HasErrorStream {
     typealias Action = LoggedInPresentableAction
     typealias State = LoggedInPresentableState
     
@@ -38,7 +38,6 @@ final class LoggedInViewController:
     BaseViewController,
     LoggedInPresentable,
     LoggedInViewControllable,
-    HasAlertable,
     ErrorStreamBindable,
     LoadingStreamBindable
 {
@@ -167,22 +166,11 @@ extension LoggedInViewController {
 extension LoggedInViewController {
     private func bindState(from listener: LoggedInPresentableListener) {
         bindLoadingStream(from: listener)
-        self.bindLoggedInState(from: listener)
+        bindErrorStream(from: listener)
         self.bindLoggedInbuttonIsEnable(from: listener)
         self.bindValidationTextState(from: listener)
     }
-    
-    private func bindLoggedInState(from listener: LoggedInPresentableListener) {
-        listener.state
-            .map(\.hasError)
-            .filter { !$0 }
-            .asDriver(onErrorDriveWith: .empty())
-            .drive(with: self, onNext: { owner, _ in
-                owner.alert("로그인 실패\n 비밀번호 및 이메일을 확인해주세요.")
-            })
-            .disposed(by: disposeBag)
-    }
-    
+
     private func bindLoggedInbuttonIsEnable(from listener: LoggedInPresentableListener) {
         listener.state.map(\.hasLoggedInInput)
             .distinctUntilChanged()
