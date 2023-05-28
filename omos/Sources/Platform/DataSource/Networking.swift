@@ -18,7 +18,7 @@ class Networking<Target: TargetType> {
         line: UInt = #line
     ) -> Single<D> {
         #if DEBUG
-        let requestString = "\(target.baseURL), \(target.method.rawValue) \(target.path)"
+        let requestString = "\(target.baseURL), \(target.method.rawValue) \(target.path) \(String(describing: target.parameters) )"
         let request = rxRequest(target, type: type)
             .do(onSuccess: { response in
                 let message = "SUCCESS: \(requestString) (\(response))"

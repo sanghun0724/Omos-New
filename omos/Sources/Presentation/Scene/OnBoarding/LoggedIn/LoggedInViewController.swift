@@ -17,6 +17,8 @@ import RxSwift
 
 enum LoggedInPresentableAction {
     case textDidChanged(email: String, password: String)
+    case findButtonDidTap
+    case signUpButtonDidTap
     case localLoginButtonDidTap(email: String, password: String)
     case kakaoLoginButtonDidTap
     case appleLoginButtonDidTap
@@ -120,7 +122,6 @@ extension LoggedInViewController {
             })
             .disposed(by: disposeBag)
     }
-    
 }
 
 // MARK: - Binding Action
@@ -128,6 +129,8 @@ extension LoggedInViewController {
 extension LoggedInViewController {
     private func bindActions() {
         bindTextFieldsAction()
+        bindFindButtonDidTapAction()
+        bindSignUpButtonDidTapAciton()
         bindLocalButtonDidTapAction()
         bindKakaoButtonDidTapAction()
     }
@@ -136,6 +139,24 @@ extension LoggedInViewController {
         Observable.combineLatest(emailTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged(),
                                  passwordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged())
             .map { .textDidChanged(email: $0.0, password: $0.1) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindFindButtonDidTapAction() {
+        authSupportedView.findButton
+            .rx
+            .tapWithPreventDuplication()
+            .map { .findButtonDidTap }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindSignUpButtonDidTapAciton() {
+        authSupportedView.signUpButton
+            .rx
+            .tapWithPreventDuplication()
+            .map { .findButtonDidTap }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }

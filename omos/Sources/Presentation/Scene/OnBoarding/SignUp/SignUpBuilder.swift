@@ -2,38 +2,53 @@
 //  SignUpBuilder.swift
 //  omos
 //
-//  Created by sangheon on 2023/05/15.
+//  Created by sangheon on 2023/05/28.
 //
 
+import NeedleFoundation
 import RIBs
 
-protocol SignUpDependency: Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
+// MARK: - SignUpDependency
+
+protocol SignUpDependency: NeedleFoundation.Dependency {
+    var SignUpViewController: SignUpViewControllable { get }
 }
 
-final class SignUpComponent: Component<SignUpDependency> {
+// MARK: - SignUpBuildDependency
 
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+struct SignUpBuildDependency {
+    let listener: SignUpListener
 }
 
-// MARK: - Builder
+// MARK: - SignUpComponent
+
+final class SignUpComponent: NeedleFoundation.Component<SignUpDependency> {
+    fileprivate var initialState: SignUpPresentableState {
+        SignUpPresentableState()
+    }
+}
+
+// MARK: - SignUpBuildable
 
 protocol SignUpBuildable: Buildable {
-    func build(withListener listener: SignUpListener) -> SignUpRouting
+    func build(with dynamicBuildDependency: SignUpBuildDependency) -> SignUpRouting
 }
 
-final class SignUpBuilder: Builder<SignUpDependency>, SignUpBuildable {
+// MARK: - SignUpBuilder
 
-    override init(dependency: SignUpDependency) {
-        super.init(dependency: dependency)
-    }
+final class SignUpBuilder:
+    ComponentizedBuilder<SignUpComponent, SignUpRouting, SignUpBuildDependency, Void>,
+    SignUpBuildable
+{
 
-    func build(withListener listener: SignUpListener) -> SignUpRouting {
-        let component = SignUpComponent(dependency: dependency)
+    override func build(
+      with component: SignUpComponent,
+      _ payload: SignUpBuildDependency
+    ) -> SignUpRouting {
         let viewController = SignUpViewController()
-        let interactor = SignUpInteractor(presenter: viewController)
-        interactor.listener = listener
-        return SignUpRouter(interactor: interactor, viewController: viewController)
+        let interactor = SignUpInteractor(presenter: viewController, initialState: component.initialState)
+        
+        interactor.listener = payload.listener
+        return SignUpRouter(interactor: interactor, viewController: component.SignUpViewController)
     }
 }
