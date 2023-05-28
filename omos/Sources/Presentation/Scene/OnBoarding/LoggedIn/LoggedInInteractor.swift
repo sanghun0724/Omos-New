@@ -49,13 +49,13 @@ final class LoggedInInteractor:
     typealias State = LoggedInPresentableState
     
     enum Mutation {
+        case setError(MyError)
         case setLoading(Bool)
-        case setLoggedIn(Bool)
         case setHasLoggedInInput(Bool)
         case setEmailValidation(Bool)
         case setPasswordValidation(Bool)
         case attachSignUpRIB
-        case attachTodayRIB(Bool)
+        case attachTodayRIB
     }
     
     // MARK: - Properties
@@ -166,12 +166,13 @@ extension LoggedInInteractor {
         let loggedInMutation: Observable<Mutation> = self.onboardingRepositoryService
             .login(email: email, password: password)
             .flatMap { isSuccess in
-                return Observable.concat(
-                    Observable.just(Mutation.setLoggedIn(isSuccess)),
-                    Observable.just(Mutation.attachTodayRIB(isSuccess))
-                )
+                if isSuccess {
+                    return Observable<Mutation>.just(.attachTodayRIB)
+                } else {
+                    return Observable<Mutation>.just(.setError(.loggedInError))
+                }
             }
-            .catchAndReturn(.setLoading(false))
+            .catchAndReturn(.setError(.loggedInError))
         
         let sequence: [Observable<Mutation>] = [
             .just(.setLoading(true)),
@@ -195,7 +196,7 @@ extension LoggedInInteractor {
                 switch mutation {
                 case .attachSignUpRIB:
                     return owner.attachSignUpRIBTransform()
-                case let .attachTodayRIB(isLoggedIn) where isLoggedIn:
+                case .attachTodayRIB:
                     return owner.attachTodayRIBTransform()
                 default:
                     return .just(mutation)
@@ -223,11 +224,11 @@ extension LoggedInInteractor {
         var newState = state
         
         switch mutation {
+        case let .setError(error):
+            newState.revision = state.revision + 1
+            newState.myError = ReactorValue(revision: newState.revision, value: error)
         case let .setLoading(loading):
             newState.isLoading = loading
-        case let .setLoggedIn(loggedIn):
-           // newState.isValidLoggedIn = loggedIn
-            print()
         case let .setEmailValidation(emailValidation):
             newState.isValidEmailFormat = emailValidation
         case let .setPasswordValidation(passwordValidation):

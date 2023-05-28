@@ -36,7 +36,6 @@ class Networking<Target: TargetType> {
         #endif
     }
     
-    
     private func rxRequest<D: Decodable>(_ target: Target, type: D.Type) -> Single<D> {
         return Single.create { single in
             AF.request(target, interceptor: TokenInterceptor.shared.getInterceptor())

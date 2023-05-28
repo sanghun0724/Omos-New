@@ -14,6 +14,7 @@ class BaseViewController:
     UIViewController,
     HasSetupConstraints,
     HasDetachAction,
+    HasAlertable,
     HasDisposeBag
 {
     

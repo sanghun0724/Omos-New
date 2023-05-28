@@ -9,9 +9,10 @@ import Foundation
 
 // MARK: - LoggedInPresentableState
 
-struct LoggedInPresentableState: Equatable {
-    var hasError = false
+struct LoggedInPresentableState: Equatable, HasLoadingState, HasErrorState {
+    var revision = 0
     var isLoading = false
+    var myError = ReactorValue(revision: 0, value: MyError.noError)
     var hasLoggedInInput = false 
     var isValidEmailFormat = true
     var isValidPasswordFormat = true
