@@ -106,6 +106,8 @@ class BaseViewController:
         }
     }
     
+    // MARK: - Navigation
+    
     private func hideOriginNavigationBar() {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }

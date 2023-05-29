@@ -23,6 +23,12 @@ final class LoggedInComponent: NeedleFoundation.Component<LoggedInDependency> {
         TodayComponent(parent: self)
       }
     }
+    
+    fileprivate var signUpBulder: SignUpBuildable {
+        SignUpBuilder {
+            SignUpComponent(parent: self)
+        }
+    }
 }
 
 // MARK: - LoggedInBuildDependency
@@ -54,6 +60,7 @@ final class LoggedInBuilder:
         interactor.listener = payload.listener
         
         return LoggedInRouter(todayBuilder: component.todayBuilder,
+                              signUpBuilder: component.signUpBulder,
                               interactor: interactor,
                               viewController: viewController)
     }

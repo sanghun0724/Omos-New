@@ -22,13 +22,13 @@ class Networking<Target: TargetType> {
         let request = rxRequest(target, type: type)
             .do(onSuccess: { response in
                 let message = "SUCCESS: \(requestString) (\(response))"
-                Log.debug(message, file: file, function: function, line: line)
+                log.debug(message, file: file, function: function, line: line)
             }, onError: { error in
                 let message = "FAILURE \(Self.logging(error: error))"
-                Log.warning(message, file: file, function: function, line: line)
+                log.warning(message, file: file, function: function, line: line)
             }, onSubscribed: {
                 let message = "REQUEST: \(requestString)"
-                Log.debug(message, file: file, function: function, line: line)
+                log.debug(message, file: file, function: function, line: line)
             })
         return request
         #else

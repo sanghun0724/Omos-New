@@ -9,7 +9,7 @@ import RIBs
 
 // MARK: - LoggedInInteractable
 
-protocol LoggedInInteractable: Interactable, TodayListener {
+protocol LoggedInInteractable: Interactable, TodayListener, SignUpListener {
     var router: LoggedInRouting? { get set }
     var listener: LoggedInListener? { get set }
 }
@@ -26,18 +26,23 @@ final class LoggedInRouter:
     private let todayBuilder: TodayBuildable
     private var todayRouter: TodayRouting?
     
+    private let signUpBuilder: SignUpBuildable
+    private var signUpRouter: SignUpRouting?
+    
     // MARK: - initialization * Deinitialization
     
     init(todayBuilder: TodayBuildable,
+         signUpBuilder: SignUpBuildable,
         interactor: LoggedInInteractable,
          viewController: LoggedInViewControllable) {
         self.todayBuilder = todayBuilder
+        self.signUpBuilder = signUpBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
     
     func attachFindRIB() {
-        
+    
     }
     
     func detachFindRIB() {
@@ -46,7 +51,15 @@ final class LoggedInRouter:
     
     
     func attachSignUpRIB() {
-        
+        guard self.signUpRouter == nil else { return }
+        let router = self.signUpBuilder.build(
+            with: SignUpBuildDependency(
+                listener: interactor
+            )
+        )
+        self.signUpRouter = router
+        attachChild(router)
+        viewController.push(viewController: router.viewControllable)
     }
     
     func detachSignUpRIB() {
