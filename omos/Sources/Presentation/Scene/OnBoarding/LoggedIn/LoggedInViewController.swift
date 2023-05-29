@@ -97,7 +97,7 @@ final class LoggedInViewController:
     // MARK: Override
     
     override func isNeedCustomNavigationBarView() -> Bool {
-        false
+        true
     }
 }
 
@@ -156,7 +156,7 @@ extension LoggedInViewController {
         authSupportedView.signUpButton
             .rx
             .tapWithPreventDuplication()
-            .map { .findButtonDidTap }
+            .map { .signUpButtonDidTap }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
@@ -219,7 +219,7 @@ extension LoggedInViewController {
 
 extension LoggedInViewController {
     private func setupUI() {
-        view.backgroundColor = Asset.Colors.mainBackground.color
+        contentView.backgroundColor = Asset.Colors.mainBackground.color
         contentView.addSubview(scrollView)
         scrollView.addSubview(scrollContentView)
         scrollContentView.addSubview(headerView)

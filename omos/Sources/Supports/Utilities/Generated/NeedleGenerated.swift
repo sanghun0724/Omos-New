@@ -38,6 +38,17 @@ private class TodayDependencye8b9e53f6319ce1bda30Provider: TodayDependency {
 private func factoryd6273f0efcff70a3a118e3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
     return TodayDependencye8b9e53f6319ce1bda30Provider()
 }
+private class SignUpDependency0bf34c242a7f1d630afcProvider: SignUpDependency {
+
+
+    init() {
+
+    }
+}
+/// ^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent
+private func factory5f472eb0e54edab942a0e3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return SignUpDependency0bf34c242a7f1d630afcProvider()
+}
 private class LoggedInDependency10f17122804ef957cbfbProvider: LoggedInDependency {
 
 
@@ -68,6 +79,11 @@ extension TodayComponent: Registration {
 
     }
 }
+extension SignUpComponent: Registration {
+    public func registerItems() {
+
+    }
+}
 extension LoggedInComponent: Registration {
     public func registerItems() {
 
@@ -93,6 +109,7 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
     registerProviderFactory("^->AppComponent", factoryEmptyDependencyProvider)
     registerProviderFactory("^->AppComponent->AppRootComponent", factorya90cb427e52e03443c85e3b0c44298fc1c149afb)
     registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent->TodayComponent", factoryd6273f0efcff70a3a118e3b0c44298fc1c149afb)
+    registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent", factory5f472eb0e54edab942a0e3b0c44298fc1c149afb)
     registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent", factory2e97267aa2f82879e903e3b0c44298fc1c149afb)
 }
 #endif

@@ -135,6 +135,9 @@
 		B69634D72A23479B00F5FE7E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634D32A23479B00F5FE7E /* SignUpViewController.swift */; };
 		B69634D82A23479B00F5FE7E /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634D42A23479B00F5FE7E /* SignUpBuilder.swift */; };
 		B69634D92A23479B00F5FE7E /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634D52A23479B00F5FE7E /* SignUpInteractor.swift */; };
+		B69634DB2A23482300F5FE7E /* SignUpPresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634DA2A23482300F5FE7E /* SignUpPresentableState.swift */; };
+		B69634DD2A244CDA00F5FE7E /* CustomNavigationBarViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634DC2A244CDA00F5FE7E /* CustomNavigationBarViewable.swift */; };
+		B69634DF2A244F2400F5FE7E /* BaseViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634DE2A244F2400F5FE7E /* BaseViewControllerExtensions.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BEB30C518C14D5A9F7C6E076 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF615D6B2520666E3D0AE9 /* NetworkRepository.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
@@ -344,6 +347,9 @@
 		B69634D32A23479B00F5FE7E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B69634D42A23479B00F5FE7E /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
 		B69634D52A23479B00F5FE7E /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		B69634DA2A23482300F5FE7E /* SignUpPresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresentableState.swift; sourceTree = "<group>"; };
+		B69634DC2A244CDA00F5FE7E /* CustomNavigationBarViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarViewable.swift; sourceTree = "<group>"; };
+		B69634DE2A244F2400F5FE7E /* BaseViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerExtensions.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B9A4BE28B75662E97ACA7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BA27A0591654709FC08253DC /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
@@ -669,6 +675,7 @@
 				E0E62E308E1C460B9CC4C2AD /* MapRegionSettable.swift */,
 				A5515346541229DEEE4D401B /* PullToRefreshable.swift */,
 				7D4130110D8C4A643A2F504B /* Reusable.swift */,
+				B69634DC2A244CDA00F5FE7E /* CustomNavigationBarViewable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -749,6 +756,7 @@
 			children = (
 				1995BDE9894FAB7C81499DF1 /* LoggedInPresentableState.swift */,
 				B69634BB2A208F2600F5FE7E /* TodayPresentableState.swift */,
+				B69634DA2A23482300F5FE7E /* SignUpPresentableState.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -1040,6 +1048,7 @@
 				A6261BADFA1F04C8D725E34F /* UIImageViewExtension.swift */,
 				21A364872A90EF3546CB5605 /* UINavigationControllerExtensions.swift */,
 				55D548F8E1035C2E2377A4F0 /* UITableViewExtension.swift */,
+				B69634DE2A244F2400F5FE7E /* BaseViewControllerExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1227,8 +1236,10 @@
 				86BF7A81F64C0D490FA0AC13 /* MyAuthenticator.swift in Sources */,
 				94751E13E54E3157286A4BA7 /* AWSHelper.swift in Sources */,
 				CC7DDFC680814EC22634A063 /* HTTPHeaderField.swift in Sources */,
+				B69634DB2A23482300F5FE7E /* SignUpPresentableState.swift in Sources */,
 				1FD0BE9746CCD84F7F8B7188 /* MyRequestInterceptor.swift in Sources */,
 				F2EEB7AC6DD3DFC1999C09F4 /* SessionProtocol.swift in Sources */,
+				B69634DF2A244F2400F5FE7E /* BaseViewControllerExtensions.swift in Sources */,
 				D0DDB058348635FA1D577FC1 /* TargetType.swift in Sources */,
 				C446454D4323784B15168598 /* BlockTarget.swift in Sources */,
 				4BBF53DDD5E369F7F69413B4 /* InteractionTarget.swift in Sources */,
@@ -1340,6 +1351,7 @@
 				B69634BF2A2095CB00F5FE7E /* NeedleGenerated.swift in Sources */,
 				D2C1B17BE3986FA70FE65786 /* SocialAuthManager.swift in Sources */,
 				B69634CB2A22503800F5FE7E /* LoadingIndicator.swift in Sources */,
+				B69634DD2A244CDA00F5FE7E /* CustomNavigationBarViewable.swift in Sources */,
 				34D3A76B39BD398CDEA9751E /* Assets.swift in Sources */,
 				B69634B22A1CE9BC00F5FE7E /* TodayInteractor.swift in Sources */,
 				B69634C72A22046700F5FE7E /* HasAlertable.swift in Sources */,

@@ -11,7 +11,7 @@ import RIBs
 // MARK: - SignUpDependency
 
 protocol SignUpDependency: NeedleFoundation.Dependency {
-    var SignUpViewController: SignUpViewControllable { get }
+    
 }
 
 // MARK: - SignUpBuildDependency
@@ -49,6 +49,6 @@ final class SignUpBuilder:
         let interactor = SignUpInteractor(presenter: viewController, initialState: component.initialState)
         
         interactor.listener = payload.listener
-        return SignUpRouter(interactor: interactor, viewController: component.SignUpViewController)
+        return SignUpRouter(interactor: interactor, viewController: viewController)
     }
 }

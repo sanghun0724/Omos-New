@@ -29,7 +29,7 @@ class OnboardingRespositoryServiceImpl: OnboardingRespositoryService {
             .asObservable()
             .withUnretained(self)
             .map { owner, response in
-                Log.debug("log here",value: response)
+                log.debug("log here",value: response)
                 let tk = TokenUtils()
                 tk.create("accessToken", account: "accessToken", value: response.accessToken)
                 tk.create("refreshToken", account: "refreshToken", value: response.refreshToken)

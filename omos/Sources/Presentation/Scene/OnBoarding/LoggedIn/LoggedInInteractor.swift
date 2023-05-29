@@ -81,7 +81,7 @@ final class LoggedInInteractor:
     }
     
     deinit {
-        Log.verbose(type(of: self))
+        log.verbose(type(of: self))
     }
     
 }
@@ -248,7 +248,7 @@ extension LoggedInInteractor {
         case let .setHasLoggedInInput(validation):
             newState.hasLoggedInInput = validation
         default:
-            Log.debug("Do Nothing when \(mutation)")
+            log.debug("Do Nothing when \(mutation)")
         }
         
         return newState

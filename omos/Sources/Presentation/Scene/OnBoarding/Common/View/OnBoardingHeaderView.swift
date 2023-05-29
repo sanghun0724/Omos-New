@@ -16,6 +16,8 @@ class OnBoardingHeaderView: BaseView {
         static let logoImageWidth = CommonUI.mainWidth * 0.201_5
     }
     
+    // MARK: - UI Component
+    
     private lazy var logoImageView = UIImageView(image: Asset.Images.loginlogo.image)
         .builder
         .contentMode(.scaleAspectFit)
@@ -33,6 +35,10 @@ class OnBoardingHeaderView: BaseView {
         backgroundColor = .clear
         addSubview(logoImageView)
         addSubview(titleLabel)
+    }
+    
+    func fetchTitle(text: String) {
+        titleLabel.text = text 
     }
     
     override func setupConstraints() {

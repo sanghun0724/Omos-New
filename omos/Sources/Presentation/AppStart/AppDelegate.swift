@@ -13,7 +13,7 @@ import KakaoSDKCommon
 import LogFlume
 
 /// import once and use it globally
-public typealias Log = LogFlume
+public typealias log = LogFlume
 
 @UIApplicationMain
 class AppDelegate:
@@ -48,7 +48,7 @@ extension AppDelegate {
     
     private func setLoggingChannel() {
         let xcode = XcodeLoggingChannel()
-        Log.addChannels(xcode)
+        log.addChannels(xcode)
     }
     
     private func setWindow() {
