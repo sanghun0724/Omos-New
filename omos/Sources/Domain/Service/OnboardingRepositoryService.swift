@@ -12,6 +12,8 @@ import RxSwift
 
 protocol OnboardingRespositoryService {
     func login(email: String, password: String) -> Observable<Bool>
+    func checkEmailDuplication(email: String) -> Observable<Bool>
+    func certificateEmail(email: String) -> Observable<String>
     func isValidEmail(email: String) -> Observable<Bool>
     func isValidPassword(password: String) -> Observable<Bool>
 }
@@ -29,12 +31,23 @@ class OnboardingRespositoryServiceImpl: OnboardingRespositoryService {
             .asObservable()
             .withUnretained(self)
             .map { owner, response in
-                log.debug("log here",value: response)
                 let tk = TokenUtils()
                 tk.create("accessToken", account: "accessToken", value: response.accessToken)
                 tk.create("refreshToken", account: "refreshToken", value: response.refreshToken)
                 return true
             }
+    }
+    
+    func checkEmailDuplication(email: String) -> Observable<Bool> {
+        onboardingRepository.checkEmailDuplication(request: .init(email: email))
+            .asObservable()
+            .map(\.state)
+    }
+    
+    func certificateEmail(email: String) -> Observable<String> {
+        onboardingRepository.verifyEmail(request: .init(email: email))
+            .asObservable()
+            .map(\.code)
     }
     
     // MARK: - business logic 

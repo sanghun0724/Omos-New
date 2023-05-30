@@ -18,7 +18,7 @@ class OnBoardingHeaderView: BaseView {
     
     // MARK: - UI Component
     
-    private lazy var logoImageView = UIImageView(image: Asset.Images.loginlogo.image)
+    private lazy var logoImageView = UIImageView(image: Asset.Images.Logo.loginlogo.image)
         .builder
         .contentMode(.scaleAspectFit)
         .build()

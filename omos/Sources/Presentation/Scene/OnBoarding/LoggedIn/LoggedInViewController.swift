@@ -97,7 +97,11 @@ final class LoggedInViewController:
     // MARK: Override
     
     override func isNeedCustomNavigationBarView() -> Bool {
-        true
+        false
+    }
+    
+    override func navigationLeftButtonDidTapped() {
+        popViewController(animated: false)
     }
 }
 
