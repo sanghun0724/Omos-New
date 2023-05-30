@@ -9,8 +9,7 @@ import NeedleFoundation
 import RIBs
 
 protocol AppRootDependency: NeedleFoundation.Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
+    var onboardingRepositoryService: OnboardingRepositoryService { get }
 }
 
 final class AppRootComponent: NeedleFoundation.Component<AppRootDependency> {

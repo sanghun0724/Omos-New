@@ -11,7 +11,7 @@ import RIBs
 // MARK: - SignUpDependency
 
 protocol SignUpDependency: NeedleFoundation.Dependency {
-    
+    var onboardingRepositoryService: OnboardingRepositoryService { get }
 }
 
 // MARK: - SignUpBuildDependency
@@ -26,6 +26,7 @@ final class SignUpComponent: NeedleFoundation.Component<SignUpDependency> {
     fileprivate var initialState: SignUpPresentableState {
         SignUpPresentableState()
     }
+    
 }
 
 // MARK: - SignUpBuildable
@@ -46,7 +47,7 @@ final class SignUpBuilder:
       _ payload: SignUpBuildDependency
     ) -> SignUpRouting {
         let viewController = SignUpViewController()
-        let interactor = SignUpInteractor(presenter: viewController, initialState: component.initialState)
+        let interactor = SignUpInteractor(presenter: viewController, initialState: component.initialState, onboardingRepositoryService: component.onboardingRepositoryService)
         
         interactor.listener = payload.listener
         return SignUpRouter(interactor: interactor, viewController: viewController)

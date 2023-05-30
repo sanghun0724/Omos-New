@@ -11,8 +11,7 @@ import RIBs
 // MARK: - LoggedInDependency
 
 protocol LoggedInDependency: NeedleFoundation.Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
+    var onboardingRepositoryService: OnboardingRepositoryService { get }
 }
 
 // MARK: - LoggedInComponent
@@ -56,7 +55,7 @@ final class LoggedInBuilder:
         let viewController = LoggedInViewController()
         let interactor = LoggedInInteractor(presenter: viewController,
                                             initialState: .init(),
-                                            onboardingRepositoryService: OnboardingRespositoryServiceImpl(onboardingRepository: OnboardingRepositoryImpl(networkingProvider: Networking())))
+                                            onboardingRepositoryService: component.onboardingRepositoryService)
         interactor.listener = payload.listener
         
         return LoggedInRouter(todayBuilder: component.todayBuilder,

@@ -23,7 +23,7 @@ protocol LoggedInRouting: ViewableRouting {
 }
 
 // MARK: - LoggedInPresentable
-// 인터렉터 들끼리 소통하기 위해 프로토콜 채택 
+
 protocol LoggedInPresentable: Presentable {
     var listener: LoggedInPresentableListener? { get set }
 }
@@ -65,14 +65,14 @@ final class LoggedInInteractor:
     
     weak var router: LoggedInRouting?
     weak var listener: LoggedInListener?
-    private let onboardingRepositoryService: OnboardingRespositoryService
+    private let onboardingRepositoryService: OnboardingRepositoryService
     
     // MARK: Initializition & Deinitialization
     
     init(
         presenter: LoggedInPresentable,
         initialState: LoggedInPresentableState,
-        onboardingRepositoryService: OnboardingRespositoryService
+        onboardingRepositoryService: OnboardingRepositoryService
     ) {
         self.initialState = initialState
         self.onboardingRepositoryService = onboardingRepositoryService

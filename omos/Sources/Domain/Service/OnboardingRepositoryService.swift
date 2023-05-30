@@ -10,7 +10,7 @@ import Foundation
 
 import RxSwift
 
-protocol OnboardingRespositoryService {
+protocol OnboardingRepositoryService {
     func login(email: String, password: String) -> Observable<Bool>
     func checkEmailDuplication(email: String) -> Observable<Bool>
     func certificateEmail(email: String) -> Observable<String>
@@ -18,7 +18,7 @@ protocol OnboardingRespositoryService {
     func isValidPassword(password: String) -> Observable<Bool>
 }
 
-class OnboardingRespositoryServiceImpl: OnboardingRespositoryService {
+class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
     
     private let onboardingRepository: OnboardingRepository
     

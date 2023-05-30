@@ -9,14 +9,14 @@ import NeedleFoundation
 
 // MARK: AppComponent
 
-final class AppComponent: BootstrapComponent ,AppRootDependency {
+final class AppComponent: BootstrapComponent, AppRootDependency {
     var appRootBuilder: AppRootBuildable {
         AppRootBuilder {
             AppRootComponent(parent: self)
         }
     }
     
-    var onboardIngRepositoryService: OnboardingRespositoryService {
+    var onboardingRepositoryService: OnboardingRepositoryService {
         shared {
             OnboardingRespositoryServiceImpl(
                 onboardingRepository: onboardingRepository
