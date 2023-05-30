@@ -4,6 +4,8 @@
 //
 //  Created by sangheon on 2023/05/28.
 //
+// TODO: remove comment
+// -> email text 입력 -> 이메일 포맷 확인 -> 이메일 중복확인 -> 코드 보내고 -> 코드 확인 -> ...
 
 import ReactorKit
 import RIBs
@@ -54,7 +56,7 @@ final class SignUpInteractor:
     
     weak var router: SignUpRouting?
     weak var listener: SignUpListener?
-    private let onboardingRepositoryService: OnboardingRespositoryService
+    private let onboardingRepositoryService: OnboardingRepositoryService
     
     let initialState: SignUpPresentableState
     
@@ -63,7 +65,7 @@ final class SignUpInteractor:
     init(
         presenter: SignUpPresentable,
         initialState: SignUpPresentableState,
-        onboardingRepositoryService: OnboardingRespositoryService
+        onboardingRepositoryService: OnboardingRepositoryService
     ) {
         self.initialState = initialState
         self.onboardingRepositoryService = onboardingRepositoryService
@@ -86,10 +88,24 @@ final class SignUpInteractor:
 
 extension SignUpInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
-        
+        switch action {
+        case let .textDidChaged(email, password, rePassword):
+            print()
+        case .validateEmailButtonDidTap:
+            print()
+        case .validatePopupButtonDidTap:
+            print()
+        case .confirmButtonDidTap:
+            print()
+        }
+        return .empty()
     }
     
     // MARK: - Validation
+    
+    private func confirmButtonEnableMutation(email: String, password: String, rePasswrod: String) -> Observable<Mutation> {
+        return .empty()
+    }
     
     
     
