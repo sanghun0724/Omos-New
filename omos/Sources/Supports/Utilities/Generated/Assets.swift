@@ -43,34 +43,15 @@ internal enum Asset {
     internal static let mainOrange = ColorAsset(name: "mainOrange")
   }
   internal enum Images {
-    internal enum Login {
-      internal static let kakao = ImageAsset(name: "Kakao")
-      internal static let visible1 = ImageAsset(name: "visible1")
-      internal static let visible2 = ImageAsset(name: "visible2")
+    internal enum Common {
+      internal static let arrowLeft = ImageAsset(name: "arrow-left")
+      internal static let bell = ImageAsset(name: "bell ")
+      internal static let check = ImageAsset(name: "check")
+      internal static let empty = ImageAsset(name: "empty")
+      internal static let keyboardArrowLeft = ImageAsset(name: "keyboard_arrow_left")
+      internal static let more = ImageAsset(name: "more")
+      internal static let orangeright = ImageAsset(name: "orangeright")
     }
-    internal static let addImage = ImageAsset(name: "addImage")
-    internal static let albumCover = ImageAsset(name: "albumCover")
-    internal static let albumSquare = ImageAsset(name: "albumSquare")
-    internal static let arrowLeft = ImageAsset(name: "arrow-left")
-    internal static let bell = ImageAsset(name: "bell ")
-    internal enum Cate {
-      internal static let free = ImageAsset(name: "free")
-      internal static let lyrics = ImageAsset(name: "lyrics")
-      internal static let oneline = ImageAsset(name: "oneline")
-      internal static let ost = ImageAsset(name: "ost")
-      internal static let sticker1 = ImageAsset(name: "sticker1")
-      internal static let sticker2 = ImageAsset(name: "sticker2")
-      internal static let sticker3 = ImageAsset(name: "sticker3")
-      internal static let sticker4 = ImageAsset(name: "sticker4")
-      internal static let story = ImageAsset(name: "story")
-    }
-    internal static let check = ImageAsset(name: "check")
-    internal static let defaultprofile = ImageAsset(name: "defaultprofile")
-    internal static let edit = ImageAsset(name: "edit")
-    internal static let edit2 = ImageAsset(name: "edit2")
-    internal static let edit3 = ImageAsset(name: "edit3")
-    internal static let empty = ImageAsset(name: "empty")
-    internal static let filter = ImageAsset(name: "filter")
     internal enum HomePhotos {
       internal static let photo1 = ImageAsset(name: "photo1")
       internal static let photo2 = ImageAsset(name: "photo2")
@@ -80,28 +61,35 @@ internal enum Asset {
       internal static let photo6 = ImageAsset(name: "photo6")
       internal static let photo7 = ImageAsset(name: "photo7")
     }
-    internal static let instagram = ImageAsset(name: "instagram")
-    internal static let keyboardArrowLeft = ImageAsset(name: "keyboard_arrow_left")
-    internal enum Likescrap {
-      internal static let emptyLove = ImageAsset(name: "emptyLove")
-      internal static let emptyStar = ImageAsset(name: "emptyStar")
-      internal static let fillLove = ImageAsset(name: "fillLove")
-      internal static let fillStar = ImageAsset(name: "fillStar")
+    internal enum Login {
+      internal static let kakao = ImageAsset(name: "Kakao")
+      internal static let visible1 = ImageAsset(name: "visible1")
+      internal static let visible2 = ImageAsset(name: "visible2")
     }
-    internal static let lock = ImageAsset(name: "lock")
-    internal static let loginlogo = ImageAsset(name: "loginlogo")
-    internal static let logo = ImageAsset(name: "logo")
-    internal static let more = ImageAsset(name: "more")
-    internal static let note = ImageAsset(name: "note")
-    internal static let orangeright = ImageAsset(name: "orangeright")
-    internal static let plusSquare = ImageAsset(name: "plus-square")
-    internal static let profile = ImageAsset(name: "profile")
-    internal static let report = ImageAsset(name: "report")
-    internal static let setting = ImageAsset(name: "setting")
-    internal static let splashLogo = ImageAsset(name: "splash_logo")
-    internal static let spotify = ImageAsset(name: "spotify")
-    internal static let spotifywithlogo = ImageAsset(name: "spotifywithlogo")
-    internal static let sticker = ImageAsset(name: "sticker")
+    internal enum Logo {
+      internal static let loginlogo = ImageAsset(name: "loginlogo")
+      internal static let logo = ImageAsset(name: "logo")
+      internal static let splashLogo = ImageAsset(name: "splash_logo")
+      internal static let spotify = ImageAsset(name: "spotify")
+      internal static let spotifywithlogo = ImageAsset(name: "spotifywithlogo")
+    }
+    internal enum Profile {
+      internal static let defaultprofile = ImageAsset(name: "defaultprofile")
+      internal static let profile = ImageAsset(name: "profile")
+      internal static let setting = ImageAsset(name: "setting")
+    }
+    internal enum Record {
+      internal static let addImage = ImageAsset(name: "addImage")
+      internal static let albumCover = ImageAsset(name: "albumCover")
+      internal static let albumSquare = ImageAsset(name: "albumSquare")
+      internal static let edit = ImageAsset(name: "edit")
+      internal static let edit2 = ImageAsset(name: "edit2")
+      internal static let edit3 = ImageAsset(name: "edit3")
+      internal static let filter = ImageAsset(name: "filter")
+      internal static let note = ImageAsset(name: "note")
+      internal static let plusSquare = ImageAsset(name: "plus-square")
+      internal static let report = ImageAsset(name: "report")
+    }
     internal enum TabbarItems {
       internal static let allrecord = ImageAsset(name: "allrecord")
       internal static let allrecord2 = ImageAsset(name: "allrecord2")
@@ -114,7 +102,27 @@ internal enum Asset {
       internal static let myrecord = ImageAsset(name: "myrecord")
       internal static let myrecord2 = ImageAsset(name: "myrecord2")
     }
-    internal static let unlock = ImageAsset(name: "unlock")
+    internal enum Utility {
+      internal static let emptyLove = ImageAsset(name: "emptyLove")
+      internal static let emptyStar = ImageAsset(name: "emptyStar")
+      internal static let fillLove = ImageAsset(name: "fillLove")
+      internal static let fillStar = ImageAsset(name: "fillStar")
+      internal static let instagram = ImageAsset(name: "instagram")
+      internal static let lock = ImageAsset(name: "lock")
+      internal static let sticker = ImageAsset(name: "sticker")
+      internal static let unlock = ImageAsset(name: "unlock")
+    }
+    internal enum Cate {
+      internal static let free = ImageAsset(name: "free")
+      internal static let lyrics = ImageAsset(name: "lyrics")
+      internal static let oneline = ImageAsset(name: "oneline")
+      internal static let ost = ImageAsset(name: "ost")
+      internal static let sticker1 = ImageAsset(name: "sticker1")
+      internal static let sticker2 = ImageAsset(name: "sticker2")
+      internal static let sticker3 = ImageAsset(name: "sticker3")
+      internal static let sticker4 = ImageAsset(name: "sticker4")
+      internal static let story = ImageAsset(name: "story")
+    }
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

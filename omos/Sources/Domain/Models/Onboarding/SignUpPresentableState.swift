@@ -7,6 +7,15 @@
 
 import Foundation
 
-struct SignUpPresentableState {
-    
+// MARK: - SignUpPresentableState
+
+struct SignUpPresentableState: HasLoadingState, HasErrorState {
+    var myError: ReactorValue<MyError> = .init()
+    var isLoading = false
+    var hasLoggedInInput = false
+    var isValidEmailFormat = true
+    var isValidPasswordFormat = true
+    var isValidCheckPassword = false
+    var isSuccessEmailCertification = false
+    var isConfirmEnable = false
 }

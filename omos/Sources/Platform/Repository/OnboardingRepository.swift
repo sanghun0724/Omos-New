@@ -19,7 +19,7 @@ protocol OnboardingRepository {
     /// KAKAO 및 APPLE 회원가입
     func SNSsingup(request: SNSSignUpRequest) -> Single<SNSSignUpResponse>
     /// 이메일 중복 체크
-    func checkRedeclarationEmail(request: CheckEmailRequest) -> Single<CheckEmailResponse>
+    func checkEmailDuplication(request: CheckEmailRequest) -> Single<CheckEmailResponse>
     /// 이메일 유효성 검사
     func verifyEmail(request: EmailValidationRequest) -> Single<EmailValidationResponse>
     /// 엑세스 토큰 리이슈 -> 리프레쉬
@@ -48,7 +48,7 @@ final class OnboardingRepositoryImpl: NetworkRepository<LoginTarget>, Onboarding
         provider.request(.SNSSignUp(request), type: SNSSignUpResponse.self)
     }
     
-    func checkRedeclarationEmail(request: CheckEmailRequest) -> Single<CheckEmailResponse> {
+    func checkEmailDuplication(request: CheckEmailRequest) -> Single<CheckEmailResponse> {
         provider.request(.checkEmail(request), type: CheckEmailResponse.self)
     }
     

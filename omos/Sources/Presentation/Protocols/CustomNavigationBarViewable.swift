@@ -7,70 +7,41 @@
 
 import UIKit
 
-protocol CustomTopAppBarPresentable {
-    func hideNavigationBar()
-    func setupNavigationController()
-    func topAppBarIsShow() -> Bool
-    func topAppBarShowLeftBtn() -> Bool
-    func topAppBarShowTitle() -> Bool
-    func topAppBarShowImage() -> Bool
-    func topAppBarShowRightBtn() -> Bool
+protocol CustomNavigationPresentable {
+    func hideOriginNavigationBar()
+    func navigationBarShowLeftButton() -> Bool
+    func navigationBarShowTitle() -> Bool
+    func navigationBarShowImage() -> Bool
+    func navigationBarShowRightButton() -> Bool
 }
 
-extension CustomTopAppBarPresentable where Self: BaseViewController {
-    func hideNavigationBar() {
+extension CustomNavigationPresentable where Self: BaseViewController {
+    
+    // MARK: - Navigation
+    
+    func hideOriginNavigationBar() {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    func setupNavigationController() {
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
-        hideNavigationBar()
-    }
-    
-    func topAppBarIsShow() -> Bool {
-        return topAppBarShowLeftBtn() || topAppBarShowTitle() || topAppBarShowRightBtn()
-    }
-    
-    func topAppBarShowLeftBtn() -> Bool {
-        let btnImages = topAppBarLeftBtnImage()
-        let btnText = topAppBarLeftBtnText()
-        let isShow = (btnImages.0 != nil) || (btnImages.1 != nil) || (btnText != nil)
+    func navigationBarShowLeftButton() -> Bool {
+        let buttonImage = navigationBarLeftButtonImage()
+        let buttonText = navigationBarLeftButtonText()
+        let isShow = (buttonImage != nil) || (buttonText != nil)
         return isShow
     }
     
-    func topAppBarShowTitle() -> Bool {
-        return topAppBarTitleText() != nil
+    func navigationBarShowTitle() -> Bool {
+        return navigationBarTitleText() != nil
     }
     
-    func topAppBarShowImage() -> Bool {
-        return topAppBarTitleImage() != nil
+    func navigationBarShowImage() -> Bool {
+        return navigationBarTitleImage() != nil
     }
     
-    func topAppBarTitleText() {
-        
-    }
-    
-    func topAppBarLeftBtnImage() {
-        
-    }
-    
-    func topAppBarLeftBtnText() {
-        
-    }
-    
-    func topAppBarRightBtnImage() {
-        
-    }
-    
-    func topAppBarRightBtnText() {
-        
-    }
-    
-    func topAppBarShowRightBtn() -> Bool {
-        let btnImages = topAppBarRightBtnImage()
-        let btnText = topAppBarRightBtnText()
-        let isShow = (btnImages.0 != nil) || (btnImages.1 != nil) || (btnText != nil)
+    func navigationBarShowRightButton() -> Bool {
+        let buttonImage = navigationBarRightButtonImage()
+        let buttonText = navigationBarRightButtonText()
+        let isShow = (buttonImage != nil) || (buttonText != nil)
         return isShow
     }
 }

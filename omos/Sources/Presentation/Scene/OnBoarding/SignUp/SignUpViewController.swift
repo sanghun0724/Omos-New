@@ -42,6 +42,7 @@ final class SignUpViewController:
         static let emailValidationButtonHeight = 20
         static let emailValidationButtonWidth = 100
         static let leadingTrailingMargin = 16
+        static let confirmButtonHeight = 48
     }
     
     // MARK: - Properties
@@ -110,10 +111,21 @@ final class SignUpViewController:
         bind(listener: self.listener)
     }
     
-    // MARK: Override
-    
+}
+
+// MARK: - Override
+
+extension SignUpViewController {
     override func isNeedCustomNavigationBarView() -> Bool {
-        false
+        true
+    }
+    
+    override func navigationBarLeftButtonImage() -> UIImage? {
+        Asset.Images.Common.arrowLeft.image
+    }
+    
+    override func navigationLeftButtonDidTapped() {
+        popViewController(animated: true)
     }
 }
 
@@ -140,10 +152,10 @@ extension SignUpViewController {
     
     private func bindActionRelay() {
         self.actionRelay.asObservable()
-          .bind(with: self) { onwer, action in
-            onwer.listener?.sendAction(action)
-          }
-          .disposed(by: disposeBag)
+            .bind(with: self) { onwer, action in
+                onwer.listener?.sendAction(action)
+            }
+            .disposed(by: disposeBag)
     }
 }
 
@@ -203,7 +215,7 @@ extension SignUpViewController {
         confirmButton.snp.makeConstraints {
             $0.top.greaterThanOrEqualTo(checkPasswordTextFieldView.snp.bottom).offset(100)
                 .priority(249)
-            $0.height.equalTo(100)
+            $0.height.equalTo(UI.confirmButtonHeight)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
             $0.bottom.equalToSuperview().offset(-34).priority(750)
         }
