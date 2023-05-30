@@ -14,7 +14,10 @@ import RxSwift
 // MARK: - SignUpPresentableAction
 
 enum SignUpPresentableAction {
-    
+    case textDidChaged(email: String, password: String, rePassword: String)
+    case validateEmailButtonDidTap
+    case validatePopupButtonDidTap
+    case confirmButtonDidTap
 }
 
 // MARK: - SignUpPresentableListener

@@ -10,7 +10,6 @@ import UIKit
 
 import RIBs
 import RxCocoa
-import RxDataSources
 import RxSwift
 
 // MARK: - LoggedInPresentableAction
