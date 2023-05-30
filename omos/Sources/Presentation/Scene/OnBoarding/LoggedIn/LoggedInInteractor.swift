@@ -54,8 +54,8 @@ final class LoggedInInteractor:
         case setError(MyError)
         case setLoading(Bool)
         case setHasLoggedInInput(Bool)
-        case setEmailValidation(Bool)
-        case setPasswordValidation(Bool)
+        case setEmailFormatValidation(Bool)
+        case setPasswordFormatValidation(Bool)
         case attachSignUpRIB
         case attachTodayRIB
         case attachFindRIB
@@ -83,7 +83,6 @@ final class LoggedInInteractor:
     deinit {
         log.verbose(type(of: self))
     }
-    
 }
 
 // MARK: - Reactor
@@ -142,9 +141,9 @@ extension LoggedInInteractor {
         return Observable.combineLatest(mutations) { mutations -> Bool in
             return mutations.allSatisfy { mutation in
                 switch mutation {
-                case let .setEmailValidation(emailValidation):
+                case let .setEmailFormatValidation(emailValidation):
                     return emailValidation
-                case let .setPasswordValidation(passwordValidation):
+                case let .setPasswordFormatValidation(passwordValidation):
                     return passwordValidation
                 default:
                     return true
@@ -155,16 +154,16 @@ extension LoggedInInteractor {
     
     private func emailValidationMutation(email: String) -> Observable<Mutation> {
         let emailValidationMutation: Observable<Mutation> = self.onboardingRepositoryService.isValidEmail(email: email)
-            .map { .setEmailValidation($0) }
-            .catchAndReturn( .setEmailValidation(false))
+            .map { .setEmailFormatValidation($0) }
+            .catchAndReturn( .setEmailFormatValidation(false))
         
         return emailValidationMutation
     }
     
     private func passwordValidationMutation(password: String) -> Observable<Mutation> {
         let passwordValidationMutation: Observable<Mutation> = self.onboardingRepositoryService.isValidPassword(password: password)
-            .map { .setPasswordValidation($0) }
-            .catchAndReturn(.setPasswordValidation(false))
+            .map { .setPasswordFormatValidation($0) }
+            .catchAndReturn(.setPasswordFormatValidation(false))
         
         return passwordValidationMutation
     }
@@ -241,9 +240,9 @@ extension LoggedInInteractor {
             newState.myError = ReactorValue(revision: newState.revision, value: error)
         case let .setLoading(loading):
             newState.isLoading = loading
-        case let .setEmailValidation(emailValidation):
+        case let .setEmailFormatValidation(emailValidation):
             newState.isValidEmailFormat = emailValidation
-        case let .setPasswordValidation(passwordValidation):
+        case let .setPasswordFormatValidation(passwordValidation):
             newState.isValidPasswordFormat = passwordValidation
         case let .setHasLoggedInInput(validation):
             newState.hasLoggedInInput = validation

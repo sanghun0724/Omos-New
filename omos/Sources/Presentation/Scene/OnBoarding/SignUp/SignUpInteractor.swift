@@ -40,13 +40,21 @@ final class SignUpInteractor:
     typealias State = SignUpPresentableState
     
     enum Mutation {
-        
+        case setError(MyError)
+        case setLoading(Bool)
+        case setHasAllTextFieldsInput(Bool)
+        case setEmailReigisterValidation(Bool)
+        case setEmailFormatValidation(Bool)
+        case setPasswordFormatValidation(Bool)
+        case setRePasswordFormatValidation(Bool)
+        case attachNicknameRIB
     }
     
     // MARK: - Properties
     
     weak var router: SignUpRouting?
     weak var listener: SignUpListener?
+    private let onboardingRepositoryService: OnboardingRespositoryService
     
     let initialState: SignUpPresentableState
     
@@ -54,10 +62,11 @@ final class SignUpInteractor:
     
     init(
         presenter: SignUpPresentable,
-        initialState: SignUpPresentableState
+        initialState: SignUpPresentableState,
+        onboardingRepositoryService: OnboardingRespositoryService
     ) {
         self.initialState = initialState
-        
+        self.onboardingRepositoryService = onboardingRepositoryService
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -67,6 +76,10 @@ final class SignUpInteractor:
     func sendAction(_ action: Action) {
         self.action.on(.next(action))
     }
+    
+    deinit {
+        log.verbose(type(of: self))
+    }
 }
 
 // MARK: - mutate
@@ -75,6 +88,11 @@ extension SignUpInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
         
     }
+    
+    // MARK: - Validation
+    
+    
+    
 }
 
 // MARK: - reduce

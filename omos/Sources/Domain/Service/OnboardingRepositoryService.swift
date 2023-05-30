@@ -64,11 +64,4 @@ class OnboardingRespositoryServiceImpl: OnboardingRespositoryService {
         return .just(passwordTest.evaluate(with: password))
     }
     
-    // 패스워드
-    func validatePassword() -> Bool {
-        let passwordRegEx = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,16}$"
-        let predicate = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
-        return predicate.evaluate(with: self)
-    }
-    
 }
