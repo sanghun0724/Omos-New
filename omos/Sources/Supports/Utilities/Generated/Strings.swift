@@ -29,6 +29,10 @@ internal enum Strings {
     internal static let password = Strings.tr("Localizable", "onboarding.password", fallback: "")
     /// 
     internal static let passwordwarning = Strings.tr("Localizable", "onboarding.passwordwarning", fallback: "")
+    /// 
+    internal static let sendCertificationEmail = Strings.tr("Localizable", "onboarding.sendCertificationEmail", fallback: "")
+    /// 
+    internal static let signUp = Strings.tr("Localizable", "onboarding.signUp", fallback: "")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

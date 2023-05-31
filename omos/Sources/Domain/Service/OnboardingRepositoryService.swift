@@ -16,6 +16,7 @@ protocol OnboardingRepositoryService {
     func certificateEmail(email: String) -> Observable<String>
     func isValidEmail(email: String) -> Observable<Bool>
     func isValidPassword(password: String) -> Observable<Bool>
+    func isValidReconfirmPassword(password: String, repassword: String) -> Observable<Bool>
 }
 
 class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
@@ -62,6 +63,10 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
         let passwordRegEx = "[A-Za-z0-9!_@$%^&+=]{8,16}"
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
         return .just(passwordTest.evaluate(with: password))
+    }
+    
+    func isValidReconfirmPassword(password: String, repassword: String) -> Observable<Bool> {
+        return .just(password == repassword)
     }
     
 }
