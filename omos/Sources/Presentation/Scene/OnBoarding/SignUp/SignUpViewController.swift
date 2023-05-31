@@ -14,15 +14,17 @@ import RxSwift
 // MARK: - SignUpPresentableAction
 
 enum SignUpPresentableAction {
-    case textDidChaged(email: String, password: String, rePassword: String)
-    case validateEmailButtonDidTap
-    case validatePopupButtonDidTap
+    case emailTextDidChanged(email: String)
+    case passwordTextDidChanged(password: String, repassword: String)
+    case repasswordTextDidChanged(password: String, repassword: String)
+    case emailValidationRequestButtonDidTap
+    case validationPopupButtonDidTap
     case confirmButtonDidTap
 }
 
 // MARK: - SignUpPresentableListener
 
-protocol SignUpPresentableListener: AnyObject {
+protocol SignUpPresentableListener: AnyObject, HasLoadingStream, HasErrorStream {
     typealias Action = SignUpPresentableAction
     typealias State = SignUpPresentableState
     
@@ -35,7 +37,9 @@ protocol SignUpPresentableListener: AnyObject {
 final class SignUpViewController:
     BaseViewController,
     SignUpPresentable,
-    SignUpViewControllable
+    SignUpViewControllable,
+    ErrorStreamBindable,
+    LoadingStreamBindable
 {
     
     // MARK: - Constants
@@ -58,7 +62,7 @@ final class SignUpViewController:
     
     private lazy var headerView = OnBoardingHeaderView().builder
         .with {
-            $0.fetchTitle(text: "회원가입")
+            $0.fetchTitle(text: Strings.Onboarding.signUp)
         }
         .build()
     
@@ -72,7 +76,7 @@ final class SignUpViewController:
     
     private lazy var emailValidationRequestButton = UIButton().builder
         .with {
-            $0.setTitle("인증메일 보내기", for: .normal)
+            $0.setTitle(Strings.Onboarding.sendCertificationEmail, for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .light)
             $0.setTitleColor(Asset.Colors.mainGray4.color, for: .normal)
         }
@@ -86,7 +90,7 @@ final class SignUpViewController:
         }
         .build()
     
-    private lazy var checkPasswordTextFieldView = PasswordTextFieldView()
+    private lazy var repasswordTextFieldView = PasswordTextFieldView()
         .builder
         .with {
             $0.fetchLeftTopLabelText(text: Strings.Onboarding.password)
@@ -132,7 +136,6 @@ extension SignUpViewController {
     }
 }
 
-
 // MARK: Private methods
 
 extension SignUpViewController {}
@@ -150,7 +153,9 @@ extension SignUpViewController {
 extension SignUpViewController {
     private func bind(listener: SignUpPresentableListener?) {
         guard let listener = listener else { return }
-        
+        self.bindActionRelay()
+        bindActions()
+        bindState(from: listener)
     }
     
     private func bindActionRelay() {
@@ -166,15 +171,78 @@ extension SignUpViewController {
 
 extension SignUpViewController {
     private func bindActions() {
-        
+        bindEmailTextFieldsAction()
+        bindPasswordTextFieldsAction()
+        bindRepasswordTextFieldsAction()
+        bindValidationPopupButtonDidTap()
+        confirmButtonDidTap()
+    }
+    
+    private func bindEmailTextFieldsAction() {
+        emailTextFieldView.textField
+            .rx
+            .text
+            .orEmpty
+            .distinctUntilChanged()
+            .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
+            .map { .emailTextDidChanged(email: $0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindPasswordTextFieldsAction() {
+        passwordTextFieldView.textField
+            .rx
+            .text
+            .orEmpty
+            .distinctUntilChanged()
+            .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
+            .map { .passwordTextDidChanged(password: $0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindRepasswordTextFieldsAction() {
+        repasswordTextFieldView.textField
+            .rx
+            .text
+            .orEmpty
+            .distinctUntilChanged()
+            .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
+            .map { .repasswordTextDidChanged(password: $0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindEmailValidationRequestButtonDidTapAction() {
+        emailValidationRequestButton
+            .rx
+            .tapWithPreventDuplication()
+            .map { .emailValidationRequestButtonDidTap }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindValidationPopupButtonDidTap() {
+        // TODO: with alert
+    }
+    
+    private func confirmButtonDidTap() {
+        confirmButton
+            .rx
+            .tapWithPreventDuplication()
+            .map { .confirmButtonDidTap }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
     }
 }
 
 // MARK: - Binding State
 
 extension SignUpViewController {
-    private func bindState(from listener: SignUpListener) {
-        
+    private func bindState(from listener: SignUpPresentableListener) {
+        bindLoadingStream(from: listener)
+        bindErrorStream(from: listener)
     }
 }
 
@@ -187,7 +255,7 @@ extension SignUpViewController {
         contentView.addSubview(emailTextFieldView)
         contentView.addSubview(emailValidationRequestButton)
         contentView.addSubview(passwordTextFieldView)
-        contentView.addSubview(checkPasswordTextFieldView)
+        contentView.addSubview(repasswordTextFieldView)
         contentView.addSubview(confirmButton)
         self.layout()
     }
@@ -211,18 +279,17 @@ extension SignUpViewController {
             $0.top.equalTo(emailValidationRequestButton.snp.bottom).offset(22)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
         }
-        checkPasswordTextFieldView.snp.makeConstraints {
+        repasswordTextFieldView.snp.makeConstraints {
             $0.top.equalTo(passwordTextFieldView.snp.bottom).offset(22)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
         }
         confirmButton.snp.makeConstraints {
-            $0.top.greaterThanOrEqualTo(checkPasswordTextFieldView.snp.bottom).offset(100)
+            $0.top.greaterThanOrEqualTo(repasswordTextFieldView.snp.bottom).offset(100)
                 .priority(249)
             $0.height.equalTo(UI.confirmButtonHeight)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
             $0.bottom.equalToSuperview().offset(-34).priority(750)
         }
-        
     }
 }
 

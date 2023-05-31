@@ -104,10 +104,6 @@ final class LoggedInViewController:
     }
 }
 
-// MARK: Private methods
-
-extension LoggedInViewController {}
-
 // MARK: - Bind listener
 
 extension LoggedInViewController {
@@ -141,6 +137,7 @@ extension LoggedInViewController {
     private func bindTextFieldsAction() {
         Observable.combineLatest(emailTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged(),
                                  passwordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged())
+            .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
             .map { .textDidChanged(email: $0.0, password: $0.1) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)

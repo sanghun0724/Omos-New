@@ -44,11 +44,11 @@ final class SignUpInteractor:
     enum Mutation {
         case setError(MyError)
         case setLoading(Bool)
-        case setHasAllTextFieldsInput(Bool)
         case setEmailReigisterValidation(Bool)
         case setEmailFormatValidation(Bool)
         case setPasswordFormatValidation(Bool)
-        case setRePasswordFormatValidation(Bool)
+        case setPasswordReconfirm(Bool)
+        case showAlert(String)
         case attachNicknameRIB
     }
     
@@ -89,23 +89,45 @@ final class SignUpInteractor:
 extension SignUpInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        case let .textDidChaged(email, password, rePassword):
-            print()
-        case .validateEmailButtonDidTap:
-            print()
-        case .validatePopupButtonDidTap:
-            print()
+        case let .emailTextDidChanged(email):
+            return
+        case let .passwordTextDidChanged(password):
+            return
+        case let .repasswordTextDidChanged(password):
+            return
+        case .emailValidationRequestButtonDidTap:
+            return .empty()
         case .confirmButtonDidTap:
-            print()
+            return .just(.attachNicknameRIB)
         }
-        return .empty()
     }
     
     // MARK: - Validation
     
-    private func confirmButtonEnableMutation(email: String, password: String, rePasswrod: String) -> Observable<Mutation> {
-        return .empty()
+    private func emailFormatValidationMutation(email: String) -> Observable<Mutation> {
+        let emailValidationMutation: Observable<Mutation> = self.onboardingRepositoryService.isValidEmail(email: email)
+            .map { .setEmailFormatValidation($0) }
+            .catchAndReturn( .setEmailFormatValidation(false))
+        
+        return emailValidationMutation
     }
+    
+    private func passwordFormatValidationMutation(password: String) -> Observable<Mutation> {
+        let passwordValidationMutation: Observable<Mutation> = self.onboardingRepositoryService.isValidPassword(password: password)
+            .map { .setPasswordFormatValidation($0) }
+            .catchAndReturn(.setPasswordFormatValidation(false))
+        
+        return passwordValidationMutation
+    }
+    
+    private func repasswordReconfirmMutation(password: String, repassword: String) -> Observable<Mutation> {
+        let repasswordReconfirmMutation: Observable<Mutation> = self.onboardingRepositoryService.isValidReconfirmPassword(password: password, repassword: repassword)
+            .map { .setPasswordReconfirm($0) }
+            .catchAndReturn(.setError(.defaultError))
+        
+        return repasswordReconfirmMutation
+    }
+    
     
     
     

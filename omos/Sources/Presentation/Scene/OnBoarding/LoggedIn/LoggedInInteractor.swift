@@ -104,7 +104,7 @@ extension LoggedInInteractor {
         case .signUpButtonDidTap:
             return .just(.attachSignUpRIB)
         case let .localLoginButtonDidTap(email, password):
-            return self.loggedInInputValidatioMutation(email: email, password: password)
+            return self.loggedInInputValidationMutation(email: email, password: password)
         case .kakaoLoginButtonDidTap:
             return .empty()
         case .appleLoginButtonDidTap:
@@ -125,7 +125,7 @@ extension LoggedInInteractor {
         }
     }
     
-    private func loggedInInputValidatioMutation(email: String, password: String) -> Observable<Mutation> {
+    private func loggedInInputValidationMutation(email: String, password: String) -> Observable<Mutation> {
         let validations = [emailValidationMutation(email: email), passwordValidationMutation(password: password)]
         
         return isValidLoggedInInputs(validations)
