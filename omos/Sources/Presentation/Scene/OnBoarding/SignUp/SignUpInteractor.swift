@@ -45,6 +45,7 @@ final class SignUpInteractor:
         case setError(MyError)
         case setLoading(Bool)
         case setEmailReigisterValidation(Bool)
+        case setIsEmailDuplication(Bool)
         case setEmailFormatValidation(Bool)
         case setPasswordFormatValidation(Bool)
         case setPasswordReconfirm(Bool)
@@ -105,15 +106,33 @@ extension SignUpInteractor {
     // MARK: - Validation
     
     private func emailFormatValidationMutation(email: String) -> Observable<Mutation> {
-        let emailValidationMutation: Observable<Mutation> = self.onboardingRepositoryService.isValidEmail(email: email)
+        let emailValidationMutation: Observable<Mutation> =
+        self.onboardingRepositoryService.isValidEmail(email: email)
             .map { .setEmailFormatValidation($0) }
             .catchAndReturn( .setEmailFormatValidation(false))
         
         return emailValidationMutation
     }
     
+    private func isEmailDuplicatedMutation(email: String) -> Observable<Mutation> {
+        let isEmailDuplicatedMutation: Observable<Mutation> =
+        self.onboardingRepositoryService.checkEmailDuplication(email: email)
+            .map { .setIsEmailDuplication($0) }
+            .catchAndReturn(.setError(.defaultError))
+        
+        return isEmailDuplicatedMutation
+    }
+    
+    private func emailReigisterValidation(inputCode: String) {
+        let emailReigisterValidation: Observable<Mutation> =
+        
+            
+        // 코드 비교
+    }
+    
     private func passwordFormatValidationMutation(password: String) -> Observable<Mutation> {
-        let passwordValidationMutation: Observable<Mutation> = self.onboardingRepositoryService.isValidPassword(password: password)
+        let passwordValidationMutation: Observable<Mutation> =
+        self.onboardingRepositoryService.isValidPassword(password: password)
             .map { .setPasswordFormatValidation($0) }
             .catchAndReturn(.setPasswordFormatValidation(false))
         
@@ -121,15 +140,13 @@ extension SignUpInteractor {
     }
     
     private func repasswordReconfirmMutation(password: String, repassword: String) -> Observable<Mutation> {
-        let repasswordReconfirmMutation: Observable<Mutation> = self.onboardingRepositoryService.isValidReconfirmPassword(password: password, repassword: repassword)
+        let repasswordReconfirmMutation: Observable<Mutation> =
+        self.onboardingRepositoryService.isValidReconfirmPassword(password: password, repassword: repassword)
             .map { .setPasswordReconfirm($0) }
             .catchAndReturn(.setError(.defaultError))
         
         return repasswordReconfirmMutation
     }
-    
-    
-    
     
 }
 
