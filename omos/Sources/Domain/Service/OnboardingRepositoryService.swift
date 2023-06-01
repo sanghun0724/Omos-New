@@ -13,7 +13,7 @@ import RxSwift
 protocol OnboardingRepositoryService {
     func login(email: String, password: String) -> Observable<Bool>
     func checkEmailDuplication(email: String) -> Observable<Bool>
-    func certificateEmail(email: String) -> Observable<String>
+    func validateAuthEmail(email: String) -> Observable<String>
     func isValidEmail(email: String) -> Observable<Bool>
     func isValidPassword(password: String) -> Observable<Bool>
     func isValidReconfirmPassword(password: String, repassword: String) -> Observable<Bool>
@@ -22,6 +22,8 @@ protocol OnboardingRepositoryService {
 class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
     
     private let onboardingRepository: OnboardingRepository
+    
+    private var emailValidationCode: String?
     
     init(onboardingRepository: OnboardingRepository) {
         self.onboardingRepository = onboardingRepository
@@ -45,13 +47,24 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
             .map(\.state)
     }
     
-    func certificateEmail(email: String) -> Observable<String> {
+    func requestAuthEmailCode(email: String) -> Observable<Void> {
         onboardingRepository.verifyEmail(request: .init(email: email))
             .asObservable()
             .map(\.code)
+            .withUnretained(self)
+            .map { owner, code in
+                owner.emailValidationCode = code
+                return Void()
+            }
     }
     
-    // MARK: - business logic 
+    
+    func validateAuthEmail(email: String) -> Observable<Bool> {
+        guard let _code = emailValidationCode else { return .just(false)}
+        return .just(email == _code)
+    }
+    
+    // MARK: - business logic
     
     func isValidEmail(email: String) -> Observable<Bool> {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
