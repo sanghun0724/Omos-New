@@ -138,6 +138,8 @@
 		B69634DB2A23482300F5FE7E /* SignUpPresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634DA2A23482300F5FE7E /* SignUpPresentableState.swift */; };
 		B69634DD2A244CDA00F5FE7E /* CustomNavigationBarViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634DC2A244CDA00F5FE7E /* CustomNavigationBarViewable.swift */; };
 		B69634DF2A244F2400F5FE7E /* BaseViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634DE2A244F2400F5FE7E /* BaseViewControllerExtensions.swift */; };
+		B6AFDF9B2A2B2ACF00191BA3 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFDF9A2A2B2ACF00191BA3 /* SignUpModel.swift */; };
+		B6AFDF9D2A2B2AF200191BA3 /* SignUpModelDataStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFDF9C2A2B2AF200191BA3 /* SignUpModelDataStream.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BEB30C518C14D5A9F7C6E076 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF615D6B2520666E3D0AE9 /* NetworkRepository.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
@@ -350,6 +352,8 @@
 		B69634DA2A23482300F5FE7E /* SignUpPresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresentableState.swift; sourceTree = "<group>"; };
 		B69634DC2A244CDA00F5FE7E /* CustomNavigationBarViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarViewable.swift; sourceTree = "<group>"; };
 		B69634DE2A244F2400F5FE7E /* BaseViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerExtensions.swift; sourceTree = "<group>"; };
+		B6AFDF9A2A2B2ACF00191BA3 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		B6AFDF9C2A2B2AF200191BA3 /* SignUpModelDataStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelDataStream.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B9A4BE28B75662E97ACA7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BA27A0591654709FC08253DC /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
@@ -754,9 +758,9 @@
 		A757A0114C981C303DECD0FD /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				B6AFDF992A2B2A8600191BA3 /* SignUp */,
 				1995BDE9894FAB7C81499DF1 /* LoggedInPresentableState.swift */,
 				B69634BB2A208F2600F5FE7E /* TodayPresentableState.swift */,
-				B69634DA2A23482300F5FE7E /* SignUpPresentableState.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -846,6 +850,16 @@
 				B69634C42A21FC6400F5FE7E /* ErrorStreamBindable.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		B6AFDF992A2B2A8600191BA3 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B69634DA2A23482300F5FE7E /* SignUpPresentableState.swift */,
+				B6AFDF9A2A2B2ACF00191BA3 /* SignUpModel.swift */,
+				B6AFDF9C2A2B2AF200191BA3 /* SignUpModelDataStream.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		B922E553E95D60E1EE24E7BF /* Platform */ = {
@@ -1318,6 +1332,7 @@
 				B69634D92A23479B00F5FE7E /* SignUpInteractor.swift in Sources */,
 				BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */,
 				440546B3C5B9CBE2849D9C6A /* HasElementKind.swift in Sources */,
+				B6AFDF9D2A2B2AF200191BA3 /* SignUpModelDataStream.swift in Sources */,
 				8955D216DB9108E65BBA8BF5 /* HasSetupConstraints.swift in Sources */,
 				838E620EA50FFC7B7FA1E2B8 /* HasTableView.swift in Sources */,
 				9A2B732162497ED59677CF7F /* HasViewModel.swift in Sources */,
@@ -1344,6 +1359,7 @@
 				B5DA3B2CE3CD0CCE6CB77AC3 /* LoggedInRouter.swift in Sources */,
 				4624EE92352B601E14965925 /* LoggedInViewController.swift in Sources */,
 				B69634D12A23307F00F5FE7E /* ReactorValue.swift in Sources */,
+				B6AFDF9B2A2B2ACF00191BA3 /* SignUpModel.swift in Sources */,
 				F3D7B573BB4EECF92CD36100 /* AuthSupportedView.swift in Sources */,
 				098571F9FA447ABF84E555E2 /* BottomButtonsView.swift in Sources */,
 				39BDAAC3504452CBE7CC0FA6 /* DecoView.swift in Sources */,

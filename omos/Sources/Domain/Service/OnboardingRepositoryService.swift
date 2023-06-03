@@ -58,7 +58,6 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
             }
     }
     
-    
     func validateAuthEmail(email: String) -> Observable<Bool> {
         guard let _code = emailValidationCode else { return .just(false)}
         return .just(email == _code)
