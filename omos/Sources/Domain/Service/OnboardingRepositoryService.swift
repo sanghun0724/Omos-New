@@ -8,6 +8,7 @@
 
 import Foundation
 
+import RxRelay
 import RxSwift
 
 protocol OnboardingRepositoryService {
@@ -22,11 +23,17 @@ protocol OnboardingRepositoryService {
 class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
     
     private let onboardingRepository: OnboardingRepository
+    private let mutableSignUpModelStream: MutableSignUpModelDataStream
     
-    private var emailValidationCode: String?
+    private let signUpItemInfoRelay = BehaviorRelay(value: SignUpItemInfo())
+    private var signUpItemInfoRelayBuilder: PropertyBuilder<SignUpItemInfo> { self.signUpItemInfoRelay.value.builder }
     
-    init(onboardingRepository: OnboardingRepository) {
+    init(
+        onboardingRepository: OnboardingRepository,
+        mutableSignUpModelStream: MutableSignUpModelDataStream
+    ) {
         self.onboardingRepository = onboardingRepository
+        self.mutableSignUpModelStream = mutableSignUpModelStream
     }
     
     func login(email: String, password: String) -> Observable<Bool> {
@@ -53,14 +60,13 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
             .map(\.code)
             .withUnretained(self)
             .map { owner, code in
-                owner.emailValidationCode = code
+                
                 return Void()
             }
     }
     
     func validateAuthEmail(email: String) -> Observable<Bool> {
-        guard let _code = emailValidationCode else { return .just(false)}
-        return .just(email == _code)
+       
     }
     
     // MARK: - business logic
@@ -81,4 +87,7 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
         return .just(password == repassword)
     }
     
+    // MARK: - Private methods
+    
+    private func
 }
