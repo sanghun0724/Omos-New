@@ -91,15 +91,16 @@ extension SignUpInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case let .emailTextDidChanged(email):
-            return
+            return .empty()
         case let .passwordTextDidChanged(password):
-            return
+            return .empty()
         case let .repasswordTextDidChanged(password):
-            return
+            return .empty()
         case .emailValidationRequestButtonDidTap:
             return .empty()
         case .confirmButtonDidTap:
             return .just(.attachNicknameRIB)
+        default: fatalError()
         }
     }
     
@@ -124,7 +125,7 @@ extension SignUpInteractor {
     }
     
     private func emailReigisterValidation(inputCode: String) {
-        let emailReigisterValidation: Observable<Mutation> =
+       // let emailReigisterValidation: Observable<Mutation> =
         
             
         // 코드 비교

@@ -140,6 +140,7 @@
 		B69634DF2A244F2400F5FE7E /* BaseViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634DE2A244F2400F5FE7E /* BaseViewControllerExtensions.swift */; };
 		B6AFDF9B2A2B2ACF00191BA3 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFDF9A2A2B2ACF00191BA3 /* SignUpModel.swift */; };
 		B6AFDF9D2A2B2AF200191BA3 /* SignUpModelDataStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFDF9C2A2B2AF200191BA3 /* SignUpModelDataStream.swift */; };
+		B6AFDF9F2A2B412200191BA3 /* SignUpItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFDF9E2A2B412200191BA3 /* SignUpItemInfo.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BEB30C518C14D5A9F7C6E076 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF615D6B2520666E3D0AE9 /* NetworkRepository.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
@@ -354,6 +355,7 @@
 		B69634DE2A244F2400F5FE7E /* BaseViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerExtensions.swift; sourceTree = "<group>"; };
 		B6AFDF9A2A2B2ACF00191BA3 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		B6AFDF9C2A2B2AF200191BA3 /* SignUpModelDataStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelDataStream.swift; sourceTree = "<group>"; };
+		B6AFDF9E2A2B412200191BA3 /* SignUpItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpItemInfo.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B9A4BE28B75662E97ACA7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BA27A0591654709FC08253DC /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
@@ -858,6 +860,7 @@
 				B69634DA2A23482300F5FE7E /* SignUpPresentableState.swift */,
 				B6AFDF9A2A2B2ACF00191BA3 /* SignUpModel.swift */,
 				B6AFDF9C2A2B2AF200191BA3 /* SignUpModelDataStream.swift */,
+				B6AFDF9E2A2B412200191BA3 /* SignUpItemInfo.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -1273,6 +1276,7 @@
 				B69634D82A23479B00F5FE7E /* SignUpBuilder.swift in Sources */,
 				D66F86683F38C43F24D83283 /* Networking.swift in Sources */,
 				4007A0394F7C69838CDB139D /* Login.swift in Sources */,
+				B6AFDF9F2A2B412200191BA3 /* SignUpItemInfo.swift in Sources */,
 				59DA092D67F82DF3AD86DAD3 /* Refresh.swift in Sources */,
 				12A8BB19DFEBFB9FBE9C52E8 /* SignUp.swift in Sources */,
 				646C659D3888FC087677A9D4 /* UserDetail.swift in Sources */,
