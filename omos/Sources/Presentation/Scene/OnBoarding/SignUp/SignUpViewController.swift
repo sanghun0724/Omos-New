@@ -46,6 +46,8 @@ final class SignUpViewController:
         static let emailValidationButtonHeight = 20
         static let emailValidationButtonWidth = 100
         static let leadingTrailingMargin = 16
+        static let alertHeight = 100
+        static let alertWidth = 100
         static let confirmButtonHeight = 48
     }
     
@@ -93,6 +95,11 @@ final class SignUpViewController:
             $0.fetchLeftTopLabelText(text: Strings.Onboarding.password)
             $0.fetchRightTopLabelText(text: Strings.Onboarding.passwordwarning)
         }
+        .build()
+    
+    private lazy var validationCodeAlertView = ValidationCodeAlertView()
+        .builder
+        .isHidden(false)
         .build()
     
     private lazy var confirmButton = ConfirmButton(Strings.Onboarding.loggedIn).builder
@@ -232,6 +239,7 @@ extension SignUpViewController {
         contentView.addSubview(emailValidationRequestButton)
         contentView.addSubview(passwordTextFieldView)
         contentView.addSubview(repasswordTextFieldView)
+        contentView.addSubview(validationCodeAlertView)
         contentView.addSubview(confirmButton)
         self.layout()
     }
@@ -258,6 +266,12 @@ extension SignUpViewController {
         repasswordTextFieldView.snp.makeConstraints {
             $0.top.equalTo(passwordTextFieldView.snp.bottom).offset(22)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+        }
+        validationCodeAlertView.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview().multipliedBy(0.4)
+            $0.height.equalTo(UI.alertHeight)
+            $0.width.equalTo(UI.alertWidth)
         }
         confirmButton.snp.makeConstraints {
             $0.top.greaterThanOrEqualTo(repasswordTextFieldView.snp.bottom).offset(100)
