@@ -139,6 +139,7 @@
 		B69634DD2A244CDA00F5FE7E /* CustomNavigationBarViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634DC2A244CDA00F5FE7E /* CustomNavigationBarViewable.swift */; };
 		B69634DF2A244F2400F5FE7E /* BaseViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634DE2A244F2400F5FE7E /* BaseViewControllerExtensions.swift */; };
 		B6AFDF9F2A2B412200191BA3 /* SignUpItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFDF9E2A2B412200191BA3 /* SignUpItemInfo.swift */; };
+		B6AFDFA22A2B669B00191BA3 /* ValidationCodeAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AFDFA12A2B669B00191BA3 /* ValidationCodeAlertView.swift */; };
 		BC615E7AFC83CA4F408DD123 /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1A5EF2662B6B4CEAA2810 /* HasDisposeBag.swift */; };
 		BEB30C518C14D5A9F7C6E076 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CF615D6B2520666E3D0AE9 /* NetworkRepository.swift */; };
 		BECC062AAE2A41D0CA7CE053 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DB37B2024535FF004ABF09 /* RxSwift.framework */; platformFilter = ios; };
@@ -352,6 +353,7 @@
 		B69634DC2A244CDA00F5FE7E /* CustomNavigationBarViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarViewable.swift; sourceTree = "<group>"; };
 		B69634DE2A244F2400F5FE7E /* BaseViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerExtensions.swift; sourceTree = "<group>"; };
 		B6AFDF9E2A2B412200191BA3 /* SignUpItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpItemInfo.swift; sourceTree = "<group>"; };
+		B6AFDFA12A2B669B00191BA3 /* ValidationCodeAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCodeAlertView.swift; sourceTree = "<group>"; };
 		B7821098E0A9935699072F4E /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B9A4BE28B75662E97ACA7A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BA27A0591654709FC08253DC /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
@@ -859,6 +861,14 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		B6AFDFA02A2B668800191BA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6AFDFA12A2B669B00191BA3 /* ValidationCodeAlertView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B922E553E95D60E1EE24E7BF /* Platform */ = {
 			isa = PBXGroup;
 			children = (
@@ -960,6 +970,7 @@
 		E25C78F975357DCDDC2CCA7D /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				B6AFDFA02A2B668800191BA3 /* View */,
 				B69634D22A23479B00F5FE7E /* SignUpRouter.swift */,
 				B69634D32A23479B00F5FE7E /* SignUpViewController.swift */,
 				B69634D42A23479B00F5FE7E /* SignUpBuilder.swift */,
@@ -1241,6 +1252,7 @@
 				80718E588959C2EF764DAAEC /* TuistAssets+Omos.swift in Sources */,
 				1BDC44B5B34036C8EB4DCADD /* TuistBundle+Omos.swift in Sources */,
 				B696348A2A1CE19000F5FE7E /* ComponentizedBuilderExtensions.swift in Sources */,
+				B6AFDFA22A2B669B00191BA3 /* ValidationCodeAlertView.swift in Sources */,
 				C7545454FE9537A34B5581C8 /* LoggedInPresentableState.swift in Sources */,
 				9129854BFFDDA169EED1F937 /* OnboardingRepositoryService.swift in Sources */,
 				F5979DD1B598AE9B761EB13E /* MyAuthenticationCredential.swift in Sources */,
