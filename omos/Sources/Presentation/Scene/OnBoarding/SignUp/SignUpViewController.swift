@@ -15,8 +15,8 @@ import RxSwift
 
 enum SignUpPresentableAction {
     case emailTextDidChanged(email: String)
-    case passwordTextDidChanged(password: String, repassword: String)
-    case repasswordTextDidChanged(password: String, repassword: String)
+    case passwordTextDidChanged(password: String)
+    case repasswordTextDidChanged(repassword: String)
     case emailValidationRequestButtonDidTap
     case validationPopupButtonDidTap
     case confirmButtonDidTap
@@ -209,7 +209,7 @@ extension SignUpViewController {
             .orEmpty
             .distinctUntilChanged()
             .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
-            .map { .repasswordTextDidChanged(password: $0) }
+            .map { .repasswordTextDidChanged(repassword: $0) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
