@@ -27,9 +27,9 @@ protocol SignUpModelDataStream {
 // MARK: - MutableSignUpModelDataStream
 
 protocol MutableSignUpModelDataStream: SignUpModelDataStream {
-    func updateCurrentPasswordText()
-    func updateCurrnetRePasswordText()
-    func updateValidationEmailCode()
+    func updateCurrentPasswordText(with text: String)
+    func updateCurrnetRePasswordText(with text: String)
+    func updateValidationEmailCode(with code: String)
 }
 // MARK: - SignUpModelDataStreamImpl
 
@@ -37,21 +37,45 @@ final class SignUpModelDataStreamImpl: MutableSignUpModelDataStream {
     
     // MARK: Properties
     
-    var signUpModel: Observable<SignUpModel> { self.signUpModel.asObservable() }
+    var signUpModel: Observable<SignUpModel> { self.signUpModelDataRelay.asObservable().map(\.model) }
     private let signUpModelDataRelay = BehaviorRelay<SignUpModelData>(value: SignUpModelData())
     
     // MARK: - Interanl methods
     
-    func updateCurrentPasswordText() {
-        
+    func updateCurrentPasswordText(with text: String) {
+        let currentSignUpModel = self.signUpModelDataRelay.value.model
+        let data = SignUpModelData(model:
+        SignUpModel(
+            validationEmailCode: currentSignUpModel.validationEmailCode,
+            currentPasswordText: text,
+            currentRepasswordText: currentSignUpModel.currentRepasswordText
+            )
+        )
+        self.signUpModelDataRelay.accept(data)
     }
     
-    func updateCurrnetRePasswordText() {
-        
+    func updateCurrnetRePasswordText(with text: String) {
+        let currentSignUpModel = self.signUpModelDataRelay.value.model
+        let data = SignUpModelData(model:
+        SignUpModel(
+            validationEmailCode: currentSignUpModel.validationEmailCode,
+            currentPasswordText: currentSignUpModel.currentPasswordText,
+            currentRepasswordText: text
+            )
+        )
+        self.signUpModelDataRelay.accept(data)
     }
     
-    func updateValidationEmailCode() {
-        <#code#>
+    func updateValidationEmailCode(with code: String) {
+        let currentSignUpModel = self.signUpModelDataRelay.value.model
+        let data = SignUpModelData(model:
+        SignUpModel(
+            validationEmailCode: code,
+            currentPasswordText: currentSignUpModel.currentPasswordText,
+            currentRepasswordText: currentSignUpModel.currentRepasswordText
+            )
+        )
+        self.signUpModelDataRelay.accept(data)
     }
 }
 
