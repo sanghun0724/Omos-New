@@ -189,7 +189,8 @@ extension LoggedInViewController {
         bindLoadingStream(from: listener)
         bindErrorStream(from: listener)
         self.bindLoggedInbuttonIsEnable(from: listener)
-        self.bindValidationTextState(from: listener)
+        self.bindValidationEmailState(from: listener)
+        self.bindValidationPasswordState(from: listener)
     }
 
     private func bindLoggedInbuttonIsEnable(from listener: LoggedInPresentableListener) {
@@ -200,13 +201,15 @@ extension LoggedInViewController {
             .disposed(by: disposeBag)
     }
     
-    private func bindValidationTextState(from listener: LoggedInPresentableListener) {
+    private func bindValidationEmailState(from listener: LoggedInPresentableListener) {
         listener.state
             .map(\.isValidEmailFormat)
             .asDriver(onErrorDriveWith: .never())
             .drive(self.emailTextFieldView.rx.isValidFormatted)
             .disposed(by: disposeBag)
-
+    }
+    
+    private func bindValidationPasswordState(from listener: LoggedInPresentableListener) {
         listener.state
             .map(\.isValidPasswordFormat)
             .asDriver(onErrorDriveWith: .empty())

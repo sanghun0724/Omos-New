@@ -14,9 +14,6 @@ import RxSwift
 // MARK: - SignUpPresentableAction
 
 enum SignUpPresentableAction {
-    case emailTextDidChanged(email: String)
-    case passwordTextDidChanged(password: String)
-    case repasswordTextDidChanged(repassword: String)
     case emailValidationRequestButtonDidTap
     case validationPopupButtonDidTap
     case confirmButtonDidTap
@@ -171,47 +168,8 @@ extension SignUpViewController {
 
 extension SignUpViewController {
     private func bindActions() {
-        bindEmailTextFieldsAction()
-        bindPasswordTextFieldsAction()
-        bindRepasswordTextFieldsAction()
         bindValidationPopupButtonDidTap()
         confirmButtonDidTap()
-    }
-    
-    private func bindEmailTextFieldsAction() {
-        emailTextFieldView.textField
-            .rx
-            .text
-            .orEmpty
-            .distinctUntilChanged()
-            .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
-            .map { .emailTextDidChanged(email: $0) }
-            .bind(to: self.actionRelay)
-            .disposed(by: disposeBag)
-    }
-    
-    private func bindPasswordTextFieldsAction() {
-        passwordTextFieldView.textField
-            .rx
-            .text
-            .orEmpty
-            .distinctUntilChanged()
-            .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
-            .map { .passwordTextDidChanged(password: $0) }
-            .bind(to: self.actionRelay)
-            .disposed(by: disposeBag)
-    }
-    
-    private func bindRepasswordTextFieldsAction() {
-        repasswordTextFieldView.textField
-            .rx
-            .text
-            .orEmpty
-            .distinctUntilChanged()
-            .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
-            .map { .repasswordTextDidChanged(repassword: $0) }
-            .bind(to: self.actionRelay)
-            .disposed(by: disposeBag)
     }
     
     private func bindEmailValidationRequestButtonDidTapAction() {
@@ -243,6 +201,24 @@ extension SignUpViewController {
     private func bindState(from listener: SignUpPresentableListener) {
         bindLoadingStream(from: listener)
         bindErrorStream(from: listener)
+        self.bindValidationEmailState(from: listener)
+        self.bindValidationPasswordState(from: listener)
+    }
+    
+    private func bindValidationEmailState(from listener: SignUpPresentableListener) {
+        listener.state
+            .map(\.isValidEmailFormat)
+            .asDriver(onErrorDriveWith: .never())
+            .drive(self.emailTextFieldView.rx.isValidFormatted)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindValidationPasswordState(from listener: SignUpPresentableListener) {
+        listener.state
+            .map(\.isValidPasswordFormat)
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.passwordTextFieldView.rx.isValidFormatted)
+            .disposed(by: disposeBag)
     }
 }
 

@@ -240,10 +240,10 @@ extension LoggedInInteractor {
             newState.myError = ReactorValue(revision: newState.revision, value: error)
         case let .setLoading(loading):
             newState.isLoading = loading
-        case let .setEmailFormatValidation(emailValidation):
-            newState.isValidEmailFormat = emailValidation
-        case let .setPasswordFormatValidation(passwordValidation):
-            newState.isValidPasswordFormat = passwordValidation
+        case let .setEmailFormatValidation(validation):
+            newState.isValidEmailFormat = validation
+        case let .setPasswordFormatValidation(validation):
+            newState.isValidPasswordFormat = validation
         case let .setHasLoggedInInput(validation):
             newState.hasLoggedInInput = validation
         default:

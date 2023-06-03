@@ -44,12 +44,11 @@ final class SignUpInteractor:
     enum Mutation {
         case setError(MyError)
         case setLoading(Bool)
-        case setEmailReigisterValidation(Bool)
         case setIsEmailDuplication(Bool)
         case setEmailFormatValidation(Bool)
         case setPasswordFormatValidation(Bool)
         case setPasswordReconfirm(Bool)
-        case showAlert(String)
+        case setEmailReigisterValidation(Bool)
         case attachNicknameRIB
     }
     
@@ -90,12 +89,6 @@ final class SignUpInteractor:
 extension SignUpInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        case let .emailTextDidChanged(email):
-            return .empty()
-        case let .passwordTextDidChanged(password):
-            return .empty()
-        case let .repasswordTextDidChanged(password):
-            return .empty()
         case .emailValidationRequestButtonDidTap:
             return .empty()
         case .confirmButtonDidTap:
@@ -115,11 +108,26 @@ extension SignUpInteractor {
         return emailValidationMutation
     }
     
+    private func isEnableRequestValidationEmailCode(_ mutations: [Observable<Mutation>]) -> Observable<Bool> {
+        return Observable.combineLatest(mutations) { mutations -> Bool in
+            return mutations.allSatisfy { mutation in
+                switch mutation {
+                case let .setEmailFormatValidation(emailValidation):
+                    return emailValidation
+                case let .setIsEmailDuplication(isDuplicated):
+                    return isDuplicated
+                default:
+                    return true
+                }
+            }
+        }
+    }
+    
     private func isEmailDuplicatedMutation(email: String) -> Observable<Mutation> {
         let isEmailDuplicatedMutation: Observable<Mutation> =
         self.onboardingRepositoryService.checkEmailDuplication(email: email)
             .map { .setIsEmailDuplication($0) }
-            .catchAndReturn(.setError(.defaultError))
+            .catchAndReturn(.setError(.duplicationError))
         
         return isEmailDuplicatedMutation
     }
@@ -129,6 +137,10 @@ extension SignUpInteractor {
         
             
         // 코드 비교
+    }
+    
+    private func allpasswordsValidation(password: String, repassword: String) -> Observable<Mutation> {
+        return .empty()
     }
     
     private func passwordFormatValidationMutation(password: String) -> Observable<Mutation> {
@@ -142,9 +154,7 @@ extension SignUpInteractor {
     
     private func repasswordReconfirmMutation(password: String, repassword: String) -> Observable<Mutation> {
         let repasswordReconfirmMutation: Observable<Mutation> =
-        self.onboardingRepositoryService.isValidReconfirmPassword(password: password, repassword: repassword)
-            .map { .setPasswordReconfirm($0) }
-            .catchAndReturn(.setError(.defaultError))
+            .empty()
         
         return repasswordReconfirmMutation
     }
@@ -154,8 +164,26 @@ extension SignUpInteractor {
 // MARK: - reduce
 
 extension SignUpInteractor {
-    func reduce(state: State, mutation: Mutation) -> State {
+    func reduce(state: SignUpPresentableState, mutation: Mutation) -> SignUpPresentableState {
         var newState = state
+        
+        switch mutation {
+        case let .setError(error):
+            newState.revision = state.revision + 1
+            newState.myError = ReactorValue(revision: newState.revision, value: error)
+        case let .setLoading(loading):
+            newState.isLoading = loading
+        case let .setEmailFormatValidation(validation):
+            newState.isValidEmailFormat = validation
+        case let .setEmailReigisterValidation(validation):
+            newState.isSuccessEmailCertification = validation
+        case let .setPasswordFormatValidation(validation):
+            newState.isValidPasswordFormat = validation
+        case let .setPasswordReconfirm(validation):
+            newState.isValidRepasswordConfirm = validation
+        default:
+            log.debug("Do Nothing when \(mutation)")
+        }
         
         return newState
     }

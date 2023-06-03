@@ -14,26 +14,22 @@ import RxSwift
 protocol OnboardingRepositoryService {
     func login(email: String, password: String) -> Observable<Bool>
     func checkEmailDuplication(email: String) -> Observable<Bool>
-    func validateAuthEmail(email: String) -> Observable<String>
+   // func validateAuthEmail(email: String) -> Observable<String>
     func isValidEmail(email: String) -> Observable<Bool>
     func isValidPassword(password: String) -> Observable<Bool>
-    func isValidReconfirmPassword(password: String, repassword: String) -> Observable<Bool>
 }
 
 class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
     
     private let onboardingRepository: OnboardingRepository
-    private let mutableSignUpModelStream: MutableSignUpModelDataStream
     
     private let signUpItemInfoRelay = BehaviorRelay(value: SignUpItemInfo())
     private var signUpItemInfoRelayBuilder: PropertyBuilder<SignUpItemInfo> { self.signUpItemInfoRelay.value.builder }
     
     init(
-        onboardingRepository: OnboardingRepository,
-        mutableSignUpModelStream: MutableSignUpModelDataStream
+        onboardingRepository: OnboardingRepository
     ) {
         self.onboardingRepository = onboardingRepository
-        self.mutableSignUpModelStream = mutableSignUpModelStream
     }
     
     func login(email: String, password: String) -> Observable<Bool> {
@@ -48,6 +44,7 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
             }
     }
     
+    
     func checkEmailDuplication(email: String) -> Observable<Bool> {
         onboardingRepository.checkEmailDuplication(request: .init(email: email))
             .asObservable()
@@ -60,13 +57,9 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
             .map(\.code)
             .withUnretained(self)
             .map { owner, code in
-                
+                owner.updateValidationEmailCode(with: code)
                 return Void()
             }
-    }
-    
-    func validateAuthEmail(email: String) -> Observable<Bool> {
-       
     }
     
     // MARK: - business logic
@@ -83,11 +76,19 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
         return .just(passwordTest.evaluate(with: password))
     }
     
-    func isValidReconfirmPassword(password: String, repassword: String) -> Observable<Bool> {
-        return .just(password == repassword)
-    }
-    
     // MARK: - Private methods
     
-    private func
+    private func updateValidationEmailCode(with code: String) {
+        self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.validationEmailCode(code))
+    }
+    
+    private func updatePasswordText(with text: String) {
+        self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.currentPasswordText(text))
+    }
+    
+    private func updateRepasswordText(with text: String) {
+        self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.currentRepasswordText(text))
+    }
+    
+        
 }
