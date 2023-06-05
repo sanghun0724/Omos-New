@@ -41,6 +41,7 @@ class ValidationCodeAlertView: BaseView {
     
     override func initialize() {
         super.initialize()
+        backgroundColor = .white
         addSubview(guideLabel)
         addSubview(codeInputField)
         addSubview(buttonStackView)

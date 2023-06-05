@@ -89,23 +89,44 @@ final class SignUpInteractor:
 extension SignUpInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        case .emailValidationRequestButtonDidTap:
+        case let .emailValidationRequestButtonDidTap(email):
+            return emailValidationMutation(email: email)
+        case .validationAlertButtonDidTap:
             return .empty()
         case .confirmButtonDidTap:
             return .just(.attachNicknameRIB)
-        default: fatalError()
         }
     }
     
     // MARK: - Validation
     
+    private func emailValidationMutation(email: String) -> Observable<Mutation> {
+        let stopObservable = PublishSubject<Void>()
+        return Observable.concat(emailFormatValidationMutation(email: email),
+                          isEmailDuplicatedMutation(email: email))
+        .take(until: stopObservable)
+        .map { mutation in
+            switch mutation {
+            case let .setEmailFormatValidation(validation):
+                if !validation { stopObservable.onNext(Void()) }
+                return .setEmailFormatValidation(validation)
+            case let .setIsEmailDuplication(validation):
+                if !validation { stopObservable.onNext(Void()) }
+                return .setIsEmailDuplication(validation)
+            default:
+                return mutation
+            }
+        }
+        
+    }
+    
     private func emailFormatValidationMutation(email: String) -> Observable<Mutation> {
-        let emailValidationMutation: Observable<Mutation> =
+        let emailFormatValidationMutation: Observable<Mutation> =
         self.onboardingRepositoryService.isValidEmail(email: email)
             .map { .setEmailFormatValidation($0) }
             .catchAndReturn( .setEmailFormatValidation(false))
         
-        return emailValidationMutation
+        return emailFormatValidationMutation
     }
     
     private func isEnableRequestValidationEmailCode(_ mutations: [Observable<Mutation>]) -> Observable<Bool> {
