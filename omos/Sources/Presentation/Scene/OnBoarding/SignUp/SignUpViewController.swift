@@ -14,9 +14,9 @@ import RxSwift
 // MARK: - SignUpPresentableAction
 
 enum SignUpPresentableAction {
-    case emailValidationRequestButtonDidTap
-    case validationPopupButtonDidTap
-    case confirmButtonDidTap
+    case emailValidationRequestButtonDidTap(email: String)
+    case validationAlertButtonDidTap(inputCode: String)
+    case confirmButtonDidTap(emailStatus: Bool, password: String, repassword: String)
 }
 
 // MARK: - SignUpPresentableListener
@@ -183,20 +183,30 @@ extension SignUpViewController {
         emailValidationRequestButton
             .rx
             .tapWithPreventDuplication()
-            .map { .emailValidationRequestButtonDidTap }
+            .withLatestFrom(self.emailTextFieldView.textField.rx.text.orEmpty)
+            .map { .emailValidationRequestButtonDidTap(email: $0) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
     
     private func bindValidationPopupButtonDidTap() {
-        // TODO: with alert
+        validationCodeAlertView.varifyButton
+            .rx
+            .tapWithPreventDuplication()
+            .withLatestFrom(self.validationCodeAlertView.codeInputField.rx.text.orEmpty)
+            .map { .validationAlertButtonDidTap(inputCode: $0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
     }
     
     private func confirmButtonDidTap() {
         confirmButton
             .rx
             .tapWithPreventDuplication()
-            .map { .confirmButtonDidTap }
+            .withLatestFrom(
+                Observable.combineLatest(self.passwordTextFieldView.textField.rx.text.orEmpty, self.repasswordTextFieldView.textField.rx.text.orEmpty)
+            ) // TODO: check 
+            .map { .confirmButtonDidTap(emailStatus: false, password: $0.0, repassword: $0.1) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
