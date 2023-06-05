@@ -121,14 +121,14 @@ extension SignUpInteractor {
                     self?.isEmailDuplicatedMutation(email: email) ?? .empty()
                 }
                 .flatMap {
+                    observer.onNext($0)
                     switch $0 {
                     case let .setIsEmailDuplication(validation):
                         if validation == false {
+                            observer.onNext(.setLoading(false))
                             observer.onNext(.setError(.duplicationError))
                             observer.onCompleted()
                             return Observable<Void>.never()
-                        } else {
-                            observer.onNext(.setIsEmailDuplication(true))
                         }
                         return Observable<Void>.just(Void())
                     default: return Observable<Void>.just(Void())
