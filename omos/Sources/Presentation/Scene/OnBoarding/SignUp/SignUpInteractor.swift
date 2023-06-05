@@ -7,6 +7,8 @@
 // TODO: remove comment
 // -> email text 입력 -> 이메일 포맷 확인 -> 이메일 중복확인 -> 코드 보내고 -> 코드 확인 -> ...
 
+import Foundation
+
 import ReactorKit
 import RIBs
 import RxSwift
@@ -101,23 +103,45 @@ extension SignUpInteractor {
     // MARK: - Validation
     
     private func emailValidationMutation(email: String) -> Observable<Mutation> {
-        let stopObservable = PublishSubject<Void>()
-        return Observable.concat(emailFormatValidationMutation(email: email),
-                          isEmailDuplicatedMutation(email: email))
-        .take(until: stopObservable)
-        .map { mutation in
-            switch mutation {
-            case let .setEmailFormatValidation(validation):
-                if !validation { stopObservable.onNext(Void()) }
-                return .setEmailFormatValidation(validation)
-            case let .setIsEmailDuplication(validation):
-                if !validation { stopObservable.onNext(Void()) }
-                return .setIsEmailDuplication(validation)
-            default:
-                return mutation
+        return Observable<Mutation>.create { [weak self] observer in
+            let creator =  self?.emailFormatValidationMutation(email: email)
+                .flatMap {
+                    observer.onNext($0)
+                    switch $0 {
+                    case let .setEmailFormatValidation(validation):
+                        if validation == false {
+                            observer.onCompleted()
+                            return Observable<Void>.never()
+                        }
+                        return Observable<Void>.just(Void())
+                    default: return Observable<Void>.just(Void())
+                    }
+                }
+                .flatMap {
+                    self?.isEmailDuplicatedMutation(email: email) ?? .empty()
+                }
+                .flatMap {
+                    switch $0 {
+                    case let .setIsEmailDuplication(validation):
+                        if validation == false {
+                            observer.onNext(.setError(.duplicationError))
+                            observer.onCompleted()
+                            return Observable<Void>.never()
+                        } else {
+                            observer.onNext(.setIsEmailDuplication(true))
+                        }
+                        return Observable<Void>.just(Void())
+                    default: return Observable<Void>.just(Void())
+                    }
+                }
+                .subscribe()
+            
+            return Disposables.create {
+                creator?.dispose()
             }
-        }
-        
+            
+        }.debug("check")
+
     }
     
     private func emailFormatValidationMutation(email: String) -> Observable<Mutation> {
@@ -150,7 +174,13 @@ extension SignUpInteractor {
             .map { .setIsEmailDuplication($0) }
             .catchAndReturn(.setError(.duplicationError))
         
-        return isEmailDuplicatedMutation
+        let sequence: [Observable<Mutation>] = [
+            .just(.setLoading(true)),
+            isEmailDuplicatedMutation,
+            .just(.setLoading(false))
+        ]
+        
+        return .concat(sequence)
     }
     
     private func emailReigisterValidation(inputCode: String) {
@@ -196,6 +226,8 @@ extension SignUpInteractor {
             newState.isLoading = loading
         case let .setEmailFormatValidation(validation):
             newState.isValidEmailFormat = validation
+        case let .setIsEmailDuplication(validation):
+            newState.isShowAlert = validation
         case let .setEmailReigisterValidation(validation):
             newState.isSuccessEmailCertification = validation
         case let .setPasswordFormatValidation(validation):
