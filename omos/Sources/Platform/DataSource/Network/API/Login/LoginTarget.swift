@@ -33,7 +33,7 @@ extension LoginTarget: TargetType {
         case .getUserDetails: return .get
         case .signUp: return .post
         case .doRefresh: return .post
-        case .checkEmail: return .post
+        case .checkEmail: return .get
         case .SNSLogin: return .post
         case .SNSSignUp: return .post
         case .logOut: return .delete
@@ -65,7 +65,7 @@ extension LoginTarget: TargetType {
         case .getUserDetails(let request): return .body(request)
         case .signUp(let request): return .body(request)
         case .doRefresh(let request): return .body(request)
-        case .checkEmail(let request): return .body(request)
+        case .checkEmail(let request): return .query(request)
         case .SNSLogin(let request): return .body(request)
         case .SNSSignUp(let request): return .body(request)
         case .emailValidation(let request): return .body(request)

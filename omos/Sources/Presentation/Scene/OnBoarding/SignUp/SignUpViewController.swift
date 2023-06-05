@@ -99,7 +99,7 @@ final class SignUpViewController:
     
     private lazy var validationCodeAlertView = ValidationCodeAlertView()
         .builder
-        .isHidden(false)
+        .isHidden(true)
         .build()
     
     private lazy var confirmButton = ConfirmButton(Strings.Onboarding.loggedIn).builder
@@ -175,6 +175,7 @@ extension SignUpViewController {
 
 extension SignUpViewController {
     private func bindActions() {
+        bindEmailValidationRequestButtonDidTapAction()
         bindValidationPopupButtonDidTap()
         confirmButtonDidTap()
     }
@@ -205,7 +206,7 @@ extension SignUpViewController {
             .tapWithPreventDuplication()
             .withLatestFrom(
                 Observable.combineLatest(self.passwordTextFieldView.textField.rx.text.orEmpty, self.repasswordTextFieldView.textField.rx.text.orEmpty)
-            ) // TODO: check 
+            ) // TODO: check
             .map { .confirmButtonDidTap(emailStatus: false, password: $0.0, repassword: $0.1) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
@@ -220,6 +221,7 @@ extension SignUpViewController {
         bindErrorStream(from: listener)
         self.bindValidationEmailState(from: listener)
         self.bindValidationPasswordState(from: listener)
+        self.bindDuplicationEmailState(from: listener)
     }
     
     private func bindValidationEmailState(from listener: SignUpPresentableListener) {
@@ -235,6 +237,15 @@ extension SignUpViewController {
             .map(\.isValidPasswordFormat)
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.passwordTextFieldView.rx.isValidFormatted)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindDuplicationEmailState(from listener: SignUpPresentableListener) {
+        listener.state
+            .map(\.isShowAlert)
+            .map { !$0 }
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.validationCodeAlertView.rx.isHidden)
             .disposed(by: disposeBag)
     }
 }
