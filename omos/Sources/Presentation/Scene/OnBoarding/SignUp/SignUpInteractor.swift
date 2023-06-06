@@ -125,14 +125,15 @@ extension SignUpInteractor {
                     switch $0 {
                     case let .setIsEmailDuplication(validation):
                         if validation == false {
-                            observer.onNext(.setLoading(false))
-                            observer.onNext(.setError(.duplicationError))
                             observer.onCompleted()
                             return Observable<Void>.never()
                         }
                         return Observable<Void>.just(Void())
                     default: return Observable<Void>.just(Void())
                     }
+                }
+                .flatMap {
+                    self?.sendValidationEmailCodeEmptyMutation(email: email) ?? .empty()
                 }
                 .subscribe()
             
@@ -171,8 +172,11 @@ extension SignUpInteractor {
     private func isEmailDuplicatedMutation(email: String) -> Observable<Mutation> {
         let isEmailDuplicatedMutation: Observable<Mutation> =
         self.onboardingRepositoryService.checkEmailDuplication(email: email)
-            .map { .setIsEmailDuplication($0) }
-            .catchAndReturn(.setError(.duplicationError))
+            .map {
+                if $0 == false { return .setError(.duplicationError) }
+                return .setIsEmailDuplication($0)
+            }
+            .catchAndReturn(.setError(.defaultError))
         
         let sequence: [Observable<Mutation>] = [
             .just(.setLoading(true)),
@@ -183,11 +187,23 @@ extension SignUpInteractor {
         return .concat(sequence)
     }
     
-    private func emailReigisterValidation(inputCode: String) {
-       // let emailReigisterValidation: Observable<Mutation> =
+    private func sendValidationEmailCodeEmptyMutation(email: String) -> Observable<Mutation> {
+        let sendValidationEmailCodeEmptyMutation: Observable<Mutation> =
+        self.onboardingRepositoryService.requestAuthEmailCode(email: email)
+            .map { .setLoading(true) }
+            .catchAndReturn(.setError(.defaultError))
         
-            
-        // 코드 비교
+        let sequence: [Observable<Mutation>] = [
+            .just(.setLoading(true)),
+            sendValidationEmailCodeEmptyMutation,
+            .just(.setLoading(false))
+        ]
+        
+        return .concat(sequence)
+    }
+    
+    private func emailReigisterValidation(inputCode: String) -> Observable<Mutation> {
+        let emailReigisterValidation: Observable<Mutation> = 
     }
     
     private func allpasswordsValidation(password: String, repassword: String) -> Observable<Mutation> {
@@ -203,12 +219,7 @@ extension SignUpInteractor {
         return passwordValidationMutation
     }
     
-    private func repasswordReconfirmMutation(password: String, repassword: String) -> Observable<Mutation> {
-        let repasswordReconfirmMutation: Observable<Mutation> =
-            .empty()
-        
-        return repasswordReconfirmMutation
-    }
+    
     
 }
 

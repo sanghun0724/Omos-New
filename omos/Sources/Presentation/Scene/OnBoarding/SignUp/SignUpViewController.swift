@@ -46,8 +46,7 @@ final class SignUpViewController:
         static let emailValidationButtonHeight = 20
         static let emailValidationButtonWidth = 100
         static let leadingTrailingMargin = 16
-        static let alertHeight = 100
-        static let alertWidth = 100
+        static let alertWidth = 300
         static let confirmButtonHeight = 48
     }
     
@@ -111,14 +110,13 @@ final class SignUpViewController:
     
     override init() {
         super.init()
-    }
+    }gn
     
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        bindUI()
         bind(listener: self.listener)
     }
     
@@ -137,18 +135,6 @@ extension SignUpViewController {
     
     override func navigationLeftButtonDidTapped() {
         popViewController(animated: true)
-    }
-}
-
-// MARK: Private methods
-
-extension SignUpViewController {}
-
-// MARK: - Bind UI
-
-extension SignUpViewController {
-    private func bindUI() {
-        
     }
 }
 
@@ -289,9 +275,9 @@ extension SignUpViewController {
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
         }
         validationCodeAlertView.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().multipliedBy(0.4)
-            $0.height.equalTo(UI.alertHeight)
+            $0.center.equalToSuperview()
+            //$0.centerY.equalToSuperview().multipliedBy(0.4)
+            //$0.height.equalTo(UI.alertHeight)
             $0.width.equalTo(UI.alertWidth)
         }
         confirmButton.snp.makeConstraints {
