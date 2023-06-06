@@ -110,7 +110,7 @@ final class SignUpViewController:
     
     override init() {
         super.init()
-    }gn
+    }
     
     // MARK: - View Lifecycle
     
@@ -163,7 +163,8 @@ extension SignUpViewController {
     private func bindActions() {
         bindEmailValidationRequestButtonDidTapAction()
         bindValidationPopupButtonDidTap()
-        confirmButtonDidTap()
+        bindEmailRegisterValidation()
+        bindConfirmButtonDidTap()
     }
     
     private func bindEmailValidationRequestButtonDidTapAction() {
@@ -186,7 +187,7 @@ extension SignUpViewController {
             .disposed(by: disposeBag)
     }
     
-    private func confirmButtonDidTap() {
+    private func bindConfirmButtonDidTap() {
         confirmButton
             .rx
             .tapWithPreventDuplication()
@@ -232,6 +233,14 @@ extension SignUpViewController {
             .map { !$0 }
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.validationCodeAlertView.rx.isHidden)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindEmailRegisterValidation() {
+        listener?.state
+            .map(\.isSuccessEmailCertification)
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.validationCodeAlertView.rx.isSuccess)
             .disposed(by: disposeBag)
     }
 }

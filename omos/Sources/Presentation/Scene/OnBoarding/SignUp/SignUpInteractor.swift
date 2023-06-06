@@ -93,8 +93,8 @@ extension SignUpInteractor {
         switch action {
         case let .emailValidationRequestButtonDidTap(email):
             return emailValidationMutation(email: email)
-        case .validationAlertButtonDidTap:
-            return .empty()
+        case let .validationAlertButtonDidTap(inputCode):
+            return emailReigisterValidation(inputCode: inputCode)
         case .confirmButtonDidTap:
             return .just(.attachNicknameRIB)
         }
@@ -203,7 +203,12 @@ extension SignUpInteractor {
     }
     
     private func emailReigisterValidation(inputCode: String) -> Observable<Mutation> {
-        let emailReigisterValidation: Observable<Mutation> = 
+        let emailReigisterValidation: Observable<Mutation> =
+        self.onboardingRepositoryService.isEqualEmailValidationCode(inputCode: inputCode)
+            .map { .setEmailReigisterValidation($0) }
+            .catchAndReturn(.setError(.defaultError))
+        
+        return emailReigisterValidation
     }
     
     private func allpasswordsValidation(password: String, repassword: String) -> Observable<Mutation> {
@@ -218,8 +223,6 @@ extension SignUpInteractor {
         
         return passwordValidationMutation
     }
-    
-    
     
 }
 
