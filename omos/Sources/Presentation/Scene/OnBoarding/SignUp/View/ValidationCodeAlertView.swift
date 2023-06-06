@@ -11,11 +11,18 @@ class ValidationCodeAlertView: BaseView {
     
     // MARK: Constants
     
+    enum UI {
+        static let textFieldHeight = 48
+    }
+    
     private lazy var guideLabel = UILabel().builder
-        .text("@@@@@text")
+        .text("인증코드를 해당 이메일로 전송했습니다")
+        .font(.systemFont(ofSize: 14, weight: .regular))
         .build()
     
     lazy var codeInputField = UITextField().builder
+        .backgroundColor(Asset.Colors.mainGray4.color)
+        .textAlignment(.center)
         .build()
     
     private lazy var buttonStackView = UIStackView(arrangedSubviews: [varifyButton, cancelButton]).builder
@@ -36,12 +43,20 @@ class ValidationCodeAlertView: BaseView {
             $0.setTitle("취소", for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .light)
             $0.setTitleColor(Asset.Colors.mainGray4.color, for: .normal)
+            $0.addTarget(self, action: #selector(cancelButtonDidTap), for: .touchDown)
         }
         .build()
+    
+    @objc
+    private func cancelButtonDidTap() {
+        isHidden = true 
+    }
     
     override func initialize() {
         super.initialize()
         backgroundColor = .white
+        layer.masksToBounds = true
+        layer.cornerRadius = 8
         addSubview(guideLabel)
         addSubview(codeInputField)
         addSubview(buttonStackView)
@@ -60,7 +75,8 @@ class ValidationCodeAlertView: BaseView {
     private func makeCodeInputFieldConstraints() {
         codeInputField.snp.makeConstraints {
             $0.bottom.equalTo(buttonStackView.snp.top).offset(-12)
-            $0.centerX.equalToSuperview()
+            $0.height.equalTo(UI.textFieldHeight)
+            $0.leading.trailing.equalToSuperview().inset(40)
         }
     }
     
