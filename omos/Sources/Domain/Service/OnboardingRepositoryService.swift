@@ -18,6 +18,7 @@ protocol OnboardingRepositoryService {
     func requestAuthEmailCode(email: String) -> Observable<Void>
     func isValidEmail(email: String) -> Observable<Bool>
     func isValidPassword(password: String) -> Observable<Bool>
+    func isEqualEmailValidationCode(inputCode: String) -> Observable<Bool>
 }
 
 class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
@@ -74,6 +75,14 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
         let passwordRegEx = "[A-Za-z0-9!_@$%^&+=]{8,16}"
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
         return .just(passwordTest.evaluate(with: password))
+    }
+    
+    func isEqualEmailValidationCode(inputCode: String) -> Observable<Bool> {
+        .just(signUpItemInfoRelay.value.validationEmailCode == inputCode)
+    }
+    
+    func isEqualInputPasswords(password: String, repassword: String) -> Observable<Bool> {
+        .just(password == repassword)
     }
     
     // MARK: - Private methods

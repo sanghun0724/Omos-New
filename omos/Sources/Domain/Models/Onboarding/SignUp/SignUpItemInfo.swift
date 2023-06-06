@@ -13,4 +13,8 @@ struct SignUpItemInfo: PropertyBuilderCompatible {
     var validationEmailCode: String = String()
     var currentPasswordText: String = String()
     var currentRepasswordText: String = String()
+    
+    func isEqualPassword() -> Bool {
+        self.currentPasswordText == self.currentRepasswordText
+    }
 }

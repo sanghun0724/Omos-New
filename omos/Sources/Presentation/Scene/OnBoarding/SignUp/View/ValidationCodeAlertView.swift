@@ -9,15 +9,26 @@ import UIKit
 
 class ValidationCodeAlertView: BaseView {
     
-    // MARK: Constants
+    // MARK: - Constants
     
     enum UI {
         static let textFieldHeight = 48
     }
     
+    // MARK: Properties
+    
+    var isSuccess: Bool = false {
+        didSet {
+            isSuccess ? setSuccessState() : setFailureState()
+        }
+    }
+    
+    // MARK: - UI Components
+    
     private lazy var guideLabel = UILabel().builder
         .text("인증코드를 해당 이메일로 전송했습니다")
         .font(.systemFont(ofSize: 14, weight: .regular))
+        .numberOfLines(0)
         .build()
     
     lazy var codeInputField = UITextField().builder
@@ -47,10 +58,28 @@ class ValidationCodeAlertView: BaseView {
         }
         .build()
     
+    // MARK: - Private
+    
+    private func setSuccessState() {
+        isHidden = true
+        guideLabel.text = "인증코드를 해당 이메일로 전송했습니다"
+        guideLabel.textColor = .black
+        codeInputField.layer.borderColor = UIColor.clear.cgColor
+        codeInputField.text = ""
+    }
+    
+    private func setFailureState() {
+        guideLabel.text = "인증번호가 틀렸습니다.\n다시 한번 확인해 주세요"
+        guideLabel.textColor = Asset.Colors.mainOrange.color
+        codeInputField.layer.borderColor = Asset.Colors.mainOrange.color.cgColor
+    }
+    
     @objc
     private func cancelButtonDidTap() {
         isHidden = true 
     }
+    
+    // MARK: - initialize
     
     override func initialize() {
         super.initialize()
