@@ -96,10 +96,12 @@ final class SignUpViewController:
         }
         .build()
     
-    private lazy var validationCodeAlertView = ValidationCodeAlertView()
-        .builder
+    private lazy var backContainerView = UIView().builder
+        .backgroundColor(.clear)
         .isHidden(true)
         .build()
+    
+    private lazy var validationCodeAlertView = ValidationCodeAlertView()
     
     private lazy var confirmButton = ConfirmButton(Strings.Onboarding.loggedIn).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
@@ -163,7 +165,6 @@ extension SignUpViewController {
     private func bindActions() {
         bindEmailValidationRequestButtonDidTapAction()
         bindValidationPopupButtonDidTap()
-        bindEmailRegisterValidation()
         bindConfirmButtonDidTap()
     }
     
@@ -208,7 +209,8 @@ extension SignUpViewController {
         bindErrorStream(from: listener)
         self.bindValidationEmailState(from: listener)
         self.bindValidationPasswordState(from: listener)
-        self.bindDuplicationEmailState(from: listener)
+        self.bindisSuccessSendValidationCodeState(from: listener)
+        self.bindEmailRegisterValidation(from: listener)
     }
     
     private func bindValidationEmailState(from listener: SignUpPresentableListener) {
@@ -227,7 +229,14 @@ extension SignUpViewController {
             .disposed(by: disposeBag)
     }
     
-    private func bindDuplicationEmailState(from listener: SignUpPresentableListener) {
+    private func bindisSuccessSendValidationCodeState(from listener: SignUpPresentableListener) {
+        listener.state
+            .map(\.isShowAlert)
+            .map { !$0 }
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.backContainerView.rx.isHidden)
+            .disposed(by: disposeBag)
+        
         listener.state
             .map(\.isShowAlert)
             .map { !$0 }
@@ -236,9 +245,11 @@ extension SignUpViewController {
             .disposed(by: disposeBag)
     }
     
-    private func bindEmailRegisterValidation() {
-        listener?.state
+    private func bindEmailRegisterValidation(from listener: SignUpPresentableListener) {
+        listener.state
             .map(\.isSuccessEmailCertification)
+            .distinctUntilChanged()
+            .skip(1)
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.validationCodeAlertView.rx.isSuccess)
             .disposed(by: disposeBag)
@@ -255,7 +266,8 @@ extension SignUpViewController {
         contentView.addSubview(emailValidationRequestButton)
         contentView.addSubview(passwordTextFieldView)
         contentView.addSubview(repasswordTextFieldView)
-        contentView.addSubview(validationCodeAlertView)
+        contentView.addSubview(backContainerView)
+        backContainerView.addSubview(validationCodeAlertView)
         contentView.addSubview(confirmButton)
         self.layout()
     }
@@ -283,18 +295,20 @@ extension SignUpViewController {
             $0.top.equalTo(passwordTextFieldView.snp.bottom).offset(22)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
         }
-        validationCodeAlertView.snp.makeConstraints {
-            $0.center.equalToSuperview()
-            //$0.centerY.equalToSuperview().multipliedBy(0.4)
-            //$0.height.equalTo(UI.alertHeight)
-            $0.width.equalTo(UI.alertWidth)
-        }
         confirmButton.snp.makeConstraints {
             $0.top.greaterThanOrEqualTo(repasswordTextFieldView.snp.bottom).offset(100)
                 .priority(249)
             $0.height.equalTo(UI.confirmButtonHeight)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
             $0.bottom.equalToSuperview().offset(-34).priority(750)
+        }
+        
+        backContainerView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        validationCodeAlertView.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.width.equalTo(UI.alertWidth)
         }
     }
 }

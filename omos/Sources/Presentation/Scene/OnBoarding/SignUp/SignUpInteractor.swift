@@ -46,6 +46,7 @@ final class SignUpInteractor:
     enum Mutation {
         case setError(MyError)
         case setLoading(Bool)
+        case setIsSuccessRequestValidationCode(Bool)
         case setIsEmailDuplication(Bool)
         case setEmailFormatValidation(Bool)
         case setPasswordFormatValidation(Bool)
@@ -61,6 +62,7 @@ final class SignUpInteractor:
     private let onboardingRepositoryService: OnboardingRepositoryService
     
     let initialState: SignUpPresentableState
+    
     
     // MARK: - Initialization & Deinitialization
     
@@ -104,7 +106,7 @@ extension SignUpInteractor {
     
     private func emailValidationMutation(email: String) -> Observable<Mutation> {
         return Observable<Mutation>.create { [weak self] observer in
-            let creator =  self?.emailFormatValidationMutation(email: email)
+            let _ = self?.emailFormatValidationMutation(email: email)
                 .flatMap {
                     observer.onNext($0)
                     switch $0 {
@@ -112,9 +114,10 @@ extension SignUpInteractor {
                         if validation == false {
                             observer.onCompleted()
                             return Observable<Void>.never()
+                        } else {
+                            return Observable<Void>.just(Void())
                         }
-                        return Observable<Void>.just(Void())
-                    default: return Observable<Void>.just(Void())
+                    default: return Observable<Void>.empty()
                     }
                 }
                 .flatMap {
@@ -127,22 +130,24 @@ extension SignUpInteractor {
                         if validation == false {
                             observer.onCompleted()
                             return Observable<Void>.never()
+                        } else {
+                            return Observable<Void>.just(Void())
                         }
-                        return Observable<Void>.just(Void())
-                    default: return Observable<Void>.just(Void())
+                    default: return Observable<Void>.empty()
                     }
                 }
                 .flatMap {
-                    self?.sendValidationEmailCodeEmptyMutation(email: email) ?? .empty()
+                    self?.sendValidationEmailCodeMutation(email: email) ?? .empty()
+                }
+                .flatMap {
+                    observer.onNext($0)
+                    return Observable<Void>.empty()
                 }
                 .subscribe()
-            
-            return Disposables.create {
-                creator?.dispose()
-            }
-            
-        }.debug("check")
 
+                return Disposables.create()
+        }.debug("validation")
+        
     }
     
     private func emailFormatValidationMutation(email: String) -> Observable<Mutation> {
@@ -152,21 +157,6 @@ extension SignUpInteractor {
             .catchAndReturn( .setEmailFormatValidation(false))
         
         return emailFormatValidationMutation
-    }
-    
-    private func isEnableRequestValidationEmailCode(_ mutations: [Observable<Mutation>]) -> Observable<Bool> {
-        return Observable.combineLatest(mutations) { mutations -> Bool in
-            return mutations.allSatisfy { mutation in
-                switch mutation {
-                case let .setEmailFormatValidation(emailValidation):
-                    return emailValidation
-                case let .setIsEmailDuplication(isDuplicated):
-                    return isDuplicated
-                default:
-                    return true
-                }
-            }
-        }
     }
     
     private func isEmailDuplicatedMutation(email: String) -> Observable<Mutation> {
@@ -180,22 +170,21 @@ extension SignUpInteractor {
         
         let sequence: [Observable<Mutation>] = [
             .just(.setLoading(true)),
-            isEmailDuplicatedMutation,
-            .just(.setLoading(false))
+            isEmailDuplicatedMutation
         ]
         
         return .concat(sequence)
     }
     
-    private func sendValidationEmailCodeEmptyMutation(email: String) -> Observable<Mutation> {
-        let sendValidationEmailCodeEmptyMutation: Observable<Mutation> =
+    private func sendValidationEmailCodeMutation(email: String) -> Observable<Mutation> {
+        let sendValidationEmailCodeMutation: Observable<Mutation> =
         self.onboardingRepositoryService.requestAuthEmailCode(email: email)
-            .map { .setLoading(true) }
+            .map { .setIsSuccessRequestValidationCode($0) }
             .catchAndReturn(.setError(.defaultError))
         
         let sequence: [Observable<Mutation>] = [
             .just(.setLoading(true)),
-            sendValidationEmailCodeEmptyMutation,
+            sendValidationEmailCodeMutation,
             .just(.setLoading(false))
         ]
         
@@ -209,10 +198,6 @@ extension SignUpInteractor {
             .catchAndReturn(.setError(.defaultError))
         
         return emailReigisterValidation
-    }
-    
-    private func allpasswordsValidation(password: String, repassword: String) -> Observable<Mutation> {
-        return .empty()
     }
     
     private func passwordFormatValidationMutation(password: String) -> Observable<Mutation> {
@@ -235,13 +220,14 @@ extension SignUpInteractor {
         switch mutation {
         case let .setError(error):
             newState.revision = state.revision + 1
+            newState.isLoading = false
             newState.myError = ReactorValue(revision: newState.revision, value: error)
         case let .setLoading(loading):
             newState.isLoading = loading
         case let .setEmailFormatValidation(validation):
             newState.isValidEmailFormat = validation
-        case let .setIsEmailDuplication(validation):
-            newState.isShowAlert = validation
+        case let .setIsSuccessRequestValidationCode(_):
+            newState.isShowAlert = true
         case let .setEmailReigisterValidation(validation):
             newState.isSuccessEmailCertification = validation
         case let .setPasswordFormatValidation(validation):
