@@ -14,8 +14,7 @@ import RxSwift
 protocol OnboardingRepositoryService {
     func login(email: String, password: String) -> Observable<Bool>
     func checkEmailDuplication(email: String) -> Observable<Bool>
-   // func validateAuthEmail(email: String) -> Observable<String>
-    func requestAuthEmailCode(email: String) -> Observable<Void>
+    func requestAuthEmailCode(email: String) -> Observable<Bool>
     func isValidEmail(email: String) -> Observable<Bool>
     func isValidPassword(password: String) -> Observable<Bool>
     func isEqualEmailValidationCode(inputCode: String) -> Observable<Bool>
@@ -52,14 +51,14 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
             .map(\.state)
     }
     
-    func requestAuthEmailCode(email: String) -> Observable<Void> {
+    func requestAuthEmailCode(email: String) -> Observable<Bool> {
         onboardingRepository.verifyEmail(request: .init(email: email))
             .asObservable()
             .map(\.code)
             .withUnretained(self)
             .map { owner, code in
                 owner.updateValidationEmailCode(with: code)
-                return Void()
+                return true
             }
     }
     

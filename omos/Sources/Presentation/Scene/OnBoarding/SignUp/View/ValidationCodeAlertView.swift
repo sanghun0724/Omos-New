@@ -25,6 +25,11 @@ class ValidationCodeAlertView: BaseView {
     
     // MARK: - UI Components
     
+    private lazy var backContainerView = UIView().builder
+        .backgroundColor(.clear)
+        .isHidden(true)
+        .build()
+    
     private lazy var guideLabel = UILabel().builder
         .text("인증코드를 해당 이메일로 전송했습니다")
         .font(.systemFont(ofSize: 14, weight: .regular))
@@ -34,6 +39,8 @@ class ValidationCodeAlertView: BaseView {
     lazy var codeInputField = UITextField().builder
         .backgroundColor(Asset.Colors.mainGray4.color)
         .textAlignment(.center)
+        .set(\.layer.borderWidth, to: 1)
+        .set(\.layer.cornerRadius, to: 4)
         .build()
     
     private lazy var buttonStackView = UIStackView(arrangedSubviews: [varifyButton, cancelButton]).builder
@@ -61,7 +68,6 @@ class ValidationCodeAlertView: BaseView {
     // MARK: - Private
     
     private func setSuccessState() {
-        isHidden = true
         guideLabel.text = "인증코드를 해당 이메일로 전송했습니다"
         guideLabel.textColor = .black
         codeInputField.layer.borderColor = UIColor.clear.cgColor
@@ -76,7 +82,8 @@ class ValidationCodeAlertView: BaseView {
     
     @objc
     private func cancelButtonDidTap() {
-        isHidden = true 
+        isHidden = true
+        superview?.isHidden = true
     }
     
     // MARK: - initialize
