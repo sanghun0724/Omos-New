@@ -18,9 +18,9 @@ class CustomTextFieldView: BaseView {
     
     // MARK: - Propoerties
     
-    var isValidFormatted: Bool = true {
+    var isValidState: Bool = true {
         didSet {
-            isValidFormatted ? self.setNomalState() : self.setWarningState()
+            isValidState ? self.setNomalState() : self.setWarningState()
         }
     }
     

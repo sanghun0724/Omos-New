@@ -205,7 +205,7 @@ extension LoggedInViewController {
         listener.state
             .map(\.isValidEmailFormat)
             .asDriver(onErrorDriveWith: .never())
-            .drive(self.emailTextFieldView.rx.isValidFormatted)
+            .drive(self.emailTextFieldView.rx.isValidState)
             .disposed(by: disposeBag)
     }
     
@@ -213,7 +213,7 @@ extension LoggedInViewController {
         listener.state
             .map(\.isValidPasswordFormat)
             .asDriver(onErrorDriveWith: .empty())
-            .drive(self.passwordTextFieldView.rx.isValidFormatted)
+            .drive(self.passwordTextFieldView.rx.isValidState)
             .disposed(by: disposeBag)
     }
 }

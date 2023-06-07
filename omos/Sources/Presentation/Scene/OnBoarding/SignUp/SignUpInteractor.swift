@@ -95,6 +95,8 @@ extension SignUpInteractor {
             return emailValidationMutation(email: email)
         case let .validationAlertButtonDidTap(inputCode):
             return emailReigisterValidation(inputCode: inputCode)
+        case let .passwordsDidChange(password, repassword):
+            return passwordValidationMutation(password: password, repassword: repassword)
         case .confirmButtonDidTap:
             return .just(.attachNicknameRIB)
         }
@@ -205,6 +207,48 @@ extension SignUpInteractor {
         
         return passwordValidationMutation
     }
+    
+    // MARK: Password
+    
+    private func passwordValidationMutation(password: String, repassword: String) -> Observable<Mutation> {
+        return Observable<Mutation>.create { [weak self] observer in
+            let _ = self?.passwordFormatValidationMutation(password: password)
+                .flatMap {
+                    observer.onNext($0)
+                    switch $0 {
+                    case let .setPasswordFormatValidation(validation):
+                        if validation {
+                            return Observable<Void>.just(Void())
+                        } else {
+                            observer.onCompleted()
+                            return Observable<Void>.never()
+                        }
+                    default: return Observable<Void>.never()
+                    }
+                }
+                .flatMap {
+                    self?.passwordEqualMutation(password: password, repassword: repassword) ?? .empty()
+                }
+                .flatMap {
+                    observer.onNext($0)
+                    return Observable<Void>.empty()
+                }
+                .subscribe()
+
+                return Disposables.create()
+        }
+    }
+    
+    private func passwordEqualMutation(password: String, repassword: String) -> Observable<Mutation> {
+        let passwordEqualMutation: Observable<Mutation> =
+        self.onboardingRepositoryService.isEqualInputPasswords(password: password, repassword: repassword)
+            .map { .setPasswordReconfirm($0) }
+            .catchAndReturn(.setError(.defaultError))
+        
+        return passwordEqualMutation
+    }
+    
+    
     
 }
 

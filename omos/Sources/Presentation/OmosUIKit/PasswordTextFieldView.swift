@@ -15,6 +15,8 @@ class PasswordTextFieldView: CustomTextFieldView {
       static let textFieldHeight: CGFloat = 48
     }
     
+    // MARK: - Properties
+    
     var maskingButton = UIButton(type: .custom)
     
     

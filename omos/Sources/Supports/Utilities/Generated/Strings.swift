@@ -30,6 +30,8 @@ internal enum Strings {
     /// 
     internal static let passwordwarning = Strings.tr("Localizable", "onboarding.passwordwarning", fallback: "")
     /// 
+    internal static let repasswordInvalidation = Strings.tr("Localizable", "onboarding.repasswordInvalidation", fallback: "")
+    /// 
     internal static let sendCertificationEmail = Strings.tr("Localizable", "onboarding.sendCertificationEmail", fallback: "")
     /// 
     internal static let signUp = Strings.tr("Localizable", "onboarding.signUp", fallback: "")
