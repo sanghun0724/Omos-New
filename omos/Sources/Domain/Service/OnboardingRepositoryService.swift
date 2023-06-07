@@ -18,6 +18,7 @@ protocol OnboardingRepositoryService {
     func isValidEmail(email: String) -> Observable<Bool>
     func isValidPassword(password: String) -> Observable<Bool>
     func isEqualEmailValidationCode(inputCode: String) -> Observable<Bool>
+    func isEqualInputPasswords(password: String, repassword: String) -> Observable<Bool>
 }
 
 class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {

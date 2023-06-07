@@ -16,7 +16,8 @@ import RxSwift
 enum SignUpPresentableAction {
     case emailValidationRequestButtonDidTap(email: String)
     case validationAlertButtonDidTap(inputCode: String)
-    case confirmButtonDidTap(emailStatus: Bool, password: String, repassword: String)
+    case passwordsDidChange(password: String, repassword: String)
+    case confirmButtonDidTap
 }
 
 // MARK: - SignUpPresentableListener
@@ -92,7 +93,7 @@ final class SignUpViewController:
         .builder
         .with {
             $0.fetchLeftTopLabelText(text: Strings.Onboarding.password)
-            $0.fetchRightTopLabelText(text: Strings.Onboarding.passwordwarning)
+            $0.fetchRightTopLabelText(text: Strings.Onboarding.repasswordInvalidation)
         }
         .build()
     
@@ -192,10 +193,7 @@ extension SignUpViewController {
         confirmButton
             .rx
             .tapWithPreventDuplication()
-            .withLatestFrom(
-                Observable.combineLatest(self.passwordTextFieldView.textField.rx.text.orEmpty, self.repasswordTextFieldView.textField.rx.text.orEmpty)
-            ) // TODO: check
-            .map { .confirmButtonDidTap(emailStatus: false, password: $0.0, repassword: $0.1) }
+            .map { .confirmButtonDidTap }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
@@ -217,7 +215,7 @@ extension SignUpViewController {
         listener.state
             .map(\.isValidEmailFormat)
             .asDriver(onErrorDriveWith: .never())
-            .drive(self.emailTextFieldView.rx.isValidFormatted)
+            .drive(self.emailTextFieldView.rx.isValidState)
             .disposed(by: disposeBag)
     }
     
@@ -225,8 +223,15 @@ extension SignUpViewController {
         listener.state
             .map(\.isValidPasswordFormat)
             .asDriver(onErrorDriveWith: .empty())
-            .drive(self.passwordTextFieldView.rx.isValidFormatted)
+            .drive(self.passwordTextFieldView.rx.isValidState)
             .disposed(by: disposeBag)
+        
+        listener.state
+            .map(\.isValidRepasswordConfirm)
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.repasswordTextFieldView.rx.isValidState)
+            .disposed(by: disposeBag)
+        
     }
     
     private func bindisSuccessSendValidationCodeState(from listener: SignUpPresentableListener) {
@@ -263,7 +268,7 @@ extension SignUpViewController {
             .asDriver(onErrorDriveWith: .empty())
             .drive(with: self) { owner, title in
                 owner.emailValidationRequestButton.setTitle(title, for: .normal)
-                owner.emailValidationRequestButton.isUserInteractionEnabled = false 
+                owner.emailValidationRequestButton.isUserInteractionEnabled = false
             }
             .disposed(by: disposeBag)
     }

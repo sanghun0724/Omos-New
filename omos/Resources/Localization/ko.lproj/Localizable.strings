@@ -16,4 +16,5 @@
 "onboarding.kakao"="  Kakao로 로그인";
 "onboarding.signUp"="회원가입";
 "onboarding.sendCertificationEmail"="인증메일 보내기";
+"onboarding.repasswordInvalidation"="재확인 비밀번호가 틀립니다.";
 
