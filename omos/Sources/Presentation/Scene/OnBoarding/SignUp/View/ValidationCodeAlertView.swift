@@ -68,6 +68,7 @@ class ValidationCodeAlertView: BaseView {
     // MARK: - Private
     
     private func setSuccessState() {
+        isHidden = true
         guideLabel.text = "인증코드를 해당 이메일로 전송했습니다"
         guideLabel.textColor = .black
         codeInputField.layer.borderColor = UIColor.clear.cgColor

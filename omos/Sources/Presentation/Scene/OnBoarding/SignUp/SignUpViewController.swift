@@ -253,6 +253,19 @@ extension SignUpViewController {
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.validationCodeAlertView.rx.isSuccess)
             .disposed(by: disposeBag)
+        
+        listener.state
+            .map(\.isSuccessEmailCertification)
+            .distinctUntilChanged()
+            .skip(1)
+            .filter { $0 }
+            .map ({ _ in "인증 완료 ✅" })
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(with: self) { owner, title in
+                owner.emailValidationRequestButton.setTitle(title, for: .normal)
+                owner.emailValidationRequestButton.isUserInteractionEnabled = false 
+            }
+            .disposed(by: disposeBag)
     }
 }
 
@@ -267,8 +280,8 @@ extension SignUpViewController {
         contentView.addSubview(passwordTextFieldView)
         contentView.addSubview(repasswordTextFieldView)
         contentView.addSubview(backContainerView)
-        backContainerView.addSubview(validationCodeAlertView)
         contentView.addSubview(confirmButton)
+        backContainerView.addSubview(validationCodeAlertView)
         self.layout()
     }
     

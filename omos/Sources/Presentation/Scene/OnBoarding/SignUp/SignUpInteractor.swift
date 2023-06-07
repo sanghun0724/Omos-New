@@ -4,8 +4,6 @@
 //
 //  Created by sangheon on 2023/05/28.
 //
-// TODO: remove comment
-// -> email text 입력 -> 이메일 포맷 확인 -> 이메일 중복확인 -> 코드 보내고 -> 코드 확인 -> ...
 
 import Foundation
 
@@ -146,8 +144,7 @@ extension SignUpInteractor {
                 .subscribe()
 
                 return Disposables.create()
-        }.debug("validation")
-        
+        }
     }
     
     private func emailFormatValidationMutation(email: String) -> Observable<Mutation> {
@@ -226,7 +223,7 @@ extension SignUpInteractor {
             newState.isLoading = loading
         case let .setEmailFormatValidation(validation):
             newState.isValidEmailFormat = validation
-        case let .setIsSuccessRequestValidationCode(_):
+        case .setIsSuccessRequestValidationCode(_):
             newState.isShowAlert = true
         case let .setEmailReigisterValidation(validation):
             newState.isSuccessEmailCertification = validation
