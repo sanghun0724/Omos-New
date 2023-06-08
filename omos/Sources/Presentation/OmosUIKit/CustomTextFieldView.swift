@@ -20,6 +20,10 @@ class CustomTextFieldView: BaseView {
     
     var isValidState: Bool = true {
         didSet {
+            guard let text = textField.text, !text.isEmpty else {
+                setNomalState()
+                return
+            }
             isValidState ? self.setNomalState() : self.setWarningState()
         }
     }

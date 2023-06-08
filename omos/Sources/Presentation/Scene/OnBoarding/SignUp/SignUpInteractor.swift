@@ -260,8 +260,8 @@ extension SignUpInteractor {
         
         switch mutation {
         case let .setError(error):
-            newState.revision = state.revision + 1
             newState.isLoading = false
+            newState.revision = state.revision + 1
             newState.myError = ReactorValue(revision: newState.revision, value: error)
         case let .setLoading(loading):
             newState.isLoading = loading
@@ -274,6 +274,8 @@ extension SignUpInteractor {
         case let .setPasswordFormatValidation(validation):
             newState.isValidPasswordFormat = validation
         case let .setPasswordReconfirm(validation):
+//            newState.revision = state.revision + 1
+//            newState.isValidRepasswordConfirm = ReactorValue(revision: newState.revision, value: validation)
             newState.isValidRepasswordConfirm = validation
         default:
             log.debug("Do Nothing when \(mutation)")

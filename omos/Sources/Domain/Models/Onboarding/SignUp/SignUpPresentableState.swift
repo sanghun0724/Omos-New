@@ -16,7 +16,7 @@ struct SignUpPresentableState: HasLoadingState, HasErrorState {
     var isValidEmailFormat = true
     var isValidPasswordFormat = true
     var isValidCheckPassword = false
-    var isValidRepasswordConfirm = false
+    var isValidRepasswordConfirm = false 
     var isSuccessEmailCertification = false
     var isConfirmEnable = false
     var isShowAlert = false 
