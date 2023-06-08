@@ -82,7 +82,7 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
     }
     
     func isEqualInputPasswords(password: String, repassword: String) -> Observable<Bool> {
-        .just(password == repassword)
+        return .just(password == repassword)
     }
     
     // MARK: - Private methods

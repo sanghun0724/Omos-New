@@ -167,6 +167,7 @@ extension SignUpViewController {
         bindEmailValidationRequestButtonDidTapAction()
         bindValidationPopupButtonDidTap()
         bindConfirmButtonDidTap()
+        bindPasswordsDidChange()
     }
     
     private func bindEmailValidationRequestButtonDidTapAction() {
@@ -187,6 +188,14 @@ extension SignUpViewController {
             .map { .validationAlertButtonDidTap(inputCode: $0) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
+    }
+    
+    private func bindPasswordsDidChange() {
+        Observable.combineLatest(self.passwordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged(),
+                                 self.repasswordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged())
+        .map { .passwordsDidChange(password: $0.0, repassword: $0.1) }
+        .bind(to: self.actionRelay)
+        .disposed(by: disposeBag)
     }
     
     private func bindConfirmButtonDidTap() {
@@ -222,16 +231,21 @@ extension SignUpViewController {
     private func bindValidationPasswordState(from listener: SignUpPresentableListener) {
         listener.state
             .map(\.isValidPasswordFormat)
+            .skip(1)
+            .debug("isValidPasswordFormat")
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.passwordTextFieldView.rx.isValidState)
             .disposed(by: disposeBag)
         
         listener.state
             .map(\.isValidRepasswordConfirm)
+            .skip(1)
+            .debug("isValidRepasswordConfirm")
+           // .distinctUntilChanged()
+            //.compactMap(\.value)
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.repasswordTextFieldView.rx.isValidState)
             .disposed(by: disposeBag)
-        
     }
     
     private func bindisSuccessSendValidationCodeState(from listener: SignUpPresentableListener) {
