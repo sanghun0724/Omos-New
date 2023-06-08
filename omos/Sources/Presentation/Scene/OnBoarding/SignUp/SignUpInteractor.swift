@@ -248,8 +248,6 @@ extension SignUpInteractor {
         return passwordEqualMutation
     }
     
-    
-    
 }
 
 // MARK: - reduce
@@ -257,7 +255,7 @@ extension SignUpInteractor {
 extension SignUpInteractor {
     func reduce(state: SignUpPresentableState, mutation: Mutation) -> SignUpPresentableState {
         var newState = state
-        
+
         switch mutation {
         case let .setError(error):
             newState.isLoading = false
@@ -274,8 +272,6 @@ extension SignUpInteractor {
         case let .setPasswordFormatValidation(validation):
             newState.isValidPasswordFormat = validation
         case let .setPasswordReconfirm(validation):
-//            newState.revision = state.revision + 1
-//            newState.isValidRepasswordConfirm = ReactorValue(revision: newState.revision, value: validation)
             newState.isValidRepasswordConfirm = validation
         default:
             log.debug("Do Nothing when \(mutation)")
@@ -283,4 +279,5 @@ extension SignUpInteractor {
         
         return newState
     }
+    
 }
