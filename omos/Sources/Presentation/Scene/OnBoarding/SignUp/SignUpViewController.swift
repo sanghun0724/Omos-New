@@ -218,6 +218,7 @@ extension SignUpViewController {
         self.bindValidationPasswordState(from: listener)
         self.bindisSuccessSendValidationCodeState(from: listener)
         self.bindEmailRegisterValidation(from: listener)
+        self.bindIsEnableConfirmValidation(from: listener)
     }
     
     private func bindValidationEmailState(from listener: SignUpPresentableListener) {
@@ -232,7 +233,6 @@ extension SignUpViewController {
         listener.state
             .map(\.isValidPasswordFormat)
             .skip(1)
-            .debug("isValidPasswordFormat")
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.passwordTextFieldView.rx.isValidState)
             .disposed(by: disposeBag)
@@ -240,9 +240,6 @@ extension SignUpViewController {
         listener.state
             .map(\.isValidRepasswordConfirm)
             .skip(1)
-            .debug("isValidRepasswordConfirm")
-           // .distinctUntilChanged()
-            //.compactMap(\.value)
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.repasswordTextFieldView.rx.isValidState)
             .disposed(by: disposeBag)
@@ -283,8 +280,19 @@ extension SignUpViewController {
             .drive(with: self) { owner, title in
                 owner.emailValidationRequestButton.setTitle(title, for: .normal)
                 owner.emailValidationRequestButton.isUserInteractionEnabled = false
+                owner.emailTextFieldView.isUserInteractionEnabled = false
             }
             .disposed(by: disposeBag)
+    }
+    
+    private func bindIsEnableConfirmValidation(from listener: SignUpPresentableListener) {
+        listener.state
+            .map { $0.isSuccessEmailCertification && $0.isValidPasswordFormat && $0.isValidRepasswordConfirm }
+            .distinctUntilChanged()
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.confirmButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
     }
 }
 
