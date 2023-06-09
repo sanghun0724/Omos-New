@@ -104,7 +104,7 @@ final class SignUpViewController:
     
     private lazy var validationCodeAlertView = ValidationCodeAlertView()
     
-    private lazy var confirmButton = ConfirmButton(Strings.Onboarding.loggedIn).builder
+    private lazy var confirmButton = ConfirmButton(Strings.Common.next, disableText: Strings.Common.next).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .build()
@@ -248,6 +248,7 @@ extension SignUpViewController {
     private func bindisSuccessSendValidationCodeState(from listener: SignUpPresentableListener) {
         listener.state
             .map(\.isShowAlert)
+            .distinctUntilChanged()
             .map { !$0 }
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.backContainerView.rx.isHidden)
@@ -255,6 +256,7 @@ extension SignUpViewController {
         
         listener.state
             .map(\.isShowAlert)
+            .distinctUntilChanged()
             .map { !$0 }
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.validationCodeAlertView.rx.isHidden)
@@ -262,6 +264,14 @@ extension SignUpViewController {
     }
     
     private func bindEmailRegisterValidation(from listener: SignUpPresentableListener) {
+        listener.state
+            .map(\.isSuccessEmailCertification)
+            .distinctUntilChanged()
+            .skip(1)
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.backContainerView.rx.isHidden)
+            .disposed(by: disposeBag)
+        
         listener.state
             .map(\.isSuccessEmailCertification)
             .distinctUntilChanged()
