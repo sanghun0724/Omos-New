@@ -10,6 +10,14 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Strings {
+  internal enum Common {
+    /// Localizable.strings
+    ///   RIBsReactorKit
+    /// 
+    ///   Created by elon on 2021/03/01.
+    ///   Copyright © 2021 Elon. All rights reserved.
+    internal static let next = Strings.tr("Localizable", "common.next", fallback: "다음")
+  }
   internal enum Onboarding {
     /// 
     internal static let email = Strings.tr("Localizable", "onboarding.email", fallback: "")
@@ -19,11 +27,7 @@ internal enum Strings {
     internal static let kakao = Strings.tr("Localizable", "onboarding.kakao", fallback: "")
     /// 
     internal static let loggedIn = Strings.tr("Localizable", "onboarding.loggedIn", fallback: "")
-    /// Localizable.strings
-    ///   RIBsReactorKit
     /// 
-    ///   Created by elon on 2021/03/01.
-    ///   Copyright © 2021 Elon. All rights reserved.
     internal static let loginButton = Strings.tr("Localizable", "onboarding.loginButton", fallback: "")
     /// 
     internal static let password = Strings.tr("Localizable", "onboarding.password", fallback: "")

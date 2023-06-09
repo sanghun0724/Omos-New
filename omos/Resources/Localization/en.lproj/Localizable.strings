@@ -6,6 +6,10 @@
   Copyright © 2021 Elon. All rights reserved.
 */
 
+// MARK: - Common
+
+"common.next"="다음";
+
 // MARK: - Onboarding
 
 "onboarding.loginButton"="";

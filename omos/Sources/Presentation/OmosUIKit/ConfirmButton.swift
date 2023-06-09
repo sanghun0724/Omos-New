@@ -24,7 +24,7 @@ class ConfirmButton: UIButton {
     init(_ enableText: String, disableText: String? = nil) {
         self.enableText = enableText
         self.disableText = disableText ?? enableText
-        
+
         super.init(frame: .zero)
         
         setup()
