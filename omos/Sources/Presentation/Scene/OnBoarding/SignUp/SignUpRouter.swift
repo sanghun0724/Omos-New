@@ -30,4 +30,12 @@ final class SignUpRouter:
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
+    
+    func attachNicknameRIB() {
+        log.warning("attachNicknameRIB")
+    }
+    
+    func detachNicknameRIB() {
+        log.warning("detachNicknameRIB")
+    }
 }

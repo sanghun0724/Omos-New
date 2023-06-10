@@ -14,7 +14,8 @@ import RxSwift
 // MARK: - SignUpRouting
 
 protocol SignUpRouting: ViewableRouting {
-    
+    func attachNicknameRIB()
+    func detachNicknameRIB()
 }
 
 // MARK: - SignUpPresentable
@@ -25,7 +26,9 @@ protocol SignUpPresentable: Presentable {
 
 // MARK: - SignUpListener
 
-protocol SignUpListener: AnyObject {}
+protocol SignUpListener: AnyObject {
+    func detachSignUpRIB()
+}
 
 // MARK: - SignUpInteractor
 
@@ -51,6 +54,7 @@ final class SignUpInteractor:
         case setPasswordReconfirm(Bool)
         case setEmailReigisterValidation(Bool)
         case attachNicknameRIB
+        case detach
     }
     
     // MARK: - Properties
@@ -99,6 +103,8 @@ extension SignUpInteractor {
             return passwordValidationMutation(password: password, repassword: repassword)
         case .confirmButtonDidTap:
             return .just(.attachNicknameRIB)
+        case .detach:
+            return .just(.detach)
         }
     }
     
@@ -246,6 +252,37 @@ extension SignUpInteractor {
             .catchAndReturn(.setError(.defaultError))
         
         return passwordEqualMutation
+    }
+    
+}
+
+// MARK: - trasnform mutation
+
+extension SignUpInteractor {
+    
+    func transform(mutation: Observable<Mutation>) -> Observable<Mutation> {
+        return mutation
+            .withUnretained(self)
+            .flatMap { owner, mutation -> Observable<Mutation> in
+                switch mutation {
+                case .attachNicknameRIB:
+                    return owner.attachNicknameRIBTransform()
+                case .detach:
+                    return owner.detachTransform()
+                default:
+                    return .just(mutation)
+                }
+            }
+    }
+    
+    private func attachNicknameRIBTransform() -> Observable<Mutation> {
+        self.router?.attachNicknameRIB()
+        return .empty()
+    }
+    
+    private func detachTransform() -> Observable<Mutation> {
+        self.listener?.detachSignUpRIB()
+        return .empty()
     }
     
 }

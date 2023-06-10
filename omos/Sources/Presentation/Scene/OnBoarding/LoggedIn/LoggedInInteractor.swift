@@ -253,3 +253,11 @@ extension LoggedInInteractor {
         return newState
     }
 }
+
+// MARK: - SignUpListener
+
+extension LoggedInInteractor {
+    func detachSignUpRIB() {
+        self.router?.detachSignUpRIB()
+    }
+}
