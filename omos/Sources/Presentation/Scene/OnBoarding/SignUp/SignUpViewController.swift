@@ -37,6 +37,7 @@ final class SignUpViewController:
     BaseViewController,
     SignUpPresentable,
     SignUpViewControllable,
+    CloseButtonBindable,
     ErrorStreamBindable,
     LoadingStreamBindable
 {
@@ -136,10 +137,6 @@ extension SignUpViewController {
     override func navigationBarLeftButtonImage() -> UIImage? {
         Asset.Images.Common.arrowLeft.image
     }
-    
-    override func navigationLeftButtonDidTapped() {
-        popViewController(animated: true)
-    }
 }
 
 // MARK: - Bind listener
@@ -170,6 +167,7 @@ extension SignUpViewController {
         bindConfirmButtonDidTap()
         bindPasswordsDidChange()
         bindDetachAction()
+        bindCloseButtonTapAction()
     }
     
     private func bindEmailValidationRequestButtonDidTapAction() {
