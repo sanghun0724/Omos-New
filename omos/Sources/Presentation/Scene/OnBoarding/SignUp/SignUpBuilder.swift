@@ -27,6 +27,12 @@ final class SignUpComponent: NeedleFoundation.Component<SignUpDependency> {
         SignUpPresentableState()
     }
     
+    fileprivate var nicknameBuilder: NicknameBuildable {
+        NicknameBuilder {
+            NicknameComponent(parent: self)
+        }
+    }
+    
 }
 
 // MARK: - SignUpBuildable
@@ -50,6 +56,10 @@ final class SignUpBuilder:
         let interactor = SignUpInteractor(presenter: viewController, initialState: component.initialState, onboardingRepositoryService: component.onboardingRepositoryService)
         
         interactor.listener = payload.listener
-        return SignUpRouter(interactor: interactor, viewController: viewController)
+        return SignUpRouter(
+            nicknameBuilder: component.nicknameBuilder,
+            interactor: interactor,
+            viewController: viewController
+        )
     }
 }

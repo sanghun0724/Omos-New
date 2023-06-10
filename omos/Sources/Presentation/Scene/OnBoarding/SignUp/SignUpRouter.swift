@@ -9,7 +9,7 @@ import RIBs
 
 // MARK: - SignUpInteractable
 
-protocol SignUpInteractable: Interactable {
+protocol SignUpInteractable: Interactable, NicknameListener {
     var router: SignUpRouting? { get set }
     var listener: SignUpListener? { get set }
 }
@@ -22,17 +22,30 @@ final class SignUpRouter:
   ViewableRouter<SignUpInteractable, SignUpViewControllable>,
   SignUpRouting
 {
+    private let nicknameBuilder: NicknameBuildable
+    private var nicknameRouter: NicknameRouting?
 
-    override init(
+    init(
+      nicknameBuilder: NicknameBuildable,
       interactor: SignUpInteractable,
       viewController: SignUpViewControllable
     ) {
+        self.nicknameBuilder = nicknameBuilder
+        
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
     
     func attachNicknameRIB() {
-        log.warning("attachNicknameRIB")
+        guard self.nicknameRouter == nil else { return }
+        let router = self.nicknameBuilder.build(
+            with: NicknameBuildDependency(
+                listener: interactor
+            )
+        )
+        self.nicknameRouter = router
+        attachChild(router)
+        viewController.push(viewController: router.viewControllable)
     }
     
     func detachNicknameRIB() {

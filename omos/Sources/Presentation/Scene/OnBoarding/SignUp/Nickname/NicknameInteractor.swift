@@ -73,7 +73,7 @@ final class NicknameInteractor:
 
 extension NicknameInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
-        
+        return .empty()
     }
 }
 
