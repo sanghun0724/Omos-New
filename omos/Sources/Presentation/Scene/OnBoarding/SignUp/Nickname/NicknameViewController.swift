@@ -209,6 +209,7 @@ extension NicknameViewController {
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
+    
 }
 
 // MARK: - Binding State

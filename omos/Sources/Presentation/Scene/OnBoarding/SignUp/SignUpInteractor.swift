@@ -108,7 +108,7 @@ extension SignUpInteractor {
         }
     }
     
-    // MARK: - Validation
+    // MARK: - validation
     
     private func emailValidationMutation(email: String) -> Observable<Mutation> {
         return Observable<Mutation>.create { [weak self] observer in
