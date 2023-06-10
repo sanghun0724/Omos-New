@@ -13,20 +13,23 @@ import RxSwift
 
 protocol OnboardingRepositoryService {
     func login(email: String, password: String) -> Observable<Bool>
+    func signUp() -> Observable<Bool>
     func checkEmailDuplication(email: String) -> Observable<Bool>
     func requestAuthEmailCode(email: String) -> Observable<Bool>
     func isValidEmail(email: String) -> Observable<Bool>
     func isValidPassword(password: String) -> Observable<Bool>
+    func isValidNickname(nickname: String) -> Observable<Bool>
     func isEqualEmailValidationCode(inputCode: String) -> Observable<Bool>
     func isEqualInputPasswords(password: String, repassword: String) -> Observable<Bool>
 }
 
 class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
-    
     private let onboardingRepository: OnboardingRepository
     
     private let signUpItemInfoRelay = BehaviorRelay(value: SignUpItemInfo())
     private var signUpItemInfoRelayBuilder: PropertyBuilder<SignUpItemInfo> { self.signUpItemInfoRelay.value.builder }
+    
+    private let tokenUtil = TokenUtils()
     
     init(
         onboardingRepository: OnboardingRepository
@@ -39,11 +42,22 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
             .asObservable()
             .withUnretained(self)
             .map { owner, response in
-                let tk = TokenUtils()
-                tk.create("accessToken", account: "accessToken", value: response.accessToken)
-                tk.create("refreshToken", account: "refreshToken", value: response.refreshToken)
+                owner.tokenUtil.create("accessToken", account: "accessToken", value: response.accessToken)
+                owner.tokenUtil.create("refreshToken", account: "refreshToken", value: response.refreshToken)
                 return true
             }
+    }
+    
+    func signUp() -> Observable<Bool> {
+        onboardingRepository.localSignUp(
+            request: .init(
+                email: signUpItemInfoRelay.value.email,
+                nickname: signUpItemInfoRelay.value.nickname,
+                password: signUpItemInfoRelay.value.password
+            )
+        )
+        .asObservable()
+        .map(\.state)
     }
     
     func checkEmailDuplication(email: String) -> Observable<Bool> {
@@ -58,6 +72,7 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
             .map(\.code)
             .withUnretained(self)
             .map { owner, code in
+                owner.setSignUpEmail(by: email)
                 owner.updateValidationEmailCode(with: code)
                 return true
             }
@@ -77,11 +92,19 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
         return .just(passwordTest.evaluate(with: password))
     }
     
+    func isValidNickname(nickname: String) -> Observable<Bool> {
+        setSignUpNickname(by: nickname)
+        let nicknameRegEx = "[가-힣A-Za-z0-9]{2,12}"
+        let nicknameTest = NSPredicate(format: "SELF MATCHES &@", nicknameRegEx)
+        return .just(nicknameTest.evaluate(with: nickname))
+    }
+    
     func isEqualEmailValidationCode(inputCode: String) -> Observable<Bool> {
         .just(signUpItemInfoRelay.value.validationEmailCode == inputCode)
     }
     
     func isEqualInputPasswords(password: String, repassword: String) -> Observable<Bool> {
+        setSignUpPassword(by: password)
         return .just(password == repassword)
     }
     
@@ -91,13 +114,16 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
         self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.validationEmailCode(code))
     }
     
-    private func updatePasswordText(with text: String) {
-        self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.currentPasswordText(text))
+    private func setSignUpEmail(by email: String) {
+        self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.email(email))
     }
     
-    private func updateRepasswordText(with text: String) {
-        self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.currentRepasswordText(text))
+    private func setSignUpPassword(by password: String) {
+        self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.password(password))
     }
     
-        
+    private func setSignUpNickname(by nickname: String) {
+        self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.nickname(nickname))
+    }
+    
 }

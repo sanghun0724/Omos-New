@@ -11,10 +11,8 @@ import Foundation
 
 struct SignUpItemInfo: PropertyBuilderCompatible {
     var validationEmailCode: String = String()
-    var currentPasswordText: String = String()
-    var currentRepasswordText: String = String()
     
-    func isEqualPassword() -> Bool {
-        self.currentPasswordText == self.currentRepasswordText
-    }
+    var email: String = String()
+    var password: String = String()
+    var nickname: String = String() 
 }
