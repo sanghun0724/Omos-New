@@ -115,6 +115,12 @@
 		B5AD39CEEB333500C247DF4E /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5B7D641C61A6FDFFB94DB1 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5DA3B2CE3CD0CCE6CB77AC3 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C95D1204A60CC92EC66C9E /* LoggedInRouter.swift */; };
 		B65FCB48F3C8B236C783B3CF /* SkeletonViewsAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F89C46FCCEC76D8D98FF09A /* SkeletonViewsAnimatable.swift */; };
+		B671B5242A34452D00BA4F24 /* NicknameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B5202A34452D00BA4F24 /* NicknameRouter.swift */; };
+		B671B5252A34452D00BA4F24 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B5212A34452D00BA4F24 /* NicknameViewController.swift */; };
+		B671B5262A34452D00BA4F24 /* NicknameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B5222A34452D00BA4F24 /* NicknameBuilder.swift */; };
+		B671B5272A34452D00BA4F24 /* NicknameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B5232A34452D00BA4F24 /* NicknameInteractor.swift */; };
+		B671B52A2A34457E00BA4F24 /* NicknamePresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B5292A34457E00BA4F24 /* NicknamePresentableState.swift */; };
+		B671B52D2A344D0400BA4F24 /* AgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B52C2A344D0400BA4F24 /* AgreementView.swift */; };
 		B69634542A1A339F00F5FE7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B69634512A1A339F00F5FE7E /* Localizable.strings */; };
 		B69634562A1A45C000F5FE7E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634552A1A45C000F5FE7E /* Strings.swift */; };
 		B696348A2A1CE19000F5FE7E /* ComponentizedBuilderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634892A1CE19000F5FE7E /* ComponentizedBuilderExtensions.swift */; };
@@ -328,6 +334,12 @@
 		B1A9012FA7512D4AF06F0AAD /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
 		B3E1190E9BDD67DE850D9787 /* TokenUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtil.swift; sourceTree = "<group>"; };
 		B64CBF38A341291E36F0AAFB /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B671B5202A34452D00BA4F24 /* NicknameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRouter.swift; sourceTree = "<group>"; };
+		B671B5212A34452D00BA4F24 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
+		B671B5222A34452D00BA4F24 /* NicknameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameBuilder.swift; sourceTree = "<group>"; };
+		B671B5232A34452D00BA4F24 /* NicknameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInteractor.swift; sourceTree = "<group>"; };
+		B671B5292A34457E00BA4F24 /* NicknamePresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknamePresentableState.swift; sourceTree = "<group>"; };
+		B671B52C2A344D0400BA4F24 /* AgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementView.swift; sourceTree = "<group>"; };
 		B69634522A1A339F00F5FE7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B69634532A1A339F00F5FE7E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B69634552A1A45C000F5FE7E /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -813,6 +825,34 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B671B51E2A3444E500BA4F24 /* Nickname */ = {
+			isa = PBXGroup;
+			children = (
+				B671B52B2A344CFB00BA4F24 /* View */,
+				B671B5202A34452D00BA4F24 /* NicknameRouter.swift */,
+				B671B5212A34452D00BA4F24 /* NicknameViewController.swift */,
+				B671B5222A34452D00BA4F24 /* NicknameBuilder.swift */,
+				B671B5232A34452D00BA4F24 /* NicknameInteractor.swift */,
+			);
+			path = Nickname;
+			sourceTree = "<group>";
+		};
+		B671B5282A34455B00BA4F24 /* Nickname */ = {
+			isa = PBXGroup;
+			children = (
+				B671B5292A34457E00BA4F24 /* NicknamePresentableState.swift */,
+			);
+			path = Nickname;
+			sourceTree = "<group>";
+		};
+		B671B52B2A344CFB00BA4F24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B671B52C2A344D0400BA4F24 /* AgreementView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B69634502A1A339F00F5FE7E /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -855,6 +895,7 @@
 		B6AFDF992A2B2A8600191BA3 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				B671B5282A34455B00BA4F24 /* Nickname */,
 				B69634DA2A23482300F5FE7E /* SignUpPresentableState.swift */,
 				B6AFDF9E2A2B412200191BA3 /* SignUpItemInfo.swift */,
 			);
@@ -970,6 +1011,7 @@
 		E25C78F975357DCDDC2CCA7D /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				B671B51E2A3444E500BA4F24 /* Nickname */,
 				B6AFDFA02A2B668800191BA3 /* View */,
 				B69634D22A23479B00F5FE7E /* SignUpRouter.swift */,
 				B69634D32A23479B00F5FE7E /* SignUpViewController.swift */,
@@ -1274,6 +1316,7 @@
 				DA7698B8BE3E3229860CBA5D /* AwsS3Target.swift in Sources */,
 				12677ECBCE8F80BBFC692157 /* RecordAPI.swift in Sources */,
 				39BE06C4E859E768FE1B124F /* RecordTarget.swift in Sources */,
+				B671B5272A34452D00BA4F24 /* NicknameInteractor.swift in Sources */,
 				B1482614197FA8D6193379B7 /* SearchAPI.swift in Sources */,
 				FAD723F46F360F348832A89D /* SearchTarget.swift in Sources */,
 				F25D93601DAE988676346422 /* TodayAPI.swift in Sources */,
@@ -1288,6 +1331,7 @@
 				646C659D3888FC087677A9D4 /* UserDetail.swift in Sources */,
 				5086E9CD87C1C9C8205D4245 /* Lists.swift in Sources */,
 				CC2DC4257ACEEA28AC24BCC0 /* MyProfile.swift in Sources */,
+				B671B5262A34452D00BA4F24 /* NicknameBuilder.swift in Sources */,
 				5DF4383335C8BD64C82FD772 /* Today.swift in Sources */,
 				7C96AACFD251B44E929435CB /* Category.swift in Sources */,
 				6A56A893B3D3F20F71A99A84 /* MyDJ.swift in Sources */,
@@ -1331,6 +1375,7 @@
 				AC253772453F2B14D035906A /* PasswordTextFieldView.swift in Sources */,
 				393F8AB03B531E71B339BBFD /* BaseViewable.swift in Sources */,
 				88DB6F738E27B8395749F75F /* CloseButtonBindable.swift in Sources */,
+				B671B5252A34452D00BA4F24 /* NicknameViewController.swift in Sources */,
 				FA09E4413DD40DA369515DD0 /* CloseButtonBuindable.swift in Sources */,
 				7C6ACB8F1778216A004C0792 /* DisposablesManageable.swift in Sources */,
 				01B915308FB52170E848C346 /* HasCloseButtonHeaderView.swift in Sources */,
@@ -1347,10 +1392,13 @@
 				9A2B732162497ED59677CF7F /* HasViewModel.swift in Sources */,
 				387EE97732E83DA14D0B6293 /* HasLoadingState.swift in Sources */,
 				8793A084FCC837EC0F5A99BB /* LoadingStreamBindable.swift in Sources */,
+				B671B52A2A34457E00BA4F24 /* NicknamePresentableState.swift in Sources */,
 				1C074E85123054C3DD6C2311 /* MapAnnotationAddable.swift in Sources */,
 				B69634C52A21FC6400F5FE7E /* ErrorStreamBindable.swift in Sources */,
+				B671B52D2A344D0400BA4F24 /* AgreementView.swift in Sources */,
 				0429ED3964E4D812A02C8874 /* MapRegionSettable.swift in Sources */,
 				2931DB0DD41694749801F717 /* PullToRefreshable.swift in Sources */,
+				B671B5242A34452D00BA4F24 /* NicknameRouter.swift in Sources */,
 				E11FE826B2BCE0B6052E6E76 /* HasRefreshState.swift in Sources */,
 				B69634C32A21FC5B00F5FE7E /* HasErrorState.swift in Sources */,
 				1CD9818EE6605013607BA855 /* RefreshStreamBindable.swift in Sources */,
