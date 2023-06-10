@@ -30,4 +30,12 @@ final class NicknameRouter:
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
+    
+    func attachTodayRIB() {
+        
+    }
+    
+    func detachTodayRIB() {
+        
+    }
 }

@@ -20,6 +20,10 @@ private func parent3(_ component: NeedleFoundation.Scope) -> NeedleFoundation.Sc
     return component.parent.parent.parent
 }
 
+private func parent4(_ component: NeedleFoundation.Scope) -> NeedleFoundation.Scope {
+    return component.parent.parent.parent.parent
+}
+
 // MARK: - Providers
 
 #if !NEEDLE_DYNAMIC
@@ -49,15 +53,17 @@ private func factoryd6273f0efcff70a3a118e3b0c44298fc1c149afb(_ component: Needle
     return TodayDependencye8b9e53f6319ce1bda30Provider()
 }
 private class NicknameDependency63ceb1589b5d77bf2faaProvider: NicknameDependency {
-
-
-    init() {
-
+    var onboardingRepositoryService: OnboardingRepositoryService {
+        return appComponent.onboardingRepositoryService
+    }
+    private let appComponent: AppComponent
+    init(appComponent: AppComponent) {
+        self.appComponent = appComponent
     }
 }
 /// ^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent->NicknameComponent
-private func factoryae4818ff2be45df533d7e3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
-    return NicknameDependency63ceb1589b5d77bf2faaProvider()
+private func factoryae4818ff2be45df533d77586110118823dea9ff0(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return NicknameDependency63ceb1589b5d77bf2faaProvider(appComponent: parent4(component) as! AppComponent)
 }
 private class SignUpDependency0bf34c242a7f1d630afcProvider: SignUpDependency {
     var onboardingRepositoryService: OnboardingRepositoryService {
@@ -106,7 +112,7 @@ extension TodayComponent: Registration {
 }
 extension NicknameComponent: Registration {
     public func registerItems() {
-
+        keyPathToName[\NicknameDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
     }
 }
 extension SignUpComponent: Registration {
@@ -140,7 +146,7 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
     registerProviderFactory("^->AppComponent", factoryEmptyDependencyProvider)
     registerProviderFactory("^->AppComponent->AppRootComponent", factorya90cb427e52e03443c85f47b58f8f304c97af4d5)
     registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent->TodayComponent", factoryd6273f0efcff70a3a118e3b0c44298fc1c149afb)
-    registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent->NicknameComponent", factoryae4818ff2be45df533d7e3b0c44298fc1c149afb)
+    registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent->NicknameComponent", factoryae4818ff2be45df533d77586110118823dea9ff0)
     registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent", factory5f472eb0e54edab942a0b2702fa908b4cedb8464)
     registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent", factory2e97267aa2f82879e903b7304b634b3e62c64b3c)
 }

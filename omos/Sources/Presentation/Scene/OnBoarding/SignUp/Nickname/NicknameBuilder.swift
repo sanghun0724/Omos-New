@@ -10,7 +10,9 @@ import RIBs
 
 // MARK: - NicknameDependency
 
-protocol NicknameDependency: NeedleFoundation.Dependency {}
+protocol NicknameDependency: NeedleFoundation.Dependency {
+    var onboardingRepositoryService: OnboardingRepositoryService { get }
+}
 
 // MARK: - NicknameBuildDependency
 
@@ -44,7 +46,10 @@ final class NicknameBuilder:
       _ payload: NicknameBuildDependency
     ) -> NicknameRouting {
         let viewController = NicknameViewController()
-        let interactor = NicknameInteractor(presenter: viewController, initialState: component.initialState)
+        let interactor = NicknameInteractor(
+            presenter: viewController,
+            initialState: component.initialState,
+            onboardingRepositoryService: component.onboardingRepositoryService)
         
         interactor.listener = payload.listener
         return NicknameRouter(interactor: interactor, viewController: viewController)
