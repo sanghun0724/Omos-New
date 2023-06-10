@@ -84,24 +84,6 @@ extension BaseViewController {
     }
     
     /*
-     * MARK: Navigation Button Events
-     */
-    @objc
-    func navigationLeftButtonDidTapped() {
-        fatalError("must be override func \(#function)  {} in \(NSStringFromClass(self.classForCoder))")
-    }
-    
-    @objc
-    func navigationRightButtonDidTapped() {
-        fatalError("must be override func \(#function)  {} in \(NSStringFromClass(self.classForCoder))")
-    }
-    
-    @objc
-    func navigationTitleDidTapped() {
-        fatalError("must be override func \(#function)  {} in \(NSStringFromClass(self.classForCoder))")
-    }
-    
-    /*
      * MARK: Enable/Disable Gesture
      */
     

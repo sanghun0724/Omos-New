@@ -98,10 +98,6 @@ final class LoggedInViewController:
     override func isNeedCustomNavigationBarView() -> Bool {
         false
     }
-    
-    override func navigationLeftButtonDidTapped() {
-        popViewController(animated: false)
-    }
 }
 
 // MARK: - Bind listener

@@ -25,20 +25,17 @@ class BaseViewController:
             $0.leftImageButton.setImage(navigationBarLeftButtonImage(), for: .normal)
             $0.leftImageButton.setTitle(navigationBarLeftButtonText(), for: .normal)
             $0.leftImageButton.setTitleColor(navigationBarTitleTextColor(), for: .normal)
-            $0.leftImageButton.addTarget(self, action: #selector(navigationLeftButtonDidTapped), for: .touchDown)
-            
+    
             $0.rightImageButton.isHidden = !navigationBarShowRightButton()
             $0.rightImageButton.setImage(navigationBarRightButtonImage(), for: .normal)
             $0.rightImageButton.setTitle(navigationBarRightButtonText(), for: .normal)
             $0.rightImageButton.setTitleColor(navigationBarTitleTextColor(), for: .normal)
-            $0.rightImageButton.addTarget(self, action: #selector(navigationRightButtonDidTapped), for: .touchDown)
             
             $0.titleLabel.isHidden = !navigationBarShowTitle()
             $0.titleLabel.text = navigationBarTitleText()
             $0.titleLabel.textColor = navigationBarTitleTextColor()
             $0.titleLabel.font = navigationBarTitleTextFont()
-            $0.titleLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(navigationTitleDidTapped)))
-            
+
             $0.titleImageView.isHidden = !navigationBarShowImage()
             $0.titleImageView.image = navigationBarTitleImage()
             
