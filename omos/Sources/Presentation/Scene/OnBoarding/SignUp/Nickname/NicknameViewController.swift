@@ -67,7 +67,9 @@ final class NicknameViewController:
         }
         .build()
     
-    private lazy var AgreementView = 
+    private lazy var termAgreementView = AgreementView()
+    
+    private lazy var policyAgreementView = AgreementView()
     
     private lazy var confirmButton = ConfirmButton(Strings.Common.next, disableText: Strings.Common.next).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
@@ -89,7 +91,6 @@ final class NicknameViewController:
         bind(listener: self.listener)
     }
 }
-
 
 // MARK: Private methods
 
