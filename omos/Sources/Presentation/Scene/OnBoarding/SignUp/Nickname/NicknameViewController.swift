@@ -42,7 +42,11 @@ final class NicknameViewController:
     // MARK: - Constants
     
     private enum UI {
+        static let headerViewHeight = 173
+        static let leadingTrailingMargin = 20
+        static let separatedLineHeight = 1
         static let confirmButtonHeight = 48
+        static let agreementHeight = 20
     }
     
     // MARK: - Properties
@@ -65,6 +69,10 @@ final class NicknameViewController:
             $0.fetchLeftTopLabelText(text: Strings.Onboarding.email)
             $0.fetchRightTopLabelText(text: Strings.Onboarding.emailwarning)
         }
+        .build()
+    
+    private lazy var separatedLineView = UIView().builder
+        .backgroundColor(Asset.Colors.mainGray7.color)
         .build()
     
     private lazy var termAgreementView = AgreementView()
@@ -140,11 +148,47 @@ extension NicknameViewController {
 
 extension NicknameViewController {
     private func setupUI() {
-        
+        contentView.backgroundColor = Asset.Colors.mainBackground.color
+        contentView.addSubview(headerView)
+        contentView.addSubview(nicknameTextFieldView)
+        contentView.addSubview(separatedLineView)
+        contentView.addSubview(termAgreementView)
+        contentView.addSubview(policyAgreementView)
+        contentView.addSubview(confirmButton)
         self.layout()
     }
     
     private func layout() {
+        headerView.snp.makeConstraints {
+            $0.height.equalTo(UI.headerViewHeight)
+            $0.leading.trailing.top.equalToSuperview()
+        }
+        nicknameTextFieldView.snp.makeConstraints {
+            $0.top.equalTo(headerView.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+        }
+        separatedLineView.snp.makeConstraints {
+            $0.top.equalTo(nicknameTextFieldView.snp.bottom).offset(26)
+            $0.height.equalTo(UI.separatedLineHeight)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+        }
+        termAgreementView.snp.makeConstraints {
+            $0.top.equalTo(separatedLineView.snp.bottom).offset(24)
+            $0.height.equalTo(UI.agreementHeight)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+        }
+        policyAgreementView.snp.makeConstraints {
+            $0.top.equalTo(termAgreementView.snp.bottom).offset(12)
+            $0.height.equalTo(UI.agreementHeight)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+        }
+        confirmButton.snp.makeConstraints {
+            $0.top.greaterThanOrEqualTo(policyAgreementView.snp.bottom).offset(100)
+                .priority(249)
+            $0.height.equalTo(UI.confirmButtonHeight)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+            $0.bottom.equalToSuperview().offset(-34).priority(750)
+        }
         
     }
 }

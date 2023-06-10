@@ -48,6 +48,17 @@ private class TodayDependencye8b9e53f6319ce1bda30Provider: TodayDependency {
 private func factoryd6273f0efcff70a3a118e3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
     return TodayDependencye8b9e53f6319ce1bda30Provider()
 }
+private class NicknameDependency63ceb1589b5d77bf2faaProvider: NicknameDependency {
+
+
+    init() {
+
+    }
+}
+/// ^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent->NicknameComponent
+private func factoryae4818ff2be45df533d7e3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return NicknameDependency63ceb1589b5d77bf2faaProvider()
+}
 private class SignUpDependency0bf34c242a7f1d630afcProvider: SignUpDependency {
     var onboardingRepositoryService: OnboardingRepositoryService {
         return appComponent.onboardingRepositoryService
@@ -93,9 +104,15 @@ extension TodayComponent: Registration {
 
     }
 }
+extension NicknameComponent: Registration {
+    public func registerItems() {
+
+    }
+}
 extension SignUpComponent: Registration {
     public func registerItems() {
         keyPathToName[\SignUpDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
+
     }
 }
 extension LoggedInComponent: Registration {
@@ -123,6 +140,7 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
     registerProviderFactory("^->AppComponent", factoryEmptyDependencyProvider)
     registerProviderFactory("^->AppComponent->AppRootComponent", factorya90cb427e52e03443c85f47b58f8f304c97af4d5)
     registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent->TodayComponent", factoryd6273f0efcff70a3a118e3b0c44298fc1c149afb)
+    registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent->NicknameComponent", factoryae4818ff2be45df533d7e3b0c44298fc1c149afb)
     registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent", factory5f472eb0e54edab942a0b2702fa908b4cedb8464)
     registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent", factory2e97267aa2f82879e903b7304b634b3e62c64b3c)
 }
