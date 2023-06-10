@@ -14,6 +14,11 @@ import RxSwift
 // MARK: - NicknamePresentableAction
 
 enum NicknamePresentableAction {
+    case nicknameTextFieldDidChange(nickname: String)
+    case toggleTerms(toggled: Bool)
+    case togglePolicy(toggled: Bool)
+    case showTermsDetail
+    case showPolicyDetail
     case confirmButtonDidTap
     case detach
 }
@@ -66,8 +71,8 @@ final class NicknameViewController:
     private lazy var nicknameTextFieldView = CustomTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: Strings.Onboarding.email)
-            $0.fetchRightTopLabelText(text: Strings.Onboarding.emailwarning)
+            $0.fetchLeftTopLabelText(text: Strings.Onboarding.nickname)
+            $0.fetchRightTopLabelText(text: Strings.Onboarding.nicknameWarning)
         }
         .build()
     
@@ -117,6 +122,8 @@ extension NicknameViewController {
 extension NicknameViewController {
     private func bind(listener: NicknamePresentableListener?) {
         guard let listener = listener else { return }
+        bindLoadingStream(from: listener)
+        bindErrorStream(from: listener)
     }
     
     private func bindActionRelay() {
@@ -132,7 +139,75 @@ extension NicknameViewController {
 
 extension NicknameViewController {
     private func bindActions() {
-        
+        self.bindNicknameTextFieldDidChange()
+        self.bindToggleTerms()
+        self.bindTogglePolicy()
+        self.bindShowTermsDetail()
+        self.bindShowPolicyDetail()
+        self.bindConfirmButton()
+    }
+    
+    private func bindNicknameTextFieldDidChange() {
+        nicknameTextFieldView.textField
+            .rx
+            .text
+            .orEmpty
+            .changed
+            .map { .nicknameTextFieldDidChange(nickname: $0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindToggleTerms() {
+        termAgreementView.checkCircleView
+            .rx
+            .tap
+            .preventDuplication()
+            .scan(false) { lastState, _ in !lastState }
+            .map { .toggleTerms(toggled: $0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindTogglePolicy() {
+        policyAgreementView.checkCircleView
+            .rx
+            .tap
+            .preventDuplication()
+            .scan(false) { lastState, _ in !lastState }
+            .map { .togglePolicy(toggled: $0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindShowTermsDetail() {
+        termAgreementView.showButton
+            .rx
+            .tap
+            .preventDuplication()
+            .map { .showTermsDetail }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindShowPolicyDetail() {
+        policyAgreementView.showButton
+            .rx
+            .tap
+            .preventDuplication()
+            .map { .showPolicyDetail }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindConfirmButton() {
+        confirmButton
+            .rx
+            .tap
+            .preventDuplication()
+            .map { .confirmButtonDidTap }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
     }
 }
 

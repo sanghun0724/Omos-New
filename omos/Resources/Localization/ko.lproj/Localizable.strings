@@ -21,5 +21,5 @@
 "onboarding.signUp"="회원가입";
 "onboarding.sendCertificationEmail"="인증메일 보내기";
 "onboarding.repasswordInvalidation"="재확인 비밀번호가 틀립니다.";
-
-
+"onboarding.nickname"="닉네임";
+"onboarding.nicknameWarning"="이미 쓰고 있는 닉네임이에요.";
