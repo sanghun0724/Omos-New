@@ -8,12 +8,13 @@
 import Foundation
 
 struct NicknamePresentableState: HasLoadingState, HasErrorState {
+    var revision = 0 
     var isLoading: Bool = false
     var myError: ReactorValue<MyError> = .init()
     var isValidNicknameFormat = false
     var termsToggled = false
     var policyToggled = false
     var isConfirmEnable = false
-    var isShowTermsDetail = Void()
-    var isShowPolicyDetail = Void()
+    var showTermsDetail = Void()
+    var showPolicyDetail = Void()
 }
