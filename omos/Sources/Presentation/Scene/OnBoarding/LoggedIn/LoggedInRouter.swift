@@ -63,7 +63,10 @@ final class LoggedInRouter:
     }
     
     func detachSignUpRIB() {
-    
+        guard let router = signUpRouter else { return }
+        self.signUpRouter = nil
+        detachChild(router)
+        viewController.pop(router.viewControllable)
     }
     
     func attachTodayRIB() {

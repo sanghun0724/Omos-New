@@ -18,6 +18,7 @@ enum SignUpPresentableAction {
     case validationAlertButtonDidTap(inputCode: String)
     case passwordsDidChange(password: String, repassword: String)
     case confirmButtonDidTap
+    case detach
 }
 
 // MARK: - SignUpPresentableListener
@@ -168,6 +169,7 @@ extension SignUpViewController {
         bindValidationPopupButtonDidTap()
         bindConfirmButtonDidTap()
         bindPasswordsDidChange()
+        bindDetachAction()
     }
     
     private func bindEmailValidationRequestButtonDidTapAction() {
@@ -205,6 +207,13 @@ extension SignUpViewController {
             .map { .confirmButtonDidTap }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
+    }
+    
+    private func bindDetachAction() {
+      detachAction
+        .map { .detach }
+        .bind(to: self.actionRelay)
+        .disposed(by: disposeBag)
     }
 }
 
