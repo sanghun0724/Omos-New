@@ -8,7 +8,8 @@
 
 // MARK: - Common
 
-"common.next"="다음";
+"common.next"="";
+"common.complete"="";
 
 // MARK: - Onboarding
 

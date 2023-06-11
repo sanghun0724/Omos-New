@@ -11,12 +11,14 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Strings {
   internal enum Common {
+    /// 
+    internal static let complete = Strings.tr("Localizable", "common.complete", fallback: "")
     /// Localizable.strings
     ///   RIBsReactorKit
     /// 
     ///   Created by elon on 2021/03/01.
     ///   Copyright © 2021 Elon. All rights reserved.
-    internal static let next = Strings.tr("Localizable", "common.next", fallback: "다음")
+    internal static let next = Strings.tr("Localizable", "common.next", fallback: "")
   }
   internal enum Onboarding {
     /// 

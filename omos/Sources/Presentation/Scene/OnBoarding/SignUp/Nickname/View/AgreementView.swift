@@ -21,9 +21,7 @@ class AgreementView: BaseView {
         .backgroundColor(.white)
         .build()
     
-    lazy var guideLabel = UILabel().builder
-        .text("TEXT")
-        .build()
+    private lazy var guideLabel = UILabel()
     
     lazy var showButton = UIButton().builder
         .with {
@@ -34,6 +32,22 @@ class AgreementView: BaseView {
             $0.titleLabel?.attributedText = NSMutableAttributedString().underlined("보기")
         }
         .build()
+    
+    // MARK: helper methods
+    
+    func setTermsGuideLabelText() {
+        guideLabel.attributedText = NSMutableAttributedString()
+            .regular(string: "(필수) ", fontSize: 16)
+            .orangeHighlight("이용약관")
+            .regular(string: "에 동의합니다.", fontSize: 16)
+    }
+    
+    func setPolicyGuideLabelText() {
+        guideLabel.attributedText = NSMutableAttributedString()
+            .regular(string: "(필수) ", fontSize: 16)
+            .orangeHighlight("개인정보 보호정책")
+            .regular(string: "에 동의합니다.", fontSize: 16)
+    }
     
     // MARK: - initialize
     
