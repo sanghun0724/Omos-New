@@ -122,6 +122,7 @@
 		B671B52A2A34457E00BA4F24 /* NicknamePresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B5292A34457E00BA4F24 /* NicknamePresentableState.swift */; };
 		B671B52D2A344D0400BA4F24 /* AgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B52C2A344D0400BA4F24 /* AgreementView.swift */; };
 		B671B52F2A344FC000BA4F24 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B52E2A344FC000BA4F24 /* NSMutableAttributedString+Extension.swift */; };
+		B671B5312A35893F00BA4F24 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B5302A35893F00BA4F24 /* InfoViewController.swift */; };
 		B69634542A1A339F00F5FE7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B69634512A1A339F00F5FE7E /* Localizable.strings */; };
 		B69634562A1A45C000F5FE7E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634552A1A45C000F5FE7E /* Strings.swift */; };
 		B696348A2A1CE19000F5FE7E /* ComponentizedBuilderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69634892A1CE19000F5FE7E /* ComponentizedBuilderExtensions.swift */; };
@@ -342,6 +343,7 @@
 		B671B5292A34457E00BA4F24 /* NicknamePresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknamePresentableState.swift; sourceTree = "<group>"; };
 		B671B52C2A344D0400BA4F24 /* AgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementView.swift; sourceTree = "<group>"; };
 		B671B52E2A344FC000BA4F24 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		B671B5302A35893F00BA4F24 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		B69634522A1A339F00F5FE7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B69634532A1A339F00F5FE7E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B69634552A1A45C000F5FE7E /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -851,6 +853,7 @@
 			isa = PBXGroup;
 			children = (
 				B671B52C2A344D0400BA4F24 /* AgreementView.swift */,
+				B671B5302A35893F00BA4F24 /* InfoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1409,6 +1412,7 @@
 				43BB40935EACC76F94333166 /* Reusable.swift in Sources */,
 				F772D0C48B092859896FD0B1 /* SkeletonControllable.swift in Sources */,
 				B65FCB48F3C8B236C783B3CF /* SkeletonViewsAnimatable.swift in Sources */,
+				B671B5312A35893F00BA4F24 /* InfoViewController.swift in Sources */,
 				389AC910D020B2DB84B1D75A /* AppRootBuilder.swift in Sources */,
 				FA76CB421A1BA62CD86DC830 /* AppRootInteractor.swift in Sources */,
 				A167EF7A726463EB2FD8FF6D /* AppRootRouter.swift in Sources */,

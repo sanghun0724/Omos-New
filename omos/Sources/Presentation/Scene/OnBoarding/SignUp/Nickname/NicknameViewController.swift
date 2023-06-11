@@ -80,9 +80,17 @@ final class NicknameViewController:
         .backgroundColor(Asset.Colors.mainGray7.color)
         .build()
     
-    private lazy var termAgreementView = AgreementView()
+    private lazy var termAgreementView = AgreementView().builder
+        .with {
+            $0.setTermsGuideLabelText()
+        }
+        .build()
     
-    private lazy var policyAgreementView = AgreementView()
+    private lazy var policyAgreementView = AgreementView().builder
+        .with {
+            $0.setPolicyGuideLabelText()
+        }
+        .build()
     
     private lazy var confirmButton = ConfirmButton(Strings.Common.next, disableText: Strings.Common.next).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)

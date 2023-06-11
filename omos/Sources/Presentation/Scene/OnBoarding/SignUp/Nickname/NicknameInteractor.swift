@@ -100,7 +100,7 @@ extension NicknameInteractor {
         case .showPolicyDetail:
             return .just(.showPolicyDetail)
         case .confirmButtonDidTap:
-            return .just(.attachTodayRIB)
+            return signUpMutation()
         case .detach:
             return .just(.detach)
         }
@@ -114,6 +114,14 @@ extension NicknameInteractor {
             .catchAndReturn(.setError(.defaultError))
         
         return nicknameValidationMutation
+    }
+    
+    private func signUpMutation() -> Observable<Mutation> {
+        let signUpMutation: Observable<Mutation> = onboardingRepositoryService.signUp()
+            .map { $0 ? .attachTodayRIB : .setError(.defaultError) }
+            .catchAndReturn(.setError(.defaultError))
+        
+        return signUpMutation
     }
     
 }
