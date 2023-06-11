@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Projects"
+      name = "Projects">
+      <FileRef
+         location = "group:App/Omos.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:Feature"
+         name = "Feature">
+         <FileRef
+            location = "group:BaseFeature/BaseFeature.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Shared"
+         name = "Shared">
+         <FileRef
+            location = "group:GlobalThirdPartyLibrary/GlobalThirdPartyLibrary.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:UserInterface"
+         name = "UserInterface">
+         <FileRef
+            location = "group:DesignSystem/DesignSystem.xcodeproj">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
