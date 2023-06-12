@@ -5,8 +5,8 @@ import DependencyPlugin
 let project = Project.makeModule(
     name: ModulePaths.Core.CoreKit.rawValue,
     product: .framework,
-    targets: []
+    targets: [],
     internalDependencies: [
-       
+        .shared(target: .GlobalThirdPartyLibrary),
     ]
 )
