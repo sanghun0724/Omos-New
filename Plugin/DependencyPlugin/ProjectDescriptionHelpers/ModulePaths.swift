@@ -12,6 +12,10 @@ public enum ModulePaths {
 
 public extension ModulePaths {
     enum Feature: String {
+        case TestFeature
+        case TodayFeature
+        case SignUpFeature
+        case LoggedInFeature
         case BaseFeature
 
         func targetName(type: MicroTargetType) -> String {
@@ -22,6 +26,7 @@ public extension ModulePaths {
 
 public extension ModulePaths {
     enum Domain: String {
+        case OnboardingDomain
         case BaseDomain
 
         func targetName(type: MicroTargetType) -> String {
@@ -42,11 +47,8 @@ public extension ModulePaths {
 
 public extension ModulePaths {
     enum Shared: String {
-        case Utillites
-        case Utillities
-        case Utillities
+        case Utilities
         case GlobalThirdPartyLibrary
-        case UtilityModule
         
         func targetName(type: MicroTargetType) -> String {
             "\(self.rawValue)\(type.rawValue)"

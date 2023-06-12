@@ -9,5 +9,6 @@ let project = Project.makeModule(
     internalDependencies: [
         .userInterface(target: .DesignSystem),
         .shared(target: .GlobalThirdPartyLibrary),
+        .shared(target: .Utilities),
     ]
 )
