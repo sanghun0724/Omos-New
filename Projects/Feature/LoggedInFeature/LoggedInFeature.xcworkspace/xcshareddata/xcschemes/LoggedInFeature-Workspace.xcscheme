@@ -17,7 +17,7 @@
                BlueprintIdentifier = "F4D1B67A20EB13564617513A"
                BuildableName = "BaseDomain.framework"
                BlueprintName = "BaseDomain"
-               ReferencedContainer = "container:Projects/Domain/BaseDomain/BaseDomain.xcodeproj">
+               ReferencedContainer = "container:../../Domain/BaseDomain/BaseDomain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "6A528B236EC25F5D11B29E3C"
                BuildableName = "BaseDomainTests.xctest"
                BlueprintName = "BaseDomainTests"
-               ReferencedContainer = "container:Projects/Domain/BaseDomain/BaseDomain.xcodeproj">
+               ReferencedContainer = "container:../../Domain/BaseDomain/BaseDomain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "D3E314B387FD8B34A15E37AD"
                BuildableName = "BaseFeature.framework"
                BlueprintName = "BaseFeature"
-               ReferencedContainer = "container:Projects/Feature/BaseFeature/BaseFeature.xcodeproj">
+               ReferencedContainer = "container:../BaseFeature/BaseFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -59,7 +59,7 @@
                BlueprintIdentifier = "0FEFEAAB06885A67C6A5580A"
                BuildableName = "BaseFeatureTests.xctest"
                BlueprintName = "BaseFeatureTests"
-               ReferencedContainer = "container:Projects/Feature/BaseFeature/BaseFeature.xcodeproj">
+               ReferencedContainer = "container:../BaseFeature/BaseFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -73,7 +73,7 @@
                BlueprintIdentifier = "C0E2BAB47E295A4548E4955F"
                BuildableName = "CoreKit.framework"
                BlueprintName = "CoreKit"
-               ReferencedContainer = "container:Projects/Core/CoreKit/CoreKit.xcodeproj">
+               ReferencedContainer = "container:../../Core/CoreKit/CoreKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -87,7 +87,7 @@
                BlueprintIdentifier = "83C9B5D1938C22907FF6E247"
                BuildableName = "DesignSystem.framework"
                BlueprintName = "DesignSystem"
-               ReferencedContainer = "container:Projects/UserInterface/DesignSystem/DesignSystem.xcodeproj">
+               ReferencedContainer = "container:../../UserInterface/DesignSystem/DesignSystem.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -101,7 +101,7 @@
                BlueprintIdentifier = "9F69C27BE85E3028D236EFFD"
                BuildableName = "DesignSystemDemoApp.app"
                BlueprintName = "DesignSystemDemoApp"
-               ReferencedContainer = "container:Projects/UserInterface/DesignSystem/DesignSystem.xcodeproj">
+               ReferencedContainer = "container:../../UserInterface/DesignSystem/DesignSystem.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -115,7 +115,7 @@
                BlueprintIdentifier = "E7219A64E70DCA7A233E1E7E"
                BuildableName = "GlobalThirdPartyLibrary.framework"
                BlueprintName = "GlobalThirdPartyLibrary"
-               ReferencedContainer = "container:Projects/Shared/GlobalThirdPartyLibrary/GlobalThirdPartyLibrary.xcodeproj">
+               ReferencedContainer = "container:../../Shared/GlobalThirdPartyLibrary/GlobalThirdPartyLibrary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -129,7 +129,7 @@
                BlueprintIdentifier = "3BF688E8B3F15A97BF807063"
                BuildableName = "libLoggedInFeature.a"
                BlueprintName = "LoggedInFeature"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
+               ReferencedContainer = "container:LoggedInFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -143,7 +143,7 @@
                BlueprintIdentifier = "5E226305D1D0E3915DC73D00"
                BuildableName = "LoggedInFeatureDemoApp.app"
                BlueprintName = "LoggedInFeatureDemoApp"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
+               ReferencedContainer = "container:LoggedInFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -157,7 +157,7 @@
                BlueprintIdentifier = "195C0117DD83EE37219659BC"
                BuildableName = "LoggedInFeatureInterface.framework"
                BlueprintName = "LoggedInFeatureInterface"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
+               ReferencedContainer = "container:LoggedInFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -171,7 +171,7 @@
                BlueprintIdentifier = "98291DDA39CD583379A91A33"
                BuildableName = "LoggedInFeatureTesting.framework"
                BlueprintName = "LoggedInFeatureTesting"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
+               ReferencedContainer = "container:LoggedInFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -185,7 +185,7 @@
                BlueprintIdentifier = "543590EC0100206FDEF38120"
                BuildableName = "LoggedInFeatureTests.xctest"
                BlueprintName = "LoggedInFeatureTests"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
+               ReferencedContainer = "container:LoggedInFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -199,21 +199,7 @@
                BlueprintIdentifier = "00DCA3AEA6FC413BAB04D124"
                BuildableName = "LoggedInFeatureUITests.xctest"
                BlueprintName = "LoggedInFeatureUITests"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62712E03970C78FB905FB03A"
-               BuildableName = "Omos.app"
-               BlueprintName = "Omos"
-               ReferencedContainer = "container:Projects/App/Omos.xcodeproj">
+               ReferencedContainer = "container:LoggedInFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -227,7 +213,7 @@
                BlueprintIdentifier = "73712B063A541B5D6B3964AA"
                BuildableName = "libOnboardingDomain.a"
                BlueprintName = "OnboardingDomain"
-               ReferencedContainer = "container:Projects/Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
+               ReferencedContainer = "container:../../Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -241,7 +227,7 @@
                BlueprintIdentifier = "E663B72A9050717EE774E675"
                BuildableName = "OnboardingDomainInterface.framework"
                BlueprintName = "OnboardingDomainInterface"
-               ReferencedContainer = "container:Projects/Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
+               ReferencedContainer = "container:../../Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -255,7 +241,7 @@
                BlueprintIdentifier = "291657A68D61966FA48CD409"
                BuildableName = "OnboardingDomainTesting.framework"
                BlueprintName = "OnboardingDomainTesting"
-               ReferencedContainer = "container:Projects/Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
+               ReferencedContainer = "container:../../Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -269,7 +255,7 @@
                BlueprintIdentifier = "6A53E8E4550AA40BF7587FBC"
                BuildableName = "OnboardingDomainTests.xctest"
                BlueprintName = "OnboardingDomainTests"
-               ReferencedContainer = "container:Projects/Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
+               ReferencedContainer = "container:../../Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -283,7 +269,7 @@
                BlueprintIdentifier = "97D3F0D7F6E17AAB1EE2F7A9"
                BuildableName = "libSignUpFeature.a"
                BlueprintName = "SignUpFeature"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
+               ReferencedContainer = "container:../SignUpFeature/SignUpFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -297,7 +283,7 @@
                BlueprintIdentifier = "D32313801DE03642027E9731"
                BuildableName = "SignUpFeatureDemoApp.app"
                BlueprintName = "SignUpFeatureDemoApp"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
+               ReferencedContainer = "container:../SignUpFeature/SignUpFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -311,7 +297,7 @@
                BlueprintIdentifier = "924165B3A475223F4B927128"
                BuildableName = "SignUpFeatureInterface.framework"
                BlueprintName = "SignUpFeatureInterface"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
+               ReferencedContainer = "container:../SignUpFeature/SignUpFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -325,7 +311,7 @@
                BlueprintIdentifier = "2996147A3AD1B36FB84101F4"
                BuildableName = "SignUpFeatureTesting.framework"
                BlueprintName = "SignUpFeatureTesting"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
+               ReferencedContainer = "container:../SignUpFeature/SignUpFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -339,7 +325,7 @@
                BlueprintIdentifier = "71AA960D4E6DA57810658692"
                BuildableName = "SignUpFeatureTests.xctest"
                BlueprintName = "SignUpFeatureTests"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
+               ReferencedContainer = "container:../SignUpFeature/SignUpFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -353,7 +339,7 @@
                BlueprintIdentifier = "7213AB01696A579625F0B8F3"
                BuildableName = "SignUpFeatureUITests.xctest"
                BlueprintName = "SignUpFeatureUITests"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
+               ReferencedContainer = "container:../SignUpFeature/SignUpFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -367,7 +353,7 @@
                BlueprintIdentifier = "89DAC7292A06F21CBB0237B6"
                BuildableName = "libTodayFeature.a"
                BlueprintName = "TodayFeature"
-               ReferencedContainer = "container:Projects/Feature/TodayFeature/TodayFeature.xcodeproj">
+               ReferencedContainer = "container:../TodayFeature/TodayFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -381,7 +367,7 @@
                BlueprintIdentifier = "92048F9AB601F20024A6C12B"
                BuildableName = "TodayFeatureDemoApp.app"
                BlueprintName = "TodayFeatureDemoApp"
-               ReferencedContainer = "container:Projects/Feature/TodayFeature/TodayFeature.xcodeproj">
+               ReferencedContainer = "container:../TodayFeature/TodayFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -395,7 +381,7 @@
                BlueprintIdentifier = "25124A6B58E72B37534F1280"
                BuildableName = "TodayFeatureInterface.framework"
                BlueprintName = "TodayFeatureInterface"
-               ReferencedContainer = "container:Projects/Feature/TodayFeature/TodayFeature.xcodeproj">
+               ReferencedContainer = "container:../TodayFeature/TodayFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -409,7 +395,7 @@
                BlueprintIdentifier = "899DA4438CAC86FBDD51127B"
                BuildableName = "TodayFeatureTesting.framework"
                BlueprintName = "TodayFeatureTesting"
-               ReferencedContainer = "container:Projects/Feature/TodayFeature/TodayFeature.xcodeproj">
+               ReferencedContainer = "container:../TodayFeature/TodayFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -423,7 +409,7 @@
                BlueprintIdentifier = "8CA78A44D69007CFBFD0DBD1"
                BuildableName = "TodayFeatureTests.xctest"
                BlueprintName = "TodayFeatureTests"
-               ReferencedContainer = "container:Projects/Feature/TodayFeature/TodayFeature.xcodeproj">
+               ReferencedContainer = "container:../TodayFeature/TodayFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -437,7 +423,7 @@
                BlueprintIdentifier = "3F5C3764BCEC7DA35A8B30EE"
                BuildableName = "TodayFeatureUITests.xctest"
                BlueprintName = "TodayFeatureUITests"
-               ReferencedContainer = "container:Projects/Feature/TodayFeature/TodayFeature.xcodeproj">
+               ReferencedContainer = "container:../TodayFeature/TodayFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -451,7 +437,7 @@
                BlueprintIdentifier = "78ED6B1EFAE52D5095C1274A"
                BuildableName = "libUtilities.a"
                BlueprintName = "Utilities"
-               ReferencedContainer = "container:Projects/Shared/Utilities/Utilities.xcodeproj">
+               ReferencedContainer = "container:../../Shared/Utilities/Utilities.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -465,7 +451,7 @@
                BlueprintIdentifier = "21D41A394DDB489DC8306980"
                BuildableName = "UtilitiesTests.xctest"
                BlueprintName = "UtilitiesTests"
-               ReferencedContainer = "container:Projects/Shared/Utilities/Utilities.xcodeproj">
+               ReferencedContainer = "container:../../Shared/Utilities/Utilities.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -483,7 +469,7 @@
                BlueprintIdentifier = "6A528B236EC25F5D11B29E3C"
                BuildableName = "BaseDomainTests.xctest"
                BlueprintName = "BaseDomainTests"
-               ReferencedContainer = "container:Projects/Domain/BaseDomain/BaseDomain.xcodeproj">
+               ReferencedContainer = "container:../../Domain/BaseDomain/BaseDomain.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -493,7 +479,7 @@
                BlueprintIdentifier = "0FEFEAAB06885A67C6A5580A"
                BuildableName = "BaseFeatureTests.xctest"
                BlueprintName = "BaseFeatureTests"
-               ReferencedContainer = "container:Projects/Feature/BaseFeature/BaseFeature.xcodeproj">
+               ReferencedContainer = "container:../BaseFeature/BaseFeature.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -503,7 +489,7 @@
                BlueprintIdentifier = "543590EC0100206FDEF38120"
                BuildableName = "LoggedInFeatureTests.xctest"
                BlueprintName = "LoggedInFeatureTests"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
+               ReferencedContainer = "container:LoggedInFeature.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -513,7 +499,7 @@
                BlueprintIdentifier = "00DCA3AEA6FC413BAB04D124"
                BuildableName = "LoggedInFeatureUITests.xctest"
                BlueprintName = "LoggedInFeatureUITests"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
+               ReferencedContainer = "container:LoggedInFeature.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -523,7 +509,7 @@
                BlueprintIdentifier = "6A53E8E4550AA40BF7587FBC"
                BuildableName = "OnboardingDomainTests.xctest"
                BlueprintName = "OnboardingDomainTests"
-               ReferencedContainer = "container:Projects/Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
+               ReferencedContainer = "container:../../Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -533,7 +519,7 @@
                BlueprintIdentifier = "71AA960D4E6DA57810658692"
                BuildableName = "SignUpFeatureTests.xctest"
                BlueprintName = "SignUpFeatureTests"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
+               ReferencedContainer = "container:../SignUpFeature/SignUpFeature.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -543,7 +529,7 @@
                BlueprintIdentifier = "7213AB01696A579625F0B8F3"
                BuildableName = "SignUpFeatureUITests.xctest"
                BlueprintName = "SignUpFeatureUITests"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
+               ReferencedContainer = "container:../SignUpFeature/SignUpFeature.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -553,7 +539,7 @@
                BlueprintIdentifier = "8CA78A44D69007CFBFD0DBD1"
                BuildableName = "TodayFeatureTests.xctest"
                BlueprintName = "TodayFeatureTests"
-               ReferencedContainer = "container:Projects/Feature/TodayFeature/TodayFeature.xcodeproj">
+               ReferencedContainer = "container:../TodayFeature/TodayFeature.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -563,7 +549,7 @@
                BlueprintIdentifier = "3F5C3764BCEC7DA35A8B30EE"
                BuildableName = "TodayFeatureUITests.xctest"
                BlueprintName = "TodayFeatureUITests"
-               ReferencedContainer = "container:Projects/Feature/TodayFeature/TodayFeature.xcodeproj">
+               ReferencedContainer = "container:../TodayFeature/TodayFeature.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -573,7 +559,7 @@
                BlueprintIdentifier = "21D41A394DDB489DC8306980"
                BuildableName = "UtilitiesTests.xctest"
                BlueprintName = "UtilitiesTests"
-               ReferencedContainer = "container:Projects/Shared/Utilities/Utilities.xcodeproj">
+               ReferencedContainer = "container:../../Shared/Utilities/Utilities.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

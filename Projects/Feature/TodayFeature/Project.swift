@@ -5,7 +5,7 @@ import DependencyPlugin
 let project = Project.makeModule(
     name: ModulePaths.Feature.TodayFeature.rawValue,
     product: .staticLibrary,
-    targets: [.unitTest, .uiTest, .demo],
+    targets: [.interface, .testing, .unitTest, .uiTest, .demo],
     internalDependencies: [
         .feature(target: .BaseFeature),
     ]
