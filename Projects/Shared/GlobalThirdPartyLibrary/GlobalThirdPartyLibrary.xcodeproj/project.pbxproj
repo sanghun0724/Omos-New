@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		12CB7C6707AE329AA3E71EC3 /* ThirdPartyLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC46DD836A458F68CED8273 /* ThirdPartyLibrary.swift */; };
 		157D333C38187B9714133FA7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B35BAE9705AA2FE1D2DE27 /* CFNetwork.framework */; };
-		2721129085EC0C1CFF8B8DEF /* libUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4281933F09949E1EADACAD /* libUtilities.a */; platformFilter = ios; };
 		2E629300A11EE4A48237A724 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2D2FBBBBDD611C7F2892FF /* RxDataSources.framework */; platformFilter = ios; };
 		3264EBECF9155AF9AA320161 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732E88731F1F3C93BFCBF158 /* ReactorKitRuntime.framework */; platformFilter = ios; };
 		39F610152F47E60BDCDAAECC /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D636D3A773CF392E99100664 /* Differentiator.framework */; platformFilter = ios; };
@@ -58,7 +57,6 @@
 		2AC46DD836A458F68CED8273 /* ThirdPartyLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyLibrary.swift; sourceTree = "<group>"; };
 		3EC539C58410B8E382ACA432 /* NeedleFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeedleFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4423CDD695F92449B87668E2 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A4281933F09949E1EADACAD /* libUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		732E88731F1F3C93BFCBF158 /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA5F4DDE0807289F4CE15F4 /* KakaoSDKNavi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKNavi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		819A6889B98E9BCC4B8FE8EA /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +112,6 @@
 				FAC6D00D7D56CBE5AA2C3B8A /* RxSwift.framework in Frameworks */,
 				4F0F7867BFCAA3AB34B62B94 /* SkeletonView.framework in Frameworks */,
 				D9F0C64678CEF06E136CD34F /* SnapKit.framework in Frameworks */,
-				2721129085EC0C1CFF8B8DEF /* libUtilities.a in Frameworks */,
 				FC0DB3EB77AD25E3743A4C7C /* WeakMapTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,7 +177,6 @@
 				0E683C27FE36E65D7EFD6778 /* KakaoSDKTemplate.framework */,
 				FD6F8E2658214A2653CB6C25 /* KakaoSDKUser.framework */,
 				B16E920C2B558AF27B53040D /* Kingfisher.framework */,
-				5A4281933F09949E1EADACAD /* libUtilities.a */,
 				9D93D40DAE29E7DE3858E2FF /* LogFlume.framework */,
 				D0E5F8CF59652B3539AB471C /* MyConstants.framework */,
 				3EC539C58410B8E382ACA432 /* NeedleFoundation.framework */,

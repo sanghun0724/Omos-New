@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OnboardingDomain
 
 import ReactorKit
 import RIBs
@@ -13,7 +14,7 @@ import RxSwift
 
 // MARK: - LoggedInRouting
 
-protocol LoggedInRouting: ViewableRouting {
+public protocol LoggedInRouting: ViewableRouting {
     func attachFindRIB()
     func detachFindRIB()
     func attachSignUpRIB()
@@ -30,7 +31,7 @@ protocol LoggedInPresentable: Presentable {
 
 // MARK: - LoggedInListener
 
-protocol LoggedInListener: AnyObject {
+public protocol LoggedInListener: AnyObject {
     
 }
 
@@ -81,7 +82,7 @@ final class LoggedInInteractor:
     }
     
     deinit {
-        log.verbose(type(of: self))
+        //log.verbose(type(of: self))
     }
 }
 

@@ -44,10 +44,10 @@
          location = "group:Shared"
          name = "Shared">
          <FileRef
-            location = "group:GlobalThirdPartyLibrary/GlobalThirdPartyLibrary.xcodeproj">
+            location = "group:AppFoundation/AppFoundation.xcodeproj">
          </FileRef>
          <FileRef
-            location = "group:Utilities/Utilities.xcodeproj">
+            location = "group:GlobalThirdPartyLibrary/GlobalThirdPartyLibrary.xcodeproj">
          </FileRef>
       </Group>
       <Group
@@ -55,6 +55,9 @@
          name = "UserInterface">
          <FileRef
             location = "group:DesignSystem/DesignSystem.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:PresentationFoundation/PresentationFoundation.xcodeproj">
          </FileRef>
       </Group>
    </Group>

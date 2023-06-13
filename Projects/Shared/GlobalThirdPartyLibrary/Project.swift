@@ -21,8 +21,5 @@ let project = Project.makeModule(
         .SPM.KakaoSDK,
         .SPM.RxGesture,
         .SPM.MyConstants
-    ],
-    internalDependencies: [
-        .shared(target: .Utilities)
     ]
 )

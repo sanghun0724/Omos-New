@@ -11,7 +11,7 @@ import Foundation
 import RxRelay
 import RxSwift
 
-protocol OnboardingRepositoryService {
+public protocol OnboardingRepositoryService {
     func login(email: String, password: String) -> Observable<Bool>
     func signUp() -> Observable<Bool>
     func checkEmailDuplication(email: String) -> Observable<Bool>

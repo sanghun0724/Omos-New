@@ -22,7 +22,7 @@ struct SignUpBuildDependency {
 
 // MARK: - SignUpComponent
 
-final class SignUpComponent: NeedleFoundation.Component<SignUpDependency> {
+public final class SignUpComponent: NeedleFoundation.Component<SignUpDependency> {
     fileprivate var initialState: SignUpPresentableState {
         SignUpPresentableState()
     }
@@ -37,13 +37,13 @@ final class SignUpComponent: NeedleFoundation.Component<SignUpDependency> {
 
 // MARK: - SignUpBuildable
 
-protocol SignUpBuildable: Buildable {
+public protocol SignUpBuildable: Buildable {
     func build(with dynamicBuildDependency: SignUpBuildDependency) -> SignUpRouting
 }
 
 // MARK: - SignUpBuilder
 
-final class SignUpBuilder:
+public final class SignUpBuilder:
     ComponentizedBuilder<SignUpComponent, SignUpRouting, SignUpBuildDependency, Void>,
     SignUpBuildable
 {

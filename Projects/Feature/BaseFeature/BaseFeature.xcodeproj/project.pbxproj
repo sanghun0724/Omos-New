@@ -17,6 +17,7 @@
 		4CFBC3F1F1BE604BF0552E80 /* SkeletonControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DBE9BEE95050389969EBD /* SkeletonControllable.swift */; };
 		4E0B116E50C1575C9DB54F3B /* HasTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627C10775CB72459B71C6783 /* HasTableView.swift */; };
 		545DD9208D80428E2C468C67 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05752CE5D4F22D5D393A07F9 /* BaseImageView.swift */; };
+		6A1C028B7F6F9D385C1A9D98 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA3F410FF73D6858A79F3C4 /* libAppFoundation.a */; platformFilter = ios; };
 		6B784AA14C1359DD300A184D /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4CE97C42325E3E413E3B29 /* Reusable.swift */; };
 		70A430767808CD9A4F31668D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3099994238366CA1757659 /* BaseView.swift */; };
 		70A891E72B8DF30E6B3E3268 /* HasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BE49347A2FC55030D34F47 /* HasViewModel.swift */; };
@@ -24,6 +25,7 @@
 		7B058E3BBB5E484F6A6350D8 /* CloseButtonBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59672F5C4D98EA1A387121 /* CloseButtonBindable.swift */; };
 		7BE52489BEA95515F56D7CBF /* HasCloseButtonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC5532B63FEBF5A90AA3F /* HasCloseButtonHeaderView.swift */; };
 		7E2DCECB93E8DBCB99B32FE3 /* LoadingStreamBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B56D100A487FDF7887DBD5 /* LoadingStreamBindable.swift */; };
+		824EFDF692EEED2716DB6DB5 /* libPresentationFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 806ACEF4A2844DE24011DD05 /* libPresentationFoundation.a */; platformFilter = ios; };
 		8509FFDF2AAB0951FDBA97BB /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF84D2AA289E6D0A5941994 /* DesignSystem.framework */; platformFilter = ios; };
 		85E42DD8BD6D037A31D4E991 /* MapRegionSettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5791085EDA0BF33194CD6B /* MapRegionSettable.swift */; };
 		8693FB64761E2085E1CFC1E3 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FFC2383BC3E7E52C92570E /* BaseLabel.swift */; };
@@ -33,7 +35,6 @@
 		890B568CF21085151D10AA3A /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE3A0EBBBA5A04A79F91419 /* RxViewController.swift */; };
 		8A4E06483A792D09974FF100 /* HasConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B56E6DA85CC6DFBDFF598 /* HasConfigure.swift */; };
 		8CF10422E4A3F0B21C1F68BB /* MapAnnotationAddable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82328FD6414544C35E13DC2E /* MapAnnotationAddable.swift */; };
-		8FF32C25392759C1901FB585 /* libUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 448459E24B14667CF4E4564F /* libUtilities.a */; platformFilter = ios; };
 		917272773DE020220CEE222A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D0730B0DAA693F4170AD3 /* BaseViewController.swift */; };
 		957B6433AB4E057584C803DE /* RefreshStreamBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090B43A1F70A2BFD27B8E5E3 /* RefreshStreamBindable.swift */; };
 		9D6AD91EC3CFA7BEC6FB9F37 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916992D52FC8CAAFD56A192F /* BaseCollectionViewCell.swift */; };
@@ -95,7 +96,6 @@
 		2BE2732EB3EEF1D14F075CC1 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		33638E255860715CA90458F3 /* BaseFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BaseFeatureTests-Info.plist"; sourceTree = "<group>"; };
 		3D3099994238366CA1757659 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		448459E24B14667CF4E4564F /* libUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF84D2AA289E6D0A5941994 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D4B9C3D2747724C2345E40D /* CloseButtonBuindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButtonBuindable.swift; sourceTree = "<group>"; };
 		4F59672F5C4D98EA1A387121 /* CloseButtonBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButtonBindable.swift; sourceTree = "<group>"; };
@@ -106,11 +106,13 @@
 		70FFC2383BC3E7E52C92570E /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		71E48E0574F948B4636FD6EC /* HasAlertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasAlertable.swift; sourceTree = "<group>"; };
 		7C26367EBA15DA87947EA486 /* BaseFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		806ACEF4A2844DE24011DD05 /* libPresentationFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPresentationFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		82328FD6414544C35E13DC2E /* MapAnnotationAddable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationAddable.swift; sourceTree = "<group>"; };
 		82D2994E1899BFDA2ACFE14E /* ErrorStreamBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStreamBindable.swift; sourceTree = "<group>"; };
 		85BE49347A2FC55030D34F47 /* HasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasViewModel.swift; sourceTree = "<group>"; };
 		869E328907DF112E7039D758 /* HasCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCollectionView.swift; sourceTree = "<group>"; };
 		87759497BE93FE8C3C3ADD4D /* HasDetachAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasDetachAction.swift; sourceTree = "<group>"; };
+		8DA3F410FF73D6858A79F3C4 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5791085EDA0BF33194CD6B /* MapRegionSettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRegionSettable.swift; sourceTree = "<group>"; };
 		916992D52FC8CAAFD56A192F /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		92BD14D63F560DA214FAFE9D /* HasRefreshState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasRefreshState.swift; sourceTree = "<group>"; };
@@ -138,9 +140,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A1C028B7F6F9D385C1A9D98 /* libAppFoundation.a in Frameworks */,
 				8509FFDF2AAB0951FDBA97BB /* DesignSystem.framework in Frameworks */,
 				B4471EA14D73EFA6959BE22F /* GlobalThirdPartyLibrary.framework in Frameworks */,
-				8FF32C25392759C1901FB585 /* libUtilities.a in Frameworks */,
+				824EFDF692EEED2716DB6DB5 /* libPresentationFoundation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +183,8 @@
 				7C26367EBA15DA87947EA486 /* BaseFeatureTests.xctest */,
 				4CF84D2AA289E6D0A5941994 /* DesignSystem.framework */,
 				D3B9FC3823CBD13413A91BDC /* GlobalThirdPartyLibrary.framework */,
-				448459E24B14667CF4E4564F /* libUtilities.a */,
+				8DA3F410FF73D6858A79F3C4 /* libAppFoundation.a */,
+				806ACEF4A2844DE24011DD05 /* libPresentationFoundation.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";

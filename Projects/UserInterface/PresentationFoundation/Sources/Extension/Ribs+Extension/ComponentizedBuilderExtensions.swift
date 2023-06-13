@@ -9,7 +9,7 @@ import RIBs
 
 // MARK: - DynamicBuildComponentizedBuilder
 
-extension ComponentizedBuilder where DynamicComponentDependency == Void {
+public extension ComponentizedBuilder where DynamicComponentDependency == Void {
   final func build(
     with dynamicBuildDependency: DynamicBuildDependency
   ) -> Router {
@@ -22,7 +22,7 @@ extension ComponentizedBuilder where DynamicComponentDependency == Void {
 
 // MARK: - DynamicComponentizedBuilder
 
-extension ComponentizedBuilder where DynamicBuildDependency == Void {
+public extension ComponentizedBuilder where DynamicBuildDependency == Void {
   final func build(
     with dynamicComponentDependency: DynamicComponentDependency
   ) -> Router {

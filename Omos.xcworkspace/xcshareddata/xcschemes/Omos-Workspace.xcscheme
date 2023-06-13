@@ -28,6 +28,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4724A585CE20791838139B29"
+               BuildableName = "libAppFoundation.a"
+               BlueprintName = "AppFoundation"
+               ReferencedContainer = "container:Projects/Shared/AppFoundation/AppFoundation.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7CB59B4EBD3703F298FE8A9E"
+               BuildableName = "AppFoundationTests.xctest"
+               BlueprintName = "AppFoundationTests"
+               ReferencedContainer = "container:Projects/Shared/AppFoundation/AppFoundation.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F4D1B67A20EB13564617513A"
                BuildableName = "BaseDomain.framework"
                BlueprintName = "BaseDomain"
@@ -476,6 +504,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A49B8E3B8E9E7F5A94D85494"
+               BuildableName = "libPresentationFoundation.a"
+               BlueprintName = "PresentationFoundation"
+               ReferencedContainer = "container:Projects/UserInterface/PresentationFoundation/PresentationFoundation.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "5687E8D0D1B9941A5EB5467B"
                BuildableName = "RIBs.framework"
                BlueprintName = "RIBs"
@@ -798,34 +840,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "78ED6B1EFAE52D5095C1274A"
-               BuildableName = "libUtilities.a"
-               BlueprintName = "Utilities"
-               ReferencedContainer = "container:Projects/Shared/Utilities/Utilities.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "21D41A394DDB489DC8306980"
-               BuildableName = "UtilitiesTests.xctest"
-               BlueprintName = "UtilitiesTests"
-               ReferencedContainer = "container:Projects/Shared/Utilities/Utilities.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "8AD5B657F9C652DED316999E"
                BuildableName = "WeakMapTable.framework"
                BlueprintName = "WeakMapTable"
@@ -840,6 +854,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7CB59B4EBD3703F298FE8A9E"
+               BuildableName = "AppFoundationTests.xctest"
+               BlueprintName = "AppFoundationTests"
+               ReferencedContainer = "container:Projects/Shared/AppFoundation/AppFoundation.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
@@ -928,16 +952,6 @@
                BuildableName = "TodayFeatureUITests.xctest"
                BlueprintName = "TodayFeatureUITests"
                ReferencedContainer = "container:Projects/Feature/TodayFeature/TodayFeature.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "21D41A394DDB489DC8306980"
-               BuildableName = "UtilitiesTests.xctest"
-               BlueprintName = "UtilitiesTests"
-               ReferencedContainer = "container:Projects/Shared/Utilities/Utilities.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
