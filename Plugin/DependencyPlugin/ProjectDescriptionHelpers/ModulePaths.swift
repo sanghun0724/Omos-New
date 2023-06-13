@@ -47,7 +47,7 @@ public extension ModulePaths {
 
 public extension ModulePaths {
     enum Shared: String {
-        case Utilities
+        case AppFoundation
         case GlobalThirdPartyLibrary
         
         func targetName(type: MicroTargetType) -> String {
@@ -58,6 +58,7 @@ public extension ModulePaths {
 
 public extension ModulePaths {
     enum UserInterface: String {
+        case PresentationFoundation
         case DesignSystem
         
         func targetName(type: MicroTargetType) -> String {

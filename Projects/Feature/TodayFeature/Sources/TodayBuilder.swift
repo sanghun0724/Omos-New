@@ -22,7 +22,7 @@ struct TodayBuildDependency {
 
 // MARK: - TodayComponent
 
-final class TodayComponent: NeedleFoundation.Component<TodayDependency> {
+public final class TodayComponent: NeedleFoundation.Component<TodayDependency> {
     fileprivate var initialState: TodayPresentableState {
         TodayPresentableState()
     }
@@ -30,13 +30,13 @@ final class TodayComponent: NeedleFoundation.Component<TodayDependency> {
 
 // MARK: - TodayBuildable
 
-protocol TodayBuildable: Buildable {
+public protocol TodayBuildable: Buildable {
     func build(with dynamicBuildDependency: TodayBuildDependency) -> TodayRouting
 }
 
 // MARK: - TodayBuilder
 
-final class TodayBuilder:
+public final class TodayBuilder:
     ComponentizedBuilder<TodayComponent, TodayRouting, TodayBuildDependency, Void>,
     TodayBuildable
 {

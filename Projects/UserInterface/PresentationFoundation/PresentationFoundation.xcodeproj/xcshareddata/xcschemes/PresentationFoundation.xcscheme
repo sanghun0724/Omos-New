@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "78ED6B1EFAE52D5095C1274A"
-               BuildableName = "libUtilities.a"
-               BlueprintName = "Utilities"
-               ReferencedContainer = "container:Utilities.xcodeproj">
+               BlueprintIdentifier = "A49B8E3B8E9E7F5A94D85494"
+               BuildableName = "libPresentationFoundation.a"
+               BlueprintName = "PresentationFoundation"
+               ReferencedContainer = "container:PresentationFoundation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -30,24 +30,14 @@
       codeCoverageEnabled = "YES"
       onlyGenerateCoverageForSpecifiedTargets = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "21D41A394DDB489DC8306980"
-               BuildableName = "UtilitiesTests.xctest"
-               BlueprintName = "UtilitiesTests"
-               ReferencedContainer = "container:Utilities.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "78ED6B1EFAE52D5095C1274A"
-            BuildableName = "libUtilities.a"
-            BlueprintName = "Utilities"
-            ReferencedContainer = "container:Utilities.xcodeproj">
+            BlueprintIdentifier = "A49B8E3B8E9E7F5A94D85494"
+            BuildableName = "libPresentationFoundation.a"
+            BlueprintName = "PresentationFoundation"
+            ReferencedContainer = "container:PresentationFoundation.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
    </TestAction>
@@ -65,10 +55,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "78ED6B1EFAE52D5095C1274A"
-            BuildableName = "libUtilities.a"
-            BlueprintName = "Utilities"
-            ReferencedContainer = "container:Utilities.xcodeproj">
+            BlueprintIdentifier = "A49B8E3B8E9E7F5A94D85494"
+            BuildableName = "libPresentationFoundation.a"
+            BlueprintName = "PresentationFoundation"
+            ReferencedContainer = "container:PresentationFoundation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -81,10 +71,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "78ED6B1EFAE52D5095C1274A"
-            BuildableName = "libUtilities.a"
-            BlueprintName = "Utilities"
-            ReferencedContainer = "container:Utilities.xcodeproj">
+            BlueprintIdentifier = "A49B8E3B8E9E7F5A94D85494"
+            BuildableName = "libPresentationFoundation.a"
+            BlueprintName = "PresentationFoundation"
+            ReferencedContainer = "container:PresentationFoundation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

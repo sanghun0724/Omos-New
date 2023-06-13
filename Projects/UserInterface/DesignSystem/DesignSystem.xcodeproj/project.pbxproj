@@ -12,31 +12,19 @@
 		0FE38631385ABDF3C0A30A8E /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9005F43599E3AE2CCB247B4F /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		13C00AB33D45898BEE329799 /* CustomNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CBAC2451380371249288C /* CustomNavigationBarView.swift */; };
 		17D6109D50622A70B1546998 /* GlobalThirdPartyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B78E966A9645647E13400E08 /* GlobalThirdPartyLibrary.framework */; platformFilter = ios; };
-		221C373592E8446DE1306FB9 /* ReactiveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9C2F2140DD669AE37BF9B /* ReactiveExtension.swift */; };
 		2FB0792F5F8CA00C2A0477F7 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69B7BBEAD5472C7195924AC8 /* DesignSystem.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		33A18E39E792C978616C69FC /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BA5BB45267CFA7EAEC0C0 /* ViewControllerExtension.swift */; };
 		3D2A2260717AB4241D2B5F82 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8FC3ED1901BDE8504C7E8CC /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		429D6E5954343C7B5F35C754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F96042A1DE7785CB726321 /* AppDelegate.swift */; };
-		444DCE1C6E644244F496D307 /* ComponentizedBuilderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB3236BE77B4C6E52DB39F /* ComponentizedBuilderExtensions.swift */; };
 		57B13E4617C0005D26ACF0BC /* TuistBundle+DesignSystemDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4042D30A4B6B8CAC47FDB4E /* TuistBundle+DesignSystemDemoApp.swift */; };
 		5BC6333BF8B068229A6218F8 /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CD8BE77CDD208664749340 /* CustomTextFieldView.swift */; };
 		75EFEC6723DC34C15ADD7F25 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF223D48A739C5449D2250 /* CustomTextField.swift */; };
-		7E54D24114B047CE16420F77 /* ISO8610DataFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667E8F95EA61CCE954AD50C /* ISO8610DataFormatter+Extensions.swift */; };
 		82FAC25B2B9711D7DFEE6BFC /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415A2A2248DBAF1F837B80A /* ConfirmButton.swift */; };
-		89F4D50D87F9674C9166CE17 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286FADEC0524742338FF1A77 /* UIImageViewExtension.swift */; };
 		9947E09E43F3C18E72E57A48 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B7BBEAD5472C7195924AC8 /* DesignSystem.framework */; platformFilter = ios; };
-		AA1BA5AAEACACEFDF9CC44F0 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834A1A2A74AD87BE19E7E8A6 /* ArrayExtension.swift */; };
 		B14BD6D96A8C9E8E16DE7B36 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF9A46025817F3F835323DAE /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B4CC66295957C37DE76CC951 /* BaseViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D11C1362A39AA3C77A363BB /* BaseViewControllerExtensions.swift */; };
 		C998828E4CA6D4561E3992C7 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9CB33754BDB4651B976D24C /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CCDB68A526374A5F05EDC28E /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECBC97791F2DB266C20A609 /* UINavigationControllerExtensions.swift */; };
 		CFF4DDC6B505FB0E997D6B9A /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A644EC360F67805D392317B7 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D9AF25E6A1237687FC8192E7 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D0A196816D9F58FBF3E3D6 /* UICollectionViewExtension.swift */; };
 		E25B0611E1C33FD444934A60 /* OnBoardingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEB2F7CD1288F4E4B4ACED /* OnBoardingHeaderView.swift */; };
-		E93D451955071B58590ABF68 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03275DDE9C694B23583B4BFA /* NSMutableAttributedString+Extension.swift */; };
-		EC0FB53ADCA635B3B3C71A36 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E7DC62D4534FBB9A9584F /* UITableViewExtension.swift */; };
 		F9E40820863763A405FADC24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6850D3C2D0211A8161346A9 /* LaunchScreen.storyboard */; };
-		FB41D060542AA58131837002 /* ViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12971F186CA7F3243F97B66A /* ViewController+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,38 +68,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		03275DDE9C694B23583B4BFA /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
-		044E7DC62D4534FBB9A9584F /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
-		080BA5BB45267CFA7EAEC0C0 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
-		0D11C1362A39AA3C77A363BB /* BaseViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerExtensions.swift; sourceTree = "<group>"; };
-		12971F186CA7F3243F97B66A /* ViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Rx.swift"; sourceTree = "<group>"; };
-		286FADEC0524742338FF1A77 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		29FEB2F7CD1288F4E4B4ACED /* OnBoardingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingHeaderView.swift; sourceTree = "<group>"; };
 		408A47139F010D995564D9D7 /* DesignSystemDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignSystemDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4415A2A2248DBAF1F837B80A /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
-		4667E8F95EA61CCE954AD50C /* ISO8610DataFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ISO8610DataFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		51CD8BE77CDD208664749340 /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
 		69B7BBEAD5472C7195924AC8 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		834A1A2A74AD87BE19E7E8A6 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
-		84BB3236BE77B4C6E52DB39F /* ComponentizedBuilderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentizedBuilderExtensions.swift; sourceTree = "<group>"; };
 		8937FA9427EEA938B58C5B3E /* DesignSystem-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DesignSystem-Info.plist"; sourceTree = "<group>"; };
 		9005F43599E3AE2CCB247B4F /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A644EC360F67805D392317B7 /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65CBAC2451380371249288C /* CustomNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarView.swift; sourceTree = "<group>"; };
-		AECBC97791F2DB266C20A609 /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		AF9A46025817F3F835323DAE /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28C9C78E18589B2E94EDEB9 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		B78E966A9645647E13400E08 /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7EF223D48A739C5449D2250 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B9F96042A1DE7785CB726321 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0D0A196816D9F58FBF3E3D6 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		C6850D3C2D0211A8161346A9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C87E21AD945E76CCE514F25F /* DesignSystemDemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DesignSystemDemoApp-Info.plist"; sourceTree = "<group>"; };
 		C8FC3ED1901BDE8504C7E8CC /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27A129C5F056CA3752FB91E /* PasswordTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldView.swift; sourceTree = "<group>"; };
 		D9CB33754BDB4651B976D24C /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4042D30A4B6B8CAC47FDB4E /* TuistBundle+DesignSystemDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+DesignSystemDemoApp.swift"; sourceTree = "<group>"; };
-		FCA9C2F2140DD669AE37BF9B /* ReactiveExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +115,6 @@
 			children = (
 				8BC136006E1D0234B84A94B8 /* Button */,
 				C689685C9118A90445880588 /* CustomView */,
-				DADCA588D3E296D27BE4E9DD /* Extension */,
 				F9E8E6CAFD528DBE7A3EA0F0 /* TextField */,
 			);
 			path = Sources;
@@ -163,16 +138,6 @@
 				191A630E1AD9933D6084DE5E /* XCConfig */,
 			);
 			name = Project;
-			sourceTree = "<group>";
-		};
-		491079BEE48B1666A291D7AE /* Ribs+Extension */ = {
-			isa = PBXGroup;
-			children = (
-				84BB3236BE77B4C6E52DB39F /* ComponentizedBuilderExtensions.swift */,
-				12971F186CA7F3243F97B66A /* ViewController+Rx.swift */,
-				080BA5BB45267CFA7EAEC0C0 /* ViewControllerExtension.swift */,
-			);
-			path = "Ribs+Extension";
 			sourceTree = "<group>";
 		};
 		62C43922BC81F9CE25FE3A14 /* Resources */ = {
@@ -237,23 +202,6 @@
 				F4042D30A4B6B8CAC47FDB4E /* TuistBundle+DesignSystemDemoApp.swift */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		DADCA588D3E296D27BE4E9DD /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				491079BEE48B1666A291D7AE /* Ribs+Extension */,
-				834A1A2A74AD87BE19E7E8A6 /* ArrayExtension.swift */,
-				0D11C1362A39AA3C77A363BB /* BaseViewControllerExtensions.swift */,
-				4667E8F95EA61CCE954AD50C /* ISO8610DataFormatter+Extensions.swift */,
-				03275DDE9C694B23583B4BFA /* NSMutableAttributedString+Extension.swift */,
-				FCA9C2F2140DD669AE37BF9B /* ReactiveExtension.swift */,
-				C0D0A196816D9F58FBF3E3D6 /* UICollectionViewExtension.swift */,
-				286FADEC0524742338FF1A77 /* UIImageViewExtension.swift */,
-				AECBC97791F2DB266C20A609 /* UINavigationControllerExtensions.swift */,
-				044E7DC62D4534FBB9A9584F /* UITableViewExtension.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		EC9821EEC8CC800276475F6C = {
@@ -437,18 +385,6 @@
 				82FAC25B2B9711D7DFEE6BFC /* ConfirmButton.swift in Sources */,
 				13C00AB33D45898BEE329799 /* CustomNavigationBarView.swift in Sources */,
 				E25B0611E1C33FD444934A60 /* OnBoardingHeaderView.swift in Sources */,
-				AA1BA5AAEACACEFDF9CC44F0 /* ArrayExtension.swift in Sources */,
-				B4CC66295957C37DE76CC951 /* BaseViewControllerExtensions.swift in Sources */,
-				7E54D24114B047CE16420F77 /* ISO8610DataFormatter+Extensions.swift in Sources */,
-				E93D451955071B58590ABF68 /* NSMutableAttributedString+Extension.swift in Sources */,
-				221C373592E8446DE1306FB9 /* ReactiveExtension.swift in Sources */,
-				444DCE1C6E644244F496D307 /* ComponentizedBuilderExtensions.swift in Sources */,
-				FB41D060542AA58131837002 /* ViewController+Rx.swift in Sources */,
-				33A18E39E792C978616C69FC /* ViewControllerExtension.swift in Sources */,
-				D9AF25E6A1237687FC8192E7 /* UICollectionViewExtension.swift in Sources */,
-				89F4D50D87F9674C9166CE17 /* UIImageViewExtension.swift in Sources */,
-				CCDB68A526374A5F05EDC28E /* UINavigationControllerExtensions.swift in Sources */,
-				EC0FB53ADCA635B3B3C71A36 /* UITableViewExtension.swift in Sources */,
 				75EFEC6723DC34C15ADD7F25 /* CustomTextField.swift in Sources */,
 				5BC6333BF8B068229A6218F8 /* CustomTextFieldView.swift in Sources */,
 				0E0C3D825D3113C84F91DA26 /* PasswordTextFieldView.swift in Sources */,
