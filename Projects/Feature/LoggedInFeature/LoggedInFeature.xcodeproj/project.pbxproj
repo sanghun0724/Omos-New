@@ -10,8 +10,10 @@
 		015A641F3DF407EDA9624CBE /* OnboardingDomainInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8635AAB2B67EC9155C4A7475 /* OnboardingDomainInterface.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		035D1D64EBA7430EBDE6F7C5 /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2192AEBB243B128DA944AC7 /* LoggedInInteractor.swift */; };
 		05E72BED1386889FB3A04A02 /* BaseFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DECF8CA91A6BD5A247B62105 /* BaseFeature.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07B2A6A150C2EA07329B70D0 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0E16EE6391E553073B70CD /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1DC7F170834753E57E2E62DF /* CoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F090327E9B38F17A825ADD4E /* CoreKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2462682385DC1F9C6BCC8ECE /* BaseDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4225D03FB56368771374F7E /* BaseDomain.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		25980CAC34A5B2FCCEBEF9E3 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F60200F379FE15810A728 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		267AF03E312A77715A7C616A /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC0C1307F3DA4D0CEED4CC /* Testing.swift */; };
 		2AE6AAA7ED895384C9DFA178 /* LoggedInFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75E134034EB49CDB3B25D52 /* LoggedInFeatureTesting.framework */; platformFilter = ios; };
 		2B4A24B1A4AFC0B01B1FA947 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D267C971DE10D77F8FF807 /* Interface.swift */; };
@@ -20,6 +22,7 @@
 		36B39C3728BC88DD0AD0ECBD /* AuthSupportedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B80AE78810B36D8D2F9831 /* AuthSupportedView.swift */; };
 		39EB416E8B43CF73B83A0D58 /* OnboardingDomainInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8635AAB2B67EC9155C4A7475 /* OnboardingDomainInterface.framework */; platformFilter = ios; };
 		3B1F2430B45C2BDE96D63872 /* BaseFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECF8CA91A6BD5A247B62105 /* BaseFeature.framework */; platformFilter = ios; };
+		450E139497C40CAE939B368C /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D84BC98FC40860FB96778FE /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45A9A160A8208160BBC8C7E3 /* libLoggedInFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A37BAAED55BE3E248F9302DA /* libLoggedInFeature.a */; platformFilter = ios; };
 		488D5EA880042FF2278CF785 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF2C12F937981C5514B1F84 /* LaunchScreen.storyboard */; };
 		4DF0135FAABDF34E4E28B28E /* libTodayFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0CA49A88B041812EC28609 /* libTodayFeature.a */; platformFilter = ios; };
@@ -42,8 +45,10 @@
 		94D66190E6B4CD11D6E97BE3 /* LoggedInFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A190F4922CFD536465812663 /* LoggedInFeatureInterface.framework */; platformFilter = ios; };
 		9F418BEE57692A1CE5027079 /* LoggedInFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA6CBC794C59E017B03899 /* LoggedInFeatureTest.swift */; };
 		9F62EA4A19BA76A397F7A8F4 /* TodayFeatureInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37F7A6E43F248C5850E7BFEB /* TodayFeatureInterface.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A301CB02839C2EFA09305D3A /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE1EC9DDA385727944C94AC1 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A50D1EE7A2E5BF6B64F31DF2 /* libSignUpFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA7D55A1812E6A6F833679E /* libSignUpFeature.a */; platformFilter = ios; };
 		A964A00D5ACA1EEC48504262 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F604B1AA7D955FC8D89C66 /* AppDelegate.swift */; };
+		BC10957B335DC7FACCCEFF3F /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 20848ED8A4C9C012F35725EF /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C61621A6FC502483B4605CB9 /* LoggedInFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75E134034EB49CDB3B25D52 /* LoggedInFeatureTesting.framework */; platformFilter = ios; };
 		D39CE1EE176827F7D8E13F1D /* libOnboardingDomain.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 817F8A3D901F556B41A47D15 /* libOnboardingDomain.a */; platformFilter = ios; };
 		E2F597E2BF080F40FD531831 /* SignUpFeatureInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B52244F754AAF1704954EE0E /* SignUpFeatureInterface.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -169,7 +174,12 @@
 				6FE99CE7A1D2733FF7624572 /* LoggedInFeatureInterface.framework in Embed Frameworks */,
 				6664327D741E07F353355592 /* LoggedInFeatureTesting.framework in Embed Frameworks */,
 				015A641F3DF407EDA9624CBE /* OnboardingDomainInterface.framework in Embed Frameworks */,
+				25980CAC34A5B2FCCEBEF9E3 /* RxCocoa.framework in Embed Frameworks */,
+				A301CB02839C2EFA09305D3A /* RxCocoaRuntime.framework in Embed Frameworks */,
+				BC10957B335DC7FACCCEFF3F /* RxRelay.framework in Embed Frameworks */,
+				450E139497C40CAE939B368C /* RxSwift.framework in Embed Frameworks */,
 				E2F597E2BF080F40FD531831 /* SignUpFeatureInterface.framework in Embed Frameworks */,
+				07B2A6A150C2EA07329B70D0 /* SnapKit.framework in Embed Frameworks */,
 				9F62EA4A19BA76A397F7A8F4 /* TodayFeatureInterface.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -199,11 +209,14 @@
 
 /* Begin PBXFileReference section */
 		13D17950199C236E87FF1D84 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		20848ED8A4C9C012F35725EF /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7C87CBF0C688FA1167AF79 /* LoggedInFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LoggedInFeatureUITests-Info.plist"; sourceTree = "<group>"; };
 		334325AF64C8F4425C364C64 /* LoggedInFeatureInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LoggedInFeatureInterface-Info.plist"; sourceTree = "<group>"; };
 		37F7A6E43F248C5850E7BFEB /* TodayFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TodayFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F604B1AA7D955FC8D89C66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D84BC98FC40860FB96778FE /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42662FEC2DFB9EFD3520B3D0 /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B0E16EE6391E553073B70CD /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BC0C1307F3DA4D0CEED4CC /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		5CDEA5E782973B028CE92B40 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		6106AE683A0A4C9397D0F60F /* LoggedInFeatureTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LoggedInFeatureTesting-Info.plist"; sourceTree = "<group>"; };
@@ -219,6 +232,7 @@
 		ACA7D55A1812E6A6F833679E /* libSignUpFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSignUpFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52244F754AAF1704954EE0E /* SignUpFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignUpFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF2C12F937981C5514B1F84 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE1EC9DDA385727944C94AC1 /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4AE613C429E60F326CB5E2 /* TuistBundle+LoggedInFeatureDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+LoggedInFeatureDemoApp.swift"; sourceTree = "<group>"; };
 		C15F8F1AB54DB7F87A7F757E /* LoggedInFeatureDemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LoggedInFeatureDemoApp-Info.plist"; sourceTree = "<group>"; };
 		C9D267C971DE10D77F8FF807 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
@@ -229,6 +243,7 @@
 		D75E134034EB49CDB3B25D52 /* LoggedInFeatureTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoggedInFeatureTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D856FC4B0C277D726226CBAC /* LoggedInFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggedInFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB728944C11D5D3463919651 /* LoggedInFeatureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggedInFeatureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE0F60200F379FE15810A728 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DECF8CA91A6BD5A247B62105 /* BaseFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC43D7462E5FF47D1ACD9FC /* BottomButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtonsView.swift; sourceTree = "<group>"; };
 		E02675DA3BA4285DEE077405 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,7 +357,12 @@
 				D856FC4B0C277D726226CBAC /* LoggedInFeatureTests.xctest */,
 				DB728944C11D5D3463919651 /* LoggedInFeatureUITests.xctest */,
 				8635AAB2B67EC9155C4A7475 /* OnboardingDomainInterface.framework */,
+				DE0F60200F379FE15810A728 /* RxCocoa.framework */,
+				BE1EC9DDA385727944C94AC1 /* RxCocoaRuntime.framework */,
+				20848ED8A4C9C012F35725EF /* RxRelay.framework */,
+				3D84BC98FC40860FB96778FE /* RxSwift.framework */,
 				B52244F754AAF1704954EE0E /* SignUpFeatureInterface.framework */,
+				4B0E16EE6391E553073B70CD /* SnapKit.framework */,
 				37F7A6E43F248C5850E7BFEB /* TodayFeatureInterface.framework */,
 			);
 			name = Products;
