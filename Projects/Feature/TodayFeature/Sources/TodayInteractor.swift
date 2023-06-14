@@ -9,21 +9,11 @@ import ReactorKit
 import RIBs
 import RxSwift
 
-// MARK: - TodayRouting
-
-protocol TodayRouting: ViewableRouting {
-    
-}
-
 // MARK: - TodayPresentable
 
 protocol TodayPresentable: Presentable {
     var listener: TodayPresentableListener? { get set }
 }
-
-// MARK: - TodayListener
-
-protocol TodayListener: AnyObject {}
 
 // MARK: - TodayInteractor
 

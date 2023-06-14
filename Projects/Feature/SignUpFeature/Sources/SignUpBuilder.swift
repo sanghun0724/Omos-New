@@ -14,12 +14,6 @@ protocol SignUpDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
 }
 
-// MARK: - SignUpBuildDependency
-
-struct SignUpBuildDependency {
-    let listener: SignUpListener
-}
-
 // MARK: - SignUpComponent
 
 public final class SignUpComponent: NeedleFoundation.Component<SignUpDependency> {
@@ -33,12 +27,6 @@ public final class SignUpComponent: NeedleFoundation.Component<SignUpDependency>
         }
     }
     
-}
-
-// MARK: - SignUpBuildable
-
-public protocol SignUpBuildable: Buildable {
-    func build(with dynamicBuildDependency: SignUpBuildDependency) -> SignUpRouting
 }
 
 // MARK: - SignUpBuilder

@@ -22,6 +22,7 @@ public protocol LoggedInRouting: ViewableRouting {
 
 // MARK: - LoggedInBuildDependency
 
+///@mockable
 public struct LoggedInBuildDependency {
     public let listener: LoggedInListener
     

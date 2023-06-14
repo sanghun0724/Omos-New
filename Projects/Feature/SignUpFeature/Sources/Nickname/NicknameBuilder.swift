@@ -14,24 +14,12 @@ protocol NicknameDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
 }
 
-// MARK: - NicknameBuildDependency
-
-struct NicknameBuildDependency {
-    let listener: NicknameListener
-}
-
 // MARK: - NicknameComponent
 
 final class NicknameComponent: NeedleFoundation.Component<NicknameDependency> {
     fileprivate var initialState: NicknamePresentableState {
         NicknamePresentableState()
     }
-}
-
-// MARK: - NicknameBuildable
-
-protocol NicknameBuildable: Buildable {
-    func build(with dynamicBuildDependency: NicknameBuildDependency) -> NicknameRouting
 }
 
 // MARK: - NicknameBuilder
