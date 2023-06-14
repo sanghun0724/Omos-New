@@ -9,22 +9,11 @@ import ReactorKit
 import RIBs
 import RxSwift
 
-// MARK: - NicknameRouting
-
-protocol NicknameRouting: ViewableRouting {
-    func attachTodayRIB()
-    func detachTodayRIB()
-}
-
 // MARK: - NicknamePresentable
 
 protocol NicknamePresentable: Presentable {
     var listener: NicknamePresentableListener? { get set }
 }
-
-// MARK: - NicknameListener
-
-protocol NicknameListener: AnyObject {}
 
 // MARK: - NicknameInteractor
 

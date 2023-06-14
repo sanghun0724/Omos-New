@@ -13,12 +13,6 @@ import RIBs
 protocol TodayDependency: NeedleFoundation.Dependency {
 
 }
- 
-// MARK: - TodayBuildDependency
-
-struct TodayBuildDependency {
-    let listener: TodayListener
-}
 
 // MARK: - TodayComponent
 
@@ -26,12 +20,6 @@ public final class TodayComponent: NeedleFoundation.Component<TodayDependency> {
     fileprivate var initialState: TodayPresentableState {
         TodayPresentableState()
     }
-}
-
-// MARK: - TodayBuildable
-
-public protocol TodayBuildable: Buildable {
-    func build(with dynamicBuildDependency: TodayBuildDependency) -> TodayRouting
 }
 
 // MARK: - TodayBuilder

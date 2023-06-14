@@ -11,23 +11,10 @@ import ReactorKit
 import RIBs
 import RxSwift
 
-// MARK: - SignUpRouting
-
-protocol SignUpRouting: ViewableRouting {
-    func attachNicknameRIB()
-    func detachNicknameRIB()
-}
-
 // MARK: - SignUpPresentable
 
 protocol SignUpPresentable: Presentable {
     var listener: SignUpPresentableListener? { get set }
-}
-
-// MARK: - SignUpListener
-
-protocol SignUpListener: AnyObject {
-    func detachSignUpRIB()
 }
 
 // MARK: - SignUpInteractor
