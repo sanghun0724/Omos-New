@@ -9,7 +9,7 @@ import UIKit
 
 import MyConstants
 
-enum CommonUI {
+public enum CommonUI {
     static let loginCorner = 4.0
     static let LoginTopViewHeight = 0.6
     static let mainHeight = UIScreen.main.bounds.height
@@ -17,14 +17,14 @@ enum CommonUI {
     static var statuBarHeight: CGFloat = 0.0
 }
 
-enum Device {
+public enum Device {
     static let deviceNames: [String] = [
         "iPhone SE",
         "iPhone 11 Pro Max"
     ]
 }
 
-enum RestApiUrl {
+public enum RestApiUrl {
 #if DEBUG
     static let restUrl = URLConstants.debugUrl
 #else
@@ -32,7 +32,7 @@ enum RestApiUrl {
 #endif
 }
 
-enum KakaoKey {
+public enum KakaoKey {
     static let kakaoKey = KAKAO.Key
 }
 

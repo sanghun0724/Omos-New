@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,10 @@
 		A37D1B7123E9AD763DD89DB4 /* ViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBCE4970407309B5FFC83EF /* ViewController+Rx.swift */; };
 		A8712C8EB882ABEA44FE48BA /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1C79AE26842686D37CF9E /* ArrayExtension.swift */; };
 		AF3356BF0F275262663ABE2D /* HasRefreshState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD989044C672965886B355E5 /* HasRefreshState.swift */; };
+		B671B5442A39EAA600BA4F24 /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B5402A39EAA600BA4F24 /* UIViewPreview.swift */; };
+		B671B5452A39EAA600BA4F24 /* UIViewController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B5412A39EAA600BA4F24 /* UIViewController+Util.swift */; };
+		B671B5462A39EAA600BA4F24 /* ReactorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B5422A39EAA600BA4F24 /* ReactorValue.swift */; };
+		B671B5472A39EAA600BA4F24 /* UIViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B5432A39EAA600BA4F24 /* UIViewControllerPreview.swift */; };
 		B804D5A680014795E95966F8 /* BaseViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EFA8B4A51EC840F4261BDF /* BaseViewable.swift */; };
 		BB174C90CF470868C6C8F5C3 /* ErrorStreamBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E65A4FE867936A5DBEE61A /* ErrorStreamBindable.swift */; };
 		C223D92D0303F454E5DBCAE4 /* HasLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A331A9A37BE23FD84BB35954 /* HasLoadingState.swift */; };
@@ -94,6 +98,10 @@
 		B2D07140E31541113821315A /* SkeletonControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonControllable.swift; sourceTree = "<group>"; };
 		B49C8373E04BD60C86C0515E /* ReactiveExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveExtension.swift; sourceTree = "<group>"; };
 		B5E65A4FE867936A5DBEE61A /* ErrorStreamBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStreamBindable.swift; sourceTree = "<group>"; };
+		B671B5402A39EAA600BA4F24 /* UIViewPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
+		B671B5412A39EAA600BA4F24 /* UIViewController+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
+		B671B5422A39EAA600BA4F24 /* ReactorValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactorValue.swift; sourceTree = "<group>"; };
+		B671B5432A39EAA600BA4F24 /* UIViewControllerPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerPreview.swift; sourceTree = "<group>"; };
 		C822DFCF33098AE8D8483C42 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		C971DDE71A92BC895AD6853C /* HasCloseButtonHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCloseButtonHeaderView.swift; sourceTree = "<group>"; };
 		CD989044C672965886B355E5 /* HasRefreshState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasRefreshState.swift; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 		1593063DD4A006E3B441C3FA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B671B53F2A39EAA600BA4F24 /* Utilities */,
 				640935368C5DA72F596B293F /* Extension */,
 				3DFB32FFCAA2462E3B9EF54C /* Protocols */,
 			);
@@ -234,6 +243,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B671B53F2A39EAA600BA4F24 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B671B5402A39EAA600BA4F24 /* UIViewPreview.swift */,
+				B671B5412A39EAA600BA4F24 /* UIViewController+Util.swift */,
+				B671B5422A39EAA600BA4F24 /* ReactorValue.swift */,
+				B671B5432A39EAA600BA4F24 /* UIViewControllerPreview.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		B784090B4ECBEE25C7B6E3B3 /* XCConfig */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,8 +319,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 81AD2B622F91912568115A83 /* Build configuration list for PBXProject "PresentationFoundation" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -363,14 +381,18 @@
 				3B1B9407F43B5FF8FD92877E /* ReactiveExtension.swift in Sources */,
 				1E0A9BBEB44FB75E4958B2A9 /* ComponentizedBuilderExtensions.swift in Sources */,
 				A37D1B7123E9AD763DD89DB4 /* ViewController+Rx.swift in Sources */,
+				B671B5472A39EAA600BA4F24 /* UIViewControllerPreview.swift in Sources */,
 				202B765F10CC478D95875024 /* ViewControllerExtension.swift in Sources */,
 				3B00E0B63BB308841FF6DE24 /* UICollectionViewExtension.swift in Sources */,
 				59B7E3C8293454A014F4B28D /* UIImageViewExtension.swift in Sources */,
+				B671B5462A39EAA600BA4F24 /* ReactorValue.swift in Sources */,
 				47E52FA890C5386125A38223 /* UINavigationControllerExtensions.swift in Sources */,
+				B671B5442A39EAA600BA4F24 /* UIViewPreview.swift in Sources */,
 				FF2C2578ABB710DC08A3F371 /* UITableViewExtension.swift in Sources */,
 				B804D5A680014795E95966F8 /* BaseViewable.swift in Sources */,
 				3A8D4C768101EF460E8F442D /* CloseButtonBindable.swift in Sources */,
 				6F9F646FC7FEB6CDEA81307E /* CloseButtonBuindable.swift in Sources */,
+				B671B5452A39EAA600BA4F24 /* UIViewController+Util.swift in Sources */,
 				D30387E3FA56DD8305CFE670 /* CustomNavigationBarViewable.swift in Sources */,
 				232AE8857C31EC7B6BB5880E /* DisposablesManageable.swift in Sources */,
 				BB174C90CF470868C6C8F5C3 /* ErrorStreamBindable.swift in Sources */,

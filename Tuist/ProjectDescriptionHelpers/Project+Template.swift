@@ -33,7 +33,7 @@ public extension Project {
         additionalFiles: [FileElement] = [],
         configurations: [Configuration] = []
     ) -> Project {
-        let scripts: [TargetScript] = env.isCI ? [] : [.swiftLint]
+        let scripts: [TargetScript] = env.isCI ? [] : []
         let ldFlagsSettings: SettingsDictionary = product == .framework ?
         ["OTHER_LDFLAGS": .string("$(inherited) -all_load")] :
         ["OTHER_LDFLAGS": .string("$(inherited)")]

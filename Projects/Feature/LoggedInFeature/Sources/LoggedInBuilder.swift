@@ -43,7 +43,7 @@ public final class LoggedInComponent: NeedleFoundation.Component<LoggedInDepende
 // MARK: - LoggedInBuildDependency
 
 public struct LoggedInBuildDependency {
-   public let listener: LoggedInListener
+    public let listener: LoggedInListener
     
     public init(listener: LoggedInListener) {
         self.listener = listener

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoadingIndicator {
+public class LoadingIndicator {
     
     static var isLoading: Bool = false {
         didSet {
