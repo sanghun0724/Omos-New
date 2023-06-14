@@ -7,15 +7,17 @@
 
 import Foundation
 
+import BaseFeature
+
 // MARK: - LoggedInPresentableState
 
 public struct LoggedInPresentableState: Equatable, HasLoadingState, HasErrorState {
-    var revision = 0
-    var isLoading = false
-    var myError = ReactorValue(revision: 0, value: MyError.noError)
-    var hasLoggedInInput = false 
-    var isValidEmailFormat = true
-    var isValidPasswordFormat = true
+    public var revision = 0
+    public var isLoading = false
+    public var myError = ReactorValue(revision: 0, value: MyError.noError)
+    public var hasLoggedInInput = false
+    public var isValidEmailFormat = true
+    public var isValidPasswordFormat = true
     
     public init() {}
 }

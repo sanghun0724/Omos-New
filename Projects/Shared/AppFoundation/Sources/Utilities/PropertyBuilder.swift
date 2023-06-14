@@ -11,7 +11,7 @@ import Foundation
 // MARK: - PropertyBuilder
 
 @dynamicMemberLookup
-struct PropertyBuilder<Base> {
+public struct PropertyBuilder<Base> {
 
   private let base: Base
 
@@ -46,7 +46,7 @@ struct PropertyBuilder<Base> {
   }
 }
 
-extension PropertyBuilder {
+public extension PropertyBuilder {
   func with(_ handler: (inout Base) -> Void) -> PropertyBuilder<Base> {
     PropertyBuilder(self.with(handler))
   }

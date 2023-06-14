@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		82FAC25B2B9711D7DFEE6BFC /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415A2A2248DBAF1F837B80A /* ConfirmButton.swift */; };
 		9947E09E43F3C18E72E57A48 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B7BBEAD5472C7195924AC8 /* DesignSystem.framework */; platformFilter = ios; };
 		B14BD6D96A8C9E8E16DE7B36 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF9A46025817F3F835323DAE /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B671B53E2A39E8DA00BA4F24 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B53D2A39E8DA00BA4F24 /* LoadingIndicator.swift */; };
 		C998828E4CA6D4561E3992C7 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9CB33754BDB4651B976D24C /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFF4DDC6B505FB0E997D6B9A /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A644EC360F67805D392317B7 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E25B0611E1C33FD444934A60 /* OnBoardingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEB2F7CD1288F4E4B4ACED /* OnBoardingHeaderView.swift */; };
@@ -79,6 +80,7 @@
 		A65CBAC2451380371249288C /* CustomNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarView.swift; sourceTree = "<group>"; };
 		AF9A46025817F3F835323DAE /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28C9C78E18589B2E94EDEB9 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		B671B53D2A39E8DA00BA4F24 /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		B78E966A9645647E13400E08 /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7EF223D48A739C5449D2250 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B9F96042A1DE7785CB726321 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		C689685C9118A90445880588 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				B671B53D2A39E8DA00BA4F24 /* LoadingIndicator.swift */,
 				A65CBAC2451380371249288C /* CustomNavigationBarView.swift */,
 				29FEB2F7CD1288F4E4B4ACED /* OnBoardingHeaderView.swift */,
 			);
@@ -298,8 +301,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 5C0CBBA2BFE0CEE21375AF0A /* Build configuration list for PBXProject "DesignSystem" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -385,6 +386,7 @@
 				82FAC25B2B9711D7DFEE6BFC /* ConfirmButton.swift in Sources */,
 				13C00AB33D45898BEE329799 /* CustomNavigationBarView.swift in Sources */,
 				E25B0611E1C33FD444934A60 /* OnBoardingHeaderView.swift in Sources */,
+				B671B53E2A39E8DA00BA4F24 /* LoadingIndicator.swift in Sources */,
 				75EFEC6723DC34C15ADD7F25 /* CustomTextField.swift in Sources */,
 				5BC6333BF8B068229A6218F8 /* CustomTextFieldView.swift in Sources */,
 				0E0C3D825D3113C84F91DA26 /* PasswordTextFieldView.swift in Sources */,
@@ -529,7 +531,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = STAGE;
@@ -593,7 +598,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = DEV;
@@ -715,7 +723,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 			};

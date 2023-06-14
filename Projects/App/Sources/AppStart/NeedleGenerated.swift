@@ -3,6 +3,11 @@
 import NeedleFoundation
 import RIBs
 
+import OnboardingDomain
+import SignUpFeature
+import LoggedInFeature
+import TodayFeature
+
 // swiftlint:disable unused_declaration
 private let needleDependenciesHash : String? = nil
 

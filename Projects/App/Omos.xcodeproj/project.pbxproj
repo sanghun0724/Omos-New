@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,7 @@
 		9B525C715C378E59EE91D8A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAC14283CECB75004D11225 /* AppDelegate.swift */; };
 		A3F5139CCA063416E6B212E6 /* TuistAssets+Omos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB880C4CB4E436D170DA3B3E /* TuistAssets+Omos.swift */; };
 		B2A1A07804870913EF938BD2 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E017FF22B129F1A71DFFED4 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B671B54D2A39EC9200BA4F24 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B54C2A39EC9200BA4F24 /* NeedleGenerated.swift */; };
 		BEA34BCDB071560045BDE0DC /* SignUpFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901C38574FC2E1F9F5956E9B /* SignUpFeatureInterface.framework */; platformFilter = ios; };
 		C0648D96ECF3F41FEF88C671 /* CoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8791B3E9A2E1A7CA85D73FD6 /* CoreKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C142E6B1D4418C09D58E3C92 /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2E1BEBBA263B4BA466C546 /* AppRootInteractor.swift */; };
@@ -93,6 +94,7 @@
 		A0793D243A463AA8298D613F /* libTodayFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A425FC1B44A9E4A363B0346B /* BaseDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEABA9A2C7C383FBFB9BAABC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B671B54C2A39EC9200BA4F24 /* NeedleGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		CAFF48CECD97F065A1E580E0 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72CBAD617B986B563D4FC58 /* AppRootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootBuilder.swift; sourceTree = "<group>"; };
 		D9E06C7FA1039BD95CA2E09F /* BaseFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +201,7 @@
 		7253655D37B72AB964232023 /* AppStart */ = {
 			isa = PBXGroup;
 			children = (
+				B671B54C2A39EC9200BA4F24 /* NeedleGenerated.swift */,
 				4C7356AD78E8DB9CB1D99AE2 /* AppComponent.swift */,
 				FEAC14283CECB75004D11225 /* AppDelegate.swift */,
 			);
@@ -258,7 +261,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 553E603A72934DB25DC6ABEA /* Build configuration list for PBXNativeTarget "Omos" */;
 			buildPhases = (
-				1C7348778E217FAA27CA0D91 /* SwiftLint */,
 				B3EA7B05C4229876B3A8EFE4 /* Sources */,
 				280BED0267068F2BCDA1552E /* Resources */,
 				9C78C62CA1E544BAE9D97108 /* Embed Frameworks */,
@@ -280,8 +282,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 666C5BC7C8FF72ACB8022408 /* Build configuration list for PBXProject "Omos" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -313,27 +313,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1C7348778E217FAA27CA0D91 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../Scripts/SwiftLintRunScript.sh ";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		B3EA7B05C4229876B3A8EFE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -344,6 +323,7 @@
 				33E098204456A28AFA90A162 /* AppRootBuilder.swift in Sources */,
 				C142E6B1D4418C09D58E3C92 /* AppRootInteractor.swift in Sources */,
 				FD0BB3DF9AD8EC6B4BEAE5F7 /* AppRootRouter.swift in Sources */,
+				B671B54D2A39EC9200BA4F24 /* NeedleGenerated.swift in Sources */,
 				5EBC8F067DE9B7AE1219DFBB /* AppRootViewController.swift in Sources */,
 				40081EE34DE93DABB92C72B4 /* AppComponent.swift in Sources */,
 				9B525C715C378E59EE91D8A0 /* AppDelegate.swift in Sources */,

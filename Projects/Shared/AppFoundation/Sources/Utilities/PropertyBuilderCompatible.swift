@@ -10,12 +10,12 @@ import Foundation
 
 // MARK: - PropertyBuilderCompatible
 
-protocol PropertyBuilderCompatible {
+public protocol PropertyBuilderCompatible {
   associatedtype Base
   var builder: PropertyBuilder<Base> { get }
 }
 
-extension PropertyBuilderCompatible {
+public extension PropertyBuilderCompatible {
   var builder: PropertyBuilder<Self> {
     PropertyBuilder(self)
   }
@@ -23,12 +23,12 @@ extension PropertyBuilderCompatible {
 
 // MARK: - NSObject + PropertyBuilderCompatible
 
-extension NSObject: PropertyBuilderCompatible {}
+public extension NSObject: PropertyBuilderCompatible {}
 
 // MARK: - JSONEncoder + PropertyBuilderCompatible
 
-extension JSONEncoder: PropertyBuilderCompatible {}
+public extension JSONEncoder: PropertyBuilderCompatible {}
 
 // MARK: - JSONDecoder + PropertyBuilderCompatible
 
-extension JSONDecoder: PropertyBuilderCompatible {}
+public extension JSONDecoder: PropertyBuilderCompatible {}

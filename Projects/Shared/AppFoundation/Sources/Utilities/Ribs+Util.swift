@@ -9,7 +9,7 @@ import Foundation
 import RIBs
 import UIKit
 
-public enum DissmissButtonType {
+public public enum DissmissButtonType {
     case back, close
     
     public var iconSystemName: String {
