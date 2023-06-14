@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		1DC7F170834753E57E2E62DF /* CoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F090327E9B38F17A825ADD4E /* CoreKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2462682385DC1F9C6BCC8ECE /* BaseDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4225D03FB56368771374F7E /* BaseDomain.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25980CAC34A5B2FCCEBEF9E3 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F60200F379FE15810A728 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		267AF03E312A77715A7C616A /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC0C1307F3DA4D0CEED4CC /* Testing.swift */; };
+		267AF03E312A77715A7C616A /* LoggedInInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC0C1307F3DA4D0CEED4CC /* LoggedInInterface.swift */; };
 		2AE6AAA7ED895384C9DFA178 /* LoggedInFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75E134034EB49CDB3B25D52 /* LoggedInFeatureTesting.framework */; platformFilter = ios; };
 		2B4A24B1A4AFC0B01B1FA947 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D267C971DE10D77F8FF807 /* Interface.swift */; };
 		2E57C43E0434B85AFB1393DB /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDEA5E782973B028CE92B40 /* LoggedInViewController.swift */; };
@@ -217,7 +217,7 @@
 		3D84BC98FC40860FB96778FE /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42662FEC2DFB9EFD3520B3D0 /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0E16EE6391E553073B70CD /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58BC0C1307F3DA4D0CEED4CC /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
+		58BC0C1307F3DA4D0CEED4CC /* LoggedInInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInterface.swift; sourceTree = "<group>"; };
 		5CDEA5E782973B028CE92B40 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		6106AE683A0A4C9397D0F60F /* LoggedInFeatureTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LoggedInFeatureTesting-Info.plist"; sourceTree = "<group>"; };
 		667C8F63097CE0C6D1BF96E0 /* LoggedInFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LoggedInFeatureTests-Info.plist"; sourceTree = "<group>"; };
@@ -316,7 +316,7 @@
 		1BAC46EBBB2D52FD6B072890 /* Testing */ = {
 			isa = PBXGroup;
 			children = (
-				58BC0C1307F3DA4D0CEED4CC /* Testing.swift */,
+				58BC0C1307F3DA4D0CEED4CC /* LoggedInInterface.swift */,
 			);
 			path = Testing;
 			sourceTree = "<group>";
@@ -854,7 +854,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				267AF03E312A77715A7C616A /* Testing.swift in Sources */,
+				267AF03E312A77715A7C616A /* LoggedInInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

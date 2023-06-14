@@ -40,22 +40,6 @@ public final class LoggedInComponent: NeedleFoundation.Component<LoggedInDepende
     }
 }
 
-// MARK: - LoggedInBuildDependency
-
-public struct LoggedInBuildDependency {
-    public let listener: LoggedInListener
-    
-    public init(listener: LoggedInListener) {
-        self.listener = listener
-    }
-}
-
-// MARK: - Builder
-
-public protocol LoggedInBuildable: Buildable {
-    func build(with dynamicBuildDependency: LoggedInBuildDependency) -> LoggedInRouting
-}
-
 // MARK: - LoggedInBuilder
 
 public final class LoggedInBuilder:

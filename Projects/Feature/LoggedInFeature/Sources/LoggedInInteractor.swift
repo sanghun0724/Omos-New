@@ -13,27 +13,10 @@ import ReactorKit
 import RIBs
 import RxSwift
 
-// MARK: - LoggedInRouting
-
-public protocol LoggedInRouting: ViewableRouting {
-    func attachFindRIB()
-    func detachFindRIB()
-    func attachSignUpRIB()
-    func detachSignUpRIB()
-    func attachTodayRIB()
-    func detachTodayRIB()
-}
-
 // MARK: - LoggedInPresentable
 
 protocol LoggedInPresentable: Presentable {
     var listener: LoggedInPresentableListener? { get set }
-}
-
-// MARK: - LoggedInListener
-
-public protocol LoggedInListener: AnyObject {
-    
 }
 
 // MARK: - LgogedInInteractor
