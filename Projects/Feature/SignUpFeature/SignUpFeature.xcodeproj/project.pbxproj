@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,10 +20,11 @@
 		42B120955BB150E59775BB69 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2592F8D629AC64CEC9276187 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43718E5AD19531BBF9A67C25 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0BDAC7A98C8FB286B44D50 /* Interface.swift */; };
 		4A1838BE137C235DE585D729 /* SignUpFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E77CEC31A19C4C2001D3197 /* SignUpFeatureTesting.framework */; platformFilter = ios; };
-		4EA1CE2B3AED2618768A9C3F /* libTodayFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C8A4925150BDEEFE395B9C /* libTodayFeature.a */; platformFilter = ios; };
 		54CA29084DE0C80B244B315C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD147E7B21AD3016C4A62313 /* InfoViewController.swift */; };
+		582C33ACC151BF7970EAFDD3 /* TodayFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF97B2D00DEC2FFF369E48C /* TodayFeatureInterface.framework */; platformFilter = ios; };
 		59E9038A530BA351BF9567E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39C6AD2AA7C8E88B56251AD /* AppDelegate.swift */; };
 		5E526DE58C0C320B68AD5142 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8CB58BA8BE2197048D929 /* SignUpViewController.swift */; };
+		63F8672FD8FEBFD5E3D45B05 /* SignUpInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9361DA038F1D3427F8DDD /* SignUpInterface.swift */; };
 		661234FC2619EE1E33B4FFD8 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3E66EFB2FED9C2C16A96FC /* libOnboardingDomain.a */; platformFilter = ios; };
 		6774576E05D0B5CF965C3A6B /* NicknameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAF856AFDB9388259002318 /* NicknameInteractor.swift */; };
 		73557360391EF81E4FDE7D62 /* BaseFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7512B0541C2721028715552 /* BaseFeature.framework */; platformFilter = ios; };
@@ -35,6 +36,7 @@
 		942C06D4B4615E5A8A6E84FB /* BaseDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8A79EF960A2E472B94037C /* BaseDomain.framework */; platformFilter = ios; };
 		955BF3181258936AE865EA9F /* TuistBundle+SignUpFeatureDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3259B70E9AB638F07C578 /* TuistBundle+SignUpFeatureDemoApp.swift */; };
 		978EC263A3B0A2A092124919 /* AgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BFE02C7C8DE66BCEA6259C /* AgreementView.swift */; };
+		9952F9374F155BA7BFEE5D02 /* NicknameInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45412CF5E1B3CC06CB922E29 /* NicknameInterface.swift */; };
 		9EF5CD0077D670E7A2B75F74 /* SignUpFeatureInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC4F5642609620FF33A5CA5 /* SignUpFeatureInterface.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1AA376BF323035AF37A0E3A /* libOnboardingDomain.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 8D3E66EFB2FED9C2C16A96FC /* libOnboardingDomain.a */; platformFilter = ios; };
 		A32B7AAC4B94E998BB1472F3 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 389383F4EA88956120571493 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -42,7 +44,6 @@
 		B14098B997BBB01496950A65 /* libSignUpFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D7E5AA6E7A70A5460F5F87 /* libSignUpFeature.a */; platformFilter = ios; };
 		B1AD4B9D8A277188F62ED18E /* TodayFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF97B2D00DEC2FFF369E48C /* TodayFeatureInterface.framework */; platformFilter = ios; };
 		B35AEF75277BF89EAF175771 /* SignUpFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC4F5642609620FF33A5CA5 /* SignUpFeatureInterface.framework */; platformFilter = ios; };
-		B671B5512A39FA1700BA4F24 /* NicknameInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B5502A39FA1700BA4F24 /* NicknameInterface.swift */; };
 		CB31CC35056DA2772B83183F /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391CB4C0BD64A9BC51A48198 /* SignUpBuilder.swift */; };
 		D45BCB7E96C54EB7496AE70D /* BaseDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD8A79EF960A2E472B94037C /* BaseDomain.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D9A67A386E1552A525B6378B /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E47ACF6CE20B4A414E896B0 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -53,8 +54,6 @@
 		E82A9831F02765F8D2CF01B7 /* TodayFeatureInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DDF97B2D00DEC2FFF369E48C /* TodayFeatureInterface.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB6AC9879435375B85B53FAB /* SignUpFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E77CEC31A19C4C2001D3197 /* SignUpFeatureTesting.framework */; platformFilter = ios; };
 		EC13BE2EFE304DA7F601AD73 /* SignUpFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC4F5642609620FF33A5CA5 /* SignUpFeatureInterface.framework */; platformFilter = ios; };
-		F067621D2A445D3BE0864B5B /* libTodayFeature.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 15C8A4925150BDEEFE395B9C /* libTodayFeature.a */; platformFilter = ios; };
-		FF1B776AD7FE8F84C341425F /* SignUpInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83828E53BCF50A420297676 /* SignUpInterface.swift */; };
 		FFA46E00A484C35FBE9DF6E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB38A3A55533C59B357AD983 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -160,7 +159,6 @@
 			dstSubfolderSpec = 16;
 			files = (
 				A1AA376BF323035AF37A0E3A /* libOnboardingDomain.a in Dependencies */,
-				F067621D2A445D3BE0864B5B /* libTodayFeature.a in Dependencies */,
 			);
 			name = Dependencies;
 			runOnlyForDeploymentPostprocessing = 1;
@@ -210,7 +208,6 @@
 /* Begin PBXFileReference section */
 		082EE9F20D80476094E91222 /* SignUpFeatureDemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SignUpFeatureDemoApp-Info.plist"; sourceTree = "<group>"; };
 		08901490FD7FC8666A9DAD60 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		15C8A4925150BDEEFE395B9C /* libTodayFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2592F8D629AC64CEC9276187 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		314BCB032696A9DA9AF7008E /* NicknameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRouter.swift; sourceTree = "<group>"; };
 		387F803B4EF071DA136897BC /* SignUpFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignUpFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +215,7 @@
 		391CB4C0BD64A9BC51A48198 /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
 		41C71682FE3FCB868B8D00B9 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		42AE4073FAA4B0C875D77BEB /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		45412CF5E1B3CC06CB922E29 /* NicknameInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInterface.swift; sourceTree = "<group>"; };
 		47598EC250A6F0A4FE1364CC /* SignUpFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFeatureTest.swift; sourceTree = "<group>"; };
 		530F6D5F8C3D13B20AA5E266 /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AF6F3564224CD8F2DED783 /* SignUpFeatureInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SignUpFeatureInterface-Info.plist"; sourceTree = "<group>"; };
@@ -237,7 +235,7 @@
 		9E77CEC31A19C4C2001D3197 /* SignUpFeatureTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignUpFeatureTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F9C6D08ECC3C9DA7A59729 /* SignUpFeatureDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpFeatureDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86CEF0441ED27252B2A2427 /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B671B5502A39FA1700BA4F24 /* NicknameInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInterface.swift; sourceTree = "<group>"; };
+		BDD9361DA038F1D3427F8DDD /* SignUpInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInterface.swift; sourceTree = "<group>"; };
 		C842CF5A5DB36F464AF91D7C /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D8CC2797CAE35EA4876D54 /* SignUpFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SignUpFeatureTests-Info.plist"; sourceTree = "<group>"; };
 		D39C6AD2AA7C8E88B56251AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -246,7 +244,6 @@
 		DD4BEFF7AA4A086640F0BE10 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		DDF97B2D00DEC2FFF369E48C /* TodayFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TodayFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1F2C546EDE219B5FF12BCE /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E83828E53BCF50A420297676 /* SignUpInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInterface.swift; sourceTree = "<group>"; };
 		F7512B0541C2721028715552 /* BaseFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7D728F1033987F0758E3F2 /* OnboardingDomainInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingDomainInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD147E7B21AD3016C4A62313 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -291,6 +288,7 @@
 			files = (
 				86667E856991555FD7C13FD5 /* BaseFeature.framework in Frameworks */,
 				2265F83F514487619116B9E2 /* SignUpFeatureInterface.framework in Frameworks */,
+				582C33ACC151BF7970EAFDD3 /* TodayFeatureInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +303,6 @@
 				B14098B997BBB01496950A65 /* libSignUpFeature.a in Frameworks */,
 				EC13BE2EFE304DA7F601AD73 /* SignUpFeatureInterface.framework in Frameworks */,
 				EB6AC9879435375B85B53FAB /* SignUpFeatureTesting.framework in Frameworks */,
-				4EA1CE2B3AED2618768A9C3F /* libTodayFeature.a in Frameworks */,
 				B1AD4B9D8A277188F62ED18E /* TodayFeatureInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,8 +368,8 @@
 		61AE69D1CB9F54A256056801 /* Testing */ = {
 			isa = PBXGroup;
 			children = (
-				E83828E53BCF50A420297676 /* SignUpInterface.swift */,
-				B671B5502A39FA1700BA4F24 /* NicknameInterface.swift */,
+				45412CF5E1B3CC06CB922E29 /* NicknameInterface.swift */,
+				BDD9361DA038F1D3427F8DDD /* SignUpInterface.swift */,
 			);
 			path = Testing;
 			sourceTree = "<group>";
@@ -423,7 +420,6 @@
 				A86CEF0441ED27252B2A2427 /* GlobalThirdPartyLibrary.framework */,
 				8D3E66EFB2FED9C2C16A96FC /* libOnboardingDomain.a */,
 				60D7E5AA6E7A70A5460F5F87 /* libSignUpFeature.a */,
-				15C8A4925150BDEEFE395B9C /* libTodayFeature.a */,
 				FC7D728F1033987F0758E3F2 /* OnboardingDomainInterface.framework */,
 				2592F8D629AC64CEC9276187 /* RxCocoa.framework */,
 				530F6D5F8C3D13B20AA5E266 /* RxCocoaRuntime.framework */,
@@ -498,7 +494,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D1E12EC5918EF511F7BEB79 /* Build configuration list for PBXNativeTarget "SignUpFeatureTesting" */;
 			buildPhases = (
-				2A6730FC5514550910623A5E /* SwiftLint */,
 				AA3EE62C3CF6DF633DCBE3E4 /* Sources */,
 				EA486E6F8DA8EF09FA205EAE /* Resources */,
 				4236BA98E13BCDEBE4CF47CE /* Embed Frameworks */,
@@ -518,7 +513,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40473E1F7BA3032101653314 /* Build configuration list for PBXNativeTarget "SignUpFeatureTests" */;
 			buildPhases = (
-				B7D9BD0F46F75B597DC073D1 /* SwiftLint */,
 				3DCE9FE9BEC0806BE7221230 /* Sources */,
 				46B6D0D7325FFFCFEA5B0487 /* Resources */,
 				54EE88866E243C64CE10F477 /* Embed Frameworks */,
@@ -539,7 +533,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC1AACD7EC0B59B83603FA3C /* Build configuration list for PBXNativeTarget "SignUpFeatureUITests" */;
 			buildPhases = (
-				7D8F3500B5E6F21A95B1655E /* SwiftLint */,
 				A3DC9343987B7500F9C67979 /* Sources */,
 				A078F108A29BEC96A7E52EF2 /* Resources */,
 				16EEA772375F40DD24E203D4 /* Embed Frameworks */,
@@ -560,7 +553,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E45C394C11B8ADF1FF6B755 /* Build configuration list for PBXNativeTarget "SignUpFeatureInterface" */;
 			buildPhases = (
-				25AE0A9389625A599E8B5BBC /* SwiftLint */,
 				7ACBE8500B601F78071463C4 /* Sources */,
 				CD274D17B8DBF892E5767774 /* Resources */,
 				33A57646330FB27C6A61270F /* Embed Frameworks */,
@@ -579,7 +571,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41724932E724C0A1ACAECF00 /* Build configuration list for PBXNativeTarget "SignUpFeature" */;
 			buildPhases = (
-				A4D3891F49625C188F1ED28D /* SwiftLint */,
 				A4EAAD1DED70DEACC583C44A /* Sources */,
 				CD46EED2622C1B2B8E41347F /* Resources */,
 				34BBA313F25D420EFA7FBBE2 /* Embed Frameworks */,
@@ -600,7 +591,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3D61C8A767172B36021E9C3 /* Build configuration list for PBXNativeTarget "SignUpFeatureDemoApp" */;
 			buildPhases = (
-				68931AE1A940F9A3A7E6ED0C /* SwiftLint */,
 				D02691CE0BAA8EF8DA0347BE /* Sources */,
 				DF06FB674B04108257B63EFA /* Resources */,
 				1F302230C684630ED16CABF1 /* Embed Frameworks */,
@@ -702,117 +692,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		25AE0A9389625A599E8B5BBC /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-		2A6730FC5514550910623A5E /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-		68931AE1A940F9A3A7E6ED0C /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-		7D8F3500B5E6F21A95B1655E /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-		A4D3891F49625C188F1ED28D /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-		B7D9BD0F46F75B597DC073D1 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		3DCE9FE9BEC0806BE7221230 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -858,8 +737,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF1B776AD7FE8F84C341425F /* SignUpInterface.swift in Sources */,
-				B671B5512A39FA1700BA4F24 /* NicknameInterface.swift in Sources */,
+				9952F9374F155BA7BFEE5D02 /* NicknameInterface.swift in Sources */,
+				63F8672FD8FEBFD5E3D45B05 /* SignUpInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

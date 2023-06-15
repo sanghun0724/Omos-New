@@ -23,7 +23,6 @@
 		94B5488E67A9FD7BF4B5BB43 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16E920C2B558AF27B53040D /* Kingfisher.framework */; platformFilter = ios; };
 		9F40BEC41A6655D9B23DA705 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EC6253B97A8FD13C42E979 /* Alamofire.framework */; platformFilter = ios; };
 		A2A541986D0F2BC3CEE5D34D /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E9DEADA8959F12B901E538 /* ReactorKit.framework */; platformFilter = ios; };
-		A36BCC601BDABD9B2A7BDE0B /* MyConstants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E5F8CF59652B3539AB471C /* MyConstants.framework */; platformFilter = ios; };
 		A79B558A08765C27D5E6E80D /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C4CCB01671E5A1032A2F47 /* KakaoSDKCommon.framework */; platformFilter = ios; };
 		AAE934EE38215F5CC29C4732 /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5470BD6D4637539C594229C /* KakaoSDKTalk.framework */; platformFilter = ios; };
 		B03FA9AC37865C85B158ACA0 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC539C58410B8E382ACA432 /* NeedleFoundation.framework */; platformFilter = ios; };
@@ -73,7 +72,6 @@
 		C5F893FFD9655D2F953BD548 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84E08FD256B4A0FDC2C829E /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00EE0929CD624CB6190145E /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
-		D0E5F8CF59652B3539AB471C /* MyConstants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyConstants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D636D3A773CF392E99100664 /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE97BAA2C9F84404C4911BD /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2D2FBBBBDD611C7F2892FF /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,7 +98,6 @@
 				FD56C9CD5640891F13149C6B /* KakaoSDKUser.framework in Frameworks */,
 				94B5488E67A9FD7BF4B5BB43 /* Kingfisher.framework in Frameworks */,
 				60359700DD83FD22C5C4B4D1 /* LogFlume.framework in Frameworks */,
-				A36BCC601BDABD9B2A7BDE0B /* MyConstants.framework in Frameworks */,
 				B03FA9AC37865C85B158ACA0 /* NeedleFoundation.framework in Frameworks */,
 				8B45D295A4FF20DDF82391C9 /* RIBs.framework in Frameworks */,
 				A2A541986D0F2BC3CEE5D34D /* ReactorKit.framework in Frameworks */,
@@ -178,7 +175,6 @@
 				FD6F8E2658214A2653CB6C25 /* KakaoSDKUser.framework */,
 				B16E920C2B558AF27B53040D /* Kingfisher.framework */,
 				9D93D40DAE29E7DE3858E2FF /* LogFlume.framework */,
-				D0E5F8CF59652B3539AB471C /* MyConstants.framework */,
 				3EC539C58410B8E382ACA432 /* NeedleFoundation.framework */,
 				90E9DEADA8959F12B901E538 /* ReactorKit.framework */,
 				732E88731F1F3C93BFCBF158 /* ReactorKitRuntime.framework */,
@@ -219,7 +215,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD0F690B01E23339E3E490D5 /* Build configuration list for PBXNativeTarget "GlobalThirdPartyLibrary" */;
 			buildPhases = (
-				04FF8A410B3966E8817F1787 /* SwiftLint */,
 				5EA738AF3EE618F91E914B64 /* Sources */,
 				500DB650B2B479317100E9CF /* Resources */,
 				A387C73A9FFB35B975B60F43 /* Embed Frameworks */,
@@ -271,27 +266,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		04FF8A410B3966E8817F1787 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5EA738AF3EE618F91E914B64 /* Sources */ = {

@@ -17,7 +17,8 @@ enum TodayTarget {
 
 extension TodayTarget: TargetType {
     var baseURL: String {
-       RestApiUrl.restUrl + "/today"
+      // RestApiUrl.restUrl + "/today"
+        ""
     }
 
     var method: HTTPMethod {

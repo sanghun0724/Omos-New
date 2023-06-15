@@ -8,5 +8,6 @@ let project = Project.makeModule(
     targets: [],
     internalDependencies: [
         .shared(target: .GlobalThirdPartyLibrary),
+        .shared(target: .AppFoundation)
     ]
 )

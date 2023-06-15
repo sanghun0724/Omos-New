@@ -29,7 +29,8 @@ enum RecordTarget {
 
 extension RecordTarget: TargetType {
     var baseURL: String {
-        RestApiUrl.restUrl + "/records"
+       // RestApiUrl.restUrl + "/records"
+        ""
     }
 
     var method: HTTPMethod {

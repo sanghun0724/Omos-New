@@ -8,7 +8,7 @@ let project = Project.makeModule(
     targets: [.testing, .interface, .unitTest, .uiTest, .demo],
     internalDependencies: [
         .feature(target: .BaseFeature),
-        .feature(target: .SignUpFeature),
+        .feature(target: .SignUpFeature, type: .interface),
         .domain(target: .OnboardingDomain)
     ]
 )

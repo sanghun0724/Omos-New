@@ -29,8 +29,6 @@ let dependencies = Dependencies(
                     requirement: .branch("master")),
             .remote(url: "https://github.com/RxSwiftCommunity/RxGesture.git",
                     requirement: .upToNextMajor(from: "4.0.4")),
-            .remote(url: "https://github.com/sanghun0724/SHLEE.git",
-                    requirement: .branch("main"))
         ],
         baseSettings: .settings(
             configurations: [

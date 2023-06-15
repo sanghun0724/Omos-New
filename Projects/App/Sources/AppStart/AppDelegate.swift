@@ -12,9 +12,6 @@ import KakaoSDKAuth
 import KakaoSDKCommon
 import LogFlume
 
-/// import once and use it globally
-public typealias log = LogFlume
-
 @UIApplicationMain
 class AppDelegate:
     UIResponder,

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,11 +11,10 @@
 		34969142BC786A721473C9C1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C56405DAFB62247F645C433 /* Strings.swift */; };
 		4190A9807292BA56E87F6738 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E90AF518BF29C9150D527 /* Constant.swift */; };
 		72293CA2AEB33180F0AE2F01 /* UtilitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0768796658CDDB6084B08585 /* UtilitiesTest.swift */; };
-		726C75DA89384A79E86FD87E /* Ribs+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B222F1CE7FA3893376E00ECC /* Ribs+Util.swift */; };
 		80B55DBE6F0A721E61679600 /* TokenUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8F941B111FF722C4A5E98 /* TokenUtil.swift */; };
 		A9E7ED2974C334F47F7E1CC1 /* PropertyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9200F26C7672B8C4C87B40 /* PropertyBuilder.swift */; };
 		AB9DF2F1D720C500F141E3CC /* PropertyBuilderCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108524B4DE2A48C3DB9A338 /* PropertyBuilderCompatible.swift */; };
-		B671B54F2A39F15900BA4F24 /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B671B54E2A39F15900BA4F24 /* AnyOptional.swift */; };
+		C50C8EBD71E4C9ECD783623C /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F25E3F394A87C1191C0A167 /* AnyOptional.swift */; };
 		D6AA6AC09C59E6CE4D2DA237 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF22233356DA351A88445D1 /* libAppFoundation.a */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
@@ -60,10 +59,9 @@
 		4D9200F26C7672B8C4C87B40 /* PropertyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyBuilder.swift; sourceTree = "<group>"; };
 		68187B3E9D1AD9552B094837 /* AppFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9714EA9379B6515C38556A /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		8F25E3F394A87C1191C0A167 /* AnyOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
 		9DA8F941B111FF722C4A5E98 /* TokenUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtil.swift; sourceTree = "<group>"; };
 		A108524B4DE2A48C3DB9A338 /* PropertyBuilderCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyBuilderCompatible.swift; sourceTree = "<group>"; };
-		B222F1CE7FA3893376E00ECC /* Ribs+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ribs+Util.swift"; sourceTree = "<group>"; };
-		B671B54E2A39F15900BA4F24 /* AnyOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
 		CDF22233356DA351A88445D1 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60CB104BE32F59862C50764 /* AppFoundationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AppFoundationTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,11 +149,10 @@
 			children = (
 				6603F9272DA9F97832BF295C /* Constants */,
 				0D4DFB66280314DF91E78529 /* Generated */,
+				8F25E3F394A87C1191C0A167 /* AnyOptional.swift */,
 				4D9200F26C7672B8C4C87B40 /* PropertyBuilder.swift */,
 				A108524B4DE2A48C3DB9A338 /* PropertyBuilderCompatible.swift */,
-				B222F1CE7FA3893376E00ECC /* Ribs+Util.swift */,
 				9DA8F941B111FF722C4A5E98 /* TokenUtil.swift */,
-				B671B54E2A39F15900BA4F24 /* AnyOptional.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -202,7 +199,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AF90FDDB4EEEBE087D725B8 /* Build configuration list for PBXNativeTarget "AppFoundation" */;
 			buildPhases = (
-				12520AE17A928A3ADC236048 /* SwiftLint */,
 				D2BD9AC4536A00E91F22FFC7 /* Sources */,
 				9AFEB7B8DB6511896ABCB1DE /* Resources */,
 				E4AD2D28572F511FBA531959 /* Embed Frameworks */,
@@ -221,7 +217,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EE286F659B9A39F3A2FC1CD /* Build configuration list for PBXNativeTarget "AppFoundationTests" */;
 			buildPhases = (
-				27DDA5FE0EE30A35CEC92D7C /* SwiftLint */,
 				1C1663BCF254BB442DC17131 /* Sources */,
 				1C0426F9850E96C74BC7D705 /* Resources */,
 				D60E93C4905BA10ED248F041 /* Embed Frameworks */,
@@ -244,6 +239,8 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = C3C091DFC3D9EFA506646AD5 /* Build configuration list for PBXProject "AppFoundation" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -281,45 +278,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		12520AE17A928A3ADC236048 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-		27DDA5FE0EE30A35CEC92D7C /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		1C1663BCF254BB442DC17131 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -333,13 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50C8EBD71E4C9ECD783623C /* AnyOptional.swift in Sources */,
 				4190A9807292BA56E87F6738 /* Constant.swift in Sources */,
 				08F4A2E69DEB1795F70D03D7 /* Assets.swift in Sources */,
-				B671B54F2A39F15900BA4F24 /* AnyOptional.swift in Sources */,
 				34969142BC786A721473C9C1 /* Strings.swift in Sources */,
 				A9E7ED2974C334F47F7E1CC1 /* PropertyBuilder.swift in Sources */,
 				AB9DF2F1D720C500F141E3CC /* PropertyBuilderCompatible.swift in Sources */,
-				726C75DA89384A79E86FD87E /* Ribs+Util.swift in Sources */,
 				80B55DBE6F0A721E61679600 /* TokenUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

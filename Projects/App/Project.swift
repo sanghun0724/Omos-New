@@ -35,9 +35,9 @@ let targets: [Target] = [
         resources: ["Resources/**"],
         scripts: scripts,
         dependencies: [
-            .feature(target: .LoggedInFeature),
-            .feature(target: .SignUpFeature),
-            .feature(target: .TodayFeature),
+            .feature(target: .LoggedInFeature, type: .interface),
+            .feature(target: .SignUpFeature, type: .interface),
+            .feature(target: .TodayFeature, type: .interface),
         ],
         settings: .settings(base: env.baseSetting)
     )
