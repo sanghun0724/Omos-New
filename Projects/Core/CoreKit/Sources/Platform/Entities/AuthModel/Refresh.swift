@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct RefreshRequest: Codable {
-    let accessToken: String
-    let refreshToken: String
-    let userId: Int
+public struct RefreshRequest: Codable {
+    public let accessToken: String
+    public let refreshToken: String
+    public let userId: Int
 }
 
-struct RefreshRespone: Codable {
-    let accessToken: String
-    let refreshToken: String
-    let userId: Int
+public struct RefreshRespone: Codable {
+    public let accessToken: String
+    public let refreshToken: String
+    public let userId: Int
 }

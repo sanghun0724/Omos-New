@@ -8,30 +8,52 @@
 import Foundation
 
 /// Local Login
-struct LoginRequest: Codable {
-    let email: String
-    let password: String
+public struct LoginRequest: Codable {
+    public let email: String
+    public let password: String
+    
+    public init(email: String, password: String) {
+        self.email = email
+        self.password = password
+    }
 }
 
-struct LoginResponse: Codable {
-    let userId: Int
-    let accessToken: String
-    let refreshToken: String
+public struct LoginResponse: Codable {
+    public let userId: Int
+    public let accessToken: String
+    public let refreshToken: String
+    
+    public init(userId: Int, accessToken: String, refreshToken: String) {
+        self.userId = userId
+        self.accessToken = accessToken
+        self.refreshToken = refreshToken
+    }
 }
 
 /// SNS Login (KAKAO,APPLE)
-struct SNSLoginRequest: Codable {
-    let email: String
-    let type: SNSType
+public struct SNSLoginRequest: Codable {
+    public let email: String
+    public let type: SNSType
+    
+    public init(email: String, type: SNSType) {
+        self.email = email
+        self.type = type
+    }
 }
 
-enum SNSType: String, Codable {
+public enum SNSType: String, Codable {
     case KAKAO
     case APPLE
 }
 
-struct SNSLoginResponse: Codable {
-    let userId: Int
-    let accessToken: String
-    let refreshToken: String
+public struct SNSLoginResponse: Codable {
+    public let userId: Int
+    public let accessToken: String
+    public let refreshToken: String
+    
+    public init(userId: Int, accessToken: String, refreshToken: String) {
+        self.userId = userId
+        self.accessToken = accessToken
+        self.refreshToken = refreshToken
+    }
 }

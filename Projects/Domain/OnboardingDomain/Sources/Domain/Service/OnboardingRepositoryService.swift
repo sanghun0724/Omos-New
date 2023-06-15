@@ -11,6 +11,9 @@ import Foundation
 import RxRelay
 import RxSwift
 
+import AppFoundation
+import CoreKit
+
 public protocol OnboardingRepositoryService {
     func login(email: String, password: String) -> Observable<Bool>
     func signUp() -> Observable<Bool>
