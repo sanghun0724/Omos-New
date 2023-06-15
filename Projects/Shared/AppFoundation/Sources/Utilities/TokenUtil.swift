@@ -9,11 +9,13 @@ import Foundation
 
 import Security
  
-class TokenUtils {
+public class TokenUtils {
+    
+    public init() {}
     
     // Create
  // service 파라미터는 url주소를 의미
-    func create(_ service: String, account: String, value: String) {
+    public func create(_ service: String, account: String, value: String) {
         
         // 1. query작성
         let keyChainQuery: NSDictionary = [
@@ -34,7 +36,7 @@ class TokenUtils {
     }
     
     // Read
-    func read(_ service: String, account: String) -> String? {
+    public func read(_ service: String, account: String) -> String? {
         let KeyChainQuery: NSDictionary = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrService: service,
@@ -60,7 +62,7 @@ class TokenUtils {
     }
     
     // Delete
-    func delete(_ service: String, account: String) {
+    public func delete(_ service: String, account: String) {
         let keyChainQuery: NSDictionary = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrService: service,

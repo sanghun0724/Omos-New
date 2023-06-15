@@ -5,7 +5,8 @@
 //  Created by sangheon on 2023/06/10.
 //
 
-import Foundation
+import AppFoundation
+import CoreKit
 
 struct NicknamePresentableState: HasLoadingState, HasErrorState {
     var revision = 0 

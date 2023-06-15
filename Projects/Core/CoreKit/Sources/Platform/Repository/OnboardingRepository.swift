@@ -9,7 +9,7 @@ import RxSwift
 
 // MARK: - LoginRepository
 
-protocol OnboardingRepository {
+public protocol OnboardingRepository {
     /// 로컬 로그인
     func login(request: LoginRequest) -> Single<LoginResponse>
     /// 로컬 회원가입

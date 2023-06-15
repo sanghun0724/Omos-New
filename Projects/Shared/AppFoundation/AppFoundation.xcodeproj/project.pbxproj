@@ -14,6 +14,7 @@
 		80B55DBE6F0A721E61679600 /* TokenUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8F941B111FF722C4A5E98 /* TokenUtil.swift */; };
 		A9E7ED2974C334F47F7E1CC1 /* PropertyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9200F26C7672B8C4C87B40 /* PropertyBuilder.swift */; };
 		AB9DF2F1D720C500F141E3CC /* PropertyBuilderCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108524B4DE2A48C3DB9A338 /* PropertyBuilderCompatible.swift */; };
+		B8AEC5B84D100BE1C2E80D1C /* ReactorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C416F75396ADD14AB44EB264 /* ReactorValue.swift */; };
 		C50C8EBD71E4C9ECD783623C /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F25E3F394A87C1191C0A167 /* AnyOptional.swift */; };
 		D6AA6AC09C59E6CE4D2DA237 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF22233356DA351A88445D1 /* libAppFoundation.a */; platformFilter = ios; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		8F25E3F394A87C1191C0A167 /* AnyOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
 		9DA8F941B111FF722C4A5E98 /* TokenUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtil.swift; sourceTree = "<group>"; };
 		A108524B4DE2A48C3DB9A338 /* PropertyBuilderCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyBuilderCompatible.swift; sourceTree = "<group>"; };
+		C416F75396ADD14AB44EB264 /* ReactorValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorValue.swift; sourceTree = "<group>"; };
 		CDF22233356DA351A88445D1 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60CB104BE32F59862C50764 /* AppFoundationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AppFoundationTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +154,7 @@
 				8F25E3F394A87C1191C0A167 /* AnyOptional.swift */,
 				4D9200F26C7672B8C4C87B40 /* PropertyBuilder.swift */,
 				A108524B4DE2A48C3DB9A338 /* PropertyBuilderCompatible.swift */,
+				C416F75396ADD14AB44EB264 /* ReactorValue.swift */,
 				9DA8F941B111FF722C4A5E98 /* TokenUtil.swift */,
 			);
 			path = Utilities;
@@ -297,6 +300,7 @@
 				34969142BC786A721473C9C1 /* Strings.swift in Sources */,
 				A9E7ED2974C334F47F7E1CC1 /* PropertyBuilder.swift in Sources */,
 				AB9DF2F1D720C500F141E3CC /* PropertyBuilderCompatible.swift in Sources */,
+				B8AEC5B84D100BE1C2E80D1C /* ReactorValue.swift in Sources */,
 				80B55DBE6F0A721E61679600 /* TokenUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

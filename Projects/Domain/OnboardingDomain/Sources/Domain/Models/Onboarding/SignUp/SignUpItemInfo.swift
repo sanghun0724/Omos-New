@@ -5,7 +5,7 @@
 //  Created by sangheon on 2023/06/03.
 //
 
-import Foundation
+import AppFoundation
 
 // MARK: - SigUpItemInfo
 

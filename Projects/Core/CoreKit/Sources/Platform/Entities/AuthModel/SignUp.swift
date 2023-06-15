@@ -7,40 +7,60 @@
 
 import Foundation
 
-struct SignUpRequest: Codable {
-    let email: String
-    let nickname: String
-    let password: String
+public struct SignUpRequest: Codable {
+    public let email: String
+    public let nickname: String
+    public let password: String
+    
+    public init(email: String, nickname: String, password: String) {
+        self.email = email
+        self.nickname = nickname
+        self.password = password
+    }
 }
 
-struct SignUpResponse: Codable {
-    let state: Bool
+public struct SignUpResponse: Codable {
+    public let state: Bool
 }
 
-struct CheckEmailRequest: Codable {
-    let email: String
+public struct CheckEmailRequest: Codable {
+    public let email: String
+    
+    public init(email: String) {
+        self.email = email
+    }
 }
 
-struct CheckEmailResponse: Codable {
-    let state: Bool
+public struct CheckEmailResponse: Codable {
+    public let state: Bool
 }
 
-struct SNSSignUpRequest: Codable {
-    let email: String
-    let nickname: String
-    let type: SNSType
+public struct SNSSignUpRequest: Codable {
+    public let email: String
+    public let nickname: String
+    public let type: SNSType
+    
+    public init(email: String, nickname: String, type: SNSType) {
+        self.email = email
+        self.nickname = nickname
+        self.type = type
+    }
 }
 
-struct SNSSignUpResponse: Codable {
-    let userId: Int
-    let accessToken: String
-    let refreshToken: String
+public struct SNSSignUpResponse: Codable {
+    public let userId: Int
+    public let accessToken: String
+    public let refreshToken: String
 }
 
-struct EmailValidationRequest: Codable {
-    let email: String
+public struct EmailValidationRequest: Codable {
+    public let email: String
+    
+    public init(email: String) {
+        self.email = email
+    }
 }
 
-struct EmailValidationResponse: Codable {
-    let code: String
+public struct EmailValidationResponse: Codable {
+    public let code: String
 }
