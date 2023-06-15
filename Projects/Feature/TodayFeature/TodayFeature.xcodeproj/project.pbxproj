@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,7 +30,7 @@
 		A39204E28C1D72EBB1E5CD5D /* GlobalThirdPartyLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49ABB25DCF991006577DDB0A /* GlobalThirdPartyLibrary.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A59E9FAA6ED5FAE6CBB8D7D8 /* TodayFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD126FA70A19199A5214851D /* TodayFeatureInterface.framework */; platformFilter = ios; };
 		A7554A737A09A78CC8EE29F7 /* BaseFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113FFF7D4FD8E5570B9C03CD /* BaseFeature.framework */; platformFilter = ios; };
-		BB51CFD72496F34988079504 /* TodayInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8FD528D4B6179507E1BFC1 /* TodayInterface.swift */; };
+		C08C9B8D49AD64021494AA1B /* TodayInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98006F23F6A7B1249B9D444 /* TodayInterface.swift */; };
 		C2450EF389B9CA537D3E4349 /* TodayFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD126FA70A19199A5214851D /* TodayFeatureInterface.framework */; platformFilter = ios; };
 		D2FD0EE6A507FAAA38D1586C /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6956EF1C1F4BAB077DACEE2 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D302C25C7B3156EB92D9B1E1 /* TodayBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD13AFB032CEB332F355C96E /* TodayBuilder.swift */; };
@@ -199,10 +199,10 @@
 		BB7C24C11F4B3747F9EE6532 /* TodayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayInteractor.swift; sourceTree = "<group>"; };
 		BD13AFB032CEB332F355C96E /* TodayBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBuilder.swift; sourceTree = "<group>"; };
 		C0D55012F6CDDC458AF80B54 /* TodayFeatureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayFeatureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98006F23F6A7B1249B9D444 /* TodayInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayInterface.swift; sourceTree = "<group>"; };
 		CD4245FF17618E4B75579986 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		D6956EF1C1F4BAB077DACEE2 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD126FA70A19199A5214851D /* TodayFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TodayFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD8FD528D4B6179507E1BFC1 /* TodayInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayInterface.swift; sourceTree = "<group>"; };
 		F9387D8F495F9E13157A751B /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5844868633B5C45373F5C0 /* TodayFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TodayFeatureUITests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -365,7 +365,7 @@
 		95CC196795412D1C2C4CC901 /* Testing */ = {
 			isa = PBXGroup;
 			children = (
-				DD8FD528D4B6179507E1BFC1 /* TodayInterface.swift */,
+				C98006F23F6A7B1249B9D444 /* TodayInterface.swift */,
 			);
 			path = Testing;
 			sourceTree = "<group>";
@@ -418,7 +418,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D353CB932F0033C5BD77F55 /* Build configuration list for PBXNativeTarget "TodayFeatureInterface" */;
 			buildPhases = (
-				1292C8D7B5AA348F1336B8C8 /* SwiftLint */,
 				1BF8E6F689BE351B7E151583 /* Sources */,
 				57478CB8C980656D08298C67 /* Resources */,
 				4C33BCFB8C52634252EA785D /* Embed Frameworks */,
@@ -437,7 +436,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83CF9492AB2F5418A4180413 /* Build configuration list for PBXNativeTarget "TodayFeatureUITests" */;
 			buildPhases = (
-				0C0EC1E54561D18BF891D58B /* SwiftLint */,
 				BD07D00725BBC10E0EBC46A9 /* Sources */,
 				F8488E4905801D6F969BCFDD /* Resources */,
 				E8D9558779826C3D050D79CF /* Embed Frameworks */,
@@ -458,7 +456,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FC262A555F565C311E56281 /* Build configuration list for PBXNativeTarget "TodayFeatureTesting" */;
 			buildPhases = (
-				27C6E6C7361164E0802DEDC3 /* SwiftLint */,
 				1437B20C596B464D8ACC52F8 /* Sources */,
 				D6E1AAF649E89656846E65CA /* Resources */,
 				674BCF433F6B1279FB26B535 /* Embed Frameworks */,
@@ -478,7 +475,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7EB6B51F2A4F283893607D1 /* Build configuration list for PBXNativeTarget "TodayFeature" */;
 			buildPhases = (
-				B9F71257B49F806CFB39CA85 /* SwiftLint */,
 				6AC13B80A47BF0F0750BEB7D /* Sources */,
 				96A7C4EA7ED6558F2B9BBA20 /* Resources */,
 				7416267F62B2FBB2D0B41760 /* Embed Frameworks */,
@@ -498,7 +494,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED98E6A2416D7805B93F3771 /* Build configuration list for PBXNativeTarget "TodayFeatureTests" */;
 			buildPhases = (
-				DF71AB54D4DE57AB61E0570D /* SwiftLint */,
 				626228B75172A26C62133C23 /* Sources */,
 				524C41EBC57EE3097F27B296 /* Resources */,
 				576868389FF1A379E84C6370 /* Embed Frameworks */,
@@ -519,7 +514,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46510C2F6D9FD9DABC238FB5 /* Build configuration list for PBXNativeTarget "TodayFeatureDemoApp" */;
 			buildPhases = (
-				149554ADB49891651611C13F /* SwiftLint */,
 				AE9F6C343D1E417429BD2D63 /* Sources */,
 				7D3AFD7113130FAB1F99E187 /* Resources */,
 				570064EFF75973D1A649D48A /* Embed Frameworks */,
@@ -621,123 +615,12 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0C0EC1E54561D18BF891D58B /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-		1292C8D7B5AA348F1336B8C8 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-		149554ADB49891651611C13F /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-		27C6E6C7361164E0802DEDC3 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-		B9F71257B49F806CFB39CA85 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-		DF71AB54D4DE57AB61E0570D /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		1437B20C596B464D8ACC52F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB51CFD72496F34988079504 /* TodayInterface.swift in Sources */,
+				C08C9B8D49AD64021494AA1B /* TodayInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

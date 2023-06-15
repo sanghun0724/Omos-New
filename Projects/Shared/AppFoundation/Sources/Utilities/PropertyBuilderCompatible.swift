@@ -23,12 +23,12 @@ public extension PropertyBuilderCompatible {
 
 // MARK: - NSObject + PropertyBuilderCompatible
 
-public extension NSObject: PropertyBuilderCompatible {}
+extension NSObject: PropertyBuilderCompatible {}
 
 // MARK: - JSONEncoder + PropertyBuilderCompatible
 
-public extension JSONEncoder: PropertyBuilderCompatible {}
+extension JSONEncoder: PropertyBuilderCompatible {}
 
 // MARK: - JSONDecoder + PropertyBuilderCompatible
 
-public extension JSONDecoder: PropertyBuilderCompatible {}
+extension JSONDecoder: PropertyBuilderCompatible {}

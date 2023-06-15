@@ -8,7 +8,6 @@
 import Foundation
 
 import Security
-import Alamofire
  
 class TokenUtils {
     
@@ -72,13 +71,13 @@ class TokenUtils {
         assert(status == noErr, "failed to delete the value, status code = \(status)")
     }
     
-    // HTTPHeaders 구성
-    func getAuthorizationHeader(serviceID: String) -> HTTPHeaders? {
-        let serviceID = serviceID
-        if let accessToken = self.read(serviceID, account: "accessToken") {
-            return ["Authorization" : "bearer \(accessToken)"] as HTTPHeaders
-        } else {
-            return nil
-        }
-    }
+//    // HTTPHeaders 구성
+//    func getAuthorizationHeader(serviceID: String) -> HTTPHeaders? {
+//        let serviceID = serviceID
+//        if let accessToken = self.read(serviceID, account: "accessToken") {
+//            return ["Authorization" : "bearer \(accessToken)"] as HTTPHeaders
+//        } else {
+//            return nil
+//        }
+//    }
 }

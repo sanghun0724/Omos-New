@@ -15,7 +15,8 @@ enum BlockTarget {
 
 extension BlockTarget: TargetType {
     var baseURL: String {
-        RestApiUrl.restUrl + "/block"
+       // RestApiUrl.restUrl + "/block"
+        ""
     }
 
     var method: HTTPMethod {

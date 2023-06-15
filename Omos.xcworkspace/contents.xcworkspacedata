@@ -101,9 +101,6 @@
                      location = "group:RxSwift/RxSwift.xcodeproj">
                   </FileRef>
                   <FileRef
-                     location = "group:SHLEE/MyConstants.xcodeproj">
-                  </FileRef>
-                  <FileRef
                      location = "group:SkeletonView/SkeletonView.xcodeproj">
                   </FileRef>
                   <FileRef

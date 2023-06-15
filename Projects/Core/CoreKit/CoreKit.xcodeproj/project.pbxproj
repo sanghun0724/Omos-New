@@ -21,6 +21,7 @@
 		2A8137C85E1F9CEC4CF41818 /* Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA2716CF5FA216FC873933 /* Select.swift */; };
 		2D88BCA9A6024F3528373C9F /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161C66E498EB95DA32056C4F /* Artist.swift */; };
 		317AD7E48FE7297B563F8883 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5F08CCC7547DC145EE9E4 /* Album.swift */; };
+		45C64189D3F33428D1488E34 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9079EFCF6ADCA79132938DB /* libAppFoundation.a */; platformFilter = ios; };
 		51A0C13C046A9DE82C0AE56D /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0575BD15390ED22D354CE0 /* UserDetail.swift */; };
 		5B0885F4F029FE601C163371 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99133C7BB8685E94473F870 /* SignUp.swift */; };
 		65CA8F84792EE07A0362E40E /* MyAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC383FC38AFAC16C49776CC /* MyAuthenticator.swift */; };
@@ -47,6 +48,7 @@
 		DF52B0CF131CC5CD34AA2548 /* ArtistDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078BF909A104365502169B8C /* ArtistDetail.swift */; };
 		E7B70C5326C3EF36F05E7CE1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04118D6F3865B3B58BE3C2AB /* Networking.swift */; };
 		E9A145F9A55ABD2ED860A9D1 /* AwsS3Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DE057BEF51F394CF319B63 /* AwsS3Target.swift */; };
+		F6CAABDF9F1E55C145F50E12 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C7DF0B2FD48D83FD00760D /* APIKeys.swift */; };
 		F7747FD6FDE1644DA23A9D9D /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D021161D60715A436AC0DA /* MyProfile.swift */; };
 		FC9493DE9809C6D612C5EF5C /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D63D4CCC0D43AEA19BAFF /* Track.swift */; };
 		FF4F1A54870DFFA5790C9825 /* LoginTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E53B15DBC1280543CE8DD4B /* LoginTarget.swift */; };
@@ -80,6 +82,7 @@
 		4DC383FC38AFAC16C49776CC /* MyAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAuthenticator.swift; sourceTree = "<group>"; };
 		4DC959D2F3E389914A1F4BD1 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
 		4E53B15DBC1280543CE8DD4B /* LoginTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTarget.swift; sourceTree = "<group>"; };
+		53C7DF0B2FD48D83FD00760D /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		56809BB3D6A752319EE1F060 /* BlockTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTarget.swift; sourceTree = "<group>"; };
 		601BB4DE6E9C472F56D461AC /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		64DA2716CF5FA216FC873933 /* Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select.swift; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 		E99133C7BB8685E94473F870 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		F4C5C47A614CDCEB20875E59 /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F58394A1C1BE1152F8B2D9 /* MyProfileTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTarget.swift; sourceTree = "<group>"; };
+		F9079EFCF6ADCA79132938DB /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA98E8D867FD0FFCEFE5E29E /* MyRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestInterceptor.swift; sourceTree = "<group>"; };
 		FD59E6B4563528F9FC52AA01 /* InteractionTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionTarget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45C64189D3F33428D1488E34 /* libAppFoundation.a in Frameworks */,
 				7DEC686C660E47699E295A5D /* GlobalThirdPartyLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				D264DF5D057C0C88E2A48F84 /* Network */,
+				53C7DF0B2FD48D83FD00760D /* APIKeys.swift */,
 				04118D6F3865B3B58BE3C2AB /* Networking.swift */,
 			);
 			path = DataSource;
@@ -391,6 +397,7 @@
 			children = (
 				0AF1AC8D03B8C8961347014F /* CoreKit.framework */,
 				F4C5C47A614CDCEB20875E59 /* GlobalThirdPartyLibrary.framework */,
+				F9079EFCF6ADCA79132938DB /* libAppFoundation.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -402,7 +409,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 255501AB67F009BCC18BF817 /* Build configuration list for PBXNativeTarget "CoreKit" */;
 			buildPhases = (
-				671893206C2193A8493215FC /* SwiftLint */,
 				2C0E0868252CADF5427052E3 /* Sources */,
 				83A44A038A3860FF1D5D5450 /* Resources */,
 				2BCCD481C596C669E2468A24 /* Embed Frameworks */,
@@ -455,32 +461,12 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		671893206C2193A8493215FC /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		2C0E0868252CADF5427052E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6CAABDF9F1E55C145F50E12 /* APIKeys.swift in Sources */,
 				1EE6EEB0A7887511377FCF02 /* MyAuthenticationCredential.swift in Sources */,
 				65CA8F84792EE07A0362E40E /* MyAuthenticator.swift in Sources */,
 				17396B65AD0E7ED347BCE0F0 /* AWSHelper.swift in Sources */,

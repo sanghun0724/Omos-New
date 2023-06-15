@@ -20,6 +20,5 @@ let project = Project.makeModule(
         .SPM.SnapKit,
         .SPM.KakaoSDK,
         .SPM.RxGesture,
-        .SPM.MyConstants
     ]
 )

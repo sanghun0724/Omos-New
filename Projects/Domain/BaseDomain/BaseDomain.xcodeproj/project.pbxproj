@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04AF77387F2092C8C2106C37 /* CoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C866E5AE494B52E62622E68E /* CoreKit.framework */; platformFilter = ios; };
+		3E41B5D82FD8328405E34BC7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A83C6062332B89AD8023DCC /* Constant.swift */; };
 		6FC4869F825617BCE1BA9B10 /* BaseDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA02C953DD449F06E5AFAAA4 /* BaseDomain.framework */; platformFilter = ios; };
 		74247226673B8E1CA737E176 /* GlobalThirdPartyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52987675C41A3AF60B75409 /* GlobalThirdPartyLibrary.framework */; platformFilter = ios; };
 		9C938251B60A5BEDDDA20279 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F115CCDE6304F508C3CDC57A /* libAppFoundation.a */; platformFilter = ios; };
@@ -51,6 +52,7 @@
 		1DFBDD3EBFCE0AA7C6C41D6E /* TargetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetTest.swift; sourceTree = "<group>"; };
 		69E4070F02BE79EFFF0CBF51 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		876FF63D00E78F966C39FC50 /* BaseDomain-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BaseDomain-Info.plist"; sourceTree = "<group>"; };
+		8A83C6062332B89AD8023DCC /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		92BD74694EBBC5ED17092A3C /* BaseDomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseDomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA02C953DD449F06E5AFAAA4 /* BaseDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D03584D4A930051353B5F /* BaseDomainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BaseDomainTests-Info.plist"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				7DF72670B18A1E354AAF50A1 /* Derived */,
+				685F2F15BB9ECCCC2D00A010 /* Sources */,
 				6E11BA8A1445D56A8F894B2B /* Tests */,
 				A22D1763551B72592B7FDCEE /* XCConfig */,
 			);
@@ -110,6 +113,14 @@
 				F115CCDE6304F508C3CDC57A /* libAppFoundation.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		685F2F15BB9ECCCC2D00A010 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8A83C6062332B89AD8023DCC /* Constant.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		6E11BA8A1445D56A8F894B2B /* Tests */ = {
@@ -160,7 +171,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7866D89D7DEA0E6C6EF43D90 /* Build configuration list for PBXNativeTarget "BaseDomainTests" */;
 			buildPhases = (
-				4BC950B92F0B6F0BB6E8EF08 /* SwiftLint */,
 				CC4274D0C72AB26DA4C08E10 /* Sources */,
 				DC63A1BADD91317443D666A9 /* Resources */,
 				D73E417582851B5205D39676 /* Embed Frameworks */,
@@ -180,7 +190,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EEE5EA8C34E4B778A15DAF6 /* Build configuration list for PBXNativeTarget "BaseDomain" */;
 			buildPhases = (
-				AACD0B927EFB83A032B2C1C1 /* SwiftLint */,
 				D6985B07623F3FCE68A327B7 /* Sources */,
 				FF6607E66F7D1B4BE582933A /* Resources */,
 				10FBD25152C17CF536CD3822 /* Embed Frameworks */,
@@ -241,45 +250,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4BC950B92F0B6F0BB6E8EF08 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-		AACD0B927EFB83A032B2C1C1 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/SwiftLintRunScript.sh ";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		CC4274D0C72AB26DA4C08E10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -293,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E41B5D82FD8328405E34BC7 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

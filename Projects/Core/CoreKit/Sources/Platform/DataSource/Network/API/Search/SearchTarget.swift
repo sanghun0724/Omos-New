@@ -20,7 +20,8 @@ enum SearchTarget {
 
 extension SearchTarget: TargetType {
     var baseURL: String {
-       RestApiUrl.restUrl + "/search"
+       //RestApiUrl.restUrl + "/search"
+        ""
     }
 
     var method: HTTPMethod {

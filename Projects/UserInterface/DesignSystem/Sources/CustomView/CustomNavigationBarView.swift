@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AppFoundation
 
 public protocol CustomNavigationBarViewAction: AnyObject {
     func titlePressed()

@@ -19,7 +19,8 @@ enum FollowTarget {
 
 extension FollowTarget: TargetType {
     var baseURL: String {
-        RestApiUrl.restUrl + "/follow"
+        //RestApiUrl.restUrl + "/follow"
+        ""
     }
 
     var method: HTTPMethod {

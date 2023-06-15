@@ -7,8 +7,6 @@
 
 import UIKit
 
-import MyConstants
-
 public enum CommonUI {
     static let loginCorner = 4.0
     static let LoginTopViewHeight = 0.6
@@ -24,15 +22,15 @@ public enum Device {
     ]
 }
 
-public enum RestApiUrl {
-#if DEBUG
-    static let restUrl = URLConstants.debugUrl
-#else
-    static let restUrl = URLConstants.relaseURL
-#endif
-}
-
-public enum KakaoKey {
-    static let kakaoKey = KAKAO.Key
-}
+//public enum RestApiUrl {
+//#if DEBUG
+//    static let restUrl = URLConstants.debugUrl
+//#else
+//    static let restUrl = URLConstants.relaseURL
+//#endif
+//}
+//
+//public enum KakaoKey {
+//    static let kakaoKey = KAKAO.Key
+//}
 
