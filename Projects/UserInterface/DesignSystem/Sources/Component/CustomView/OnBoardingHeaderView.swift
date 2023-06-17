@@ -8,7 +8,6 @@
 import UIKit
 
 import AppFoundation
-import PresentationFoundation
 
 class OnBoardingHeaderView: BaseView {
     

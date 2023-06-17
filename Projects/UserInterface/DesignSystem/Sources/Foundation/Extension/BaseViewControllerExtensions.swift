@@ -26,7 +26,7 @@ extension BaseViewController {
     
     @objc
     func navigationBarBackgroundColor() -> UIColor {
-        return Asset.Colors.mainBackground.color
+        return DesignSystemAsset.Colors.mainBackground.color
     }
     
     // Texts

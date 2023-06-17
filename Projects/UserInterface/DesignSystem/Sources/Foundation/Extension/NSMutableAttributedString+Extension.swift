@@ -35,7 +35,7 @@ extension NSMutableAttributedString {
     func orangeHighlight(_ value: String) -> NSMutableAttributedString {
         let attributes: [NSAttributedString.Key: Any] = [
             .font: normalFont,
-            .foregroundColor: Asset.Colors.mainOrange.color
+            .foregroundColor: DesignSystemAsset.Colors.mainOrange.color
         ]
         
         self.append(NSAttributedString(string: value, attributes: attributes))

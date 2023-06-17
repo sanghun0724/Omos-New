@@ -30,8 +30,8 @@ class PasswordTextFieldView: CustomTextFieldView {
         buttonConfiguration.imagePadding = 10
         buttonConfiguration.baseBackgroundColor = .clear
         
-        maskingButton.setImage(Asset.Images.Login.visible1.image, for: .normal)
-        maskingButton.setImage(Asset.Images.Login.visible2.image, for: .selected)
+        maskingButton.setImage(DesignSystemAsset.Login.visible1.image, for: .normal)
+        maskingButton.setImage(DesignSystemAsset.Login.visible2.image, for: .selected)
         maskingButton.configuration = buttonConfiguration
         
         textField.rightView = maskingButton

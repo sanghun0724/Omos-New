@@ -56,9 +56,6 @@
          <FileRef
             location = "group:DesignSystem/DesignSystem.xcodeproj">
          </FileRef>
-         <FileRef
-            location = "group:PresentationFoundation/PresentationFoundation.xcodeproj">
-         </FileRef>
       </Group>
    </Group>
    <Group

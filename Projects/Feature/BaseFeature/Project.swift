@@ -8,7 +8,6 @@ let project = Project.makeModule(
     targets: [.unitTest],
     internalDependencies: [
         .userInterface(target: .DesignSystem),
-        .userInterface(target: .PresentationFoundation),
         .shared(target: .GlobalThirdPartyLibrary),
         .shared(target: .AppFoundation),
     ]

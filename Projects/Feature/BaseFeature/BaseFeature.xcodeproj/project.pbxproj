@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6A1C028B7F6F9D385C1A9D98 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA3F410FF73D6858A79F3C4 /* libAppFoundation.a */; platformFilter = ios; };
-		824EFDF692EEED2716DB6DB5 /* libPresentationFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 806ACEF4A2844DE24011DD05 /* libPresentationFoundation.a */; platformFilter = ios; };
 		8509FFDF2AAB0951FDBA97BB /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF84D2AA289E6D0A5941994 /* DesignSystem.framework */; platformFilter = ios; };
 		B4471EA14D73EFA6959BE22F /* GlobalThirdPartyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B9FC3823CBD13413A91BDC /* GlobalThirdPartyLibrary.framework */; platformFilter = ios; };
 		D7AE354964DD401C0F576762 /* BaseFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94114189EB05064BA4C7E6DE /* BaseFeature.framework */; platformFilter = ios; };
@@ -53,7 +52,6 @@
 		4CF84D2AA289E6D0A5941994 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C62C66A0662A0D0CF6404A /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		7C26367EBA15DA87947EA486 /* BaseFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		806ACEF4A2844DE24011DD05 /* libPresentationFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPresentationFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA3F410FF73D6858A79F3C4 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		94114189EB05064BA4C7E6DE /* BaseFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD786A813AD0C33B5D5349F /* BaseFeature-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BaseFeature-Info.plist"; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 				6A1C028B7F6F9D385C1A9D98 /* libAppFoundation.a in Frameworks */,
 				8509FFDF2AAB0951FDBA97BB /* DesignSystem.framework in Frameworks */,
 				B4471EA14D73EFA6959BE22F /* GlobalThirdPartyLibrary.framework in Frameworks */,
-				824EFDF692EEED2716DB6DB5 /* libPresentationFoundation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +98,6 @@
 				4CF84D2AA289E6D0A5941994 /* DesignSystem.framework */,
 				D3B9FC3823CBD13413A91BDC /* GlobalThirdPartyLibrary.framework */,
 				8DA3F410FF73D6858A79F3C4 /* libAppFoundation.a */,
-				806ACEF4A2844DE24011DD05 /* libPresentationFoundation.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
