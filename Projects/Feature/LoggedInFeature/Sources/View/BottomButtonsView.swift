@@ -24,16 +24,16 @@ class BottomButtonsView: BaseView {
     
     private lazy var decoView = DecoView()
     
-    private lazy var kakaoImageView = UIImageView(image: Asset.Images.Login.kakao.image)
+    private lazy var kakaoImageView = UIImageView(image: DesignSystemAsset.Login.kakao.image)
     
     lazy var kakaoButton = UIButton().builder
-        .backgroundColor(Asset.Colors.kakaoYellow.color)
+        .backgroundColor(DesignSystemAsset.Colors.kakaoYellow.color)
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .with {
             $0.setTitle(Strings.Onboarding.kakao, for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-            $0.setTitleColor(Asset.Colors.kakaoBrownLabel.color, for: .normal)
+            $0.setTitleColor(DesignSystemAsset.Colors.kakaoBrownLabel.color, for: .normal)
         }
         .build()
     

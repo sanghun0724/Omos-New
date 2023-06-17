@@ -218,7 +218,7 @@ extension LoggedInViewController {
 
 extension LoggedInViewController {
     private func setupUI() {
-        contentView.backgroundColor = Asset.Colors.mainBackground.color
+        contentView.backgroundColor = DesignSystemAsset.Colors.mainBackground.color
         contentView.addSubview(scrollView)
         scrollView.addSubview(scrollContentView)
         scrollContentView.addSubview(headerView)

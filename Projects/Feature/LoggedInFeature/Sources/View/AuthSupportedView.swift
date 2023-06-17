@@ -20,7 +20,7 @@ class AuthSupportedView: BaseView {
         .with {
             $0.setTitle("아이디 찾기 | 비밀번호 찾기", for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .light)
-            $0.setTitleColor(Asset.Colors.mainGray4.color, for: .normal)
+            $0.setTitleColor(DesignSystemAsset.Colors.mainGray4.color, for: .normal)
         }
         .build()
     
@@ -28,7 +28,7 @@ class AuthSupportedView: BaseView {
         .with {
             $0.setTitle("회원가입", for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .light)
-            $0.setTitleColor(Asset.Colors.mainGray4.color, for: .normal)
+            $0.setTitleColor(DesignSystemAsset.Colors.mainGray4.color, for: .normal)
         }
         .build()
     

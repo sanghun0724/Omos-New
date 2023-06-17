@@ -9,16 +9,16 @@ import UIKit
 
 class DecoView: BaseView {
     private let leftSepartedLine = UIView().builder
-        .backgroundColor(Asset.Colors.mainGray7.color)
+        .backgroundColor(DesignSystemAsset.Colors.mainGray7.color)
         .build()
     
     private let orLabel = UILabel().builder
         .text("or")
-        .textColor(Asset.Colors.mainGray7.color)
+        .textColor(DesignSystemAsset.Colors.mainGray7.color)
         .build()
 
     private let rightSepartedLine = UIView().builder
-        .backgroundColor(Asset.Colors.mainGray7.color)
+        .backgroundColor(DesignSystemAsset.Colors.mainGray7.color)
         .build()
     
     override func initialize() {
