@@ -8,15 +8,15 @@
 import UIKit
 
 public enum CommonUI {
-    static let loginCorner = 4.0
-    static let LoginTopViewHeight = 0.6
-    static let mainHeight = UIScreen.main.bounds.height
-    static let mainWidth = UIScreen.main.bounds.width
-    static var statuBarHeight: CGFloat = 0.0
+    public static let loginCorner = 4.0
+    public static let LoginTopViewHeight = 0.6
+    public static let mainHeight = UIScreen.main.bounds.height
+    public static let mainWidth = UIScreen.main.bounds.width
+    public static var statuBarHeight: CGFloat = 0.0
 }
 
 public enum Device {
-    static let deviceNames: [String] = [
+    public static let deviceNames: [String] = [
         "iPhone SE",
         "iPhone 11 Pro Max"
     ]

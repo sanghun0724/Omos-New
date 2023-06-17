@@ -79,7 +79,7 @@ final class SignUpViewController:
         .with {
             $0.setTitle(Strings.Onboarding.sendCertificationEmail, for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .light)
-            $0.setTitleColor(Asset.Colors.mainGray4.color, for: .normal)
+            $0.setTitleColor(DesignSystemAsset.Colors.mainGray4.color, for: .normal)
         }
         .build()
     
@@ -135,7 +135,7 @@ extension SignUpViewController {
     }
     
     override func navigationBarLeftButtonImage() -> UIImage? {
-        Asset.Images.Common.arrowLeft.image
+        DesignSystemAsset.Images.Common.arrowLeft.image
     }
 }
 

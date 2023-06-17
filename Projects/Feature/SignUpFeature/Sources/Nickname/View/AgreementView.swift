@@ -28,7 +28,7 @@ class AgreementView: BaseView {
             $0.setTitle("보기", for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 16)
             $0.titleLabel?.textAlignment = .right
-            $0.titleLabel?.textColor = Asset.Colors.mainGray4.color
+            $0.titleLabel?.textColor = DesignSystemAsset.Colors.mainGray4.color
             $0.titleLabel?.attributedText = NSMutableAttributedString().underlined("보기")
         }
         .build()

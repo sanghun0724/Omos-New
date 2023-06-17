@@ -11,14 +11,14 @@ class InfoViewController: UIViewController {
     private lazy var infoView = UITextView().builder
         .adjustsFontForContentSizeCategory(true)
         .allowsEditingTextAttributes(false)
-        .backgroundColor(Asset.Colors.mainBackground.color)
+        .backgroundColor(DesignSystemAsset.Colors.mainBackground.color)
         .textColor(.white)
         .font(.systemFont(ofSize: 16))
         .build()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = Asset.Colors.mainBackground.color
+        self.view.backgroundColor = DesignSystemAsset.Colors.mainBackground.color
         self.view.addSubview(infoView)
     }
 

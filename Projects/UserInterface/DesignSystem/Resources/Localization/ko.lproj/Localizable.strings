@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  RIBsReactorKit
+
+  Created by elon on 2021/03/01.
+  Copyright © 2021 Elon. All rights reserved.
+*/
+
+// MARK: - Common
+
+"common.next"="다음";
+"common.complete"="완료";
+
+// MARK: - Onboarding
+
+"onboarding.loggedIn"="로그인";
+"onboarding.email"="이메일";
+"onboarding.password"="비밀번호";
+"onboarding.emailwarning"="올바른 이메일 형식이 아니에요.";
+"onboarding.passwordwarning"="8~16자의 영문 대소문자, 숫자, 특수문자만 가능해요.";
+"onboarding.kakao"="  Kakao로 로그인";
+"onboarding.signUp"="회원가입";
+"onboarding.sendCertificationEmail"="인증메일 보내기";
+"onboarding.repasswordInvalidation"="재확인 비밀번호가 틀립니다.";
+"onboarding.nickname"="닉네임";
+"onboarding.nicknameWarning"="이미 쓰고 있는 닉네임이에요.";

@@ -77,7 +77,7 @@ final class NicknameViewController:
         .build()
     
     private lazy var separatedLineView = UIView().builder
-        .backgroundColor(Asset.Colors.mainGray7.color)
+        .backgroundColor(DesignSystemAsset.Colors.mainGray7.color)
         .build()
     
     private lazy var termAgreementView = AgreementView().builder
@@ -232,7 +232,7 @@ extension NicknameViewController {
 
 extension NicknameViewController {
     private func setupUI() {
-        contentView.backgroundColor = Asset.Colors.mainBackground.color
+        contentView.backgroundColor = DesignSystemAsset.Colors.mainBackground.color
         contentView.addSubview(headerView)
         contentView.addSubview(nicknameTextFieldView)
         contentView.addSubview(separatedLineView)

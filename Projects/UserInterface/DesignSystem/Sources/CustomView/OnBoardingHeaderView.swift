@@ -7,6 +7,9 @@
 
 import UIKit
 
+import AppFoundation
+import PresentationFoundation
+
 class OnBoardingHeaderView: BaseView {
     
     // MARK: Constants
@@ -18,16 +21,16 @@ class OnBoardingHeaderView: BaseView {
     
     // MARK: - UI Component
     
-    private lazy var logoImageView = UIImageView(image: Asset.Images.Logo.loginlogo.image)
+    private lazy var logoImageView = UIImageView(image: DesignSystemAsset.Logo.loginlogo.image)
         .builder
         .contentMode(.scaleAspectFit)
         .build()
     
     private lazy var titleLabel = UILabel()
         .builder
-        .text(Strings.Onboarding.loggedIn)
+        .text(DesignSystemStrings.Onboarding.loggedIn)
         .font(.systemFont(ofSize: 22))
-        .textColor(Asset.Colors.mainOrange.color)
+        .textColor(DesignSystemAsset.Colors.mainOrange.color)
         .build()
     
     override func initialize() {
