@@ -14,7 +14,7 @@ public protocol CustomNavigationBarViewAction: AnyObject {
     func rightButtonPressed()
 }
 
-class CustomNavigationBarView: UIView {
+public class CustomNavigationBarView: UIView {
 
     lazy var leftImageButton = UIButton()
         .builder

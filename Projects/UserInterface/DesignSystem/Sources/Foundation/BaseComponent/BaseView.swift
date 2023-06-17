@@ -29,21 +29,21 @@ open class BaseView:
     }
     
     @available(*, unavailable)
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
     }
     
-    override func updateConstraints() {
+    open override func updateConstraints() {
         self.setupConstraintsIfNeeded()
         super.updateConstraints()
     }
     
-    func initialize() {
+    open func initialize() {
         // overridePoint
         setNeedsUpdateConstraints()
     }
     
-    func setupConstraints() {
+    open func setupConstraints() {
         // override here
     }
     

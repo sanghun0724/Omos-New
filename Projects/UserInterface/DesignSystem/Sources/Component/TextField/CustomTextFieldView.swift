@@ -40,7 +40,7 @@ class CustomTextFieldView: BaseView {
     
     lazy var rightTopLabel = UILabel().builder
         .font(.systemFont(ofSize: 12, weight: .regular))
-        .textColor(Asset.Colors.mainOrange.color)
+        .textColor(DesignSystemAsset.Colors.mainOrange.color)
         .isHidden(true)
         .build()
     
@@ -54,7 +54,7 @@ class CustomTextFieldView: BaseView {
     
     func setWarningState() {
         rightTopLabel.isHidden = false
-        textField.layer.borderColor = Asset.Colors.mainOrange.color.cgColor
+        textField.layer.borderColor = DesignSystemAsset.Colors.mainOrange.color.cgColor
     }
     
     func setNomalState() {

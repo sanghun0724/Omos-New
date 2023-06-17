@@ -490,20 +490,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A49B8E3B8E9E7F5A94D85494"
-               BuildableName = "libPresentationFoundation.a"
-               BlueprintName = "PresentationFoundation"
-               ReferencedContainer = "container:Projects/UserInterface/PresentationFoundation/PresentationFoundation.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "5687E8D0D1B9941A5EB5467B"
                BuildableName = "RIBs.framework"
                BlueprintName = "RIBs"
