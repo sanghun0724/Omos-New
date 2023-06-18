@@ -9,6 +9,6 @@ let project = Project.makeModule(
     internalDependencies: [
         .feature(target: .BaseFeature),
         .feature(target: .TodayFeature, type: .interface),
-        .domain(target: .OnboardingDomain)
+        .domain(target: .OnboardingDomain, type: .interface)
     ]
 )

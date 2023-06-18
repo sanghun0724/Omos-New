@@ -8,5 +8,6 @@ let project = Project.makeModule(
     targets: [.interface, .testing, .unitTest, .uiTest, .demo],
     internalDependencies: [
         .feature(target: .BaseFeature),
+        .domain(target: .OnboardingDomain, type: .interface)
     ]
 )

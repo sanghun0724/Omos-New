@@ -10,6 +10,6 @@ let project = Project.makeModule(
         .feature(target: .BaseFeature),
         .feature(target: .SignUpFeature, type: .interface),
         .feature(target: .TodayFeature, type: .interface),
-        .domain(target: .OnboardingDomain)
+        .domain(target: .OnboardingDomain, type: .interface)
     ]
 )
