@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4724A585CE20791838139B29"
-               BuildableName = "libAppFoundation.a"
+               BuildableName = "AppFoundation.framework"
                BlueprintName = "AppFoundation"
                ReferencedContainer = "container:AppFoundation.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4724A585CE20791838139B29"
-            BuildableName = "libAppFoundation.a"
+            BuildableName = "AppFoundation.framework"
             BlueprintName = "AppFoundation"
             ReferencedContainer = "container:AppFoundation.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4724A585CE20791838139B29"
-            BuildableName = "libAppFoundation.a"
+            BuildableName = "AppFoundation.framework"
             BlueprintName = "AppFoundation"
             ReferencedContainer = "container:AppFoundation.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4724A585CE20791838139B29"
-            BuildableName = "libAppFoundation.a"
+            BuildableName = "AppFoundation.framework"
             BlueprintName = "AppFoundation"
             ReferencedContainer = "container:AppFoundation.xcodeproj">
          </BuildableReference>

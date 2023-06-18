@@ -30,6 +30,22 @@ let dependencies = Dependencies(
             .remote(url: "https://github.com/RxSwiftCommunity/RxGesture.git",
                     requirement: .upToNextMajor(from: "4.0.4")),
         ],
+        productTypes: [
+            "RxSwift": .framework,
+            "RxCocoa": .framework,
+            "LogFlume" : .framework,
+            "NeedleFoundation" : .framework,
+            "RxDataSources" : .framework,
+            "RIBs" : .framework,
+            "SnapKit" : .framework,
+            "Kingfisher" : .framework,
+            "SkeletonView": .framework,
+            "ReactorKit": .framework,
+            "Alamofire": .framework,
+            "KakaoSDK": .framework,
+            "RxGesture": .framework,
+            "Kingfisher": .framework
+        ],
         baseSettings: .settings(
             configurations: [
                 .debug(name: .dev),

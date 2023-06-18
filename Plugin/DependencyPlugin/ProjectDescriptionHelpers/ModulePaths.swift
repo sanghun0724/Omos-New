@@ -47,6 +47,7 @@ public extension ModulePaths {
 
 public extension ModulePaths {
     enum Shared: String {
+        case DesignSystem
         case AppFoundation
         case GlobalThirdPartyLibrary
         
