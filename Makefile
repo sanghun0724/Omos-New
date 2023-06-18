@@ -26,3 +26,6 @@ init:
 
 signing:
 	swift Scripts/CodeSigning.swift
+	
+gen:
+	needle generate Projects/App/Sources/AppStart/NeedleGenerated.swift Projects/
