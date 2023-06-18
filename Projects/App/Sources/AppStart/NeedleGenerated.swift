@@ -1,12 +1,16 @@
 
 
-import NeedleFoundation
-import RIBs
-
-import OnboardingDomain
-import SignUpFeature
+import CoreKit
 import LoggedInFeature
+import LoggedInFeatureInterface
+import NeedleFoundation
+import OnboardingDomain
+import OnboardingDomainInterface
+import RIBs
+import SignUpFeature
+import SignUpFeatureInterface
 import TodayFeature
+import TodayFeatureInterface
 
 // swiftlint:disable unused_declaration
 private let needleDependenciesHash : String? = nil
@@ -17,18 +21,6 @@ private func parent1(_ component: NeedleFoundation.Scope) -> NeedleFoundation.Sc
     return component.parent
 }
 
-private func parent2(_ component: NeedleFoundation.Scope) -> NeedleFoundation.Scope {
-    return component.parent.parent
-}
-
-private func parent3(_ component: NeedleFoundation.Scope) -> NeedleFoundation.Scope {
-    return component.parent.parent.parent
-}
-
-private func parent4(_ component: NeedleFoundation.Scope) -> NeedleFoundation.Scope {
-    return component.parent.parent.parent.parent
-}
-
 // MARK: - Providers
 
 #if !NEEDLE_DYNAMIC
@@ -36,6 +28,9 @@ private func parent4(_ component: NeedleFoundation.Scope) -> NeedleFoundation.Sc
 private class AppRootDependency9fafbf379aae0424b417Provider: AppRootDependency {
     var onboardingRepositoryService: OnboardingRepositoryService {
         return appComponent.onboardingRepositoryService
+    }
+    var loggedInBuilder: LoggedInBuildable {
+        return appComponent.loggedInBuilder
     }
     private let appComponent: AppComponent
     init(appComponent: AppComponent) {
@@ -46,55 +41,67 @@ private class AppRootDependency9fafbf379aae0424b417Provider: AppRootDependency {
 private func factorya90cb427e52e03443c85f47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
     return AppRootDependency9fafbf379aae0424b417Provider(appComponent: parent1(component) as! AppComponent)
 }
-private class TodayDependencye8b9e53f6319ce1bda30Provider: TodayDependency {
+private class NicknameDependencyf8931c25a2fc8a703ee7Provider: NicknameDependency {
+    var onboardingRepositoryService: OnboardingRepositoryService {
+        return appComponent.onboardingRepositoryService
+    }
+    private let appComponent: AppComponent
+    init(appComponent: AppComponent) {
+        self.appComponent = appComponent
+    }
+}
+/// ^->AppComponent->NicknameComponent
+private func factoryefd4cb58dce6be7a9de5f47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return NicknameDependencyf8931c25a2fc8a703ee7Provider(appComponent: parent1(component) as! AppComponent)
+}
+private class SignUpDependencyf83ac0c64026320e6dc2Provider: SignUpDependency {
+    var onboardingRepositoryService: OnboardingRepositoryService {
+        return appComponent.onboardingRepositoryService
+    }
+    var nicknameBuilder: NicknameBuildable {
+        return appComponent.nicknameBuilder
+    }
+    private let appComponent: AppComponent
+    init(appComponent: AppComponent) {
+        self.appComponent = appComponent
+    }
+}
+/// ^->AppComponent->SignUpComponent
+private func factory306e8ce5cfdf41304709f47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return SignUpDependencyf83ac0c64026320e6dc2Provider(appComponent: parent1(component) as! AppComponent)
+}
+private class TodayDependency18dcebc0d3df0c401f0dProvider: TodayDependency {
 
 
     init() {
 
     }
 }
-/// ^->AppComponent->AppRootComponent->LoggedInComponent->TodayComponent
-private func factoryd6273f0efcff70a3a118e3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
-    return TodayDependencye8b9e53f6319ce1bda30Provider()
+/// ^->AppComponent->TodayComponent
+private func factory1ffc93d9a05b4e8720cae3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return TodayDependency18dcebc0d3df0c401f0dProvider()
 }
-private class NicknameDependency63ceb1589b5d77bf2faaProvider: NicknameDependency {
+private class LoggedInDependencyc7668df81df1c0bef5b1Provider: LoggedInDependency {
     var onboardingRepositoryService: OnboardingRepositoryService {
         return appComponent.onboardingRepositoryService
+    }
+    var loggedInBuilder: LoggedInBuildable {
+        return appComponent.loggedInBuilder
+    }
+    var signUpBulder: SignUpBuildable {
+        return appComponent.signUpBulder
+    }
+    var todayBuilder: TodayBuildable {
+        return appComponent.todayBuilder
     }
     private let appComponent: AppComponent
     init(appComponent: AppComponent) {
         self.appComponent = appComponent
     }
 }
-/// ^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent->NicknameComponent
-private func factoryae4818ff2be45df533d77586110118823dea9ff0(_ component: NeedleFoundation.Scope) -> AnyObject {
-    return NicknameDependency63ceb1589b5d77bf2faaProvider(appComponent: parent4(component) as! AppComponent)
-}
-private class SignUpDependency0bf34c242a7f1d630afcProvider: SignUpDependency {
-    var onboardingRepositoryService: OnboardingRepositoryService {
-        return appComponent.onboardingRepositoryService
-    }
-    private let appComponent: AppComponent
-    init(appComponent: AppComponent) {
-        self.appComponent = appComponent
-    }
-}
-/// ^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent
-private func factory5f472eb0e54edab942a0b2702fa908b4cedb8464(_ component: NeedleFoundation.Scope) -> AnyObject {
-    return SignUpDependency0bf34c242a7f1d630afcProvider(appComponent: parent3(component) as! AppComponent)
-}
-private class LoggedInDependency10f17122804ef957cbfbProvider: LoggedInDependency {
-    var onboardingRepositoryService: OnboardingRepositoryService {
-        return appComponent.onboardingRepositoryService
-    }
-    private let appComponent: AppComponent
-    init(appComponent: AppComponent) {
-        self.appComponent = appComponent
-    }
-}
-/// ^->AppComponent->AppRootComponent->LoggedInComponent
-private func factory2e97267aa2f82879e903b7304b634b3e62c64b3c(_ component: NeedleFoundation.Scope) -> AnyObject {
-    return LoggedInDependency10f17122804ef957cbfbProvider(appComponent: parent2(component) as! AppComponent)
+/// ^->AppComponent->LoggedInComponent
+private func factorybe3fbfd42f44e2df6537f47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return LoggedInDependencyc7668df81df1c0bef5b1Provider(appComponent: parent1(component) as! AppComponent)
 }
 
 #else
@@ -107,12 +114,7 @@ extension AppComponent: Registration {
 extension AppRootComponent: Registration {
     public func registerItems() {
         keyPathToName[\AppRootDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
-
-    }
-}
-extension TodayComponent: Registration {
-    public func registerItems() {
-
+        keyPathToName[\AppRootDependency.loggedInBuilder] = "loggedInBuilder-LoggedInBuildable"
     }
 }
 extension NicknameComponent: Registration {
@@ -123,13 +125,20 @@ extension NicknameComponent: Registration {
 extension SignUpComponent: Registration {
     public func registerItems() {
         keyPathToName[\SignUpDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
+        keyPathToName[\SignUpDependency.nicknameBuilder] = "nicknameBuilder-NicknameBuildable"
+    }
+}
+extension TodayComponent: Registration {
+    public func registerItems() {
 
     }
 }
 extension LoggedInComponent: Registration {
     public func registerItems() {
         keyPathToName[\LoggedInDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
-
+        keyPathToName[\LoggedInDependency.loggedInBuilder] = "loggedInBuilder-LoggedInBuildable"
+        keyPathToName[\LoggedInDependency.signUpBulder] = "signUpBulder-SignUpBuildable"
+        keyPathToName[\LoggedInDependency.todayBuilder] = "todayBuilder-TodayBuildable"
     }
 }
 
@@ -150,10 +159,10 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
 @inline(never) private func register1() {
     registerProviderFactory("^->AppComponent", factoryEmptyDependencyProvider)
     registerProviderFactory("^->AppComponent->AppRootComponent", factorya90cb427e52e03443c85f47b58f8f304c97af4d5)
-    registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent->TodayComponent", factoryd6273f0efcff70a3a118e3b0c44298fc1c149afb)
-    registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent->NicknameComponent", factoryae4818ff2be45df533d77586110118823dea9ff0)
-    registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent->SignUpComponent", factory5f472eb0e54edab942a0b2702fa908b4cedb8464)
-    registerProviderFactory("^->AppComponent->AppRootComponent->LoggedInComponent", factory2e97267aa2f82879e903b7304b634b3e62c64b3c)
+    registerProviderFactory("^->AppComponent->NicknameComponent", factoryefd4cb58dce6be7a9de5f47b58f8f304c97af4d5)
+    registerProviderFactory("^->AppComponent->SignUpComponent", factory306e8ce5cfdf41304709f47b58f8f304c97af4d5)
+    registerProviderFactory("^->AppComponent->TodayComponent", factory1ffc93d9a05b4e8720cae3b0c44298fc1c149afb)
+    registerProviderFactory("^->AppComponent->LoggedInComponent", factorybe3fbfd42f44e2df6537f47b58f8f304c97af4d5)
 }
 #endif
 

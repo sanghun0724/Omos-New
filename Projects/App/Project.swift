@@ -21,7 +21,7 @@ let settings: Settings =
               configurations: configurations,
               defaultSettings: .recommended)
 
-let scripts: [TargetScript] = env.isCI ? [] : [.swiftLint]
+let scripts: [TargetScript] = env.isCI ? [] : [] // ex) .siwftLint
 
 let targets: [Target] = [
     .init(

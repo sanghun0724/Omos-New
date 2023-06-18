@@ -261,7 +261,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 553E603A72934DB25DC6ABEA /* Build configuration list for PBXNativeTarget "Omos" */;
 			buildPhases = (
-				1C7348778E217FAA27CA0D91 /* SwiftLint */,
 				B3EA7B05C4229876B3A8EFE4 /* Sources */,
 				280BED0267068F2BCDA1552E /* Resources */,
 				9C78C62CA1E544BAE9D97108 /* Embed Frameworks */,
@@ -315,27 +314,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1C7348778E217FAA27CA0D91 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../Scripts/SwiftLintRunScript.sh ";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B3EA7B05C4229876B3A8EFE4 /* Sources */ = {

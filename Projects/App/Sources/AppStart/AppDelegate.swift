@@ -10,6 +10,7 @@ import UIKit
 import RIBs
 import KakaoSDKAuth
 import KakaoSDKCommon
+import GlobalThirdPartyLibrary
 import LogFlume
 
 @UIApplicationMain
