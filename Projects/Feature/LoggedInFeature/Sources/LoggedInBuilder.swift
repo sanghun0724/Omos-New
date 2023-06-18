@@ -5,14 +5,15 @@
 //  Created by sangheon on 2023/04/09.
 //
 
-import PresentationFoundation
-import OnboardingDomain
-import TodayFeature
-import SignUpFeature
-import LoggedInFeatureInterface
-
 import NeedleFoundation
 import RIBs
+
+import OnboardingDomain
+import LoggedInFeatureInterface
+//import TodayFeature
+import TodayFeatureInterface
+//import SignUpFeature
+import SignUpFeatureInterface
 
 // MARK: - LoggedInDependency
 
@@ -26,19 +27,7 @@ public typealias LoggedInComponentDependency = Void
 
 // MARK: - LoggedInComponent
 
-public final class LoggedInComponent: NeedleFoundation.Component<LoggedInDependency> {
-    fileprivate var todayBuilder: TodayBuildable {
-      TodayBuilder {
-        TodayComponent(parent: self)
-      }
-    }
-    
-    fileprivate var signUpBulder: SignUpBuildable {
-        SignUpBuilder {
-            SignUpComponent(parent: self)
-        }
-    }
-}
+public final class LoggedInComponent: NeedleFoundation.Component<LoggedInDependency> {}
 
 // MARK: - LoggedInBuilder
 

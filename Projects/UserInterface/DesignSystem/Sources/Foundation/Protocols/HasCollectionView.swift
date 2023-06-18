@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol HasCollectionView {
+public protocol HasCollectionView {
     var collectionView: UICollectionView { get }
 }

@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol ErrorStreamBindable: AnyObject {
+public protocol ErrorStreamBindable: AnyObject {
     func bindErrorStream(from listener: HasErrorStream)
 }
 
-extension ErrorStreamBindable where Self: BaseViewController & HasAlertable & HasDisposeBag {
+public extension ErrorStreamBindable where Self: BaseViewController & HasAlertable & HasDisposeBag {
     func bindErrorStream(from listener: HasErrorStream) {
         listener.myErrorStream
             .distinctUntilChanged()

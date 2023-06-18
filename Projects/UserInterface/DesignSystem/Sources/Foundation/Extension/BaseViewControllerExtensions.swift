@@ -15,71 +15,71 @@ extension BaseViewController {
     
     /// if you need custom NavigaiotionBarView, when doesn't have navigation stack you can override it
     @objc
-    func isNeedCustomNavigationBarView() -> Bool {
+    open func isNeedCustomNavigationBarView() -> Bool {
         navigationController != nil
     }
     
     @objc
-    func navigationBarBottomBorderLineColor() -> UIColor {
+    open func navigationBarBottomBorderLineColor() -> UIColor {
         return .clear
     }
     
     @objc
-    func navigationBarBackgroundColor() -> UIColor {
+    open func navigationBarBackgroundColor() -> UIColor {
         return DesignSystemAsset.Colors.mainBackground.color
     }
     
     // Texts
     
     @objc
-    func navigationBarLeftButtonText() -> String? {
+    open func navigationBarLeftButtonText() -> String? {
         return nil
     }
     
     @objc
-    func navigationBarRightButtonText() -> String? {
+    open func navigationBarRightButtonText() -> String? {
         return nil
     }
     
     // Images
     
     @objc
-    func navigationBarLeftButtonImage() -> UIImage? {
+    open func navigationBarLeftButtonImage() -> UIImage? {
         return nil
     }
     
     @objc
-    func navigationBarRightButtonImage() -> UIImage? {
+    open func navigationBarRightButtonImage() -> UIImage? {
         return nil
     }
     
     @objc
-    func navigationBarTitleText() -> String? {
+    open func navigationBarTitleText() -> String? {
         return nil
     }
     
     @objc
-    func navigationBarTitleImage() -> UIImage? {
+    open func navigationBarTitleImage() -> UIImage? {
         return nil
     }
     
     @objc
-    func navigationBarLeftBtnTextColor() -> UIColor {
+    open func navigationBarLeftBtnTextColor() -> UIColor {
         return .black
     }
     
     @objc
-    func navigationBarRightBtnColor() -> UIColor {
+    open func navigationBarRightBtnColor() -> UIColor {
         return .black
     }
     
     @objc
-    func navigationBarTitleTextColor() -> UIColor {
+    open func navigationBarTitleTextColor() -> UIColor {
         return .black
     }
     
     @objc
-    func navigationBarTitleTextFont() -> UIFont {
+    open func navigationBarTitleTextFont() -> UIFont {
         return .systemFont(ofSize: 16, weight: .bold)
     }
     
@@ -88,7 +88,7 @@ extension BaseViewController {
      */
     
     @objc
-    func isEnableNavigationGesture() -> Bool {
+    open func isEnableNavigationGesture() -> Bool {
         return true
     }
 }

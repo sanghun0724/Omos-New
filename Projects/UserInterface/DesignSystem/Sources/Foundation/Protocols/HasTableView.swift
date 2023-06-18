@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol HasTableView {
+public protocol HasTableView {
     var tableView: UITableView { get }
 }

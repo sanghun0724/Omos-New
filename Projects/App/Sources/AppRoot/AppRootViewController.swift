@@ -8,6 +8,8 @@
 import UIKit
 import RIBs
 
+import DesignSystem
+
 protocol AppRootPresentableListener: AnyObject {
     
 }

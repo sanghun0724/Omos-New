@@ -11,25 +11,8 @@ import RIBs
 import RxCocoa
 import RxSwift
 
-// MARK: - SignUpPresentableAction
-
-enum SignUpPresentableAction {
-    case emailValidationRequestButtonDidTap(email: String)
-    case validationAlertButtonDidTap(inputCode: String)
-    case passwordsDidChange(password: String, repassword: String)
-    case confirmButtonDidTap
-    case detach
-}
-
-// MARK: - SignUpPresentableListener
-
-protocol SignUpPresentableListener: AnyObject, HasLoadingStream, HasErrorStream {
-    typealias Action = SignUpPresentableAction
-    typealias State = SignUpPresentableState
-    
-    func sendAction(_ action: Action)
-    var state: Observable<State> { get }
-}
+import DesignSystem
+import AppFoundation
 
 // MARK: - SignUpViewController
 
@@ -63,21 +46,21 @@ final class SignUpViewController:
     
     private lazy var headerView = OnBoardingHeaderView().builder
         .with {
-            $0.fetchTitle(text: Strings.Onboarding.signUp)
+            $0.fetchTitle(text: DesignSystemStrings.Onboarding.signUp)
         }
         .build()
     
     private lazy var emailTextFieldView = CustomTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: Strings.Onboarding.email)
-            $0.fetchRightTopLabelText(text: Strings.Onboarding.emailwarning)
+            $0.fetchLeftTopLabelText(text: DesignSystemStrings.Onboarding.email)
+            $0.fetchRightTopLabelText(text: DesignSystemStrings.Onboarding.emailwarning)
         }
         .build()
     
     private lazy var emailValidationRequestButton = UIButton().builder
         .with {
-            $0.setTitle(Strings.Onboarding.sendCertificationEmail, for: .normal)
+            $0.setTitle(DesignSystemStrings.Onboarding.sendCertificationEmail, for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .light)
             $0.setTitleColor(DesignSystemAsset.Colors.mainGray4.color, for: .normal)
         }
@@ -86,16 +69,16 @@ final class SignUpViewController:
     private lazy var passwordTextFieldView = PasswordTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: Strings.Onboarding.password)
-            $0.fetchRightTopLabelText(text: Strings.Onboarding.passwordwarning)
+            $0.fetchLeftTopLabelText(text: DesignSystemStrings.Onboarding.password)
+            $0.fetchRightTopLabelText(text: DesignSystemStrings.Onboarding.passwordwarning)
         }
         .build()
     
     private lazy var repasswordTextFieldView = PasswordTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: Strings.Onboarding.password)
-            $0.fetchRightTopLabelText(text: Strings.Onboarding.repasswordInvalidation)
+            $0.fetchLeftTopLabelText(text: DesignSystemStrings.Onboarding.password)
+            $0.fetchRightTopLabelText(text: DesignSystemStrings.Onboarding.repasswordInvalidation)
         }
         .build()
     
@@ -106,7 +89,8 @@ final class SignUpViewController:
     
     private lazy var validationCodeAlertView = ValidationCodeAlertView()
     
-    private lazy var confirmButton = ConfirmButton(Strings.Common.next, disableText: Strings.Common.next).builder
+    private lazy var confirmButton = ConfirmButton(DesignSystemStrings.Common.next,
+                                                   disableText: DesignSystemStrings.Common.next).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .build()
@@ -135,7 +119,7 @@ extension SignUpViewController {
     }
     
     override func navigationBarLeftButtonImage() -> UIImage? {
-        DesignSystemAsset.Images.Common.arrowLeft.image
+        DesignSystemAsset.Common.arrowLeft.image
     }
 }
 
@@ -317,7 +301,7 @@ extension SignUpViewController {
 
 extension SignUpViewController {
     private func setupUI() {
-        contentView.backgroundColor = Asset.Colors.mainBackground.color
+        contentView.backgroundColor = DesignSystemAsset.Colors.mainBackground.color
         contentView.addSubview(headerView)
         contentView.addSubview(emailTextFieldView)
         contentView.addSubview(emailValidationRequestButton)

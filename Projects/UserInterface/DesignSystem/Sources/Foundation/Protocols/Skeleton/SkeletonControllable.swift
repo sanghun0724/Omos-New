@@ -9,11 +9,11 @@ import UIKit
 import SkeletonView
 
 
-protocol SkeletonControllable {
+public protocol SkeletonControllable {
     func skeletonView(_ contentView: UIView, shouldStartAnimationWhen needAnimation: Bool)
 }
 
-extension SkeletonControllable {
+public extension SkeletonControllable {
     func skeletonView(_ contentView: UIView, shouldStartAnimationWhen needAnimation: Bool) {
         DispatchQueue.main.async { [weak contentView] in
             if needAnimation {

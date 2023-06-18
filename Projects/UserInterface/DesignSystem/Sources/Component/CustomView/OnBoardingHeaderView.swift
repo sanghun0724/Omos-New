@@ -9,7 +9,9 @@ import UIKit
 
 import AppFoundation
 
-class OnBoardingHeaderView: BaseView {
+public class OnBoardingHeaderView: BaseView {
+    
+    public init() {}
     
     // MARK: Constants
     
@@ -32,18 +34,18 @@ class OnBoardingHeaderView: BaseView {
         .textColor(DesignSystemAsset.Colors.mainOrange.color)
         .build()
     
-    override func initialize() {
+    public override func initialize() {
         super.initialize()
         backgroundColor = .clear
         addSubview(logoImageView)
         addSubview(titleLabel)
     }
     
-    func fetchTitle(text: String) {
+    public func fetchTitle(text: String) {
         titleLabel.text = text 
     }
     
-    override func setupConstraints() {
+    public override func setupConstraints() {
         super.setupConstraints()
         self.makeOnBoardingHeaderViewConstraints()
     }

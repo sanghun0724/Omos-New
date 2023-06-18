@@ -8,7 +8,7 @@
 import Alamofire
 import Foundation
 
-protocol TargetType: URLRequestConvertible {
+public protocol TargetType: URLRequestConvertible {
     var baseURL: String { get }
     var method: HTTPMethod { get }
     var path: String { get }
@@ -17,7 +17,7 @@ protocol TargetType: URLRequestConvertible {
 
 extension TargetType {
     // URLRequestConvertible 구현
-    func asURLRequest() throws -> URLRequest {
+    public func asURLRequest() throws -> URLRequest {
         let url = try baseURL.asURL()
         var urlRequest = try URLRequest(url: url.appendingPathComponent(path), method: method)
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
@@ -41,7 +41,7 @@ extension TargetType {
     }
 }
 
-enum RequestParams {
+public enum RequestParams {
     case query(_ parameter: Encodable?)
     case body(_ parameter: Encodable?)
 }

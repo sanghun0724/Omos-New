@@ -7,6 +7,8 @@
 
 import UIKit
 
+import DesignSystem
+
 class InfoViewController: UIViewController {
     private lazy var infoView = UITextView().builder
         .adjustsFontForContentSizeCategory(true)

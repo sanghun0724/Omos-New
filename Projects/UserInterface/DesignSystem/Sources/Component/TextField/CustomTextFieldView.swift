@@ -8,7 +8,11 @@
 import UIKit
 import SnapKit
 
-class CustomTextFieldView: BaseView {
+public class CustomTextFieldView: BaseView {
+    
+    public init() {
+        super.init(frame: .zero)
+    }
     
     // MARK: - Constants
 
@@ -18,7 +22,7 @@ class CustomTextFieldView: BaseView {
     
     // MARK: - Propoerties
     
-    var isValidState: Bool = true {
+   public var isValidState: Bool = true {
         didSet {
             guard let text = textField.text, !text.isEmpty else {
                 setNomalState()
@@ -28,7 +32,7 @@ class CustomTextFieldView: BaseView {
         }
     }
     
-    lazy var textField = CustomTextField().builder
+   public lazy var textField = CustomTextField().builder
         .set(\.layer.borderWidth, to: 1)
         .set(\.layer.borderColor, to: UIColor.clear.cgColor)
         .build()
@@ -44,32 +48,32 @@ class CustomTextFieldView: BaseView {
         .isHidden(true)
         .build()
     
-    func fetchLeftTopLabelText(text: String) {
+    public func fetchLeftTopLabelText(text: String) {
         leftTopLabel.text = text
     }
     
-    func fetchRightTopLabelText(text: String) {
+    public func fetchRightTopLabelText(text: String) {
         rightTopLabel.text = text
     }
     
-    func setWarningState() {
+    public func setWarningState() {
         rightTopLabel.isHidden = false
         textField.layer.borderColor = DesignSystemAsset.Colors.mainOrange.color.cgColor
     }
     
-    func setNomalState() {
+    public func setNomalState() {
         rightTopLabel.isHidden = true
         textField.layer.borderColor = UIColor.clear.cgColor
     }
     
-    override func initialize() {
+    public override func initialize() {
         super.initialize()
         addSubview(textField)
         addSubview(leftTopLabel)
         addSubview(rightTopLabel)
     }
     
-    override func setupConstraints() {
+    public override func setupConstraints() {
         super.setupConstraints()
         self.makeLeftTopLabelConstraints()
         self.makeRightTopLabelConstraints()

@@ -11,7 +11,9 @@ import RxSwift
 import AppFoundation
 import GlobalThirdPartyLibrary
 
-class Networking<Target: TargetType> {
+public class Networking<Target: TargetType> {
+    
+    public init() {}
     
     func request<D: Decodable>(
         _ target: Target,

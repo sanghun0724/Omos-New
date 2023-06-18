@@ -8,9 +8,14 @@
 import NeedleFoundation
 import RIBs
 
+import OnboardingDomain
+import OnboardingDomainInterface
+import SignUpFeatureInterface
+
+
 // MARK: - SignUpDependency
 
-protocol SignUpDependency: NeedleFoundation.Dependency {
+public protocol SignUpDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
 }
 
@@ -19,12 +24,6 @@ protocol SignUpDependency: NeedleFoundation.Dependency {
 public final class SignUpComponent: NeedleFoundation.Component<SignUpDependency> {
     fileprivate var initialState: SignUpPresentableState {
         SignUpPresentableState()
-    }
-    
-    fileprivate var nicknameBuilder: NicknameBuildable {
-        NicknameBuilder {
-            NicknameComponent(parent: self)
-        }
     }
     
 }
@@ -36,7 +35,7 @@ public final class SignUpBuilder:
     SignUpBuildable
 {
 
-    override func build(
+    override public func build(
       with component: SignUpComponent,
       _ payload: SignUpBuildDependency
     ) -> SignUpRouting {

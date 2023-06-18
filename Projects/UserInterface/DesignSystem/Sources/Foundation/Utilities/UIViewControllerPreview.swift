@@ -9,21 +9,21 @@
 import UIKit
 
 #if canImport(SwiftUI) && DEBUG
-  import SwiftUI
+import SwiftUI
 
-  struct UIViewControllerPreview<ViewController: UIViewController>: UIViewControllerRepresentable {
+public struct UIViewControllerPreview<ViewController: UIViewController>: UIViewControllerRepresentable {
     let viewController: ViewController
-
-    init(_ builder: @escaping () -> ViewController) {
-      self.viewController = builder()
+    
+    public init(_ builder: @escaping () -> ViewController) {
+        self.viewController = builder()
     }
-
+    
     // MARK: - UIViewControllerRepresentable
-
-    func makeUIViewController(context: Context) -> ViewController {
-      self.viewController
+    
+    public func makeUIViewController(context: Context) -> ViewController {
+        self.viewController
     }
-
-    func updateUIViewController(_ uiViewController: ViewController, context: Context) {}
-  }
+    
+    public func updateUIViewController(_ uiViewController: ViewController, context: Context) {}
+}
 #endif

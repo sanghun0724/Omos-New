@@ -7,6 +7,8 @@
 
 import UIKit
 
+import DesignSystem
+
 class AgreementView: BaseView {
     
     // MARK: - UI Components

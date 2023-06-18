@@ -8,15 +8,19 @@
 import NeedleFoundation
 import RIBs
 
+import OnboardingDomainInterface
+import OnboardingDomain
+import SignUpFeatureInterface
+
 // MARK: - NicknameDependency
 
-protocol NicknameDependency: NeedleFoundation.Dependency {
+public protocol NicknameDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
 }
 
 // MARK: - NicknameComponent
 
-final class NicknameComponent: NeedleFoundation.Component<NicknameDependency> {
+public final class NicknameComponent: NeedleFoundation.Component<NicknameDependency> {
     fileprivate var initialState: NicknamePresentableState {
         NicknamePresentableState()
     }
@@ -24,12 +28,12 @@ final class NicknameComponent: NeedleFoundation.Component<NicknameDependency> {
 
 // MARK: - NicknameBuilder
 
-final class NicknameBuilder:
+public final class NicknameBuilder:
     ComponentizedBuilder<NicknameComponent, NicknameRouting, NicknameBuildDependency, Void>,
     NicknameBuildable
 {
 
-    override func build(
+    override public func build(
       with component: NicknameComponent,
       _ payload: NicknameBuildDependency
     ) -> NicknameRouting {

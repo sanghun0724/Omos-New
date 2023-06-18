@@ -7,6 +7,8 @@
 
 import RIBs
 
+import TodayFeatureInterface
+
 // MARK: - TodayInteractable
 
 protocol TodayInteractable: Interactable {

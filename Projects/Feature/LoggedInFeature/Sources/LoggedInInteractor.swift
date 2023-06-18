@@ -14,7 +14,7 @@ import RxSwift
 import OnboardingDomain
 import BaseFeature
 import LoggedInFeatureInterface
-import PresentationFoundation
+import DesignSystem
 
 // MARK: - LoggedInPresentable
 

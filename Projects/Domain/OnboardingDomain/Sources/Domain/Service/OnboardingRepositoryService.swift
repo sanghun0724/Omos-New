@@ -13,20 +13,9 @@ import RxSwift
 
 import AppFoundation
 import CoreKit
+import OnboardingDomainInterface
 
-public protocol OnboardingRepositoryService {
-    func login(email: String, password: String) -> Observable<Bool>
-    func signUp() -> Observable<Bool>
-    func checkEmailDuplication(email: String) -> Observable<Bool>
-    func requestAuthEmailCode(email: String) -> Observable<Bool>
-    func isValidEmail(email: String) -> Observable<Bool>
-    func isValidPassword(password: String) -> Observable<Bool>
-    func isValidNickname(nickname: String) -> Observable<Bool>
-    func isEqualEmailValidationCode(inputCode: String) -> Observable<Bool>
-    func isEqualInputPasswords(password: String, repassword: String) -> Observable<Bool>
-}
-
-class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
+public class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
     private let onboardingRepository: OnboardingRepository
     
     private let signUpItemInfoRelay = BehaviorRelay(value: SignUpItemInfo())
@@ -34,13 +23,13 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
     
     private let tokenUtil = TokenUtils()
     
-    init(
+    public init(
         onboardingRepository: OnboardingRepository
     ) {
         self.onboardingRepository = onboardingRepository
     }
     
-    func login(email: String, password: String) -> Observable<Bool> {
+    public func login(email: String, password: String) -> Observable<Bool> {
         onboardingRepository.login(request: .init(email: email, password: password))
             .asObservable()
             .withUnretained(self)
@@ -51,7 +40,7 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
             }
     }
     
-    func signUp() -> Observable<Bool> {
+    public func signUp() -> Observable<Bool> {
         onboardingRepository.localSignUp(
             request: .init(
                 email: signUpItemInfoRelay.value.email,
@@ -63,13 +52,13 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
         .map(\.state)
     }
     
-    func checkEmailDuplication(email: String) -> Observable<Bool> {
+    public func checkEmailDuplication(email: String) -> Observable<Bool> {
         onboardingRepository.checkEmailDuplication(request: .init(email: email))
             .asObservable()
             .map(\.state)
     }
     
-    func requestAuthEmailCode(email: String) -> Observable<Bool> {
+    public func requestAuthEmailCode(email: String) -> Observable<Bool> {
         onboardingRepository.verifyEmail(request: .init(email: email))
             .asObservable()
             .map(\.code)
@@ -83,30 +72,30 @@ class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
     
     // MARK: - business logic
     
-    func isValidEmail(email: String) -> Observable<Bool> {
+    public func isValidEmail(email: String) -> Observable<Bool> {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
         return .just(emailTest.evaluate(with: email))
     }
     
-    func isValidPassword(password: String) -> Observable<Bool> {
+    public func isValidPassword(password: String) -> Observable<Bool> {
         let passwordRegEx = "[A-Za-z0-9!_@$%^&+=]{8,16}"
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
         return .just(passwordTest.evaluate(with: password))
     }
     
-    func isValidNickname(nickname: String) -> Observable<Bool> {
+    public func isValidNickname(nickname: String) -> Observable<Bool> {
         setSignUpNickname(by: nickname)
         let nicknameRegEx = "[가-힣A-Za-z0-9]{2,12}"
         let nicknameTest = NSPredicate(format: "SELF MATCHES &@", nicknameRegEx)
         return .just(nicknameTest.evaluate(with: nickname))
     }
     
-    func isEqualEmailValidationCode(inputCode: String) -> Observable<Bool> {
+    public func isEqualEmailValidationCode(inputCode: String) -> Observable<Bool> {
         .just(signUpItemInfoRelay.value.validationEmailCode == inputCode)
     }
     
-    func isEqualInputPasswords(password: String, repassword: String) -> Observable<Bool> {
+    public func isEqualInputPasswords(password: String, repassword: String) -> Observable<Bool> {
         setSignUpPassword(by: password)
         return .just(password == repassword)
     }

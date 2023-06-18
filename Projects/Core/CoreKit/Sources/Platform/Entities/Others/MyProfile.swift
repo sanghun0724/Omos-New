@@ -7,29 +7,29 @@
 
 import Foundation
 
-struct PWUpdateRequest: Codable {
+public struct PWUpdateRequest: Codable {
     let password: String
     let userId: Int
 }
 
-struct MyProfileResponse: Codable {
+public struct MyProfileResponse: Codable {
    let nickname: String
    let profileUrl: String?
    let userId: Int
 }
 
-struct ProfileUpdateRequest: Codable {
+public struct ProfileUpdateRequest: Codable {
    let nickname: String
    let profileUrl: String?
    let userId: Int
 }
 
-struct MyProfileRecordResponse: Codable {
+public struct MyProfileRecordResponse: Codable {
     let likedRecords, scrappedRecords: [EdRecord]
 }
 
 // MARK: - EdRecord
-struct EdRecord: Codable {
+public struct EdRecord: Codable {
     let recordID: Int
     let recordTitle: String
     let music: Music

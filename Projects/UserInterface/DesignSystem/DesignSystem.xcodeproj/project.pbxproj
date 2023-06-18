@@ -38,6 +38,7 @@
 		4788BF30122918592ACD766E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD5793837866FD515B9C008 /* ArrayExtension.swift */; };
 		4B7B2EAE123F9A1DF7A803A7 /* CustomNavigationBarViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0EEBA27B2F6C714CCB1B0B /* CustomNavigationBarViewable.swift */; };
 		50081A808EE620BE8EAFEA37 /* HasConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6C4949CA910F845D02608F /* HasConfigure.swift */; };
+		5011EE7394752AC9436DD19E /* ReactorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E284038FE029DBD537E508 /* ReactorValue.swift */; };
 		525AB397B195BCF019C82830 /* ErrorStreamBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CD301771576E30B8A4BA7 /* ErrorStreamBindable.swift */; };
 		5335B308F2EB0A2C10AC8053 /* Logo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CDEF84622BE13A1D276F6EF /* Logo.xcassets */; };
 		53767C178D594DB062252C28 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAD0A005F0A5E4EF917A917 /* BaseCollectionViewCell.swift */; };
@@ -180,6 +181,7 @@
 		42B35519EB9F8C5005277252 /* ReactiveExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveExtension.swift; sourceTree = "<group>"; };
 		42F1E62E91FEF7D7243396BF /* DisposablesManageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposablesManageable.swift; sourceTree = "<group>"; };
 		43B03CD2CE21DD21AE9697BE /* TuistStrings+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistStrings+DesignSystem.swift"; sourceTree = "<group>"; };
+		46E284038FE029DBD537E508 /* ReactorValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorValue.swift; sourceTree = "<group>"; };
 		48B61DE926A097B970F188FF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		4C34D74662F13194F2FBBCA9 /* SUIT-Light.otf */ = {isa = PBXFileReference; path = "SUIT-Light.otf"; sourceTree = "<group>"; };
 		505DF444F00FFA75748F5CB1 /* SUIT-ExtraBold.otf */ = {isa = PBXFileReference; path = "SUIT-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 			isa = PBXGroup;
 			children = (
 				8BD2A60DECA766DD714DA003 /* Constant.swift */,
+				46E284038FE029DBD537E508 /* ReactorValue.swift */,
 				924CD1D2B4E825A1411DBC3F /* Ribs+Util.swift */,
 				272D414559474F2E6003B734 /* UIViewController+Util.swift */,
 				12484459E9F15DCCEE8268BC /* UIViewControllerPreview.swift */,
@@ -801,6 +804,7 @@
 				A3CFF22708DEF3B57D54540D /* SkeletonControllable.swift in Sources */,
 				EA1EC2B3AF3930B2C72CE618 /* SkeletonViewsAnimatable.swift in Sources */,
 				93C96631CD94FCC1C21800EB /* Constant.swift in Sources */,
+				5011EE7394752AC9436DD19E /* ReactorValue.swift in Sources */,
 				D90E4F1D276105E3056463A3 /* Ribs+Util.swift in Sources */,
 				AEB63DD915BCEC7E90E51029 /* UIViewController+Util.swift in Sources */,
 				D1CB897C87C2FF3597DE0C6A /* UIViewControllerPreview.swift in Sources */,
