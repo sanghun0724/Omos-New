@@ -7,6 +7,6 @@
 
 import RxRelay
 
-protocol HasDetachAction {
+public protocol HasDetachAction {
     var detachAction: PublishRelay<Void> { get } 
 }

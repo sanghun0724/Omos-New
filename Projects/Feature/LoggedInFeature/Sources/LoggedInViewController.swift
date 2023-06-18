@@ -12,27 +12,6 @@ import RIBs
 import RxCocoa
 import RxSwift
 
-// MARK: - LoggedInPresentableAction
-
-enum LoggedInPresentableAction {
-    case textDidChanged(email: String, password: String)
-    case findButtonDidTap
-    case signUpButtonDidTap
-    case localLoginButtonDidTap(email: String, password: String)
-    case kakaoLoginButtonDidTap
-    case appleLoginButtonDidTap
-}
-
-// MARK: - LoggedInPresentableListener
-
-protocol LoggedInPresentableListener: AnyObject, HasLoadingStream, HasErrorStream {
-    typealias Action = LoggedInPresentableAction
-    typealias State = LoggedInPresentableState
-    
-    func sendAction(_ action: Action)
-    var state: Observable<State> { get }
-}
-
 // MARK: - LoggedInViewController
 
 final class LoggedInViewController:

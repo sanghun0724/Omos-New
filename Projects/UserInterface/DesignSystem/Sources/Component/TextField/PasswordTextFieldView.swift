@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PasswordTextFieldView: CustomTextFieldView {
+public class PasswordTextFieldView: CustomTextFieldView {
     
     // MARK: - Constants
 
@@ -40,13 +40,13 @@ class PasswordTextFieldView: CustomTextFieldView {
 
     // MARK: UI
     
-    override func initialize() {
+    public override func initialize() {
       super.initialize()
         self.configMaskingButtonImage()
         textField.addSubview(self.maskingButton)
     }
     
-    override func setupConstraints() {
+    public override func setupConstraints() {
         super.setupConstraints()
         self.makeMaskingButtonConstraints()
     }

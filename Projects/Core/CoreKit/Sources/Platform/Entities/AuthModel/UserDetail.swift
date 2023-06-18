@@ -7,5 +7,5 @@
 
 import Foundation
 
-struct UserDetailRequest: Codable {
+public struct UserDetailRequest: Codable {
 }

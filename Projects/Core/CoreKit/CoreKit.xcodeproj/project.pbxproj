@@ -21,13 +21,11 @@
 		2A8137C85E1F9CEC4CF41818 /* Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA2716CF5FA216FC873933 /* Select.swift */; };
 		2D88BCA9A6024F3528373C9F /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161C66E498EB95DA32056C4F /* Artist.swift */; };
 		317AD7E48FE7297B563F8883 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5F08CCC7547DC145EE9E4 /* Album.swift */; };
-		3784BAB5B7410E09B2D44829 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4AA2CF51547618F2EC13AB /* MyError.swift */; };
 		45C64189D3F33428D1488E34 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9079EFCF6ADCA79132938DB /* libAppFoundation.a */; platformFilter = ios; };
 		51A0C13C046A9DE82C0AE56D /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0575BD15390ED22D354CE0 /* UserDetail.swift */; };
 		5B0885F4F029FE601C163371 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99133C7BB8685E94473F870 /* SignUp.swift */; };
 		65CA8F84792EE07A0362E40E /* MyAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC383FC38AFAC16C49776CC /* MyAuthenticator.swift */; };
 		73C533D77973676BFD6D1272 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A9AF470F79B585A67DA5CC /* TargetType.swift */; };
-		75E3033E84D7BF07B502AFDD /* HasErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09733312B5915492B446DD59 /* HasErrorState.swift */; };
 		7D13E0EB6A0F5DE495BDDFBF /* MyProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AF658D3E9FC4305DB5CEBF /* MyProfileAPI.swift */; };
 		7DEC686C660E47699E295A5D /* GlobalThirdPartyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C5C47A614CDCEB20875E59 /* GlobalThirdPartyLibrary.framework */; platformFilter = ios; };
 		88D0E5CEC3832BBFB07047D4 /* RecordAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C4CDE9D31CF8D59771E71 /* RecordAPI.swift */; };
@@ -52,7 +50,6 @@
 		E9A145F9A55ABD2ED860A9D1 /* AwsS3Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DE057BEF51F394CF319B63 /* AwsS3Target.swift */; };
 		F6CAABDF9F1E55C145F50E12 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C7DF0B2FD48D83FD00760D /* APIKeys.swift */; };
 		F7747FD6FDE1644DA23A9D9D /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D021161D60715A436AC0DA /* MyProfile.swift */; };
-		F8FC9889A5D183BC7A39DC84 /* HasLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAF4DAEB0D6290171D46C1 /* HasLoadingState.swift */; };
 		FC9493DE9809C6D612C5EF5C /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4D63D4CCC0D43AEA19BAFF /* Track.swift */; };
 		FF4F1A54870DFFA5790C9825 /* LoginTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E53B15DBC1280543CE8DD4B /* LoginTarget.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +70,6 @@
 /* Begin PBXFileReference section */
 		04118D6F3865B3B58BE3C2AB /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		078BF909A104365502169B8C /* ArtistDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetail.swift; sourceTree = "<group>"; };
-		09733312B5915492B446DD59 /* HasErrorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasErrorState.swift; sourceTree = "<group>"; };
 		0AA5F64CAA12350C85FBBE93 /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
 		0AF1AC8D03B8C8961347014F /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		161C66E498EB95DA32056C4F /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
@@ -88,7 +84,6 @@
 		4E53B15DBC1280543CE8DD4B /* LoginTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTarget.swift; sourceTree = "<group>"; };
 		53C7DF0B2FD48D83FD00760D /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		56809BB3D6A752319EE1F060 /* BlockTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTarget.swift; sourceTree = "<group>"; };
-		5ECAF4DAEB0D6290171D46C1 /* HasLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasLoadingState.swift; sourceTree = "<group>"; };
 		601BB4DE6E9C472F56D461AC /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		64DA2716CF5FA216FC873933 /* Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select.swift; sourceTree = "<group>"; };
 		69AF658D3E9FC4305DB5CEBF /* MyProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileAPI.swift; sourceTree = "<group>"; };
@@ -113,7 +108,6 @@
 		D5548340B36554E6D5F6F8B0 /* MyAuthenticationCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAuthenticationCredential.swift; sourceTree = "<group>"; };
 		D9A9AF470F79B585A67DA5CC /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		D9D021161D60715A436AC0DA /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
-		DB4AA2CF51547618F2EC13AB /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		DC0575BD15390ED22D354CE0 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		DC2E56C195F9258C5DC09581 /* FollowTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTarget.swift; sourceTree = "<group>"; };
 		E99133C7BB8685E94473F870 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
@@ -193,14 +187,6 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		4499C3D36D529F44E4709402 /* Loading */ = {
-			isa = PBXGroup;
-			children = (
-				5ECAF4DAEB0D6290171D46C1 /* HasLoadingState.swift */,
-			);
-			path = Loading;
-			sourceTree = "<group>";
-		};
 		4CB5DD402BD96D9F7948D4E3 /* Others */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,18 +211,8 @@
 				F3A2BC3E2FFF1B6DD324146A /* DataSource */,
 				24C64756D1ABCD593F208830 /* Entities */,
 				B232BE39FC927C4D9F8D5DCE /* Repository */,
-				671C9834039C63DA92EAE333 /* Utilities */,
 			);
 			path = Platform;
-			sourceTree = "<group>";
-		};
-		671C9834039C63DA92EAE333 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				9516897FE6E57A3310B6BF08 /* Error */,
-				4499C3D36D529F44E4709402 /* Loading */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		6A35745B88D25A32CFBB851A /* Derived */ = {
@@ -298,15 +274,6 @@
 				F8F58394A1C1BE1152F8B2D9 /* MyProfileTarget.swift */,
 			);
 			path = MyProfile;
-			sourceTree = "<group>";
-		};
-		9516897FE6E57A3310B6BF08 /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				09733312B5915492B446DD59 /* HasErrorState.swift */,
-				DB4AA2CF51547618F2EC13AB /* MyError.swift */,
-			);
-			path = Error;
 			sourceTree = "<group>";
 		};
 		959EAA84DD3FCD3CB2F5BC16 /* Auth */ = {
@@ -542,9 +509,6 @@
 				FC9493DE9809C6D612C5EF5C /* Track.swift in Sources */,
 				16A07D49DF621454914508D7 /* NetworkRepository.swift in Sources */,
 				C35B9CD8F6507614DFF87CA4 /* OnboardingRepository.swift in Sources */,
-				75E3033E84D7BF07B502AFDD /* HasErrorState.swift in Sources */,
-				3784BAB5B7410E09B2D44829 /* MyError.swift in Sources */,
-				F8FC9889A5D183BC7A39DC84 /* HasLoadingState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

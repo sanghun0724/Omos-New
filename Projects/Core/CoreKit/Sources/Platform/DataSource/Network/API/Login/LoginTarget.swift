@@ -7,7 +7,7 @@
 
 import Alamofire
 
-enum LoginTarget {
+public enum LoginTarget {
     case login(LoginRequest)
     case getUserDetails(UserDetailRequest)
     // case kakaoLogin()
@@ -23,12 +23,12 @@ enum LoginTarget {
 }
 
 extension LoginTarget: TargetType {
-    var baseURL: String {
+    public var baseURL: String {
        //  RestApiUrl.restUrl + "/auth"
         ""
     }
 
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         switch self {
         case .login: return .post
         case .getUserDetails: return .get
@@ -44,7 +44,7 @@ extension LoginTarget: TargetType {
         }
     }
 
-    var path: String {
+    public var path: String {
         switch self {
         case .login: return "/login"
         case .getUserDetails: return "/details" // it could be changed
@@ -60,7 +60,7 @@ extension LoginTarget: TargetType {
         }
     }
 
-    var parameters: RequestParams? {
+    public var parameters: RequestParams? {
         switch self {
         case .login(let request): return .body(request)
         case .getUserDetails(let request): return .body(request)

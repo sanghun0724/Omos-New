@@ -28,35 +28,35 @@ public protocol OnboardingRepository {
 
 // MARK: - LoginRepositoryImpl
 
-final class OnboardingRepositoryImpl: NetworkRepository<LoginTarget>, OnboardingRepository {
+public final class OnboardingRepositoryImpl: NetworkRepository<LoginTarget>, OnboardingRepository {
     
     // MARK: - API Request
     
-    func login(request: LoginRequest) -> Single<LoginResponse> {
+    public func login(request: LoginRequest) -> Single<LoginResponse> {
         provider.request(.login(request), type: LoginResponse.self)
     }
     
-    func localSignUp(request: SignUpRequest) -> Single<SignUpResponse> {
+    public func localSignUp(request: SignUpRequest) -> Single<SignUpResponse> {
         provider.request(.signUp(request), type: SignUpResponse.self)
     }
     
-    func SNSlogin(request: SNSLoginRequest) -> Single<SNSLoginResponse> {
+    public func SNSlogin(request: SNSLoginRequest) -> Single<SNSLoginResponse> {
         provider.request(.SNSLogin(request), type: SNSLoginResponse.self)
     }
     
-    func SNSsingup(request: SNSSignUpRequest) -> Single<SNSSignUpResponse> {
+    public func SNSsingup(request: SNSSignUpRequest) -> Single<SNSSignUpResponse> {
         provider.request(.SNSSignUp(request), type: SNSSignUpResponse.self)
     }
     
-    func checkEmailDuplication(request: CheckEmailRequest) -> Single<CheckEmailResponse> {
+    public func checkEmailDuplication(request: CheckEmailRequest) -> Single<CheckEmailResponse> {
         provider.request(.checkEmail(request), type: CheckEmailResponse.self)
     }
     
-    func verifyEmail(request: EmailValidationRequest) -> Single<EmailValidationResponse> {
+    public func verifyEmail(request: EmailValidationRequest) -> Single<EmailValidationResponse> {
         provider.request(.emailValidation(request), type: EmailValidationResponse.self)
     }
     
-    func doRefresh(request: RefreshRequest) -> Single<RefreshRespone> {
+    public func doRefresh(request: RefreshRequest) -> Single<RefreshRespone> {
         provider.request(.doRefresh(request), type: RefreshRespone.self)
     }
     

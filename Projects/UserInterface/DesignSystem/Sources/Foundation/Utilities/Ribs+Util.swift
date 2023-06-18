@@ -40,22 +40,22 @@ public final class NavigationControllerable: ViewControllable {
 
 public extension ViewControllable {
   
-  func present(_ viewControllable: ViewControllable, animated: Bool, completion: (() -> Void)?) {
+    public func present(_ viewControllable: ViewControllable, animated: Bool, completion: (() -> Void)?) {
     self.uiviewController.present(viewControllable.uiviewController, animated: animated, completion: completion)
   }
     
-  func presentFullScreen(_ viewControllable: ViewControllable, animated: Bool, completion: (() -> Void)?) {
+    public func presentFullScreen(_ viewControllable: ViewControllable, animated: Bool, completion: (() -> Void)?) {
     viewControllable.uiviewController.modalPresentationStyle = .fullScreen
       DispatchQueue.main.async {
           self.uiviewController.present(viewControllable.uiviewController, animated: animated, completion: completion)
       }
   }
   
-  func dismiss(completion: (() -> Void)?) {
+    public func dismiss(completion: (() -> Void)?) {
     self.uiviewController.dismiss(animated: true, completion: completion)
   }
   
-  func pushViewController(_ viewControllable: ViewControllable, animated: Bool) {
+    public func pushViewController(_ viewControllable: ViewControllable, animated: Bool) {
     if let nav = self.uiviewController as? UINavigationController {
       nav.pushViewController(viewControllable.uiviewController, animated: animated)
     } else {
@@ -63,7 +63,7 @@ public extension ViewControllable {
     }
   }
   
-  func popViewController(animated: Bool) {
+    public func popViewController(animated: Bool) {
     if let nav = self.uiviewController as? UINavigationController {
       nav.popViewController(animated: animated)
     } else {
@@ -71,7 +71,7 @@ public extension ViewControllable {
     }
   }
   
-  func popToRoot(animated: Bool) {
+    public func popToRoot(animated: Bool) {
     if let nav = self.uiviewController as? UINavigationController {
       nav.popToRootViewController(animated: animated)
     } else {
@@ -79,7 +79,7 @@ public extension ViewControllable {
     }
   }
   
-  func setViewControllers(_ viewControllerables: [ViewControllable]) {
+    public func setViewControllers(_ viewControllerables: [ViewControllable]) {
     if let nav = self.uiviewController as? UINavigationController {
       nav.setViewControllers(viewControllerables.map(\.uiviewController), animated: true)
     } else {
@@ -87,7 +87,7 @@ public extension ViewControllable {
     }
   }
     
-  var topViewControllable: ViewControllable {
+    public var topViewControllable: ViewControllable {
         var top: ViewControllable = self
         
         while let presented = top.uiviewController.presentedViewController as? ViewControllable {

@@ -7,11 +7,11 @@
 
 import RxSwift
 
-protocol LoadingStreamBindable: AnyObject {
+public protocol LoadingStreamBindable: AnyObject {
     func bindLoadingStream(from listener: HasLoadingStream)
 }
 
-extension LoadingStreamBindable where Self: HasTableView & HasDisposeBag & SkeletonControllable {
+public extension LoadingStreamBindable where Self: HasTableView & HasDisposeBag & SkeletonControllable {
     func bindLoadingStream(from listener: HasLoadingStream) {
         listener.isLoadingStream
             .distinctUntilChanged()
@@ -23,7 +23,7 @@ extension LoadingStreamBindable where Self: HasTableView & HasDisposeBag & Skele
     }
 }
 
-extension LoadingStreamBindable where Self: HasCollectionView & HasDisposeBag & SkeletonControllable {
+public extension LoadingStreamBindable where Self: HasCollectionView & HasDisposeBag & SkeletonControllable {
     func bindLoadingStream(from listener: HasLoadingStream) {
         listener.isLoadingStream
             .distinctUntilChanged()
@@ -35,7 +35,7 @@ extension LoadingStreamBindable where Self: HasCollectionView & HasDisposeBag & 
     }
 }
 
-extension LoadingStreamBindable where Self: BaseViewController & HasDisposeBag {
+public extension LoadingStreamBindable where Self: BaseViewController & HasDisposeBag {
     func bindLoadingStream(from listener: HasLoadingStream) {
         listener.isLoadingStream
             .distinctUntilChanged()

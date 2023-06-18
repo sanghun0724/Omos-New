@@ -7,6 +7,8 @@
 
 import RIBs
 
+import SignUpFeatureInterface
+
 // MARK: - NicknameInteractable
 
 protocol NicknameInteractable: Interactable {

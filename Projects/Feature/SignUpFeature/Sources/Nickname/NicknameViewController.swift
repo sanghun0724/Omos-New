@@ -11,27 +11,9 @@ import RIBs
 import RxCocoa
 import RxSwift
 
-// MARK: - NicknamePresentableAction
-
-enum NicknamePresentableAction {
-    case nicknameTextFieldDidChange(nickname: String)
-    case toggleTerms(toggled: Bool)
-    case togglePolicy(toggled: Bool)
-    case showTermsDetail
-    case showPolicyDetail
-    case confirmButtonDidTap
-    case detach
-}
-
-// MARK: - NicknamePresentableListener
-
-protocol NicknamePresentableListener: AnyObject, HasLoadingStream, HasErrorStream {
-    typealias Action = NicknamePresentableAction
-    typealias State = NicknamePresentableState
-    
-    func sendAction(_ action: Action)
-    var state: Observable<State> { get }
-}
+import AppFoundation
+import DesignSystem
+import SignUpFeatureInterface
 
 // MARK: - NicknameViewController
 
@@ -64,15 +46,15 @@ final class NicknameViewController:
     
     private lazy var headerView = OnBoardingHeaderView().builder
         .with {
-            $0.fetchTitle(text: Strings.Onboarding.signUp)
+            $0.fetchTitle(text: DesignSystemStrings.Onboarding.signUp)
         }
         .build()
     
     private lazy var nicknameTextFieldView = CustomTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: Strings.Onboarding.nickname)
-            $0.fetchRightTopLabelText(text: Strings.Onboarding.nicknameWarning)
+            $0.fetchLeftTopLabelText(text: DesignSystemStrings.Onboarding.nickname)
+            $0.fetchRightTopLabelText(text: DesignSystemStrings.Onboarding.nicknameWarning)
         }
         .build()
     
@@ -92,7 +74,7 @@ final class NicknameViewController:
         }
         .build()
     
-    private lazy var confirmButton = ConfirmButton(Strings.Common.next, disableText: Strings.Common.next).builder
+    private lazy var confirmButton = ConfirmButton(DesignSystemStrings.Common.next, disableText: DesignSystemStrings.Common.next).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .build()

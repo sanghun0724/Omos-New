@@ -17,13 +17,13 @@ open class BaseView:
     
     // MARK: Properties
     
-    var disposeBag = DisposeBag()
+    public var disposeBag = DisposeBag()
     
     private(set) var didSetupConstrints: Bool = false
     
     // MARK: Inii & deinit
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.initialize()
     }

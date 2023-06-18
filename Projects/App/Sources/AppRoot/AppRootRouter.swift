@@ -7,6 +7,9 @@
 
 import RIBs
 
+import DesignSystem
+import LoggedInFeatureInterface
+
 protocol AppRootInteractable: Interactable, LoggedInListener {
     var router: AppRootRouting? { get set }
     var listener: AppRootListener? { get set }

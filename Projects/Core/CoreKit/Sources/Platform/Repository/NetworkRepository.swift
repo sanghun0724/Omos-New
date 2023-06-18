@@ -7,10 +7,10 @@
 
 import Alamofire
 
-class NetworkRepository<Service: TargetType> {
+public class NetworkRepository<Service: TargetType> {
     let provider: Networking<Service>
     
-    init(networkingProvider: Networking<Service>) {
+    public init(networkingProvider: Networking<Service>) {
         self.provider = networkingProvider
     }
 }

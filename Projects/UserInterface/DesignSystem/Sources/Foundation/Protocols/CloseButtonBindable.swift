@@ -7,11 +7,11 @@
 
 import RxSwift
 
-protocol CloseButtonBindable {
+public protocol CloseButtonBindable {
     func bindCloseButtonTapAction()
 }
 
-extension CloseButtonBindable where Self: BaseViewController & HasDetachAction & HasDisposeBag {
+public extension CloseButtonBindable where Self: BaseViewController & HasDetachAction & HasDisposeBag {
     func bindCloseButtonTapAction() {
         navigationBarView.leftImageButton
             .rx

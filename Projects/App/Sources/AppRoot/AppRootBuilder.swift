@@ -8,17 +8,16 @@
 import NeedleFoundation
 import RIBs
 
+import OnboardingDomainInterface
+import LoggedInFeature
+import LoggedInFeatureInterface
+
 protocol AppRootDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
+    var loggedInBuilder: LoggedInBuildable { get }
 }
 
-final class AppRootComponent: NeedleFoundation.Component<AppRootDependency> {
-    fileprivate var loggedInBuilder: LoggedInBuildable {
-        LoggedInBuilder {
-            LoggedInComponent(parent: self)
-        }
-    }
-}
+final class AppRootComponent: NeedleFoundation.Component<AppRootDependency> {}
 
 // MARK: - Builder
 

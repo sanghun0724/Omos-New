@@ -7,7 +7,7 @@
 
 import RxSwift
 
-protocol HasViewModel {
+public protocol HasViewModel {
   associatedtype ViewModel
   var viewModel: Observable<ViewModel> { get }
 }

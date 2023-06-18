@@ -7,21 +7,21 @@
 
 import UIKit
 
-class ConfirmButton: UIButton {
+public class ConfirmButton: UIButton {
     
     // MARK: Properties
     
     let enableText: String
     let disableText: String
     
-    override var isEnabled: Bool {
+    public override var isEnabled: Bool {
         didSet { setEnable(isEnabled)}
     }
     
     
     // MARK: initialize
     
-    init(_ enableText: String, disableText: String? = nil) {
+    public init(_ enableText: String, disableText: String? = nil) {
         self.enableText = enableText
         self.disableText = disableText ?? enableText
 

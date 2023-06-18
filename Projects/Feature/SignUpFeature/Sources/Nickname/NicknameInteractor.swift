@@ -9,6 +9,12 @@ import ReactorKit
 import RIBs
 import RxSwift
 
+import AppFoundation
+import GlobalThirdPartyLibrary
+import OnboardingDomainInterface
+import SignUpFeatureInterface
+import DesignSystem
+
 // MARK: - NicknamePresentable
 
 protocol NicknamePresentable: Presentable {

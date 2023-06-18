@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxRelay
 
-class BaseViewController:
+open class BaseViewController:
     UIViewController,
     CustomNavigationPresentable,
     HasSetupConstraints,
@@ -48,23 +48,23 @@ class BaseViewController:
     // MARK: Views
     
     private lazy var layoutGuideView = UIView()
-    private(set) lazy var contentView = UIView()
+    public private(set) lazy var contentView = UIView()
     
     // MARK: Properties
     
-    let detachAction = PublishRelay<Void>()
-    var disposeBag: DisposeBag = DisposeBag()
+    public let detachAction = PublishRelay<Void>()
+    public var disposeBag: DisposeBag = DisposeBag()
     
     private(set) var didSetupConstrints: Bool = false
     
     // MARK: - init & deinit
     
-    init() {
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
     
     @available(*, unavailable)
-    required convenience init?(coder aDecoder: NSCoder) {
+    public required convenience init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
     }
 
@@ -74,13 +74,13 @@ class BaseViewController:
     
     // MARK: - View LifeCycle
     
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         hideOriginNavigationBar()
         view.setNeedsUpdateConstraints()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    open override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         guard isMovingToParent || isBeingDismissed else { return }
         self.detachAction.accept(Void())
@@ -89,7 +89,7 @@ class BaseViewController:
     
     // MARK: Layout Constraints
     
-    override func updateViewConstraints() {
+    open override func updateViewConstraints() {
         self.setupConstraintsIfNeeded()
         super.updateViewConstraints()
     }

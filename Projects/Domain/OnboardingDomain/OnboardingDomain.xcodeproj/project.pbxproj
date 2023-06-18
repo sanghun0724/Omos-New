@@ -8,21 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		04BC40052C175ECBDBA6B81E /* OnboardingRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3E1C26716AB262A1E46CA /* OnboardingRepositoryService.swift */; };
-		0CBD9BF05E062D80106F9110 /* LoggedInPresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D4D7139E39B5860F26A42 /* LoggedInPresentableState.swift */; };
 		0D4AD1A887492622CB046853 /* BaseDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277A610A0B66623A44E70872 /* BaseDomain.framework */; platformFilter = ios; };
-		1E6AB38CA046C20A1CECE94F /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2186302E7362F2A672FBFA /* Interface.swift */; };
 		3AFBC5DD599526FFC833FEBC /* OnboardingDomainInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B767F910262D0885E938ED /* OnboardingDomainInterface.framework */; platformFilter = ios; };
 		3C1B97CA74374DD7EEB09751 /* OnboardingDomainTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAEFC707DBE65D54AA5C60E /* OnboardingDomainTesting.framework */; platformFilter = ios; };
 		4C809D710BC8ECBB928F63AB /* BaseDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277A610A0B66623A44E70872 /* BaseDomain.framework */; platformFilter = ios; };
+		58410DAA5F865B454663CDA0 /* OnboardingDomainInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6AC04A26058CD7A0B3E79D /* OnboardingDomainInterface.swift */; };
 		67C6A9DE288245B8760DF7BD /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20359F4168D00A883F6E0F3 /* Testing.swift */; };
 		6B211596AA499C40BE22BB38 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1072563C847E630F2405C4F7 /* libOnboardingDomain.a */; platformFilter = ios; };
 		7BA11429D7A521715158F45B /* OnboardingDomainInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B767F910262D0885E938ED /* OnboardingDomainInterface.framework */; platformFilter = ios; };
 		7D070DD66F1ED2C86037CFF4 /* OnboardingDomainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E46D577E4EF9ABB1A8ED2D /* OnboardingDomainTest.swift */; };
 		7D4E9737D719CE4184B8A095 /* SignUpItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25502DF269A3F232C27F93E /* SignUpItemInfo.swift */; };
-		7E83D1F0585E55801D5F2665 /* TodayPresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E9344E1F0EF4BD7EB9BFFF /* TodayPresentableState.swift */; };
 		9CAF3A9FBD0704ED6C8E859E /* OnboardingDomainInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B767F910262D0885E938ED /* OnboardingDomainInterface.framework */; platformFilter = ios; };
-		A49D1534367A6C60EB4F1B6D /* NicknamePresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9921BB70BEAF9B833D0C79 /* NicknamePresentableState.swift */; };
-		BE40BF0708209BDA89D921B8 /* SignUpPresentableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA3CBA52B0A05C3F5CBB7C8 /* SignUpPresentableState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,20 +100,16 @@
 		1072563C847E630F2405C4F7 /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		277A610A0B66623A44E70872 /* BaseDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A99F3000069145024B68A20 /* OnboardingDomainInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingDomainInterface-Info.plist"; sourceTree = "<group>"; };
-		3A2186302E7362F2A672FBFA /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
-		40E9344E1F0EF4BD7EB9BFFF /* TodayPresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPresentableState.swift; sourceTree = "<group>"; };
 		4D8BC00EF42F57BC8BDE5C81 /* OnboardingDomainTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingDomainTesting-Info.plist"; sourceTree = "<group>"; };
 		54E46D577E4EF9ABB1A8ED2D /* OnboardingDomainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDomainTest.swift; sourceTree = "<group>"; };
 		5B1962939EE23FD3FEFFC508 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		7FB3E1C26716AB262A1E46CA /* OnboardingRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepositoryService.swift; sourceTree = "<group>"; };
 		85B767F910262D0885E938ED /* OnboardingDomainInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingDomainInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B9921BB70BEAF9B833D0C79 /* NicknamePresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknamePresentableState.swift; sourceTree = "<group>"; };
 		A20359F4168D00A883F6E0F3 /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		A25502DF269A3F232C27F93E /* SignUpItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpItemInfo.swift; sourceTree = "<group>"; };
 		B75CDB31E3EAF439BE4F3148 /* OnboardingDomainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingDomainTests-Info.plist"; sourceTree = "<group>"; };
-		BBA3CBA52B0A05C3F5CBB7C8 /* SignUpPresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresentableState.swift; sourceTree = "<group>"; };
+		BB6AC04A26058CD7A0B3E79D /* OnboardingDomainInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDomainInterface.swift; sourceTree = "<group>"; };
 		D72BC70A3A4799235C3527A7 /* OnboardingDomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingDomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E05D4D7139E39B5860F26A42 /* LoggedInPresentableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInPresentableState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +164,7 @@
 		49F0212A818AC2A5EE95F568 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				3A2186302E7362F2A672FBFA /* Interface.swift */,
+				BB6AC04A26058CD7A0B3E79D /* OnboardingDomainInterface.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -184,14 +176,6 @@
 				88193D4EF55365855E00933F /* Service */,
 			);
 			path = Domain;
-			sourceTree = "<group>";
-		};
-		6EDD806886F8B40508C81AB1 /* Nickname */ = {
-			isa = PBXGroup;
-			children = (
-				8B9921BB70BEAF9B833D0C79 /* NicknamePresentableState.swift */,
-			);
-			path = Nickname;
 			sourceTree = "<group>";
 		};
 		714A15491CFAF61EC4490612 /* Project */ = {
@@ -250,9 +234,7 @@
 		9395F5B99158364ECFA7FF9F /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				6EDD806886F8B40508C81AB1 /* Nickname */,
 				A25502DF269A3F232C27F93E /* SignUpItemInfo.swift */,
-				BBA3CBA52B0A05C3F5CBB7C8 /* SignUpPresentableState.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -261,8 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				9395F5B99158364ECFA7FF9F /* SignUp */,
-				E05D4D7139E39B5860F26A42 /* LoggedInPresentableState.swift */,
-				40E9344E1F0EF4BD7EB9BFFF /* TodayPresentableState.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -458,11 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CBD9BF05E062D80106F9110 /* LoggedInPresentableState.swift in Sources */,
-				A49D1534367A6C60EB4F1B6D /* NicknamePresentableState.swift in Sources */,
 				7D4E9737D719CE4184B8A095 /* SignUpItemInfo.swift in Sources */,
-				BE40BF0708209BDA89D921B8 /* SignUpPresentableState.swift in Sources */,
-				7E83D1F0585E55801D5F2665 /* TodayPresentableState.swift in Sources */,
 				04BC40052C175ECBDBA6B81E /* OnboardingRepositoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,7 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E6AB38CA046C20A1CECE94F /* Interface.swift in Sources */,
+				58410DAA5F865B454663CDA0 /* OnboardingDomainInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

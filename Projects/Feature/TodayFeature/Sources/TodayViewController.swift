@@ -11,21 +11,9 @@ import RIBs
 import RxCocoa
 import RxSwift
 
-// MARK: - TodayPresentableAction
-
-enum TodayPresentableAction {
-    
-}
-
-// MARK: - TodayPresentableListener
-
-protocol TodayPresentableListener: AnyObject {
-    typealias Action = TodayPresentableAction
-    typealias State = TodayPresentableState
-    
-    func sendAction(_ action: Action)
-    var state: Observable<State> { get }
-}
+import OnboardingDomain
+import DesignSystem
+import TodayFeatureInterface
 
 // MARK: - TodayViewController
 

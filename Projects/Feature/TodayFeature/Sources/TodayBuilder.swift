@@ -8,9 +8,12 @@
 import NeedleFoundation
 import RIBs
 
+import OnboardingDomain
+import TodayFeatureInterface
+
 // MARK: - TodayDependency
 
-protocol TodayDependency: NeedleFoundation.Dependency {
+public protocol TodayDependency: NeedleFoundation.Dependency {
 
 }
 
@@ -28,7 +31,8 @@ public final class TodayBuilder:
     ComponentizedBuilder<TodayComponent, TodayRouting, TodayBuildDependency, Void>,
     TodayBuildable
 {
-    override func build(
+    
+    override public func build(
       with component: TodayComponent,
       _ payload: TodayBuildDependency
     ) -> TodayRouting {
