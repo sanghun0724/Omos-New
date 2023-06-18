@@ -11,7 +11,9 @@ import AppFoundation
 
 public class OnBoardingHeaderView: BaseView {
     
-    public init() {}
+    public init() {
+        super.init(frame: .zero)
+    }
     
     // MARK: Constants
     

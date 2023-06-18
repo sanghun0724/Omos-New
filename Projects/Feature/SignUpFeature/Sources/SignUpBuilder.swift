@@ -17,6 +17,7 @@ import SignUpFeatureInterface
 
 public protocol SignUpDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
+    var nicknameBuilder: NicknameBuildable { get }
 }
 
 // MARK: - SignUpComponent
