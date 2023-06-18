@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		04AF77387F2092C8C2106C37 /* CoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C866E5AE494B52E62622E68E /* CoreKit.framework */; platformFilter = ios; };
 		6FC4869F825617BCE1BA9B10 /* BaseDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA02C953DD449F06E5AFAAA4 /* BaseDomain.framework */; platformFilter = ios; };
-		74247226673B8E1CA737E176 /* GlobalThirdPartyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52987675C41A3AF60B75409 /* GlobalThirdPartyLibrary.framework */; platformFilter = ios; };
-		9C938251B60A5BEDDDA20279 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F115CCDE6304F508C3CDC57A /* libAppFoundation.a */; platformFilter = ios; };
 		A97309B007C3ECC49DD7D5EF /* TargetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFBDD3EBFCE0AA7C6C41D6E /* TargetTest.swift */; };
 		C6AD5B70757CAC2B1F43D377 /* keep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB3B3284A7C81D46751E65 /* keep.swift */; };
 /* End PBXBuildFile section */
@@ -57,8 +55,6 @@
 		AA02C953DD449F06E5AFAAA4 /* BaseDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D03584D4A930051353B5F /* BaseDomainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BaseDomainTests-Info.plist"; sourceTree = "<group>"; };
 		C866E5AE494B52E62622E68E /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E52987675C41A3AF60B75409 /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F115CCDE6304F508C3CDC57A /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C938251B60A5BEDDDA20279 /* libAppFoundation.a in Frameworks */,
 				04AF77387F2092C8C2106C37 /* CoreKit.framework in Frameworks */,
-				74247226673B8E1CA737E176 /* GlobalThirdPartyLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,8 +103,6 @@
 				AA02C953DD449F06E5AFAAA4 /* BaseDomain.framework */,
 				92BD74694EBBC5ED17092A3C /* BaseDomainTests.xctest */,
 				C866E5AE494B52E62622E68E /* CoreKit.framework */,
-				E52987675C41A3AF60B75409 /* GlobalThirdPartyLibrary.framework */,
-				F115CCDE6304F508C3CDC57A /* libAppFoundation.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";

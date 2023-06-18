@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4724A585CE20791838139B29"
-               BuildableName = "libAppFoundation.a"
+               BuildableName = "AppFoundation.framework"
                BlueprintName = "AppFoundation"
                ReferencedContainer = "container:Projects/Shared/AppFoundation/AppFoundation.xcodeproj">
             </BuildableReference>
@@ -129,7 +129,7 @@
                BlueprintIdentifier = "83C9B5D1938C22907FF6E247"
                BuildableName = "DesignSystem.framework"
                BlueprintName = "DesignSystem"
-               ReferencedContainer = "container:Projects/UserInterface/DesignSystem/DesignSystem.xcodeproj">
+               ReferencedContainer = "container:Projects/Shared/DesignSystem/DesignSystem.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -143,7 +143,21 @@
                BlueprintIdentifier = "9F69C27BE85E3028D236EFFD"
                BuildableName = "DesignSystemDemoApp.app"
                BlueprintName = "DesignSystemDemoApp"
-               ReferencedContainer = "container:Projects/UserInterface/DesignSystem/DesignSystem.xcodeproj">
+               ReferencedContainer = "container:Projects/Shared/DesignSystem/DesignSystem.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "22296878A9434DD004037C62"
+               BuildableName = "DesignSystemUITests.xctest"
+               BlueprintName = "DesignSystemUITests"
+               ReferencedContainer = "container:Projects/Shared/DesignSystem/DesignSystem.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -854,6 +868,16 @@
                BuildableName = "BaseFeatureTests.xctest"
                BlueprintName = "BaseFeatureTests"
                ReferencedContainer = "container:Projects/Feature/BaseFeature/BaseFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "22296878A9434DD004037C62"
+               BuildableName = "DesignSystemUITests.xctest"
+               BlueprintName = "DesignSystemUITests"
+               ReferencedContainer = "container:Projects/Shared/DesignSystem/DesignSystem.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference

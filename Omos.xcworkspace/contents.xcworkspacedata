@@ -47,14 +47,10 @@
             location = "group:AppFoundation/AppFoundation.xcodeproj">
          </FileRef>
          <FileRef
-            location = "group:GlobalThirdPartyLibrary/GlobalThirdPartyLibrary.xcodeproj">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:UserInterface"
-         name = "UserInterface">
-         <FileRef
             location = "group:DesignSystem/DesignSystem.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:GlobalThirdPartyLibrary/GlobalThirdPartyLibrary.xcodeproj">
          </FileRef>
       </Group>
    </Group>

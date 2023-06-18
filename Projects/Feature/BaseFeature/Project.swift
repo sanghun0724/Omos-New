@@ -7,8 +7,7 @@ let project = Project.makeModule(
     product: .framework,
     targets: [.unitTest],
     internalDependencies: [
-        .userInterface(target: .DesignSystem),
-        .shared(target: .GlobalThirdPartyLibrary),
-        .shared(target: .AppFoundation),
+        .domain(target: .OnboardingDomain, type: .sources),
+        .domain(target: .OnboardingDomain, type: .interface)
     ]
 )

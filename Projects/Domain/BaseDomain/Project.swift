@@ -7,8 +7,6 @@ let project = Project.makeModule(
     product: .framework,
     targets: [.unitTest],
     internalDependencies: [
-        .core(target: .CoreKit),
-        .shared(target: .GlobalThirdPartyLibrary),
-        .shared(target: .AppFoundation),
+        .core(target: .CoreKit)
     ]
 )
