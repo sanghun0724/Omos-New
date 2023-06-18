@@ -8,6 +8,8 @@
 import AuthenticationServices
 import UIKit
 
+import DesignSystem
+
 class BottomButtonsView: BaseView {
     
     // MARK: Constants
@@ -17,7 +19,7 @@ class BottomButtonsView: BaseView {
         static let separatedHeight = 41
     }
     
-    lazy var loginButton = ConfirmButton(Strings.Onboarding.loggedIn).builder
+    lazy var loginButton = ConfirmButton(DesignSystemStrings.Onboarding.loggedIn).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .build()
@@ -31,7 +33,7 @@ class BottomButtonsView: BaseView {
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .with {
-            $0.setTitle(Strings.Onboarding.kakao, for: .normal)
+            $0.setTitle(DesignSystemStrings.Onboarding.kakao, for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
             $0.setTitleColor(DesignSystemAsset.Colors.kakaoBrownLabel.color, for: .normal)
         }
