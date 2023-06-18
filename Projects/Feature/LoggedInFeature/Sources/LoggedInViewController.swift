@@ -12,6 +12,8 @@ import RIBs
 import RxCocoa
 import RxSwift
 
+import DesignSystem
+
 // MARK: - LoggedInViewController
 
 final class LoggedInViewController:
@@ -40,16 +42,16 @@ final class LoggedInViewController:
     private lazy var emailTextFieldView = CustomTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: Strings.Onboarding.email)
-            $0.fetchRightTopLabelText(text: Strings.Onboarding.emailwarning)
+            $0.fetchLeftTopLabelText(text: DesignSystemStrings.Onboarding.email)
+            $0.fetchRightTopLabelText(text: DesignSystemStrings.Onboarding.emailwarning)
         }
         .build()
     
     private lazy var passwordTextFieldView = PasswordTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: Strings.Onboarding.password)
-            $0.fetchRightTopLabelText(text: Strings.Onboarding.passwordwarning)
+            $0.fetchLeftTopLabelText(text: DesignSystemStrings.Onboarding.password)
+            $0.fetchRightTopLabelText(text: DesignSystemStrings.Onboarding.passwordwarning)
         }
         .build()
     

@@ -7,6 +7,8 @@
 
 import UIKit
 
+import DesignSystem
+
 class DecoView: BaseView {
     private let leftSepartedLine = UIView().builder
         .backgroundColor(DesignSystemAsset.Colors.mainGray7.color)

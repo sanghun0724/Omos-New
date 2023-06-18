@@ -11,8 +11,9 @@ import ReactorKit
 import RIBs
 import RxSwift
 
-import OnboardingDomain
-import BaseFeature
+import AppFoundation
+import OnboardingDomainInterface
+import GlobalThirdPartyLibrary
 import LoggedInFeatureInterface
 import DesignSystem
 

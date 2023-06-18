@@ -8,17 +8,18 @@
 import NeedleFoundation
 import RIBs
 
-import OnboardingDomain
+import OnboardingDomainInterface
 import LoggedInFeatureInterface
-//import TodayFeature
 import TodayFeatureInterface
-//import SignUpFeature
 import SignUpFeatureInterface
 
 // MARK: - LoggedInDependency
 
 public protocol LoggedInDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
+    var loggedInBuilder: LoggedInBuildable { get }
+    var signUpBulder: SignUpBuildable { get }
+    var todayBuilder: TodayBuildable { get }
 }
 
 // MARK: - DynamicComponentDependency

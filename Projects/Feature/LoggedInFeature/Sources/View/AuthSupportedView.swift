@@ -7,6 +7,8 @@
 
 import UIKit
 
+import DesignSystem
+
 class AuthSupportedView: BaseView {
     
     // MARK: Constants

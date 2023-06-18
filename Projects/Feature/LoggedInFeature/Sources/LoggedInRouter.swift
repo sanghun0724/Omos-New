@@ -7,6 +7,10 @@
 
 import RIBs
 
+import TodayFeatureInterface
+import SignUpFeatureInterface
+import LoggedInFeatureInterface
+
 // MARK: - LoggedInInteractable
 
 protocol LoggedInInteractable: Interactable, TodayListener, SignUpListener {
