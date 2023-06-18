@@ -9,7 +9,7 @@ import UIKit
 
 // input : 라빌 , 워닝 라벨 ,
 
-class CustomTextField: UITextField, UITextFieldDelegate {
+public class CustomTextField: UITextField, UITextFieldDelegate {
     
     // MARK: Properties
     
@@ -22,7 +22,7 @@ class CustomTextField: UITextField, UITextFieldDelegate {
     
     // MARK: Initialize
     
-    init() {
+    public init() {
         super.init(frame: .zero)
         delegate = self
         setup()
@@ -33,15 +33,15 @@ class CustomTextField: UITextField, UITextFieldDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func fetchPlaceHolderText(text: String) {
+    public func fetchPlaceHolderText(text: String) {
         placeholder = text
     }
     
-    func fetchRightImage(image: UIImage) {
+    public func fetchRightImage(image: UIImage) {
         rightImageView.image = image
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         endEditing(true)
         return false
     }
