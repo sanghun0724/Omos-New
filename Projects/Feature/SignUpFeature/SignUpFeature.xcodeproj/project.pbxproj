@@ -24,6 +24,7 @@
 		42B120955BB150E59775BB69 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2592F8D629AC64CEC9276187 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		493CC60E7FC3B3A22337D99A /* SignUpInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3FB2DF2875B6FF7CDB1ED4 /* SignUpInterface.swift */; };
 		4A1838BE137C235DE585D729 /* SignUpFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E77CEC31A19C4C2001D3197 /* SignUpFeatureTesting.framework */; platformFilter = ios; };
+		4CA4AB139F80379BC4EF7C28 /* BaseShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCFE6266D6C48403D53D3DD /* BaseShared.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		582C33ACC151BF7970EAFDD3 /* TodayFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF97B2D00DEC2FFF369E48C /* TodayFeatureInterface.framework */; platformFilter = ios; };
 		59E9038A530BA351BF9567E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39C6AD2AA7C8E88B56251AD /* AppDelegate.swift */; };
 		5E526DE58C0C320B68AD5142 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8CB58BA8BE2197048D929 /* SignUpViewController.swift */; };
@@ -149,6 +150,7 @@
 				3807F3AA3BC4947D1DB700AC /* AppFoundation.framework in Embed Frameworks */,
 				D45BCB7E96C54EB7496AE70D /* BaseDomain.framework in Embed Frameworks */,
 				1AA63B2A36DDAA0562F03865 /* BaseFeature.framework in Embed Frameworks */,
+				4CA4AB139F80379BC4EF7C28 /* BaseShared.framework in Embed Frameworks */,
 				89879011160DBDB84B1F9E4F /* CoreKit.framework in Embed Frameworks */,
 				7C279594F5D31499BEE75DF5 /* DesignSystem.framework in Embed Frameworks */,
 				E62D0D7F7388BA6B04CB15CB /* GlobalThirdPartyLibrary.framework in Embed Frameworks */,
@@ -247,6 +249,7 @@
 		7E47ACF6CE20B4A414E896B0 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82DEB65600EF4EA0324840F3 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		911ECB834F04BA04B24E716B /* NicknameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameBuilder.swift; sourceTree = "<group>"; };
+		9DCFE6266D6C48403D53D3DD /* BaseShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E77CEC31A19C4C2001D3197 /* SignUpFeatureTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignUpFeatureTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E9015CD72E1510CB1EA8A5 /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A609788B9356A494440A8F51 /* ValidationCodeAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCodeAlertView.swift; sourceTree = "<group>"; };
@@ -431,6 +434,7 @@
 				34FD0DDC8F8D096BE7EDFCA2 /* AppFoundation.framework */,
 				FD8A79EF960A2E472B94037C /* BaseDomain.framework */,
 				F7512B0541C2721028715552 /* BaseFeature.framework */,
+				9DCFE6266D6C48403D53D3DD /* BaseShared.framework */,
 				DF1F2C546EDE219B5FF12BCE /* CoreKit.framework */,
 				08901490FD7FC8666A9DAD60 /* DesignSystem.framework */,
 				A86CEF0441ED27252B2A2427 /* GlobalThirdPartyLibrary.framework */,

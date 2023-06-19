@@ -47,6 +47,9 @@
             location = "group:AppFoundation/AppFoundation.xcodeproj">
          </FileRef>
          <FileRef
+            location = "group:BaseShared/BaseShared.xcodeproj">
+         </FileRef>
+         <FileRef
             location = "group:DesignSystem/DesignSystem.xcodeproj">
          </FileRef>
          <FileRef

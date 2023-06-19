@@ -44,6 +44,7 @@
 		C08C9B8D49AD64021494AA1B /* TodayInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98006F23F6A7B1249B9D444 /* TodayInterface.swift */; };
 		C2450EF389B9CA537D3E4349 /* TodayFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD126FA70A19199A5214851D /* TodayFeatureInterface.framework */; platformFilter = ios; };
 		CA9CF7F52CEF1741CEF401AE /* BaseDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD54328F5A9160A6433F3A21 /* BaseDomain.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CCB492002934C32960B149D7 /* BaseShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 894BD03C9FC623153D07D5A4 /* BaseShared.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D2FD0EE6A507FAAA38D1586C /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6956EF1C1F4BAB077DACEE2 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D302C25C7B3156EB92D9B1E1 /* TodayBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD13AFB032CEB332F355C96E /* TodayBuilder.swift */; };
 		D9EB9A43750F3D7B8567BE78 /* libTodayFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13DA4BDF3CDB7A1B696A94D7 /* libTodayFeature.a */; platformFilter = ios; };
@@ -134,6 +135,7 @@
 				881998A7AB26AD9D6B6A00FF /* AppFoundation.framework in Embed Frameworks */,
 				CA9CF7F52CEF1741CEF401AE /* BaseDomain.framework in Embed Frameworks */,
 				05DAE59ACF9C682345706B7A /* BaseFeature.framework in Embed Frameworks */,
+				CCB492002934C32960B149D7 /* BaseShared.framework in Embed Frameworks */,
 				3F2B509EBF409416C51C233A /* CoreKit.framework in Embed Frameworks */,
 				7D757546CD2B673DAB6E0312 /* DesignSystem.framework in Embed Frameworks */,
 				A39204E28C1D72EBB1E5CD5D /* GlobalThirdPartyLibrary.framework in Embed Frameworks */,
@@ -226,6 +228,7 @@
 		7DBAF8F70DB7B07254A78A4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8348BAFD6E71544747F936B2 /* TodayFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TodayFeatureTests-Info.plist"; sourceTree = "<group>"; };
 		8453B9FEA27B30A8B00944A5 /* TodayFeatureDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayFeatureDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		894BD03C9FC623153D07D5A4 /* BaseShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		930BADE50B4559BEEE86DCE5 /* TodayFeatureTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TodayFeatureTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61F8EEDE467CB0AAAFBF551 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CC4B94EB1EB6A9A337D4EC /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -381,6 +384,7 @@
 				6F340F4E3961E2CFFCBE59DF /* AppFoundation.framework */,
 				BD54328F5A9160A6433F3A21 /* BaseDomain.framework */,
 				113FFF7D4FD8E5570B9C03CD /* BaseFeature.framework */,
+				894BD03C9FC623153D07D5A4 /* BaseShared.framework */,
 				A61F8EEDE467CB0AAAFBF551 /* CoreKit.framework */,
 				3DE47EFD94776009F241AB94 /* DesignSystem.framework */,
 				49ABB25DCF991006577DDB0A /* GlobalThirdPartyLibrary.framework */,

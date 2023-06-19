@@ -20,7 +20,6 @@ class AppDelegate:
 {
     
     var window: UIWindow?
-    private var launchRouter: LaunchRouting?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: initial setting
@@ -29,9 +28,6 @@ class AppDelegate:
         
         setKakaoSDK()
         setLoggingChannel()
-        
-        setWindow()
-        setLaunchRouter()
         
         return true
     }
@@ -52,13 +48,6 @@ extension AppDelegate {
     private func setWindow() {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
-    }
-    
-    private func setLaunchRouter() {
-        guard let window = self.window else { return }
-        let appComponent = AppComponent()
-        self.launchRouter = appComponent.appRootBuilder.build()
-        self.launchRouter?.launch(from: window)
     }
 }
 
