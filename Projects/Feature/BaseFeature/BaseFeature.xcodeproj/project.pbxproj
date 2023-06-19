@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0763E46298DAB390AB77CE32 /* keep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD02B680EE2186171834AC3 /* keep.swift */; };
+		1B5850375FE4D04AE1BBC079 /* TodayFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF1FA976224A3BA7357139E /* TodayFeatureInterface.framework */; platformFilter = ios; };
+		2BE0410B2E84DE4A736CDAB8 /* LoggedInFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1348B82B0D6A6644D55E720A /* LoggedInFeatureInterface.framework */; platformFilter = ios; };
 		61AF2172CF3C5411AB92741A /* BaseDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C5208AB941DA301F031DC0 /* BaseDomain.framework */; platformFilter = ios; };
+		6991BF59A321029C93EACE43 /* SignUpFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BE431977BCCBBAB880EFF6 /* SignUpFeatureInterface.framework */; platformFilter = ios; };
 		6BE8265C87FD72601AC927A1 /* OnboardingDomainInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9652ECD13B125EA50504B5 /* OnboardingDomainInterface.framework */; platformFilter = ios; };
 		B7D2D1A72769B5D803A28458 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D28BA37872BAB2E96C05999 /* libOnboardingDomain.a */; platformFilter = ios; };
 		D7AE354964DD401C0F576762 /* BaseFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94114189EB05064BA4C7E6DE /* BaseFeature.framework */; platformFilter = ios; };
@@ -49,11 +52,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1348B82B0D6A6644D55E720A /* LoggedInFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoggedInFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF1FA976224A3BA7357139E /* TodayFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TodayFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C5208AB941DA301F031DC0 /* BaseDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33638E255860715CA90458F3 /* BaseFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BaseFeatureTests-Info.plist"; sourceTree = "<group>"; };
 		4D28BA37872BAB2E96C05999 /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C62C66A0662A0D0CF6404A /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		6E9652ECD13B125EA50504B5 /* OnboardingDomainInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingDomainInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78BE431977BCCBBAB880EFF6 /* SignUpFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignUpFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C26367EBA15DA87947EA486 /* BaseFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94114189EB05064BA4C7E6DE /* BaseFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD02B680EE2186171834AC3 /* keep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keep.swift; sourceTree = "<group>"; };
@@ -67,8 +73,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				61AF2172CF3C5411AB92741A /* BaseDomain.framework in Frameworks */,
+				2BE0410B2E84DE4A736CDAB8 /* LoggedInFeatureInterface.framework in Frameworks */,
 				B7D2D1A72769B5D803A28458 /* libOnboardingDomain.a in Frameworks */,
 				6BE8265C87FD72601AC927A1 /* OnboardingDomainInterface.framework in Frameworks */,
+				6991BF59A321029C93EACE43 /* SignUpFeatureInterface.framework in Frameworks */,
+				1B5850375FE4D04AE1BBC079 /* TodayFeatureInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +108,10 @@
 				94114189EB05064BA4C7E6DE /* BaseFeature.framework */,
 				7C26367EBA15DA87947EA486 /* BaseFeatureTests.xctest */,
 				4D28BA37872BAB2E96C05999 /* libOnboardingDomain.a */,
+				1348B82B0D6A6644D55E720A /* LoggedInFeatureInterface.framework */,
 				6E9652ECD13B125EA50504B5 /* OnboardingDomainInterface.framework */,
+				78BE431977BCCBBAB880EFF6 /* SignUpFeatureInterface.framework */,
+				1EF1FA976224A3BA7357139E /* TodayFeatureInterface.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";

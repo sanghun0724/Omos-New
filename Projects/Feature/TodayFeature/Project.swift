@@ -7,6 +7,9 @@ let project = Project.makeModule(
     product: .staticLibrary,
     targets: [.interface, .testing, .unitTest, .uiTest, .demo],
     internalDependencies: [
-        .feature(target: .BaseFeature)
+        
+    ],
+    interfaceDependencies: [
+        .domain(target: .BaseDomain)
     ]
 )

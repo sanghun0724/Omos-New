@@ -7,6 +7,8 @@ let project = Project.makeModule(
     product: .framework,
     targets: [.unitTest],
     internalDependencies: [
-        .core(target: .CoreKit)
+        .core(target: .CoreKit),
+        .domain(target: .OnboardingDomain),
+        .domain(target: .OnboardingDomain, type: .interface)
     ]
 )
