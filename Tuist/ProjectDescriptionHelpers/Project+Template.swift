@@ -65,7 +65,7 @@ public extension Project {
                 Target(
                     name: "\(name)Interface",
                     platform: platform,
-                    product: .framework,
+                    product: .staticLibrary,
                     bundleId: "\(env.organizationName).\(name)Interface",
                     deploymentTarget: env.deploymentTarget,
                     infoPlist: .default,

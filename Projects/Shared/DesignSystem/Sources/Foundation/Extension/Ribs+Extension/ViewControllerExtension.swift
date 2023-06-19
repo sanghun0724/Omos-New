@@ -15,7 +15,7 @@ public extension ViewControllable {
         uiviewController as? UIKit.UINavigationController ?? uiviewController.navigationController
     }
     
-    public func push(
+    func push(
         viewController: ViewControllable,
         animated: Bool = true,
         completion: (() -> Void)? = nil,
@@ -46,7 +46,7 @@ public extension ViewControllable {
         viewController.uiviewController.hidesBottomBarWhenPushed = canHideBottomBarWhenPushed
     }
     
-    public func pop(
+    func pop(
         _ viewController: ViewControllable,
         animated: Bool = true,
         completion: (() -> Void)? = nil,
@@ -73,7 +73,7 @@ public extension ViewControllable {
         }
     }
     
-    public func pop(
+    func pop(
         to viewController: ViewControllable,
         animated: Bool = true,
         completion: (() -> Void)? = nil,
@@ -110,7 +110,7 @@ public extension ViewControllable {
         }
     }
     
-    public func popToRootViewController(
+    func popToRootViewController(
         animated: Bool = true,
         completion: (() -> Void)? = nil,
         needToDismissPresentedViewController: Bool = true,
@@ -126,7 +126,7 @@ public extension ViewControllable {
         }
     }
     
-    public func present(
+    func present(
         _ viewController: ViewControllable,
         animated: Bool = true,
         completion: (() -> Void)? = nil,

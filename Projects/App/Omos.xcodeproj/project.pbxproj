@@ -8,83 +8,65 @@
 
 /* Begin PBXBuildFile section */
 		030CAFC74837D8084C8EDC2F /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EC0B2676F2342A3B24ADA0 /* NeedleGenerated.swift */; };
-		0DFDDA240E88B4EFA9E0F730 /* BaseShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35CDAB71308E5B6635E0388B /* BaseShared.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0F346DB30214B040BF3D5EBF /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3876FC3FB27253716E573AAD /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0FC59E0AE7052FD0826849B7 /* TodayFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07469113B4B635BAAE1CED5E /* TodayFeatureInterface.framework */; platformFilter = ios; };
+		1380744EA5056DD06469A25D /* libTodayFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D7BCB337F8244C8EC5E04C /* libTodayFeatureInterface.a */; platformFilter = ios; };
 		13D33BEE052D9FF1888A822E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E8905F662EA1075BDA0DC1 /* SceneDelegate.swift */; };
-		33AB75C4D24D83B873A6539C /* NeedleFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48FBEC0A4D64373B977FA357 /* NeedleFoundation.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1CD2065AC5BBAB739F31F49B /* libSignUpFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6A2ADBDBE360D911077984 /* libSignUpFeatureInterface.a */; platformFilter = ios; };
+		28B6EB70EA2D23021641DC53 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 637268A3C51591F755658002 /* libAppFoundation.a */; platformFilter = ios; };
 		33E098204456A28AFA90A162 /* AppRootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CBAD617B986B563D4FC58 /* AppRootBuilder.swift */; };
 		3BA5B9E7BD96DF85DB91BE4F /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2D53F6F351F4A88A2B22D1C /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E012176CDE27DC568639C16 /* libBaseFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2317EA32AF5DA3D02DFA86 /* libBaseFeature.a */; platformFilter = ios; };
 		40081EE34DE93DABB92C72B4 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7356AD78E8DB9CB1D99AE2 /* AppComponent.swift */; };
-		57FB2A941F7B241941CC5125 /* BaseDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A425FC1B44A9E4A363B0346B /* BaseDomain.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		58B3DF4DDA24B94CAC09EAEE /* TodayFeatureInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07469113B4B635BAAE1CED5E /* TodayFeatureInterface.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5B09C2DCB325A48A26EC5DED /* RxDataSources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8213ABE0D223B60EC5E8BC1D /* RxDataSources.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E8135D6B6240BB4E2E076B5 /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F405E7F266B542AC546336EB /* libBaseDomain.a */; platformFilter = ios; };
 		5EBC8F067DE9B7AE1219DFBB /* AppRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037F1C2BB601FB6B4278C9B /* AppRootViewController.swift */; };
 		6077659316DD3677C1478D50 /* TuistBundle+Omos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8454080427ADA90ECBB2DAA /* TuistBundle+Omos.swift */; };
 		60813BED0FA743A2AFCE8B9D /* GlobalThirdPartyLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49C61D1A1322F6A3672A767E /* GlobalThirdPartyLibrary.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		652A824CC280589CCF437FDF /* OnboardingDomainInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87AB12B26A01A6F921889E2C /* OnboardingDomainInterface.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		685431625730D3AEA3297C26 /* ReactorKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70403215A94A6C3084293C67 /* ReactorKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65F960020B7D3B1DCAC767A7 /* GlobalThirdPartyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C61D1A1322F6A3672A767E /* GlobalThirdPartyLibrary.framework */; platformFilter = ios; };
 		6889E08885FAF43E5397B963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28AA039154BA7252DE42107D /* Assets.xcassets */; };
-		704D898A060FCD27A46A7256 /* LogFlume.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE6677AF6A28F9FB6961062 /* LogFlume.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7B926F63B9A6B41390A2220D /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A8A74B82801B5EF3CE410687 /* Kingfisher.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		83F3C669759423E5C0142D83 /* RIBs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 377F62FB0F38A7B71038D80A /* RIBs.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84837F193B7C7B020CF11F56 /* RxGesture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCAD8577C94E5B9911392CE1 /* RxGesture.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		880C0DFB9BE9D9C9B0DF0FCB /* LoggedInFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020DF79A42C618C501FBF7A3 /* LoggedInFeatureInterface.framework */; platformFilter = ios; };
-		88CEA050BC98E22DEDD0B6D1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CABDD4078CF7D17DE6B45A51 /* Alamofire.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C10078D7C03F2B0BB6D370A /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA1B46C5F7F9A2048EF250E /* libOnboardingDomain.a */; platformFilter = ios; };
+		73C4738C7D527445D943854B /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 949193658CA08ACA9D3C0C3A /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
+		82AFA7A53EC86519758479D7 /* libLoggedInFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 379F3D61AD4A8F0C91311324 /* libLoggedInFeatureInterface.a */; platformFilter = ios; };
 		89C38B094F895CEE543D2E46 /* libSignUpFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 360367E2CEEBC9F2C3509693 /* libSignUpFeature.a */; platformFilter = ios; };
-		94E263C5A4FD271A829C3E86 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3941051E05B6A3263569BC66 /* DesignSystem.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		98D1F84F7752F5DBC4A8A2F4 /* BaseFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E06C7FA1039BD95CA2E09F /* BaseFeature.framework */; platformFilter = ios; };
 		98E7D4D43D8B1A9F2314CC1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEABA9A2C7C383FBFB9BAABC /* LaunchScreen.storyboard */; };
+		990D300B2350B351DBC5664F /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 949193658CA08ACA9D3C0C3A /* DesignSystem_DesignSystem.bundle */; };
 		9B525C715C378E59EE91D8A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAC14283CECB75004D11225 /* AppDelegate.swift */; };
 		A3F5139CCA063416E6B212E6 /* TuistAssets+Omos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB880C4CB4E436D170DA3B3E /* TuistAssets+Omos.swift */; };
 		B2A1A07804870913EF938BD2 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E017FF22B129F1A71DFFED4 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEA34BCDB071560045BDE0DC /* SignUpFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901C38574FC2E1F9F5956E9B /* SignUpFeatureInterface.framework */; platformFilter = ios; };
-		C0648D96ECF3F41FEF88C671 /* CoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8791B3E9A2E1A7CA85D73FD6 /* CoreKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C142E6B1D4418C09D58E3C92 /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2E1BEBBA263B4BA466C546 /* AppRootInteractor.swift */; };
-		C4C9F27D6633068F2F8FA294 /* BaseFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9E06C7FA1039BD95CA2E09F /* BaseFeature.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D09AE81332906E77965FC2E7 /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E98D24A5213E68BF2B75A98 /* libCoreKit.a */; platformFilter = ios; };
+		D2B253667106437D55AD18F2 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9FA0D3D70D8286BD72351C /* libDesignSystem.a */; platformFilter = ios; };
 		D44F7BC43C84340DEECE54CC /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA4B1EC78866ABD20B9A0B73 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7FEA39C4DDA4549D5CE9FE9 /* libLoggedInFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BAB14F4F0EED8149FF9CE4 /* libLoggedInFeature.a */; platformFilter = ios; };
 		DFFD2ACB22DA7F73CFE07A47 /* libTodayFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0793D243A463AA8298D613F /* libTodayFeature.a */; platformFilter = ios; };
-		E72345CC13B4DD8BE2E7EFB1 /* SignUpFeatureInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 901C38574FC2E1F9F5956E9B /* SignUpFeatureInterface.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F0CB882BE5FBEAA00F4E3F2E /* LoggedInFeatureInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 020DF79A42C618C501FBF7A3 /* LoggedInFeatureInterface.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F5B035E9245D05B2E3A7EDCE /* AppFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD919D37EA64B48C9D5A9C9E /* AppFoundation.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E4B682BF127DC2486F60823B /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E73DB3A3CBDC6B2E31B4140 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		F38EE96BC6E7B38656108546 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B68A62B787657B5F5BF2A907 /* libBaseShared.a */; platformFilter = ios; };
 		F7979D9C149FC0FAC756110C /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAFF48CECD97F065A1E580E0 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FAD2F43B86F5916311D9B64A /* SkeletonView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC117193BDD96B3DF6977E8A /* SkeletonView.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD0BB3DF9AD8EC6B4BEAE5F7 /* AppRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D6307A8145B393203D2931 /* AppRootRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2D338284BC6AC88A9B825262 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				73C4738C7D527445D943854B /* DesignSystem_DesignSystem.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		9C78C62CA1E544BAE9D97108 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				88CEA050BC98E22DEDD0B6D1 /* Alamofire.framework in Embed Frameworks */,
-				F5B035E9245D05B2E3A7EDCE /* AppFoundation.framework in Embed Frameworks */,
-				57FB2A941F7B241941CC5125 /* BaseDomain.framework in Embed Frameworks */,
-				C4C9F27D6633068F2F8FA294 /* BaseFeature.framework in Embed Frameworks */,
-				0DFDDA240E88B4EFA9E0F730 /* BaseShared.framework in Embed Frameworks */,
-				C0648D96ECF3F41FEF88C671 /* CoreKit.framework in Embed Frameworks */,
-				94E263C5A4FD271A829C3E86 /* DesignSystem.framework in Embed Frameworks */,
 				60813BED0FA743A2AFCE8B9D /* GlobalThirdPartyLibrary.framework in Embed Frameworks */,
-				7B926F63B9A6B41390A2220D /* Kingfisher.framework in Embed Frameworks */,
-				704D898A060FCD27A46A7256 /* LogFlume.framework in Embed Frameworks */,
-				F0CB882BE5FBEAA00F4E3F2E /* LoggedInFeatureInterface.framework in Embed Frameworks */,
-				33AB75C4D24D83B873A6539C /* NeedleFoundation.framework in Embed Frameworks */,
-				652A824CC280589CCF437FDF /* OnboardingDomainInterface.framework in Embed Frameworks */,
-				83F3C669759423E5C0142D83 /* RIBs.framework in Embed Frameworks */,
-				685431625730D3AEA3297C26 /* ReactorKit.framework in Embed Frameworks */,
 				B2A1A07804870913EF938BD2 /* RxCocoa.framework in Embed Frameworks */,
 				D44F7BC43C84340DEECE54CC /* RxCocoaRuntime.framework in Embed Frameworks */,
-				5B09C2DCB325A48A26EC5DED /* RxDataSources.framework in Embed Frameworks */,
-				84837F193B7C7B020CF11F56 /* RxGesture.framework in Embed Frameworks */,
 				0F346DB30214B040BF3D5EBF /* RxRelay.framework in Embed Frameworks */,
 				3BA5B9E7BD96DF85DB91BE4F /* RxSwift.framework in Embed Frameworks */,
-				E72345CC13B4DD8BE2E7EFB1 /* SignUpFeatureInterface.framework in Embed Frameworks */,
-				FAD2F43B86F5916311D9B64A /* SkeletonView.framework in Embed Frameworks */,
 				F7979D9C149FC0FAC756110C /* SnapKit.framework in Embed Frameworks */,
-				58B3DF4DDA24B94CAC09EAEE /* TodayFeatureInterface.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,48 +74,41 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		020DF79A42C618C501FBF7A3 /* LoggedInFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoggedInFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		07469113B4B635BAAE1CED5E /* TodayFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TodayFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BAB14F4F0EED8149FF9CE4 /* libLoggedInFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLoggedInFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EE6677AF6A28F9FB6961062 /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E73DB3A3CBDC6B2E31B4140 /* libOnboardingDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EC0B2676F2342A3B24ADA0 /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		2758EC3F561D4F7008FAABB6 /* Omos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28AA039154BA7252DE42107D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		35CDAB71308E5B6635E0388B /* BaseShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		360367E2CEEBC9F2C3509693 /* libSignUpFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSignUpFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		377F62FB0F38A7B71038D80A /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		379F3D61AD4A8F0C91311324 /* libLoggedInFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLoggedInFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3876FC3FB27253716E573AAD /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3941051E05B6A3263569BC66 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4037F1C2BB601FB6B4278C9B /* AppRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewController.swift; sourceTree = "<group>"; };
 		41B8FF7940D72656A1303AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		48FBEC0A4D64373B977FA357 /* NeedleFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeedleFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C61D1A1322F6A3672A767E /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7356AD78E8DB9CB1D99AE2 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		5A2317EA32AF5DA3D02DFA86 /* libBaseFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		637268A3C51591F755658002 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E017FF22B129F1A71DFFED4 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		70403215A94A6C3084293C67 /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75D7BCB337F8244C8EC5E04C /* libTodayFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CA1B46C5F7F9A2048EF250E /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E98D24A5213E68BF2B75A98 /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8097E8F577BA82D6582F1899 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
-		8213ABE0D223B60EC5E8BC1D /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8791B3E9A2E1A7CA85D73FD6 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		87AB12B26A01A6F921889E2C /* OnboardingDomainInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingDomainInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2E1BEBBA263B4BA466C546 /* AppRootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootInteractor.swift; sourceTree = "<group>"; };
-		901C38574FC2E1F9F5956E9B /* SignUpFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignUpFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		949193658CA08ACA9D3C0C3A /* DesignSystem_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystem_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A9FA0D3D70D8286BD72351C /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0793D243A463AA8298D613F /* libTodayFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A425FC1B44A9E4A363B0346B /* BaseDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8A74B82801B5EF3CE410687 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEABA9A2C7C383FBFB9BAABC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BC117193BDD96B3DF6977E8A /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCAD8577C94E5B9911392CE1 /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CABDD4078CF7D17DE6B45A51 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68A62B787657B5F5BF2A907 /* libBaseShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFF48CECD97F065A1E580E0 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC6A2ADBDBE360D911077984 /* libSignUpFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSignUpFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72CBAD617B986B563D4FC58 /* AppRootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootBuilder.swift; sourceTree = "<group>"; };
-		D9E06C7FA1039BD95CA2E09F /* BaseFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4B1EC78866ABD20B9A0B73 /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB880C4CB4E436D170DA3B3E /* TuistAssets+Omos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Omos.swift"; sourceTree = "<group>"; };
 		E2D53F6F351F4A88A2B22D1C /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E8905F662EA1075BDA0DC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E8454080427ADA90ECBB2DAA /* TuistBundle+Omos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Omos.swift"; sourceTree = "<group>"; };
+		F405E7F266B542AC546336EB /* libBaseDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D6307A8145B393203D2931 /* AppRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootRouter.swift; sourceTree = "<group>"; };
-		FD919D37EA64B48C9D5A9C9E /* AppFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAC14283CECB75004D11225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,13 +117,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98D1F84F7752F5DBC4A8A2F4 /* BaseFeature.framework in Frameworks */,
+				28B6EB70EA2D23021641DC53 /* libAppFoundation.a in Frameworks */,
+				5E8135D6B6240BB4E2E076B5 /* libBaseDomain.a in Frameworks */,
+				3E012176CDE27DC568639C16 /* libBaseFeature.a in Frameworks */,
+				F38EE96BC6E7B38656108546 /* libBaseShared.a in Frameworks */,
+				D09AE81332906E77965FC2E7 /* libCoreKit.a in Frameworks */,
+				D2B253667106437D55AD18F2 /* libDesignSystem.a in Frameworks */,
+				65F960020B7D3B1DCAC767A7 /* GlobalThirdPartyLibrary.framework in Frameworks */,
 				D7FEA39C4DDA4549D5CE9FE9 /* libLoggedInFeature.a in Frameworks */,
-				880C0DFB9BE9D9C9B0DF0FCB /* LoggedInFeatureInterface.framework in Frameworks */,
+				82AFA7A53EC86519758479D7 /* libLoggedInFeatureInterface.a in Frameworks */,
+				6C10078D7C03F2B0BB6D370A /* libOnboardingDomain.a in Frameworks */,
+				E4B682BF127DC2486F60823B /* libOnboardingDomainInterface.a in Frameworks */,
 				89C38B094F895CEE543D2E46 /* libSignUpFeature.a in Frameworks */,
-				BEA34BCDB071560045BDE0DC /* SignUpFeatureInterface.framework in Frameworks */,
+				1CD2065AC5BBAB739F31F49B /* libSignUpFeatureInterface.a in Frameworks */,
 				DFFD2ACB22DA7F73CFE07A47 /* libTodayFeature.a in Frameworks */,
-				0FC59E0AE7052FD0826849B7 /* TodayFeatureInterface.framework in Frameworks */,
+				1380744EA5056DD06469A25D /* libTodayFeatureInterface.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,35 +243,28 @@
 		DC7906DFB3E44A5A73B699FE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CABDD4078CF7D17DE6B45A51 /* Alamofire.framework */,
-				FD919D37EA64B48C9D5A9C9E /* AppFoundation.framework */,
-				A425FC1B44A9E4A363B0346B /* BaseDomain.framework */,
-				D9E06C7FA1039BD95CA2E09F /* BaseFeature.framework */,
-				35CDAB71308E5B6635E0388B /* BaseShared.framework */,
-				8791B3E9A2E1A7CA85D73FD6 /* CoreKit.framework */,
-				3941051E05B6A3263569BC66 /* DesignSystem.framework */,
+				949193658CA08ACA9D3C0C3A /* DesignSystem_DesignSystem.bundle */,
 				49C61D1A1322F6A3672A767E /* GlobalThirdPartyLibrary.framework */,
-				A8A74B82801B5EF3CE410687 /* Kingfisher.framework */,
+				637268A3C51591F755658002 /* libAppFoundation.a */,
+				F405E7F266B542AC546336EB /* libBaseDomain.a */,
+				5A2317EA32AF5DA3D02DFA86 /* libBaseFeature.a */,
+				B68A62B787657B5F5BF2A907 /* libBaseShared.a */,
+				7E98D24A5213E68BF2B75A98 /* libCoreKit.a */,
+				9A9FA0D3D70D8286BD72351C /* libDesignSystem.a */,
 				19BAB14F4F0EED8149FF9CE4 /* libLoggedInFeature.a */,
+				379F3D61AD4A8F0C91311324 /* libLoggedInFeatureInterface.a */,
+				7CA1B46C5F7F9A2048EF250E /* libOnboardingDomain.a */,
+				1E73DB3A3CBDC6B2E31B4140 /* libOnboardingDomainInterface.a */,
 				360367E2CEEBC9F2C3509693 /* libSignUpFeature.a */,
+				CC6A2ADBDBE360D911077984 /* libSignUpFeatureInterface.a */,
 				A0793D243A463AA8298D613F /* libTodayFeature.a */,
-				1EE6677AF6A28F9FB6961062 /* LogFlume.framework */,
-				020DF79A42C618C501FBF7A3 /* LoggedInFeatureInterface.framework */,
-				48FBEC0A4D64373B977FA357 /* NeedleFoundation.framework */,
+				75D7BCB337F8244C8EC5E04C /* libTodayFeatureInterface.a */,
 				2758EC3F561D4F7008FAABB6 /* Omos.app */,
-				87AB12B26A01A6F921889E2C /* OnboardingDomainInterface.framework */,
-				70403215A94A6C3084293C67 /* ReactorKit.framework */,
-				377F62FB0F38A7B71038D80A /* RIBs.framework */,
 				6E017FF22B129F1A71DFFED4 /* RxCocoa.framework */,
 				DA4B1EC78866ABD20B9A0B73 /* RxCocoaRuntime.framework */,
-				8213ABE0D223B60EC5E8BC1D /* RxDataSources.framework */,
-				BCAD8577C94E5B9911392CE1 /* RxGesture.framework */,
 				3876FC3FB27253716E573AAD /* RxRelay.framework */,
 				E2D53F6F351F4A88A2B22D1C /* RxSwift.framework */,
-				901C38574FC2E1F9F5956E9B /* SignUpFeatureInterface.framework */,
-				BC117193BDD96B3DF6977E8A /* SkeletonView.framework */,
 				CAFF48CECD97F065A1E580E0 /* SnapKit.framework */,
-				07469113B4B635BAAE1CED5E /* TodayFeatureInterface.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,6 +280,7 @@
 				280BED0267068F2BCDA1552E /* Resources */,
 				9C78C62CA1E544BAE9D97108 /* Embed Frameworks */,
 				19E802E9B5E1A31DDF0D83F9 /* Frameworks */,
+				2D338284BC6AC88A9B825262 /* Dependencies */,
 			);
 			buildRules = (
 			);
@@ -349,6 +326,7 @@
 			files = (
 				6889E08885FAF43E5397B963 /* Assets.xcassets in Resources */,
 				98E7D4D43D8B1A9F2314CC1D /* LaunchScreen.storyboard in Resources */,
+				990D300B2350B351DBC5664F /* DesignSystem_DesignSystem.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

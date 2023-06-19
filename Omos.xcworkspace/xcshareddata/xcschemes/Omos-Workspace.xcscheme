@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4724A585CE20791838139B29"
-               BuildableName = "AppFoundation.framework"
+               BuildableName = "libAppFoundation.a"
                BlueprintName = "AppFoundation"
                ReferencedContainer = "container:Projects/Shared/AppFoundation/AppFoundation.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F4D1B67A20EB13564617513A"
-               BuildableName = "BaseDomain.framework"
+               BuildableName = "libBaseDomain.a"
                BlueprintName = "BaseDomain"
                ReferencedContainer = "container:Projects/Domain/BaseDomain/BaseDomain.xcodeproj">
             </BuildableReference>
@@ -85,7 +85,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D3E314B387FD8B34A15E37AD"
-               BuildableName = "BaseFeature.framework"
+               BuildableName = "libBaseFeature.a"
                BlueprintName = "BaseFeature"
                ReferencedContainer = "container:Projects/Feature/BaseFeature/BaseFeature.xcodeproj">
             </BuildableReference>
@@ -113,7 +113,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "09ECCA8AF90198C76DD62083"
-               BuildableName = "BaseShared.framework"
+               BuildableName = "libBaseShared.a"
                BlueprintName = "BaseShared"
                ReferencedContainer = "container:Projects/Shared/BaseShared/BaseShared.xcodeproj">
             </BuildableReference>
@@ -127,7 +127,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C0E2BAB47E295A4548E4955F"
-               BuildableName = "CoreKit.framework"
+               BuildableName = "libCoreKit.a"
                BlueprintName = "CoreKit"
                ReferencedContainer = "container:Projects/Core/CoreKit/CoreKit.xcodeproj">
             </BuildableReference>
@@ -141,7 +141,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "83C9B5D1938C22907FF6E247"
-               BuildableName = "DesignSystem.framework"
+               BuildableName = "libDesignSystem.a"
                BlueprintName = "DesignSystem"
                ReferencedContainer = "container:Projects/Shared/DesignSystem/DesignSystem.xcodeproj">
             </BuildableReference>
@@ -171,6 +171,20 @@
                BlueprintIdentifier = "22296878A9434DD004037C62"
                BuildableName = "DesignSystemUITests.xctest"
                BlueprintName = "DesignSystemUITests"
+               ReferencedContainer = "container:Projects/Shared/DesignSystem/DesignSystem.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C777EA7684CF3B97BE76C38C"
+               BuildableName = "DesignSystem_DesignSystem.bundle"
+               BlueprintName = "DesignSystem_DesignSystem"
                ReferencedContainer = "container:Projects/Shared/DesignSystem/DesignSystem.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -379,7 +393,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "195C0117DD83EE37219659BC"
-               BuildableName = "LoggedInFeatureInterface.framework"
+               BuildableName = "libLoggedInFeatureInterface.a"
                BlueprintName = "LoggedInFeatureInterface"
                ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
             </BuildableReference>
@@ -477,7 +491,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E663B72A9050717EE774E675"
-               BuildableName = "OnboardingDomainInterface.framework"
+               BuildableName = "libOnboardingDomainInterface.a"
                BlueprintName = "OnboardingDomainInterface"
                ReferencedContainer = "container:Projects/Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
             </BuildableReference>
@@ -673,7 +687,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "924165B3A475223F4B927128"
-               BuildableName = "SignUpFeatureInterface.framework"
+               BuildableName = "libSignUpFeatureInterface.a"
                BlueprintName = "SignUpFeatureInterface"
                ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
             </BuildableReference>
@@ -785,7 +799,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "25124A6B58E72B37534F1280"
-               BuildableName = "TodayFeatureInterface.framework"
+               BuildableName = "libTodayFeatureInterface.a"
                BlueprintName = "TodayFeatureInterface"
                ReferencedContainer = "container:Projects/Feature/TodayFeature/TodayFeature.xcodeproj">
             </BuildableReference>
