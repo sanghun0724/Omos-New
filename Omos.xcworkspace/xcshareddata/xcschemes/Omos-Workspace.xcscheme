@@ -112,6 +112,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "09ECCA8AF90198C76DD62083"
+               BuildableName = "BaseShared.framework"
+               BlueprintName = "BaseShared"
+               ReferencedContainer = "container:Projects/Shared/BaseShared/BaseShared.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "C0E2BAB47E295A4548E4955F"
                BuildableName = "CoreKit.framework"
                BlueprintName = "CoreKit"

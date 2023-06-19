@@ -3,10 +3,11 @@ import ProjectDescriptionHelpers
 import DependencyPlugin
 
 let project = Project.makeModule(
-    name: ModulePaths.Core.CoreKit.rawValue,
+    name: ModulePaths.Shared.BaseShared.rawValue,
     product: .framework,
     targets: [],
     internalDependencies: [
-        .shared(target: .BaseShared)
+        .shared(target: .DesignSystem),
+        .shared(target: .GlobalThirdPartyLibrary)
     ]
 )

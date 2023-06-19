@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		030CAFC74837D8084C8EDC2F /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EC0B2676F2342A3B24ADA0 /* NeedleGenerated.swift */; };
+		0DFDDA240E88B4EFA9E0F730 /* BaseShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35CDAB71308E5B6635E0388B /* BaseShared.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0F346DB30214B040BF3D5EBF /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3876FC3FB27253716E573AAD /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0FC59E0AE7052FD0826849B7 /* TodayFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07469113B4B635BAAE1CED5E /* TodayFeatureInterface.framework */; platformFilter = ios; };
+		13D33BEE052D9FF1888A822E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E8905F662EA1075BDA0DC1 /* SceneDelegate.swift */; };
 		33AB75C4D24D83B873A6539C /* NeedleFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48FBEC0A4D64373B977FA357 /* NeedleFoundation.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		33E098204456A28AFA90A162 /* AppRootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CBAD617B986B563D4FC58 /* AppRootBuilder.swift */; };
 		3BA5B9E7BD96DF85DB91BE4F /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2D53F6F351F4A88A2B22D1C /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -62,6 +64,7 @@
 				F5B035E9245D05B2E3A7EDCE /* AppFoundation.framework in Embed Frameworks */,
 				57FB2A941F7B241941CC5125 /* BaseDomain.framework in Embed Frameworks */,
 				C4C9F27D6633068F2F8FA294 /* BaseFeature.framework in Embed Frameworks */,
+				0DFDDA240E88B4EFA9E0F730 /* BaseShared.framework in Embed Frameworks */,
 				C0648D96ECF3F41FEF88C671 /* CoreKit.framework in Embed Frameworks */,
 				94E263C5A4FD271A829C3E86 /* DesignSystem.framework in Embed Frameworks */,
 				60813BED0FA743A2AFCE8B9D /* GlobalThirdPartyLibrary.framework in Embed Frameworks */,
@@ -96,6 +99,7 @@
 		21EC0B2676F2342A3B24ADA0 /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		2758EC3F561D4F7008FAABB6 /* Omos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28AA039154BA7252DE42107D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35CDAB71308E5B6635E0388B /* BaseShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		360367E2CEEBC9F2C3509693 /* libSignUpFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSignUpFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		377F62FB0F38A7B71038D80A /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3876FC3FB27253716E573AAD /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +130,7 @@
 		DA4B1EC78866ABD20B9A0B73 /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB880C4CB4E436D170DA3B3E /* TuistAssets+Omos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Omos.swift"; sourceTree = "<group>"; };
 		E2D53F6F351F4A88A2B22D1C /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E8905F662EA1075BDA0DC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E8454080427ADA90ECBB2DAA /* TuistBundle+Omos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Omos.swift"; sourceTree = "<group>"; };
 		F7D6307A8145B393203D2931 /* AppRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootRouter.swift; sourceTree = "<group>"; };
 		FD919D37EA64B48C9D5A9C9E /* AppFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +232,7 @@
 				4C7356AD78E8DB9CB1D99AE2 /* AppComponent.swift */,
 				FEAC14283CECB75004D11225 /* AppDelegate.swift */,
 				21EC0B2676F2342A3B24ADA0 /* NeedleGenerated.swift */,
+				E5E8905F662EA1075BDA0DC1 /* SceneDelegate.swift */,
 			);
 			path = AppStart;
 			sourceTree = "<group>";
@@ -258,6 +264,7 @@
 				FD919D37EA64B48C9D5A9C9E /* AppFoundation.framework */,
 				A425FC1B44A9E4A363B0346B /* BaseDomain.framework */,
 				D9E06C7FA1039BD95CA2E09F /* BaseFeature.framework */,
+				35CDAB71308E5B6635E0388B /* BaseShared.framework */,
 				8791B3E9A2E1A7CA85D73FD6 /* CoreKit.framework */,
 				3941051E05B6A3263569BC66 /* DesignSystem.framework */,
 				49C61D1A1322F6A3672A767E /* GlobalThirdPartyLibrary.framework */,
@@ -361,6 +368,7 @@
 				40081EE34DE93DABB92C72B4 /* AppComponent.swift in Sources */,
 				9B525C715C378E59EE91D8A0 /* AppDelegate.swift in Sources */,
 				030CAFC74837D8084C8EDC2F /* NeedleGenerated.swift in Sources */,
+				13D33BEE052D9FF1888A822E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
