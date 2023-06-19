@@ -25,7 +25,6 @@
 		493CC60E7FC3B3A22337D99A /* SignUpInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3FB2DF2875B6FF7CDB1ED4 /* SignUpInterface.swift */; };
 		4A1838BE137C235DE585D729 /* SignUpFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E77CEC31A19C4C2001D3197 /* SignUpFeatureTesting.framework */; platformFilter = ios; };
 		4CA4AB139F80379BC4EF7C28 /* BaseShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCFE6266D6C48403D53D3DD /* BaseShared.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		582C33ACC151BF7970EAFDD3 /* TodayFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF97B2D00DEC2FFF369E48C /* TodayFeatureInterface.framework */; platformFilter = ios; };
 		59E9038A530BA351BF9567E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39C6AD2AA7C8E88B56251AD /* AppDelegate.swift */; };
 		5E526DE58C0C320B68AD5142 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8CB58BA8BE2197048D929 /* SignUpViewController.swift */; };
 		607E998EA6C41113A8FBCC68 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DEB65600EF4EA0324840F3 /* InfoViewController.swift */; };
@@ -47,7 +46,6 @@
 		A841D3AD2EDCE980220803F9 /* ValidationCodeAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A609788B9356A494440A8F51 /* ValidationCodeAlertView.swift */; };
 		AF0B5369EE605ADB7BDF0009 /* SignUpFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E77CEC31A19C4C2001D3197 /* SignUpFeatureTesting.framework */; platformFilter = ios; };
 		B14098B997BBB01496950A65 /* libSignUpFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D7E5AA6E7A70A5460F5F87 /* libSignUpFeature.a */; platformFilter = ios; };
-		B1AD4B9D8A277188F62ED18E /* TodayFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF97B2D00DEC2FFF369E48C /* TodayFeatureInterface.framework */; platformFilter = ios; };
 		B35AEF75277BF89EAF175771 /* SignUpFeatureInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC4F5642609620FF33A5CA5 /* SignUpFeatureInterface.framework */; platformFilter = ios; };
 		BB65B114803341F579E7F91C /* NicknameStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71A9B912F0806BF27C0FE17 /* NicknameStateAction.swift */; };
 		CB31CC35056DA2772B83183F /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391CB4C0BD64A9BC51A48198 /* SignUpBuilder.swift */; };
@@ -56,6 +54,7 @@
 		D61D0870D7DC129EA397C8B6 /* RxGesture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2418B7A02BE8AA1979CED96 /* RxGesture.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D623389F7D2FAC0E1EE96E61 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD97335A19E1738C11AF4015 /* Alamofire.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D9A67A386E1552A525B6378B /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E47ACF6CE20B4A414E896B0 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E0E2989652766BE26BB5FE6D /* LoggedInFeatureInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E02DB24EC5CA7AD8A19A2574 /* LoggedInFeatureInterface.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E4BA185946677537CBBBFFC3 /* RxDataSources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68053F2A01040A3FF0601A12 /* RxDataSources.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E4DC84EA648BF8FF68FF0044 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C71682FE3FCB868B8D00B9 /* SignUpRouter.swift */; };
 		E62D0D7F7388BA6B04CB15CB /* GlobalThirdPartyLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A86CEF0441ED27252B2A2427 /* GlobalThirdPartyLibrary.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -156,6 +155,7 @@
 				E62D0D7F7388BA6B04CB15CB /* GlobalThirdPartyLibrary.framework in Embed Frameworks */,
 				123F1BD4525030A604546FCF /* Kingfisher.framework in Embed Frameworks */,
 				1207C4645BE3EC507AED87CD /* LogFlume.framework in Embed Frameworks */,
+				E0E2989652766BE26BB5FE6D /* LoggedInFeatureInterface.framework in Embed Frameworks */,
 				CFF1E312B96E6D488184C782 /* NeedleFoundation.framework in Embed Frameworks */,
 				019195D0BB16E5DD16B132DE /* OnboardingDomainInterface.framework in Embed Frameworks */,
 				38CDD1A2B82A4E223368D398 /* RIBs.framework in Embed Frameworks */,
@@ -269,6 +269,7 @@
 		DD4BEFF7AA4A086640F0BE10 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		DDF97B2D00DEC2FFF369E48C /* TodayFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TodayFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF1F2C546EDE219B5FF12BCE /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E02DB24EC5CA7AD8A19A2574 /* LoggedInFeatureInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoggedInFeatureInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FBE1F7723A76185A5281D5 /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F602018A7EF2100A82C7C070 /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7512B0541C2721028715552 /* BaseFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,7 +315,6 @@
 			files = (
 				86667E856991555FD7C13FD5 /* BaseFeature.framework in Frameworks */,
 				2265F83F514487619116B9E2 /* SignUpFeatureInterface.framework in Frameworks */,
-				582C33ACC151BF7970EAFDD3 /* TodayFeatureInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +326,6 @@
 				B14098B997BBB01496950A65 /* libSignUpFeature.a in Frameworks */,
 				EC13BE2EFE304DA7F601AD73 /* SignUpFeatureInterface.framework in Frameworks */,
 				EB6AC9879435375B85B53FAB /* SignUpFeatureTesting.framework in Frameworks */,
-				B1AD4B9D8A277188F62ED18E /* TodayFeatureInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +440,7 @@
 				3276CF24B75CEB097B892773 /* Kingfisher.framework */,
 				60D7E5AA6E7A70A5460F5F87 /* libSignUpFeature.a */,
 				F602018A7EF2100A82C7C070 /* LogFlume.framework */,
+				E02DB24EC5CA7AD8A19A2574 /* LoggedInFeatureInterface.framework */,
 				B21BE85318E6E10F3C881B8B /* NeedleFoundation.framework */,
 				FC7D728F1033987F0758E3F2 /* OnboardingDomainInterface.framework */,
 				E1FBE1F7723A76185A5281D5 /* ReactorKit.framework */,
