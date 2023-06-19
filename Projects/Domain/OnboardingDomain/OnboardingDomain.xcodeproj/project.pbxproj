@@ -8,17 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		04BC40052C175ECBDBA6B81E /* OnboardingRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3E1C26716AB262A1E46CA /* OnboardingRepositoryService.swift */; };
-		0D4AD1A887492622CB046853 /* BaseDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277A610A0B66623A44E70872 /* BaseDomain.framework */; platformFilter = ios; };
-		3AFBC5DD599526FFC833FEBC /* OnboardingDomainInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B767F910262D0885E938ED /* OnboardingDomainInterface.framework */; platformFilter = ios; };
+		1D2BCF46993F899078D10E04 /* libOnboardingDomainInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 022C270F7A47FFA17678C9E3 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
 		3C1B97CA74374DD7EEB09751 /* OnboardingDomainTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAEFC707DBE65D54AA5C60E /* OnboardingDomainTesting.framework */; platformFilter = ios; };
-		4C809D710BC8ECBB928F63AB /* BaseDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277A610A0B66623A44E70872 /* BaseDomain.framework */; platformFilter = ios; };
 		58410DAA5F865B454663CDA0 /* OnboardingDomainInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6AC04A26058CD7A0B3E79D /* OnboardingDomainInterface.swift */; };
+		5FA0ADAA61BFCF04034867CC /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 022C270F7A47FFA17678C9E3 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
 		67C6A9DE288245B8760DF7BD /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20359F4168D00A883F6E0F3 /* Testing.swift */; };
 		6B211596AA499C40BE22BB38 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1072563C847E630F2405C4F7 /* libOnboardingDomain.a */; platformFilter = ios; };
-		7BA11429D7A521715158F45B /* OnboardingDomainInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B767F910262D0885E938ED /* OnboardingDomainInterface.framework */; platformFilter = ios; };
 		7D070DD66F1ED2C86037CFF4 /* OnboardingDomainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E46D577E4EF9ABB1A8ED2D /* OnboardingDomainTest.swift */; };
 		7D4E9737D719CE4184B8A095 /* SignUpItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25502DF269A3F232C27F93E /* SignUpItemInfo.swift */; };
-		9CAF3A9FBD0704ED6C8E859E /* OnboardingDomainInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B767F910262D0885E938ED /* OnboardingDomainInterface.framework */; platformFilter = ios; };
+		B524F45E794123CB6B01D1A3 /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 022C270F7A47FFA17678C9E3 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		063866D1D6CEEEDAB34B0BF4 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				1D2BCF46993F899078D10E04 /* libOnboardingDomainInterface.a in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		2140C5741F3F5638D1351EBF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -96,15 +104,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		022C270F7A47FFA17678C9E3 /* libOnboardingDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAEFC707DBE65D54AA5C60E /* OnboardingDomainTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingDomainTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1072563C847E630F2405C4F7 /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		277A610A0B66623A44E70872 /* BaseDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A99F3000069145024B68A20 /* OnboardingDomainInterface-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingDomainInterface-Info.plist"; sourceTree = "<group>"; };
 		4D8BC00EF42F57BC8BDE5C81 /* OnboardingDomainTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingDomainTesting-Info.plist"; sourceTree = "<group>"; };
 		54E46D577E4EF9ABB1A8ED2D /* OnboardingDomainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDomainTest.swift; sourceTree = "<group>"; };
 		5B1962939EE23FD3FEFFC508 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		7FB3E1C26716AB262A1E46CA /* OnboardingRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepositoryService.swift; sourceTree = "<group>"; };
-		85B767F910262D0885E938ED /* OnboardingDomainInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingDomainInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20359F4168D00A883F6E0F3 /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		A25502DF269A3F232C27F93E /* SignUpItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpItemInfo.swift; sourceTree = "<group>"; };
 		B75CDB31E3EAF439BE4F3148 /* OnboardingDomainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingDomainTests-Info.plist"; sourceTree = "<group>"; };
@@ -117,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BA11429D7A521715158F45B /* OnboardingDomainInterface.framework in Frameworks */,
+				B524F45E794123CB6B01D1A3 /* libOnboardingDomainInterface.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +131,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C809D710BC8ECBB928F63AB /* BaseDomain.framework in Frameworks */,
-				3AFBC5DD599526FFC833FEBC /* OnboardingDomainInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D4AD1A887492622CB046853 /* BaseDomain.framework in Frameworks */,
 				6B211596AA499C40BE22BB38 /* libOnboardingDomain.a in Frameworks */,
-				9CAF3A9FBD0704ED6C8E859E /* OnboardingDomainInterface.framework in Frameworks */,
+				5FA0ADAA61BFCF04034867CC /* libOnboardingDomainInterface.a in Frameworks */,
 				3C1B97CA74374DD7EEB09751 /* OnboardingDomainTesting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,7 +157,6 @@
 		2848DB3DDA6D5EBF17A1601D /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
-				2A99F3000069145024B68A20 /* OnboardingDomainInterface-Info.plist */,
 				4D8BC00EF42F57BC8BDE5C81 /* OnboardingDomainTesting-Info.plist */,
 				B75CDB31E3EAF439BE4F3148 /* OnboardingDomainTests-Info.plist */,
 			);
@@ -283,9 +285,8 @@
 		FFA46078C450070C99B88904 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				277A610A0B66623A44E70872 /* BaseDomain.framework */,
 				1072563C847E630F2405C4F7 /* libOnboardingDomain.a */,
-				85B767F910262D0885E938ED /* OnboardingDomainInterface.framework */,
+				022C270F7A47FFA17678C9E3 /* libOnboardingDomainInterface.a */,
 				0AAEFC707DBE65D54AA5C60E /* OnboardingDomainTesting.framework */,
 				D72BC70A3A4799235C3527A7 /* OnboardingDomainTests.xctest */,
 			);
@@ -342,6 +343,7 @@
 				A313C443FB96A1674E63A346 /* Resources */,
 				2140C5741F3F5638D1351EBF /* Embed Frameworks */,
 				63025FF01279A876BD264C4E /* Frameworks */,
+				063866D1D6CEEEDAB34B0BF4 /* Dependencies */,
 			);
 			buildRules = (
 			);
@@ -368,8 +370,8 @@
 			);
 			name = OnboardingDomainInterface;
 			productName = OnboardingDomainInterface;
-			productReference = 85B767F910262D0885E938ED /* OnboardingDomainInterface.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 022C270F7A47FFA17678C9E3 /* libOnboardingDomainInterface.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -780,20 +782,9 @@
 		8A77918962AED0629A5BA480 /* DEV */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Derived/InfoPlists/OnboardingDomainInterface-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omos.OnboardingDomainInterface;
 				PRODUCT_NAME = OnboardingDomainInterface;
 				SDKROOT = iphoneos;
@@ -805,8 +796,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = DEV;
 		};
@@ -947,20 +936,9 @@
 		DE6A6C87AD68B6BDBD831A54 /* PROD */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Derived/InfoPlists/OnboardingDomainInterface-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omos.OnboardingDomainInterface;
 				PRODUCT_NAME = OnboardingDomainInterface;
 				SDKROOT = iphoneos;
@@ -971,28 +949,15 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = PROD;
 		};
 		FDB9E72308D16C2C1086CD21 /* STAGE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Derived/InfoPlists/OnboardingDomainInterface-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omos.OnboardingDomainInterface;
 				PRODUCT_NAME = OnboardingDomainInterface;
 				SDKROOT = iphoneos;
@@ -1004,8 +969,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = STAGE;
 		};

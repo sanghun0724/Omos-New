@@ -14,48 +14,27 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4D1B67A20EB13564617513A"
-               BuildableName = "libBaseDomain.a"
-               BlueprintName = "BaseDomain"
-               ReferencedContainer = "container:BaseDomain.xcodeproj">
+               BlueprintIdentifier = "C777EA7684CF3B97BE76C38C"
+               BuildableName = "DesignSystem_DesignSystem.bundle"
+               BlueprintName = "DesignSystem_DesignSystem"
+               ReferencedContainer = "container:DesignSystem.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "DEV"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      disableMainThreadChecker = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6A528B236EC25F5D11B29E3C"
-               BuildableName = "BaseDomainTests.xctest"
-               BlueprintName = "BaseDomainTests"
-               ReferencedContainer = "container:BaseDomain.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F4D1B67A20EB13564617513A"
-            BuildableName = "libBaseDomain.a"
-            BlueprintName = "BaseDomain"
-            ReferencedContainer = "container:BaseDomain.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "DEV"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      disablePerformanceAntipatternChecker = "YES"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -65,15 +44,15 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F4D1B67A20EB13564617513A"
-            BuildableName = "libBaseDomain.a"
-            BlueprintName = "BaseDomain"
-            ReferencedContainer = "container:BaseDomain.xcodeproj">
+            BlueprintIdentifier = "C777EA7684CF3B97BE76C38C"
+            BuildableName = "DesignSystem_DesignSystem.bundle"
+            BlueprintName = "DesignSystem_DesignSystem"
+            ReferencedContainer = "container:DesignSystem.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "DEV"
+      buildConfiguration = "PROD"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -81,10 +60,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F4D1B67A20EB13564617513A"
-            BuildableName = "libBaseDomain.a"
-            BlueprintName = "BaseDomain"
-            ReferencedContainer = "container:BaseDomain.xcodeproj">
+            BlueprintIdentifier = "C777EA7684CF3B97BE76C38C"
+            BuildableName = "DesignSystem_DesignSystem.bundle"
+            BlueprintName = "DesignSystem_DesignSystem"
+            ReferencedContainer = "container:DesignSystem.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
@@ -92,7 +71,7 @@
       buildConfiguration = "DEV">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "DEV"
+      buildConfiguration = "PROD"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

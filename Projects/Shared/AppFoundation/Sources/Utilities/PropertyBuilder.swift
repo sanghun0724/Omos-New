@@ -47,11 +47,11 @@ public struct PropertyBuilder<Base> {
 }
 
 public extension PropertyBuilder {
-    public func with(_ handler: (inout Base) -> Void) -> PropertyBuilder<Base> {
+     func with(_ handler: (inout Base) -> Void) -> PropertyBuilder<Base> {
         PropertyBuilder(self.with(handler))
     }
     
-    public func with(_ handler: (inout Base) -> Void) -> Base {
+     func with(_ handler: (inout Base) -> Void) -> Base {
         var object = self.base
         handler(&object)
         return object

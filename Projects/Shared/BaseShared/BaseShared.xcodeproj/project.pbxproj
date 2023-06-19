@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E9288BB24B0A01F6C5B09DA /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913FA764C5E28015D9DA163C /* DesignSystem.framework */; platformFilter = ios; };
+		2C0A7340FAE2923C2675ECE3 /* libDesignSystem.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 77D302383BC2E1A83666DF86 /* libDesignSystem.a */; platformFilter = ios; };
 		9E779FA26C53E3090714280D /* GlobalThirdPartyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECD02F1CD0D9C3FA61504C2 /* GlobalThirdPartyLibrary.framework */; platformFilter = ios; };
 		B226F4F774F90756636B8B19 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794468DF58E705377C17624A /* Source.swift */; };
 /* End PBXBuildFile section */
@@ -23,15 +23,24 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A79125DE6905C01FDB0B3265 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				2C0A7340FAE2923C2675ECE3 /* libDesignSystem.a in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		73BF832ED1C8119D84118DB1 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		77D302383BC2E1A83666DF86 /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		794468DF58E705377C17624A /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
-		8547195D7EA2CBC88D765E8F /* BaseShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		913FA764C5E28015D9DA163C /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AECD02F1CD0D9C3FA61504C2 /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD76FF10EEEC22D6174F2187 /* BaseShared-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BaseShared-Info.plist"; sourceTree = "<group>"; };
+		FF37484D1FFA5209B28E801E /* libBaseShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E9288BB24B0A01F6C5B09DA /* DesignSystem.framework in Frameworks */,
 				9E779FA26C53E3090714280D /* GlobalThirdPartyLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +58,6 @@
 		04A638F970001A26B085BC9E /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				D2C9822E0B6B44803B7A3F15 /* Derived */,
 				4AAFD654B44CDEF52903F078 /* Sources */,
 				CF6E346A50EF5C4E709CAEDB /* XCConfig */,
 			);
@@ -68,9 +75,9 @@
 		5383845E6373C2A8DBE22E1A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8547195D7EA2CBC88D765E8F /* BaseShared.framework */,
-				913FA764C5E28015D9DA163C /* DesignSystem.framework */,
 				AECD02F1CD0D9C3FA61504C2 /* GlobalThirdPartyLibrary.framework */,
+				FF37484D1FFA5209B28E801E /* libBaseShared.a */,
+				77D302383BC2E1A83666DF86 /* libDesignSystem.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,22 +107,6 @@
 			path = ../../../XCConfig;
 			sourceTree = "<group>";
 		};
-		D2C9822E0B6B44803B7A3F15 /* Derived */ = {
-			isa = PBXGroup;
-			children = (
-				FFAEF69C0C71C0C517BE6F32 /* InfoPlists */,
-			);
-			path = Derived;
-			sourceTree = "<group>";
-		};
-		FFAEF69C0C71C0C517BE6F32 /* InfoPlists */ = {
-			isa = PBXGroup;
-			children = (
-				DD76FF10EEEC22D6174F2187 /* BaseShared-Info.plist */,
-			);
-			path = InfoPlists;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,6 +118,7 @@
 				AEAC7F0E2815C1DE1311E48B /* Resources */,
 				7A98184BF28BB92AF0920537 /* Embed Frameworks */,
 				1F282CFE0CBC6BD62B2ECF36 /* Frameworks */,
+				A79125DE6905C01FDB0B3265 /* Dependencies */,
 			);
 			buildRules = (
 			);
@@ -134,8 +126,8 @@
 			);
 			name = BaseShared;
 			productName = BaseShared;
-			productReference = 8547195D7EA2CBC88D765E8F /* BaseShared.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = FF37484D1FFA5209B28E801E /* libBaseShared.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -190,20 +182,9 @@
 		0DA85B960A9DEC46699E35ED /* STAGE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Derived/InfoPlists/BaseShared-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omos.BaseShared;
 				PRODUCT_NAME = BaseShared;
 				SDKROOT = iphoneos;
@@ -215,28 +196,15 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = STAGE;
 		};
 		53BD3C22442C0C587A51ACA7 /* PROD */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Derived/InfoPlists/BaseShared-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omos.BaseShared;
 				PRODUCT_NAME = BaseShared;
 				SDKROOT = iphoneos;
@@ -247,8 +215,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = PROD;
 		};
@@ -311,7 +277,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = DEV;
@@ -375,7 +341,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = STAGE;
@@ -383,20 +349,9 @@
 		9568F7120E694CE408C27BDB /* DEV */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Derived/InfoPlists/BaseShared-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omos.BaseShared;
 				PRODUCT_NAME = BaseShared;
 				SDKROOT = iphoneos;
@@ -408,8 +363,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = DEV;
 		};
@@ -465,7 +418,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 			};

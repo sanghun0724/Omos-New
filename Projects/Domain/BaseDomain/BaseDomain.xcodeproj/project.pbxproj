@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04AF77387F2092C8C2106C37 /* CoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C866E5AE494B52E62622E68E /* CoreKit.framework */; platformFilter = ios; };
-		6FC4869F825617BCE1BA9B10 /* BaseDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA02C953DD449F06E5AFAAA4 /* BaseDomain.framework */; platformFilter = ios; };
+		09FF1A894A87B3B7E61B24FB /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2437B06232F04B822BE33F82 /* DesignSystem_DesignSystem.bundle */; };
+		4F5B1403415E582A96004EDC /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25108C81C98E319EC90D3AD6 /* libCoreKit.a */; platformFilter = ios; };
+		5D81F4A08C0E74E2A22D7346 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D99033B2B209CDED9D09CED8 /* libDesignSystem.a */; platformFilter = ios; };
+		619B7EB9A7170E72551915CE /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B927DE75822041B7A2C87A /* libBaseShared.a */; platformFilter = ios; };
+		71B8BAEA2592EF94C434BFBB /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F115CCDE6304F508C3CDC57A /* libAppFoundation.a */; platformFilter = ios; };
+		7B6DE260D6113024AC0D458C /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F8FAD4643899D9F99B9A6A /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		7F914220A1AC7C29BF709773 /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 475C14AC2C38349FCE8570A0 /* libBaseDomain.a */; platformFilter = ios; };
+		90FE3FCD0C288289D5AF2E1E /* libOnboardingDomainInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = B4F8FAD4643899D9F99B9A6A /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		A357871D41EBAAC1980F18A0 /* libOnboardingDomain.a in Dependencies */ = {isa = PBXBuildFile; fileRef = E5462335F8E239A4B45CAF9B /* libOnboardingDomain.a */; platformFilter = ios; };
+		A8CB22E8DCDCD47D3F9CA10B /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 2437B06232F04B822BE33F82 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
 		A97309B007C3ECC49DD7D5EF /* TargetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFBDD3EBFCE0AA7C6C41D6E /* TargetTest.swift */; };
 		C6AD5B70757CAC2B1F43D377 /* keep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB3B3284A7C81D46751E65 /* keep.swift */; };
+		CF5132C27F9E9F3BBC7471C3 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5462335F8E239A4B45CAF9B /* libOnboardingDomain.a */; platformFilter = ios; };
+		D0885DFF556BBB7B72076F30 /* GlobalThirdPartyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52987675C41A3AF60B75409 /* GlobalThirdPartyLibrary.framework */; platformFilter = ios; };
+		EEFE2E242AFD9F12F02C0954 /* libCoreKit.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 25108C81C98E319EC90D3AD6 /* libCoreKit.a */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +45,28 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		497BBB7674769FC684FD5F9B /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				EEFE2E242AFD9F12F02C0954 /* libCoreKit.a in Dependencies */,
+				A357871D41EBAAC1980F18A0 /* libOnboardingDomain.a in Dependencies */,
+				90FE3FCD0C288289D5AF2E1E /* libOnboardingDomainInterface.a in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5663052DD64148DDD88F6732 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				A8CB22E8DCDCD47D3F9CA10B /* DesignSystem_DesignSystem.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		D73E417582851B5205D39676 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,13 +81,19 @@
 
 /* Begin PBXFileReference section */
 		1DFBDD3EBFCE0AA7C6C41D6E /* TargetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetTest.swift; sourceTree = "<group>"; };
+		2437B06232F04B822BE33F82 /* DesignSystem_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystem_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		25108C81C98E319EC90D3AD6 /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FB3B3284A7C81D46751E65 /* keep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keep.swift; sourceTree = "<group>"; };
+		475C14AC2C38349FCE8570A0 /* libBaseDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E4070F02BE79EFFF0CBF51 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
-		876FF63D00E78F966C39FC50 /* BaseDomain-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BaseDomain-Info.plist"; sourceTree = "<group>"; };
 		92BD74694EBBC5ED17092A3C /* BaseDomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseDomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA02C953DD449F06E5AFAAA4 /* BaseDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D03584D4A930051353B5F /* BaseDomainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BaseDomainTests-Info.plist"; sourceTree = "<group>"; };
-		C866E5AE494B52E62622E68E /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4F8FAD4643899D9F99B9A6A /* libOnboardingDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4B927DE75822041B7A2C87A /* libBaseShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D99033B2B209CDED9D09CED8 /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E52987675C41A3AF60B75409 /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5462335F8E239A4B45CAF9B /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F115CCDE6304F508C3CDC57A /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04AF77387F2092C8C2106C37 /* CoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +108,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FC4869F825617BCE1BA9B10 /* BaseDomain.framework in Frameworks */,
+				71B8BAEA2592EF94C434BFBB /* libAppFoundation.a in Frameworks */,
+				7F914220A1AC7C29BF709773 /* libBaseDomain.a in Frameworks */,
+				619B7EB9A7170E72551915CE /* libBaseShared.a in Frameworks */,
+				4F5B1403415E582A96004EDC /* libCoreKit.a in Frameworks */,
+				5D81F4A08C0E74E2A22D7346 /* libDesignSystem.a in Frameworks */,
+				D0885DFF556BBB7B72076F30 /* GlobalThirdPartyLibrary.framework in Frameworks */,
+				CF5132C27F9E9F3BBC7471C3 /* libOnboardingDomain.a in Frameworks */,
+				7B6DE260D6113024AC0D458C /* libOnboardingDomainInterface.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +136,6 @@
 		1508E8256E1215D98301C04A /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
-				876FF63D00E78F966C39FC50 /* BaseDomain-Info.plist */,
 				AE9D03584D4A930051353B5F /* BaseDomainTests-Info.plist */,
 			);
 			path = InfoPlists;
@@ -100,9 +144,16 @@
 		4588923DFEDB693B645AF693 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA02C953DD449F06E5AFAAA4 /* BaseDomain.framework */,
 				92BD74694EBBC5ED17092A3C /* BaseDomainTests.xctest */,
-				C866E5AE494B52E62622E68E /* CoreKit.framework */,
+				2437B06232F04B822BE33F82 /* DesignSystem_DesignSystem.bundle */,
+				E52987675C41A3AF60B75409 /* GlobalThirdPartyLibrary.framework */,
+				F115CCDE6304F508C3CDC57A /* libAppFoundation.a */,
+				475C14AC2C38349FCE8570A0 /* libBaseDomain.a */,
+				D4B927DE75822041B7A2C87A /* libBaseShared.a */,
+				25108C81C98E319EC90D3AD6 /* libCoreKit.a */,
+				D99033B2B209CDED9D09CED8 /* libDesignSystem.a */,
+				E5462335F8E239A4B45CAF9B /* libOnboardingDomain.a */,
+				B4F8FAD4643899D9F99B9A6A /* libOnboardingDomainInterface.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +218,7 @@
 				DC63A1BADD91317443D666A9 /* Resources */,
 				D73E417582851B5205D39676 /* Embed Frameworks */,
 				AAF4E76CA62824AC0D95328D /* Frameworks */,
+				5663052DD64148DDD88F6732 /* Dependencies */,
 			);
 			buildRules = (
 			);
@@ -186,6 +238,7 @@
 				FF6607E66F7D1B4BE582933A /* Resources */,
 				10FBD25152C17CF536CD3822 /* Embed Frameworks */,
 				5F7743AE6D3059806CE358F7 /* Frameworks */,
+				497BBB7674769FC684FD5F9B /* Dependencies */,
 			);
 			buildRules = (
 			);
@@ -193,8 +246,8 @@
 			);
 			name = BaseDomain;
 			productName = BaseDomain;
-			productReference = AA02C953DD449F06E5AFAAA4 /* BaseDomain.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 475C14AC2C38349FCE8570A0 /* libBaseDomain.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -230,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FF1A894A87B3B7E61B24FB /* DesignSystem_DesignSystem.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,20 +328,9 @@
 		020D330C765F67316A885A14 /* DEV */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Derived/InfoPlists/BaseDomain-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omos.BaseDomain;
 				PRODUCT_NAME = BaseDomain;
 				SDKROOT = iphoneos;
@@ -299,8 +342,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = DEV;
 		};
@@ -387,7 +428,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = STAGE;
@@ -467,7 +508,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -476,20 +517,9 @@
 		867D7C4366901CB97C69D24B /* PROD */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Derived/InfoPlists/BaseDomain-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omos.BaseDomain;
 				PRODUCT_NAME = BaseDomain;
 				SDKROOT = iphoneos;
@@ -500,28 +530,15 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = PROD;
 		};
 		A12391CEA3254054327589FF /* STAGE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Derived/InfoPlists/BaseDomain-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omos.BaseDomain;
 				PRODUCT_NAME = BaseDomain;
 				SDKROOT = iphoneos;
@@ -533,8 +550,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = STAGE;
 		};
@@ -621,7 +636,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = DEV;
