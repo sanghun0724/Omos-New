@@ -131,4 +131,89 @@ open class BaseViewController:
         }
     }
     
+    // MARK: - override
+    
+    /*
+     * MARK: Custom Top App Bar Options (Must Override)
+     */
+    
+    /// if you need custom NavigaiotionBarView, when doesn't have navigation stack you can override it
+    
+    open func isNeedCustomNavigationBarView() -> Bool {
+        navigationController != nil
+    }
+    
+    
+    open func navigationBarBottomBorderLineColor() -> UIColor {
+        return .clear
+    }
+    
+    
+    open func navigationBarBackgroundColor() -> UIColor {
+        return DesignSystemAsset.Colors.mainBackground.color
+    }
+    
+    // Texts
+    
+    
+    open func navigationBarLeftButtonText() -> String? {
+        return nil
+    }
+    
+    
+    open func navigationBarRightButtonText() -> String? {
+        return nil
+    }
+    
+    // Images
+    
+    
+    open func navigationBarLeftButtonImage() -> UIImage? {
+        return nil
+    }
+    
+    
+    open func navigationBarRightButtonImage() -> UIImage? {
+        return nil
+    }
+    
+    
+    open func navigationBarTitleText() -> String? {
+        return nil
+    }
+    
+    
+    open func navigationBarTitleImage() -> UIImage? {
+        return nil
+    }
+    
+    
+    open func navigationBarLeftBtnTextColor() -> UIColor {
+        return .black
+    }
+    
+    
+    open func navigationBarRightBtnColor() -> UIColor {
+        return .black
+    }
+    
+    
+    open func navigationBarTitleTextColor() -> UIColor {
+        return .black
+    }
+    
+    
+    open func navigationBarTitleTextFont() -> UIFont {
+        return .systemFont(ofSize: 16, weight: .bold)
+    }
+    
+    /*
+     * MARK: Enable/Disable Gesture
+     */
+    
+    
+    open func isEnableNavigationGesture() -> Bool {
+        return true
+    }
+    
 }

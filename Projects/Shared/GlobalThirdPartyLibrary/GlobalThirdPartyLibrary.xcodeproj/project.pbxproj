@@ -7,35 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B39E61696DE8AD286DC92A0 /* KakaoSDKCommon.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = C1C4CCB01671E5A1032A2F47 /* KakaoSDKCommon.framework */; platformFilter = ios; };
 		12CB7C6707AE329AA3E71EC3 /* ThirdPartyLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC46DD836A458F68CED8273 /* ThirdPartyLibrary.swift */; };
-		157D333C38187B9714133FA7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B35BAE9705AA2FE1D2DE27 /* CFNetwork.framework */; };
-		2E629300A11EE4A48237A724 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2D2FBBBBDD611C7F2892FF /* RxDataSources.framework */; platformFilter = ios; };
-		3264EBECF9155AF9AA320161 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732E88731F1F3C93BFCBF158 /* ReactorKitRuntime.framework */; platformFilter = ios; };
-		39F610152F47E60BDCDAAECC /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D636D3A773CF392E99100664 /* Differentiator.framework */; platformFilter = ios; };
-		4F0F7867BFCAA3AB34B62B94 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7474BBAA2BC00FE8CD26AD1 /* SkeletonView.framework */; platformFilter = ios; };
-		55626CD1F9FEC7CEFBDE7FA1 /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEA7A9FFDCBC7118256D6F8 /* KakaoSDKShare.framework */; platformFilter = ios; };
-		5956595BE46E75E9F46256FF /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84E08FD256B4A0FDC2C829E /* RxRelay.framework */; platformFilter = ios; };
-		60359700DD83FD22C5C4B4D1 /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D93D40DAE29E7DE3858E2FF /* LogFlume.framework */; platformFilter = ios; };
-		652AF4E797C2AF3E0700ED57 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A80D1ED21F667270C4992C62 /* KakaoSDKAuth.framework */; platformFilter = ios; };
-		7D5E75993CC7CFF5BF672B20 /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B5B0BCC645343C3B053195 /* KakaoSDKStory.framework */; platformFilter = ios; };
-		85DD38C08BCC8D6EDABB73EC /* KakaoSDKNavi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA5F4DDE0807289F4CE15F4 /* KakaoSDKNavi.framework */; platformFilter = ios; };
-		8B45D295A4FF20DDF82391C9 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B193CE04643B1F65E0D96B77 /* RIBs.framework */; platformFilter = ios; };
-		94B5488E67A9FD7BF4B5BB43 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16E920C2B558AF27B53040D /* Kingfisher.framework */; platformFilter = ios; };
-		9F40BEC41A6655D9B23DA705 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EC6253B97A8FD13C42E979 /* Alamofire.framework */; platformFilter = ios; };
-		A2A541986D0F2BC3CEE5D34D /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E9DEADA8959F12B901E538 /* ReactorKit.framework */; platformFilter = ios; };
-		A79B558A08765C27D5E6E80D /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C4CCB01671E5A1032A2F47 /* KakaoSDKCommon.framework */; platformFilter = ios; };
-		AAE934EE38215F5CC29C4732 /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5470BD6D4637539C594229C /* KakaoSDKTalk.framework */; platformFilter = ios; };
-		B03FA9AC37865C85B158ACA0 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC539C58410B8E382ACA432 /* NeedleFoundation.framework */; platformFilter = ios; };
-		D8DC165F87338FFE8BFC902E /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AB0D6F32F6D4448E405EF3 /* RxGesture.framework */; platformFilter = ios; };
+		159A5306E2B1E6DC3BC8727A /* LogFlume.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 9D93D40DAE29E7DE3858E2FF /* LogFlume.framework */; platformFilter = ios; };
+		15F5FEC6F18A8DC7E938097B /* NeedleFoundation.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 3EC539C58410B8E382ACA432 /* NeedleFoundation.framework */; platformFilter = ios; };
+		27922C1921853837089876B6 /* RxDataSources.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = DE2D2FBBBBDD611C7F2892FF /* RxDataSources.framework */; platformFilter = ios; };
+		325621033A72757995DC3AAA /* KakaoSDKShare.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = BFEA7A9FFDCBC7118256D6F8 /* KakaoSDKShare.framework */; platformFilter = ios; };
+		388D80EC43A699875C4D47F3 /* ReactorKit.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 90E9DEADA8959F12B901E538 /* ReactorKit.framework */; platformFilter = ios; };
+		640ADB91A651DD924A3AE2D0 /* KakaoSDKTalk.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A5470BD6D4637539C594229C /* KakaoSDKTalk.framework */; platformFilter = ios; };
+		7DA5182A8693D4507684AFD7 /* KakaoSDKTemplate.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 0E683C27FE36E65D7EFD6778 /* KakaoSDKTemplate.framework */; platformFilter = ios; };
+		9877C8AECE15A8A54F145B16 /* KakaoSDKUser.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = FD6F8E2658214A2653CB6C25 /* KakaoSDKUser.framework */; platformFilter = ios; };
+		9A05EAB1917FDCE484337D06 /* KakaoSDKNavi.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 7BA5F4DDE0807289F4CE15F4 /* KakaoSDKNavi.framework */; platformFilter = ios; };
+		A2A59275BC4A0CDDE9E1F609 /* KakaoSDKStory.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = E3B5B0BCC645343C3B053195 /* KakaoSDKStory.framework */; platformFilter = ios; };
+		A776065BD2D566D52CFCA2CC /* SkeletonView.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = F7474BBAA2BC00FE8CD26AD1 /* SkeletonView.framework */; platformFilter = ios; };
+		B334306061324CC7E08C36A1 /* Alamofire.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 26EC6253B97A8FD13C42E979 /* Alamofire.framework */; platformFilter = ios; };
 		D9F0C64678CEF06E136CD34F /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819A6889B98E9BCC4B8FE8EA /* SnapKit.framework */; platformFilter = ios; };
+		DAB7DC6B334083F92F261375 /* Kingfisher.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = B16E920C2B558AF27B53040D /* Kingfisher.framework */; platformFilter = ios; };
+		E42463853A9269D9DB9F244E /* RIBs.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = B193CE04643B1F65E0D96B77 /* RIBs.framework */; platformFilter = ios; };
 		F319AB9A99DCEFC82CCC66AB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F893FFD9655D2F953BD548 /* RxCocoa.framework */; platformFilter = ios; };
-		F7A960AC84C649EB4C56B740 /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E683C27FE36E65D7EFD6778 /* KakaoSDKTemplate.framework */; platformFilter = ios; };
+		F5A9F65DBBF13D4E90800C11 /* KakaoSDKAuth.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = A80D1ED21F667270C4992C62 /* KakaoSDKAuth.framework */; platformFilter = ios; };
+		F9AAD12F7D2DCA110F0745BA /* RxGesture.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 13AB0D6F32F6D4448E405EF3 /* RxGesture.framework */; platformFilter = ios; };
 		FAC6D00D7D56CBE5AA2C3B8A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4423CDD695F92449B87668E2 /* RxSwift.framework */; platformFilter = ios; };
-		FC0DB3EB77AD25E3743A4C7C /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0ED1101138972ACDF9C7A15 /* WeakMapTable.framework */; platformFilter = ios; };
-		FD56C9CD5640891F13149C6B /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6F8E2658214A2653CB6C25 /* KakaoSDKUser.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		6849885167100C5015B048C6 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				B334306061324CC7E08C36A1 /* Alamofire.framework in Dependencies */,
+				F5A9F65DBBF13D4E90800C11 /* KakaoSDKAuth.framework in Dependencies */,
+				0B39E61696DE8AD286DC92A0 /* KakaoSDKCommon.framework in Dependencies */,
+				9A05EAB1917FDCE484337D06 /* KakaoSDKNavi.framework in Dependencies */,
+				325621033A72757995DC3AAA /* KakaoSDKShare.framework in Dependencies */,
+				A2A59275BC4A0CDDE9E1F609 /* KakaoSDKStory.framework in Dependencies */,
+				640ADB91A651DD924A3AE2D0 /* KakaoSDKTalk.framework in Dependencies */,
+				7DA5182A8693D4507684AFD7 /* KakaoSDKTemplate.framework in Dependencies */,
+				9877C8AECE15A8A54F145B16 /* KakaoSDKUser.framework in Dependencies */,
+				DAB7DC6B334083F92F261375 /* Kingfisher.framework in Dependencies */,
+				159A5306E2B1E6DC3BC8727A /* LogFlume.framework in Dependencies */,
+				15F5FEC6F18A8DC7E938097B /* NeedleFoundation.framework in Dependencies */,
+				E42463853A9269D9DB9F244E /* RIBs.framework in Dependencies */,
+				388D80EC43A699875C4D47F3 /* ReactorKit.framework in Dependencies */,
+				27922C1921853837089876B6 /* RxDataSources.framework in Dependencies */,
+				F9AAD12F7D2DCA110F0745BA /* RxGesture.framework in Dependencies */,
+				A776065BD2D566D52CFCA2CC /* SkeletonView.framework in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		A387C73A9FFB35B975B60F43 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,20 +70,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0215C92D0BFCCB54BA31CBB8 /* libGlobalThirdPartyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlobalThirdPartyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E683C27FE36E65D7EFD6778 /* KakaoSDKTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13AB0D6F32F6D4448E405EF3 /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B35BAE9705AA2FE1D2DE27 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		26EC6253B97A8FD13C42E979 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC46DD836A458F68CED8273 /* ThirdPartyLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyLibrary.swift; sourceTree = "<group>"; };
 		3EC539C58410B8E382ACA432 /* NeedleFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeedleFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4423CDD695F92449B87668E2 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		732E88731F1F3C93BFCBF158 /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA5F4DDE0807289F4CE15F4 /* KakaoSDKNavi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKNavi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		819A6889B98E9BCC4B8FE8EA /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E9DEADA8959F12B901E538 /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		991500DE485E0FB5A3B53697 /* GlobalThirdPartyLibrary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GlobalThirdPartyLibrary-Info.plist"; sourceTree = "<group>"; };
 		9D93D40DAE29E7DE3858E2FF /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0ED1101138972ACDF9C7A15 /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5470BD6D4637539C594229C /* KakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80D1ED21F667270C4992C62 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16E920C2B558AF27B53040D /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,10 +88,7 @@
 		BFEA7A9FFDCBC7118256D6F8 /* KakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C4CCB01671E5A1032A2F47 /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F893FFD9655D2F953BD548 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C84E08FD256B4A0FDC2C829E /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00EE0929CD624CB6190145E /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
-		D636D3A773CF392E99100664 /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBE97BAA2C9F84404C4911BD /* GlobalThirdPartyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GlobalThirdPartyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2D2FBBBBDD611C7F2892FF /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B5B0BCC645343C3B053195 /* KakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7474BBAA2BC00FE8CD26AD1 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,31 +100,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				157D333C38187B9714133FA7 /* CFNetwork.framework in Frameworks */,
-				9F40BEC41A6655D9B23DA705 /* Alamofire.framework in Frameworks */,
-				39F610152F47E60BDCDAAECC /* Differentiator.framework in Frameworks */,
-				652AF4E797C2AF3E0700ED57 /* KakaoSDKAuth.framework in Frameworks */,
-				A79B558A08765C27D5E6E80D /* KakaoSDKCommon.framework in Frameworks */,
-				85DD38C08BCC8D6EDABB73EC /* KakaoSDKNavi.framework in Frameworks */,
-				55626CD1F9FEC7CEFBDE7FA1 /* KakaoSDKShare.framework in Frameworks */,
-				7D5E75993CC7CFF5BF672B20 /* KakaoSDKStory.framework in Frameworks */,
-				AAE934EE38215F5CC29C4732 /* KakaoSDKTalk.framework in Frameworks */,
-				F7A960AC84C649EB4C56B740 /* KakaoSDKTemplate.framework in Frameworks */,
-				FD56C9CD5640891F13149C6B /* KakaoSDKUser.framework in Frameworks */,
-				94B5488E67A9FD7BF4B5BB43 /* Kingfisher.framework in Frameworks */,
-				60359700DD83FD22C5C4B4D1 /* LogFlume.framework in Frameworks */,
-				B03FA9AC37865C85B158ACA0 /* NeedleFoundation.framework in Frameworks */,
-				8B45D295A4FF20DDF82391C9 /* RIBs.framework in Frameworks */,
-				A2A541986D0F2BC3CEE5D34D /* ReactorKit.framework in Frameworks */,
-				3264EBECF9155AF9AA320161 /* ReactorKitRuntime.framework in Frameworks */,
 				F319AB9A99DCEFC82CCC66AB /* RxCocoa.framework in Frameworks */,
-				2E629300A11EE4A48237A724 /* RxDataSources.framework in Frameworks */,
-				D8DC165F87338FFE8BFC902E /* RxGesture.framework in Frameworks */,
-				5956595BE46E75E9F46256FF /* RxRelay.framework in Frameworks */,
 				FAC6D00D7D56CBE5AA2C3B8A /* RxSwift.framework in Frameworks */,
-				4F0F7867BFCAA3AB34B62B94 /* SkeletonView.framework in Frameworks */,
 				D9F0C64678CEF06E136CD34F /* SnapKit.framework in Frameworks */,
-				FC0DB3EB77AD25E3743A4C7C /* WeakMapTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +112,6 @@
 		35DF69C3A17B0E2CCC70A54F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				13B35BAE9705AA2FE1D2DE27 /* CFNetwork.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,7 +127,6 @@
 		4ED57B615A964CE761E5F00A /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				833BA61E306ACD49891E0C60 /* Derived */,
 				467907E89916E374B94A0F75 /* Sources */,
 				5BFD8294CEBED82606699B21 /* XCConfig */,
 			);
@@ -151,20 +142,10 @@
 			path = ../../../XCConfig;
 			sourceTree = "<group>";
 		};
-		833BA61E306ACD49891E0C60 /* Derived */ = {
-			isa = PBXGroup;
-			children = (
-				EF6047E247F99A8F3A19B810 /* InfoPlists */,
-			);
-			path = Derived;
-			sourceTree = "<group>";
-		};
 		88DCBC92F3DA2D90793FAFE3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				26EC6253B97A8FD13C42E979 /* Alamofire.framework */,
-				D636D3A773CF392E99100664 /* Differentiator.framework */,
-				DBE97BAA2C9F84404C4911BD /* GlobalThirdPartyLibrary.framework */,
 				A80D1ED21F667270C4992C62 /* KakaoSDKAuth.framework */,
 				C1C4CCB01671E5A1032A2F47 /* KakaoSDKCommon.framework */,
 				7BA5F4DDE0807289F4CE15F4 /* KakaoSDKNavi.framework */,
@@ -174,19 +155,17 @@
 				0E683C27FE36E65D7EFD6778 /* KakaoSDKTemplate.framework */,
 				FD6F8E2658214A2653CB6C25 /* KakaoSDKUser.framework */,
 				B16E920C2B558AF27B53040D /* Kingfisher.framework */,
+				0215C92D0BFCCB54BA31CBB8 /* libGlobalThirdPartyLibrary.a */,
 				9D93D40DAE29E7DE3858E2FF /* LogFlume.framework */,
 				3EC539C58410B8E382ACA432 /* NeedleFoundation.framework */,
 				90E9DEADA8959F12B901E538 /* ReactorKit.framework */,
-				732E88731F1F3C93BFCBF158 /* ReactorKitRuntime.framework */,
 				B193CE04643B1F65E0D96B77 /* RIBs.framework */,
 				C5F893FFD9655D2F953BD548 /* RxCocoa.framework */,
 				DE2D2FBBBBDD611C7F2892FF /* RxDataSources.framework */,
 				13AB0D6F32F6D4448E405EF3 /* RxGesture.framework */,
-				C84E08FD256B4A0FDC2C829E /* RxRelay.framework */,
 				4423CDD695F92449B87668E2 /* RxSwift.framework */,
 				F7474BBAA2BC00FE8CD26AD1 /* SkeletonView.framework */,
 				819A6889B98E9BCC4B8FE8EA /* SnapKit.framework */,
-				A0ED1101138972ACDF9C7A15 /* WeakMapTable.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,14 +179,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		EF6047E247F99A8F3A19B810 /* InfoPlists */ = {
-			isa = PBXGroup;
-			children = (
-				991500DE485E0FB5A3B53697 /* GlobalThirdPartyLibrary-Info.plist */,
-			);
-			path = InfoPlists;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,6 +190,7 @@
 				500DB650B2B479317100E9CF /* Resources */,
 				A387C73A9FFB35B975B60F43 /* Embed Frameworks */,
 				BB67B45995B5CB77DCBA4BB4 /* Frameworks */,
+				6849885167100C5015B048C6 /* Dependencies */,
 			);
 			buildRules = (
 			);
@@ -226,8 +198,8 @@
 			);
 			name = GlobalThirdPartyLibrary;
 			productName = GlobalThirdPartyLibrary;
-			productReference = DBE97BAA2C9F84404C4911BD /* GlobalThirdPartyLibrary.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 0215C92D0BFCCB54BA31CBB8 /* libGlobalThirdPartyLibrary.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -282,20 +254,9 @@
 		35EEBA46C4B7209CCED37703 /* PROD */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Derived/InfoPlists/GlobalThirdPartyLibrary-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omos.GlobalThirdPartyLibrary;
 				PRODUCT_NAME = GlobalThirdPartyLibrary;
 				SDKROOT = iphoneos;
@@ -306,28 +267,15 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = PROD;
 		};
 		750D63637D389A142472B321 /* DEV */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Derived/InfoPlists/GlobalThirdPartyLibrary-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omos.GlobalThirdPartyLibrary;
 				PRODUCT_NAME = GlobalThirdPartyLibrary;
 				SDKROOT = iphoneos;
@@ -339,8 +287,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = DEV;
 		};
@@ -403,7 +349,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = STAGE;
@@ -411,20 +357,9 @@
 		A2D8B6DBC170A5E1275EAC89 /* STAGE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Derived/InfoPlists/GlobalThirdPartyLibrary-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Omos.GlobalThirdPartyLibrary;
 				PRODUCT_NAME = GlobalThirdPartyLibrary;
 				SDKROOT = iphoneos;
@@ -436,8 +371,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = STAGE;
 		};
@@ -500,7 +433,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = DEV;
@@ -557,7 +490,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "$(inherited) -all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 			};

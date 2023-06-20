@@ -211,7 +211,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7219A64E70DCA7A233E1E7E"
-               BuildableName = "GlobalThirdPartyLibrary.framework"
+               BuildableName = "libGlobalThirdPartyLibrary.a"
                BlueprintName = "GlobalThirdPartyLibrary"
                ReferencedContainer = "container:Projects/Shared/GlobalThirdPartyLibrary/GlobalThirdPartyLibrary.xcodeproj">
             </BuildableReference>
