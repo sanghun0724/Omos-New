@@ -46,20 +46,20 @@ final class NicknameViewController:
     
     private lazy var headerView = OnBoardingHeaderView().builder
         .with {
-            $0.fetchTitle(text: DesignSystemStrings.Onboarding.signUp)
+            $0.fetchTitle(text: .signUp)
         }
         .build()
     
     private lazy var nicknameTextFieldView = CustomTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: DesignSystemStrings.Onboarding.nickname)
-            $0.fetchRightTopLabelText(text: DesignSystemStrings.Onboarding.nicknameWarning)
+            $0.fetchLeftTopLabelText(text: .nickname)
+            $0.fetchRightTopLabelText(text: .nicknameWarning)
         }
         .build()
     
     private lazy var separatedLineView = UIView().builder
-        .backgroundColor(DesignSystemAsset.Colors.mainGray7.color)
+        .backgroundColor(.mainGray7)
         .build()
     
     private lazy var termAgreementView = AgreementView().builder
@@ -74,7 +74,7 @@ final class NicknameViewController:
         }
         .build()
     
-    private lazy var confirmButton = ConfirmButton(DesignSystemStrings.Common.next, disableText: DesignSystemStrings.Common.next).builder
+    private lazy var confirmButton = ConfirmButton(.next, disableText: .next).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .build()
@@ -214,7 +214,6 @@ extension NicknameViewController {
 
 extension NicknameViewController {
     private func setupUI() {
-        contentView.backgroundColor = DesignSystemAsset.Colors.mainBackground.color
         contentView.addSubview(headerView)
         contentView.addSubview(nicknameTextFieldView)
         contentView.addSubview(separatedLineView)

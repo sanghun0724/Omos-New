@@ -48,7 +48,9 @@ open class BaseViewController:
     // MARK: Views
     
     private lazy var layoutGuideView = UIView()
-    public private(set) lazy var contentView = UIView()
+    public private(set) lazy var contentView = UIView().builder
+        .backgroundColor(.mainBackground)
+        .build()
     
     // MARK: Properties
     
