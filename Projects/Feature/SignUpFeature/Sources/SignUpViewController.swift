@@ -114,13 +114,13 @@ final class SignUpViewController:
 // MARK: - Override
 
 extension SignUpViewController {
-    override func isNeedCustomNavigationBarView() -> Bool {
-        true
-    }
-    
-    override func navigationBarLeftButtonImage() -> UIImage? {
-        DesignSystemAsset.Common.arrowLeft.image
-    }
+//    override func isNeedCustomNavigationBarView() -> Bool {
+//        true
+//    }
+//
+//    override func navigationBarLeftButtonImage() -> UIImage? {
+//        DesignSystemAsset.Common.arrowLeft.image
+//    }
 }
 
 // MARK: - Bind listener
