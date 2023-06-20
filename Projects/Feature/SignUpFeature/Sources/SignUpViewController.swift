@@ -46,39 +46,39 @@ final class SignUpViewController:
     
     private lazy var headerView = OnBoardingHeaderView().builder
         .with {
-            $0.fetchTitle(text: DesignSystemStrings.Onboarding.signUp)
+            $0.fetchTitle(text: .signUp)
         }
         .build()
     
     private lazy var emailTextFieldView = CustomTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: DesignSystemStrings.Onboarding.email)
-            $0.fetchRightTopLabelText(text: DesignSystemStrings.Onboarding.emailwarning)
+            $0.fetchLeftTopLabelText(text: .email)
+            $0.fetchRightTopLabelText(text: .emailWarning)
         }
         .build()
     
     private lazy var emailValidationRequestButton = UIButton().builder
         .with {
-            $0.setTitle(DesignSystemStrings.Onboarding.sendCertificationEmail, for: .normal)
+            $0.setTitle(.sendCertificationEmail, for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .light)
-            $0.setTitleColor(DesignSystemAsset.Colors.mainGray4.color, for: .normal)
+            $0.setTitleColor(.mainGray4, for: .normal)
         }
         .build()
     
     private lazy var passwordTextFieldView = PasswordTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: DesignSystemStrings.Onboarding.password)
-            $0.fetchRightTopLabelText(text: DesignSystemStrings.Onboarding.passwordwarning)
+            $0.fetchLeftTopLabelText(text: .password)
+            $0.fetchRightTopLabelText(text: .passwordWarning)
         }
         .build()
     
     private lazy var repasswordTextFieldView = PasswordTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: DesignSystemStrings.Onboarding.password)
-            $0.fetchRightTopLabelText(text: DesignSystemStrings.Onboarding.repasswordInvalidation)
+            $0.fetchLeftTopLabelText(text: .password)
+            $0.fetchRightTopLabelText(text: .repasswordInvalidation)
         }
         .build()
     
@@ -89,8 +89,8 @@ final class SignUpViewController:
     
     private lazy var validationCodeAlertView = ValidationCodeAlertView()
     
-    private lazy var confirmButton = ConfirmButton(DesignSystemStrings.Common.next,
-                                                   disableText: DesignSystemStrings.Common.next).builder
+    private lazy var confirmButton = ConfirmButton(.next,
+                                                   disableText: .next).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .build()
@@ -301,7 +301,6 @@ extension SignUpViewController {
 
 extension SignUpViewController {
     private func setupUI() {
-        contentView.backgroundColor = DesignSystemAsset.Colors.mainBackground.color
         contentView.addSubview(headerView)
         contentView.addSubview(emailTextFieldView)
         contentView.addSubview(emailValidationRequestButton)

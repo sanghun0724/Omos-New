@@ -42,16 +42,16 @@ final class LoggedInViewController:
     private lazy var emailTextFieldView = CustomTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: DesignSystemStrings.Onboarding.email)
-            $0.fetchRightTopLabelText(text: DesignSystemStrings.Onboarding.emailwarning)
+            $0.fetchLeftTopLabelText(text: .email)
+            $0.fetchRightTopLabelText(text: .emailWarning)
         }
         .build()
     
     private lazy var passwordTextFieldView = PasswordTextFieldView()
         .builder
         .with {
-            $0.fetchLeftTopLabelText(text: DesignSystemStrings.Onboarding.password)
-            $0.fetchRightTopLabelText(text: DesignSystemStrings.Onboarding.passwordwarning)
+            $0.fetchLeftTopLabelText(text: .password)
+            $0.fetchRightTopLabelText(text: .passwordWarning)
         }
         .build()
     
@@ -199,7 +199,6 @@ extension LoggedInViewController {
 
 extension LoggedInViewController {
     private func setupUI() {
-        contentView.backgroundColor = DesignSystemAsset.Colors.mainBackground.color
         contentView.addSubview(scrollView)
         scrollView.addSubview(scrollContentView)
         scrollContentView.addSubview(headerView)
