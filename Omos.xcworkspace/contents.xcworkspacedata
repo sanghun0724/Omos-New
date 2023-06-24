@@ -23,6 +23,9 @@
          <FileRef
             location = "group:OnboardingDomain/OnboardingDomain.xcodeproj">
          </FileRef>
+         <FileRef
+            location = "group:RecordDomain/RecordDomain.xcodeproj">
+         </FileRef>
       </Group>
       <Group
          location = "group:Feature"

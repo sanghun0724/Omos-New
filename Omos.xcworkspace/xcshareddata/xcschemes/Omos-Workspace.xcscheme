@@ -574,6 +574,62 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AB7815E215A19A38472D77AD"
+               BuildableName = "libRecordDomain.a"
+               BlueprintName = "RecordDomain"
+               ReferencedContainer = "container:Projects/Domain/RecordDomain/RecordDomain.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "97F8BBA79A62DE0DD56E3470"
+               BuildableName = "libRecordDomainInterface.a"
+               BlueprintName = "RecordDomainInterface"
+               ReferencedContainer = "container:Projects/Domain/RecordDomain/RecordDomain.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "20AE4C0AB6305720A014AD67"
+               BuildableName = "RecordDomainTesting.framework"
+               BlueprintName = "RecordDomainTesting"
+               ReferencedContainer = "container:Projects/Domain/RecordDomain/RecordDomain.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "43CE386DE27130CC870B8801"
+               BuildableName = "RecordDomainTests.xctest"
+               BlueprintName = "RecordDomainTests"
+               ReferencedContainer = "container:Projects/Domain/RecordDomain/RecordDomain.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "B8553AE058E48CADF8895B28"
                BuildableName = "RxCocoa.framework"
                BlueprintName = "RxCocoa"
@@ -936,6 +992,16 @@
                BuildableName = "OnboardingDomainTests.xctest"
                BlueprintName = "OnboardingDomainTests"
                ReferencedContainer = "container:Projects/Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "43CE386DE27130CC870B8801"
+               BuildableName = "RecordDomainTests.xctest"
+               BlueprintName = "RecordDomainTests"
+               ReferencedContainer = "container:Projects/Domain/RecordDomain/RecordDomain.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference

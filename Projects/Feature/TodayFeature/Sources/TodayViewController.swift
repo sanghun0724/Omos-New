@@ -37,6 +37,13 @@ final class TodayViewController:
     
     // MARK: - UI Components
     
+    private var stackView = UIStackView().builder
+        .axis(.vertical)
+        .alignment(.fill)
+        .distribution(.equalSpacing)
+        .spacing(4)
+        .build()
+    
     // MARK: - Initialization & Deinitialization
     
     override init() {

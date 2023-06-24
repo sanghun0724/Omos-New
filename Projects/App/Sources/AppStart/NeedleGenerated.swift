@@ -32,6 +32,9 @@ private class AppRootDependency9fafbf379aae0424b417Provider: AppRootDependency {
     var loggedInBuilder: LoggedInBuildable {
         return appComponent.loggedInBuilder
     }
+    var todayBuilder: TodayBuildable {
+        return appComponent.todayBuilder
+    }
     private let appComponent: AppComponent
     init(appComponent: AppComponent) {
         self.appComponent = appComponent
@@ -115,6 +118,7 @@ extension AppRootComponent: Registration {
     public func registerItems() {
         keyPathToName[\AppRootDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
         keyPathToName[\AppRootDependency.loggedInBuilder] = "loggedInBuilder-LoggedInBuildable"
+        keyPathToName[\AppRootDependency.todayBuilder] = "todayBuilder-TodayBuildable"
     }
 }
 extension NicknameComponent: Registration {

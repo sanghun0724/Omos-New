@@ -14,34 +14,34 @@ import Foundation
 public enum DesignSystemStrings {
 
   public enum Common {
-    /// 
+    /// 완료
     public static let complete = DesignSystemStrings.tr("Localizable", "common.complete")
-    /// 
+    /// 다음
     public static let next = DesignSystemStrings.tr("Localizable", "common.next")
   }
 
   public enum Onboarding {
-    /// sad
+    /// 이메일
     public static let email = DesignSystemStrings.tr("Localizable", "onboarding.email")
-    /// sd
+    /// 올바른 이메일 형식이 아니에요.
     public static let emailwarning = DesignSystemStrings.tr("Localizable", "onboarding.emailwarning")
-    /// kakao
+    ///   Kakao로 로그인
     public static let kakao = DesignSystemStrings.tr("Localizable", "onboarding.kakao")
-    /// asd
+    /// 로그인
     public static let loggedIn = DesignSystemStrings.tr("Localizable", "onboarding.loggedIn")
-    /// sad
+    /// 닉네임
     public static let nickname = DesignSystemStrings.tr("Localizable", "onboarding.nickname")
-    /// sadsad
+    /// 이미 쓰고 있는 닉네임이에요.
     public static let nicknameWarning = DesignSystemStrings.tr("Localizable", "onboarding.nicknameWarning")
-    /// sad
+    /// 비밀번호
     public static let password = DesignSystemStrings.tr("Localizable", "onboarding.password")
-    /// asd
+    /// 8~16자의 영문 대소문자, 숫자, 특수문자만 가능해요.
     public static let passwordwarning = DesignSystemStrings.tr("Localizable", "onboarding.passwordwarning")
-    /// sad
+    /// 재확인 비밀번호가 틀립니다.
     public static let repasswordInvalidation = DesignSystemStrings.tr("Localizable", "onboarding.repasswordInvalidation")
-    /// asd
+    /// 인증메일 보내기
     public static let sendCertificationEmail = DesignSystemStrings.tr("Localizable", "onboarding.sendCertificationEmail")
-    /// asddsa
+    /// 회원가입
     public static let signUp = DesignSystemStrings.tr("Localizable", "onboarding.signUp")
   }
 }
