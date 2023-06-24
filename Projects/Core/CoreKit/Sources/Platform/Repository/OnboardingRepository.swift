@@ -7,7 +7,7 @@
 
 import RxSwift
 
-// MARK: - LoginRepository
+// MARK: - OnboardingRepository
 
 public protocol OnboardingRepository {
     /// 로컬 로그인
@@ -26,7 +26,7 @@ public protocol OnboardingRepository {
     func doRefresh(request: RefreshRequest) -> Single<RefreshRespone>
 }
 
-// MARK: - LoginRepositoryImpl
+// MARK: - OnboardingRepositoryImpl
 
 public final class OnboardingRepositoryImpl: NetworkRepository<LoginTarget>, OnboardingRepository {
     

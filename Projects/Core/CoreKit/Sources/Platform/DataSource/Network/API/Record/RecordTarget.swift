@@ -8,9 +8,9 @@
 import Alamofire
 import Foundation
 
-enum RecordTarget {
+public enum RecordTarget {
     case select
-    case category(cate: CateType, request: CateRequest)
+    case category(request: CategorizedRecordsRequest)
     case recordDetail(postId: Int, userId: Int)
     case myRecord(userid: Int)
     case save(SaveRequest)
@@ -28,12 +28,12 @@ enum RecordTarget {
 }
 
 extension RecordTarget: TargetType {
-    var baseURL: String {
+    public var baseURL: String {
        // RestApiUrl.restUrl + "/records"
         ""
     }
 
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         switch self {
         case .select: return .get
         case .recordDetail: return .get
@@ -53,11 +53,11 @@ extension RecordTarget: TargetType {
         }
     }
 
-    var path: String {
+    public var path: String {
         switch self {
         case .select: return "" // "/select/\("Account.currentUser")" // TODO: 처리 
         case let .recordDetail(post, user): return "/select/\(post)/user/\(user)"
-        case .category(let cate, _): return "/select/category/\(cate.rawValue)"
+        case .category(let request): return "/select/category/\(request.categoryType.rawValue)"
         case .myRecord(let user): return "/\(user)"
         case .save: return "/save"
         case .recordIspublic(let id): return "/\(id)/ispublic"
@@ -73,9 +73,9 @@ extension RecordTarget: TargetType {
         }
     }
 
-    var parameters: RequestParams? {
+    public var parameters: RequestParams? {
         switch self {
-        case .category(_, let request): return .query(request)
+        case .category(let request): return .query(request)
         case .save(let request): return .body(request)
         case .recordUpdate(_, let request): return .body(request)
         case .oneMusicRecord(_, let request): return .query(request)

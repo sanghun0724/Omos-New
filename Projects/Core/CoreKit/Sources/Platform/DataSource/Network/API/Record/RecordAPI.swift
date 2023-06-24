@@ -40,20 +40,20 @@ class RecordAPI {
             }
         }
     }
-
-    func categoryFetch(cateType: CateType, request: CateRequest, completion:@escaping(Result<[RecordResponse], Error>) -> Void) {
-        AF.request(RecordTarget.category(cate: cateType, request: request), interceptor: TokenInterceptor.shared.getInterceptor()).responseDecodable { (response: AFDataResponse<[RecordResponse]>) in
-            switch response.result {
-            case .success(let data):
-                print(data)
-
-                completion(.success(data))
-            case .failure(let error):
-                print(error.localizedDescription)
-                completion(.failure(error))
-            }
-        }
-    }
+//
+//    func categoryFetch(cateType: CateType, request: CateRequest, completion:@escaping(Result<[RecordResponse], Error>) -> Void) {
+//        AF.request(RecordTarget.category(cate: cateType, request: request), interceptor: TokenInterceptor.shared.getInterceptor()).responseDecodable { (response: AFDataResponse<[RecordResponse]>) in
+//            switch response.result {
+//            case .success(let data):
+//                print(data)
+//
+//                completion(.success(data))
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//                completion(.failure(error))
+//            }
+//        }
+//    }
 
     func myRecordFetch(userid: Int, completion:@escaping(Result<[MyRecordResponse], Error>) -> Void) {
         AF.request(RecordTarget.myRecord(userid: userid), interceptor: TokenInterceptor.shared.getInterceptor()).responseDecodable { (response: AFDataResponse<[MyRecordResponse]>) in
