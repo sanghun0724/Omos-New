@@ -33,6 +33,9 @@ let dependencies = Dependencies(
         productTypes: [:
 //            "RxSwift": .staticFramework,
 //            "RxCocoa": .staticFramework,
+//            "RxRelay": .staticFramework,
+//            "RxCocoaRunTime": .staticFramework,
+//            "RxTest": .staticFramework,
 //            "LogFlume" : .staticFramework,
 //            "NeedleFoundation" : .staticFramework,
 //            "RxDataSources" : .staticFramework,

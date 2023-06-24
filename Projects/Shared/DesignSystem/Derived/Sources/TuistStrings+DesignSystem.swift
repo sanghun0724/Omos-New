@@ -21,29 +21,27 @@ public enum DesignSystemStrings {
   }
 
   public enum Onboarding {
-    /// 
+    /// sad
     public static let email = DesignSystemStrings.tr("Localizable", "onboarding.email")
-    /// 
+    /// sd
     public static let emailwarning = DesignSystemStrings.tr("Localizable", "onboarding.emailwarning")
-    /// 
+    /// kakao
     public static let kakao = DesignSystemStrings.tr("Localizable", "onboarding.kakao")
-    /// 
+    /// asd
     public static let loggedIn = DesignSystemStrings.tr("Localizable", "onboarding.loggedIn")
-    /// 
-    public static let loginButton = DesignSystemStrings.tr("Localizable", "onboarding.loginButton")
-    /// 
+    /// sad
     public static let nickname = DesignSystemStrings.tr("Localizable", "onboarding.nickname")
-    /// 
+    /// sadsad
     public static let nicknameWarning = DesignSystemStrings.tr("Localizable", "onboarding.nicknameWarning")
-    /// 
+    /// sad
     public static let password = DesignSystemStrings.tr("Localizable", "onboarding.password")
-    /// 
+    /// asd
     public static let passwordwarning = DesignSystemStrings.tr("Localizable", "onboarding.passwordwarning")
-    /// 
+    /// sad
     public static let repasswordInvalidation = DesignSystemStrings.tr("Localizable", "onboarding.repasswordInvalidation")
-    /// 
+    /// asd
     public static let sendCertificationEmail = DesignSystemStrings.tr("Localizable", "onboarding.sendCertificationEmail")
-    /// 
+    /// asddsa
     public static let signUp = DesignSystemStrings.tr("Localizable", "onboarding.signUp")
   }
 }

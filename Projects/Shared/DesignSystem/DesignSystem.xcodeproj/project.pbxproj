@@ -237,6 +237,7 @@
 		039EAC94A190808EDB467D4A /* SUIT-Thin.otf */ = {isa = PBXFileReference; path = "SUIT-Thin.otf"; sourceTree = "<group>"; };
 		069BD572C25CE6E6A18A2C66 /* OnBoardingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingHeaderView.swift; sourceTree = "<group>"; };
 		06CFE57888EA018070A619ED /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		07675B402A808BDDFEA020AB /* base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = base; path = base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0781B1D90790D6EB1FAB49A0 /* KakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		084B97B52BE07799F4E86BCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0B8A91EDED58063A21558CB2 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -904,6 +905,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
+				base,
 				en,
 				ko,
 			);
@@ -1093,6 +1095,7 @@
 		A5CC87D8166483B2BA7A5AD3 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
+				07675B402A808BDDFEA020AB /* base */,
 				084B97B52BE07799F4E86BCE /* en */,
 				E0F96FEA0342CE6FE56ABBCB /* ko */,
 			);
