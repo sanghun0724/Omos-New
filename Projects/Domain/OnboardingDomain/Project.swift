@@ -6,5 +6,10 @@ let project = Project.makeModule(
     name: ModulePaths.Domain.OnboardingDomain.rawValue,
     product: .staticLibrary,
     targets: [.interface, .testing, .unitTest],
-    internalDependencies: []
+    internalDependencies: [
+        
+    ],
+    interfaceDependencies: [
+        .core(target: .CoreKit)
+    ]
 )
