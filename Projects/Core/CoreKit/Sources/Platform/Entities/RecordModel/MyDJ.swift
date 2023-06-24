@@ -7,37 +7,37 @@
 
 import Foundation
 
-struct MyDjRequest: Codable {
+public struct MyDjRequest: Codable {
     let postId: Int?
     let size: Int
 }
 
 
-struct MyDjProfileResponse: Codable {
+public struct MyDjProfileResponse: Codable {
     let count: Count
     let isFollowed: Bool?
     let profile: MyDjListResponse
 }
 
 // MARK: - Count
-struct Count: Codable {
+public struct Count: Codable {
     let followerCount, followingCount, recordsCount: Int
 }
 
 // MARK: - Profile
-struct MyDjListResponse: Codable {
+public struct MyDjListResponse: Codable {
     let nickname: String
     let profileURL: String?
     let userID: Int
 
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case nickname
         case profileURL = "profileUrl"
         case userID = "userId"
     }
 }
 
-struct UserRecordsResponse: Codable {
+public struct UserRecordsResponse: Codable {
        let music: Music
        let recordID: Int
        let recordTitle, recordContents: String
@@ -48,7 +48,7 @@ struct UserRecordsResponse: Codable {
        let likeCnt, scrapCnt: Int
        let isLiked, isScraped: Bool
 
-       enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
            case music
            case recordID = "recordId"
            case recordTitle, recordContents
@@ -59,7 +59,7 @@ struct UserRecordsResponse: Codable {
        }
 }
 
-struct BlockRequest: Codable {
+public struct BlockRequest: Codable {
    let fromUserId: Int
    let toUserId: Int
 }

@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: CategoryRespone
 
-struct RecordResponse: Codable {
+public struct RecordResponse: Codable {
     let music: Music
     let recordID: Int
     let recordTitle, recordContents: String
@@ -20,7 +20,7 @@ struct RecordResponse: Codable {
     let likeCnt, scrapCnt: Int
     let isLiked, isScraped: Bool
 
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case music
         case recordID = "recordId"
         case recordTitle, recordContents
@@ -31,7 +31,7 @@ struct RecordResponse: Codable {
     }
 }
 
-enum CateType: String, Codable {
+public enum CateType: String, Codable {
     case aLine = "A_LINE"
     case ost = "OST"
     case story = "STORY"
@@ -42,7 +42,7 @@ enum CateType: String, Codable {
     case desc = "DESC"
 }
 
-struct CateRequest: Codable {
+public struct CateRequest: Codable {
     let postId: Int?
     let size: Int
     let sortType: String

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OneMusicRecordRequest: Codable {
+public struct OneMusicRecordRequest: Codable {
     let postId: Int?
     let size: Int
     let userId: Int
