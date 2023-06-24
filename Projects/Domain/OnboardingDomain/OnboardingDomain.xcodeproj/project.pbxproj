@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		015E1E410E4C6F8652C83A3D /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC63628C72C3F7B9587D642E /* libDesignSystem.a */; platformFilter = ios; };
 		016BC935B6F03DF246938D36 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC038E5BEF0C5A059BDAA31D /* Differentiator.framework */; platformFilter = ios; };
 		03DBD730D6BC10D8A1AB0C1B /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1DF2834E5BCA9CF6DAEF3B /* LogFlume.framework */; platformFilter = ios; };
-		04BC40052C175ECBDBA6B81E /* OnboardingRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3E1C26716AB262A1E46CA /* OnboardingRepositoryService.swift */; };
+		04BC40052C175ECBDBA6B81E /* OnboardingRespositoryServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3E1C26716AB262A1E46CA /* OnboardingRespositoryServiceImpl.swift */; };
 		053CC67F4289A4509D4BDE7A /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9299015C6AB982E15CD0CC7E /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
 		0621F55F3CA613D62CE8744D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5F843C9FA8A632FAE3954F /* RxCocoa.framework */; platformFilter = ios; };
 		06D7C1607C89332EE65657FD /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9299015C6AB982E15CD0CC7E /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
@@ -34,7 +34,7 @@
 		43034BE45E31147C3DE3EAC3 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335ACA439FA3B6AFE9AFBFB9 /* Kingfisher.framework */; platformFilter = ios; };
 		44E9E8E37DFC871744F79B26 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DCD24F388F2AA2474D6387 /* SkeletonView.framework */; platformFilter = ios; };
 		4D91C78BD7086A73E8BD905E /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9395FD6E5405B0E5A98576 /* RIBs.framework */; platformFilter = ios; };
-		58410DAA5F865B454663CDA0 /* OnboardingDomainInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6AC04A26058CD7A0B3E79D /* OnboardingDomainInterface.swift */; };
+		58410DAA5F865B454663CDA0 /* OnboardingRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6AC04A26058CD7A0B3E79D /* OnboardingRepositoryService.swift */; };
 		5946AFBD6F7FB07692B579EA /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8DF9947BE11CA3C5C6D537C /* KakaoSDKShare.framework */; platformFilter = ios; };
 		5FA0ADAA61BFCF04034867CC /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 022C270F7A47FFA17678C9E3 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
 		60B38FC29EC62EE060572E11 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380E7358AA95BB321665556E /* RxSwift.framework */; platformFilter = ios; };
@@ -220,7 +220,7 @@
 		65773F5BBD72BDB88F102685 /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C88DED7FA4F68B76D4033B /* KakaoSDKTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		771841E66774AD7C9841EC80 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FB3E1C26716AB262A1E46CA /* OnboardingRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepositoryService.swift; sourceTree = "<group>"; };
+		7FB3E1C26716AB262A1E46CA /* OnboardingRespositoryServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRespositoryServiceImpl.swift; sourceTree = "<group>"; };
 		879B23CB2DDB30D147985B35 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A92C6C14AACBCC0D73044CC /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9299015C6AB982E15CD0CC7E /* libGlobalThirdPartyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlobalThirdPartyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,7 +233,7 @@
 		AC63628C72C3F7B9587D642E /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B215BA9FB8C7F6C5727563E4 /* KakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75CDB31E3EAF439BE4F3148 /* OnboardingDomainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingDomainTests-Info.plist"; sourceTree = "<group>"; };
-		BB6AC04A26058CD7A0B3E79D /* OnboardingDomainInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDomainInterface.swift; sourceTree = "<group>"; };
+		BB6AC04A26058CD7A0B3E79D /* OnboardingRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepositoryService.swift; sourceTree = "<group>"; };
 		BC038E5BEF0C5A059BDAA31D /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DCD24F388F2AA2474D6387 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72BC70A3A4799235C3527A7 /* OnboardingDomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingDomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,7 +352,7 @@
 		49F0212A818AC2A5EE95F568 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				BB6AC04A26058CD7A0B3E79D /* OnboardingDomainInterface.swift */,
+				BB6AC04A26058CD7A0B3E79D /* OnboardingRepositoryService.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -414,7 +414,7 @@
 		88193D4EF55365855E00933F /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				7FB3E1C26716AB262A1E46CA /* OnboardingRepositoryService.swift */,
+				7FB3E1C26716AB262A1E46CA /* OnboardingRespositoryServiceImpl.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -600,8 +600,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 817A0A7AB5537251D8D4C8FB /* Build configuration list for PBXProject "OnboardingDomain" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -663,7 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4E9737D719CE4184B8A095 /* SignUpItemInfo.swift in Sources */,
-				04BC40052C175ECBDBA6B81E /* OnboardingRepositoryService.swift in Sources */,
+				04BC40052C175ECBDBA6B81E /* OnboardingRespositoryServiceImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,7 +685,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58410DAA5F865B454663CDA0 /* OnboardingDomainInterface.swift in Sources */,
+				58410DAA5F865B454663CDA0 /* OnboardingRepositoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

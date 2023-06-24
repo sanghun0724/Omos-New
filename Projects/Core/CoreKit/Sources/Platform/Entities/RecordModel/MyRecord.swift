@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - MyRecordElement
-struct MyRecordResponse: Codable {
+public struct MyRecordResponse: Codable {
     let category, createdDate: String
     let isPublic: Bool
     let music: Music
@@ -16,7 +16,7 @@ struct MyRecordResponse: Codable {
     let recordID: Int
     let recordTitle: String
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case category, createdDate, isPublic, music, recordContents
         case recordID = "recordId"
         case recordTitle
@@ -24,14 +24,14 @@ struct MyRecordResponse: Codable {
 }
 
 // MARK: - MyRecord
-struct SaveRequest: Codable { // add imageURL or image data using form - data
+public struct SaveRequest: Codable { // add imageURL or image data using form - data
     let category: String
     let isPublic: Bool
     let musicID, recordContents, recordTitle: String
     let recordImageURL: String?
     let userID: Int
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case category, isPublic
         case musicID = "musicId"
         case recordContents
@@ -41,11 +41,11 @@ struct SaveRequest: Codable { // add imageURL or image data using form - data
     }
 }
 
-struct SaveRespone: Codable {
+public struct SaveRespone: Codable {
     let state: Bool
 }
 
-struct SaveParameter {
+public struct SaveParameter {
     let cate: String
     let content: String
     let isPublic: Bool
@@ -55,22 +55,22 @@ struct SaveParameter {
     let recordImageUrl: String
 }
 
-struct UpdateRequest: Codable {
+public struct UpdateRequest: Codable {
     let contents: String
     let title: String
     let isPublic: Bool
     let recordImageUrl: String
 }
 
-struct PostRespone: Codable {
+public struct PostRespone: Codable {
     let postId: Int
 }
 
-struct StateRespone: Codable {
+public struct StateRespone: Codable {
     let state: Bool
 }
 
-struct DetailRecordResponse: Codable {
+public struct DetailRecordResponse: Codable {
     let category, createdDate: String
     let isLiked, isScraped: Bool
     let isPublic: Bool?
@@ -82,7 +82,7 @@ struct DetailRecordResponse: Codable {
     let recordTitle: String
     let scrapCnt, userID, viewsCnt: Int
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case category, createdDate, isLiked, isPublic, isScraped, likeCnt, music, nickname, recordContents
         case recordID = "recordId"
         case recordImageURL = "recordImageUrl"

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SelectResponse: Codable {
+public struct SelectResponse: Codable {
     var aLine: [ALine]
     var ost: [ALine]
     var lyrics: [ALine]
@@ -24,7 +24,7 @@ struct SelectResponse: Codable {
 }
 
 // MARK: - ALine
-struct ALine: Codable {
+public struct ALine: Codable {
     let music: Music
     let nickname: String
     let recordID: Int
@@ -42,12 +42,12 @@ struct ALine: Codable {
 }
 
 // MARK: - Music
-struct Music: Codable {
+public struct Music: Codable {
     let albumImageURL, albumTitle: String
     let artists: [Artist]
     let musicID, musicTitle: String
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case albumImageURL = "albumImageUrl"
         case albumTitle, artists
         case musicID = "musicId"
