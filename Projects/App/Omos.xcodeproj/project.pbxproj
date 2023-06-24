@@ -50,10 +50,12 @@
 		A254AF21D523526A7C47EC18 /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE6677AF6A28F9FB6961062 /* LogFlume.framework */; platformFilter = ios; };
 		A3F5139CCA063416E6B212E6 /* TuistAssets+Omos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB880C4CB4E436D170DA3B3E /* TuistAssets+Omos.swift */; };
 		A5E17BDFD0727581005440F7 /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36D951AE88840CE59C0ACD8 /* KakaoSDKShare.framework */; platformFilter = ios; };
+		B0CF1649A6B757BE66485224 /* libRecordDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C553D9E2779FD4FA701913B1 /* libRecordDomainInterface.a */; platformFilter = ios; };
 		B28E8EAD42D799037247C2F6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D53F6F351F4A88A2B22D1C /* RxSwift.framework */; platformFilter = ios; };
 		B2A1A07804870913EF938BD2 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E017FF22B129F1A71DFFED4 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7CCCB436023A72676A9A4E7 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC117193BDD96B3DF6977E8A /* SkeletonView.framework */; platformFilter = ios; };
 		C142E6B1D4418C09D58E3C92 /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2E1BEBBA263B4BA466C546 /* AppRootInteractor.swift */; };
+		C89B897CA9339C241B59CC38 /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 420697B096057DA4FA7D602C /* libRecordDomain.a */; platformFilter = ios; };
 		D09AE81332906E77965FC2E7 /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E98D24A5213E68BF2B75A98 /* libCoreKit.a */; platformFilter = ios; };
 		D2B253667106437D55AD18F2 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9FA0D3D70D8286BD72351C /* libDesignSystem.a */; platformFilter = ios; };
 		D44F7BC43C84340DEECE54CC /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA4B1EC78866ABD20B9A0B73 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -111,6 +113,7 @@
 		3876FC3FB27253716E573AAD /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4037F1C2BB601FB6B4278C9B /* AppRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewController.swift; sourceTree = "<group>"; };
 		41B8FF7940D72656A1303AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		420697B096057DA4FA7D602C /* libRecordDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FBEC0A4D64373B977FA357 /* NeedleFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeedleFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7356AD78E8DB9CB1D99AE2 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		4C826A8A03634A49EA5F5AA5 /* KakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +142,7 @@
 		B68A62B787657B5F5BF2A907 /* libBaseShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC117193BDD96B3DF6977E8A /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCAD8577C94E5B9911392CE1 /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C553D9E2779FD4FA701913B1 /* libRecordDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABDD4078CF7D17DE6B45A51 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFF48CECD97F065A1E580E0 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC6A2ADBDBE360D911077984 /* libSignUpFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSignUpFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +193,8 @@
 				7F6A3146B08F1CB86D3227C7 /* RIBs.framework in Frameworks */,
 				F7F8F299271C9D058F5C32E1 /* ReactorKit.framework in Frameworks */,
 				61B4583AA678AD543E10FCA9 /* ReactorKitRuntime.framework in Frameworks */,
+				C89B897CA9339C241B59CC38 /* libRecordDomain.a in Frameworks */,
+				B0CF1649A6B757BE66485224 /* libRecordDomainInterface.a in Frameworks */,
 				2C88489C9E45AF5BF045AFAA /* RxCocoa.framework in Frameworks */,
 				30BEBD56CBBAEDA136D5E003 /* RxDataSources.framework in Frameworks */,
 				350F3774B48FC79F5A2BEDE8 /* RxGesture.framework in Frameworks */,
@@ -336,6 +342,8 @@
 				379F3D61AD4A8F0C91311324 /* libLoggedInFeatureInterface.a */,
 				7CA1B46C5F7F9A2048EF250E /* libOnboardingDomain.a */,
 				1E73DB3A3CBDC6B2E31B4140 /* libOnboardingDomainInterface.a */,
+				420697B096057DA4FA7D602C /* libRecordDomain.a */,
+				C553D9E2779FD4FA701913B1 /* libRecordDomainInterface.a */,
 				360367E2CEEBC9F2C3509693 /* libSignUpFeature.a */,
 				CC6A2ADBDBE360D911077984 /* libSignUpFeatureInterface.a */,
 				A0793D243A463AA8298D613F /* libTodayFeature.a */,

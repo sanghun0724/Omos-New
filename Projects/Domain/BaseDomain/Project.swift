@@ -9,6 +9,8 @@ let project = Project.makeModule(
     internalDependencies: [
         .core(target: .CoreKit),
         .domain(target: .OnboardingDomain),
-        .domain(target: .OnboardingDomain, type: .interface)
+        .domain(target: .OnboardingDomain, type: .interface),
+        .domain(target: .RecordDomain),
+        .domain(target: .RecordDomain, type: .interface)
     ]
 )

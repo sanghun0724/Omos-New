@@ -9,8 +9,9 @@ import RIBs
 
 import DesignSystem
 import LoggedInFeatureInterface
+import TodayFeatureInterface
 
-protocol AppRootInteractable: Interactable, LoggedInListener {
+protocol AppRootInteractable: Interactable, LoggedInListener, TodayListener {
     var router: AppRootRouting? { get set }
     var listener: AppRootListener? { get set }
 }
@@ -22,15 +23,19 @@ protocol AppRootViewControllable: ViewControllable {
 final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControllable>, AppRootRouting {
     
     private let loggedInBuilder: LoggedInBuildable
+    private let todayBuilder: TodayBuildable
     
     private var loggedInRouting: ViewableRouting?
+    private var todayRouting: TodayRouting?
     
     init(
         interactor: AppRootInteractable,
         viewController: AppRootViewControllable,
-        loggedInBuilder: LoggedInBuildable
+        loggedInBuilder: LoggedInBuildable,
+        todayBuilder: TodayBuildable
     ) {
         self.loggedInBuilder = loggedInBuilder
+        self.todayBuilder = todayBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
@@ -49,6 +54,21 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
             with: LoggedInBuildDependency(
                 listener: interactor))
         self.loggedInRouting = router
+        attachChild(router)
+        let navigation = NavigationControllerable(root: router.viewControllable)
+        viewController.presentFullScreen(navigation, animated: false, completion: nil)
+    }
+    
+    func attachToday() {
+        if todayRouting != nil {
+            return
+        }
+        
+        let router = todayBuilder.build(
+            with: TodayBuildDependency(
+                listener: interactor)
+        )
+        self.todayRouting = router
         attachChild(router)
         let navigation = NavigationControllerable(root: router.viewControllable)
         viewController.presentFullScreen(navigation, animated: false, completion: nil)

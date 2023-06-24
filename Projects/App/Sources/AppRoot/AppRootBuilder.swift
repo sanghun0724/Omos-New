@@ -9,12 +9,13 @@ import NeedleFoundation
 import RIBs
 
 import OnboardingDomainInterface
-import LoggedInFeature
 import LoggedInFeatureInterface
+import TodayFeatureInterface
 
 protocol AppRootDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
     var loggedInBuilder: LoggedInBuildable { get }
+    var todayBuilder: TodayBuildable { get }
 }
 
 final class AppRootComponent: NeedleFoundation.Component<AppRootDependency> {}
@@ -37,7 +38,8 @@ final class AppRootBuilder:
         return AppRootRouter(
             interactor: interactor,
             viewController: viewController,
-            loggedInBuilder: component.loggedInBuilder
+            loggedInBuilder: component.loggedInBuilder,
+            todayBuilder: component.todayBuilder
             )
     }
 }
