@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -44,6 +44,7 @@
 		D816B1780E843083DE00764E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487B4F323788166A17E3A12C /* NetworkError.swift */; };
 		DAC9719F7B20B3BB5B1D3154 /* FollowTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E56C195F9258C5DC09581 /* FollowTarget.swift */; };
 		DC6006CD69243C308A6A5C6A /* MyProfileTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F58394A1C1BE1152F8B2D9 /* MyProfileTarget.swift */; };
+		DE26C1A72A46D7FB0098236F /* RecordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE26C1A62A46D7FB0098236F /* RecordRepository.swift */; };
 		DF52B0CF131CC5CD34AA2548 /* ArtistDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078BF909A104365502169B8C /* ArtistDetail.swift */; };
 		E7B70C5326C3EF36F05E7CE1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04118D6F3865B3B58BE3C2AB /* Networking.swift */; };
 		E9A145F9A55ABD2ED860A9D1 /* AwsS3Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DE057BEF51F394CF319B63 /* AwsS3Target.swift */; };
@@ -119,6 +120,7 @@
 		D9D021161D60715A436AC0DA /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
 		DC0575BD15390ED22D354CE0 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		DC2E56C195F9258C5DC09581 /* FollowTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTarget.swift; sourceTree = "<group>"; };
+		DE26C1A62A46D7FB0098236F /* RecordRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRepository.swift; sourceTree = "<group>"; };
 		E99133C7BB8685E94473F870 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		F8F58394A1C1BE1152F8B2D9 /* MyProfileTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTarget.swift; sourceTree = "<group>"; };
 		FA98E8D867FD0FFCEFE5E29E /* MyRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestInterceptor.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 			children = (
 				BCE3A9F4489BE41CA910EEDC /* NetworkRepository.swift */,
 				9756D67C025C8CF4D2333D09 /* OnboardingRepository.swift */,
+				DE26C1A62A46D7FB0098236F /* RecordRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -418,8 +421,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = D8FC987517002C0F6AD061BF /* Build configuration list for PBXProject "CoreKit" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -466,6 +467,7 @@
 				A7B2DB3A3000D6FAA09568F7 /* InteractionTarget.swift in Sources */,
 				A2590934B96AD8D64FEE52AE /* LoginAPI.swift in Sources */,
 				FF4F1A54870DFFA5790C9825 /* LoginTarget.swift in Sources */,
+				DE26C1A72A46D7FB0098236F /* RecordRepository.swift in Sources */,
 				DAC9719F7B20B3BB5B1D3154 /* FollowTarget.swift in Sources */,
 				7D13E0EB6A0F5DE495BDDFBF /* MyProfileAPI.swift in Sources */,
 				DC6006CD69243C308A6A5C6A /* MyProfileTarget.swift in Sources */,

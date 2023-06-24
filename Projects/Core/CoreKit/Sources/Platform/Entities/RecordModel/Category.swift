@@ -31,7 +31,7 @@ public struct RecordResponse: Codable {
     }
 }
 
-public enum CateType: String, Codable {
+public enum CategoryType: String, Codable {
     case aLine = "A_LINE"
     case ost = "OST"
     case story = "STORY"
@@ -42,7 +42,8 @@ public enum CateType: String, Codable {
     case desc = "DESC"
 }
 
-public struct CateRequest: Codable {
+public struct CategorizedRecordsRequest: Codable {
+    let categoryType: CategoryType
     let postId: Int?
     let size: Int
     let sortType: String
