@@ -1,14 +1,12 @@
 
 
 import CoreKit
-import LoggedInFeature
-import LoggedInFeatureInterface
 import NeedleFoundation
 import OnboardingDomain
 import OnboardingDomainInterface
+import OnboardingFeature
+import OnboardingFeatureInterface
 import RIBs
-import SignUpFeature
-import SignUpFeatureInterface
 import TodayFeature
 import TodayFeatureInterface
 
@@ -43,6 +41,28 @@ private class AppRootDependency9fafbf379aae0424b417Provider: AppRootDependency {
 /// ^->AppComponent->AppRootComponent
 private func factorya90cb427e52e03443c85f47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
     return AppRootDependency9fafbf379aae0424b417Provider(appComponent: parent1(component) as! AppComponent)
+}
+private class LoggedInDependencyc7668df81df1c0bef5b1Provider: LoggedInDependency {
+    var onboardingRepositoryService: OnboardingRepositoryService {
+        return appComponent.onboardingRepositoryService
+    }
+    var loggedInBuilder: LoggedInBuildable {
+        return appComponent.loggedInBuilder
+    }
+    var signUpBulder: SignUpBuildable {
+        return appComponent.signUpBulder
+    }
+    var todayBuilder: TodayBuildable {
+        return appComponent.todayBuilder
+    }
+    private let appComponent: AppComponent
+    init(appComponent: AppComponent) {
+        self.appComponent = appComponent
+    }
+}
+/// ^->AppComponent->LoggedInComponent
+private func factorybe3fbfd42f44e2df6537f47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return LoggedInDependencyc7668df81df1c0bef5b1Provider(appComponent: parent1(component) as! AppComponent)
 }
 private class NicknameDependencyf8931c25a2fc8a703ee7Provider: NicknameDependency {
     var onboardingRepositoryService: OnboardingRepositoryService {
@@ -84,28 +104,6 @@ private class TodayDependency18dcebc0d3df0c401f0dProvider: TodayDependency {
 private func factory1ffc93d9a05b4e8720cae3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
     return TodayDependency18dcebc0d3df0c401f0dProvider()
 }
-private class LoggedInDependencyc7668df81df1c0bef5b1Provider: LoggedInDependency {
-    var onboardingRepositoryService: OnboardingRepositoryService {
-        return appComponent.onboardingRepositoryService
-    }
-    var loggedInBuilder: LoggedInBuildable {
-        return appComponent.loggedInBuilder
-    }
-    var signUpBulder: SignUpBuildable {
-        return appComponent.signUpBulder
-    }
-    var todayBuilder: TodayBuildable {
-        return appComponent.todayBuilder
-    }
-    private let appComponent: AppComponent
-    init(appComponent: AppComponent) {
-        self.appComponent = appComponent
-    }
-}
-/// ^->AppComponent->LoggedInComponent
-private func factorybe3fbfd42f44e2df6537f47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
-    return LoggedInDependencyc7668df81df1c0bef5b1Provider(appComponent: parent1(component) as! AppComponent)
-}
 
 #else
 extension AppComponent: Registration {
@@ -119,6 +117,14 @@ extension AppRootComponent: Registration {
         keyPathToName[\AppRootDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
         keyPathToName[\AppRootDependency.loggedInBuilder] = "loggedInBuilder-LoggedInBuildable"
         keyPathToName[\AppRootDependency.todayBuilder] = "todayBuilder-TodayBuildable"
+    }
+}
+extension LoggedInComponent: Registration {
+    public func registerItems() {
+        keyPathToName[\LoggedInDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
+        keyPathToName[\LoggedInDependency.loggedInBuilder] = "loggedInBuilder-LoggedInBuildable"
+        keyPathToName[\LoggedInDependency.signUpBulder] = "signUpBulder-SignUpBuildable"
+        keyPathToName[\LoggedInDependency.todayBuilder] = "todayBuilder-TodayBuildable"
     }
 }
 extension NicknameComponent: Registration {
@@ -135,14 +141,6 @@ extension SignUpComponent: Registration {
 extension TodayComponent: Registration {
     public func registerItems() {
 
-    }
-}
-extension LoggedInComponent: Registration {
-    public func registerItems() {
-        keyPathToName[\LoggedInDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
-        keyPathToName[\LoggedInDependency.loggedInBuilder] = "loggedInBuilder-LoggedInBuildable"
-        keyPathToName[\LoggedInDependency.signUpBulder] = "signUpBulder-SignUpBuildable"
-        keyPathToName[\LoggedInDependency.todayBuilder] = "todayBuilder-TodayBuildable"
     }
 }
 
@@ -163,10 +161,10 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
 @inline(never) private func register1() {
     registerProviderFactory("^->AppComponent", factoryEmptyDependencyProvider)
     registerProviderFactory("^->AppComponent->AppRootComponent", factorya90cb427e52e03443c85f47b58f8f304c97af4d5)
+    registerProviderFactory("^->AppComponent->LoggedInComponent", factorybe3fbfd42f44e2df6537f47b58f8f304c97af4d5)
     registerProviderFactory("^->AppComponent->NicknameComponent", factoryefd4cb58dce6be7a9de5f47b58f8f304c97af4d5)
     registerProviderFactory("^->AppComponent->SignUpComponent", factory306e8ce5cfdf41304709f47b58f8f304c97af4d5)
     registerProviderFactory("^->AppComponent->TodayComponent", factory1ffc93d9a05b4e8720cae3b0c44298fc1c149afb)
-    registerProviderFactory("^->AppComponent->LoggedInComponent", factorybe3fbfd42f44e2df6537f47b58f8f304c97af4d5)
 }
 #endif
 

@@ -10,6 +10,7 @@ import UIKit
 import RIBs
 import KakaoSDKAuth
 import KakaoSDKCommon
+import CoreKit
 import GlobalThirdPartyLibrary
 import LogFlume
 
@@ -28,6 +29,9 @@ class AppDelegate:
         
         setKakaoSDK()
         setLoggingChannel()
+        
+        log.warning("target1",value: Environment.kakaoAPIKey)
+        log.warning("target2",value: Environment.rootURL)
         
         return true
     }

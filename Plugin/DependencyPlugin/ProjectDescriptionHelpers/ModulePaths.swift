@@ -12,10 +12,8 @@ public enum ModulePaths {
 
 public extension ModulePaths {
     enum Feature: String {
-        case TestFeature
         case TodayFeature
-        case SignUpFeature
-        case LoggedInFeature
+        case OnboardingFeature
         case BaseFeature
 
         func targetName(type: MicroTargetType) -> String {

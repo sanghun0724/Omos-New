@@ -8,7 +8,7 @@
 import RIBs
 
 import DesignSystem
-import LoggedInFeatureInterface
+import OnboardingFeatureInterface
 import TodayFeatureInterface
 
 protocol AppRootInteractable: Interactable, LoggedInListener, TodayListener {

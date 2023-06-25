@@ -34,10 +34,7 @@
             location = "group:BaseFeature/BaseFeature.xcodeproj">
          </FileRef>
          <FileRef
-            location = "group:LoggedInFeature/LoggedInFeature.xcodeproj">
-         </FileRef>
-         <FileRef
-            location = "group:SignUpFeature/SignUpFeature.xcodeproj">
+            location = "group:OnboardingFeature/OnboardingFeature.xcodeproj">
          </FileRef>
          <FileRef
             location = "group:TodayFeature/TodayFeature.xcodeproj">
