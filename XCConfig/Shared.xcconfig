@@ -4,6 +4,12 @@ OTHER_SWIFT_FLAGS[config=PROD][sdk=*] = $(inherited) -DPROD
 
 ENABLE_BITCODE = NO
 
+ROOT_URL = http:/$()/
 
+// Keys
+KAKAO_API_KEY = test
 
+// App Settings
 
+PRODUCT_NAME = omos
+PRODUCT_BUNDLE_IDENTIFIER = bundletest
