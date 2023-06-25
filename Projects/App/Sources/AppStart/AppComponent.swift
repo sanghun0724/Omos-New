@@ -33,6 +33,12 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
         }
     }
     
+    var onboardingBuilder: OnboardingBuildable {
+        OnboardingBuilder {
+            OnboardingComponent(parent: self)
+        }
+    }
+    
     var loggedInBuilder: LoggedInBuildable {
         LoggedInBuilder {
             LoggedInComponent(parent: self)

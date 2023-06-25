@@ -10,21 +10,13 @@ import ReactorKit
 import RIBs
 import RxSwift
 
-// MARK: - OnboardingRouting
-
-protocol OnboardingRouting: ViewableRouting {
-    
-}
+import OnboardingFeatureInterface
 
 // MARK: - OnboardingPresentable
 
 protocol OnboardingPresentable: Presentable {
     var listener: OnboardingPresentableListener? { get set }
 }
-
-// MARK: - OnboardingListener
-
-protocol OnboardingListener: AnyObject {}
 
 // MARK: - OnboardingInteractor
 

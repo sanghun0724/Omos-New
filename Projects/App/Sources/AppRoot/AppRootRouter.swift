@@ -11,7 +11,7 @@ import DesignSystem
 import OnboardingFeatureInterface
 import TodayFeatureInterface
 
-protocol AppRootInteractable: Interactable, LoggedInListener, TodayListener {
+protocol AppRootInteractable: Interactable, OnboardingListener, TodayListener {
     var router: AppRootRouting? { get set }
     var listener: AppRootListener? { get set }
 }
@@ -22,19 +22,19 @@ protocol AppRootViewControllable: ViewControllable {
 
 final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControllable>, AppRootRouting {
     
-    private let loggedInBuilder: LoggedInBuildable
+    private let onboardingBuilder: OnboardingBuildable
     private let todayBuilder: TodayBuildable
     
-    private var loggedInRouting: ViewableRouting?
+    private var onboardingRouting: OnboardingRouting?
     private var todayRouting: TodayRouting?
     
     init(
         interactor: AppRootInteractable,
         viewController: AppRootViewControllable,
-        loggedInBuilder: LoggedInBuildable,
+        onboardingBuilder: OnboardingBuildable,
         todayBuilder: TodayBuildable
     ) {
-        self.loggedInBuilder = loggedInBuilder
+        self.onboardingBuilder = onboardingBuilder
         self.todayBuilder = todayBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
@@ -45,15 +45,15 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
         
     }
     
-    func attachLoggedIn() {
-        if loggedInRouting != nil {
+    func attachOnboarding() {
+        if onboardingRouting != nil {
             return
         }
         
-        let router = loggedInBuilder.build(
-            with: LoggedInBuildDependency(
+        let router = onboardingBuilder.build(
+            with: OnboardingBuildDependency(
                 listener: interactor))
-        self.loggedInRouting = router
+        self.onboardingRouting = router
         attachChild(router)
         let navigation = NavigationControllerable(root: router.viewControllable)
         viewController.presentFullScreen(navigation, animated: false, completion: nil)

@@ -9,38 +9,28 @@
 import NeedleFoundation
 import RIBs
 
+import OnboardingFeatureInterface
+
 // MARK: - OnboardingDependency
 
-protocol OnboardingDependency: NeedleFoundation.Dependency {}
-
-// MARK: - OnboardingBuildDependency
-
-struct OnboardingBuildDependency {
-    let listener: OnboardingListener
-}
+public protocol OnboardingDependency: NeedleFoundation.Dependency {}
 
 // MARK: - OnboardingComponent
 
-final class OnboardingComponent: NeedleFoundation.Component<OnboardingDependency> {
+public final class OnboardingComponent: NeedleFoundation.Component<OnboardingDependency> {
     fileprivate var initialState: OnboardingPresentableState {
         OnboardingPresentableState()
     }
 }
 
-// MARK: - OnboardingBuildable
-
-protocol OnboardingBuildable: Buildable {
-    func build(with dynamicBuildDependency: OnboardingBuildDependency) -> OnboardingRouting
-}
-
 // MARK: - OnboardingBuilder
 
-final class OnboardingBuilder:
+public final class OnboardingBuilder:
     ComponentizedBuilder<OnboardingComponent, OnboardingRouting, OnboardingBuildDependency, Void>,
     OnboardingBuildable
 {
 
-    override func build(
+    override public func build(
       with component: OnboardingComponent,
       _ payload: OnboardingBuildDependency
     ) -> OnboardingRouting {
