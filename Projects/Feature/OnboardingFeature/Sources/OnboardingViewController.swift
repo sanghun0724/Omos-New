@@ -42,8 +42,8 @@ final class OnboardingViewController:
     // MARK: - UI Components
     
     private lazy var mainTitleLabel = UILabel().builder
-        .text("음악 기반\n감성 기록 플랫폼")
-        .numberOfLines(0)
+        .text(.mainTitle)
+        .numberOfLines(2)
         .font(.systemFont(ofSize: 22, weight: .bold))
         .textColor(.white)
         .build()
@@ -64,11 +64,13 @@ final class OnboardingViewController:
         }
         .build()
     
+    private lazy var kakaoImageView = UIImageView(image: DesignSystemAsset.Login.kakao.image)
+    
     private lazy var appleButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .white)
     
     private lazy var signUpButton = UIButton().builder
         .with {
-            $0.setTitle("이메일 회원가입", for: .normal)
+            $0.setTitle(.signUp, for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
             $0.setTitleColor(.white, for: .normal)
         }
@@ -80,7 +82,7 @@ final class OnboardingViewController:
     
     private lazy var loggedInButton = UIButton().builder
         .with {
-            $0.setTitle("이메일 로그인", for: .normal)
+            $0.setTitle(.loggedIn, for: .normal)
             $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
             $0.setTitleColor(.white, for: .normal)
         }
@@ -111,8 +113,52 @@ extension OnboardingViewController {}
 
 extension OnboardingViewController {
     private func bindUI() {
-        
+        bindKakaoLoggedInButton()
+        bindAppleLoggedInButton()
+        bindEmailSignUpButton()
+        bindEmailLoggedInButton()
     }
+    
+    private func bindKakaoLoggedInButton() {
+        kakaoButton
+            .rx
+            .tap
+            .preventDuplication()
+            .map { .didTapkakaoLoggedInButton }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindAppleLoggedInButton() {
+        appleButton
+            .rx
+            .tapGesture()
+            .preventDuplication()
+            .map { _ in .didTapkakaoLoggedInButton }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindEmailSignUpButton() {
+        signUpButton
+            .rx
+            .tap
+            .preventDuplication()
+            .map { .didTapkakaoLoggedInButton }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindEmailLoggedInButton() {
+        loggedInButton
+            .rx
+            .tap
+            .preventDuplication()
+            .map { .didTapEmailLoggedInButton }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+
 }
 
 // MARK: - Bind listener
@@ -156,7 +202,10 @@ extension OnboardingViewController {
         contentView.addSubview(verticalSepeartedLineView)
         contentView.addSubview(signUpButton)
         contentView.addSubview(loggedInButton)
+        
         contentView.addSubview(kakaoButton)
+        kakaoButton.addSubview(kakaoImageView)
+        
         contentView.addSubview(appleButton)
         self.layout()
     }
@@ -195,6 +244,12 @@ extension OnboardingViewController {
             $0.left.right.equalToSuperview().inset(20)
             $0.height.equalTo(UI.buttonHeight)
             $0.bottom.equalTo(appleButton.snp.top).offset(-20)
+        }
+        kakaoImageView.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            kakaoImageView.translatesAutoresizingMaskIntoConstraints = false
+            kakaoImageView.rightAnchor.constraint(equalTo: kakaoButton.titleLabel!.leftAnchor).isActive = true
+            $0.height.width.equalTo(12)
         }
     }
 

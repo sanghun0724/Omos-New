@@ -13,13 +13,14 @@
 
 // MARK: - Onboarding
 
-"onboarding.loggedIn"="로그인";
+"onboarding.mainTitle"="음악 기반\n감성 기록 플랫폼";
+"onboarding.loggedIn"="이메일 로그인";
 "onboarding.email"="이메일";
 "onboarding.password"="비밀번호";
 "onboarding.emailwarning"="올바른 이메일 형식이 아니에요.";
 "onboarding.passwordwarning"="8~16자의 영문 대소문자, 숫자, 특수문자만 가능해요.";
 "onboarding.kakao"="  Kakao로 로그인";
-"onboarding.signUp"="회원가입";
+"onboarding.signUp"="이메일 회원가입";
 "onboarding.sendCertificationEmail"="인증메일 보내기";
 "onboarding.repasswordInvalidation"="재확인 비밀번호가 틀립니다.";
 "onboarding.nickname"="닉네임";

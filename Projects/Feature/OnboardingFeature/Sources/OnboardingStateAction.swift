@@ -26,7 +26,10 @@ struct OnboardingPresentableState: Equatable, HasLoadingState, HasErrorState {
 // MARK: - OnboardingPresentableAction
 
 enum OnboardingPresentableAction {
-    
+    case didTapkakaoLoggedInButton
+    case didTapAppleLoggedInButton
+    case didTapEmailSingUpButton
+    case didTapEmailLoggedInButton
 }
 
 // MARK: - OnboardingPresentableListener

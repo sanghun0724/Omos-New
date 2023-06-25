@@ -18,6 +18,7 @@ public extension String {
     
     // MARK: Onboarding
     
+    static let mainTitle = DesignSystemStrings.Onboarding.mainTitle
     static let loggedIn = DesignSystemStrings.Onboarding.loggedIn
     static let email = DesignSystemStrings.Onboarding.email
     static let password = DesignSystemStrings.Onboarding.password
