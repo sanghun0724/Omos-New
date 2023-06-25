@@ -12,14 +12,13 @@ import OnboardingDomain
 import OnboardingDomainInterface
 import TodayFeature
 import TodayFeatureInterface
-import LoggedInFeature
-import LoggedInFeatureInterface
-import SignUpFeature
-import SignUpFeatureInterface
+import OnboardingFeature
+import OnboardingFeatureInterface
 
 // MARK: AppComponent
 
 final class AppComponent: BootstrapComponent, AppRootDependency {
+    
     var appRootBuilder: AppRootBuildable {
         AppRootBuilder {
             AppRootComponent(parent: self)

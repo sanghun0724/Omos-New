@@ -364,90 +364,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3BF688E8B3F15A97BF807063"
-               BuildableName = "libLoggedInFeature.a"
-               BlueprintName = "LoggedInFeature"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E226305D1D0E3915DC73D00"
-               BuildableName = "LoggedInFeatureDemoApp.app"
-               BlueprintName = "LoggedInFeatureDemoApp"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "195C0117DD83EE37219659BC"
-               BuildableName = "libLoggedInFeatureInterface.a"
-               BlueprintName = "LoggedInFeatureInterface"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "98291DDA39CD583379A91A33"
-               BuildableName = "LoggedInFeatureTesting.framework"
-               BlueprintName = "LoggedInFeatureTesting"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "543590EC0100206FDEF38120"
-               BuildableName = "LoggedInFeatureTests.xctest"
-               BlueprintName = "LoggedInFeatureTests"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00DCA3AEA6FC413BAB04D124"
-               BuildableName = "LoggedInFeatureUITests.xctest"
-               BlueprintName = "LoggedInFeatureUITests"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "B7D668D851D7D81DA02681CC"
                BuildableName = "NeedleFoundation.framework"
                BlueprintName = "NeedleFoundation"
@@ -522,6 +438,90 @@
                BuildableName = "OnboardingDomainTests.xctest"
                BlueprintName = "OnboardingDomainTests"
                ReferencedContainer = "container:Projects/Domain/OnboardingDomain/OnboardingDomain.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "155E57EFC440A9B0889AB3AC"
+               BuildableName = "libOnboardingFeature.a"
+               BlueprintName = "OnboardingFeature"
+               ReferencedContainer = "container:Projects/Feature/OnboardingFeature/OnboardingFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "922C3457E1232E051892856C"
+               BuildableName = "OnboardingFeatureDemoApp.app"
+               BlueprintName = "OnboardingFeatureDemoApp"
+               ReferencedContainer = "container:Projects/Feature/OnboardingFeature/OnboardingFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "192C7ACBD5A03867D013EBF3"
+               BuildableName = "libOnboardingFeatureInterface.a"
+               BlueprintName = "OnboardingFeatureInterface"
+               ReferencedContainer = "container:Projects/Feature/OnboardingFeature/OnboardingFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "78A72ADA0DC388D8BFE661D1"
+               BuildableName = "OnboardingFeatureTesting.framework"
+               BlueprintName = "OnboardingFeatureTesting"
+               ReferencedContainer = "container:Projects/Feature/OnboardingFeature/OnboardingFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ECCE4A59F59FD870B3FE50A1"
+               BuildableName = "OnboardingFeatureTests.xctest"
+               BlueprintName = "OnboardingFeatureTests"
+               ReferencedContainer = "container:Projects/Feature/OnboardingFeature/OnboardingFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B65700862261A52E0C512F5E"
+               BuildableName = "OnboardingFeatureUITests.xctest"
+               BlueprintName = "OnboardingFeatureUITests"
+               ReferencedContainer = "container:Projects/Feature/OnboardingFeature/OnboardingFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -714,90 +714,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "97D3F0D7F6E17AAB1EE2F7A9"
-               BuildableName = "libSignUpFeature.a"
-               BlueprintName = "SignUpFeature"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D32313801DE03642027E9731"
-               BuildableName = "SignUpFeatureDemoApp.app"
-               BlueprintName = "SignUpFeatureDemoApp"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "924165B3A475223F4B927128"
-               BuildableName = "libSignUpFeatureInterface.a"
-               BlueprintName = "SignUpFeatureInterface"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2996147A3AD1B36FB84101F4"
-               BuildableName = "SignUpFeatureTesting.framework"
-               BlueprintName = "SignUpFeatureTesting"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "71AA960D4E6DA57810658692"
-               BuildableName = "SignUpFeatureTests.xctest"
-               BlueprintName = "SignUpFeatureTests"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7213AB01696A579625F0B8F3"
-               BuildableName = "SignUpFeatureUITests.xctest"
-               BlueprintName = "SignUpFeatureUITests"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "4F30707FB9D6C278017F46DB"
                BuildableName = "SkeletonView.framework"
                BlueprintName = "SkeletonView"
@@ -968,26 +884,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "543590EC0100206FDEF38120"
-               BuildableName = "LoggedInFeatureTests.xctest"
-               BlueprintName = "LoggedInFeatureTests"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00DCA3AEA6FC413BAB04D124"
-               BuildableName = "LoggedInFeatureUITests.xctest"
-               BlueprintName = "LoggedInFeatureUITests"
-               ReferencedContainer = "container:Projects/Feature/LoggedInFeature/LoggedInFeature.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "6A53E8E4550AA40BF7587FBC"
                BuildableName = "OnboardingDomainTests.xctest"
                BlueprintName = "OnboardingDomainTests"
@@ -998,30 +894,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ECCE4A59F59FD870B3FE50A1"
+               BuildableName = "OnboardingFeatureTests.xctest"
+               BlueprintName = "OnboardingFeatureTests"
+               ReferencedContainer = "container:Projects/Feature/OnboardingFeature/OnboardingFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B65700862261A52E0C512F5E"
+               BuildableName = "OnboardingFeatureUITests.xctest"
+               BlueprintName = "OnboardingFeatureUITests"
+               ReferencedContainer = "container:Projects/Feature/OnboardingFeature/OnboardingFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "43CE386DE27130CC870B8801"
                BuildableName = "RecordDomainTests.xctest"
                BlueprintName = "RecordDomainTests"
                ReferencedContainer = "container:Projects/Domain/RecordDomain/RecordDomain.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "71AA960D4E6DA57810658692"
-               BuildableName = "SignUpFeatureTests.xctest"
-               BlueprintName = "SignUpFeatureTests"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7213AB01696A579625F0B8F3"
-               BuildableName = "SignUpFeatureUITests.xctest"
-               BlueprintName = "SignUpFeatureUITests"
-               ReferencedContainer = "container:Projects/Feature/SignUpFeature/SignUpFeature.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference

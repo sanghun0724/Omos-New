@@ -9,8 +9,8 @@ import NeedleFoundation
 import RIBs
 
 import OnboardingDomainInterface
-import LoggedInFeatureInterface
 import TodayFeatureInterface
+import OnboardingFeatureInterface
 
 protocol AppRootDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }

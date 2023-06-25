@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,6 +43,7 @@
 		78442AD4284B7FB7CB6454B2 /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7159CA90BF77E485A567CB3 /* WeakMapTable.framework */; platformFilter = ios; };
 		78CFB9A8AF4635CB96A521E7 /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0251755817B9AB8CED3A008D /* KakaoSDKStory.framework */; platformFilter = ios; };
 		7B215E5C8256172F62C2AF3A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54486657EEB71BA0A139C5D7 /* SnapKit.framework */; platformFilter = ios; };
+		7BEAC9D7A6722FBF3986B2C6 /* RecordRepositoryServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B7151BF6C426DE9B322F4 /* RecordRepositoryServiceImpl.swift */; };
 		8127ECB462819BE8F131F3CA /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BC4D042E978EC938333878 /* libBaseShared.a */; platformFilter = ios; };
 		82EDEA4A2223856AFBF336D5 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3E4BE3C51DAF4091A40FAA /* NeedleFoundation.framework */; platformFilter = ios; };
 		84742CE299B3B60805C010D9 /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B1CE764BE00F7371B77146 /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
@@ -55,7 +56,6 @@
 		9E455E6A68A3C72D1334F91A /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68867847F5619A666C894217 /* RIBs.framework */; platformFilter = ios; };
 		AEF742CBB5374DBF1F3CF356 /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DCA2AA669288792484B25F /* libCoreKit.a */; platformFilter = ios; };
 		AF26549C9C150525B67C446C /* libRecordDomainInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 798D0C10D9FB1EA9BE56DC89 /* libRecordDomainInterface.a */; platformFilter = ios; };
-		B0FEAB40947B8CA16D3FBC48 /* RecordRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F97BC8E93EC923BF3C6C92 /* RecordRepositoryService.swift */; };
 		B2817034E235868375A5D889 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412FF8158E45CBA6F175F527 /* Alamofire.framework */; platformFilter = ios; };
 		B35ECEF0A4F4BED471B2EB3A /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3113931E3E59EB6F5959159F /* KakaoSDKUser.framework */; platformFilter = ios; };
 		B50B579B3779F4B9F79A4E52 /* KakaoSDKNavi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9681F14B1D958618B4DB6A /* KakaoSDKNavi.framework */; platformFilter = ios; };
@@ -64,6 +64,7 @@
 		BDF63CA3A2A5400882B9890E /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 49D9210DBDCED886F0DF34AA /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
 		BE00E0CBE837439437148546 /* RecordDomainTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5985CF78E56D5FE1FBF81D5C /* RecordDomainTesting.framework */; platformFilter = ios; };
 		BE8CD26CA59AB58FE7EBB393 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5E7840ECB321229594B349 /* SkeletonView.framework */; platformFilter = ios; };
+		C1EDB66B6CE3339A1BC681BB /* RecordRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D67807D1B7AE5EB012F81EC /* RecordRepositoryService.swift */; };
 		C65932A6D2066A1297CE585B /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 175C14402BFD774D0B2A268D /* Kingfisher.framework */; platformFilter = ios; };
 		CC627B2D0BBB4643A44BEC14 /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0A426142C77B8171D64C38 /* KakaoSDKTalk.framework */; platformFilter = ios; };
 		CD3EE002DA821B3BC31DEB0D /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D5C1CE706C61A073097A30 /* RxRelay.framework */; platformFilter = ios; };
@@ -72,7 +73,6 @@
 		DA27245D882A2B1C3CE91FE2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709A4243A046165D3A16C044 /* RxSwift.framework */; platformFilter = ios; };
 		DA9616DAE74A7CFCB5EE5BFC /* libRecordDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D0C10D9FB1EA9BE56DC89 /* libRecordDomainInterface.a */; platformFilter = ios; };
 		DC4108D417DFD19A58DA0251 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D5C1CE706C61A073097A30 /* RxRelay.framework */; platformFilter = ios; };
-		DE26C1A52A46CFD00098236F /* RecordRepositoryServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE26C1A42A46CFD00098236F /* RecordRepositoryServiceImpl.swift */; };
 		E978140C671AA90ADB85DC15 /* RecordDomainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BDEB88D46DBD10C6AB567 /* RecordDomainTest.swift */; };
 		EC3427B23AE3A66B87844EA6 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0128763482AB24708F6C6C46 /* RxGesture.framework */; platformFilter = ios; };
 		EC580D5F9E0BB212077E7533 /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0373502C96B3732204BC1FB /* KakaoSDKCommon.framework */; platformFilter = ios; };
@@ -216,6 +216,7 @@
 		49D9210DBDCED886F0DF34AA /* DesignSystem_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystem_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		54486657EEB71BA0A139C5D7 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5985CF78E56D5FE1FBF81D5C /* RecordDomainTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecordDomainTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D67807D1B7AE5EB012F81EC /* RecordRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRepositoryService.swift; sourceTree = "<group>"; };
 		68867847F5619A666C894217 /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		709A4243A046165D3A16C044 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BC4D042E978EC938333878 /* libBaseShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,15 +225,14 @@
 		798D0C10D9FB1EA9BE56DC89 /* libRecordDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1F3483CEF64D6F86A48646 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9670A2FC852367C7566EEC43 /* KakaoSDKTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		98F97BC8E93EC923BF3C6C92 /* RecordRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRepositoryService.swift; sourceTree = "<group>"; };
 		9F7966A4042BD18224A2D7CA /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0373502C96B3732204BC1FB /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7E632A2052DA0FF37A6D38 /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
+		B83B7151BF6C426DE9B322F4 /* RecordRepositoryServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRepositoryServiceImpl.swift; sourceTree = "<group>"; };
 		C6BBB5B742118A1DCEDC984A /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7159CA90BF77E485A567CB3 /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2F60B76BC92E77CCD381F4 /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0034DD57AB51AF166034064 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE26C1A42A46CFD00098236F /* RecordRepositoryServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRepositoryServiceImpl.swift; sourceTree = "<group>"; };
 		E34AEACC33E4F05A87D7131F /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E45C5FFBD5B3A9870CF674CF /* RecordDomainTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RecordDomainTesting-Info.plist"; sourceTree = "<group>"; };
 		E6B48CC8F6AE3957C3B81866 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
@@ -429,7 +429,7 @@
 		865E30C43727EF1AEED2CF37 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				98F97BC8E93EC923BF3C6C92 /* RecordRepositoryService.swift */,
+				5D67807D1B7AE5EB012F81EC /* RecordRepositoryService.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -437,7 +437,7 @@
 		8A825F05386EC459A2DBF241 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DE26C1A42A46CFD00098236F /* RecordRepositoryServiceImpl.swift */,
+				B83B7151BF6C426DE9B322F4 /* RecordRepositoryServiceImpl.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -557,6 +557,8 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 92DDA4203084252AB33592C1 /* Build configuration list for PBXProject "RecordDomain" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -617,7 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE26C1A52A46CFD00098236F /* RecordRepositoryServiceImpl.swift in Sources */,
+				7BEAC9D7A6722FBF3986B2C6 /* RecordRepositoryServiceImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,7 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0FEAB40947B8CA16D3FBC48 /* RecordRepositoryService.swift in Sources */,
+				C1EDB66B6CE3339A1BC681BB /* RecordRepositoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,7 +733,6 @@
 		23005E184FC363A261C5CD09 /* STAGE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Derived/InfoPlists/RecordDomainTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -815,7 +816,6 @@
 		3E41806CD1FEB63C1A991F93 /* DEV */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Derived/InfoPlists/RecordDomainTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1130,7 +1130,6 @@
 		FE4EF423668019DBABAA7E95 /* PROD */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Derived/InfoPlists/RecordDomainTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
