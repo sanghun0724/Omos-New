@@ -14,7 +14,7 @@ import OnboardingFeatureInterface
 
 protocol AppRootDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
-    var loggedInBuilder: LoggedInBuildable { get }
+    var onboardingBuilder: OnboardingBuildable { get }
     var todayBuilder: TodayBuildable { get }
 }
 
@@ -38,7 +38,7 @@ final class AppRootBuilder:
         return AppRootRouter(
             interactor: interactor,
             viewController: viewController,
-            loggedInBuilder: component.loggedInBuilder,
+            onboardingBuilder: component.onboardingBuilder,
             todayBuilder: component.todayBuilder
             )
     }

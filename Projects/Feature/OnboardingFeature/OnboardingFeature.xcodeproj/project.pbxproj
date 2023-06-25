@@ -19,6 +19,7 @@
 		0CEE12C5DA32E2AFC6D26564 /* NicknameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C255005B49B9712DD667AE64 /* NicknameInteractor.swift */; };
 		0D6CA808965E61E9023E204F /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB4AE09F0ED3D696BC5AB583 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E0524FEFE0B563C3FBF5D0A /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF37252A179F73CF842E1BA /* KakaoSDKStory.framework */; platformFilter = ios; };
+		0E62AE08B5E2E6ED041C58B5 /* OnboardingInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7428644BAF7508F9FCE5B1E /* OnboardingInterface.swift */; };
 		0F6FC0C2B61D368EB7D5FDED /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2264F83C6F4FC836D88101BA /* libAppFoundation.a */; platformFilter = ios; };
 		0F858995846C631E29E460AF /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5E0DC553AEFD9CCE325300 /* LogFlume.framework */; platformFilter = ios; };
 		0FC18156E25281AF418F50EA /* AgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB225600FB3EF2618906188 /* AgreementView.swift */; };
@@ -372,6 +373,7 @@
 		A210D5BF27191C637EB64F10 /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
 		A34FF508545ED4E26DD9BDAF /* OnboardingFeatureDemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingFeatureDemoApp-Info.plist"; sourceTree = "<group>"; };
 		A6E077DC774E7DB71000261E /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7428644BAF7508F9FCE5B1E /* OnboardingInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInterface.swift; sourceTree = "<group>"; };
 		A8F8AB373B5D19601F772CB6 /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FC76422AA37C22E7155AFB /* SignUpStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStateAction.swift; sourceTree = "<group>"; };
 		B3C2224A4E4932FB2B40242A /* LoggedInInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInterface.swift; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 			children = (
 				B3C2224A4E4932FB2B40242A /* LoggedInInterface.swift */,
 				D157B98D7A02A58657516916 /* NicknameInterface.swift */,
+				A7428644BAF7508F9FCE5B1E /* OnboardingInterface.swift */,
 				E3571C928D80FB78AD8CFA7D /* SignUpInterface.swift */,
 			);
 			path = Interface;
@@ -974,6 +977,7 @@
 			files = (
 				66935A5425335CB4DEFDCDA5 /* LoggedInInterface.swift in Sources */,
 				1543E3A37B478EC07CE8437E /* NicknameInterface.swift in Sources */,
+				0E62AE08B5E2E6ED041C58B5 /* OnboardingInterface.swift in Sources */,
 				9F2D631C8B4CD06092782F77 /* SignUpInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

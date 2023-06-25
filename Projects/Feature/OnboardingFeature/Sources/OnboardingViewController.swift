@@ -26,7 +26,11 @@ final class OnboardingViewController:
     // MARK: - Constants
     
     private enum UI {
-        
+        static let logoViewWidth = 150
+        static let logoViewHeight = 40
+        static let buttonHeight = 50
+        static let verticalSepeartedLineViewWidth = 1
+        static let verticalSepeartedLineViewHeight = 16
     }
     
     // MARK: - Properties
@@ -37,10 +41,18 @@ final class OnboardingViewController:
     
     // MARK: - UI Components
     
-    private lazy var mainTitleLabel = UILabel()
+    private lazy var mainTitleLabel = UILabel().builder
+        .text("음악 기반\n감성 기록 플랫폼")
+        .numberOfLines(0)
+        .font(.systemFont(ofSize: 22, weight: .bold))
+        .textColor(.white)
+        .build()
     
-    private lazy var mainImageView = UIImageView()
-    
+    private lazy var mainLogoView = UIImageView().builder
+        .contentMode(.scaleAspectFit)
+        .image(.loginLogo)
+        .build()
+        
     private lazy var kakaoButton = UIButton().builder
         .backgroundColor(DesignSystemAsset.Colors.kakaoYellow.color)
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
@@ -54,11 +66,25 @@ final class OnboardingViewController:
     
     private lazy var appleButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .white)
     
-    private lazy var signUpButton = UIButton()
+    private lazy var signUpButton = UIButton().builder
+        .with {
+            $0.setTitle("이메일 회원가입", for: .normal)
+            $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
+            $0.setTitleColor(.white, for: .normal)
+        }
+        .build()
     
-    private lazy var verticalSepeartedLineView = UIView() 
+    private lazy var verticalSepeartedLineView = UIView().builder
+        .backgroundColor(.white)
+        .build()
     
-    private lazy var loggedInButton = UIButton()
+    private lazy var loggedInButton = UIButton().builder
+        .with {
+            $0.setTitle("이메일 로그인", for: .normal)
+            $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .medium)
+            $0.setTitleColor(.white, for: .normal)
+        }
+        .build()
     
     // MARK: - Initialization & Deinitialization
     
@@ -116,7 +142,7 @@ extension OnboardingViewController {
 // MARK: - Binding State
 
 extension OnboardingViewController {
-    private func bindState(from listener: OnboardingListener) {
+    private func bindState(from listener: OnboardingPresentableListener) {
         
     }
 }
@@ -125,13 +151,53 @@ extension OnboardingViewController {
 
 extension OnboardingViewController {
     private func setupUI() {
-        
+        contentView.addSubview(mainTitleLabel)
+        contentView.addSubview(mainLogoView)
+        contentView.addSubview(verticalSepeartedLineView)
+        contentView.addSubview(signUpButton)
+        contentView.addSubview(loggedInButton)
+        contentView.addSubview(kakaoButton)
+        contentView.addSubview(appleButton)
         self.layout()
     }
     
     private func layout() {
-        
+        mainTitleLabel.snp.makeConstraints {
+            $0.left.equalToSuperview().offset(36)
+            $0.top.equalToSuperview().offset(100)
+        }
+        mainLogoView.snp.makeConstraints {
+            $0.left.equalTo(mainTitleLabel)
+            $0.top.equalTo(mainTitleLabel.snp.bottom).offset(20)
+            $0.width.equalTo(UI.logoViewWidth)
+            $0.height.equalTo(UI.logoViewHeight)
+        }
+        verticalSepeartedLineView.snp.makeConstraints {
+            $0.width.equalTo(UI.verticalSepeartedLineViewWidth)
+            $0.height.equalTo(UI.verticalSepeartedLineViewHeight)
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(-60)
+        }
+        signUpButton.snp.makeConstraints {
+            $0.right.equalTo(verticalSepeartedLineView.snp.left).offset(-12)
+            $0.centerY.equalTo(verticalSepeartedLineView)
+        }
+        loggedInButton.snp.makeConstraints {
+            $0.left.equalTo(verticalSepeartedLineView.snp.right).offset(12)
+            $0.centerY.equalTo(verticalSepeartedLineView)
+        }
+        appleButton.snp.makeConstraints {
+            $0.left.right.equalToSuperview().inset(20)
+            $0.height.equalTo(UI.buttonHeight)
+            $0.bottom.equalTo(verticalSepeartedLineView.snp.top).offset(-20)
+        }
+        kakaoButton.snp.makeConstraints {
+            $0.left.right.equalToSuperview().inset(20)
+            $0.height.equalTo(UI.buttonHeight)
+            $0.bottom.equalTo(appleButton.snp.top).offset(-20)
+        }
     }
+
 }
 
 #if canImport(SwiftUI) && DEBUG

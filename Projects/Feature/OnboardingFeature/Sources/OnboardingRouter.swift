@@ -8,6 +8,8 @@
 
 import RIBs
 
+import OnboardingFeatureInterface
+
 // MARK: - OnboardingInteractable
 
 protocol OnboardingInteractable: Interactable {
