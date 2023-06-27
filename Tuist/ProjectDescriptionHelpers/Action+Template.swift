@@ -10,4 +10,19 @@ public extension TargetScript {
         path: Path.relativeToRoot("Scripts/NeedleRunScript.sh"),
         name: "Needle"
     )
+    
+    static func needleGenerateScript() -> TargetScript {
+      return .pre(
+        script: """
+        FILE_PATH="$SRCROOT/Demo/Sources/AppStart"
+        export PATH="$PATH:/opt/homebrew/bin"
+        export SOURCEKIT_LOGGING=0 && needle generate "${FILE_PATH}/NeedleGenerated.swift" \
+        "$SRCROOT/../" \
+        --exclude-suffixes Tests Mocks \
+        --exclude-paths /Sample /Tests /Resources
+        swiftformat ${FILE_PATH}/NeedleGenerated.swift
+        """,
+        name: "Needle"
+      )
+    }
 }

@@ -42,7 +42,6 @@
 		31F043106D342FCFE8CB7B92 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B78370ECC27CF0258DA84 /* libOnboardingDomain.a */; platformFilter = ios; };
 		329E0916512DB8EB24220882 /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC42C35FC991C9D5A5F49B0E /* libBaseDomain.a */; platformFilter = ios; };
 		32C8667DD9DB9ECC774E67D1 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F5F776A8262ED3473D454A /* ReactorKit.framework */; platformFilter = ios; };
-		338B9B4A540EF0BCD7555AEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0368516DC1110710757769 /* AppDelegate.swift */; };
 		33D71BE8162D7E4A568942A9 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E7753C95E811E2DD85216F /* RIBs.framework */; platformFilter = ios; };
 		362F17BB099E905A5F57322D /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA9696D90FA8A05156E35C4 /* KakaoSDKCommon.framework */; platformFilter = ios; };
 		39955CBE4D0880FAB29F699B /* NicknameStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CA59174C5FB8E995D0B11 /* NicknameStateAction.swift */; };
@@ -88,14 +87,18 @@
 		75DC8746BA81314A8963FB1C /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2264F83C6F4FC836D88101BA /* libAppFoundation.a */; platformFilter = ios; };
 		7A2608F2DA7193D1B4A21B76 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28E985ED1FD1437652E29EAF /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7B992653630E10001B56F813 /* OnboardingStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DF651FA6B25C16738870A /* OnboardingStateAction.swift */; };
+		7E1FB12F234707D09CFB628D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A7AC07BB7EA70F1FAFB289 /* AppDelegate.swift */; };
 		7F74BCFABDFA562E5FFB5AC5 /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5E0DC553AEFD9CCE325300 /* LogFlume.framework */; platformFilter = ios; };
+		7FFA6F6F38A3F642418DF35B /* AppRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122B25CC23EB1DACE12D82CB /* AppRootRouter.swift */; };
 		879945F4D339B4B0FD916A41 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A410CF9EF1871AE7DC48DBE /* Kingfisher.framework */; platformFilter = ios; };
+		88780BFDE55D921BDB0D0E53 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9241DB5F7949C5E054432204 /* AppComponent.swift */; };
 		8A33B84AE193E50E304F9CA0 /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 332538DD109211CD5FB4866D /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
 		8CD9E56A094C5C3A5ABBA551 /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F8AB373B5D19601F772CB6 /* WeakMapTable.framework */; platformFilter = ios; };
 		8F9B71577EC729DB8CD54178 /* KakaoSDKNavi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A98CD25689C6424CF85E91 /* KakaoSDKNavi.framework */; platformFilter = ios; };
 		9471235C616BD8E996DF3FD6 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FC63EC2DC6DCB4772DD2C5 /* SnapKit.framework */; platformFilter = ios; };
 		95BA21B8C2CB696A10BCA0A7 /* OnboardingFeatureTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9A646737831F7B0EAF5A77 /* OnboardingFeatureTesting.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		95D43505B903A6355E31F302 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5972C7D5A7A81D638CC0B6D /* KakaoSDKAuth.framework */; platformFilter = ios; };
+		971FCECE7137B4C878E7E761 /* AppRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F108A30D55193BBBC7C5BF /* AppRootViewController.swift */; };
 		9A22716690167A12AF143D97 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FC63EC2DC6DCB4772DD2C5 /* SnapKit.framework */; platformFilter = ios; };
 		9B302D999069BCC18B565F67 /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 018D5E50741CCDD7213EE1CF /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
 		9BA575F8E28684EF83DCD06E /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A0C66BC53D3954FD14328 /* NicknameViewController.swift */; };
@@ -104,9 +107,11 @@
 		A0443F6C9B8D0AD4443E8423 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400DDD3CCDB0BF2CF03BA37 /* OnboardingRouter.swift */; };
 		A18F1298D4AF43D6999436E3 /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC42C35FC991C9D5A5F49B0E /* libBaseDomain.a */; platformFilter = ios; };
 		A58955D795335A9F8AC45B9F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F334EEE4DCC5475ABFD0D793 /* OnboardingViewController.swift */; };
+		AC505145337CF7DAC03F8AAB /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E9F5CC5F45082A4921E19 /* NeedleGenerated.swift */; };
 		AD0A7215C763648DFA605D0D /* BottomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3578839318BEFD216EF9EBA8 /* BottomButtonsView.swift */; };
 		AED20FA742E66E55F46BF190 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CBD30B066632F8502F54AC /* NeedleFoundation.framework */; platformFilter = ios; };
 		AF5BC6932AD1787EA376F8A4 /* libOnboardingFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F02B0217A47CC7F0FBAA503 /* libOnboardingFeatureInterface.a */; platformFilter = ios; };
+		B118F73F28C1C04C4EEE4966 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF157FC4A83132453835FCD7 /* SceneDelegate.swift */; };
 		B233E7BF14E5EBA316DD2365 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF331694F0499F871513003 /* LoggedInViewController.swift */; };
 		B8110AE7024869EDDD00203C /* LoggedInStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75506F5E8A0FF055A7B162FA /* LoggedInStateAction.swift */; };
 		B843E59A07CC8D6A1EAEFB79 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 733333D807B534B1459731F9 /* libDesignSystem.a */; platformFilter = ios; };
@@ -115,6 +120,7 @@
 		C0B463E561334D5F1CD4FC4D /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210D5BF27191C637EB64F10 /* LoggedInInteractor.swift */; };
 		C0D8E61A275C16D8311F30C7 /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184D6841C7BBCA17A43DF14D /* KakaoSDKTemplate.framework */; platformFilter = ios; };
 		C11DAA540B61B424BA0F864E /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CBD30B066632F8502F54AC /* NeedleFoundation.framework */; platformFilter = ios; };
+		C2E3C31270103A08B0AAD604 /* AppRootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD409C5C671D752365D46E3 /* AppRootBuilder.swift */; };
 		C539E7E4DCD55B8351AF1993 /* ValidationCodeAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC988B3CF5A309E17D394A9 /* ValidationCodeAlertView.swift */; };
 		C6C148427593E04A3146AB2E /* NicknameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B018AC6DC9D27DFDAC979E /* NicknameRouter.swift */; };
 		CA9BC5890917DADBC6495503 /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 018D5E50741CCDD7213EE1CF /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
@@ -130,6 +136,7 @@
 		E4E93C767EE78339DAA5BC3C /* libBaseDomain.a in Dependencies */ = {isa = PBXBuildFile; fileRef = CC42C35FC991C9D5A5F49B0E /* libBaseDomain.a */; platformFilter = ios; };
 		E687F2F8D34192E08F93F8E5 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD67D44281293C6A815B50F /* RxGesture.framework */; platformFilter = ios; };
 		E7FAA43D713E0634FED60D77 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CF0E0D52FAA1D38C2736EE /* InfoViewController.swift */; };
+		E80EF21A01EF70BD5E44F708 /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2733DFAC962027A7B7C4BCE /* AppRootInteractor.swift */; };
 		F1E83E431273F9502CA0FCDF /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6E077DC774E7DB71000261E /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F28B10039F00C672BF8EE507 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EBAD28361CD01CDD934847 /* libBaseShared.a */; platformFilter = ios; };
 		F3175BCDAC781792815CB9D7 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB3FEF4FB24C9C1B198F6AD /* ReactorKitRuntime.framework */; platformFilter = ios; };
@@ -321,6 +328,7 @@
 		0400DDD3CCDB0BF2CF03BA37 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		063E04A65263220DC1C0A288 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		0F5E0DC553AEFD9CCE325300 /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		122B25CC23EB1DACE12D82CB /* AppRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootRouter.swift; sourceTree = "<group>"; };
 		12CBD30B066632F8502F54AC /* NeedleFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeedleFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1595C3110724262F706F0551 /* LoggedInFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInFeatureTest.swift; sourceTree = "<group>"; };
 		17A98CD25689C6424CF85E91 /* KakaoSDKNavi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKNavi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,6 +343,7 @@
 		2CE4346E17FC877E8B917059 /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
 		332538DD109211CD5FB4866D /* libGlobalThirdPartyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlobalThirdPartyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3578839318BEFD216EF9EBA8 /* BottomButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtonsView.swift; sourceTree = "<group>"; };
+		3DD409C5C671D752365D46E3 /* AppRootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootBuilder.swift; sourceTree = "<group>"; };
 		3F02B0217A47CC7F0FBAA503 /* libOnboardingFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		41A19E44AFD0D025C9CE6085 /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BF21463127BD6A828F5D81 /* NicknameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameBuilder.swift; sourceTree = "<group>"; };
@@ -367,6 +376,9 @@
 		8D21B0B0C626328A1FE6FE2A /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F11FA47075E9DBEA01756BA /* AuthSupportedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSupportedView.swift; sourceTree = "<group>"; };
 		9017D466E74697705798439B /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F108A30D55193BBBC7C5BF /* AppRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewController.swift; sourceTree = "<group>"; };
+		9241DB5F7949C5E054432204 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		961E9F5CC5F45082A4921E19 /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		995B12515EDDC23E4CA7E664 /* OnboardingFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C36AD5AA4252EA477E5A87F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E903DC94FFA0E509D21D817 /* LoggedInInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInterface.swift; sourceTree = "<group>"; };
@@ -375,11 +387,13 @@
 		A6E077DC774E7DB71000261E /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7428644BAF7508F9FCE5B1E /* OnboardingInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInterface.swift; sourceTree = "<group>"; };
 		A8F8AB373B5D19601F772CB6 /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF157FC4A83132453835FCD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B0FC76422AA37C22E7155AFB /* SignUpStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStateAction.swift; sourceTree = "<group>"; };
 		B3C2224A4E4932FB2B40242A /* LoggedInInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInterface.swift; sourceTree = "<group>"; };
 		B57CA59174C5FB8E995D0B11 /* NicknameStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameStateAction.swift; sourceTree = "<group>"; };
 		BC9B78370ECC27CF0258DA84 /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C255005B49B9712DD667AE64 /* NicknameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInteractor.swift; sourceTree = "<group>"; };
+		C3A7AC07BB7EA70F1FAFB289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C631ECEE79A0F810D8F718DA /* KakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73BBC8DBA8CFE96E0AF61F7 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
 		C76E1D2664F038CCEAAD4F8E /* libRecordDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,7 +408,7 @@
 		E3CACCEA5321C76CE898EE97 /* OnboardingFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingFeatureUITests-Info.plist"; sourceTree = "<group>"; };
 		EB4AE09F0ED3D696BC5AB583 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB3FEF4FB24C9C1B198F6AD /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE0368516DC1110710757769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2733DFAC962027A7B7C4BCE /* AppRootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootInteractor.swift; sourceTree = "<group>"; };
 		F334EEE4DCC5475ABFD0D793 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F5972C7D5A7A81D638CC0B6D /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA588A7BB01EB7CCF95B60A7 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
@@ -525,6 +539,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EBADB84DC973FF4C1E517A7 /* AppStart */ = {
+			isa = PBXGroup;
+			children = (
+				9241DB5F7949C5E054432204 /* AppComponent.swift */,
+				C3A7AC07BB7EA70F1FAFB289 /* AppDelegate.swift */,
+				961E9F5CC5F45082A4921E19 /* NeedleGenerated.swift */,
+				AF157FC4A83132453835FCD7 /* SceneDelegate.swift */,
+			);
+			path = AppStart;
+			sourceTree = "<group>";
+		};
 		23F05B1739C802B6160DD04A /* XCConfig */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,6 +633,17 @@
 				F334EEE4DCC5475ABFD0D793 /* OnboardingViewController.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		8F663EF9F40853C7DF5C15DE /* AppRoot */ = {
+			isa = PBXGroup;
+			children = (
+				3DD409C5C671D752365D46E3 /* AppRootBuilder.swift */,
+				F2733DFAC962027A7B7C4BCE /* AppRootInteractor.swift */,
+				122B25CC23EB1DACE12D82CB /* AppRootRouter.swift */,
+				90F108A30D55193BBBC7C5BF /* AppRootViewController.swift */,
+			);
+			path = AppRoot;
 			sourceTree = "<group>";
 		};
 		9F701482527056404ED1CC63 /* InfoPlists */ = {
@@ -747,7 +783,8 @@
 		ED3C39C8B0797E12009CDD80 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EE0368516DC1110710757769 /* AppDelegate.swift */,
+				8F663EF9F40853C7DF5C15DE /* AppRoot */,
+				0EBADB84DC973FF4C1E517A7 /* AppStart */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -826,6 +863,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5368258EE40F03C95B60F00A /* Build configuration list for PBXNativeTarget "OnboardingFeatureDemoApp" */;
 			buildPhases = (
+				5AEC1D208E16181C8D111DDD /* Needle */,
 				3FE20880D2C20BC9028884EF /* Sources */,
 				FC1A0B5564705BA1D200E33F /* Resources */,
 				C83F2DB4323C92F5899F66F7 /* Embed Frameworks */,
@@ -970,6 +1008,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5AEC1D208E16181C8D111DDD /* Needle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Needle;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources\nswiftformat ${FILE_PATH}/NeedleGenerated.swift";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		05675F786FA43F508D2BE228 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1001,7 +1060,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338B9B4A540EF0BCD7555AEE /* AppDelegate.swift in Sources */,
+				C2E3C31270103A08B0AAD604 /* AppRootBuilder.swift in Sources */,
+				E80EF21A01EF70BD5E44F708 /* AppRootInteractor.swift in Sources */,
+				7FFA6F6F38A3F642418DF35B /* AppRootRouter.swift in Sources */,
+				971FCECE7137B4C878E7E761 /* AppRootViewController.swift in Sources */,
+				88780BFDE55D921BDB0D0E53 /* AppComponent.swift in Sources */,
+				7E1FB12F234707D09CFB628D /* AppDelegate.swift in Sources */,
+				AC505145337CF7DAC03F8AAB /* NeedleGenerated.swift in Sources */,
+				B118F73F28C1C04C4EEE4966 /* SceneDelegate.swift in Sources */,
 				51CA15ED99A4957C86E97091 /* TuistBundle+OnboardingFeatureDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

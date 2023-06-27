@@ -11,5 +11,8 @@ let project = Project.makeModule(
     ],
     interfaceDependencies: [
         .domain(target: .BaseDomain)
+    ],
+    demoDependencies: [
+        .feature(target: .TodayFeature)
     ]
 )
