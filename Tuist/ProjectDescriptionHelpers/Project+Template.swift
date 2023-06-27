@@ -175,7 +175,7 @@ public extension Project {
                     ]),
                     sources: .demoSources,
                     resources: ["Demo/Resources/**"],
-                    scripts: scripts,
+                    scripts: [TargetScript.needleGenerateScript()], 
                     dependencies: demoDependencies
                 )
             )

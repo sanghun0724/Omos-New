@@ -767,6 +767,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46510C2F6D9FD9DABC238FB5 /* Build configuration list for PBXNativeTarget "TodayFeatureDemoApp" */;
 			buildPhases = (
+				8B6CB0CBE90A14B4810F1936 /* Needle */,
 				AE9F6C343D1E417429BD2D63 /* Sources */,
 				7D3AFD7113130FAB1F99E187 /* Resources */,
 				570064EFF75973D1A649D48A /* Embed Frameworks */,
@@ -870,6 +871,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B6CB0CBE90A14B4810F1936 /* Needle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Needle;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources\nswiftformat ${FILE_PATH}/NeedleGenerated.swift";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1437B20C596B464D8ACC52F8 /* Sources */ = {
