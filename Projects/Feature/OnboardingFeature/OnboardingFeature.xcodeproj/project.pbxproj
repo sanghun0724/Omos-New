@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -113,6 +113,7 @@
 		AF5BC6932AD1787EA376F8A4 /* libOnboardingFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F02B0217A47CC7F0FBAA503 /* libOnboardingFeatureInterface.a */; platformFilter = ios; };
 		B118F73F28C1C04C4EEE4966 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF157FC4A83132453835FCD7 /* SceneDelegate.swift */; };
 		B233E7BF14E5EBA316DD2365 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF331694F0499F871513003 /* LoggedInViewController.swift */; };
+		B6C627D82A4C5A2900E6321B /* OnboardingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C627D72A4C5A2900E6321B /* OnboardingFeature.swift */; };
 		B8110AE7024869EDDD00203C /* LoggedInStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75506F5E8A0FF055A7B162FA /* LoggedInStateAction.swift */; };
 		B843E59A07CC8D6A1EAEFB79 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 733333D807B534B1459731F9 /* libDesignSystem.a */; platformFilter = ios; };
 		B90D645E894353A5FF89820C /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F8AB373B5D19601F772CB6 /* WeakMapTable.framework */; platformFilter = ios; };
@@ -137,6 +138,7 @@
 		E687F2F8D34192E08F93F8E5 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD67D44281293C6A815B50F /* RxGesture.framework */; platformFilter = ios; };
 		E7FAA43D713E0634FED60D77 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CF0E0D52FAA1D38C2736EE /* InfoViewController.swift */; };
 		E80EF21A01EF70BD5E44F708 /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2733DFAC962027A7B7C4BCE /* AppRootInteractor.swift */; };
+		ED6E5B76859D2E1E6FF4BE69 /* libTodayFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD49DDEE58A2CFCFA388585 /* libTodayFeature.a */; platformFilter = ios; };
 		F1E83E431273F9502CA0FCDF /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6E077DC774E7DB71000261E /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F28B10039F00C672BF8EE507 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EBAD28361CD01CDD934847 /* libBaseShared.a */; platformFilter = ios; };
 		F3175BCDAC781792815CB9D7 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB3FEF4FB24C9C1B198F6AD /* ReactorKitRuntime.framework */; platformFilter = ios; };
@@ -391,6 +393,7 @@
 		B0FC76422AA37C22E7155AFB /* SignUpStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStateAction.swift; sourceTree = "<group>"; };
 		B3C2224A4E4932FB2B40242A /* LoggedInInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInterface.swift; sourceTree = "<group>"; };
 		B57CA59174C5FB8E995D0B11 /* NicknameStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameStateAction.swift; sourceTree = "<group>"; };
+		B6C627D72A4C5A2900E6321B /* OnboardingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFeature.swift; sourceTree = "<group>"; };
 		BC9B78370ECC27CF0258DA84 /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C255005B49B9712DD667AE64 /* NicknameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInteractor.swift; sourceTree = "<group>"; };
 		C3A7AC07BB7EA70F1FAFB289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -412,6 +415,7 @@
 		F334EEE4DCC5475ABFD0D793 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F5972C7D5A7A81D638CC0B6D /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA588A7BB01EB7CCF95B60A7 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		FBD49DDEE58A2CFCFA388585 /* libTodayFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE56C6AA3D46773518E9F73 /* OnboardingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBuilder.swift; sourceTree = "<group>"; };
 		FFF37252A179F73CF842E1BA /* KakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -488,6 +492,7 @@
 				BB890FA1FCE3B02CEB45F3F5 /* RxSwift.framework in Frameworks */,
 				0541BCB11BA138F9F01F400F /* SkeletonView.framework in Frameworks */,
 				9471235C616BD8E996DF3FD6 /* SnapKit.framework in Frameworks */,
+				ED6E5B76859D2E1E6FF4BE69 /* libTodayFeature.a in Frameworks */,
 				4495CDB1ED0D44F5665C31E8 /* libTodayFeatureInterface.a in Frameworks */,
 				8CD9E56A094C5C3A5ABBA551 /* WeakMapTable.framework in Frameworks */,
 			);
@@ -683,6 +688,7 @@
 			isa = PBXGroup;
 			children = (
 				1595C3110724262F706F0551 /* LoggedInFeatureTest.swift */,
+				B6C627D72A4C5A2900E6321B /* OnboardingFeature.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -757,6 +763,7 @@
 				3F02B0217A47CC7F0FBAA503 /* libOnboardingFeatureInterface.a */,
 				47F421CBE031AC0BBB5E68AB /* libRecordDomain.a */,
 				C76E1D2664F038CCEAAD4F8E /* libRecordDomainInterface.a */,
+				FBD49DDEE58A2CFCFA388585 /* libTodayFeature.a */,
 				D5AA7BD081697FE6AFFA9F8C /* libTodayFeatureInterface.a */,
 				0F5E0DC553AEFD9CCE325300 /* LogFlume.framework */,
 				12CBD30B066632F8502F54AC /* NeedleFoundation.framework */,
@@ -1110,6 +1117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BEEDCDA08173A4A277C53A6 /* LoggedInFeatureTest.swift in Sources */,
+				B6C627D82A4C5A2900E6321B /* OnboardingFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

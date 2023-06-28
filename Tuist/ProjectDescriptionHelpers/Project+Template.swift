@@ -172,6 +172,17 @@ public extension Project {
                         "UIMainStoryboardFile": "",
                         "UILaunchStoryboardName": "LaunchScreen",
                         "ENABLE_TESTS": .boolean(true),
+                        "UIApplicationSceneManifest": [
+                            "UIApplicationSupportsMultipleScenes": false,
+                            "UISceneConfigurations": [
+                              "UIWindowSceneSessionRoleApplication": [
+                                [
+                                  "UISceneConfigurationName": "Default Configuration",
+                                  "UISceneDelegateClassName": "$(PRODUCT_MODULE_NAME).SceneDelegate"
+                                ]
+                              ]
+                            ]
+                          ]
                     ]),
                     sources: .demoSources,
                     resources: ["Demo/Resources/**"],
