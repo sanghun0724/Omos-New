@@ -12,6 +12,8 @@ import OnboardingDomain
 import OnboardingDomainInterface
 import OnboardingFeature
 import OnboardingFeatureInterface
+import TodayFeature
+import TodayFeatureInterface
 
 // MARK: AppComponent
 
@@ -55,9 +57,11 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
         }
     }
     
-//    var todayBuilder: TodayBuildable {
-//
-//    }
+    var todayBuilder: TodayBuildable {
+        TodayBuilder {
+            TodayComponent(parent: self)
+        }
+    }
 }
 
 extension AppComponent {
