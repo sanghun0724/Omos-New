@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -76,7 +76,6 @@
 		67CB437078A7990DF5498062 /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F421CBE031AC0BBB5E68AB /* libRecordDomain.a */; platformFilter = ios; };
 		698C28F06C85E59A5F55048B /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF0664ADB34E45C90502494 /* LoggedInBuilder.swift */; };
 		69949CB8277EF57E3BCE69FB /* OnboardingFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9A646737831F7B0EAF5A77 /* OnboardingFeatureTesting.framework */; platformFilter = ios; };
-		6BEEDCDA08173A4A277C53A6 /* LoggedInFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1595C3110724262F706F0551 /* LoggedInFeatureTest.swift */; };
 		6BF91798A7F0D8A18E0886A5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F90E33F511203EC5C08C607 /* RxRelay.framework */; platformFilter = ios; };
 		6CDB81526CA930C466DF81B5 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58469184D3400055DFCB2A15 /* SignUpRouter.swift */; };
 		6E4ED86650405C457EE90CA4 /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44781EC4A46C74CBF112A504 /* KakaoSDKShare.framework */; platformFilter = ios; };
@@ -113,11 +112,11 @@
 		AF5BC6932AD1787EA376F8A4 /* libOnboardingFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F02B0217A47CC7F0FBAA503 /* libOnboardingFeatureInterface.a */; platformFilter = ios; };
 		B118F73F28C1C04C4EEE4966 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF157FC4A83132453835FCD7 /* SceneDelegate.swift */; };
 		B233E7BF14E5EBA316DD2365 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF331694F0499F871513003 /* LoggedInViewController.swift */; };
-		B6C627D82A4C5A2900E6321B /* OnboardingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C627D72A4C5A2900E6321B /* OnboardingFeature.swift */; };
 		B8110AE7024869EDDD00203C /* LoggedInStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75506F5E8A0FF055A7B162FA /* LoggedInStateAction.swift */; };
 		B843E59A07CC8D6A1EAEFB79 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 733333D807B534B1459731F9 /* libDesignSystem.a */; platformFilter = ios; };
 		B90D645E894353A5FF89820C /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F8AB373B5D19601F772CB6 /* WeakMapTable.framework */; platformFilter = ios; };
 		BB890FA1FCE3B02CEB45F3F5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4AE09F0ED3D696BC5AB583 /* RxSwift.framework */; platformFilter = ios; };
+		BE5C5201E86089BC0D9D7B8F /* OnboardingInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3552786446AA9E81B3C92 /* OnboardingInteractorTest.swift */; };
 		C0B463E561334D5F1CD4FC4D /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210D5BF27191C637EB64F10 /* LoggedInInteractor.swift */; };
 		C0D8E61A275C16D8311F30C7 /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184D6841C7BBCA17A43DF14D /* KakaoSDKTemplate.framework */; platformFilter = ios; };
 		C11DAA540B61B424BA0F864E /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CBD30B066632F8502F54AC /* NeedleFoundation.framework */; platformFilter = ios; };
@@ -332,7 +331,6 @@
 		0F5E0DC553AEFD9CCE325300 /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		122B25CC23EB1DACE12D82CB /* AppRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootRouter.swift; sourceTree = "<group>"; };
 		12CBD30B066632F8502F54AC /* NeedleFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeedleFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1595C3110724262F706F0551 /* LoggedInFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInFeatureTest.swift; sourceTree = "<group>"; };
 		17A98CD25689C6424CF85E91 /* KakaoSDKNavi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKNavi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		184D6841C7BBCA17A43DF14D /* KakaoSDKTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B018AC6DC9D27DFDAC979E /* NicknameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRouter.swift; sourceTree = "<group>"; };
@@ -359,6 +357,7 @@
 		4EB7380A01FC4B2DA9E5D868 /* OnboardingFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingFeatureTests-Info.plist"; sourceTree = "<group>"; };
 		4F90E33F511203EC5C08C607 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F91BC389C331264001A8DC /* libOnboardingFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		56B3552786446AA9E81B3C92 /* OnboardingInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractorTest.swift; sourceTree = "<group>"; };
 		57655D00837BF52589B625A1 /* DecoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoView.swift; sourceTree = "<group>"; };
 		58469184D3400055DFCB2A15 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		5B0550EB19E8C6986FE269DC /* KakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,7 +392,6 @@
 		B0FC76422AA37C22E7155AFB /* SignUpStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStateAction.swift; sourceTree = "<group>"; };
 		B3C2224A4E4932FB2B40242A /* LoggedInInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInterface.swift; sourceTree = "<group>"; };
 		B57CA59174C5FB8E995D0B11 /* NicknameStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameStateAction.swift; sourceTree = "<group>"; };
-		B6C627D72A4C5A2900E6321B /* OnboardingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFeature.swift; sourceTree = "<group>"; };
 		BC9B78370ECC27CF0258DA84 /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C255005B49B9712DD667AE64 /* NicknameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInteractor.swift; sourceTree = "<group>"; };
 		C3A7AC07BB7EA70F1FAFB289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -687,8 +685,7 @@
 		B2282427664FBF3C23A73D60 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				1595C3110724262F706F0551 /* LoggedInFeatureTest.swift */,
-				B6C627D72A4C5A2900E6321B /* OnboardingFeature.swift */,
+				56B3552786446AA9E81B3C92 /* OnboardingInteractorTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -1116,8 +1113,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BEEDCDA08173A4A277C53A6 /* LoggedInFeatureTest.swift in Sources */,
-				B6C627D82A4C5A2900E6321B /* OnboardingFeature.swift in Sources */,
+				BE5C5201E86089BC0D9D7B8F /* OnboardingInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

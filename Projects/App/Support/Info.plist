@@ -22,6 +22,8 @@
 	<string>$(KAKAO_API_KEY)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>ENABLE_TESTS</key>
+	<string>YES</string>
 	<key>ROOT_URL</key>
 	<string>$(ROOT_URL)</string>
 	<key>UIApplicationSceneManifest</key>
