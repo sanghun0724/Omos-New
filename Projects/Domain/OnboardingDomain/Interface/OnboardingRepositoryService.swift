@@ -6,6 +6,8 @@ import RxSwift
 public protocol OnboardingRepositoryService {
     func login(email: String, password: String) -> Observable<Bool>
     func signUp() -> Observable<Bool>
+    func kakaoLogin() -> Observable<Bool>
+    func appleLogin() -> Observable<Bool>
     func checkEmailDuplication(email: String) -> Observable<Bool>
     func requestAuthEmailCode(email: String) -> Observable<Bool>
     func isValidEmail(email: String) -> Observable<Bool>

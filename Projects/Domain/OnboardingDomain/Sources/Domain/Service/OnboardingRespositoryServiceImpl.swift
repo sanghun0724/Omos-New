@@ -10,6 +10,10 @@ import Foundation
 
 import RxRelay
 import RxSwift
+import RxKakaoSDKAuth
+import KakaoSDKAuth
+import RxKakaoSDKUser
+import KakaoSDKUser
 
 import AppFoundation
 import CoreKit
@@ -38,6 +42,41 @@ public class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
                 owner.tokenUtil.create("refreshToken", account: "refreshToken", value: response.refreshToken)
                 return true
             }
+    }
+    
+    public func kakaoLogin() -> Observable<Bool> {
+        kakaoEmail()
+            .withUnretained(self)
+            .flatMap { owner, email in
+                owner.onboardingRepository
+                    .SNSlogin(request: .init(email: email, type: .KAKAO))
+                    .asObservable()
+                    .map { owner.setAuthTokens(accessToken: $0.accessToken, refreshToken: $0.refreshToken) }
+                    .map { _ in return true }
+            }
+    }
+    
+    public func appleLogin() -> Observable<Bool> {
+        return .empty()
+    }
+    
+    private func kakaoEmail() -> Observable<String> {
+        let kakaoToken: Observable<OAuthToken>
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            kakaoToken = UserApi.shared.rx
+                .loginWithKakaoTalk()
+        } else {
+            kakaoToken = UserApi.shared.rx
+                .loginWithKakaoAccount()
+        }
+        
+        return kakaoToken
+            .flatMap { _ in UserApi.shared.rx.me() }
+            .compactMap(\.kakaoAccount?.email)
+    }
+    
+    public func appleEmail() -> Observable<String> {
+        return .empty()
     }
     
     public func signUp() -> Observable<Bool> {
@@ -98,6 +137,12 @@ public class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
     public func isEqualInputPasswords(password: String, repassword: String) -> Observable<Bool> {
         setSignUpPassword(by: password)
         return .just(password == repassword)
+    }
+    
+    /// keyChain에 토큰들을 저장
+    private func setAuthTokens(accessToken: String, refreshToken: String) {
+        tokenUtil.create("accessToken", account: "accessToken", value: accessToken)
+        tokenUtil.create("refreshToken", account: "refreshToken", value: refreshToken)
     }
     
     // MARK: - Private methods

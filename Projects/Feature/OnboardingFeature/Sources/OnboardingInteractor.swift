@@ -11,6 +11,7 @@ import RIBs
 import RxSwift
 
 import OnboardingFeatureInterface
+import OnboardingDomainInterface
 
 // MARK: - OnboardingPresentable
 
@@ -33,6 +34,8 @@ final class OnboardingInteractor:
     typealias State = OnboardingPresentableState
     
     enum Mutation {
+        case appKakaoLogin
+        case webKakaoLogin
         case attachSignUpRIB
         case attachLoggedInRIB
     }
@@ -43,14 +46,17 @@ final class OnboardingInteractor:
     weak var listener: OnboardingListener?
     
     let initialState: OnboardingPresentableState
+    private let onboardingRepositoryService: OnboardingRepositoryService
     
     // MARK: - Initialization & Deinitialization
     
     init(
         presenter: OnboardingPresentable,
-        initialState: OnboardingPresentableState
+        initialState: OnboardingPresentableState,
+        onboardingRepositoryService: OnboardingRepositoryService
     ) {
         self.initialState = initialState
+        self.onboardingRepositoryService = onboardingRepositoryService
         
         super.init(presenter: presenter)
         presenter.listener = self
@@ -78,6 +84,16 @@ extension OnboardingInteractor {
             return .just(.attachLoggedInRIB)
         }
     }
+    
+    private func kakaoLogin() -> Observable<Mutation> {
+        //let observable: Observable<Mutation> = onboa
+        return .empty()
+    }
+    
+    private func appleLogin() -> Observable<Mutation> {
+        return .empty()
+    }
+    
 }
 
 // MARK: Trasnform

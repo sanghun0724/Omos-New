@@ -25,7 +25,7 @@ let dependencies = Dependencies(
                     requirement: .upToNextMajor(from: "1.0.0")),
             .remote(url: "https://github.com/Alamofire/Alamofire.git",
                     requirement: .upToNextMajor(from: "5.6.4")),
-            .remote(url: "https://github.com/kakao/kakao-ios-sdk",
+            .remote(url: "https://github.com/kakao/kakao-ios-sdk-rx",
                     requirement: .branch("master")),
             .remote(url: "https://github.com/RxSwiftCommunity/RxGesture.git",
                     requirement: .upToNextMajor(from: "4.0.4")),

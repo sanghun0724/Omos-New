@@ -88,6 +88,9 @@
                      location = "group:ReactorKit/ReactorKit.xcodeproj">
                   </FileRef>
                   <FileRef
+                     location = "group:RxAlamofire/RxAlamofire.xcodeproj">
+                  </FileRef>
+                  <FileRef
                      location = "group:RxDataSources/RxDataSources.xcodeproj">
                   </FileRef>
                   <FileRef
@@ -104,6 +107,9 @@
                   </FileRef>
                   <FileRef
                      location = "group:WeakMapTable/WeakMapTable.xcodeproj">
+                  </FileRef>
+                  <FileRef
+                     location = "group:kakao-ios-sdk-rx/RxKakaoOpenSDK.xcodeproj">
                   </FileRef>
                   <FileRef
                      location = "group:kakao-ios-sdk/KakaoOpenSDK.xcodeproj">
