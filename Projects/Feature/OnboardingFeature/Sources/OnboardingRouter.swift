@@ -12,7 +12,7 @@ import OnboardingFeatureInterface
 
 // MARK: - OnboardingInteractable
 
-protocol OnboardingInteractable: Interactable, SignUpListener {
+protocol OnboardingInteractable: Interactable, SignUpListener, LoggedInListener {
     var router: OnboardingRouting? { get set }
     var listener: OnboardingListener? { get set }
 }
@@ -28,12 +28,17 @@ final class OnboardingRouter:
     private let signUpBuilder: SignUpBuildable
     private var signUpRouter: SignUpRouting?
     
+    private let loggedInBuilder: LoggedInBuildable
+    private var loggedInRouter: LoggedInRouting?
+    
     init(
       interactor: OnboardingInteractable,
       signUpBuilder: SignUpBuildable,
+      loggedInBuilder: LoggedInBuildable,
       viewController: OnboardingViewControllable
     ) {
         self.signUpBuilder = signUpBuilder
+        self.loggedInBuilder = loggedInBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
@@ -58,10 +63,20 @@ final class OnboardingRouter:
     }
     
     func attachLoggedInRIB() {
-        
+        guard self.loggedInRouter == nil else { return }
+        let router = self.loggedInBuilder.build(
+            with: LoggedInBuildDependency(
+                listener: interactor
+            )
+        )
+        attachChild(router)
+        viewController.push(viewController: router.viewControllable)
     }
     
     func detachLoggedInRIB() {
-        
+        guard let router = loggedInRouter else { return }
+        self.loggedInRouter = nil
+        detachChild(router)
+        viewController.pop(router.viewControllable)
     }
 }

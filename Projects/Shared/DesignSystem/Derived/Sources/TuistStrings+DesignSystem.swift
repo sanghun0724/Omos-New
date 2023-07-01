@@ -43,7 +43,7 @@ public enum DesignSystemStrings {
     public static let repasswordInvalidation = DesignSystemStrings.tr("Localizable", "onboarding.repasswordInvalidation")
     /// 인증메일 보내기
     public static let sendCertificationEmail = DesignSystemStrings.tr("Localizable", "onboarding.sendCertificationEmail")
-    /// 회원가입
+    /// 이메일 회원가입
     public static let signUp = DesignSystemStrings.tr("Localizable", "onboarding.signUp")
   }
 }

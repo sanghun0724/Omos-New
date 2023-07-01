@@ -99,7 +99,7 @@ extension OnboardingInteractor {
     }
     
     private func attachSignUpRIBTransform() -> Observable<Mutation> {
-        self.router?.attachSingUpRIB()
+        self.router?.attachSignUpRIB()
         return .empty()
     }
     
@@ -117,5 +117,15 @@ extension OnboardingInteractor {
         var newState = state
         
         return newState
+    }
+}
+
+extension OnboardingInteractor {
+    func detachSignUpRIB() {
+        self.router?.detachSignUpRIB()
+    }
+    
+    func detachLoggedInRIB() {
+        self.router?.detachLoggedInRIB()
     }
 }

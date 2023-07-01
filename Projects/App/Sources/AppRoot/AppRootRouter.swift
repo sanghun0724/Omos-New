@@ -52,7 +52,9 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
         
         let router = onboardingBuilder.build(
             with: OnboardingBuildDependency(
-                listener: interactor))
+                listener: interactor
+            )
+        )
         self.onboardingRouting = router
         attachChild(router)
         let navigation = NavigationControllerable(root: router.viewControllable)

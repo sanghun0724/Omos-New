@@ -30,9 +30,6 @@ class AppDelegate:
         setKakaoSDK()
         setLoggingChannel()
         
-        log.warning("target1",value: Environment.kakaoAPIKey)
-        log.warning("target2",value: Environment.rootURL)
-        
         return true
     }
 }
