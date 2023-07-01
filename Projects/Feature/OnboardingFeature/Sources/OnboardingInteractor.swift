@@ -12,6 +12,7 @@ import RxSwift
 
 import OnboardingFeatureInterface
 import OnboardingDomainInterface
+import AppFoundation
 
 // MARK: - OnboardingPresentable
 
@@ -34,10 +35,11 @@ final class OnboardingInteractor:
     typealias State = OnboardingPresentableState
     
     enum Mutation {
-        case appKakaoLogin
-        case webKakaoLogin
+        case setError(MyError)
+        case setLoading(Bool)
         case attachSignUpRIB
         case attachLoggedInRIB
+        case attachAgreementRIB(email: String)
     }
     
     // MARK: - Properties
@@ -74,8 +76,8 @@ final class OnboardingInteractor:
 extension OnboardingInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        case .didTapkakaoLoggedInButton:
-            return .empty()
+        case .didTapKakaoLoggedInButton:
+            return kakaoLoginMutation()
         case .didTapAppleLoggedInButton:
             return .empty()
         case .didTapEmailSingUpButton:
@@ -85,9 +87,18 @@ extension OnboardingInteractor {
         }
     }
     
-    private func kakaoLogin() -> Observable<Mutation> {
-        //let observable: Observable<Mutation> = onboa
-        return .empty()
+    private func kakaoLoginMutation() -> Observable<Mutation> {
+        let kakaoLoginMutation: Observable<Mutation> = onboardingRepositoryService.kakaoLogin()
+            .map{ .attachAgreementRIB(email: $0) }
+            .catchAndReturn( .setError(.defaultError))
+        
+        let sequence: [Observable<Mutation>] = [
+            .just(.setLoading(true)),
+             kakaoLoginMutation,
+            .just(.setLoading(false))
+        ]
+        
+        return .concat(sequence)
     }
     
     private func appleLogin() -> Observable<Mutation> {
@@ -124,6 +135,11 @@ extension OnboardingInteractor {
         return .empty()
     }
     
+    private func attachAgreemntRIBTransform() -> Observable<Mutation> {
+        //self.router?.att()
+        return .empty()
+    }
+    
 }
 
 // MARK: - reduce
@@ -131,6 +147,13 @@ extension OnboardingInteractor {
 extension OnboardingInteractor {
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
+        
+        switch mutation {
+        case let .attachAgreementRIB(email):
+            newState.testEmail = email
+        default:
+            print()
+        }
         
         return newState
     }
@@ -143,5 +166,9 @@ extension OnboardingInteractor {
     
     func detachLoggedInRIB() {
         self.router?.detachLoggedInRIB()
+    }
+    
+    func detachAgreementRIB() {
+        
     }
 }

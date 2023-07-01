@@ -10,13 +10,12 @@ import Foundation
 import ReactorKit
 import RIBs
 import RxSwift
+import LogFlume
 
 import OnboardingFeatureInterface
 import OnboardingDomain
 import OnboardingDomainInterface
-import GlobalThirdPartyLibrary
 import AppFoundation
-import DesignSystem
 
 
 // MARK: - SignUpPresentable
@@ -81,7 +80,7 @@ final class SignUpInteractor:
     }
     
     deinit {
-        log.verbose(type(of: self))
+        //log.verbose(type(of: self))
     }
 }
 
@@ -306,7 +305,8 @@ extension SignUpInteractor {
         case let .setPasswordReconfirm(validation):
             newState.isValidRepasswordConfirm = validation
         default:
-            log.debug("Do Nothing when \(mutation)")
+          //  log.debug("Do Nothing when \(mutation)")
+            print()
         }
         
         return newState

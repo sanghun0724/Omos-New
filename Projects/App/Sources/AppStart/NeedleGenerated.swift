@@ -43,6 +43,9 @@ private func factorya90cb427e52e03443c85f47b58f8f304c97af4d5(_ component: Needle
     return AppRootDependency9fafbf379aae0424b417Provider(appComponent: parent1(component) as! AppComponent)
 }
 private class OnboardingDependencyf77d0055983a00cf8835Provider: OnboardingDependency {
+    var onboardingRepositoryService: OnboardingRepositoryService {
+        return appComponent.onboardingRepositoryService
+    }
     var signUpBuilder: SignUpBuildable {
         return appComponent.signUpBuilder
     }
@@ -137,6 +140,7 @@ extension AppRootComponent: Registration {
 }
 extension OnboardingComponent: Registration {
     public func registerItems() {
+        keyPathToName[\OnboardingDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
         keyPathToName[\OnboardingDependency.signUpBuilder] = "signUpBuilder-SignUpBuildable"
         keyPathToName[\OnboardingDependency.loggedInBuilder] = "loggedInBuilder-LoggedInBuildable"
     }
