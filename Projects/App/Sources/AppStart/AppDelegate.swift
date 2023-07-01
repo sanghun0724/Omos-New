@@ -38,7 +38,7 @@ class AppDelegate:
 
 extension AppDelegate {
     private func setKakaoSDK() {
-        KakaoSDK.initSDK(appKey: "")
+        KakaoSDK.initSDK(appKey: KAKAO.Key)
     }
     
     private func setLoggingChannel() {

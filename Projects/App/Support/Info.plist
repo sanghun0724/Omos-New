@@ -16,14 +16,30 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakao23c5d162c97e7eb015313dc36f3b3794</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>KAKAO_API_KEY</key>
-	<string>$(KAKAO_API_KEY)</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
 	<key>ENABLE_TESTS</key>
 	<string>YES</string>
+	<key>KAKAO_API_KEY</key>
+	<string>$(KAKAO_API_KEY)</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>kakaokompassauth</string>
+		<string>kakaolink</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>ROOT_URL</key>
 	<string>$(ROOT_URL)</string>
 	<key>UIApplicationSceneManifest</key>

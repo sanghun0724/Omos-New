@@ -1,5 +1,8 @@
 import UIKit
+
 import RIBs
+import KakaoSDKAuth
+import RxKakaoSDKAuth
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,6 +20,15 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
     
         setLaunchRouter()
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        
+        if let url = URLContexts.first?.url {
+                    if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                        _ = AuthController.rx.handleOpenUrl(url: url)
+                    }
+                }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {}
