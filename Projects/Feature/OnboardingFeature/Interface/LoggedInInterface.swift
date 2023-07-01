@@ -5,7 +5,7 @@ import RIBs
 
 /// @mockable
 public protocol LoggedInListener: AnyObject {
-    
+    func detachLoggedInRIB()
 }
 
 // MARK: - LoggedInRouting

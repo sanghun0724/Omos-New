@@ -27,8 +27,10 @@ public enum DesignSystemStrings {
     public static let emailwarning = DesignSystemStrings.tr("Localizable", "onboarding.emailwarning")
     ///   Kakao로 로그인
     public static let kakao = DesignSystemStrings.tr("Localizable", "onboarding.kakao")
-    /// 로그인
+    /// 이메일 로그인
     public static let loggedIn = DesignSystemStrings.tr("Localizable", "onboarding.loggedIn")
+    /// 음악 기반\n감성 기록 플랫폼
+    public static let mainTitle = DesignSystemStrings.tr("Localizable", "onboarding.mainTitle")
     /// 닉네임
     public static let nickname = DesignSystemStrings.tr("Localizable", "onboarding.nickname")
     /// 이미 쓰고 있는 닉네임이에요.
@@ -41,7 +43,7 @@ public enum DesignSystemStrings {
     public static let repasswordInvalidation = DesignSystemStrings.tr("Localizable", "onboarding.repasswordInvalidation")
     /// 인증메일 보내기
     public static let sendCertificationEmail = DesignSystemStrings.tr("Localizable", "onboarding.sendCertificationEmail")
-    /// 회원가입
+    /// 이메일 회원가입
     public static let signUp = DesignSystemStrings.tr("Localizable", "onboarding.signUp")
   }
 }

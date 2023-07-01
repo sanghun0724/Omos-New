@@ -52,7 +52,6 @@ final class LoggedInRouter:
         
     }
     
-    
     func attachSignUpRIB() {
         guard self.signUpRouter == nil else { return }
         let router = self.signUpBuilder.build(
