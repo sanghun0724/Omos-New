@@ -33,7 +33,8 @@ final class OnboardingInteractor:
     typealias State = OnboardingPresentableState
     
     enum Mutation {
-        
+        case attachSignUpRIB
+        case attachLoggedInRIB
     }
     
     // MARK: - Properties
@@ -66,8 +67,47 @@ final class OnboardingInteractor:
 
 extension OnboardingInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
-        
+        switch action {
+        case .didTapkakaoLoggedInButton:
+            return .empty()
+        case .didTapAppleLoggedInButton:
+            return .empty()
+        case .didTapEmailSingUpButton:
+            return .just(.attachSignUpRIB)
+        case .didTapEmailLoggedInButton:
+            return .just(.attachLoggedInRIB)
+        }
     }
+}
+
+// MARK: Trasnform
+
+extension OnboardingInteractor {
+    func transform(mutation: Observable<Mutation>) -> Observable<Mutation> {
+        return mutation
+            .withUnretained(self)
+            .flatMap { owner, mutation -> Observable<Mutation> in
+                switch mutation {
+                case .attachSignUpRIB:
+                    return owner.attachSignUpRIBTransform()
+                case .attachLoggedInRIB:
+                    return owner.attachLoggedInRIBTransform()
+                default:
+                    return .just(mutation)
+                }
+            }
+    }
+    
+    private func attachSignUpRIBTransform() -> Observable<Mutation> {
+        self.router?.attachSignUpRIB()
+        return .empty()
+    }
+    
+    private func attachLoggedInRIBTransform() -> Observable<Mutation> {
+        self.router?.attachLoggedInRIB()
+        return .empty()
+    }
+    
 }
 
 // MARK: - reduce
@@ -77,5 +117,15 @@ extension OnboardingInteractor {
         var newState = state
         
         return newState
+    }
+}
+
+extension OnboardingInteractor {
+    func detachSignUpRIB() {
+        self.router?.detachSignUpRIB()
+    }
+    
+    func detachLoggedInRIB() {
+        self.router?.detachLoggedInRIB()
     }
 }
