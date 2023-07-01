@@ -17,20 +17,8 @@ public enum CommonUI {
 
 public enum Device {
     public static let deviceNames: [String] = [
-        "iPhone SE",
-        "iPhone 11 Pro Max"
+        "iPhone SE2",
+        "iPhone 14 Pro Max"
     ]
 }
-
-//public enum RestApiUrl {
-//#if DEBUG
-//    static let restUrl = URLConstants.debugUrl
-//#else
-//    static let restUrl = URLConstants.relaseURL
-//#endif
-//}
-//
-//public enum KakaoKey {
-//    static let kakaoKey = KAKAO.Key
-//}
 

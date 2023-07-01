@@ -44,7 +44,7 @@ public class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
             }
     }
     
-    public func kakaoLogin() -> Observable<Bool> {
+    public func kakaoLogin() -> Observable<String> {
         kakaoEmail()
             .withUnretained(self)
             .flatMap { owner, email in
@@ -52,11 +52,11 @@ public class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
                     .SNSlogin(request: .init(email: email, type: .KAKAO))
                     .asObservable()
                     .map { owner.setAuthTokens(accessToken: $0.accessToken, refreshToken: $0.refreshToken) }
-                    .map { _ in return true }
+                    .map { _ in return email }
             }
     }
     
-    public func appleLogin() -> Observable<Bool> {
+    public func appleLogin() -> Observable<String> {
         return .empty()
     }
     

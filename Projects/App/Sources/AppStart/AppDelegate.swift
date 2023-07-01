@@ -11,7 +11,7 @@ import RIBs
 import KakaoSDKAuth
 import KakaoSDKCommon
 import CoreKit
-import GlobalThirdPartyLibrary
+import AppFoundation
 import LogFlume
 
 @UIApplicationMain
