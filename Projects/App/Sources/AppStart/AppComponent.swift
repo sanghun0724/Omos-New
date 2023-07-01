@@ -45,7 +45,7 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
         }
     }
     
-    var signUpBulder: SignUpBuildable {
+    var signUpBuilder: SignUpBuildable {
         SignUpBuilder {
             SignUpComponent(parent: self)
         }
