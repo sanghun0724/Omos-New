@@ -13,7 +13,10 @@ import OnboardingFeatureInterface
 
 // MARK: - OnboardingDependency
 
-public protocol OnboardingDependency: NeedleFoundation.Dependency {}
+public protocol OnboardingDependency: NeedleFoundation.Dependency {
+    var signUpBuilder: SignUpBuildable { get }
+    var loggedInBuilder: LoggedInBuildable { get }
+}
 
 // MARK: - OnboardingComponent
 
@@ -38,6 +41,11 @@ public final class OnboardingBuilder:
         let interactor = OnboardingInteractor(presenter: viewController, initialState: component.initialState)
         
         interactor.listener = payload.listener
-        return OnboardingRouter(interactor: interactor, viewController: viewController)
+        return OnboardingRouter(
+            interactor: interactor,
+            signUpBuilder: component.signUpBuilder,
+            loggedInBuilder: component.loggedInBuilder,
+            viewController: viewController
+        )
     }
 }
