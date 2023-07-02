@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -75,7 +75,6 @@
 		5C9BB6E7209FE0184267CA14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC4AF0B87022F8E499FFA0E /* SignUpViewController.swift */; };
 		5D48564482CF4F20A670D975 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73BBC8DBA8CFE96E0AF61F7 /* OnboardingInteractor.swift */; };
 		628CDA51277D7BD2E5879980 /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 018D5E50741CCDD7213EE1CF /* DesignSystem_DesignSystem.bundle */; };
-		660CA8B6951F506F25C6015D /* SocialLoggedInWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F84054F36E23CB87E3722C9 /* SocialLoggedInWorker.swift */; };
 		66935A5425335CB4DEFDCDA5 /* LoggedInInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2224A4E4932FB2B40242A /* LoggedInInterface.swift */; };
 		66A4D50F80AECCEFE3E20C4F /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184D6841C7BBCA17A43DF14D /* KakaoSDKTemplate.framework */; platformFilter = ios; };
 		66B3846CF361962FB9FAA599 /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C631ECEE79A0F810D8F718DA /* KakaoSDKUser.framework */; platformFilter = ios; };
@@ -106,7 +105,6 @@
 		95BA21B8C2CB696A10BCA0A7 /* OnboardingFeatureTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9A646737831F7B0EAF5A77 /* OnboardingFeatureTesting.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		95D43505B903A6355E31F302 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5972C7D5A7A81D638CC0B6D /* KakaoSDKAuth.framework */; platformFilter = ios; };
 		971FCECE7137B4C878E7E761 /* AppRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F108A30D55193BBBC7C5BF /* AppRootViewController.swift */; };
-		9A0AAF899139A7588CDEAA1A /* SocialAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEAB1C870F59A3CA151179D /* SocialAuthManager.swift */; };
 		9A22716690167A12AF143D97 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FC63EC2DC6DCB4772DD2C5 /* SnapKit.framework */; platformFilter = ios; };
 		9A8E1AD111E3F393572EF068 /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB396925CAF1D49FC6F93C12 /* RxKakaoSDKUser.framework */; platformFilter = ios; };
 		9B302D999069BCC18B565F67 /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 018D5E50741CCDD7213EE1CF /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
@@ -145,6 +143,8 @@
 		D817C2B3F50F33C7F80F2E5B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063E04A65263220DC1C0A288 /* CFNetwork.framework */; };
 		DAF4895D327534B2CCC0AFD4 /* SignUpStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FC76422AA37C22E7155AFB /* SignUpStateAction.swift */; };
 		DDC7603DAAC1779C67DE3BB8 /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45284B228B5E474A2B232D50 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		DE2952202A504E8F00BF9BC0 /* ASAuthorizationControllerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29521F2A504E8F00BF9BC0 /* ASAuthorizationControllerProxy.swift */; };
+		DE2952222A504EAE00BF9BC0 /* AuthenticationServices+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2952212A504EAE00BF9BC0 /* AuthenticationServices+Rx.swift */; };
 		DED06C5740A2FDC8D78C1EBA /* DecoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655D00837BF52589B625A1 /* DecoView.swift */; };
 		E333514394F58CFBF404DE05 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD67D44281293C6A815B50F /* RxGesture.framework */; platformFilter = ios; };
 		E4E93C767EE78339DAA5BC3C /* libBaseDomain.a in Dependencies */ = {isa = PBXBuildFile; fileRef = CC42C35FC991C9D5A5F49B0E /* libBaseDomain.a */; platformFilter = ios; };
@@ -392,8 +392,6 @@
 		8A2FE4BBA603ED5A0F701364 /* OnboardingFeatureDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardingFeatureDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D21B0B0C626328A1FE6FE2A /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F11FA47075E9DBEA01756BA /* AuthSupportedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSupportedView.swift; sourceTree = "<group>"; };
-		8F84054F36E23CB87E3722C9 /* SocialLoggedInWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoggedInWorker.swift; sourceTree = "<group>"; };
-		8FEAB1C870F59A3CA151179D /* SocialAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAuthManager.swift; sourceTree = "<group>"; };
 		9017D466E74697705798439B /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F108A30D55193BBBC7C5BF /* AppRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewController.swift; sourceTree = "<group>"; };
 		9241DB5F7949C5E054432204 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
@@ -426,6 +424,8 @@
 		D157B98D7A02A58657516916 /* NicknameInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameInterface.swift; sourceTree = "<group>"; };
 		D5AA7BD081697FE6AFFA9F8C /* libTodayFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB225600FB3EF2618906188 /* AgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementView.swift; sourceTree = "<group>"; };
+		DE29521F2A504E8F00BF9BC0 /* ASAuthorizationControllerProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAuthorizationControllerProxy.swift; sourceTree = "<group>"; };
+		DE2952212A504EAE00BF9BC0 /* AuthenticationServices+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationServices+Rx.swift"; sourceTree = "<group>"; };
 		E26BC10EF5B2A30079C8AEF7 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		E3571C928D80FB78AD8CFA7D /* SignUpInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInterface.swift; sourceTree = "<group>"; };
 		E3CACCEA5321C76CE898EE97 /* OnboardingFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingFeatureUITests-Info.plist"; sourceTree = "<group>"; };
@@ -660,10 +660,10 @@
 		87F593C03D1911D2F2934795 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DE29521E2A504E8700BF9BC0 /* Proxy */,
 				A2A6F47BED520AC014B2F8B6 /* Compoenents */,
 				CF517950DE09BED560D824CE /* LoggedIn */,
 				7417D4513CAC57B591DC55A3 /* SingUp */,
-				A10B6D3432D9B639B8505FE2 /* Workers */,
 				FDE56C6AA3D46773518E9F73 /* OnboardingBuilder.swift */,
 				C73BBC8DBA8CFE96E0AF61F7 /* OnboardingInteractor.swift */,
 				0400DDD3CCDB0BF2CF03BA37 /* OnboardingRouter.swift */,
@@ -693,15 +693,6 @@
 				E3CACCEA5321C76CE898EE97 /* OnboardingFeatureUITests-Info.plist */,
 			);
 			path = InfoPlists;
-			sourceTree = "<group>";
-		};
-		A10B6D3432D9B639B8505FE2 /* Workers */ = {
-			isa = PBXGroup;
-			children = (
-				8FEAB1C870F59A3CA151179D /* SocialAuthManager.swift */,
-				8F84054F36E23CB87E3722C9 /* SocialLoggedInWorker.swift */,
-			);
-			path = Workers;
 			sourceTree = "<group>";
 		};
 		A2A6F47BED520AC014B2F8B6 /* Compoenents */ = {
@@ -832,6 +823,15 @@
 				A8F8AB373B5D19601F772CB6 /* WeakMapTable.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DE29521E2A504E8700BF9BC0 /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				DE29521F2A504E8F00BF9BC0 /* ASAuthorizationControllerProxy.swift */,
+				DE2952212A504EAE00BF9BC0 /* AuthenticationServices+Rx.swift */,
+			);
+			path = Proxy;
 			sourceTree = "<group>";
 		};
 		ED3C39C8B0797E12009CDD80 /* Sources */ = {
@@ -1089,6 +1089,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				66935A5425335CB4DEFDCDA5 /* LoggedInInterface.swift in Sources */,
+				DE2952222A504EAE00BF9BC0 /* AuthenticationServices+Rx.swift in Sources */,
+				DE2952202A504E8F00BF9BC0 /* ASAuthorizationControllerProxy.swift in Sources */,
 				1543E3A37B478EC07CE8437E /* NicknameInterface.swift in Sources */,
 				0E62AE08B5E2E6ED041C58B5 /* OnboardingInterface.swift in Sources */,
 				9F2D631C8B4CD06092782F77 /* SignUpInterface.swift in Sources */,
@@ -1156,8 +1158,6 @@
 				6CDB81526CA930C466DF81B5 /* SignUpRouter.swift in Sources */,
 				DAF4895D327534B2CCC0AFD4 /* SignUpStateAction.swift in Sources */,
 				5C9BB6E7209FE0184267CA14 /* SignUpViewController.swift in Sources */,
-				9A0AAF899139A7588CDEAA1A /* SocialAuthManager.swift in Sources */,
-				660CA8B6951F506F25C6015D /* SocialLoggedInWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
