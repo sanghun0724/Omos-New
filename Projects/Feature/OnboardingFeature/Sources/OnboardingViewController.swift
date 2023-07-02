@@ -102,6 +102,11 @@ final class OnboardingViewController:
         bindUI()
         bind(listener: self.listener)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        bindActions() // for apple
+    }
 }
 
 
@@ -125,7 +130,6 @@ extension OnboardingViewController {
     private func bind(listener: OnboardingPresentableListener?) {
         guard let listener = listener else { return }
         self.bindActionRelay()
-        bindActions()
         bindState(from: listener)
     }
     
@@ -161,9 +165,10 @@ extension OnboardingViewController {
     private func bindAppleLoggedInButtonAction() {
         appleButton
             .rx
-            .tapGesture()
-            .preventDuplication()
-            .map { _ in .didTapAppleLoggedInButton }
+            .loginOnTap(scope: [.email])
+            .compactMap { ($0.credential as? ASAuthorizationAppleIDCredential)?.email }
+            .debug("shlee")
+            .map { .didTapAppleLoggedInButton(email: $0) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }

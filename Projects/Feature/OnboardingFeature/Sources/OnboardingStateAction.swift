@@ -20,14 +20,13 @@ struct OnboardingPresentableState: Equatable, HasLoadingState, HasErrorState {
     var revision = 0
     var isLoading = false
     var myError = ReactorValue<MyError>(revision: 0, value: MyError.noError)
-    var testEmail = ""
 }
 
 // MARK: - OnboardingPresentableAction
 
 enum OnboardingPresentableAction {
     case didTapKakaoLoggedInButton
-    case didTapAppleLoggedInButton
+    case didTapAppleLoggedInButton(email: String)
     case didTapEmailSingUpButton
     case didTapEmailLoggedInButton
 }

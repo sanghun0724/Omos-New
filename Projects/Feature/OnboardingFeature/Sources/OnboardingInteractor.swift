@@ -148,12 +148,12 @@ extension OnboardingInteractor {
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         
-        switch mutation {
-        case let .attachAgreementRIB(email):
-            newState.testEmail = email
-        default:
-            print()
-        }
+//        switch mutation {
+//        case let .attachAgreementRIB(email):
+//            newState.testEmail = email
+//        default:
+//            print()
+//        }
         
         return newState
     }
