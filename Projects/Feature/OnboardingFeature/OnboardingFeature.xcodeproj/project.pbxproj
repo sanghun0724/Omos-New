@@ -145,6 +145,12 @@
 		DDC7603DAAC1779C67DE3BB8 /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45284B228B5E474A2B232D50 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
 		DE2952202A504E8F00BF9BC0 /* ASAuthorizationControllerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29521F2A504E8F00BF9BC0 /* ASAuthorizationControllerProxy.swift */; };
 		DE2952222A504EAE00BF9BC0 /* AuthenticationServices+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2952212A504EAE00BF9BC0 /* AuthenticationServices+Rx.swift */; };
+		DE2952292A5237D800BF9BC0 /* AgreementRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2952252A5237D800BF9BC0 /* AgreementRouter.swift */; };
+		DE29522A2A5237D800BF9BC0 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2952262A5237D800BF9BC0 /* AgreementViewController.swift */; };
+		DE29522B2A5237D800BF9BC0 /* AgreementBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2952272A5237D800BF9BC0 /* AgreementBuilder.swift */; };
+		DE29522C2A5237D800BF9BC0 /* AgreementInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2952282A5237D800BF9BC0 /* AgreementInteractor.swift */; };
+		DE29522E2A52381C00BF9BC0 /* AgreementStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29522D2A52381C00BF9BC0 /* AgreementStateAction.swift */; };
+		DE2952302A52389600BF9BC0 /* AgreementInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29522F2A52389600BF9BC0 /* AgreementInterface.swift */; };
 		DED06C5740A2FDC8D78C1EBA /* DecoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655D00837BF52589B625A1 /* DecoView.swift */; };
 		E333514394F58CFBF404DE05 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD67D44281293C6A815B50F /* RxGesture.framework */; platformFilter = ios; };
 		E4E93C767EE78339DAA5BC3C /* libBaseDomain.a in Dependencies */ = {isa = PBXBuildFile; fileRef = CC42C35FC991C9D5A5F49B0E /* libBaseDomain.a */; platformFilter = ios; };
@@ -426,6 +432,12 @@
 		DDB225600FB3EF2618906188 /* AgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementView.swift; sourceTree = "<group>"; };
 		DE29521F2A504E8F00BF9BC0 /* ASAuthorizationControllerProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAuthorizationControllerProxy.swift; sourceTree = "<group>"; };
 		DE2952212A504EAE00BF9BC0 /* AuthenticationServices+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationServices+Rx.swift"; sourceTree = "<group>"; };
+		DE2952252A5237D800BF9BC0 /* AgreementRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementRouter.swift; sourceTree = "<group>"; };
+		DE2952262A5237D800BF9BC0 /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
+		DE2952272A5237D800BF9BC0 /* AgreementBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementBuilder.swift; sourceTree = "<group>"; };
+		DE2952282A5237D800BF9BC0 /* AgreementInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementInteractor.swift; sourceTree = "<group>"; };
+		DE29522D2A52381C00BF9BC0 /* AgreementStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementStateAction.swift; sourceTree = "<group>"; };
+		DE29522F2A52389600BF9BC0 /* AgreementInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementInterface.swift; sourceTree = "<group>"; };
 		E26BC10EF5B2A30079C8AEF7 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		E3571C928D80FB78AD8CFA7D /* SignUpInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInterface.swift; sourceTree = "<group>"; };
 		E3CACCEA5321C76CE898EE97 /* OnboardingFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingFeatureUITests-Info.plist"; sourceTree = "<group>"; };
@@ -632,6 +644,7 @@
 				D157B98D7A02A58657516916 /* NicknameInterface.swift */,
 				A7428644BAF7508F9FCE5B1E /* OnboardingInterface.swift */,
 				E3571C928D80FB78AD8CFA7D /* SignUpInterface.swift */,
+				DE29522F2A52389600BF9BC0 /* AgreementInterface.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -644,7 +657,7 @@
 			path = Testing;
 			sourceTree = "<group>";
 		};
-		7417D4513CAC57B591DC55A3 /* SingUp */ = {
+		7417D4513CAC57B591DC55A3 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
 				5F2A4C395DF158E67720B117 /* Nickname */,
@@ -654,7 +667,7 @@
 				B0FC76422AA37C22E7155AFB /* SignUpStateAction.swift */,
 				CFC4AF0B87022F8E499FFA0E /* SignUpViewController.swift */,
 			);
-			path = SingUp;
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		87F593C03D1911D2F2934795 /* Sources */ = {
@@ -663,7 +676,8 @@
 				DE29521E2A504E8700BF9BC0 /* Proxy */,
 				A2A6F47BED520AC014B2F8B6 /* Compoenents */,
 				CF517950DE09BED560D824CE /* LoggedIn */,
-				7417D4513CAC57B591DC55A3 /* SingUp */,
+				7417D4513CAC57B591DC55A3 /* SignUp */,
+				DE2952242A5237BA00BF9BC0 /* Agreement */,
 				FDE56C6AA3D46773518E9F73 /* OnboardingBuilder.swift */,
 				C73BBC8DBA8CFE96E0AF61F7 /* OnboardingInteractor.swift */,
 				0400DDD3CCDB0BF2CF03BA37 /* OnboardingRouter.swift */,
@@ -832,6 +846,18 @@
 				DE2952212A504EAE00BF9BC0 /* AuthenticationServices+Rx.swift */,
 			);
 			path = Proxy;
+			sourceTree = "<group>";
+		};
+		DE2952242A5237BA00BF9BC0 /* Agreement */ = {
+			isa = PBXGroup;
+			children = (
+				DE2952252A5237D800BF9BC0 /* AgreementRouter.swift */,
+				DE2952262A5237D800BF9BC0 /* AgreementViewController.swift */,
+				DE2952272A5237D800BF9BC0 /* AgreementBuilder.swift */,
+				DE2952282A5237D800BF9BC0 /* AgreementInteractor.swift */,
+				DE29522D2A52381C00BF9BC0 /* AgreementStateAction.swift */,
+			);
+			path = Agreement;
 			sourceTree = "<group>";
 		};
 		ED3C39C8B0797E12009CDD80 /* Sources */ = {
@@ -1088,12 +1114,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE2952302A52389600BF9BC0 /* AgreementInterface.swift in Sources */,
 				66935A5425335CB4DEFDCDA5 /* LoggedInInterface.swift in Sources */,
+				DE2952292A5237D800BF9BC0 /* AgreementRouter.swift in Sources */,
 				DE2952222A504EAE00BF9BC0 /* AuthenticationServices+Rx.swift in Sources */,
 				DE2952202A504E8F00BF9BC0 /* ASAuthorizationControllerProxy.swift in Sources */,
 				1543E3A37B478EC07CE8437E /* NicknameInterface.swift in Sources */,
 				0E62AE08B5E2E6ED041C58B5 /* OnboardingInterface.swift in Sources */,
 				9F2D631C8B4CD06092782F77 /* SignUpInterface.swift in Sources */,
+				DE29522B2A5237D800BF9BC0 /* AgreementBuilder.swift in Sources */,
+				DE29522E2A52381C00BF9BC0 /* AgreementStateAction.swift in Sources */,
+				DE29522A2A5237D800BF9BC0 /* AgreementViewController.swift in Sources */,
+				DE29522C2A5237D800BF9BC0 /* AgreementInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
