@@ -40,6 +40,7 @@ final class OnboardingInteractor:
         case attachSignUpRIB
         case attachLoggedInRIB
         case attachAgreementRIB(email: String)
+        case attachTodayRIB
     }
     
     // MARK: - Properties
