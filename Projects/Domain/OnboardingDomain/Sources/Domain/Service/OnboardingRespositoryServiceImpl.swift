@@ -56,10 +56,6 @@ public class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
             }
     }
     
-    public func appleLogin() -> Observable<String> {
-        return .empty()
-    }
-    
     private func kakaoEmail() -> Observable<String> {
         let kakaoToken: Observable<OAuthToken>
         if (UserApi.isKakaoTalkLoginAvailable()) {
