@@ -10,6 +10,8 @@ import ReactorKit
 import RIBs
 import RxSwift
 
+import OnboardingFeatureInterface
+
 // MARK: - AgreementPresentable
 
 protocol AgreementPresentable: Presentable {

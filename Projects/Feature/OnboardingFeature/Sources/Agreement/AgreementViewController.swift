@@ -92,7 +92,7 @@ extension AgreementViewController {
 // MARK: - Binding State
 
 extension AgreementViewController {
-    private func bindState(from listener: AgreementListener) {
+    private func bindState(from listener: AgreementPresentableListener) {
         
     }
 }
