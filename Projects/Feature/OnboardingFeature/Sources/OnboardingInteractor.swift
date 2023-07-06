@@ -42,7 +42,7 @@ final class OnboardingInteractor:
         case attachAgreementRIB(email: String)
         case attachTodayRIB
     }
-    
+     
     // MARK: - Properties
     
     weak var router: OnboardingRouting?

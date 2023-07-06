@@ -20,23 +20,23 @@ import AppFoundation
 
 // MARK: - SignUpPresentable
 
-protocol SignUpPresentable: Presentable {
-    var listener: SignUpPresentableListener? { get set }
+protocol EmailSignUpPresentable: Presentable {
+    var listener: EmailSignUpPresentableListener? { get set }
 }
 
 // MARK: - SignUpInteractor
 
-final class SignUpInteractor:
-    PresentableInteractor<SignUpPresentable>,
-    SignUpInteractable,
-    SignUpPresentableListener,
+final class EmailSignUpInteractor:
+    PresentableInteractor<EmailSignUpPresentable>,
+    EmailSignUpInteractable,
+    EmailSignUpPresentableListener,
     Reactor
 {
     
     // MARK: - Reactor
     
-    typealias Action = SignUpPresentableAction
-    typealias State = SignUpPresentableState
+    typealias Action = EmailSignUpPresentableAction
+    typealias State = EmailSignUpPresentableState
     
     enum Mutation {
         case setError(MyError)
@@ -53,18 +53,18 @@ final class SignUpInteractor:
     
     // MARK: - Properties
     
-    weak var router: SignUpRouting?
-    weak var listener: SignUpListener?
+    weak var router: EmailSignUpRouting?
+    weak var listener: EmailSignUpListener?
     private let onboardingRepositoryService: OnboardingRepositoryService
     
-    let initialState: SignUpPresentableState
+    let initialState: EmailSignUpPresentableState
     
     
     // MARK: - Initialization & Deinitialization
     
     init(
-        presenter: SignUpPresentable,
-        initialState: SignUpPresentableState,
+        presenter: EmailSignUpPresentable,
+        initialState: EmailSignUpPresentableState,
         onboardingRepositoryService: OnboardingRepositoryService
     ) {
         self.initialState = initialState
@@ -86,7 +86,7 @@ final class SignUpInteractor:
 
 // MARK: - mutate
 
-extension SignUpInteractor {
+extension EmailSignUpInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case let .emailValidationRequestButtonDidTap(email):
@@ -252,7 +252,7 @@ extension SignUpInteractor {
 
 // MARK: - trasnform mutation
 
-extension SignUpInteractor {
+extension EmailSignUpInteractor {
     
     func transform(mutation: Observable<Mutation>) -> Observable<Mutation> {
         return mutation
@@ -283,8 +283,8 @@ extension SignUpInteractor {
 
 // MARK: - reduce
 
-extension SignUpInteractor {
-    func reduce(state: SignUpPresentableState, mutation: Mutation) -> SignUpPresentableState {
+extension EmailSignUpInteractor {
+    func reduce(state: EmailSignUpPresentableState, mutation: Mutation) -> EmailSignUpPresentableState {
         var newState = state
 
         switch mutation {
