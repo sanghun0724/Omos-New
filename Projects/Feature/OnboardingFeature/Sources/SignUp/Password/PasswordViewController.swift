@@ -1,8 +1,8 @@
 //
-//  AgreementViewController.swift
-//  OnboardingFeatureInterface
+//  PasswordViewController.swift
+//  OnboardingFeature
 //
-//  Created by 이상헌 on 2023/07/03.
+//  Created by 이상헌 on 2023/07/06.
 //  Copyright © 2023 Omos. All rights reserved.
 //
 
@@ -12,14 +12,28 @@ import RIBs
 import RxCocoa
 import RxSwift
 
-import DesignSystem
+// MARK: - PasswordPresentableAction
 
-// MARK: - AgreementViewController
+enum PasswordPresentableAction {
+    
+}
 
-final class AgreementViewController:
+// MARK: - PasswordPresentableListener
+
+protocol PasswordPresentableListener: AnyObject {
+    typealias Action = PasswordPresentableAction
+    typealias State = PasswordPresentableState
+    
+    func sendAction(_ action: Action)
+    var state: Observable<State> { get }
+}
+
+// MARK: - PasswordViewController
+
+final class PasswordViewController:
     BaseViewController,
-    AgreementPresentable,
-    AgreementViewControllable
+    PasswordPresentable,
+    PasswordViewControllable
 {
     
     // MARK: - Constants
@@ -30,9 +44,9 @@ final class AgreementViewController:
     
     // MARK: - Properties
     
-    weak var listener: AgreementPresentableListener?
+    weak var listener: PasswordPresentableListener?
     
-    private let actionRelay = PublishRelay<AgreementPresentableListener.Action>()
+    private let actionRelay = PublishRelay<PasswordPresentableListener.Action>()
     
     // MARK: - UI Components
     
@@ -55,11 +69,11 @@ final class AgreementViewController:
 
 // MARK: Private methods
 
-extension AgreementViewController {}
+extension PasswordViewController {}
 
 // MARK: - Bind UI
 
-extension AgreementViewController {
+extension PasswordViewController {
     private func bindUI() {
         
     }
@@ -67,8 +81,8 @@ extension AgreementViewController {
 
 // MARK: - Bind listener
 
-extension AgreementViewController {
-    private func bind(listener: AgreementPresentableListener?) {
+extension PasswordViewController {
+    private func bind(listener: PasswordPresentableListener?) {
         guard let listener = listener else { return }
     }
     
@@ -83,7 +97,7 @@ extension AgreementViewController {
 
 // MARK: - Binding Action
 
-extension AgreementViewController {
+extension PasswordViewController {
     private func bindActions() {
         
     }
@@ -91,15 +105,15 @@ extension AgreementViewController {
 
 // MARK: - Binding State
 
-extension AgreementViewController {
-    private func bindState(from listener: AgreementListener) {
+extension PasswordViewController {
+    private func bindState(from listener: PasswordListener) {
         
     }
 }
 
 // MARK: - Layout
 
-extension AgreementViewController {
+extension PasswordViewController {
     private func setupUI() {
         
         self.layout()
@@ -113,11 +127,11 @@ extension AgreementViewController {
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-struct AgreementPreView: PreviewProvider {
+struct PasswordPreView: PreviewProvider {
     static var previews: some SwiftUI.View {
         ForEach(Device.deviceNames, id: \.self) { deviceName in
             UIViewControllerPreview {
-                let viewController = AgreementViewController()
+                let viewController = PasswordViewController()
                 
                 return UINavigationController(rootViewController: viewController)
             }

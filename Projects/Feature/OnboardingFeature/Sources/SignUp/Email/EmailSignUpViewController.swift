@@ -16,10 +16,10 @@ import AppFoundation
 
 // MARK: - SignUpViewController
 
-final class SignUpViewController:
+final class EmailSignUpViewController:
     BaseViewController,
-    SignUpPresentable,
-    SignUpViewControllable,
+    EmailSignUpPresentable,
+    EmailSignUpViewControllable,
     CloseButtonBindable,
     ErrorStreamBindable,
     LoadingStreamBindable
@@ -38,9 +38,9 @@ final class SignUpViewController:
     
     // MARK: - Properties
     
-    weak var listener: SignUpPresentableListener?
+    weak var listener: EmailSignUpPresentableListener?
     
-    private let actionRelay = PublishRelay<SignUpPresentableListener.Action>()
+    private let actionRelay = PublishRelay<EmailSignUpPresentableListener.Action>()
     
     // MARK: - UI Components
     
@@ -89,8 +89,7 @@ final class SignUpViewController:
     
     private lazy var validationCodeAlertView = ValidationCodeAlertView()
     
-    private lazy var confirmButton = ConfirmButton(.next,
-                                                   disableText: .next).builder
+    private lazy var confirmButton = ConfirmButton(.next, disableText: .next).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
         .set(\.layer.masksToBounds, to: true)
         .build()
@@ -113,7 +112,7 @@ final class SignUpViewController:
 
 // MARK: - Override
 
-extension SignUpViewController {
+extension EmailSignUpViewController {
 //    override func isNeedCustomNavigationBarView() -> Bool {
 //        true
 //    }
@@ -125,8 +124,8 @@ extension SignUpViewController {
 
 // MARK: - Bind listener
 
-extension SignUpViewController {
-    private func bind(listener: SignUpPresentableListener?) {
+extension EmailSignUpViewController {
+    private func bind(listener: EmailSignUpPresentableListener?) {
         guard let listener = listener else { return }
         self.bindActionRelay()
         bindActions()
@@ -144,7 +143,7 @@ extension SignUpViewController {
 
 // MARK: - Binding Action
 
-extension SignUpViewController {
+extension EmailSignUpViewController {
     private func bindActions() {
         bindEmailValidationRequestButtonDidTapAction()
         bindValidationPopupButtonDidTap()
@@ -201,8 +200,8 @@ extension SignUpViewController {
 
 // MARK: - Binding State
 
-extension SignUpViewController {
-    private func bindState(from listener: SignUpPresentableListener) {
+extension EmailSignUpViewController {
+    private func bindState(from listener: EmailSignUpPresentableListener) {
         bindLoadingStream(from: listener)
         bindErrorStream(from: listener)
         self.bindValidationEmailState(from: listener)
@@ -212,7 +211,7 @@ extension SignUpViewController {
         self.bindIsEnableConfirmValidation(from: listener)
     }
     
-    private func bindValidationEmailState(from listener: SignUpPresentableListener) {
+    private func bindValidationEmailState(from listener: EmailSignUpPresentableListener) {
         listener.state
             .map(\.isValidEmailFormat)
             .asDriver(onErrorDriveWith: .never())
@@ -220,7 +219,7 @@ extension SignUpViewController {
             .disposed(by: disposeBag)
     }
     
-    private func bindValidationPasswordState(from listener: SignUpPresentableListener) {
+    private func bindValidationPasswordState(from listener: EmailSignUpPresentableListener) {
         listener.state
             .map(\.isValidPasswordFormat)
             .skip(1)
@@ -236,7 +235,7 @@ extension SignUpViewController {
             .disposed(by: disposeBag)
     }
     
-    private func bindisSuccessSendValidationCodeState(from listener: SignUpPresentableListener) {
+    private func bindisSuccessSendValidationCodeState(from listener: EmailSignUpPresentableListener) {
         listener.state
             .map(\.isShowAlert)
             .distinctUntilChanged()
@@ -254,7 +253,7 @@ extension SignUpViewController {
             .disposed(by: disposeBag)
     }
     
-    private func bindEmailRegisterValidation(from listener: SignUpPresentableListener) {
+    private func bindEmailRegisterValidation(from listener: EmailSignUpPresentableListener) {
         listener.state
             .map(\.isSuccessEmailCertification)
             .distinctUntilChanged()
@@ -286,7 +285,7 @@ extension SignUpViewController {
             .disposed(by: disposeBag)
     }
     
-    private func bindIsEnableConfirmValidation(from listener: SignUpPresentableListener) {
+    private func bindIsEnableConfirmValidation(from listener: EmailSignUpPresentableListener) {
         listener.state
             .map { $0.isSuccessEmailCertification && $0.isValidPasswordFormat && $0.isValidRepasswordConfirm }
             .distinctUntilChanged()
@@ -299,7 +298,7 @@ extension SignUpViewController {
 
 // MARK: - Layout
 
-extension SignUpViewController {
+extension EmailSignUpViewController {
     private func setupUI() {
         contentView.addSubview(headerView)
         contentView.addSubview(emailTextFieldView)
@@ -362,7 +361,7 @@ struct SignUpPreView: PreviewProvider {
     static var previews: some SwiftUI.View {
         ForEach(Device.deviceNames, id: \.self) { deviceName in
             UIViewControllerPreview {
-                let viewController = SignUpViewController()
+                let viewController = EmailSignUpViewController()
                 
                 return UINavigationController(rootViewController: viewController)
             }

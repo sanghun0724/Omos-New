@@ -14,26 +14,26 @@ import OnboardingFeatureInterface
 
 // MARK: - SignUpInteractable
 
-protocol SignUpInteractable: Interactable, NicknameListener {
-    var router: SignUpRouting? { get set }
-    var listener: SignUpListener? { get set }
+protocol EmailSignUpInteractable: Interactable, NicknameListener {
+    var router: EmailSignUpRouting? { get set }
+    var listener: EmailSignUpListener? { get set }
 }
 
-protocol SignUpViewControllable: ViewControllable {}
+protocol EmailSignUpViewControllable: ViewControllable {}
 
 // MARK: - SignUpRouter
 
-final class SignUpRouter:
-  ViewableRouter<SignUpInteractable, SignUpViewControllable>,
-  SignUpRouting
+final class EmailSignUpRouter:
+  ViewableRouter<EmailSignUpInteractable, EmailSignUpViewControllable>,
+  EmailSignUpRouting
 {
     private let nicknameBuilder: NicknameBuildable
     private var nicknameRouter: NicknameRouting?
 
     init(
       nicknameBuilder: NicknameBuildable,
-      interactor: SignUpInteractable,
-      viewController: SignUpViewControllable
+      interactor: EmailSignUpInteractable,
+      viewController: EmailSignUpViewControllable
     ) {
         self.nicknameBuilder = nicknameBuilder
         

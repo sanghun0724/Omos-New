@@ -167,7 +167,6 @@ extension OnboardingViewController {
             .rx
             .loginOnTap(scope: [.email])
             .compactMap { ($0.credential as? ASAuthorizationAppleIDCredential)?.email }
-            .debug("shlee")
             .map { .didTapAppleLoggedInButton(email: $0) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)

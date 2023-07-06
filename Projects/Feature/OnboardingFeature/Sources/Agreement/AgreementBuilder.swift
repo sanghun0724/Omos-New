@@ -9,6 +9,8 @@
 import NeedleFoundation
 import RIBs
 
+import AppFoundation
+
 // MARK: - AgreementDependency
 
 protocol AgreementDependency: NeedleFoundation.Dependency {}

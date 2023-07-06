@@ -12,7 +12,7 @@ import OnboardingFeatureInterface
 
 // MARK: - OnboardingInteractable
 
-protocol OnboardingInteractable: Interactable, SignUpListener, LoggedInListener {
+protocol OnboardingInteractable: Interactable, EmailSignUpListener, LoggedInListener {
     var router: OnboardingRouting? { get set }
     var listener: OnboardingListener? { get set }
 }
@@ -25,15 +25,15 @@ final class OnboardingRouter:
   ViewableRouter<OnboardingInteractable, OnboardingViewControllable>,
   OnboardingRouting
 {
-    private let signUpBuilder: SignUpBuildable
-    private var signUpRouter: SignUpRouting?
+    private let signUpBuilder: EmailSignUpBuildable
+    private var signUpRouter: EmailSignUpRouting?
     
     private let loggedInBuilder: LoggedInBuildable
     private var loggedInRouter: LoggedInRouting?
     
     init(
       interactor: OnboardingInteractable,
-      signUpBuilder: SignUpBuildable,
+      signUpBuilder: EmailSignUpBuildable,
       loggedInBuilder: LoggedInBuildable,
       viewController: OnboardingViewControllable
     ) {
@@ -46,7 +46,7 @@ final class OnboardingRouter:
     func attachSignUpRIB() {
         guard self.signUpRouter == nil else { return }
         let router = self.signUpBuilder.build(
-            with: SignUpBuildDependency(
+            with: EmailSignUpBuildDependency(
                 listener: interactor
             )
         )

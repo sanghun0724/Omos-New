@@ -16,7 +16,7 @@ import OnboardingDomainInterface
 
 public protocol OnboardingDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
-    var signUpBuilder: SignUpBuildable { get }
+    var signUpBuilder: EmailSignUpBuildable { get }
     var loggedInBuilder: LoggedInBuildable { get }
 }
 

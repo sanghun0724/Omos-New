@@ -46,7 +46,7 @@ private class OnboardingDependencyf77d0055983a00cf8835Provider: OnboardingDepend
     var onboardingRepositoryService: OnboardingRepositoryService {
         return appComponent.onboardingRepositoryService
     }
-    var signUpBuilder: SignUpBuildable {
+    var signUpBuilder: EmailSignUpBuildable {
         return appComponent.signUpBuilder
     }
     var loggedInBuilder: LoggedInBuildable {
@@ -68,7 +68,7 @@ private class LoggedInDependencyc7668df81df1c0bef5b1Provider: LoggedInDependency
     var loggedInBuilder: LoggedInBuildable {
         return appComponent.loggedInBuilder
     }
-    var signUpBuilder: SignUpBuildable {
+    var signUpBuilder: EmailSignUpBuildable {
         return appComponent.signUpBuilder
     }
     var todayBuilder: TodayBuildable {
@@ -96,7 +96,7 @@ private class NicknameDependencyf8931c25a2fc8a703ee7Provider: NicknameDependency
 private func factoryefd4cb58dce6be7a9de5f47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
     return NicknameDependencyf8931c25a2fc8a703ee7Provider(appComponent: parent1(component) as! AppComponent)
 }
-private class SignUpDependencyf83ac0c64026320e6dc2Provider: SignUpDependency {
+private class SignUpDependencyf83ac0c64026320e6dc2Provider: EmailSignUpDependency {
     var onboardingRepositoryService: OnboardingRepositoryService {
         return appComponent.onboardingRepositoryService
     }
@@ -158,10 +158,10 @@ extension NicknameComponent: Registration {
         keyPathToName[\NicknameDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
     }
 }
-extension SignUpComponent: Registration {
+extension EmailSignUpComponent: Registration {
     public func registerItems() {
-        keyPathToName[\SignUpDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
-        keyPathToName[\SignUpDependency.nicknameBuilder] = "nicknameBuilder-NicknameBuildable"
+        keyPathToName[\EmailSignUpDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
+        keyPathToName[\EmailSignUpDependency.nicknameBuilder] = "nicknameBuilder-NicknameBuildable"
     }
 }
 extension TodayComponent: Registration {
