@@ -157,6 +157,8 @@
 		DEDA37B72A56E5AD00465E19 /* AgreementStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29522D2A52381C00BF9BC0 /* AgreementStateAction.swift */; };
 		DEDA37B82A56E5D500465E19 /* AuthenticationServices+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2952212A504EAE00BF9BC0 /* AuthenticationServices+Rx.swift */; };
 		DEDA37B92A56E5DF00465E19 /* ASAuthorizationControllerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29521F2A504E8F00BF9BC0 /* ASAuthorizationControllerProxy.swift */; };
+		DEDA37BB2A56E68A00465E19 /* PasswordStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA37BA2A56E68A00465E19 /* PasswordStateAction.swift */; };
+		DEDA37BD2A56E95F00465E19 /* PasswordInteface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA37BC2A56E95F00465E19 /* PasswordInteface.swift */; };
 		E333514394F58CFBF404DE05 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD67D44281293C6A815B50F /* RxGesture.framework */; platformFilter = ios; };
 		E4E93C767EE78339DAA5BC3C /* libBaseDomain.a in Dependencies */ = {isa = PBXBuildFile; fileRef = CC42C35FC991C9D5A5F49B0E /* libBaseDomain.a */; platformFilter = ios; };
 		E687F2F8D34192E08F93F8E5 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD67D44281293C6A815B50F /* RxGesture.framework */; platformFilter = ios; };
@@ -447,6 +449,8 @@
 		DEDA37AC2A56E57300465E19 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		DEDA37AD2A56E57300465E19 /* PasswordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordBuilder.swift; sourceTree = "<group>"; };
 		DEDA37AE2A56E57300465E19 /* PasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordInteractor.swift; sourceTree = "<group>"; };
+		DEDA37BA2A56E68A00465E19 /* PasswordStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStateAction.swift; sourceTree = "<group>"; };
+		DEDA37BC2A56E95F00465E19 /* PasswordInteface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordInteface.swift; sourceTree = "<group>"; };
 		E26BC10EF5B2A30079C8AEF7 /* EmailSignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpInteractor.swift; sourceTree = "<group>"; };
 		E3571C928D80FB78AD8CFA7D /* SignUpInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInterface.swift; sourceTree = "<group>"; };
 		E3CACCEA5321C76CE898EE97 /* OnboardingFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingFeatureUITests-Info.plist"; sourceTree = "<group>"; };
@@ -654,6 +658,7 @@
 				A7428644BAF7508F9FCE5B1E /* OnboardingInterface.swift */,
 				E3571C928D80FB78AD8CFA7D /* SignUpInterface.swift */,
 				DE29522F2A52389600BF9BC0 /* AgreementInterface.swift */,
+				DEDA37BC2A56E95F00465E19 /* PasswordInteface.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -885,6 +890,7 @@
 				DEDA37AC2A56E57300465E19 /* PasswordViewController.swift */,
 				DEDA37AD2A56E57300465E19 /* PasswordBuilder.swift */,
 				DEDA37AE2A56E57300465E19 /* PasswordInteractor.swift */,
+				DEDA37BA2A56E68A00465E19 /* PasswordStateAction.swift */,
 			);
 			path = Password;
 			sourceTree = "<group>";
@@ -1147,6 +1153,7 @@
 				66935A5425335CB4DEFDCDA5 /* LoggedInInterface.swift in Sources */,
 				DE2952292A5237D800BF9BC0 /* AgreementRouter.swift in Sources */,
 				1543E3A37B478EC07CE8437E /* NicknameInterface.swift in Sources */,
+				DEDA37BD2A56E95F00465E19 /* PasswordInteface.swift in Sources */,
 				0E62AE08B5E2E6ED041C58B5 /* OnboardingInterface.swift in Sources */,
 				9F2D631C8B4CD06092782F77 /* SignUpInterface.swift in Sources */,
 			);
@@ -1187,6 +1194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEDA37BB2A56E68A00465E19 /* PasswordStateAction.swift in Sources */,
 				DEDA37B92A56E5DF00465E19 /* ASAuthorizationControllerProxy.swift in Sources */,
 				DEDA37B82A56E5D500465E19 /* AuthenticationServices+Rx.swift in Sources */,
 				DEDA37B32A56E5AD00465E19 /* AgreementRouter.swift in Sources */,

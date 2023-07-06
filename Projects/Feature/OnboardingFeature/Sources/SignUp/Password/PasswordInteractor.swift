@@ -10,21 +10,13 @@ import ReactorKit
 import RIBs
 import RxSwift
 
-// MARK: - PasswordRouting
-
-protocol PasswordRouting: ViewableRouting {
-    
-}
+import OnboardingFeatureInterface
 
 // MARK: - PasswordPresentable
 
 protocol PasswordPresentable: Presentable {
     var listener: PasswordPresentableListener? { get set }
 }
-
-// MARK: - PasswordListener
-
-protocol PasswordListener: AnyObject {}
 
 // MARK: - PasswordInteractor
 

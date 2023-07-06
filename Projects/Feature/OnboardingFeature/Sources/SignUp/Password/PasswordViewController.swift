@@ -12,21 +12,7 @@ import RIBs
 import RxCocoa
 import RxSwift
 
-// MARK: - PasswordPresentableAction
-
-enum PasswordPresentableAction {
-    
-}
-
-// MARK: - PasswordPresentableListener
-
-protocol PasswordPresentableListener: AnyObject {
-    typealias Action = PasswordPresentableAction
-    typealias State = PasswordPresentableState
-    
-    func sendAction(_ action: Action)
-    var state: Observable<State> { get }
-}
+import DesignSystem
 
 // MARK: - PasswordViewController
 
@@ -106,7 +92,7 @@ extension PasswordViewController {
 // MARK: - Binding State
 
 extension PasswordViewController {
-    private func bindState(from listener: PasswordListener) {
+    private func bindState(from listener: PasswordPresentableListener) {
         
     }
 }

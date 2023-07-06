@@ -8,6 +8,8 @@
 
 import RIBs
 
+import OnboardingFeatureInterface
+
 // MARK: - PasswordInteractable
 
 protocol PasswordInteractable: Interactable {
