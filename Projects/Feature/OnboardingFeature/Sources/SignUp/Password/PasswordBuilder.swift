@@ -9,15 +9,12 @@
 import NeedleFoundation
 import RIBs
 
+import OnboardingFeatureInterface
+
 // MARK: - PasswordDependency
 
 protocol PasswordDependency: NeedleFoundation.Dependency {}
 
-// MARK: - PasswordBuildDependency
-
-struct PasswordBuildDependency {
-    let listener: PasswordListener
-}
 
 // MARK: - PasswordComponent
 
@@ -25,12 +22,6 @@ final class PasswordComponent: NeedleFoundation.Component<PasswordDependency> {
     fileprivate var initialState: PasswordPresentableState {
         PasswordPresentableState()
     }
-}
-
-// MARK: - PasswordBuildable
-
-protocol PasswordBuildable: Buildable {
-    func build(with dynamicBuildDependency: PasswordBuildDependency) -> PasswordRouting
 }
 
 // MARK: - PasswordBuilder
