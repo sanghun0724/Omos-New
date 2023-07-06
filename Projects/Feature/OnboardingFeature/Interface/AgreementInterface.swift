@@ -10,22 +10,26 @@ import RIBs
 
 // MARK: - AgreementListener
 
-protocol AgreementListener: AnyObject {}
+public protocol AgreementListener: AnyObject {}
 
 // MARK: - AgreementRouting
 
-protocol AgreementRouting: ViewableRouting {
+public protocol AgreementRouting: ViewableRouting {
     
 }
 
 // MARK: - AgreementBuildDependency
 
-struct AgreementBuildDependency {
-    let listener: AgreementListener
+public struct AgreementBuildDependency {
+    public let listener: AgreementListener
+    
+    init(listener: AgreementListener) {
+        self.listener = listener
+    }
 }
 
 // MARK: - AgreementBuildable
 
-protocol AgreementBuildable: Buildable {
+public protocol AgreementBuildable: Buildable {
     func build(with dynamicBuildDependency: AgreementBuildDependency) -> AgreementRouting
 }

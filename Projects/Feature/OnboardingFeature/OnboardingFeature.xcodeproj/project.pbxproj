@@ -143,7 +143,6 @@
 		D817C2B3F50F33C7F80F2E5B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063E04A65263220DC1C0A288 /* CFNetwork.framework */; };
 		DAF4895D327534B2CCC0AFD4 /* EmailSignUpStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FC76422AA37C22E7155AFB /* EmailSignUpStateAction.swift */; };
 		DDC7603DAAC1779C67DE3BB8 /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45284B228B5E474A2B232D50 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
-		DE2952292A5237D800BF9BC0 /* AgreementRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2952252A5237D800BF9BC0 /* AgreementRouter.swift */; };
 		DE2952302A52389600BF9BC0 /* AgreementInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29522F2A52389600BF9BC0 /* AgreementInterface.swift */; };
 		DED06C5740A2FDC8D78C1EBA /* DecoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655D00837BF52589B625A1 /* DecoView.swift */; };
 		DEDA37AF2A56E57300465E19 /* PasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA37AB2A56E57300465E19 /* PasswordRouter.swift */; };
@@ -1151,7 +1150,6 @@
 			files = (
 				DE2952302A52389600BF9BC0 /* AgreementInterface.swift in Sources */,
 				66935A5425335CB4DEFDCDA5 /* LoggedInInterface.swift in Sources */,
-				DE2952292A5237D800BF9BC0 /* AgreementRouter.swift in Sources */,
 				1543E3A37B478EC07CE8437E /* NicknameInterface.swift in Sources */,
 				DEDA37BD2A56E95F00465E19 /* PasswordInteface.swift in Sources */,
 				0E62AE08B5E2E6ED041C58B5 /* OnboardingInterface.swift in Sources */,

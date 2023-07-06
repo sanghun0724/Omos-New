@@ -9,6 +9,7 @@
 import NeedleFoundation
 import RIBs
 
+import OnboardingFeatureInterface
 import AppFoundation
 
 // MARK: - AgreementDependency

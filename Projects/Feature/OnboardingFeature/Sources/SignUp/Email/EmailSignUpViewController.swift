@@ -14,7 +14,7 @@ import RxSwift
 import DesignSystem
 import AppFoundation
 
-// MARK: - SignUpViewController
+// MARK: - EmailSignUpViewController
 
 final class EmailSignUpViewController:
     BaseViewController,
@@ -44,10 +44,10 @@ final class EmailSignUpViewController:
     
     // MARK: - UI Components
     
-    private lazy var headerView = OnBoardingHeaderView().builder
-        .with {
-            $0.fetchTitle(text: .signUp)
-        }
+    private lazy var headerTitleLabel = UILabel().builder
+        .text(.signUp)
+        .textColor(.white)
+        .font(.boldSystemFont(ofSize: 24))
         .build()
     
     private lazy var emailTextFieldView = CustomTextFieldView()
@@ -65,29 +65,6 @@ final class EmailSignUpViewController:
             $0.setTitleColor(.mainGray4, for: .normal)
         }
         .build()
-    
-    private lazy var passwordTextFieldView = PasswordTextFieldView()
-        .builder
-        .with {
-            $0.fetchLeftTopLabelText(text: .password)
-            $0.fetchRightTopLabelText(text: .passwordWarning)
-        }
-        .build()
-    
-    private lazy var repasswordTextFieldView = PasswordTextFieldView()
-        .builder
-        .with {
-            $0.fetchLeftTopLabelText(text: .password)
-            $0.fetchRightTopLabelText(text: .repasswordInvalidation)
-        }
-        .build()
-    
-    private lazy var backContainerView = UIView().builder
-        .backgroundColor(.clear)
-        .isHidden(true)
-        .build()
-    
-    private lazy var validationCodeAlertView = ValidationCodeAlertView()
     
     private lazy var confirmButton = ConfirmButton(.next, disableText: .next).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
@@ -164,21 +141,21 @@ extension EmailSignUpViewController {
     }
     
     private func bindValidationPopupButtonDidTap() {
-        validationCodeAlertView.varifyButton
-            .rx
-            .tapWithPreventDuplication()
-            .withLatestFrom(self.validationCodeAlertView.codeInputField.rx.text.orEmpty)
-            .map { .validationAlertButtonDidTap(inputCode: $0) }
-            .bind(to: self.actionRelay)
-            .disposed(by: disposeBag)
+//        validationCodeAlertView.varifyButton
+//            .rx
+//            .tapWithPreventDuplication()
+//            .withLatestFrom(self.validationCodeAlertView.codeInputField.rx.text.orEmpty)
+//            .map { .validationAlertButtonDidTap(inputCode: $0) }
+//            .bind(to: self.actionRelay)
+//            .disposed(by: disposeBag)
     }
     
     private func bindPasswordsDidChange() {
-        Observable.combineLatest(self.passwordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged(),
-                                 self.repasswordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged())
-        .map { .passwordsDidChange(password: $0.0, repassword: $0.1) }
-        .bind(to: self.actionRelay)
-        .disposed(by: disposeBag)
+//        Observable.combineLatest(self.passwordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged(),
+//                                 self.repasswordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged())
+//        .map { .passwordsDidChange(password: $0.0, repassword: $0.1) }
+//        .bind(to: self.actionRelay)
+//        .disposed(by: disposeBag)
     }
     
     private func bindConfirmButtonDidTap() {
@@ -220,55 +197,55 @@ extension EmailSignUpViewController {
     }
     
     private func bindValidationPasswordState(from listener: EmailSignUpPresentableListener) {
-        listener.state
-            .map(\.isValidPasswordFormat)
-            .skip(1)
-            .asDriver(onErrorDriveWith: .empty())
-            .drive(self.passwordTextFieldView.rx.isValidState)
-            .disposed(by: disposeBag)
-        
-        listener.state
-            .map(\.isValidRepasswordConfirm)
-            .skip(1)
-            .asDriver(onErrorDriveWith: .empty())
-            .drive(self.repasswordTextFieldView.rx.isValidState)
-            .disposed(by: disposeBag)
+//        listener.state
+//            .map(\.isValidPasswordFormat)
+//            .skip(1)
+//            .asDriver(onErrorDriveWith: .empty())
+//            .drive(self.passwordTextFieldView.rx.isValidState)
+//            .disposed(by: disposeBag)
+//
+//        listener.state
+//            .map(\.isValidRepasswordConfirm)
+//            .skip(1)
+//            .asDriver(onErrorDriveWith: .empty())
+//            .drive(self.repasswordTextFieldView.rx.isValidState)
+//            .disposed(by: disposeBag)
     }
     
     private func bindisSuccessSendValidationCodeState(from listener: EmailSignUpPresentableListener) {
-        listener.state
-            .map(\.isShowAlert)
-            .distinctUntilChanged()
-            .map { !$0 }
-            .asDriver(onErrorDriveWith: .empty())
-            .drive(self.backContainerView.rx.isHidden)
-            .disposed(by: disposeBag)
-        
-        listener.state
-            .map(\.isShowAlert)
-            .distinctUntilChanged()
-            .map { !$0 }
-            .asDriver(onErrorDriveWith: .empty())
-            .drive(self.validationCodeAlertView.rx.isHidden)
-            .disposed(by: disposeBag)
+//        listener.state
+//            .map(\.isShowAlert)
+//            .distinctUntilChanged()
+//            .map { !$0 }
+//            .asDriver(onErrorDriveWith: .empty())
+//            .drive(self.backContainerView.rx.isHidden)
+//            .disposed(by: disposeBag)
+//
+//        listener.state
+//            .map(\.isShowAlert)
+//            .distinctUntilChanged()
+//            .map { !$0 }
+//            .asDriver(onErrorDriveWith: .empty())
+//            .drive(self.validationCodeAlertView.rx.isHidden)
+//            .disposed(by: disposeBag)
     }
     
     private func bindEmailRegisterValidation(from listener: EmailSignUpPresentableListener) {
-        listener.state
-            .map(\.isSuccessEmailCertification)
-            .distinctUntilChanged()
-            .skip(1)
-            .asDriver(onErrorDriveWith: .empty())
-            .drive(self.backContainerView.rx.isHidden)
-            .disposed(by: disposeBag)
-        
-        listener.state
-            .map(\.isSuccessEmailCertification)
-            .distinctUntilChanged()
-            .skip(1)
-            .asDriver(onErrorDriveWith: .empty())
-            .drive(self.validationCodeAlertView.rx.isSuccess)
-            .disposed(by: disposeBag)
+//        listener.state
+//            .map(\.isSuccessEmailCertification)
+//            .distinctUntilChanged()
+//            .skip(1)
+//            .asDriver(onErrorDriveWith: .empty())
+//            .drive(self.backContainerView.rx.isHidden)
+//            .disposed(by: disposeBag)
+//
+//        listener.state
+//            .map(\.isSuccessEmailCertification)
+//            .distinctUntilChanged()
+//            .skip(1)
+//            .asDriver(onErrorDriveWith: .empty())
+//            .drive(self.validationCodeAlertView.rx.isSuccess)
+//            .disposed(by: disposeBag)
         
         listener.state
             .map(\.isSuccessEmailCertification)
@@ -292,7 +269,6 @@ extension EmailSignUpViewController {
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.confirmButton.rx.isEnabled)
             .disposed(by: disposeBag)
-        
     }
 }
 
@@ -300,24 +276,20 @@ extension EmailSignUpViewController {
 
 extension EmailSignUpViewController {
     private func setupUI() {
-        contentView.addSubview(headerView)
+        contentView.addSubview(headerTitleLabel)
         contentView.addSubview(emailTextFieldView)
         contentView.addSubview(emailValidationRequestButton)
-        contentView.addSubview(passwordTextFieldView)
-        contentView.addSubview(repasswordTextFieldView)
-        contentView.addSubview(backContainerView)
         contentView.addSubview(confirmButton)
-        backContainerView.addSubview(validationCodeAlertView)
         self.layout()
     }
     
     private func layout() {
-        headerView.snp.makeConstraints {
-            $0.height.equalTo(UI.headerViewHeight)
-            $0.leading.trailing.top.equalToSuperview()
+        headerTitleLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(30)
+            $0.left.equalToSuperview().offset(16)
         }
         emailTextFieldView.snp.makeConstraints {
-            $0.top.equalTo(headerView.snp.bottom).offset(20)
+            $0.top.equalTo(headerTitleLabel.snp.bottom).offset(40)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
         }
         emailValidationRequestButton.snp.makeConstraints {
@@ -326,30 +298,12 @@ extension EmailSignUpViewController {
             $0.width.equalTo(UI.emailValidationButtonWidth)
             $0.height.equalTo(UI.emailValidationButtonHeight)
         }
-        passwordTextFieldView.snp.makeConstraints {
-            $0.top.equalTo(emailValidationRequestButton.snp.bottom).offset(22)
-            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
-        }
-        repasswordTextFieldView.snp.makeConstraints {
-            $0.top.equalTo(passwordTextFieldView.snp.bottom).offset(22)
-            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
-        }
         confirmButton.snp.makeConstraints {
-            $0.top.greaterThanOrEqualTo(repasswordTextFieldView.snp.bottom).offset(100)
-                .priority(249)
+//            $0.top.greaterThanOrEqualTo(repasswordTextFieldView.snp.bottom).offset(100)
+//                .priority(249)
             $0.height.equalTo(UI.confirmButtonHeight)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
             $0.bottom.equalToSuperview().offset(-34).priority(750)
-        }
-        
-        // Alert View
-        
-        backContainerView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        validationCodeAlertView.snp.makeConstraints {
-            $0.center.equalToSuperview()
-            $0.width.equalTo(UI.alertWidth)
         }
     }
 }

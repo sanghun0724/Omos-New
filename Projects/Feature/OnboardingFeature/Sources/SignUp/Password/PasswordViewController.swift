@@ -36,6 +36,22 @@ final class PasswordViewController:
     
     // MARK: - UI Components
     
+    private lazy var passwordTextFieldView = PasswordTextFieldView()
+        .builder
+        .with {
+            $0.fetchLeftTopLabelText(text: .password)
+            $0.fetchRightTopLabelText(text: .passwordWarning)
+        }
+        .build()
+    
+    private lazy var repasswordTextFieldView = PasswordTextFieldView()
+        .builder
+        .with {
+            $0.fetchLeftTopLabelText(text: .password)
+            $0.fetchRightTopLabelText(text: .repasswordInvalidation)
+        }
+        .build()
+    
     // MARK: - Initialization & Deinitialization
     
     override init() {
