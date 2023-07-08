@@ -17,7 +17,8 @@
 "onboarding.loggedIn"="이메일 로그인";
 "onboarding.email"="이메일";
 "onboarding.password"="비밀번호";
-"onboarding.emailwarning"="올바른 이메일 형식이 아니에요.";
+"onboarding.emailFormatWarning"="올바른 이메일 형식이 아니에요.";
+"onboarding.emailDuplicatedWarning"="이미 등록된 이메일 이에요.";
 "onboarding.passwordwarning"="8~16자의 영문 대소문자, 숫자, 특수문자만 가능해요.";
 "onboarding.kakao"="  Kakao로 로그인";
 "onboarding.signUp"="이메일 회원가입";
@@ -25,3 +26,4 @@
 "onboarding.repasswordInvalidation"="재확인 비밀번호가 틀립니다.";
 "onboarding.nickname"="닉네임";
 "onboarding.nicknameWarning"="이미 쓰고 있는 닉네임이에요.";
+"onboarding.requestValidation"="인증요청";

@@ -45,7 +45,8 @@ public class CustomTextFieldView: BaseView {
     
     lazy var leftBottomLabel = UILabel().builder
         .font(.systemFont(ofSize: 12, weight: .regular))
-        .textColor(DesignSystemAsset.Colors.mainOrange.color)
+        .textColor(DesignSystemAsset.Colors.mainPink.color)
+        .numberOfLines(0)
         .isHidden(true)
         .build()
     
@@ -53,13 +54,13 @@ public class CustomTextFieldView: BaseView {
         leftTopLabel.text = text
     }
     
-    public func fetchRightTopLabelText(text: String) {
+    public func fetchLeftBottomLabelText(text: String) {
         leftBottomLabel.text = text
     }
     
     public func setWarningState() {
         leftBottomLabel.isHidden = false
-        textField.layer.borderColor = DesignSystemAsset.Colors.mainOrange.color.cgColor
+        textField.layer.borderColor = DesignSystemAsset.Colors.mainPink.color.cgColor
     }
     
     public func setNomalState() {
@@ -79,7 +80,7 @@ public class CustomTextFieldView: BaseView {
     public override func setupConstraints() {
         super.setupConstraints()
         self.makeLeftTopLabelConstraints()
-        self.makeRightTopLabelConstraints()
+        self.makeLeftBottomLabelConstraints()
         self.makeTextFieldConstraints()
         self.makebottomLineViewConstraints()
     }
@@ -90,16 +91,17 @@ public class CustomTextFieldView: BaseView {
         }
     }
     
-    private func makeRightTopLabelConstraints() {
+    private func makeLeftBottomLabelConstraints() {
         leftBottomLabel.snp.makeConstraints {
-            $0.right.top.equalToSuperview()
+            $0.left.equalToSuperview()
+            $0.top.equalTo(textField.snp.bottom).offset(8)
         }
     }
     
     private func makeTextFieldConstraints() {
         textField.snp.makeConstraints {
             $0.height.equalTo(UI.textFieldHeight)
-            $0.top.equalTo(leftBottomLabel.snp.bottom).offset(10)
+            $0.top.equalTo(leftTopLabel.snp.bottom).offset(10)
             $0.left.right.bottom.equalToSuperview()
         }
     }

@@ -42,7 +42,7 @@ public class ConfirmButton: UIButton {
     }
     
     private func setEnable(_ isEnable: Bool) {
-        backgroundColor = isEnable ? DesignSystemAsset.Colors.mainOrange.color : DesignSystemAsset.Colors.mainGray4.color
+        backgroundColor = isEnable ? DesignSystemAsset.Colors.mainPink.color : DesignSystemAsset.Colors.mainGray4.color
         setTitle(isEnable ? enableText : disableText, for: .normal)
     }
 }

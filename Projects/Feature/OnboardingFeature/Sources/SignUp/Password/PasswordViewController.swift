@@ -40,7 +40,7 @@ final class PasswordViewController:
         .builder
         .with {
             $0.fetchLeftTopLabelText(text: .password)
-            $0.fetchRightTopLabelText(text: .passwordWarning)
+            $0.fetchLeftBottomLabelText(text: .passwordWarning)
         }
         .build()
     
@@ -48,7 +48,7 @@ final class PasswordViewController:
         .builder
         .with {
             $0.fetchLeftTopLabelText(text: .password)
-            $0.fetchRightTopLabelText(text: .repasswordInvalidation)
+            $0.fetchLeftBottomLabelText(text: .repasswordInvalidation)
         }
         .build()
     
@@ -103,6 +103,14 @@ extension PasswordViewController {
     private func bindActions() {
         
     }
+    
+    private func bindPasswordsDidChange() {
+        //        Observable.combineLatest(self.passwordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged(),
+        //                                 self.repasswordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged())
+        //        .map { .passwordsDidChange(password: $0.0, repassword: $0.1) }
+        //        .bind(to: self.actionRelay)
+        //        .disposed(by: disposeBag)
+    }
 }
 
 // MARK: - Binding State
@@ -110,6 +118,22 @@ extension PasswordViewController {
 extension PasswordViewController {
     private func bindState(from listener: PasswordPresentableListener) {
         
+    }
+    
+    private func bindValidationPasswordState(from listener: EmailSignUpPresentableListener) {
+        //        listener.state
+        //            .map(\.isValidPasswordFormat)
+        //            .skip(1)
+        //            .asDriver(onErrorDriveWith: .empty())
+        //            .drive(self.passwordTextFieldView.rx.isValidState)
+        //            .disposed(by: disposeBag)
+        //
+        //        listener.state
+        //            .map(\.isValidRepasswordConfirm)
+        //            .skip(1)
+        //            .asDriver(onErrorDriveWith: .empty())
+        //            .drive(self.repasswordTextFieldView.rx.isValidState)
+        //            .disposed(by: disposeBag)
     }
 }
 
