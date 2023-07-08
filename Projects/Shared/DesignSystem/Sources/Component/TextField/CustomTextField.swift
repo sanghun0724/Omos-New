@@ -11,16 +11,12 @@ import AppFoundation
 
 // input : 라빌 , 워닝 라벨 ,
 
-public class CustomTextField: UITextField, UITextFieldDelegate {
+public final class CustomTextField: UITextField, UITextFieldDelegate {
     
     // MARK: Properties
     
     lazy var rightImageView = UIImageView().builder
         .contentMode(.scaleAspectFit)
-        .build()
-    
-    private lazy var bottomLineView = UIView().builder
-        .backgroundColor(.mainGray4) //TODO: 3으로
         .build()
         
     // MARK: Initialize
@@ -29,7 +25,6 @@ public class CustomTextField: UITextField, UITextFieldDelegate {
         super.init(frame: .zero)
         delegate = self
         addSubview(rightImageView)
-        addSubview(bottomLineView)
         setup()
     }
     
@@ -58,20 +53,12 @@ public class CustomTextField: UITextField, UITextFieldDelegate {
         textColor = .white
         backgroundColor = .clear
         makeRightImageViewConstraints()
-        makebottomLineViewConstraints()
     }
     
     private func makeRightImageViewConstraints() {
         rightImageView.snp.makeConstraints {
             $0.right.centerY.equalToSuperview()
             $0.size.equalTo(24)
-        }
-    }
-    
-    private func makebottomLineViewConstraints() {
-        bottomLineView.snp.makeConstraints {
-            $0.bottom.left.right.equalToSuperview()
-            $0.height.equalTo(1)
         }
     }
     
