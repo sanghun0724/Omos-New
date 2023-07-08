@@ -41,7 +41,7 @@ final class EmailSignUpRouter:
         interactor.router = self
     }
     
-    func attachNicknameRIB() {
+    func attachPasswordRIB() {
         guard self.nicknameRouter == nil else { return }
         let router = self.nicknameBuilder.build(
             with: NicknameBuildDependency(
@@ -53,7 +53,7 @@ final class EmailSignUpRouter:
         viewController.push(viewController: router.viewControllable)
     }
     
-    func detachNicknameRIB() {
+    func detachPasswordRIB() {
         log.warning("detachNicknameRIB")
     }
 }

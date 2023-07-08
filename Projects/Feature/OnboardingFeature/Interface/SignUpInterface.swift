@@ -12,8 +12,8 @@ public protocol EmailSignUpListener: AnyObject {
 
 /// @mockable
 public protocol EmailSignUpRouting: ViewableRouting {
-    func attachNicknameRIB()
-    func detachNicknameRIB()
+    func attachPasswordRIB()
+    func detachPasswordRIB()
 }
 
 // MARK: - SignUpBuildDependency

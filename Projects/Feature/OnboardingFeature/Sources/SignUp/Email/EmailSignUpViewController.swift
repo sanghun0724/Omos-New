@@ -28,7 +28,6 @@ final class EmailSignUpViewController:
     // MARK: - Constants
     
     private enum UI {
-        static let headerViewHeight = 173
         static let emailValidationButtonHeight = 20
         static let emailValidationButtonWidth = 100
         static let leadingTrailingMargin = 16

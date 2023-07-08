@@ -34,16 +34,16 @@ public class CustomTextFieldView: BaseView {
     
     public lazy var textField = CustomTextField()
     
-    lazy var bottomLineView = UIView().builder
+    public lazy var bottomLineView = UIView().builder
         .backgroundColor(.mainGray4) //TODO: 3으로
         .build()
     
-    lazy var leftTopLabel = UILabel().builder
+    public lazy var leftTopLabel = UILabel().builder
         .font(.systemFont(ofSize: 14, weight: .regular))
         .textColor(.white)
         .build()
     
-    lazy var leftBottomLabel = UILabel().builder
+    public lazy var leftBottomLabel = UILabel().builder
         .font(.systemFont(ofSize: 12, weight: .regular))
         .textColor(DesignSystemAsset.Colors.mainPink.color)
         .numberOfLines(0)

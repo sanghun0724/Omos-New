@@ -47,7 +47,7 @@ final class EmailSignUpInteractor:
         case setPasswordFormatValidation(Bool)
         case setPasswordReconfirm(Bool)
         case setEmailReigisterValidation(Bool)
-        case attachNicknameRIB
+        case attachPasswordRIB
         case detach
     }
     
@@ -96,7 +96,7 @@ extension EmailSignUpInteractor {
         case let .passwordsDidChange(password, repassword):
             return passwordValidationMutation(password: password, repassword: repassword)
         case .confirmButtonDidTap:
-            return .just(.attachNicknameRIB)
+            return .just(.attachPasswordRIB)
         case .detach:
             return .just(.detach)
         }
@@ -259,8 +259,8 @@ extension EmailSignUpInteractor {
             .withUnretained(self)
             .flatMap { owner, mutation -> Observable<Mutation> in
                 switch mutation {
-                case .attachNicknameRIB:
-                    return owner.attachNicknameRIBTransform()
+                case .attachPasswordRIB:
+                    return owner.attachPasswordRIBTransform()
                 case .detach:
                     return owner.detachTransform()
                 default:
@@ -269,8 +269,8 @@ extension EmailSignUpInteractor {
             }
     }
     
-    private func attachNicknameRIBTransform() -> Observable<Mutation> {
-        self.router?.attachNicknameRIB()
+    private func attachPasswordRIBTransform() -> Observable<Mutation> {
+        self.router?.attachPasswordRIB()
         return .empty()
     }
     

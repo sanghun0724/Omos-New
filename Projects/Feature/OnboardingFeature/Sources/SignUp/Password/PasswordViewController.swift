@@ -25,7 +25,8 @@ final class PasswordViewController:
     // MARK: - Constants
     
     private enum UI {
-        
+        static let leadingTrailingMargin = 16
+        static let confirmButtonHeight = 48
     }
     
     // MARK: - Properties
@@ -35,6 +36,12 @@ final class PasswordViewController:
     private let actionRelay = PublishRelay<PasswordPresentableListener.Action>()
     
     // MARK: - UI Components
+    
+    private lazy var headerTitleLabel = UILabel().builder
+        .text(.signUp)
+        .textColor(.white)
+        .font(.boldSystemFont(ofSize: 24))
+        .build()
     
     private lazy var passwordTextFieldView = PasswordTextFieldView()
         .builder
@@ -141,12 +148,25 @@ extension PasswordViewController {
 
 extension PasswordViewController {
     private func setupUI() {
-        
+        contentView.addSubview(headerTitleLabel)
+        contentView.addSubview(passwordTextFieldView)
+        contentView.addSubview(repasswordTextFieldView)
         self.layout()
     }
     
     private func layout() {
-        
+        headerTitleLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(30)
+            $0.left.equalToSuperview().offset(16)
+        }
+        passwordTextFieldView.snp.makeConstraints {
+            $0.top.equalTo(headerTitleLabel.snp.bottom).offset(40)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+        }
+        repasswordTextFieldView.snp.makeConstraints {
+            $0.top.equalTo(passwordTextFieldView.leftBottomLabel.snp.bottom).offset(44)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+        }
     }
 }
 
