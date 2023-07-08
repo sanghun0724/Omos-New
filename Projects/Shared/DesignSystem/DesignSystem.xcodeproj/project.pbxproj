@@ -121,6 +121,7 @@
 		DC98EC4826AEED9F6C2F5605 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0E79946A9B17D94404E3E /* LoadingIndicator.swift */; };
 		DCB5B86196A596DE5E828A1A /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACDFB5AC561C3FAD86DEA94 /* UICollectionViewExtension.swift */; };
 		DDBC9565367D82B35C9865D4 /* RxKakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FE246BDCCB50482C36E78C /* RxKakaoSDKShare.framework */; platformFilter = ios; };
+		DEDA37C12A585C9D00465E19 /* EmailTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA37C02A585C9D00465E19 /* EmailTextFieldView.swift */; };
 		DEF194796B3E88509DA691EC /* HasLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABAB461A6442C4C3FA2F585 /* HasLoadingState.swift */; };
 		DFDAE77C4B3DBB7CACE9D08A /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25DFA501D983812260AA9F03 /* Differentiator.framework */; platformFilter = ios; };
 		E0FB4126176A8DF2A11BC97D /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036A3D8976E87C9693EE66EA /* HasDisposeBag.swift */; };
@@ -360,6 +361,7 @@
 		DB226760A62CD20630B6FA4D /* HasSetupConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasSetupConstraints.swift; sourceTree = "<group>"; };
 		DDA12AD00E98A3497D3A729E /* DesignSystem_DesignSystem-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DesignSystem_DesignSystem-Info.plist"; sourceTree = "<group>"; };
 		DE332838230E81BCF02E1032 /* RxKakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEDA37C02A585C9D00465E19 /* EmailTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextFieldView.swift; sourceTree = "<group>"; };
 		E0F96FEA0342CE6FE56ABBCB /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E34B523032979E3D13E18A4C /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		E54B00A2815336478E7F7140 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -756,6 +758,7 @@
 				8A0C4099F8DDC043E4D528B1 /* CustomTextField.swift */,
 				A5C90A9CD64E58198901AF10 /* CustomTextFieldView.swift */,
 				1787C2CE20D5350D14A25C7E /* PasswordTextFieldView.swift */,
+				DEDA37C02A585C9D00465E19 /* EmailTextFieldView.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -1098,6 +1101,7 @@
 				95B26BBE5E5C7EE4D5FCB983 /* UIViewPreview.swift in Sources */,
 				60F51920270C1BD570C64859 /* Images.swift in Sources */,
 				6922FB7E6A77450F20D194CB /* Strings.swift in Sources */,
+				DEDA37C12A585C9D00465E19 /* EmailTextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

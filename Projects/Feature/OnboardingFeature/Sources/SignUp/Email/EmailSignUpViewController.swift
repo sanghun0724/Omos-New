@@ -50,7 +50,7 @@ final class EmailSignUpViewController:
         .font(.boldSystemFont(ofSize: 24))
         .build()
     
-    private lazy var emailTextFieldView = CustomTextFieldView()
+    private lazy var emailTextFieldView = EmailTextFieldView()
         .builder
         .with {
             $0.fetchLeftTopLabelText(text: .email)
@@ -85,18 +85,16 @@ final class EmailSignUpViewController:
         bind(listener: self.listener)
     }
     
-}
+    // MARK: - Override
+    
+    override func isNeedCustomNavigationBarView() -> Bool {
+        true
+    }
 
-// MARK: - Override
-
-extension EmailSignUpViewController {
-//    override func isNeedCustomNavigationBarView() -> Bool {
-//        true
-//    }
-//
-//    override func navigationBarLeftButtonImage() -> UIImage? {
-//        DesignSystemAsset.Common.arrowLeft.image
-//    }
+    override func navigationBarLeftButtonImage() -> UIImage? {
+        DesignSystemAsset.Common.arrowLeft.image
+    }
+    
 }
 
 // MARK: - Bind listener

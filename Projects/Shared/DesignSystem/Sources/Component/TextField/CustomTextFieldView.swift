@@ -15,14 +15,14 @@ public class CustomTextFieldView: BaseView {
     }
     
     // MARK: - Constants
-
+    
     private enum UI {
-      static let textFieldHeight: CGFloat = 48
+        static let textFieldHeight: CGFloat = 48
     }
     
     // MARK: - Propoerties
     
-   public var isValidState: Bool = true {
+    public var isValidState: Bool = true {
         didSet {
             guard let text = textField.text, !text.isEmpty else {
                 setNomalState()
@@ -32,9 +32,10 @@ public class CustomTextFieldView: BaseView {
         }
     }
     
-   public lazy var textField = CustomTextField().builder
-        .set(\.layer.borderWidth, to: 1)
-        .set(\.layer.borderColor, to: UIColor.clear.cgColor)
+    public lazy var textField = CustomTextField()
+    
+    lazy var bottomLineView = UIView().builder
+        .backgroundColor(.mainGray4) //TODO: 3으로
         .build()
     
     lazy var leftTopLabel = UILabel().builder
@@ -71,6 +72,8 @@ public class CustomTextFieldView: BaseView {
         addSubview(textField)
         addSubview(leftTopLabel)
         addSubview(leftBottomLabel)
+        
+        textField.addSubview(bottomLineView)
     }
     
     public override func setupConstraints() {
@@ -78,6 +81,7 @@ public class CustomTextFieldView: BaseView {
         self.makeLeftTopLabelConstraints()
         self.makeRightTopLabelConstraints()
         self.makeTextFieldConstraints()
+        self.makebottomLineViewConstraints()
     }
     
     private func makeLeftTopLabelConstraints() {
@@ -97,6 +101,13 @@ public class CustomTextFieldView: BaseView {
             $0.height.equalTo(UI.textFieldHeight)
             $0.top.equalTo(leftBottomLabel.snp.bottom).offset(10)
             $0.left.right.bottom.equalToSuperview()
+        }
+    }
+    
+    private func makebottomLineViewConstraints() {
+        bottomLineView.snp.makeConstraints {
+            $0.bottom.left.right.equalTo(textField)
+            $0.height.equalTo(1)
         }
     }
     

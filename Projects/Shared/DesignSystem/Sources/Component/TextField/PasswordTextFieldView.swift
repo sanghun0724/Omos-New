@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class PasswordTextFieldView: CustomTextFieldView {
+public final class PasswordTextFieldView: CustomTextFieldView {
     
     // MARK: - Constants
 
