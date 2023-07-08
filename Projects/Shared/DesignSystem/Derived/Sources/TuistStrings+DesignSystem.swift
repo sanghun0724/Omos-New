@@ -23,8 +23,10 @@ public enum DesignSystemStrings {
   public enum Onboarding {
     /// 이메일
     public static let email = DesignSystemStrings.tr("Localizable", "onboarding.email")
+    /// 이미 등록된 이메일 이에요.
+    public static let emailDuplicatedWarning = DesignSystemStrings.tr("Localizable", "onboarding.emailDuplicatedWarning")
     /// 올바른 이메일 형식이 아니에요.
-    public static let emailwarning = DesignSystemStrings.tr("Localizable", "onboarding.emailwarning")
+    public static let emailFormatWarning = DesignSystemStrings.tr("Localizable", "onboarding.emailFormatWarning")
     ///   Kakao로 로그인
     public static let kakao = DesignSystemStrings.tr("Localizable", "onboarding.kakao")
     /// 이메일 로그인
@@ -41,6 +43,8 @@ public enum DesignSystemStrings {
     public static let passwordwarning = DesignSystemStrings.tr("Localizable", "onboarding.passwordwarning")
     /// 재확인 비밀번호가 틀립니다.
     public static let repasswordInvalidation = DesignSystemStrings.tr("Localizable", "onboarding.repasswordInvalidation")
+    /// 인증요청
+    public static let requestValidation = DesignSystemStrings.tr("Localizable", "onboarding.requestValidation")
     /// 인증메일 보내기
     public static let sendCertificationEmail = DesignSystemStrings.tr("Localizable", "onboarding.sendCertificationEmail")
     /// 이메일 회원가입

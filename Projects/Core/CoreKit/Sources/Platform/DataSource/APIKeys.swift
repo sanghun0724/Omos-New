@@ -10,7 +10,7 @@ import Foundation
 
 public struct RestApiUrl {
 #if DEBUG
-    public static let debugUrl = Environment.rootURL.absoluteString
+    public static let restUrl = Environment.rootURL.absoluteString
 #else
     public static let restUrl = Environment.rootURL.absoluteString
 #endif

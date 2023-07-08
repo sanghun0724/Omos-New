@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -636,6 +636,8 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 817A0A7AB5537251D8D4C8FB /* Build configuration list for PBXProject "OnboardingDomain" */;
 			compatibilityVersion = "Xcode 13.0";

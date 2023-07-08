@@ -15,16 +15,17 @@ public final class EmailTextFieldView: CustomTextFieldView {
     private enum UI {
       static let rightButtonHeight: CGFloat = 36
       static let rightButtonWidth: CGFloat = 68
+      static let textFieldHeight: CGFloat = 48
     }
     
     // MARK: - Properties
     
-    var rightButton = UIButton().builder
-        .backgroundColor(.red)
+    public var rightButton = UIButton().builder
+        .backgroundColor(.mainBlack3)
         .set(\.layer.cornerRadius, to: 12)
         .set(\.layer.masksToBounds, to: true)
         .with {
-            $0.setTitle("TEST", for: .normal)
+            $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .semibold)
         }
         .build()
 
@@ -32,26 +33,29 @@ public final class EmailTextFieldView: CustomTextFieldView {
     
     public override func initialize() {
       super.initialize()
-        textField.addSubview(self.rightButton)
+        addSubview(rightButton)
     }
     
     public override func setupConstraints() {
         super.setupConstraints()
         self.makeRightButtonConstraints()
-        self.updateBottomLineViewConstraints()
+        self.remakeCustomTextFieldConstraints()
     }
     
     private func makeRightButtonConstraints() {
         rightButton.snp.makeConstraints {
-            $0.right.top.bottom.equalToSuperview()
+            $0.right.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(-4)
+            $0.height.equalTo(UI.rightButtonHeight)
             $0.width.equalTo(UI.rightButtonWidth)
         }
     }
     
-    private func updateBottomLineViewConstraints() {
-        bottomLineView.snp.remakeConstraints {
+    private func remakeCustomTextFieldConstraints() {
+        textField.snp.remakeConstraints {
+            $0.height.equalTo(UI.textFieldHeight)
+            $0.top.equalTo(leftTopLabel.snp.bottom).offset(8)
             $0.left.bottom.equalToSuperview()
-            $0.height.equalTo(1)
             $0.right.equalTo(rightButton.snp.left).offset(-8)
         }
     }
