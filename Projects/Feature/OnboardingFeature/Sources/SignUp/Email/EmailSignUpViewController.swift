@@ -224,17 +224,17 @@ extension EmailSignUpViewController {
             .distinctUntilChanged()
             .skip(1)
             .filter { $0 }
-            .map ({ _ in "인증 완료 ✅" })
             .asDriver(onErrorDriveWith: .empty())
-            .drive(with: self) { owner, title in
+            .drive(with: self) { owner, _ in
                 owner.emailTextFieldView.isUserInteractionEnabled = false
+                // todo
             }
             .disposed(by: disposeBag)
     }
     
     private func bindIsEnableConfirmValidation(from listener: EmailSignUpPresentableListener) {
         listener.state
-            .map { $0.isSuccessEmailCertification && $0.isValidPasswordFormat && $0.isValidRepasswordConfirm }
+            .map(\.isSuccessEmailCertification)
             .distinctUntilChanged()
             .asDriver(onErrorDriveWith: .empty())
             .drive(self.confirmButton.rx.isEnabled)
