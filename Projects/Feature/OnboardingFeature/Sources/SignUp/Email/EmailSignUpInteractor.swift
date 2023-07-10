@@ -301,9 +301,11 @@ extension EmailSignUpInteractor {
         case let .setEmailReigisterValidation(validation):
             newState.isSuccessEmailCertification = validation
         case let .setPasswordFormatValidation(validation):
-            newState.isValidPasswordFormat = validation
+           // newState.isValidPasswordFormat = validation
+            print()
         case let .setPasswordReconfirm(validation):
-            newState.isValidRepasswordConfirm = validation
+          //  newState.isValidRepasswordConfirm = validation
+            print()
         default:
           //  log.debug("Do Nothing when \(mutation)")
             print()

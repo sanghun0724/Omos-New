@@ -10,9 +10,11 @@ import UIKit
 import RIBs
 import KakaoSDKAuth
 import KakaoSDKCommon
+import LogFlume
+
 import CoreKit
 import GlobalThirdPartyLibrary
-import LogFlume
+import AppFoundation
 
 @UIApplicationMain
 class AppDelegate:
