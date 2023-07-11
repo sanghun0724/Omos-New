@@ -44,6 +44,7 @@ final class EmailSignUpInteractor:
         case setIsSuccessRequestValidationCode(Bool)
         case setIsEmailDuplication(Bool)
         case setEmailFormatValidation(Bool)
+        case setCurrentEmailTextFieldIsEmpty(Bool)
         case setPasswordFormatValidation(Bool)
         case setPasswordReconfirm(Bool)
         case setEmailReigisterValidation(Bool)
@@ -91,7 +92,9 @@ extension EmailSignUpInteractor {
         switch action {
         case let .emailValidationRequestButtonDidTap(email):
             return emailValidationMutation(email: email)
-        case let .validationAlertButtonDidTap(inputCode):
+        case let .emailTextFieldDidChanged(email):
+            return .just(.setCurrentEmailTextFieldIsEmpty(email.isEmpty))
+        case let .validationCodeConfirmButtonDidTap(inputCode):
             return emailReigisterValidation(inputCode: inputCode)
         case let .passwordsDidChange(password, repassword):
             return passwordValidationMutation(password: password, repassword: repassword)
@@ -296,10 +299,13 @@ extension EmailSignUpInteractor {
             newState.isLoading = loading
         case let .setEmailFormatValidation(validation):
             newState.isValidEmailFormat = validation
+        case let .setCurrentEmailTextFieldIsEmpty(isEmpty):
+            newState.isEmailTextFieldEmpty = isEmpty
         case .setIsSuccessRequestValidationCode(_):
-            newState.isShowAlert = true
+            newState.isShowValdiationConfirmTextField = true
         case let .setEmailReigisterValidation(validation):
-            newState.isSuccessEmailCertification = validation
+            newState.revision = state.revision + 1
+            newState.isSuccessEmailCertification = ReactorValue(revision: newState.revision, value: validation)
         case let .setPasswordFormatValidation(validation):
            // newState.isValidPasswordFormat = validation
             print()
