@@ -11,8 +11,8 @@ public class ConfirmButton: UIButton {
     
     // MARK: Properties
     
-    let enableText: String
-    let disableText: String
+    var enableText: String
+    var disableText: String
     
     public override var isEnabled: Bool {
         didSet { setEnable(isEnabled)}
