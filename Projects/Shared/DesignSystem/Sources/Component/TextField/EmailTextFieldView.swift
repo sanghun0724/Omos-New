@@ -20,7 +20,7 @@ public final class EmailTextFieldView: CustomTextFieldView {
     
     // MARK: - Properties
     
-    public var rightButton = UIButton().builder
+    public var rightButton = ConfirmButton("인증요청").builder
         .backgroundColor(.mainBlack3)
         .set(\.layer.cornerRadius, to: 12)
         .set(\.layer.masksToBounds, to: true)
@@ -28,6 +28,12 @@ public final class EmailTextFieldView: CustomTextFieldView {
             $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .semibold)
         }
         .build()
+    
+    // MARK: - Helper
+    
+    public func setRightButtonTitle(to text: String) {
+        rightButton.setTitle(text, for: .normal)
+    }
 
     // MARK: UI
     

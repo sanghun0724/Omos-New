@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -124,11 +124,11 @@
 		AC505145337CF7DAC03F8AAB /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E9F5CC5F45082A4921E19 /* NeedleGenerated.swift */; };
 		ACD0DF4F150F62C46C7B1952 /* PasswordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A63A2DFA951E6E48EFAAB /* PasswordBuilder.swift */; };
 		AD0A7215C763648DFA605D0D /* BottomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3578839318BEFD216EF9EBA8 /* BottomButtonsView.swift */; };
-		AED20FA742E66E55F46BF190 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CBD30B066632F8502F54AC /* NeedleFoundation.framework */; platformFilter = ios; };
 		AF5BC6932AD1787EA376F8A4 /* libOnboardingFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F02B0217A47CC7F0FBAA503 /* libOnboardingFeatureInterface.a */; platformFilter = ios; };
 		B118F73F28C1C04C4EEE4966 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF157FC4A83132453835FCD7 /* SceneDelegate.swift */; };
 		B233E7BF14E5EBA316DD2365 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF331694F0499F871513003 /* LoggedInViewController.swift */; };
 		B40650A55668C8514098AD52 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF88F06AFA7D765864772231 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
+		B6C627D92A5C30BF00E6321B /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CBD30B066632F8502F54AC /* NeedleFoundation.framework */; platformFilter = ios; };
 		B7F95C82BC4651099D954316 /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB396925CAF1D49FC6F93C12 /* RxKakaoSDKUser.framework */; platformFilter = ios; };
 		B8110AE7024869EDDD00203C /* LoggedInStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75506F5E8A0FF055A7B162FA /* LoggedInStateAction.swift */; };
 		B843E59A07CC8D6A1EAEFB79 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 733333D807B534B1459731F9 /* libDesignSystem.a */; platformFilter = ios; };
@@ -507,6 +507,7 @@
 				5311AABDA9C87FAEC885DBE0 /* libCoreKit.a in Frameworks */,
 				49FE5E069421B642151422C8 /* libDesignSystem.a in Frameworks */,
 				3EA3331FA144B93F706AC926 /* Differentiator.framework in Frameworks */,
+				B6C627D92A5C30BF00E6321B /* NeedleFoundation.framework in Frameworks */,
 				8A33B84AE193E50E304F9CA0 /* libGlobalThirdPartyLibrary.a in Frameworks */,
 				2BE0FB597201C045EECB820E /* KakaoSDKAuth.framework in Frameworks */,
 				362F17BB099E905A5F57322D /* KakaoSDKCommon.framework in Frameworks */,
@@ -517,7 +518,6 @@
 				66B3846CF361962FB9FAA599 /* KakaoSDKUser.framework in Frameworks */,
 				879945F4D339B4B0FD916A41 /* Kingfisher.framework in Frameworks */,
 				0F858995846C631E29E460AF /* LogFlume.framework in Frameworks */,
-				AED20FA742E66E55F46BF190 /* NeedleFoundation.framework in Frameworks */,
 				45634F13FCA1B93EEA8FAC31 /* libOnboardingDomain.a in Frameworks */,
 				3EDBF0458CD583C6401BFE83 /* libOnboardingDomainInterface.a in Frameworks */,
 				4B13A1741F39ECB28FAB272A /* libOnboardingFeature.a in Frameworks */,
@@ -1139,7 +1139,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources\nswiftformat ${FILE_PATH}/NeedleGenerated.swift";
+			shellScript = "FILE_PATH=\"Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/Demo/Sources\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources\nswiftformat ${FILE_PATH}/NeedleGenerated.swift\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

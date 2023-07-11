@@ -18,20 +18,22 @@ struct EmailSignUpPresentableState: HasLoadingState, HasErrorState {
     var myError: ReactorValue<MyError> = .init()
     var isLoading = false
     var isValidEmailFormat = true
-    var isValidPasswordFormat = true
-    var isValidCheckPassword = false
-    var isValidRepasswordConfirm = false
-    var isSuccessEmailCertification = false
+//    var isValidPasswordFormat = true
+//    var isValidCheckPassword = false
+//    var isValidRepasswordConfirm = false
+    var isSuccessEmailCertification: ReactorValue<Bool> = .init()
     var isConfirmEnable = false
-    var isShowAlert = false
+    var isShowValdiationConfirmTextField = false
+    var isEmailTextFieldEmpty = true
 }
 
 // MARK: - SignUpPresentableAction
 
 enum EmailSignUpPresentableAction {
     case emailValidationRequestButtonDidTap(email: String)
-    case validationAlertButtonDidTap(inputCode: String)
+    case validationCodeConfirmButtonDidTap(inputCode: String)
     case passwordsDidChange(password: String, repassword: String)
+    case emailTextFieldDidChanged(email: String)
     case confirmButtonDidTap
     case detach
 }
