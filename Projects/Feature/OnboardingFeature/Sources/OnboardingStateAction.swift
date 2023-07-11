@@ -20,21 +20,20 @@ struct OnboardingPresentableState: Equatable, HasLoadingState, HasErrorState {
     var revision = 0
     var isLoading = false
     var myError = ReactorValue<MyError>(revision: 0, value: MyError.noError)
-    
 }
 
 // MARK: - OnboardingPresentableAction
 
 enum OnboardingPresentableAction {
-    case didTapkakaoLoggedInButton
-    case didTapAppleLoggedInButton
+    case didTapKakaoLoggedInButton
+    case didTapAppleLoggedInButton(email: String)
     case didTapEmailSingUpButton
     case didTapEmailLoggedInButton
 }
 
 // MARK: - OnboardingPresentableListener
 
-protocol OnboardingPresentableListener: AnyObject {
+protocol OnboardingPresentableListener: AnyObject, HasLoadingStream, HasErrorStream {
     typealias Action = OnboardingPresentableAction
     typealias State = OnboardingPresentableState
     

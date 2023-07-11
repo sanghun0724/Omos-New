@@ -102,6 +102,11 @@ final class OnboardingViewController:
         bindUI()
         bind(listener: self.listener)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        bindActions() // for apple
+    }
 }
 
 
@@ -113,51 +118,9 @@ extension OnboardingViewController {}
 
 extension OnboardingViewController {
     private func bindUI() {
-        bindKakaoLoggedInButton()
-        bindAppleLoggedInButton()
-        bindEmailSignUpButton()
-        bindEmailLoggedInButton()
+    
     }
     
-    private func bindKakaoLoggedInButton() {
-        kakaoButton
-            .rx
-            .tap
-            .preventDuplication()
-            .map { .didTapkakaoLoggedInButton }
-            .bind(to: self.actionRelay)
-            .disposed(by: disposeBag)
-    }
-    
-    private func bindAppleLoggedInButton() {
-        appleButton
-            .rx
-            .tapGesture()
-            .preventDuplication()
-            .map { _ in .didTapkakaoLoggedInButton }
-            .bind(to: self.actionRelay)
-            .disposed(by: disposeBag)
-    }
-    
-    private func bindEmailSignUpButton() {
-        signUpButton
-            .rx
-            .tap
-            .preventDuplication()
-            .map { .didTapkakaoLoggedInButton }
-            .bind(to: self.actionRelay)
-            .disposed(by: disposeBag)
-    }
-    
-    private func bindEmailLoggedInButton() {
-        loggedInButton
-            .rx
-            .tap
-            .preventDuplication()
-            .map { .didTapEmailLoggedInButton }
-            .bind(to: self.actionRelay)
-            .disposed(by: disposeBag)
-    }
 
 }
 
@@ -166,6 +129,8 @@ extension OnboardingViewController {
 extension OnboardingViewController {
     private func bind(listener: OnboardingPresentableListener?) {
         guard let listener = listener else { return }
+        self.bindActionRelay()
+        bindState(from: listener)
     }
     
     private func bindActionRelay() {
@@ -181,7 +146,50 @@ extension OnboardingViewController {
 
 extension OnboardingViewController {
     private func bindActions() {
-        
+        bindKakaoLoggedInButtonAction()
+        bindAppleLoggedInButtonAction()
+        bindEmailSignUpButtonAction()
+        bindEmailLoggedInButtonAction()
+    }
+    
+    private func bindKakaoLoggedInButtonAction() {
+        kakaoButton
+            .rx
+            .tap
+            .preventDuplication()
+            .map { .didTapKakaoLoggedInButton }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindAppleLoggedInButtonAction() {
+        appleButton
+            .rx
+            .loginOnTap(scope: [.email])
+            .compactMap { ($0.credential as? ASAuthorizationAppleIDCredential)?.email }
+            .map { .didTapAppleLoggedInButton(email: $0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindEmailSignUpButtonAction() {
+        signUpButton
+            .rx
+            .tap
+            .preventDuplication()
+            .map { .didTapEmailSingUpButton }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindEmailLoggedInButtonAction() {
+        loggedInButton
+            .rx
+            .tap
+            .preventDuplication()
+            .map { .didTapEmailLoggedInButton }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
     }
 }
 
@@ -189,6 +197,10 @@ extension OnboardingViewController {
 
 extension OnboardingViewController {
     private func bindState(from listener: OnboardingPresentableListener) {
+
+    }
+    
+    private func bindTestEamilState() {
         
     }
 }

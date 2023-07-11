@@ -54,7 +54,7 @@ final class NicknameViewController:
         .builder
         .with {
             $0.fetchLeftTopLabelText(text: .nickname)
-            $0.fetchRightTopLabelText(text: .nicknameWarning)
+            $0.fetchLeftBottomLabelText(text: .nicknameWarning)
         }
         .build()
     

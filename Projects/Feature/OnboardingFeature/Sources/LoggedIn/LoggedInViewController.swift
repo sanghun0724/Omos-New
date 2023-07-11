@@ -43,7 +43,7 @@ final class LoggedInViewController:
         .builder
         .with {
             $0.fetchLeftTopLabelText(text: .email)
-            $0.fetchRightTopLabelText(text: .emailWarning)
+            $0.fetchLeftBottomLabelText(text: .emailFormatWarning)
         }
         .build()
     
@@ -51,7 +51,7 @@ final class LoggedInViewController:
         .builder
         .with {
             $0.fetchLeftTopLabelText(text: .password)
-            $0.fetchRightTopLabelText(text: .passwordWarning)
+            $0.fetchLeftBottomLabelText(text: .passwordWarning)
         }
         .build()
     

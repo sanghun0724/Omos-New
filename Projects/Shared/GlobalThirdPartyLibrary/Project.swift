@@ -18,7 +18,7 @@ let project = Project.makeModule(
         .SPM.Alamofire,
         .SPM.SkeletonView,
         .SPM.SnapKit,
-        .SPM.KakaoSDK,
+        .SPM.RxKakaoSDK,
         .SPM.RxGesture,
     ]
 )

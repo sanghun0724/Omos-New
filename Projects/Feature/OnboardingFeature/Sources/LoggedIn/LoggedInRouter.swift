@@ -12,7 +12,7 @@ import OnboardingFeatureInterface
 
 // MARK: - LoggedInInteractable
 
-protocol LoggedInInteractable: Interactable, TodayListener, SignUpListener {
+protocol LoggedInInteractable: Interactable, TodayListener, EmailSignUpListener {
     var router: LoggedInRouting? { get set }
     var listener: LoggedInListener? { get set }
 }
@@ -29,13 +29,13 @@ final class LoggedInRouter:
     private let todayBuilder: TodayBuildable
     private var todayRouter: TodayRouting?
     
-    private let signUpBuilder: SignUpBuildable
-    private var signUpRouter: SignUpRouting?
+    private let signUpBuilder: EmailSignUpBuildable
+    private var signUpRouter: EmailSignUpRouting?
     
     // MARK: - initialization * Deinitialization
     
     init(todayBuilder: TodayBuildable,
-         signUpBuilder: SignUpBuildable,
+         signUpBuilder: EmailSignUpBuildable,
         interactor: LoggedInInteractable,
          viewController: LoggedInViewControllable) {
         self.todayBuilder = todayBuilder
@@ -55,7 +55,7 @@ final class LoggedInRouter:
     func attachSignUpRIB() {
         guard self.signUpRouter == nil else { return }
         let router = self.signUpBuilder.build(
-            with: SignUpBuildDependency(
+            with: EmailSignUpBuildDependency(
                 listener: interactor
             )
         )

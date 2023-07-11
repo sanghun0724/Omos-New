@@ -11,6 +11,8 @@ import RIBs
 import RxSwift
 
 import OnboardingFeatureInterface
+import OnboardingDomainInterface
+import AppFoundation
 
 // MARK: - OnboardingPresentable
 
@@ -33,24 +35,31 @@ final class OnboardingInteractor:
     typealias State = OnboardingPresentableState
     
     enum Mutation {
+        case setError(MyError)
+        case setLoading(Bool)
         case attachSignUpRIB
         case attachLoggedInRIB
+        case attachAgreementRIB(email: String)
+        case attachTodayRIB
     }
-    
+     
     // MARK: - Properties
     
     weak var router: OnboardingRouting?
     weak var listener: OnboardingListener?
     
     let initialState: OnboardingPresentableState
+    private let onboardingRepositoryService: OnboardingRepositoryService
     
     // MARK: - Initialization & Deinitialization
     
     init(
         presenter: OnboardingPresentable,
-        initialState: OnboardingPresentableState
+        initialState: OnboardingPresentableState,
+        onboardingRepositoryService: OnboardingRepositoryService
     ) {
         self.initialState = initialState
+        self.onboardingRepositoryService = onboardingRepositoryService
         
         super.init(presenter: presenter)
         presenter.listener = self
@@ -68,8 +77,8 @@ final class OnboardingInteractor:
 extension OnboardingInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        case .didTapkakaoLoggedInButton:
-            return .empty()
+        case .didTapKakaoLoggedInButton:
+            return kakaoLoginMutation()
         case .didTapAppleLoggedInButton:
             return .empty()
         case .didTapEmailSingUpButton:
@@ -78,6 +87,25 @@ extension OnboardingInteractor {
             return .just(.attachLoggedInRIB)
         }
     }
+    
+    private func kakaoLoginMutation() -> Observable<Mutation> {
+        let kakaoLoginMutation: Observable<Mutation> = onboardingRepositoryService.kakaoLogin()
+            .map{ .attachAgreementRIB(email: $0) }
+            .catchAndReturn( .setError(.defaultError))
+        
+        let sequence: [Observable<Mutation>] = [
+            .just(.setLoading(true)),
+             kakaoLoginMutation,
+            .just(.setLoading(false))
+        ]
+        
+        return .concat(sequence)
+    }
+    
+    private func appleLogin() -> Observable<Mutation> {
+        return .empty()
+    }
+    
 }
 
 // MARK: Trasnform
@@ -108,6 +136,11 @@ extension OnboardingInteractor {
         return .empty()
     }
     
+    private func attachAgreemntRIBTransform() -> Observable<Mutation> {
+        //self.router?.att()
+        return .empty()
+    }
+    
 }
 
 // MARK: - reduce
@@ -115,6 +148,13 @@ extension OnboardingInteractor {
 extension OnboardingInteractor {
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
+        
+//        switch mutation {
+//        case let .attachAgreementRIB(email):
+//            newState.testEmail = email
+//        default:
+//            print()
+//        }
         
         return newState
     }
@@ -127,5 +167,9 @@ extension OnboardingInteractor {
     
     func detachLoggedInRIB() {
         self.router?.detachLoggedInRIB()
+    }
+    
+    func detachAgreementRIB() {
+        
     }
 }

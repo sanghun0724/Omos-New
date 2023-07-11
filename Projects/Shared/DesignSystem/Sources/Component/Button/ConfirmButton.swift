@@ -11,8 +11,8 @@ public class ConfirmButton: UIButton {
     
     // MARK: Properties
     
-    let enableText: String
-    let disableText: String
+    var enableText: String
+    var disableText: String
     
     public override var isEnabled: Bool {
         didSet { setEnable(isEnabled)}
@@ -42,7 +42,7 @@ public class ConfirmButton: UIButton {
     }
     
     private func setEnable(_ isEnable: Bool) {
-        backgroundColor = isEnable ? DesignSystemAsset.Colors.mainOrange.color : DesignSystemAsset.Colors.mainGray4.color
+        backgroundColor = isEnable ? DesignSystemAsset.Colors.mainPink.color : DesignSystemAsset.Colors.mainGray4.color
         setTitle(isEnable ? enableText : disableText, for: .normal)
     }
 }

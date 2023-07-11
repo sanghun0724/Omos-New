@@ -4,14 +4,14 @@ import RIBs
 // MARK: - SignUpListener
 
 /// @mockable
-public protocol SignUpListener: AnyObject {
+public protocol EmailSignUpListener: AnyObject {
     func detachSignUpRIB()
 }
 
 // MARK: - SignUpRouting
 
 /// @mockable
-public protocol SignUpRouting: ViewableRouting {
+public protocol EmailSignUpRouting: ViewableRouting {
     func attachNicknameRIB()
     func detachNicknameRIB()
 }
@@ -19,10 +19,10 @@ public protocol SignUpRouting: ViewableRouting {
 // MARK: - SignUpBuildDependency
 
 /// @mockable
-public struct SignUpBuildDependency {
-    public let listener: SignUpListener
+public struct EmailSignUpBuildDependency {
+    public let listener: EmailSignUpListener
     
-    public init(listener: SignUpListener) {
+    public init(listener: EmailSignUpListener) {
         self.listener = listener
     }
 }
@@ -30,7 +30,7 @@ public struct SignUpBuildDependency {
 // MARK: - SignUpBuildable
 
 /// @mockable
-public protocol SignUpBuildable: Buildable {
-    func build(with dynamicBuildDependency: SignUpBuildDependency) -> SignUpRouting
+public protocol EmailSignUpBuildable: Buildable {
+    func build(with dynamicBuildDependency: EmailSignUpBuildDependency) -> EmailSignUpRouting
 }
 

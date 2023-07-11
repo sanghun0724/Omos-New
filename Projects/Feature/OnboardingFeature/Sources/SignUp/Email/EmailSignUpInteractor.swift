@@ -10,34 +10,33 @@ import Foundation
 import ReactorKit
 import RIBs
 import RxSwift
+import LogFlume
 
 import OnboardingFeatureInterface
 import OnboardingDomain
 import OnboardingDomainInterface
-import GlobalThirdPartyLibrary
 import AppFoundation
-import DesignSystem
 
 
 // MARK: - SignUpPresentable
 
-protocol SignUpPresentable: Presentable {
-    var listener: SignUpPresentableListener? { get set }
+protocol EmailSignUpPresentable: Presentable {
+    var listener: EmailSignUpPresentableListener? { get set }
 }
 
 // MARK: - SignUpInteractor
 
-final class SignUpInteractor:
-    PresentableInteractor<SignUpPresentable>,
-    SignUpInteractable,
-    SignUpPresentableListener,
+final class EmailSignUpInteractor:
+    PresentableInteractor<EmailSignUpPresentable>,
+    EmailSignUpInteractable,
+    EmailSignUpPresentableListener,
     Reactor
 {
     
     // MARK: - Reactor
     
-    typealias Action = SignUpPresentableAction
-    typealias State = SignUpPresentableState
+    typealias Action = EmailSignUpPresentableAction
+    typealias State = EmailSignUpPresentableState
     
     enum Mutation {
         case setError(MyError)
@@ -45,6 +44,7 @@ final class SignUpInteractor:
         case setIsSuccessRequestValidationCode(Bool)
         case setIsEmailDuplication(Bool)
         case setEmailFormatValidation(Bool)
+        case setCurrentEmailTextFieldIsEmpty(Bool)
         case setPasswordFormatValidation(Bool)
         case setPasswordReconfirm(Bool)
         case setEmailReigisterValidation(Bool)
@@ -54,18 +54,18 @@ final class SignUpInteractor:
     
     // MARK: - Properties
     
-    weak var router: SignUpRouting?
-    weak var listener: SignUpListener?
+    weak var router: EmailSignUpRouting?
+    weak var listener: EmailSignUpListener?
     private let onboardingRepositoryService: OnboardingRepositoryService
     
-    let initialState: SignUpPresentableState
+    let initialState: EmailSignUpPresentableState
     
     
     // MARK: - Initialization & Deinitialization
     
     init(
-        presenter: SignUpPresentable,
-        initialState: SignUpPresentableState,
+        presenter: EmailSignUpPresentable,
+        initialState: EmailSignUpPresentableState,
         onboardingRepositoryService: OnboardingRepositoryService
     ) {
         self.initialState = initialState
@@ -81,18 +81,20 @@ final class SignUpInteractor:
     }
     
     deinit {
-        log.verbose(type(of: self))
+        //log.verbose(type(of: self))
     }
 }
 
 // MARK: - mutate
 
-extension SignUpInteractor {
+extension EmailSignUpInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case let .emailValidationRequestButtonDidTap(email):
             return emailValidationMutation(email: email)
-        case let .validationAlertButtonDidTap(inputCode):
+        case let .emailTextFieldDidChanged(email):
+            return .just(.setCurrentEmailTextFieldIsEmpty(email.isEmpty))
+        case let .validationCodeConfirmButtonDidTap(inputCode):
             return emailReigisterValidation(inputCode: inputCode)
         case let .passwordsDidChange(password, repassword):
             return passwordValidationMutation(password: password, repassword: repassword)
@@ -253,7 +255,7 @@ extension SignUpInteractor {
 
 // MARK: - trasnform mutation
 
-extension SignUpInteractor {
+extension EmailSignUpInteractor {
     
     func transform(mutation: Observable<Mutation>) -> Observable<Mutation> {
         return mutation
@@ -284,8 +286,8 @@ extension SignUpInteractor {
 
 // MARK: - reduce
 
-extension SignUpInteractor {
-    func reduce(state: SignUpPresentableState, mutation: Mutation) -> SignUpPresentableState {
+extension EmailSignUpInteractor {
+    func reduce(state: EmailSignUpPresentableState, mutation: Mutation) -> EmailSignUpPresentableState {
         var newState = state
 
         switch mutation {
@@ -297,16 +299,22 @@ extension SignUpInteractor {
             newState.isLoading = loading
         case let .setEmailFormatValidation(validation):
             newState.isValidEmailFormat = validation
+        case let .setCurrentEmailTextFieldIsEmpty(isEmpty):
+            newState.isEmailTextFieldEmpty = isEmpty
         case .setIsSuccessRequestValidationCode(_):
-            newState.isShowAlert = true
+            newState.isShowValdiationConfirmTextField = true
         case let .setEmailReigisterValidation(validation):
-            newState.isSuccessEmailCertification = validation
+            newState.revision = state.revision + 1
+            newState.isSuccessEmailCertification = ReactorValue(revision: newState.revision, value: validation)
         case let .setPasswordFormatValidation(validation):
-            newState.isValidPasswordFormat = validation
+           // newState.isValidPasswordFormat = validation
+            print()
         case let .setPasswordReconfirm(validation):
-            newState.isValidRepasswordConfirm = validation
+          //  newState.isValidRepasswordConfirm = validation
+            print()
         default:
-            log.debug("Do Nothing when \(mutation)")
+          //  log.debug("Do Nothing when \(mutation)")
+            print()
         }
         
         return newState

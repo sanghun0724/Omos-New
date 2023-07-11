@@ -79,8 +79,8 @@ class ValidationCodeAlertView: BaseView {
     
     private func setFailureState() {
         guideLabel.text = "인증번호가 틀렸습니다.\n다시 한번 확인해 주세요"
-        guideLabel.textColor = DesignSystemAsset.Colors.mainOrange.color
-        codeInputField.layer.borderColor = DesignSystemAsset.Colors.mainOrange.color.cgColor
+        guideLabel.textColor = DesignSystemAsset.Colors.mainPink.color
+        codeInputField.layer.borderColor = DesignSystemAsset.Colors.mainPink.color.cgColor
     }
     
     @objc

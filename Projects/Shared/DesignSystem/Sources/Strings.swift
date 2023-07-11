@@ -22,7 +22,8 @@ public extension String {
     static let loggedIn = DesignSystemStrings.Onboarding.loggedIn
     static let email = DesignSystemStrings.Onboarding.email
     static let password = DesignSystemStrings.Onboarding.password
-    static let emailWarning = DesignSystemStrings.Onboarding.emailwarning
+    static let emailFormatWarning = DesignSystemStrings.Onboarding.emailFormatWarning
+    static let emailDuplicatedWarning = DesignSystemStrings.Onboarding.emailDuplicatedWarning
     static let passwordWarning = DesignSystemStrings.Onboarding.passwordwarning
     static let kakao = DesignSystemStrings.Onboarding.kakao
     static let signUp = DesignSystemStrings.Onboarding.signUp

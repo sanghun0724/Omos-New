@@ -15,14 +15,14 @@ public class CustomTextFieldView: BaseView {
     }
     
     // MARK: - Constants
-
+    
     private enum UI {
-      static let textFieldHeight: CGFloat = 48
+        static let textFieldHeight: CGFloat = 48
     }
     
     // MARK: - Propoerties
     
-   public var isValidState: Bool = true {
+    public var isValidState: Bool = true {
         didSet {
             guard let text = textField.text, !text.isEmpty else {
                 setNomalState()
@@ -32,9 +32,10 @@ public class CustomTextFieldView: BaseView {
         }
     }
     
-   public lazy var textField = CustomTextField().builder
-        .set(\.layer.borderWidth, to: 1)
-        .set(\.layer.borderColor, to: UIColor.clear.cgColor)
+    public lazy var textField = CustomTextField()
+    
+    lazy var bottomLineView = UIView().builder
+        .backgroundColor(.mainGray4) //TODO: 3으로
         .build()
     
     lazy var leftTopLabel = UILabel().builder
@@ -42,9 +43,10 @@ public class CustomTextFieldView: BaseView {
         .textColor(.white)
         .build()
     
-    lazy var rightTopLabel = UILabel().builder
+    lazy var leftBottomLabel = UILabel().builder
         .font(.systemFont(ofSize: 12, weight: .regular))
-        .textColor(DesignSystemAsset.Colors.mainOrange.color)
+        .textColor(DesignSystemAsset.Colors.mainPink.color)
+        .numberOfLines(0)
         .isHidden(true)
         .build()
     
@@ -52,17 +54,17 @@ public class CustomTextFieldView: BaseView {
         leftTopLabel.text = text
     }
     
-    public func fetchRightTopLabelText(text: String) {
-        rightTopLabel.text = text
+    public func fetchLeftBottomLabelText(text: String) {
+        leftBottomLabel.text = text
     }
     
     public func setWarningState() {
-        rightTopLabel.isHidden = false
-        textField.layer.borderColor = DesignSystemAsset.Colors.mainOrange.color.cgColor
+        leftBottomLabel.isHidden = false
+        textField.layer.borderColor = DesignSystemAsset.Colors.mainPink.color.cgColor
     }
     
     public func setNomalState() {
-        rightTopLabel.isHidden = true
+        leftBottomLabel.isHidden = true
         textField.layer.borderColor = UIColor.clear.cgColor
     }
     
@@ -70,14 +72,17 @@ public class CustomTextFieldView: BaseView {
         super.initialize()
         addSubview(textField)
         addSubview(leftTopLabel)
-        addSubview(rightTopLabel)
+        addSubview(leftBottomLabel)
+        
+        textField.addSubview(bottomLineView)
     }
     
     public override func setupConstraints() {
         super.setupConstraints()
         self.makeLeftTopLabelConstraints()
-        self.makeRightTopLabelConstraints()
+        self.makeLeftBottomLabelConstraints()
         self.makeTextFieldConstraints()
+        self.makebottomLineViewConstraints()
     }
     
     private func makeLeftTopLabelConstraints() {
@@ -86,17 +91,25 @@ public class CustomTextFieldView: BaseView {
         }
     }
     
-    private func makeRightTopLabelConstraints() {
-        rightTopLabel.snp.makeConstraints {
-            $0.right.top.equalToSuperview()
+    private func makeLeftBottomLabelConstraints() {
+        leftBottomLabel.snp.makeConstraints {
+            $0.left.equalToSuperview()
+            $0.top.equalTo(textField.snp.bottom).offset(8)
         }
     }
     
     private func makeTextFieldConstraints() {
         textField.snp.makeConstraints {
             $0.height.equalTo(UI.textFieldHeight)
-            $0.top.equalTo(rightTopLabel.snp.bottom).offset(10)
+            $0.top.equalTo(leftTopLabel.snp.bottom).offset(10)
             $0.left.right.bottom.equalToSuperview()
+        }
+    }
+    
+    private func makebottomLineViewConstraints() {
+        bottomLineView.snp.makeConstraints {
+            $0.bottom.left.right.equalTo(textField)
+            $0.height.equalTo(1)
         }
     }
     

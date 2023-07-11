@@ -10,10 +10,15 @@ import NeedleFoundation
 import RIBs
 
 import OnboardingFeatureInterface
+import OnboardingDomainInterface
 
 // MARK: - OnboardingDependency
 
-public protocol OnboardingDependency: NeedleFoundation.Dependency {}
+public protocol OnboardingDependency: NeedleFoundation.Dependency {
+    var onboardingRepositoryService: OnboardingRepositoryService { get }
+    var signUpBuilder: EmailSignUpBuildable { get }
+    var loggedInBuilder: LoggedInBuildable { get }
+}
 
 // MARK: - OnboardingComponent
 
@@ -35,9 +40,18 @@ public final class OnboardingBuilder:
       _ payload: OnboardingBuildDependency
     ) -> OnboardingRouting {
         let viewController = OnboardingViewController()
-        let interactor = OnboardingInteractor(presenter: viewController, initialState: component.initialState)
+        let interactor = OnboardingInteractor(
+            presenter: viewController,
+            initialState: component.initialState,
+            onboardingRepositoryService: component.onboardingRepositoryService
+        )
         
         interactor.listener = payload.listener
-        return OnboardingRouter(interactor: interactor, viewController: viewController)
+        return OnboardingRouter(
+            interactor: interactor,
+            signUpBuilder: component.signUpBuilder,
+            loggedInBuilder: component.loggedInBuilder,
+            viewController: viewController
+        )
     }
 }

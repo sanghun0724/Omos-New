@@ -11,7 +11,7 @@ import RIBs
 import KakaoSDKAuth
 import KakaoSDKCommon
 import CoreKit
-import GlobalThirdPartyLibrary
+import AppFoundation
 import LogFlume
 
 @UIApplicationMain
@@ -38,7 +38,7 @@ class AppDelegate:
 
 extension AppDelegate {
     private func setKakaoSDK() {
-        KakaoSDK.initSDK(appKey: "")
+        KakaoSDK.initSDK(appKey: KAKAO.Key)
     }
     
     private func setLoggingChannel() {

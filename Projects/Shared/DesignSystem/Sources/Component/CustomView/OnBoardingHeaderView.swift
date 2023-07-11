@@ -33,7 +33,7 @@ public class OnBoardingHeaderView: BaseView {
         .builder
         .text(DesignSystemStrings.Onboarding.loggedIn)
         .font(.systemFont(ofSize: 22))
-        .textColor(DesignSystemAsset.Colors.mainOrange.color)
+        .textColor(DesignSystemAsset.Colors.mainPink.color)
         .build()
     
     public override func initialize() {
