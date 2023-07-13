@@ -25,7 +25,7 @@ struct EmailSignUpPresentableState: HasLoadingState, HasErrorState {
     var isConfirmEnable = false
     var isShowValdiationConfirmTextField = false
     var isEmailTextFieldEmpty = true
-    var isValidationCodeTextFieldFormat = false
+    var isValidCodeFormat = false
 }
 
 // MARK: - SignUpPresentableAction

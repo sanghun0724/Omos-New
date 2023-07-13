@@ -202,6 +202,7 @@ extension EmailSignUpViewController {
         bindEmailRegisterValidation(from: listener)
         bindIsEnableConfirmValidation(from: listener)
         bindIsEmailTextFieldEmpty(from: listener)
+        bindIsValidateCodeFormate(from: listener)
     }
     
     private func bindIsEmailTextFieldEmpty(from listener: EmailSignUpPresentableListener) {
@@ -243,6 +244,15 @@ extension EmailSignUpViewController {
                 owner.emailTextFieldView.isUserInteractionEnabled = false
                 // todo
             }
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindIsValidateCodeFormate(from listener: EmailSignUpPresentableListener) {
+        listener.state
+            .map(\.isValidCodeFormat)
+            .distinctUntilChanged()
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.validationCodeConfirmTextFieldView.rightButton.rx.isEnabled)
             .disposed(by: disposeBag)
     }
     

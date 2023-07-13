@@ -45,6 +45,7 @@ final class EmailSignUpInteractor:
         case setIsEmailDuplication(Bool)
         case setEmailFormatValidation(Bool)
         case setCurrentEmailTextFieldIsEmpty(Bool)
+        case setValidationCodeFormat(Bool)
         case setPasswordFormatValidation(Bool)
         case setPasswordReconfirm(Bool)
         case setEmailReigisterValidation(Bool)
@@ -96,6 +97,8 @@ extension EmailSignUpInteractor {
             return .just(.setCurrentEmailTextFieldIsEmpty(email.isEmpty))
         case let .validationCodeConfirmButtonDidTap(inputCode):
             return emailReigisterValidation(inputCode: inputCode)
+        case let .validationCodeTextFieldDidChanged(code):
+            return validationCodeDidChangedMutation(code: code)
         case let .passwordsDidChange(password, repassword):
             return passwordValidationMutation(password: password, repassword: repassword)
         case .confirmButtonDidTap:
@@ -202,6 +205,14 @@ extension EmailSignUpInteractor {
         return emailReigisterValidation
     }
     
+    // MARK: - Validation
+    
+    private func validationCodeDidChangedMutation(code: String) -> Observable<Mutation> {
+        return .just(.setValidationCodeFormat(code.count >= 6))
+    }
+    
+    // MARK: Password
+    
     private func passwordFormatValidationMutation(password: String) -> Observable<Mutation> {
         let passwordValidationMutation: Observable<Mutation> =
         self.onboardingRepositoryService.isValidPassword(password: password)
@@ -210,8 +221,6 @@ extension EmailSignUpInteractor {
         
         return passwordValidationMutation
     }
-    
-    // MARK: Password
     
     private func passwordValidationMutation(password: String, repassword: String) -> Observable<Mutation> {
         return Observable<Mutation>.create { [weak self] observer in
@@ -306,6 +315,8 @@ extension EmailSignUpInteractor {
         case let .setEmailReigisterValidation(validation):
             newState.revision = state.revision + 1
             newState.isSuccessEmailCertification = ReactorValue(revision: newState.revision, value: validation)
+        case let .setValidationCodeFormat(validation):
+            newState.isValidCodeFormat = validation
         case let .setPasswordFormatValidation(validation):
            // newState.isValidPasswordFormat = validation
             print()
