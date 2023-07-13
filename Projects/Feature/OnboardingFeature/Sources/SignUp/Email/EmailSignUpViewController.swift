@@ -122,15 +122,16 @@ extension EmailSignUpViewController {
 
 extension EmailSignUpViewController {
     private func bindActions() {
-        bindEmailValidationRequestButtonDidTapAction()
-        bindValidationPopupButtonDidTap()
-        bindConfirmButtonDidTap()
-        bindDetachAction()
         bindCloseButtonTapAction()
-        bindEmailTextFieldDidChanged()
+        bindEmailTextFieldDidChangedAction()
+        bindEmailValidationRequestButtonTapAction()
+        bindValidationCodeConfirmTextAction()
+        bindValidationCodeConfirmButtonTapAction()
+        bindConfirmButtonTapAction()
+        bindDetachAction()
     }
     
-    private func bindEmailTextFieldDidChanged() {
+    private func bindEmailTextFieldDidChangedAction() {
         emailTextFieldView.textField.rx
             .text
             .orEmpty
@@ -140,7 +141,7 @@ extension EmailSignUpViewController {
             .disposed(by: disposeBag)
     }
     
-    private func bindEmailValidationRequestButtonDidTapAction() {
+    private func bindEmailValidationRequestButtonTapAction() {
         emailTextFieldView.rightButton
             .rx
             .tapWithPreventDuplication()
@@ -153,7 +154,17 @@ extension EmailSignUpViewController {
             
     }
     
-    private func bindValidationPopupButtonDidTap() {
+    private func bindValidationCodeConfirmTextAction() {
+        validationCodeConfirmTextFieldView.textField.rx
+            .text
+            .orEmpty
+            .changed
+            .map { .validationCodeTextFieldDidChanged(code: $0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindValidationCodeConfirmButtonTapAction() {
         validationCodeConfirmTextFieldView.rightButton
             .rx
             .tapWithPreventDuplication()
@@ -163,7 +174,7 @@ extension EmailSignUpViewController {
             .disposed(by: disposeBag)
     }
     
-    private func bindConfirmButtonDidTap() {
+    private func bindConfirmButtonTapAction() {
         confirmButton
             .rx
             .tapWithPreventDuplication()

@@ -25,6 +25,7 @@ struct EmailSignUpPresentableState: HasLoadingState, HasErrorState {
     var isConfirmEnable = false
     var isShowValdiationConfirmTextField = false
     var isEmailTextFieldEmpty = true
+    var isValidationCodeTextFieldFormat = false
 }
 
 // MARK: - SignUpPresentableAction
@@ -34,6 +35,7 @@ enum EmailSignUpPresentableAction {
     case validationCodeConfirmButtonDidTap(inputCode: String)
     case passwordsDidChange(password: String, repassword: String)
     case emailTextFieldDidChanged(email: String)
+    case validationCodeTextFieldDidChanged(code: String)
     case confirmButtonDidTap
     case detach
 }
