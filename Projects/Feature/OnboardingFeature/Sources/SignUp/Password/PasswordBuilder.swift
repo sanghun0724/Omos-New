@@ -10,10 +10,13 @@ import NeedleFoundation
 import RIBs
 
 import OnboardingFeatureInterface
+import OnboardingDomainInterface
 
 // MARK: - PasswordDependency
 
-protocol PasswordDependency: NeedleFoundation.Dependency {}
+protocol PasswordDependency: NeedleFoundation.Dependency {
+    var onboardingRepositoryService: OnboardingRepositoryService { get }
+}
 
 
 // MARK: - PasswordComponent
@@ -36,7 +39,11 @@ final class PasswordBuilder:
       _ payload: PasswordBuildDependency
     ) -> PasswordRouting {
         let viewController = PasswordViewController()
-        let interactor = PasswordInteractor(presenter: viewController, initialState: component.initialState)
+        let interactor = PasswordInteractor(
+            onboardingRepositoryService: component.onboardingRepositoryService,
+            presenter: viewController,
+            initialState: component.initialState
+        )
         
         interactor.listener = payload.listener
         return PasswordRouter(interactor: interactor, viewController: viewController)

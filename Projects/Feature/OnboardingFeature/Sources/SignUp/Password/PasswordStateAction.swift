@@ -25,7 +25,7 @@ struct PasswordPresentableState: HasLoadingState, HasErrorState {
 // MARK: - AgreementPresentableAction
 
 enum PasswordPresentableAction {
-    
+    case passwordsDidChange(password: String, repassword: String)
 }
 
 // MARK: - PasswordPresentableListener
