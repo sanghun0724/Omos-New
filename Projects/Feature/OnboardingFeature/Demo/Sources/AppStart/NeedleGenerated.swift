@@ -66,6 +66,9 @@ private class PasswordDependencyfd7427318599b626f4acProvider: PasswordDependency
     var onboardingRepositoryService: OnboardingRepositoryService {
         return appComponent.onboardingRepositoryService
     }
+    var nicknameBuilder: NicknameBuildable {
+        return appComponent.nicknameBuilder
+    }
     private let appComponent: AppComponent
     init(appComponent: AppComponent) {
         self.appComponent = appComponent
@@ -162,6 +165,7 @@ extension OnboardingComponent: Registration {
 extension PasswordComponent: Registration {
     public func registerItems() {
         keyPathToName[\PasswordDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
+        keyPathToName[\PasswordDependency.nicknameBuilder] = "nicknameBuilder-NicknameBuildable"
     }
 }
 extension NicknameComponent: Registration {

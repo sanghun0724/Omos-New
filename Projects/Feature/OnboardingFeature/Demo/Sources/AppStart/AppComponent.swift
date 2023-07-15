@@ -38,16 +38,16 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
             OnboardingComponent(parent: self)
         }
     }
+
+    var signUpBuilder: EmailSignUpBuildable {
+        EmailSignUpBuilder {
+            EmailSignUpComponent(parent: self)
+        }
+    }
     
     var loggedInBuilder: LoggedInBuildable {
         LoggedInBuilder {
             LoggedInComponent(parent: self)
-        }
-    }
-    
-    var signUpBuilder: EmailSignUpBuildable {
-        EmailSignUpBuilder {
-            EmailSignUpComponent(parent: self)
         }
     }
     

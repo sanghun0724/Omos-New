@@ -38,6 +38,7 @@ final class PasswordInteractor:
         case setError(MyError)
         case setPasswordFormatValidation(Bool)
         case setPasswordReconfirm(Bool)
+        case attachNicknameRIB
     }
     
     // MARK: - Properties
@@ -128,6 +129,29 @@ extension PasswordInteractor {
     }
 }
 
+// MARK: - Transform Mutation
+
+extension PasswordInteractor {
+    
+    func transform(mutation: Observable<Mutation>) -> Observable<Mutation> {
+        return mutation
+            .withUnretained(self)
+            .flatMap { owner, mutation in
+                switch mutation {
+                case .attachNicknameRIB:
+                    return owner.attachNicknameRIBTransform()
+                default:
+                    return .just(mutation)
+                }
+            }
+    }
+    
+    private func attachNicknameRIBTransform() -> Observable<Mutation> {
+        self.router?.attachNicknameRIB()
+        return .empty()
+    }
+}
+
 // MARK: - reduce
 
 extension PasswordInteractor {
@@ -136,11 +160,15 @@ extension PasswordInteractor {
         
         switch mutation {
         case let .setError(error):
-            newState.myError
+            newState.isLoading = false
+            newState.revision = state.revision + 1
+            newState.myError = ReactorValue(revision: newState.revision, value: error)
         case let .setPasswordFormatValidation(validation):
             newState.isValidPasswordFormat = validation
         case let .setPasswordReconfirm(validation):
             newState.isValidRepasswordConfirm = validation
+        default:
+            log.verbose("This is default \(mutation) mutation")
         }
         
         return newState

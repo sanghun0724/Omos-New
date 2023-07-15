@@ -15,8 +15,8 @@ public protocol OnboardingListener: AnyObject {}
 // MARK: - OnboardingRouting
 
 public protocol OnboardingRouting: ViewableRouting {
-    func attachSignUpRIB()
-    func detachSignUpRIB()
+    func attachEmailSignUpRIB()
+    func detachEmailSignUpRIB()
     func attachLoggedInRIB()
     func detachLoggedInRIB()
 }

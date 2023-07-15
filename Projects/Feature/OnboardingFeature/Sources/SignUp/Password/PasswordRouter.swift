@@ -12,7 +12,7 @@ import OnboardingFeatureInterface
 
 // MARK: - PasswordInteractable
 
-protocol PasswordInteractable: Interactable {
+protocol PasswordInteractable: Interactable, NicknameListener {
     var router: PasswordRouting? { get set }
     var listener: PasswordListener? { get set }
 }
@@ -25,12 +25,34 @@ final class PasswordRouter:
   ViewableRouter<PasswordInteractable, PasswordViewControllable>,
   PasswordRouting
 {
+    
+    private let nicknameBuilder: NicknameBuildable
+    private var nicknameRouter: NicknameRouting?
 
-    override init(
+     init(
       interactor: PasswordInteractable,
-      viewController: PasswordViewControllable
+      viewController: PasswordViewControllable,
+      nicknameBuilder: NicknameBuildable
     ) {
+        self.nicknameBuilder = nicknameBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
+    }
+    
+    func attachNicknameRIB() {
+        guard self.nicknameRouter == nil else { return }
+        let router = nicknameBuilder.build(
+            with: NicknameBuildDependency(
+                listener: interactor
+            )
+        )
+        self.nicknameRouter = router
+        attachChild(router)
+        viewController.pushViewController(router.viewControllable, animated: false)
+    }
+    
+    func detachNicknameRIB() {
+        guard self.nicknameRouter != nil else { return }
+        
     }
 }

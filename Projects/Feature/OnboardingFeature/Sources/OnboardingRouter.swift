@@ -43,7 +43,7 @@ final class OnboardingRouter:
         interactor.router = self
     }
     
-    func attachSignUpRIB() {
+    func attachEmailSignUpRIB() {
         guard self.signUpRouter == nil else { return }
         let router = self.signUpBuilder.build(
             with: EmailSignUpBuildDependency(
@@ -55,7 +55,7 @@ final class OnboardingRouter:
         viewController.push(viewController: router.viewControllable)
     }
     
-    func detachSignUpRIB() {
+    func detachEmailSignUpRIB() {
         guard let router = signUpRouter else { return }
         self.signUpRouter = nil
         detachChild(router)

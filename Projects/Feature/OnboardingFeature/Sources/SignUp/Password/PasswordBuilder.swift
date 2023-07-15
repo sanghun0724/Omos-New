@@ -16,6 +16,7 @@ import OnboardingDomainInterface
 
 public protocol PasswordDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
+    var nicknameBuilder: NicknameBuildable { get }
 }
 
 
@@ -46,6 +47,10 @@ public final class PasswordBuilder:
         )
         
         interactor.listener = payload.listener
-        return PasswordRouter(interactor: interactor, viewController: viewController)
+        return PasswordRouter(
+            interactor: interactor,
+            viewController: viewController,
+            nicknameBuilder: component.nicknameBuilder
+        )
     }
 }

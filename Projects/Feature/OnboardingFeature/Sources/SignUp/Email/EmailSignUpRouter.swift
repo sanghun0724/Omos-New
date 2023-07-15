@@ -54,6 +54,9 @@ final class EmailSignUpRouter:
     }
     
     func detachPasswordRIB() {
-        log.warning("detachNicknameRIB")
+        guard let router = passwordRouter else { return }
+        self.passwordRouter = nil
+        detachChild(router)
+        viewController.pop(router.viewControllable)
     }
 }

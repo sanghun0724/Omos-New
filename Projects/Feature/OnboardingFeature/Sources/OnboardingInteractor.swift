@@ -127,7 +127,7 @@ extension OnboardingInteractor {
     }
     
     private func attachSignUpRIBTransform() -> Observable<Mutation> {
-        self.router?.attachSignUpRIB()
+        self.router?.attachEmailSignUpRIB()
         return .empty()
     }
     
@@ -149,20 +149,13 @@ extension OnboardingInteractor {
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         
-//        switch mutation {
-//        case let .attachAgreementRIB(email):
-//            newState.testEmail = email
-//        default:
-//            print()
-//        }
-        
         return newState
     }
 }
 
 extension OnboardingInteractor {
     func detachSignUpRIB() {
-        self.router?.detachSignUpRIB()
+        self.router?.detachEmailSignUpRIB()
     }
     
     func detachLoggedInRIB() {
