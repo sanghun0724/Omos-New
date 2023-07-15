@@ -15,7 +15,8 @@ public protocol AgreementListener: AnyObject {}
 // MARK: - AgreementRouting
 
 public protocol AgreementRouting: ViewableRouting {
-    
+    func attachNicknameRIB()
+    func detachNicknameRIB()
 }
 
 // MARK: - AgreementBuildDependency
@@ -23,7 +24,7 @@ public protocol AgreementRouting: ViewableRouting {
 public struct AgreementBuildDependency {
     public let listener: AgreementListener
     
-    init(listener: AgreementListener) {
+    public init(listener: AgreementListener) {
         self.listener = listener
     }
 }

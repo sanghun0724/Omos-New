@@ -16,8 +16,9 @@ import OnboardingDomainInterface
 
 public protocol OnboardingDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
-    var signUpBuilder: EmailSignUpBuildable { get }
+    var emailSignUpBuilder: EmailSignUpBuildable { get }
     var loggedInBuilder: LoggedInBuildable { get }
+    var agreementBuilder: AgreementBuildable { get }
 }
 
 // MARK: - OnboardingComponent
@@ -49,9 +50,9 @@ public final class OnboardingBuilder:
         interactor.listener = payload.listener
         return OnboardingRouter(
             interactor: interactor,
-            signUpBuilder: component.signUpBuilder,
+            viewController: viewController, signUpBuilder: component.emailSignUpBuilder,
             loggedInBuilder: component.loggedInBuilder,
-            viewController: viewController
+            agreementBuilder: component.agreementBuilder
         )
     }
 }

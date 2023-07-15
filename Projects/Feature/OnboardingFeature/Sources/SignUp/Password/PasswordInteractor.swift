@@ -38,7 +38,7 @@ final class PasswordInteractor:
         case setError(MyError)
         case setPasswordFormatValidation(Bool)
         case setPasswordReconfirm(Bool)
-        case attachNicknameRIB
+        case attachAgreementRIB
     }
     
     // MARK: - Properties
@@ -138,16 +138,16 @@ extension PasswordInteractor {
             .withUnretained(self)
             .flatMap { owner, mutation in
                 switch mutation {
-                case .attachNicknameRIB:
-                    return owner.attachNicknameRIBTransform()
+                case .attachAgreementRIB:
+                    return owner.attachAgreementRIBTransform()
                 default:
                     return .just(mutation)
                 }
             }
     }
     
-    private func attachNicknameRIBTransform() -> Observable<Mutation> {
-        self.router?.attachNicknameRIB()
+    private func attachAgreementRIBTransform() -> Observable<Mutation> {
+        self.router?.attachAgreementRIB()
         return .empty()
     }
 }

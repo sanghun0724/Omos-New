@@ -14,25 +14,26 @@ import AppFoundation
 
 // MARK: - AgreementDependency
 
-protocol AgreementDependency: NeedleFoundation.Dependency {}
+public protocol AgreementDependency: NeedleFoundation.Dependency {
+    var nicknameBuilder: NicknameBuildable { get }
+}
 
 // MARK: - AgreementComponent
 
-final class AgreementComponent: NeedleFoundation.Component<AgreementDependency> {
+public final class AgreementComponent: NeedleFoundation.Component<AgreementDependency> {
     fileprivate var initialState: AgreementPresentableState {
         AgreementPresentableState()
     }
 }
 
-
 // MARK: - AgreementBuilder
 
-final class AgreementBuilder:
+public final class AgreementBuilder:
     ComponentizedBuilder<AgreementComponent, AgreementRouting, AgreementBuildDependency, Void>,
     AgreementBuildable
 {
 
-    override func build(
+    public override func build(
       with component: AgreementComponent,
       _ payload: AgreementBuildDependency
     ) -> AgreementRouting {
@@ -40,6 +41,10 @@ final class AgreementBuilder:
         let interactor = AgreementInteractor(presenter: viewController, initialState: component.initialState)
         
         interactor.listener = payload.listener
-        return AgreementRouter(interactor: interactor, viewController: viewController)
+        return AgreementRouter(
+            interactor: interactor,
+            viewController: viewController,
+            nicknameBuilder: component.nicknameBuilder
+        )
     }
 }

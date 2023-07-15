@@ -17,7 +17,7 @@ import OnboardingFeatureInterface
 public protocol LoggedInDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
     var loggedInBuilder: LoggedInBuildable { get }
-    var signUpBuilder: EmailSignUpBuildable { get }
+    var emailSignUpBuilder: EmailSignUpBuildable { get }
     var todayBuilder: TodayBuildable { get }
 }
 
@@ -51,7 +51,7 @@ public final class LoggedInBuilder:
         interactor.listener = payload.listener
         
         return LoggedInRouter(todayBuilder: component.todayBuilder,
-                              signUpBuilder: component.signUpBuilder,
+                              emailSignUpBuilder: component.emailSignUpBuilder,
                               interactor: interactor,
                               viewController: viewController)
     }

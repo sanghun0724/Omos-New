@@ -120,6 +120,8 @@ extension OnboardingInteractor {
                     return owner.attachSignUpRIBTransform()
                 case .attachLoggedInRIB:
                     return owner.attachLoggedInRIBTransform()
+                case .attachAgreementRIB(email: "TODO"):
+                    return owner.attachAgreemntRIBTransform() // TODO: email input
                 default:
                     return .just(mutation)
                 }
@@ -137,7 +139,7 @@ extension OnboardingInteractor {
     }
     
     private func attachAgreemntRIBTransform() -> Observable<Mutation> {
-        //self.router?.att()
+        self.router?.attachAgreewmentRIB()
         return .empty()
     }
     

@@ -39,7 +39,7 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
         }
     }
 
-    var signUpBuilder: EmailSignUpBuildable {
+    var emailSignUpBuilder: EmailSignUpBuildable {
         EmailSignUpBuilder {
             EmailSignUpComponent(parent: self)
         }
@@ -66,6 +66,12 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
     var todayBuilder: TodayBuildable {
         TodayBuilder {
             TodayComponent(parent: self)
+        }
+    }
+    
+    var agreementBuilder: AgreementBuildable {
+        AgreementBuilder {
+            AgreementComponent(parent: self)
         }
     }
 }

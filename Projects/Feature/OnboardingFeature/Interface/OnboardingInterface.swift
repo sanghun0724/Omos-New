@@ -19,6 +19,8 @@ public protocol OnboardingRouting: ViewableRouting {
     func detachEmailSignUpRIB()
     func attachLoggedInRIB()
     func detachLoggedInRIB()
+    func attachAgreewmentRIB()
+    func detachAgreementRIB()
 }
 
 // MARK: - OnboardingBuildDependency

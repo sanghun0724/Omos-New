@@ -15,8 +15,8 @@ public protocol PasswordListener: AnyObject {}
 // MARK: - PasswordRouting
 
 public protocol PasswordRouting: ViewableRouting {
-    func attachNicknameRIB()
-    func detachNicknameRIB()
+    func attachAgreementRIB()
+    func detachAgreementRIB()
 }
 
 // MARK: - PasswordBuildDependency

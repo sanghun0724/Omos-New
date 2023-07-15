@@ -12,7 +12,7 @@ import OnboardingFeatureInterface
 
 // MARK: - OnboardingInteractable
 
-protocol OnboardingInteractable: Interactable, EmailSignUpListener, LoggedInListener {
+protocol OnboardingInteractable: Interactable, EmailSignUpListener, LoggedInListener, AgreementListener {
     var router: OnboardingRouting? { get set }
     var listener: OnboardingListener? { get set }
 }
@@ -31,14 +31,19 @@ final class OnboardingRouter:
     private let loggedInBuilder: LoggedInBuildable
     private var loggedInRouter: LoggedInRouting?
     
+    private let agreementBuilder: AgreementBuildable
+    private var agreementRouter: AgreementRouting?
+    
     init(
       interactor: OnboardingInteractable,
+      viewController: OnboardingViewControllable,
       signUpBuilder: EmailSignUpBuildable,
       loggedInBuilder: LoggedInBuildable,
-      viewController: OnboardingViewControllable
+      agreementBuilder: AgreementBuildable
     ) {
         self.signUpBuilder = signUpBuilder
         self.loggedInBuilder = loggedInBuilder
+        self.agreementBuilder = agreementBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
@@ -79,4 +84,22 @@ final class OnboardingRouter:
         detachChild(router)
         viewController.pop(router.viewControllable)
     }
+    
+    func attachAgreewmentRIB() {
+        guard self.agreementRouter == nil else { return }
+        let router = self.agreementBuilder.build(
+            with: AgreementBuildDependency(
+                listener: interactor
+            )
+        )
+        attachChild(router)
+        viewController.push(viewController: router.viewControllable)
+    }
+    
+    func detachAgreementRIB() {
+        guard let router = agreementRouter else { return }
+        detachChild(router)
+        viewController.pop(router.viewControllable)
+    }
+    
 }
