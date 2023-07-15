@@ -52,9 +52,9 @@ final class EmailSignUpViewController:
     private lazy var emailTextFieldView = EmailTextFieldView()
         .builder
         .with {
+            $0.textField.fetchPlaceHolderText(text: "이메일을 입력해주세요.")
             $0.fetchLeftTopLabelText(text: .email)
             $0.fetchLeftBottomLabelText(text: .emailFormatWarning)
-            $0.rightButton.setTitle("인증요청", for: .normal)
         }
         .build()
     
@@ -63,8 +63,8 @@ final class EmailSignUpViewController:
         .with {
             $0.textField.fetchPlaceHolderText(text: "인증코드를 입력해주세요.")
             $0.fetchLeftTopLabelText(text: "인증코드")
-            $0.fetchLeftBottomLabelText(text: .emailFormatWarning)
-            $0.rightButton.setTitle("확인", for: .normal)
+            $0.fetchLeftBottomLabelText(text: "인증코드를 확인해 주세요.")
+            $0.setRightButtonTitle(to: "확인")
         }
         .build()
     
@@ -242,7 +242,6 @@ extension EmailSignUpViewController {
             .asDriver(onErrorDriveWith: .empty())
             .drive(with: self) { owner, _ in
                 owner.emailTextFieldView.isUserInteractionEnabled = false
-                // todo
             }
             .disposed(by: disposeBag)
     }
@@ -261,7 +260,7 @@ extension EmailSignUpViewController {
             .compactMap(\.isSuccessEmailCertification.value)
             .distinctUntilChanged()
             .asDriver(onErrorDriveWith: .empty())
-            .drive(self.confirmButton.rx.isEnabled)
+            .drive(self.confirmButton.rx.isEnabled, self.validationCodeConfirmTextFieldView.rx.isValidState)
             .disposed(by: disposeBag)
     }
 }

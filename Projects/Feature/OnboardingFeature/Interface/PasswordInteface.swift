@@ -23,7 +23,7 @@ public protocol PasswordRouting: ViewableRouting {
 public struct PasswordBuildDependency {
     public let listener: PasswordListener
     
-    init(listener: PasswordListener) {
+    public init(listener: PasswordListener) {
         self.listener = listener
     }
 }

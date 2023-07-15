@@ -17,7 +17,7 @@ import OnboardingFeatureInterface
 
 public protocol EmailSignUpDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
-    var nicknameBuilder: NicknameBuildable { get }
+    var passwordBuilder: PasswordBuildable { get }
 }
 
 // MARK: - SignUpComponent
@@ -45,7 +45,7 @@ public final class EmailSignUpBuilder:
         
         interactor.listener = payload.listener
         return EmailSignUpRouter(
-            nicknameBuilder: component.nicknameBuilder,
+            passwordBuilder: component.passwordBuilder,
             interactor: interactor,
             viewController: viewController
         )

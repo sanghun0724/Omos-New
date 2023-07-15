@@ -19,7 +19,8 @@ import DesignSystem
 final class PasswordViewController:
     BaseViewController,
     PasswordPresentable,
-    PasswordViewControllable
+    PasswordViewControllable,
+    ErrorStreamBindable
 {
     
     // MARK: - Constants
@@ -59,6 +60,11 @@ final class PasswordViewController:
         }
         .build()
     
+    private lazy var confirmButton = ConfirmButton(.next, disableText: .next).builder
+        .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
+        .set(\.layer.masksToBounds, to: true)
+        .build()
+    
     // MARK: - Initialization & Deinitialization
     
     override init() {
@@ -93,6 +99,9 @@ extension PasswordViewController {
 extension PasswordViewController {
     private func bind(listener: PasswordPresentableListener?) {
         guard let listener = listener else { return }
+        bindActionRelay()
+        bindActions()
+        bindState(from: listener)
     }
     
     private func bindActionRelay() {
@@ -108,7 +117,7 @@ extension PasswordViewController {
 
 extension PasswordViewController {
     private func bindActions() {
-        
+        bindPasswordsDidChange()
     }
     
     private func bindPasswordsDidChange() {
@@ -124,7 +133,8 @@ extension PasswordViewController {
 
 extension PasswordViewController {
     private func bindState(from listener: PasswordPresentableListener) {
-        
+        bindErrorStream(from: listener)
+        bindValidationPasswordState(from: listener)
     }
     
     private func bindValidationPasswordState(from listener: PasswordPresentableListener) {
@@ -139,7 +149,7 @@ extension PasswordViewController {
             .map(\.isValidRepasswordConfirm)
             .skip(1)
             .asDriver(onErrorDriveWith: .empty())
-            .drive(self.repasswordTextFieldView.rx.isValidState)
+            .drive(self.confirmButton.rx.isEnabled, self.repasswordTextFieldView.rx.isValidState)
             .disposed(by: disposeBag)
     }
 }
@@ -151,6 +161,7 @@ extension PasswordViewController {
         contentView.addSubview(headerTitleLabel)
         contentView.addSubview(passwordTextFieldView)
         contentView.addSubview(repasswordTextFieldView)
+        contentView.addSubview(confirmButton)
         self.layout()
     }
     
@@ -166,6 +177,11 @@ extension PasswordViewController {
         repasswordTextFieldView.snp.makeConstraints {
             $0.top.equalTo(passwordTextFieldView.leftBottomLabel.snp.bottom).offset(44)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+        }
+        confirmButton.snp.makeConstraints {
+            $0.height.equalTo(UI.confirmButtonHeight)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+            $0.bottom.equalToSuperview().offset(-34).priority(750)
         }
     }
 }

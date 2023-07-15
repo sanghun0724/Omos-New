@@ -33,6 +33,8 @@ public final class EmailTextFieldView: CustomTextFieldView {
     
     public func setRightButtonTitle(to text: String) {
         rightButton.setTitle(text, for: .normal)
+        rightButton.enableText = text
+        rightButton.disableText = text
     }
 
     // MARK: UI

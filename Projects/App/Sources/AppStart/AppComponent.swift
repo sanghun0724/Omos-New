@@ -50,7 +50,7 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
             EmailSignUpComponent(parent: self)
         }
     }
-    
+
     var todayBuilder: TodayBuildable {
       TodayBuilder {
         TodayComponent(parent: self)
@@ -60,6 +60,12 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
     var nicknameBuilder: NicknameBuildable {
         NicknameBuilder {
             NicknameComponent(parent: self)
+        }
+    }
+    
+    var passwordBuilder: PasswordBuildable {
+        PasswordBuilder {
+            PasswordComponent(parent: self)
         }
     }
 }

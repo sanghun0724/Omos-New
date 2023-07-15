@@ -57,6 +57,12 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
         }
     }
     
+    var passwordBuilder: PasswordBuildable {
+        PasswordBuilder {
+            PasswordComponent(parent: self)
+        }
+    }
+    
     var todayBuilder: TodayBuildable {
         TodayBuilder {
             TodayComponent(parent: self)

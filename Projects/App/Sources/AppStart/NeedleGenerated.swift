@@ -62,6 +62,19 @@ private class OnboardingDependencyf77d0055983a00cf8835Provider: OnboardingDepend
 private func factory88dc13cc29c5719e2b01f47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
     return OnboardingDependencyf77d0055983a00cf8835Provider(appComponent: parent1(component) as! AppComponent)
 }
+private class PasswordDependencyfd7427318599b626f4acProvider: PasswordDependency {
+    var onboardingRepositoryService: OnboardingRepositoryService {
+        return appComponent.onboardingRepositoryService
+    }
+    private let appComponent: AppComponent
+    init(appComponent: AppComponent) {
+        self.appComponent = appComponent
+    }
+}
+/// ^->AppComponent->PasswordComponent
+private func factory9f8860811946a346ca2af47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return PasswordDependencyfd7427318599b626f4acProvider(appComponent: parent1(component) as! AppComponent)
+}
 private class NicknameDependencyf8931c25a2fc8a703ee7Provider: NicknameDependency {
     var onboardingRepositoryService: OnboardingRepositoryService {
         return appComponent.onboardingRepositoryService
@@ -79,8 +92,8 @@ private class EmailSignUpDependency76a7ffa273be1ab5382fProvider: EmailSignUpDepe
     var onboardingRepositoryService: OnboardingRepositoryService {
         return appComponent.onboardingRepositoryService
     }
-    var nicknameBuilder: NicknameBuildable {
-        return appComponent.nicknameBuilder
+    var passwordBuilder: PasswordBuildable {
+        return appComponent.passwordBuilder
     }
     private let appComponent: AppComponent
     init(appComponent: AppComponent) {
@@ -146,6 +159,11 @@ extension OnboardingComponent: Registration {
         keyPathToName[\OnboardingDependency.loggedInBuilder] = "loggedInBuilder-LoggedInBuildable"
     }
 }
+extension PasswordComponent: Registration {
+    public func registerItems() {
+        keyPathToName[\PasswordDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
+    }
+}
 extension NicknameComponent: Registration {
     public func registerItems() {
         keyPathToName[\NicknameDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
@@ -154,7 +172,7 @@ extension NicknameComponent: Registration {
 extension EmailSignUpComponent: Registration {
     public func registerItems() {
         keyPathToName[\EmailSignUpDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
-        keyPathToName[\EmailSignUpDependency.nicknameBuilder] = "nicknameBuilder-NicknameBuildable"
+        keyPathToName[\EmailSignUpDependency.passwordBuilder] = "passwordBuilder-PasswordBuildable"
     }
 }
 extension LoggedInComponent: Registration {
@@ -189,6 +207,7 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
     registerProviderFactory("^->AppComponent", factoryEmptyDependencyProvider)
     registerProviderFactory("^->AppComponent->AppRootComponent", factorya90cb427e52e03443c85f47b58f8f304c97af4d5)
     registerProviderFactory("^->AppComponent->OnboardingComponent", factory88dc13cc29c5719e2b01f47b58f8f304c97af4d5)
+    registerProviderFactory("^->AppComponent->PasswordComponent", factory9f8860811946a346ca2af47b58f8f304c97af4d5)
     registerProviderFactory("^->AppComponent->NicknameComponent", factoryefd4cb58dce6be7a9de5f47b58f8f304c97af4d5)
     registerProviderFactory("^->AppComponent->EmailSignUpComponent", factory792b7e64953807cbfaf8f47b58f8f304c97af4d5)
     registerProviderFactory("^->AppComponent->LoggedInComponent", factorybe3fbfd42f44e2df6537f47b58f8f304c97af4d5)

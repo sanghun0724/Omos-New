@@ -14,14 +14,14 @@ import OnboardingDomainInterface
 
 // MARK: - PasswordDependency
 
-protocol PasswordDependency: NeedleFoundation.Dependency {
+public protocol PasswordDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
 }
 
 
 // MARK: - PasswordComponent
 
-final class PasswordComponent: NeedleFoundation.Component<PasswordDependency> {
+public final class PasswordComponent: NeedleFoundation.Component<PasswordDependency> {
     fileprivate var initialState: PasswordPresentableState {
         PasswordPresentableState()
     }
@@ -29,12 +29,12 @@ final class PasswordComponent: NeedleFoundation.Component<PasswordDependency> {
 
 // MARK: - PasswordBuilder
 
-final class PasswordBuilder:
+public final class PasswordBuilder:
     ComponentizedBuilder<PasswordComponent, PasswordRouting, PasswordBuildDependency, Void>,
     PasswordBuildable
 {
 
-    override func build(
+    public override func build(
       with component: PasswordComponent,
       _ payload: PasswordBuildDependency
     ) -> PasswordRouting {

@@ -30,7 +30,7 @@ enum PasswordPresentableAction {
 
 // MARK: - PasswordPresentableListener
 
-protocol PasswordPresentableListener: AnyObject {
+protocol PasswordPresentableListener: AnyObject, HasErrorStream, HasLoadingStream {
     typealias Action = PasswordPresentableAction
     typealias State = PasswordPresentableState
     

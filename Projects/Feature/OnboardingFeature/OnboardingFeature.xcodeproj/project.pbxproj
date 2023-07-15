@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1139,7 +1139,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources\nswiftformat ${FILE_PATH}/NeedleGenerated.swift";
+			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources\n#swiftformat ${FILE_PATH}/NeedleGenerated.swift\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

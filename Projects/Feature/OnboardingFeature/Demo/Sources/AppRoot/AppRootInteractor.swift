@@ -10,7 +10,8 @@ import RIBs
 
 protocol AppRootRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-    func attachOnboarding()
+    func attachOnboardingRIB()
+    func attachPasswordRIB()
 }
 
 protocol AppRootPresentable: Presentable {
@@ -36,7 +37,7 @@ final class AppRootInteractor: PresentableInteractor<AppRootPresentable>, AppRoo
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        router?.attachOnboarding()
+        router?.attachPasswordRIB()
     }
 
     override func willResignActive() {
