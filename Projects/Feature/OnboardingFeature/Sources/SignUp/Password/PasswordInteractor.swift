@@ -38,7 +38,7 @@ final class PasswordInteractor:
         case setError(MyError)
         case setPasswordFormatValidation(Bool)
         case setPasswordReconfirm(Bool)
-        case attachAgreementRIB
+        case attachAgreementRIB(String)
     }
     
     // MARK: - Properties
@@ -78,6 +78,8 @@ extension PasswordInteractor {
         switch action {
         case let .passwordsDidChange(password, repassword):
             return passwordValidationMutation(password: password, repassword: repassword)
+        case let .confirmButtonDidTap(email):
+            return .just(.attachAgreementRIB(email))
         }
     }
     

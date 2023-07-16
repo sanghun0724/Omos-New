@@ -117,15 +117,24 @@ extension PasswordViewController {
 
 extension PasswordViewController {
     private func bindActions() {
-        bindPasswordsDidChange()
+        bindPasswordsChangedAction()
+        bindConfirmButtonTapAction()
     }
     
-    private func bindPasswordsDidChange() {
+    private func bindPasswordsChangedAction() {
         Observable.combineLatest(self.passwordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged(),
                                  self.repasswordTextFieldView.textField.rx.text.orEmpty.distinctUntilChanged())
         .map { .passwordsDidChange(password: $0.0, repassword: $0.1) }
         .bind(to: self.actionRelay)
         .disposed(by: disposeBag)
+    }
+    
+    private func bindConfirmButtonTapAction() {
+        confirmButton.rx
+            .tapWithPreventDuplication()
+            .map { .confirmButtonDidTap(email: "")}// TODO:
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
     }
 }
 

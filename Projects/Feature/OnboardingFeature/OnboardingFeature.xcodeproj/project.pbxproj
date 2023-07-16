@@ -153,6 +153,7 @@
 		DE7B1C0A2A6283CE00DCDC26 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7B1C052A6283CE00DCDC26 /* LoggedInRouter.swift */; };
 		DE7B1C0B2A6283CE00DCDC26 /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7B1C062A6283CE00DCDC26 /* LoggedInInteractor.swift */; };
 		DE7B1C0D2A6283DB00DCDC26 /* LoggedInInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7B1C0C2A6283DB00DCDC26 /* LoggedInInterface.swift */; };
+		DE7B1C102A63D86F00DCDC26 /* AgreementListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7B1C0F2A63D86F00DCDC26 /* AgreementListView.swift */; };
 		DED06C5740A2FDC8D78C1EBA /* DecoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57655D00837BF52589B625A1 /* DecoView.swift */; };
 		E333514394F58CFBF404DE05 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD67D44281293C6A815B50F /* RxGesture.framework */; platformFilter = ios; };
 		E4E93C767EE78339DAA5BC3C /* libBaseDomain.a in Dependencies */ = {isa = PBXBuildFile; fileRef = CC42C35FC991C9D5A5F49B0E /* libBaseDomain.a */; platformFilter = ios; };
@@ -449,6 +450,7 @@
 		DE7B1C052A6283CE00DCDC26 /* LoggedInRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
 		DE7B1C062A6283CE00DCDC26 /* LoggedInInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
 		DE7B1C0C2A6283DB00DCDC26 /* LoggedInInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInInterface.swift; sourceTree = "<group>"; };
+		DE7B1C0F2A63D86F00DCDC26 /* AgreementListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementListView.swift; sourceTree = "<group>"; };
 		E3571C928D80FB78AD8CFA7D /* SignUpInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInterface.swift; sourceTree = "<group>"; };
 		E3CACCEA5321C76CE898EE97 /* OnboardingFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingFeatureUITests-Info.plist"; sourceTree = "<group>"; };
 		EB4AE09F0ED3D696BC5AB583 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -700,6 +702,7 @@
 		8E21758617270CD3001235D5 /* Agreement */ = {
 			isa = PBXGroup;
 			children = (
+				DE7B1C0E2A63D84E00DCDC26 /* Components */,
 				FABA0740619D5ABD93B4BD12 /* AgreementBuilder.swift */,
 				0FF290B8A4832BED6F7C5022 /* AgreementInteractor.swift */,
 				0906D358E7405910C60B4884 /* AgreementRouter.swift */,
@@ -892,6 +895,14 @@
 				DE7B1C062A6283CE00DCDC26 /* LoggedInInteractor.swift */,
 			);
 			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		DE7B1C0E2A63D84E00DCDC26 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DE7B1C0F2A63D86F00DCDC26 /* AgreementListView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		ED3C39C8B0797E12009CDD80 /* Sources */ = {
@@ -1208,6 +1219,7 @@
 				DE7B1C0B2A6283CE00DCDC26 /* LoggedInInteractor.swift in Sources */,
 				C539E7E4DCD55B8351AF1993 /* ValidationCodeAlertView.swift in Sources */,
 				196689CA2AF6FEFFD78028EC /* OnboardingBuilder.swift in Sources */,
+				DE7B1C102A63D86F00DCDC26 /* AgreementListView.swift in Sources */,
 				5D48564482CF4F20A670D975 /* OnboardingInteractor.swift in Sources */,
 				A0443F6C9B8D0AD4443E8423 /* OnboardingRouter.swift in Sources */,
 				7B992653630E10001B56F813 /* OnboardingStateAction.swift in Sources */,

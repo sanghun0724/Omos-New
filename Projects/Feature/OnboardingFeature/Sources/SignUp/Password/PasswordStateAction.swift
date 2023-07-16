@@ -26,6 +26,7 @@ struct PasswordPresentableState: HasLoadingState, HasErrorState {
 
 enum PasswordPresentableAction {
     case passwordsDidChange(password: String, repassword: String)
+    case confirmButtonDidTap(email: String)
 }
 
 // MARK: - PasswordPresentableListener
