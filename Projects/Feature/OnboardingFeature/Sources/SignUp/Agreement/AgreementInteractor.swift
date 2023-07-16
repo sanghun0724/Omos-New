@@ -114,13 +114,15 @@ extension AgreementInteractor {
         return state
             .map { newState in
                 var newState = newState
-            if (newState.isServiceCheckBoxSelected && newState.isPrivacyCheckBoxSelected) {
-                 newState.isAllAgreeCheckBoxSelected = true
-                return newState
-            } else {
-                newState.isAllAgreeCheckBoxSelected = false
-                return newState
+                if (newState.isServiceCheckBoxSelected && newState.isPrivacyCheckBoxSelected) {
+                    newState.isAllAgreeCheckBoxSelected = true
+                    newState.isConfirmButtonEnable = true
+                    return newState
+                } else {
+                    newState.isAllAgreeCheckBoxSelected = false
+                    newState.isConfirmButtonEnable = false
+                    return newState
+                }
             }
-        }
     }
 }

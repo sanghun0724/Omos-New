@@ -65,7 +65,6 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
         if passwordRouting != nil {
             return
         }
-        
         let router = passwordBuilder.build(
             with: PasswordBuildDependency(
                 listener: interactor

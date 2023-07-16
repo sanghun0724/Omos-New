@@ -25,8 +25,9 @@ final class AgreementViewController:
     // MARK: - Constants
     
     private enum UI {
-        static let agreementViewMargin = 16
+        static let leadingTrailingMargin = 16
         static let separatedLineViewMargin = 10
+        static let confirmButtonHeight = 48
     }
     
     // MARK: - Properties
@@ -37,14 +38,16 @@ final class AgreementViewController:
     
     // MARK: - UI Components
     
-    private lazy var headerTitleLabel = UILabel().builder
+    private lazy var headerTitleLabel = BaseLabel().builder
         .text("서비스 이용 동의")
+        .textColor(.white)
         .font(.boldSystemFont(ofSize: 24))
         .build()
     
     private lazy var allAgreeView = AgreementListView().builder
         .with {
             $0.accessoryButton.isHidden = true
+            $0.titleLabel.text = "약관 전체동의"
         }
         .build()
     
@@ -52,9 +55,17 @@ final class AgreementViewController:
         .backgroundColor(.mainBlack3)
         .build()
     
-    private lazy var serviceAgreementView = AgreementListView()
+    private lazy var serviceAgreementView = AgreementListView().builder
+        .with {
+            $0.titleLabel.text = "(필수) 서비스 이용약관"
+        }
+        .build()
     
-    private lazy var privacyAgreementView = AgreementListView()
+    private lazy var privacyAgreementView = AgreementListView().builder
+        .with {
+            $0.titleLabel.text = "(필수) 개인정보 보호정책"
+        }
+        .build()
     
     private lazy var confirmButton = ConfirmButton(.next, disableText: .next).builder
         .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
@@ -77,7 +88,6 @@ final class AgreementViewController:
     }
 }
 
-
 // MARK: Private methods
 
 extension AgreementViewController {}
@@ -97,7 +107,7 @@ extension AgreementViewController {
         guard let listener = listener else { return }
         bindActionRelay()
         bindActions()
-        bind(listener: listener)
+        bindState(from: listener)
     }
     
     private func bindActionRelay() {
@@ -121,7 +131,7 @@ extension AgreementViewController {
     private func bindAllCheckBoxTapAction() {
         allAgreeView.checkButton.rx
             .tapWithPreventDuplication()
-            .withLatestFrom(Observable.just(allAgreeView.checkButton.isSelected))
+            .withLatestFrom(allAgreeView.checkButton.rx.isSelectedChanged)
             .map { .allAgreeCheckButtonDidTap($0) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
@@ -130,7 +140,7 @@ extension AgreementViewController {
     private func bindServiceCheckBoxTapAction() {
         serviceAgreementView.checkButton.rx
             .tapWithPreventDuplication()
-            .withLatestFrom(Observable.just(serviceAgreementView.checkButton.isSelected))
+            .withLatestFrom(serviceAgreementView.checkButton.rx.isSelectedChanged)
             .map { .serviceCheckButtonDidTap($0) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
@@ -139,7 +149,7 @@ extension AgreementViewController {
     private func bindPrivacyCheckBoxTapAction() {
         privacyAgreementView.checkButton.rx
             .tapWithPreventDuplication()
-            .withLatestFrom(Observable.just(privacyAgreementView.checkButton.isSelected))
+            .withLatestFrom(privacyAgreementView.checkButton.rx.isSelectedChanged)
             .map { .privacyCheckButtonDidTap($0) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
@@ -198,6 +208,7 @@ extension AgreementViewController {
         contentView.addSubview(separatedLineView)
         contentView.addSubview(serviceAgreementView)
         contentView.addSubview(privacyAgreementView)
+        contentView.addSubview(confirmButton)
         self.layout()
     }
     
@@ -207,7 +218,7 @@ extension AgreementViewController {
             $0.left.equalToSuperview().offset(16)
         }
         allAgreeView.snp.makeConstraints {
-            $0.left.right.equalToSuperview().inset(UI.agreementViewMargin)
+            $0.left.right.equalToSuperview().inset(UI.leadingTrailingMargin)
             $0.top.equalTo(headerTitleLabel.snp.bottom).offset(54)
         }
         separatedLineView.snp.makeConstraints {
@@ -216,12 +227,17 @@ extension AgreementViewController {
             $0.left.right.equalToSuperview().inset(UI.separatedLineViewMargin)
         }
         serviceAgreementView.snp.makeConstraints {
-            $0.left.right.equalToSuperview().inset(UI.agreementViewMargin)
+            $0.left.right.equalToSuperview().inset(UI.leadingTrailingMargin)
             $0.top.equalTo(separatedLineView.snp.bottom).offset(22)
         }
         privacyAgreementView.snp.makeConstraints {
             $0.top.equalTo(serviceAgreementView.snp.bottom).offset(28)
-            $0.left.right.equalToSuperview().inset(UI.agreementViewMargin)
+            $0.left.right.equalToSuperview().inset(UI.leadingTrailingMargin)
+        }
+        confirmButton.snp.makeConstraints {
+            $0.height.equalTo(UI.confirmButtonHeight)
+            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
+            $0.bottom.equalToSuperview().offset(-34).priority(750)
         }
     }
 }
@@ -244,3 +260,31 @@ struct AgreementPreView: PreviewProvider {
 }
 
 #endif
+
+
+extension Reactive where Base: UIButton {
+
+    public var isSelectedChanged: ControlProperty<Bool> {
+        return base.rx.controlProperty(
+            editingEvents:  [.allEditingEvents,.touchUpInside],
+            getter: { $0.isSelected },
+            setter: { $0.isSelected = $1 })
+    }
+}
+
+extension Reactive where Base: UISwitch {
+
+    public var isSelectedChanged: ControlProperty<Bool> {
+        return base.rx.controlProperty(
+            editingEvents:  [.allEditingEvents, .valueChanged],
+            getter: { $0.isOn },
+            setter: { $0.isOn = $1 })
+    }
+}
+
+extension Array where Iterator.Element: ObservableType {
+
+    func allSatisfy(_ predicate: @escaping (Iterator.Element.Element) throws -> Bool) -> Observable<Bool> {
+        return Observable.combineLatest(self) { try $0.allSatisfy(predicate) }
+    }
+}

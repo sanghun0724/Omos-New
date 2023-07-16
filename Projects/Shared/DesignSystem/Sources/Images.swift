@@ -16,9 +16,11 @@ public extension UIImage {
     static let bell = DesignSystemAsset.Common.bell.image
     static let check = DesignSystemAsset.Common.check.image
     static let empty = DesignSystemAsset.Common.empty.image
-    static let keyboardArrowLeft = DesignSystemAsset.Common.keyboardArrowLeft
+    static let arrowRight = DesignSystemAsset.Common.arrowRight.image
     static let more = DesignSystemAsset.Common.more.image
-    static let orangeRight = DesignSystemAsset.Common.orangeright
+    static let orangeRight = DesignSystemAsset.Common.orangeright.image
+    static let checkBox = DesignSystemAsset.Common.checkbox.image
+    static let emptyCheckBox = DesignSystemAsset.Common.emptycheck.image
     
     // MARK: Login
     

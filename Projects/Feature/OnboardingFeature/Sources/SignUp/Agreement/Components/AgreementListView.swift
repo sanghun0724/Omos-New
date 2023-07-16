@@ -22,18 +22,19 @@ final class AgreementListView: BaseView {
     
     lazy var checkButton = UIButton().builder
         .with {
-            $0.setImage(.check, for: .normal)
-            $0.setImage(.add, for: .selected)
+            $0.setImage(.emptyCheckBox, for: .normal)
+            $0.setImage(.checkBox, for: .selected)
         }
         .build()
     
     lazy var titleLabel = UILabel().builder
         .font(.systemFont(ofSize: 16, weight: .medium))
+        .textColor(.white)
         .build()
     
     lazy var accessoryButton = UIButton().builder
         .with {
-            $0.setImage(.arrowLeft, for: .normal) //TODO:
+            $0.setImage(.arrowRight, for: .normal) //TODO:
         }
         .build()
     

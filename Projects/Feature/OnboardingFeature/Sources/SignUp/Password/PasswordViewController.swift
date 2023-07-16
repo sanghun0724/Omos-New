@@ -38,7 +38,7 @@ final class PasswordViewController:
     
     // MARK: - UI Components
     
-    private lazy var headerTitleLabel = UILabel().builder
+    private lazy var headerTitleLabel = BaseLabel().builder
         .text(.signUp)
         .textColor(.white)
         .font(.boldSystemFont(ofSize: 24))
@@ -78,6 +78,14 @@ final class PasswordViewController:
         setupUI()
         bindUI()
         bind(listener: self.listener)
+    }
+    
+    override func isNeedCustomNavigationBarView() -> Bool {
+        true
+    }
+    
+    override func navigationBarLeftButtonImage() -> UIImage? {
+        DesignSystemAsset.Common.arrowLeft.image
     }
 }
 

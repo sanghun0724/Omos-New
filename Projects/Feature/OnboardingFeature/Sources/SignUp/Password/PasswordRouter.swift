@@ -45,12 +45,14 @@ final class PasswordRouter:
                 listener: interactor
             )
         )
+        self.agreementRouter = router
         attachChild(router)
         viewController.push(viewController: router.viewControllable)
     }
     
     func detachAgreementRIB() {
         guard let router = agreementRouter else { return }
+        self.agreementRouter = nil
         detachChild(router)
         viewController.pop(router.viewControllable)
     }
