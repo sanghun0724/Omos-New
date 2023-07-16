@@ -55,6 +55,11 @@ final class AgreementViewController:
     private lazy var serviceAgreementView = AgreementListView()
     
     private lazy var privacyAgreementView = AgreementListView()
+    
+    private lazy var confirmButton = ConfirmButton(.next, disableText: .next).builder
+        .set(\.layer.cornerRadius, to: CommonUI.loginCorner)
+        .set(\.layer.masksToBounds, to: true)
+        .build()
 
     // MARK: - Initialization & Deinitialization
     
@@ -90,6 +95,9 @@ extension AgreementViewController {
 extension AgreementViewController {
     private func bind(listener: AgreementPresentableListener?) {
         guard let listener = listener else { return }
+        bindActionRelay()
+        bindActions()
+        bind(listener: listener)
     }
     
     private func bindActionRelay() {
@@ -105,7 +113,36 @@ extension AgreementViewController {
 
 extension AgreementViewController {
     private func bindActions() {
-        
+        bindAllCheckBoxTapAction()
+        bindServiceCheckBoxTapAction()
+        bindPrivacyCheckBoxTapAction()
+    }
+    
+    private func bindAllCheckBoxTapAction() {
+        allAgreeView.checkButton.rx
+            .tapWithPreventDuplication()
+            .withLatestFrom(Observable.just(allAgreeView.checkButton.isSelected))
+            .map { .allAgreeCheckButtonDidTap($0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindServiceCheckBoxTapAction() {
+        serviceAgreementView.checkButton.rx
+            .tapWithPreventDuplication()
+            .withLatestFrom(Observable.just(serviceAgreementView.checkButton.isSelected))
+            .map { .serviceCheckButtonDidTap($0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindPrivacyCheckBoxTapAction() {
+        privacyAgreementView.checkButton.rx
+            .tapWithPreventDuplication()
+            .withLatestFrom(Observable.just(privacyAgreementView.checkButton.isSelected))
+            .map { .privacyCheckButtonDidTap($0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
     }
 }
 
@@ -113,7 +150,42 @@ extension AgreementViewController {
 
 extension AgreementViewController {
     private func bindState(from listener: AgreementPresentableListener) {
-        
+        bindIsAllAgreeCheckBoxSelected(from: listener)
+        bindIsServiceCheckBoxSelected(from: listener)
+        bindIsPrivacyCheckBoxSelected(from: listener)
+        bindIsConfirmButtonEnable(from: listener)
+    }
+    
+    private func bindIsAllAgreeCheckBoxSelected(from listener: AgreementPresentableListener) {
+        listener.state.map(\.isAllAgreeCheckBoxSelected)
+            .distinctUntilChanged()
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(allAgreeView.checkButton.rx.isSelected)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindIsServiceCheckBoxSelected(from listener: AgreementPresentableListener) {
+        listener.state.map(\.isServiceCheckBoxSelected)
+            .distinctUntilChanged()
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(serviceAgreementView.checkButton.rx.isSelected)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindIsPrivacyCheckBoxSelected(from listener: AgreementPresentableListener) {
+        listener.state.map(\.isPrivacyCheckBoxSelected)
+            .distinctUntilChanged()
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(privacyAgreementView.checkButton.rx.isSelected)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindIsConfirmButtonEnable(from listener: AgreementPresentableListener) {
+        listener.state.map(\.isConfirmButtonEnable)
+            .distinctUntilChanged()
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(confirmButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
 }
 

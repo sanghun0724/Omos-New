@@ -605,6 +605,7 @@
 		0140E3C903DCC893B82EF652 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				8E21758617270CD3001235D5 /* Agreement */,
 				992ABD7204B306AD5060C3E1 /* Email */,
 				C98CEA2239DD5A472D41F5B2 /* Nickname */,
 				5E3245B8E271B016E48EE939 /* Password */,
@@ -685,7 +686,6 @@
 		87F593C03D1911D2F2934795 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8E21758617270CD3001235D5 /* Agreement */,
 				DE7B1C012A6283CE00DCDC26 /* LoggedIn */,
 				A2A6F47BED520AC014B2F8B6 /* Compoenents */,
 				9241A7621B46CC45E5CD53F9 /* Proxy */,

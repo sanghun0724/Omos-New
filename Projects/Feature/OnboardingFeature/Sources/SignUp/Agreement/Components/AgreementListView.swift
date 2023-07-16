@@ -23,6 +23,7 @@ final class AgreementListView: BaseView {
     lazy var checkButton = UIButton().builder
         .with {
             $0.setImage(.check, for: .normal)
+            $0.setImage(.add, for: .selected)
         }
         .build()
     

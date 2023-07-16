@@ -9,13 +9,19 @@
 import RxSwift
 
 struct AgreementPresentableState {
-    
+    var isAllAgreeCheckBoxSelected = false
+    var isServiceCheckBoxSelected = false
+    var isPrivacyCheckBoxSelected = false
+    var isConfirmButtonEnable = false 
 }
 
 // MARK: - AgreementPresentableAction
 
 enum AgreementPresentableAction {
-    
+    case allAgreeCheckButtonDidTap(Bool)
+    case serviceCheckButtonDidTap(Bool)
+    case privacyCheckButtonDidTap(Bool)
+    case confirmButtonDidTap(Bool)
 }
 
 // MARK: - AgreementPresentableListener
