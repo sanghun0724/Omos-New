@@ -83,6 +83,28 @@ extension AgreementInteractor {
     }
 }
 
+// MARK: - transform mutation
+extension AgreementInteractor {
+    
+    func transform(mutation: Observable<Mutation>) -> Observable<Mutation> {
+        return mutation
+            .withUnretained(self)
+            .flatMap { owner, mutation in
+                switch mutation {
+                case .attachNicknameRIB:
+                    return owner.transformAttachNicknameRIB()
+                default:
+                    return .just(mutation)
+                }
+            }
+    }
+    
+    private func transformAttachNicknameRIB() -> Observable<Mutation> {
+        self.router?.attachNicknameRIB()
+        return .empty()
+    }
+}
+
 // MARK: - reduce
 
 extension AgreementInteractor {

@@ -38,3 +38,30 @@ extension Reactive where Base: UIButton {
     }
     
 }
+
+extension Reactive where Base: UIButton {
+
+    public var isSelectedChanged: ControlProperty<Bool> {
+        return base.rx.controlProperty(
+            editingEvents:  [.allEditingEvents,.touchUpInside],
+            getter: { $0.isSelected },
+            setter: { $0.isSelected = $1 })
+    }
+}
+
+extension Reactive where Base: UISwitch {
+
+    public var isSelectedChanged: ControlProperty<Bool> {
+        return base.rx.controlProperty(
+            editingEvents:  [.allEditingEvents, .valueChanged],
+            getter: { $0.isOn },
+            setter: { $0.isOn = $1 })
+    }
+}
+
+extension Array where Iterator.Element: ObservableType {
+
+    func allSatisfy(_ predicate: @escaping (Iterator.Element.Element) throws -> Bool) -> Observable<Bool> {
+        return Observable.combineLatest(self) { try $0.allSatisfy(predicate) }
+    }
+}
