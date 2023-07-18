@@ -12,7 +12,8 @@ struct AgreementPresentableState {
     var isAllAgreeCheckBoxSelected = false
     var isServiceCheckBoxSelected = false
     var isPrivacyCheckBoxSelected = false
-    var isConfirmButtonEnable = false 
+    var isConfirmButtonEnable = false
+    var openWebLink = String()
 }
 
 // MARK: - AgreementPresentableAction
@@ -21,6 +22,8 @@ enum AgreementPresentableAction {
     case allAgreeCheckButtonDidTap(Bool)
     case serviceCheckButtonDidTap(Bool)
     case privacyCheckButtonDidTap(Bool)
+    case serviceAccessoryButtonDidTap
+    case privacyAccessoryButtonDidTap
     case confirmButtonDidTap(Bool)
 }
 

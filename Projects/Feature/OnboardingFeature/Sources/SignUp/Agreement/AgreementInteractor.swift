@@ -6,6 +6,8 @@
 //  Copyright © 2023 Omos. All rights reserved.
 //
 
+import Foundation
+
 import ReactorKit
 import RIBs
 import RxSwift
@@ -37,6 +39,8 @@ final class AgreementInteractor:
         case setIsAllAgreeSelectedMutation(Bool)
         case setIsServiceSelectedMutation(Bool)
         case setIsPrivacySelectedMutation(Bool)
+        case openServiceInfoSafariLink
+        case openPrivacyInfoSafariLink
         case attachNicknameRIB
     }
     
@@ -77,6 +81,10 @@ extension AgreementInteractor {
             return .just(.setIsServiceSelectedMutation(!toggled))
         case let .privacyCheckButtonDidTap(toggled):
             return .just(.setIsPrivacySelectedMutation(!toggled))
+        case .serviceAccessoryButtonDidTap:
+            return .just(.openServiceInfoSafariLink)
+        case .privacyAccessoryButtonDidTap:
+            return .just(.openPrivacyInfoSafariLink)
         case .confirmButtonDidTap:
             return .just(.attachNicknameRIB)
         }
@@ -120,6 +128,10 @@ extension AgreementInteractor {
             newState.isServiceCheckBoxSelected = toggled
         case let .setIsPrivacySelectedMutation(toggled):
             newState.isPrivacyCheckBoxSelected = toggled
+        case .openServiceInfoSafariLink:
+            newState.openWebLink = "https://trail-plough-b99.notion.site/Omos-43c37b2f250f4307a6f9f22335fce2e1?pvs=4"
+        case .openPrivacyInfoSafariLink:
+            newState.openWebLink = "https://trail-plough-b99.notion.site/Omos-ee088d2ca29b41e9bbbac0ff0e07aac8?pvs=4"
         default:
             log.verbose("this is default \(mutation)")
         }

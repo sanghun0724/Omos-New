@@ -6,11 +6,13 @@
 //  Copyright © 2023 Omos. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 import RIBs
 import RxCocoa
 import RxSwift
+import RxGesture
 
 import DesignSystem
 
@@ -126,6 +128,8 @@ extension AgreementViewController {
         bindAllCheckBoxTapAction()
         bindServiceCheckBoxTapAction()
         bindPrivacyCheckBoxTapAction()
+        bindServiceAccessoryButtonTapAction()
+        bindPrivacyAccessoryButtonTapAction()
     }
     
     private func bindAllCheckBoxTapAction() {
@@ -154,6 +158,22 @@ extension AgreementViewController {
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
+    
+    private func bindServiceAccessoryButtonTapAction() {
+        serviceAgreementView.accessoryButton.rx.tap
+            .preventDuplication()
+            .map { .serviceAccessoryButtonDidTap }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindPrivacyAccessoryButtonTapAction() {
+        privacyAgreementView.accessoryButton.rx.tap
+            .preventDuplication()
+            .map { .privacyAccessoryButtonDidTap }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
 }
 
 // MARK: - Binding State
@@ -163,6 +183,7 @@ extension AgreementViewController {
         bindIsAllAgreeCheckBoxSelected(from: listener)
         bindIsServiceCheckBoxSelected(from: listener)
         bindIsPrivacyCheckBoxSelected(from: listener)
+        bindOpenWebLink(from: listener)
         bindIsConfirmButtonEnable(from: listener)
     }
     
@@ -187,6 +208,15 @@ extension AgreementViewController {
             .distinctUntilChanged()
             .asDriver(onErrorDriveWith: .empty())
             .drive(privacyAgreementView.checkButton.rx.isSelected)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindOpenWebLink(from listener: AgreementPresentableListener) {
+        listener.state.map(\.openWebLink)
+            .distinctUntilChanged()
+            .compactMap { URL(string: $0) }
+            .asDriver(onErrorDriveWith: .empty())
+            .drive { UIApplication.shared.open($0) }
             .disposed(by: disposeBag)
     }
     
