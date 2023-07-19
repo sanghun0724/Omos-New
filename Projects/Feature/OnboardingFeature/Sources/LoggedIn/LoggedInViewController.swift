@@ -37,7 +37,7 @@ final class LoggedInViewController:
     
     private lazy var scrollContentView = UIView()
     
-    private lazy var headerView = OnBoardingHeaderView()
+    private lazy var headerView = UIView()
     
     private lazy var emailTextFieldView = CustomTextFieldView()
         .builder

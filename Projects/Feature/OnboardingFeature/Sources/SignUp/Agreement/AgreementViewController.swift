@@ -130,6 +130,7 @@ extension AgreementViewController {
         bindPrivacyCheckBoxTapAction()
         bindServiceAccessoryButtonTapAction()
         bindPrivacyAccessoryButtonTapAction()
+        bindConfirmButtonTapAction()
     }
     
     private func bindAllCheckBoxTapAction() {
@@ -171,6 +172,14 @@ extension AgreementViewController {
         privacyAgreementView.accessoryButton.rx.tap
             .preventDuplication()
             .map { .privacyAccessoryButtonDidTap }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindConfirmButtonTapAction() {
+        confirmButton.rx.tap
+            .preventDuplication()
+            .map { .confirmButtonDidTap }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }

@@ -24,7 +24,7 @@ enum AgreementPresentableAction {
     case privacyCheckButtonDidTap(Bool)
     case serviceAccessoryButtonDidTap
     case privacyAccessoryButtonDidTap
-    case confirmButtonDidTap(Bool)
+    case confirmButtonDidTap
 }
 
 // MARK: - AgreementPresentableListener

@@ -6,7 +6,10 @@
 //
 
 import UIKit
+
 import RIBs
+import RxSwift
+import RxCocoa
 
 import DesignSystem
 
@@ -21,10 +24,8 @@ final class AppRootViewController:
     
     // MARK: UI Components
     
-    private lazy var splashImageView = UIImageView()
-        .builder
-        .contentMode(.scaleAspectFill)
-        .backgroundColor(.gray)
+    private lazy var tableView = UITableView().builder
+        .rowHeight(UITableView.automaticDimension)
         .build()
     
     // MARK: - View Lifecycle
@@ -32,27 +33,49 @@ final class AppRootViewController:
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        bindTableView()
     }
     
     weak var listener: AppRootPresentableListener?
     
+    private let items = Observable.just(
+        [
+        "emailSignUp",
+        "passwordSignUp",
+        "Agreement",
+        "Nickname"
+        ]
+    )
+
+    func bindTableView() {
+        items
+        .bind(to: tableView.rx.items) { tableView, row, element in
+            let cell = UITableViewCell()
+            cell.textLabel?.text = element
+            return cell
+        }
+        .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+        .bind { [weak self] indexPath in
+            print(indexPath)
+                self?.tableView.deselectRow(at: indexPath, animated: true)
+            }.disposed(by: disposeBag)
+        
+    }
 }
 
 // MARK: - Layout
 
 extension AppRootViewController {
     private func setupUI() {
-        contentView.addSubview(splashImageView)
-        
+        contentView.addSubview(tableView)
         self.layout()
     }
     
     private func layout() {
-        splashImageView.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().multipliedBy(0.9)
-            $0.height.equalToSuperview().multipliedBy(0.133)
-            $0.width.equalToSuperview().multipliedBy(0.32)
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
     }
 }

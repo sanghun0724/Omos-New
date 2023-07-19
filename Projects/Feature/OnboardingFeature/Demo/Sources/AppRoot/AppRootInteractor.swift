@@ -37,7 +37,6 @@ final class AppRootInteractor: PresentableInteractor<AppRootPresentable>, AppRoo
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        router?.attachPasswordRIB()
     }
 
     override func willResignActive() {
