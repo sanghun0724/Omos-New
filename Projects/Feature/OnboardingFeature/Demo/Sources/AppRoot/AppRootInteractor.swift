@@ -11,7 +11,19 @@ import RIBs
 protocol AppRootRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
     func attachOnboardingRIB()
+    func detachOnobardingRIB()
+    
+    func attachEmailSignUpRIB()
+    func detachEmailSignUpRIB()
+    
     func attachPasswordRIB()
+    func detachPaswwordRIB()
+    
+    func attachAgreementRIB()
+    func detachAgreementRIB()
+    
+    func attachNicknameRIB()
+    func detachNicknameRIB()
 }
 
 protocol AppRootPresentable: Presentable {
@@ -23,8 +35,12 @@ protocol AppRootListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class AppRootInteractor: PresentableInteractor<AppRootPresentable>, AppRootInteractable, AppRootPresentableListener, URLHandler {
-
+final class AppRootInteractor:
+    PresentableInteractor<AppRootPresentable>,
+    AppRootInteractable,
+    AppRootPresentableListener
+{
+    
     weak var router: AppRootRouting?
     weak var listener: AppRootListener?
 
@@ -37,6 +53,7 @@ final class AppRootInteractor: PresentableInteractor<AppRootPresentable>, AppRoo
 
     override func didBecomeActive() {
         super.didBecomeActive()
+
     }
 
     override func willResignActive() {
@@ -44,7 +61,18 @@ final class AppRootInteractor: PresentableInteractor<AppRootPresentable>, AppRoo
         // TODO: Pause any business logic.
     }
     
-    func handle(_ url: URL) {
-      
+    func attachRIB(type: DemoSingleRIBType) {
+        switch type {
+        case .처음_메인_온보딩_화면:
+            self.router?.attachOnboardingRIB()
+        case .이메일_회원가입:
+            self.router?.attachEmailSignUpRIB()
+        case .비밀번호_회원가입:
+            self.router?.attachPasswordRIB()
+        case .닉네임_회원가입:
+            self.router?.attachNicknameRIB()
+        case .약관동의:
+            self.router?.attachAgreementRIB()
+        }
     }
 }

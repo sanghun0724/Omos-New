@@ -14,7 +14,7 @@ import RxCocoa
 import DesignSystem
 
 protocol AppRootPresentableListener: AnyObject {
-    
+    func attachRIB(type: DemoSingleRIBType)
 }
 
 final class AppRootViewController:
@@ -37,28 +37,19 @@ final class AppRootViewController:
     }
     
     weak var listener: AppRootPresentableListener?
-    
-    private let items = Observable.just(
-        [
-        "emailSignUp",
-        "passwordSignUp",
-        "Agreement",
-        "Nickname"
-        ]
-    )
 
     func bindTableView() {
-        items
+        Observable.just(DemoSingleRIBType.allCases)
         .bind(to: tableView.rx.items) { tableView, row, element in
             let cell = UITableViewCell()
-            cell.textLabel?.text = element
+            cell.textLabel?.text = element.rawValue
             return cell
         }
         .disposed(by: disposeBag)
         
         tableView.rx.itemSelected
         .bind { [weak self] indexPath in
-            print(indexPath)
+            self?.listener?.attachRIB(type: DemoSingleRIBType.allCases[indexPath.row])
                 self?.tableView.deselectRow(at: indexPath, animated: true)
             }.disposed(by: disposeBag)
         
@@ -78,4 +69,12 @@ extension AppRootViewController {
             $0.edges.equalToSuperview()
         }
     }
+}
+
+enum DemoSingleRIBType: String, CaseIterable {
+    case 처음_메인_온보딩_화면
+    case 이메일_회원가입
+    case 비밀번호_회원가입
+    case 약관동의
+    case 닉네임_회원가입
 }

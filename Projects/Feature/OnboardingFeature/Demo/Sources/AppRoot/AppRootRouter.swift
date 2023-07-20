@@ -20,7 +20,11 @@ protocol AppRootViewControllable: ViewControllable {
     // TODO: Declare methods the router invokes to manipulate the view hierarchy.
 }
 
-final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControllable>, AppRootRouting {
+final class AppRootRouter:
+    LaunchRouter<AppRootInteractable,
+    AppRootViewControllable>,
+    AppRootRouting
+{
     
     private let onboardingBuilder: OnboardingBuildable
     private var onboardingRouting: OnboardingRouting?
