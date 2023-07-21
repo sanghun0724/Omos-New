@@ -41,6 +41,12 @@ final class AppRootInteractor:
     AppRootPresentableListener
 {
     
+    func detachSignUpRIB() {
+        
+    }
+    
+    
+    
     weak var router: AppRootRouting?
     weak var listener: AppRootListener?
 

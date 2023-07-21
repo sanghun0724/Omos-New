@@ -11,7 +11,15 @@ import DesignSystem
 import OnboardingFeatureInterface
 import TodayFeatureInterface
 
-protocol AppRootInteractable: Interactable, OnboardingListener, TodayListener, PasswordListener {
+protocol AppRootInteractable:
+    Interactable,
+    OnboardingListener,
+    EmailSignUpListener,
+    TodayListener,
+    PasswordListener,
+    AgreementListener,
+    NicknameListener
+{
     var router: AppRootRouting? { get set }
     var listener: AppRootListener? { get set }
 }
@@ -25,21 +33,35 @@ final class AppRootRouter:
     AppRootViewControllable>,
     AppRootRouting
 {
-    
     private let onboardingBuilder: OnboardingBuildable
-    private var onboardingRouting: OnboardingRouting?
+    private var onboardingRouter: OnboardingRouting?
     
     private let passwordBuilder: PasswordBuildable
-    private var passwordRouting: PasswordRouting?
+    private var passwordRouter: PasswordRouting?
+    
+    private let emailSignUpBuilder: EmailSignUpBuildable
+    private var emailSignUpRouter: EmailSignUpRouting?
+    
+    private let agreementBuilder: AgreementBuildable
+    private var agreementRouter: AgreementRouting?
+    
+    private let nicknameBuilder: NicknameBuildable
+    private var nicknameRouter: NicknameRouting?
     
     init(
         interactor: AppRootInteractable,
         viewController: AppRootViewControllable,
         onboardingBuilder: OnboardingBuildable,
-        passwordBuilder: PasswordBuildable
+        passwordBuilder: PasswordBuildable,
+        emailSignUpBuilder: EmailSignUpBuildable,
+        agreementBuilder: AgreementBuildable,
+        nicknameBuilder: NicknameBuildable
     ) {
         self.onboardingBuilder = onboardingBuilder
         self.passwordBuilder = passwordBuilder
+        self.emailSignUpBuilder = emailSignUpBuilder
+        self.agreementBuilder = agreementBuilder
+        self.nicknameBuilder = nicknameBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
@@ -50,7 +72,7 @@ final class AppRootRouter:
     }
     
     func attachOnboardingRIB() {
-        if onboardingRouting != nil {
+        if onboardingRouter != nil {
             return
         }
         
@@ -59,14 +81,20 @@ final class AppRootRouter:
                 listener: interactor
             )
         )
-        self.onboardingRouting = router
+        self.onboardingRouter = router
         attachChild(router)
-        let navigation = NavigationControllerable(root: router.viewControllable)
-        viewController.presentFullScreen(navigation, animated: false, completion: nil)
+        viewController.show(router.viewControllable, animated: false, completion: nil)
+    }
+    
+    func detachOnobardingRIB() {
+        guard let router = onboardingRouter else { return }
+        detachChild(router)
+        onboardingRouter = nil
+        viewController.remove(router.viewControllable)
     }
     
     func attachPasswordRIB() {
-        if passwordRouting != nil {
+        if passwordRouter != nil {
             return
         }
         let router = passwordBuilder.build(
@@ -74,9 +102,69 @@ final class AppRootRouter:
                 listener: interactor
             )
         )
-        self.passwordRouting = router
+        self.passwordRouter = router
         attachChild(router)
-        let navigation = NavigationControllerable(root: router.viewControllable)
-        viewController.presentFullScreen(navigation, animated: false, completion: nil)
+        viewController.show(router.viewControllable, animated: false, completion: nil)
+    }
+    
+    func detachPaswwordRIB() {
+        guard let router = passwordRouter else { return }
+        detachChild(router)
+        passwordRouter = nil
+        viewController.remove(router.viewControllable)
+    }
+    
+    func attachEmailSignUpRIB() {
+        guard emailSignUpRouter == nil else { return }
+        let router = emailSignUpBuilder.build(
+            with: EmailSignUpBuildDependency(
+                listener: interactor
+            )
+        )
+        emailSignUpRouter = router
+        viewController.show(router.viewControllable)
+    }
+    
+    func detachEmailSignUpRIB() {
+        guard let router = emailSignUpRouter else { return }
+        detachChild(router)
+        emailSignUpRouter = nil
+        viewController.remove(router.viewControllable)
+    }
+    
+    func attachAgreementRIB() {
+        guard agreementRouter == nil else { return }
+        let router = agreementBuilder.build(
+            with: AgreementBuildDependency(
+                listener: interactor
+            )
+        )
+        agreementRouter = router
+        viewController.show(router.viewControllable)
+    }
+    
+    func detachAgreementRIB() {
+        guard let router = agreementRouter else { return }
+        detachChild(router)
+        agreementRouter = nil
+        viewController.remove(router.viewControllable)
+    }
+    
+    func attachNicknameRIB() {
+        guard nicknameRouter == nil else { return }
+        let router = nicknameBuilder.build(
+            with: NicknameBuildDependency(
+                listener: interactor
+            )
+        )
+        attachChild(router)
+        viewController.show(router.viewControllable)
+    }
+    
+    func detachNicknameRIB() {
+        guard let router = nicknameRouter else { return }
+        detachChild(router)
+        nicknameRouter = nil
+        viewController.remove(router.viewControllable)
     }
 }

@@ -55,7 +55,7 @@ final class LoggedInRouter:
     }
     
     func attachSignUpRIB() {
-        guard self.emailSignUpBuilder == nil else { return }
+        guard self.emailSignUpRouter == nil else { return }
         let router = self.emailSignUpBuilder.build(
             with: EmailSignUpBuildDependency(
                 listener: interactor

@@ -34,6 +34,15 @@ private class AppRootDependency9fafbf379aae0424b417Provider: AppRootDependency {
     var passwordBuilder: PasswordBuildable {
         return appComponent.passwordBuilder
     }
+    var emailSignUpBuilder: EmailSignUpBuildable {
+        return appComponent.emailSignUpBuilder
+    }
+    var agreementBuilder: AgreementBuildable {
+        return appComponent.agreementBuilder
+    }
+    var nicknameBuilder: NicknameBuildable {
+        return appComponent.nicknameBuilder
+    }
     private let appComponent: AppComponent
     init(appComponent: AppComponent) {
         self.appComponent = appComponent
@@ -169,6 +178,9 @@ extension AppRootComponent: Registration {
         keyPathToName[\AppRootDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
         keyPathToName[\AppRootDependency.onboardingBuilder] = "onboardingBuilder-OnboardingBuildable"
         keyPathToName[\AppRootDependency.passwordBuilder] = "passwordBuilder-PasswordBuildable"
+        keyPathToName[\AppRootDependency.emailSignUpBuilder] = "emailSignUpBuilder-EmailSignUpBuildable"
+        keyPathToName[\AppRootDependency.agreementBuilder] = "agreementBuilder-AgreementBuildable"
+        keyPathToName[\AppRootDependency.nicknameBuilder] = "nicknameBuilder-NicknameBuildable"
     }
 }
 extension OnboardingComponent: Registration {
