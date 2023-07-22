@@ -39,10 +39,6 @@ final class NicknameInteractor:
         case setError(MyError)
         case setLoading(Bool)
         case setNicknameFormatValidation(Bool)
-        case toggleTerms(Bool)
-        case togglePolicy(Bool)
-        case showTermsDetail
-        case showPolicyDetail
         case attachTodayRIB
         case detach
     }
@@ -86,14 +82,6 @@ extension NicknameInteractor {
         switch action {
         case let .nicknameTextFieldDidChange(nickname):
             return nicknameValidationMutation(nickname: nickname)
-        case let .toggleTerms(toggled):
-            return .just(.toggleTerms(toggled))
-        case let .togglePolicy(toggled):
-            return .just(.togglePolicy(toggled))
-        case .showTermsDetail:
-            return .just(.showTermsDetail)
-        case .showPolicyDetail:
-            return .just(.showPolicyDetail)
         case .confirmButtonDidTap:
             return signUpMutation()
         case .detach:
@@ -113,7 +101,7 @@ extension NicknameInteractor {
     
     private func signUpMutation() -> Observable<Mutation> {
         let signUpMutation: Observable<Mutation> = onboardingRepositoryService.signUp()
-            .map { $0 ? .attachTodayRIB : .setError(.defaultError) }
+            .map { $0 ? .attachTodayRIB : .setError(.duplicatedNicknameError) }
             .catchAndReturn(.setError(.defaultError))
         
         return signUpMutation
@@ -166,14 +154,6 @@ extension NicknameInteractor {
             newState.isLoading = loading
         case let .setNicknameFormatValidation(validation):
             newState.isValidNicknameFormat = validation
-        case let .toggleTerms(toggled):
-            newState.termsToggled = toggled
-        case let .togglePolicy(toggled):
-            newState.policyToggled = toggled
-        case .showTermsDetail:
-            newState.showTermsDetail = Void()
-        case .showPolicyDetail:
-            newState.showPolicyDetail = Void()
         default:
             log.debug("Do Nothing when \(mutation)")
         }

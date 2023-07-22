@@ -66,7 +66,10 @@ final class OnboardingViewController:
     
     private lazy var kakaoImageView = UIImageView(image: DesignSystemAsset.Login.kakao.image)
     
-    private lazy var appleButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .white)
+    private lazy var appleButton = ASAuthorizationAppleIDButton(
+        authorizationButtonType: .signIn,
+        authorizationButtonStyle: .white
+    )
     
     private lazy var signUpButton = UIButton().builder
         .with {
@@ -166,7 +169,14 @@ extension OnboardingViewController {
         appleButton
             .rx
             .loginOnTap(scope: [.email])
-            .compactMap { ($0.credential as? ASAuthorizationAppleIDCredential)?.email }
+            .compactMap{ $0.credential as? ASAuthorizationAppleIDCredential }
+            .withUnretained(self)
+            .map { owner, auth in
+                // 1. 이메일이 있으면 회원가입
+                // 2. 이메일 없으면 로그인 -> identtoken 에 이메일 정보
+                guard let email = auth.email else { return }
+                //                ($0.credential as? ASAuthorizationAppleIDCredential)?.email }
+            }
             .map { .didTapAppleLoggedInButton(email: $0) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)

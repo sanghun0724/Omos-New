@@ -19,7 +19,7 @@ import AppFoundation
 import CoreKit
 import OnboardingDomainInterface
 
-public class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
+public class OnboardingRepositoryServiceImpl: OnboardingRepositoryService {
     private let onboardingRepository: OnboardingRepository
     
     private let signUpItemInfoRelay = BehaviorRelay(value: SignUpItemInfo())
@@ -71,20 +71,21 @@ public class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
             .compactMap(\.kakaoAccount?.email)
     }
     
-    public func appleEmail() -> Observable<String> {
-        return .empty()
+    public func signUp() -> Observable<Bool> {
+            onboardingRepository.localSignUp(
+                request: .init(
+                    email: signUpItemInfoRelay.value.email,
+                    nickname: signUpItemInfoRelay.value.nickname,
+                    password: signUpItemInfoRelay.value.password
+                )
+            )
+            .asObservable()
+            .map(\.state)
     }
     
-    public func signUp() -> Observable<Bool> {
-        onboardingRepository.localSignUp(
-            request: .init(
-                email: signUpItemInfoRelay.value.email,
-                nickname: signUpItemInfoRelay.value.nickname,
-                password: signUpItemInfoRelay.value.password
-            )
-        )
-        .asObservable()
-        .map(\.state)
+    public func updateSnsEmailWithType(email: String, type: SignUpType) {
+        setSignUpEmail(by: email)
+        self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.type(type))
     }
     
     public func checkEmailDuplication(email: String) -> Observable<Bool> {
@@ -122,7 +123,7 @@ public class OnboardingRespositoryServiceImpl: OnboardingRepositoryService {
     public func isValidNickname(nickname: String) -> Observable<Bool> {
         setSignUpNickname(by: nickname)
         let nicknameRegEx = "[가-힣A-Za-z0-9]{2,12}"
-        let nicknameTest = NSPredicate(format: "SELF MATCHES &@", nicknameRegEx)
+        let nicknameTest = NSPredicate(format: "SELF MATCHES %@", nicknameRegEx)
         return .just(nicknameTest.evaluate(with: nickname))
     }
     

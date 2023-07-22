@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,7 +43,7 @@
 		5946AFBD6F7FB07692B579EA /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8DF9947BE11CA3C5C6D537C /* KakaoSDKShare.framework */; platformFilter = ios; };
 		5FA0ADAA61BFCF04034867CC /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 022C270F7A47FFA17678C9E3 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
 		60B38FC29EC62EE060572E11 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380E7358AA95BB321665556E /* RxSwift.framework */; platformFilter = ios; };
-		6435212FF3DDA4F961A48E37 /* OnboardingRespositoryServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D2B183D169AA715887AD0 /* OnboardingRespositoryServiceImpl.swift */; };
+		6435212FF3DDA4F961A48E37 /* OnboardingRepositoryServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D2B183D169AA715887AD0 /* OnboardingRepositoryServiceImpl.swift */; };
 		6481FBF9596C6F6D2108C84B /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C88DED7FA4F68B76D4033B /* KakaoSDKTemplate.framework */; platformFilter = ios; };
 		67C6A9DE288245B8760DF7BD /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20359F4168D00A883F6E0F3 /* Testing.swift */; };
 		6B211596AA499C40BE22BB38 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1072563C847E630F2405C4F7 /* libOnboardingDomain.a */; platformFilter = ios; };
@@ -216,7 +216,7 @@
 		0AAEFC707DBE65D54AA5C60E /* OnboardingDomainTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnboardingDomainTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD79A80C1F184B2B1721599 /* NeedleFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeedleFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1072563C847E630F2405C4F7 /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		115D2B183D169AA715887AD0 /* OnboardingRespositoryServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRespositoryServiceImpl.swift; sourceTree = "<group>"; };
+		115D2B183D169AA715887AD0 /* OnboardingRepositoryServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepositoryServiceImpl.swift; sourceTree = "<group>"; };
 		1995690905FD9E6966DC7CCE /* DesignSystem_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystem_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0E86B6BBC634F62A3AC53C /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA0C5527B17EE049CE7B6E2 /* RxKakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -444,7 +444,7 @@
 		88193D4EF55365855E00933F /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				115D2B183D169AA715887AD0 /* OnboardingRespositoryServiceImpl.swift */,
+				115D2B183D169AA715887AD0 /* OnboardingRepositoryServiceImpl.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -636,8 +636,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 817A0A7AB5537251D8D4C8FB /* Build configuration list for PBXProject "OnboardingDomain" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -699,7 +697,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4E9737D719CE4184B8A095 /* SignUpItemInfo.swift in Sources */,
-				6435212FF3DDA4F961A48E37 /* OnboardingRespositoryServiceImpl.swift in Sources */,
+				6435212FF3DDA4F961A48E37 /* OnboardingRepositoryServiceImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

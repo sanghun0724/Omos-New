@@ -11,11 +11,13 @@ import RIBs
 import OnboardingDomainInterface
 import OnboardingDomain
 import OnboardingFeatureInterface
+import TodayFeatureInterface
 
 // MARK: - NicknameDependency
 
 public protocol NicknameDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
+    var todayBuilder: TodayBuildable { get }
 }
 
 // MARK: - NicknameComponent
@@ -44,6 +46,10 @@ public final class NicknameBuilder:
             onboardingRepositoryService: component.onboardingRepositoryService)
         
         interactor.listener = payload.listener
-        return NicknameRouter(interactor: interactor, viewController: viewController)
+        return NicknameRouter(
+         interactor: interactor,
+         viewController: viewController,
+         todayBuilder: component.todayBuilder
+        )
     }
 }

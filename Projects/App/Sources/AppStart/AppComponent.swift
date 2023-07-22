@@ -27,7 +27,7 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
     
     var onboardingRepositoryService: OnboardingRepositoryService {
         shared {
-            OnboardingRespositoryServiceImpl(
+            OnboardingRepositoryServiceImpl(
                 onboardingRepository: onboardingRepository
             )
         }

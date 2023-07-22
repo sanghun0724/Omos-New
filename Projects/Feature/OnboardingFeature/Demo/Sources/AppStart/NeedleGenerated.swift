@@ -107,6 +107,9 @@ private class NicknameDependencyf8931c25a2fc8a703ee7Provider: NicknameDependency
     var onboardingRepositoryService: OnboardingRepositoryService {
         return appComponent.onboardingRepositoryService
     }
+    var todayBuilder: TodayBuildable {
+        return appComponent.todayBuilder
+    }
     private let appComponent: AppComponent
     init(appComponent: AppComponent) {
         self.appComponent = appComponent
@@ -205,6 +208,7 @@ extension AgreementComponent: Registration {
 extension NicknameComponent: Registration {
     public func registerItems() {
         keyPathToName[\NicknameDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
+        keyPathToName[\NicknameDependency.todayBuilder] = "todayBuilder-TodayBuildable"
     }
 }
 extension EmailSignUpComponent: Registration {

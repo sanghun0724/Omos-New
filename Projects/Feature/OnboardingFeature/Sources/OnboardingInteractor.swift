@@ -39,7 +39,7 @@ final class OnboardingInteractor:
         case setLoading(Bool)
         case attachSignUpRIB
         case attachLoggedInRIB
-        case attachAgreementRIB(email: String)
+        case attachAgreementRIB
         case attachTodayRIB
     }
      
@@ -79,8 +79,8 @@ extension OnboardingInteractor {
         switch action {
         case .didTapKakaoLoggedInButton:
             return kakaoLoginMutation()
-        case .didTapAppleLoggedInButton:
-            return .empty()
+        case let .didTapAppleLoggedInButton(email):
+            return appleLoginMutation(email: email)
         case .didTapEmailSingUpButton:
             return .just(.attachSignUpRIB)
         case .didTapEmailLoggedInButton:
@@ -90,8 +90,10 @@ extension OnboardingInteractor {
     
     private func kakaoLoginMutation() -> Observable<Mutation> {
         let kakaoLoginMutation: Observable<Mutation> = onboardingRepositoryService.kakaoLogin()
-            .map{ .attachAgreementRIB(email: $0) }
-            .catchAndReturn( .setError(.defaultError))
+            .withUnretained(self)
+            .map { owner, email in owner.onboardingRepositoryService.updateSnsEmailWithType(email: email, type: .kakao) }
+            .map{ .attachTodayRIB }
+            .catchAndReturn( .attachAgreementRIB )
         
         let sequence: [Observable<Mutation>] = [
             .just(.setLoading(true)),
@@ -102,8 +104,9 @@ extension OnboardingInteractor {
         return .concat(sequence)
     }
     
-    private func appleLogin() -> Observable<Mutation> {
-        return .empty()
+    private func appleLoginMutation(email: String) -> Observable<Mutation> {
+        onboardingRepositoryService.updateSnsEmailWithType(email: email, type: .apple)
+        return .just(.attachAgreementRIB)
     }
     
 }
@@ -120,8 +123,8 @@ extension OnboardingInteractor {
                     return owner.attachSignUpRIBTransform()
                 case .attachLoggedInRIB:
                     return owner.attachLoggedInRIBTransform()
-                case .attachAgreementRIB(email: "TODO"):
-                    return owner.attachAgreemntRIBTransform() // TODO: email input
+                case .attachAgreementRIB:
+                    return owner.attachAgreemntRIBTransform()
                 default:
                     return .just(mutation)
                 }

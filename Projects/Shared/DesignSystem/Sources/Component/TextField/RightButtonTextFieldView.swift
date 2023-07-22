@@ -8,7 +8,7 @@
 
 import UIKit
 
-public final class EmailTextFieldView: CustomTextFieldView {
+public final class RightButtonTextFieldView: CustomTextFieldView {
     
     // MARK: - Constants
 

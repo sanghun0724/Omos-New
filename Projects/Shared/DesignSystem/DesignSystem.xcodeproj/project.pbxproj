@@ -56,7 +56,7 @@
 		525AB397B195BCF019C82830 /* ErrorStreamBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CD301771576E30B8A4BA7 /* ErrorStreamBindable.swift */; };
 		536D1C117B2497741139A392 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2056D719C018C328149DEE18 /* RIBs.framework */; platformFilter = ios; };
 		53767C178D594DB062252C28 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAD0A005F0A5E4EF917A917 /* BaseCollectionViewCell.swift */; };
-		56E28898952C31E8070EB552 /* EmailTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1584A11A793B53F975558 /* EmailTextFieldView.swift */; };
+		56E28898952C31E8070EB552 /* RightButtonTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1584A11A793B53F975558 /* RightButtonTextFieldView.swift */; };
 		57706E0F3F3D42887F2321C5 /* CustomNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18557AA64F9040EE95684008 /* CustomNavigationBarView.swift */; };
 		57B13E4617C0005D26ACF0BC /* TuistBundle+DesignSystemDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4042D30A4B6B8CAC47FDB4E /* TuistBundle+DesignSystemDemoApp.swift */; };
 		5BB01F1EBCAC4C610568DC10 /* HasCompositeDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C74227DB3C6205A332C28F /* HasCompositeDisposable.swift */; };
@@ -305,7 +305,7 @@
 		740B32D4A8A18578B7428A1F /* RxAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		755B4471232987C67B9DAFFA /* HasRefreshState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasRefreshState.swift; sourceTree = "<group>"; };
 		756FF98FA2F1CACFA34BDA88 /* SUIT-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.otf"; sourceTree = "<group>"; };
-		79E1584A11A793B53F975558 /* EmailTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextFieldView.swift; sourceTree = "<group>"; };
+		79E1584A11A793B53F975558 /* RightButtonTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightButtonTextFieldView.swift; sourceTree = "<group>"; };
 		7C16DEA1868F4F5F12A4B017 /* LoadingStreamBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStreamBindable.swift; sourceTree = "<group>"; };
 		7CAD0A005F0A5E4EF917A917 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		7CDEF84622BE13A1D276F6EF /* Logo.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Logo.xcassets; sourceTree = "<group>"; };
@@ -758,7 +758,7 @@
 			children = (
 				8A0C4099F8DDC043E4D528B1 /* CustomTextField.swift */,
 				A5C90A9CD64E58198901AF10 /* CustomTextFieldView.swift */,
-				79E1584A11A793B53F975558 /* EmailTextFieldView.swift */,
+				79E1584A11A793B53F975558 /* RightButtonTextFieldView.swift */,
 				1787C2CE20D5350D14A25C7E /* PasswordTextFieldView.swift */,
 			);
 			path = TextField;
@@ -1044,7 +1044,7 @@
 				DC98EC4826AEED9F6C2F5605 /* LoadingIndicator.swift in Sources */,
 				ACD95549A6106E8FFF0D42C1 /* CustomTextField.swift in Sources */,
 				99F1B533A0313A181BEEB10F /* CustomTextFieldView.swift in Sources */,
-				56E28898952C31E8070EB552 /* EmailTextFieldView.swift in Sources */,
+				56E28898952C31E8070EB552 /* RightButtonTextFieldView.swift in Sources */,
 				E81D3EFF0B8334CAE958912C /* PasswordTextFieldView.swift in Sources */,
 				B90B0EA552C79C80C49BC8F7 /* BaseCollectionReuseableView.swift in Sources */,
 				53767C178D594DB062252C28 /* BaseCollectionViewCell.swift in Sources */,

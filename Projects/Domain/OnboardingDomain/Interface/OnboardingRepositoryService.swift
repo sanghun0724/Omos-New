@@ -3,6 +3,8 @@
 
 import RxSwift
 
+import AppFoundation
+
 public protocol OnboardingRepositoryService {
     
     // Signing
@@ -20,6 +22,10 @@ public protocol OnboardingRepositoryService {
     func isValidNickname(nickname: String) -> Observable<Bool>
     func isEqualEmailValidationCode(inputCode: String) -> Observable<Bool>
     func isEqualInputPasswords(password: String, repassword: String) -> Observable<Bool>
+    
+    // Update
+    
+    func updateSnsEmailWithType(email: String, type: SignUpType)
     
 }
 

@@ -49,7 +49,7 @@ final class EmailSignUpViewController:
         .font(.boldSystemFont(ofSize: 24))
         .build()
     
-    private lazy var emailTextFieldView = EmailTextFieldView()
+    private lazy var emailTextFieldView = RightButtonTextFieldView()
         .builder
         .with {
             $0.textField.fetchPlaceHolderText(text: "이메일을 입력해주세요.")
@@ -58,7 +58,7 @@ final class EmailSignUpViewController:
         }
         .build()
     
-    private lazy var validationCodeConfirmTextFieldView = EmailTextFieldView()
+    private lazy var validationCodeConfirmTextFieldView = RightButtonTextFieldView()
         .builder
         .with {
             $0.textField.fetchPlaceHolderText(text: "인증코드를 입력해주세요.")

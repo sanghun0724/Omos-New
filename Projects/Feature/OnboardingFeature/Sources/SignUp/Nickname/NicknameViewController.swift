@@ -45,16 +45,17 @@ final class NicknameViewController:
     // MARK: - UI Components
     
     private lazy var headerTitleLabel = BaseLabel().builder
-        .text("닉네임")
+        .text("OMOS에서 사용할\n이름을 입력해주세요.")
         .textColor(.white)
         .font(.boldSystemFont(ofSize: 24))
+        .numberOfLines(2)
         .build()
     
     private lazy var nicknameTextFieldView = CustomTextFieldView()
         .builder
         .with {
             $0.fetchLeftTopLabelText(text: .nickname)
-            $0.fetchLeftBottomLabelText(text: .nicknameWarning)
+            $0.fetchLeftBottomLabelText(text: "2~12자 이내로 입력해주세요." )
         }
         .build()
     
@@ -147,7 +148,16 @@ extension NicknameViewController {
     private func bindState(from listener: NicknamePresentableListener) {
         bindLoadingStream(from: listener)
         bindErrorStream(from: listener)
+        bindisValidNicknameFormat(from: listener)
     }
+    
+    private func bindisValidNicknameFormat(from listener: NicknamePresentableListener) {
+        listener.state.map(\.isValidNicknameFormat)
+            .distinctUntilChanged()
+            .bind(to: self.nicknameTextFieldView.rx.isValidState, self.confirmButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+    }
+
 }
 
 // MARK: - Layout
