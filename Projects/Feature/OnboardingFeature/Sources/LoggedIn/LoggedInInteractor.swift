@@ -10,6 +10,7 @@ import Foundation
 import ReactorKit
 import RIBs
 import RxSwift
+import LogFlume
 
 import AppFoundation
 import OnboardingDomainInterface
@@ -236,7 +237,7 @@ extension LoggedInInteractor {
         case let .setHasLoggedInInput(validation):
             newState.hasLoggedInInput = validation
         default:
-            log.debug("Do Nothing when \(mutation)")
+            LogFlume.debug("Do Nothing when \(mutation)")
         }
         
         return newState

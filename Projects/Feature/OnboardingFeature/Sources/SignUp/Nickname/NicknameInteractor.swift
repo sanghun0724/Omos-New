@@ -8,6 +8,7 @@
 import ReactorKit
 import RIBs
 import RxSwift
+import LogFlume
 
 import AppFoundation
 import GlobalThirdPartyLibrary
@@ -71,7 +72,7 @@ final class NicknameInteractor:
     }
     
     deinit {
-        log.verbose(type(of: self))
+        LogFlume.verbose(type(of: self))
     }
 }
 
@@ -155,7 +156,7 @@ extension NicknameInteractor {
         case let .setNicknameFormatValidation(validation):
             newState.isValidNicknameFormat = validation
         default:
-            log.debug("Do Nothing when \(mutation)")
+            LogFlume.debug("Do Nothing when \(mutation)")
         }
         
         return newState

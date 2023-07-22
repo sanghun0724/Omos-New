@@ -11,6 +11,7 @@ import Foundation
 import ReactorKit
 import RIBs
 import RxSwift
+import LogFlume
 
 import OnboardingFeatureInterface
 import AppFoundation
@@ -133,7 +134,7 @@ extension AgreementInteractor {
         case .openPrivacyInfoSafariLink:
             newState.openWebLink = "https://trail-plough-b99.notion.site/Omos-ee088d2ca29b41e9bbbac0ff0e07aac8?pvs=4"
         default:
-            log.verbose("this is default \(mutation)")
+            LogFlume.verbose("this is default \(mutation)")
         }
         
         return newState

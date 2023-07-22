@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B46DF8E4344A1C37836AD0B /* LogFlumeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D06928E7C0EEFB75BF9A67E /* LogFlumeUtil.swift */; };
 		72293CA2AEB33180F0AE2F01 /* UtilitiesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0768796658CDDB6084B08585 /* UtilitiesTest.swift */; };
 		80B55DBE6F0A721E61679600 /* TokenUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8F941B111FF722C4A5E98 /* TokenUtil.swift */; };
 		A2EC273B4F93254C1681545B /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D426E2DFC811B23A36056648 /* MyError.swift */; };
@@ -16,7 +15,7 @@
 		B8AEC5B84D100BE1C2E80D1C /* ReactorValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C416F75396ADD14AB44EB264 /* ReactorValue.swift */; };
 		C50C8EBD71E4C9ECD783623C /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F25E3F394A87C1191C0A167 /* AnyOptional.swift */; };
 		D6AA6AC09C59E6CE4D2DA237 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF22233356DA351A88445D1 /* libAppFoundation.a */; platformFilter = ios; };
-		DED045512A6BCADD0093FAD5 /* SignUpType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED045502A6BCADD0093FAD5 /* SignUpType.swift */; };
+		DED045512A6BCADD0093FAD5 /* OnboardingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED045502A6BCADD0093FAD5 /* OnboardingType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +54,6 @@
 /* Begin PBXFileReference section */
 		04BC7C4AAC079FAEB6AC28DE /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		0768796658CDDB6084B08585 /* UtilitiesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTest.swift; sourceTree = "<group>"; };
-		4D06928E7C0EEFB75BF9A67E /* LogFlumeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFlumeUtil.swift; sourceTree = "<group>"; };
 		4D9200F26C7672B8C4C87B40 /* PropertyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyBuilder.swift; sourceTree = "<group>"; };
 		68187B3E9D1AD9552B094837 /* AppFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F25E3F394A87C1191C0A167 /* AnyOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
@@ -64,7 +62,7 @@
 		C416F75396ADD14AB44EB264 /* ReactorValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactorValue.swift; sourceTree = "<group>"; };
 		CDF22233356DA351A88445D1 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D426E2DFC811B23A36056648 /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
-		DED045502A6BCADD0093FAD5 /* SignUpType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpType.swift; sourceTree = "<group>"; };
+		DED045502A6BCADD0093FAD5 /* OnboardingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingType.swift; sourceTree = "<group>"; };
 		E60CB104BE32F59862C50764 /* AppFoundationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AppFoundationTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				4AEB3A71CD93626F9FC35C95 /* Utilities */,
-				DED045502A6BCADD0093FAD5 /* SignUpType.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -143,11 +140,11 @@
 			children = (
 				EFFE83647DB6EF73A6295EDA /* Error */,
 				8F25E3F394A87C1191C0A167 /* AnyOptional.swift */,
-				4D06928E7C0EEFB75BF9A67E /* LogFlumeUtil.swift */,
 				4D9200F26C7672B8C4C87B40 /* PropertyBuilder.swift */,
 				A108524B4DE2A48C3DB9A338 /* PropertyBuilderCompatible.swift */,
 				C416F75396ADD14AB44EB264 /* ReactorValue.swift */,
 				9DA8F941B111FF722C4A5E98 /* TokenUtil.swift */,
+				DED045502A6BCADD0093FAD5 /* OnboardingType.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -286,8 +283,7 @@
 			files = (
 				C50C8EBD71E4C9ECD783623C /* AnyOptional.swift in Sources */,
 				A2EC273B4F93254C1681545B /* MyError.swift in Sources */,
-				5B46DF8E4344A1C37836AD0B /* LogFlumeUtil.swift in Sources */,
-				DED045512A6BCADD0093FAD5 /* SignUpType.swift in Sources */,
+				DED045512A6BCADD0093FAD5 /* OnboardingType.swift in Sources */,
 				A9E7ED2974C334F47F7E1CC1 /* PropertyBuilder.swift in Sources */,
 				AB9DF2F1D720C500F141E3CC /* PropertyBuilderCompatible.swift in Sources */,
 				B8AEC5B84D100BE1C2E80D1C /* ReactorValue.swift in Sources */,

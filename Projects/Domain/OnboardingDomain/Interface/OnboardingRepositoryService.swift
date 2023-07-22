@@ -11,7 +11,8 @@ public protocol OnboardingRepositoryService {
     
     func login(email: String, password: String) -> Observable<Bool>
     func signUp() -> Observable<Bool>
-    func kakaoLogin() -> Observable<String>
+    func kakaoLogin() -> Observable<Bool>
+    func appleLogin(email: String) -> Observable<Bool>
     func checkEmailDuplication(email: String) -> Observable<Bool>
     func requestAuthEmailCode(email: String) -> Observable<Bool>
     
@@ -22,10 +23,6 @@ public protocol OnboardingRepositoryService {
     func isValidNickname(nickname: String) -> Observable<Bool>
     func isEqualEmailValidationCode(inputCode: String) -> Observable<Bool>
     func isEqualInputPasswords(password: String, repassword: String) -> Observable<Bool>
-    
-    // Update
-    
-    func updateSnsEmailWithType(email: String, type: SignUpType)
     
 }
 

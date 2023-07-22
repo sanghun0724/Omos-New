@@ -80,7 +80,7 @@ final class EmailSignUpInteractor:
     }
     
     deinit {
-        log.verbose(type(of: self))
+        LogFlume.verbose(type(of: self))
     }
 }
 

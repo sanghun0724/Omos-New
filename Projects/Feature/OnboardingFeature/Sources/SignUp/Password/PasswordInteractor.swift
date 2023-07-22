@@ -9,6 +9,7 @@
 import ReactorKit
 import RIBs
 import RxSwift
+import LogFlume
 
 import OnboardingFeatureInterface
 import OnboardingDomainInterface
@@ -170,7 +171,7 @@ extension PasswordInteractor {
         case let .setPasswordReconfirm(validation):
             newState.isValidRepasswordConfirm = validation
         default:
-            log.verbose("This is default \(mutation) mutation")
+            LogFlume.verbose("This is default \(mutation) mutation")
         }
         
         return newState

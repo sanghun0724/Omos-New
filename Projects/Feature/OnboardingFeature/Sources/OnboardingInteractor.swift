@@ -78,9 +78,9 @@ extension OnboardingInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .didTapKakaoLoggedInButton:
-            return kakaoLoginMutation()
+            return kakaoAuthMutation()
         case let .didTapAppleLoggedInButton(email):
-            return appleLoginMutation(email: email)
+            return appleAuthMutation(email: email)
         case .didTapEmailSingUpButton:
             return .just(.attachSignUpRIB)
         case .didTapEmailLoggedInButton:
@@ -88,25 +88,30 @@ extension OnboardingInteractor {
         }
     }
     
-    private func kakaoLoginMutation() -> Observable<Mutation> {
-        let kakaoLoginMutation: Observable<Mutation> = onboardingRepositoryService.kakaoLogin()
-            .withUnretained(self)
-            .map { owner, email in owner.onboardingRepositoryService.updateSnsEmailWithType(email: email, type: .kakao) }
-            .map{ .attachTodayRIB }
-            .catchAndReturn( .attachAgreementRIB )
+    private func kakaoAuthMutation() -> Observable<Mutation> {
+        let kakaoAuthMutation: Observable<Mutation> = onboardingRepositoryService.kakaoLogin()
+            .map { $0 ? .attachTodayRIB : .attachAgreementRIB }
         
         let sequence: [Observable<Mutation>] = [
             .just(.setLoading(true)),
-             kakaoLoginMutation,
+            kakaoAuthMutation,
             .just(.setLoading(false))
         ]
         
         return .concat(sequence)
     }
     
-    private func appleLoginMutation(email: String) -> Observable<Mutation> {
-        onboardingRepositoryService.updateSnsEmailWithType(email: email, type: .apple)
-        return .just(.attachAgreementRIB)
+    private func appleAuthMutation(email: String) -> Observable<Mutation> {
+        let appleAuthMutation: Observable<Mutation> = onboardingRepositoryService.appleLogin(email: email)
+            .map { $0 ? .attachTodayRIB : .attachAgreementRIB }
+        
+        let sequence: [Observable<Mutation>] = [
+            .just(.setLoading(true)),
+            appleAuthMutation,
+            .just(.setLoading(false))
+        ]
+        
+        return .concat(sequence)
     }
     
 }

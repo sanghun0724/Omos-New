@@ -115,7 +115,40 @@ final class OnboardingViewController:
 
 // MARK: Private methods
 
-extension OnboardingViewController {}
+extension OnboardingViewController {
+    
+    /// JWTToken -> dictionary
+    private func decode(jwtToken jwt: String) -> [String: Any] {
+        
+        func base64UrlDecode(_ value: String) -> Data? {
+            var base64 = value
+                .replacingOccurrences(of: "-", with: "+")
+                .replacingOccurrences(of: "_", with: "/")
+
+            let length = Double(base64.lengthOfBytes(using: String.Encoding.utf8))
+            let requiredLength = 4 * ceil(length / 4.0)
+            let paddingLength = requiredLength - length
+            if paddingLength > 0 {
+                let padding = "".padding(toLength: Int(paddingLength), withPad: "=", startingAt: 0)
+                base64 = base64 + padding
+            }
+            return Data(base64Encoded: base64, options: .ignoreUnknownCharacters)
+        }
+
+        func decodeJWTPart(_ value: String) -> [String: Any]? {
+            guard let bodyData = base64UrlDecode(value),
+                  let json = try? JSONSerialization.jsonObject(with: bodyData, options: []), let payload = json as? [String: Any] else {
+                return nil
+            }
+
+            return payload
+        }
+        
+        let segments = jwt.components(separatedBy: ".")
+        return decodeJWTPart(segments[1]) ?? [:]
+    }
+    
+}
 
 // MARK: - Bind UI
 
@@ -174,10 +207,17 @@ extension OnboardingViewController {
             .map { owner, auth in
                 // 1. 이메일이 있으면 회원가입
                 // 2. 이메일 없으면 로그인 -> identtoken 에 이메일 정보
-                guard let email = auth.email else { return }
-                //                ($0.credential as? ASAuthorizationAppleIDCredential)?.email }
+                // 3. 혹시라도 아에 없다 -> nil -> compactMap으로 필터
+                if let email = auth.email {
+                    return .didTapAppleLoggedInButton(email: email, type: .signUp)
+                } else {
+                    if let tokenString = String(data: auth.identityToken ?? Data(), encoding: .utf8) {
+                        let email = owner.decode(jwtToken: tokenString)["email"] as? String ?? ""
+                        return .didTapAppleLoggedInButton(email: email, type: .login)
+                    }
+                }
+                return .didTapEmailSingUpButton
             }
-            .map { .didTapAppleLoggedInButton(email: $0) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }

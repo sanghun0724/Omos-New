@@ -43,7 +43,7 @@ extension AppDelegate {
     
     private func setLoggingChannel() {
         let xcode = XcodeLoggingChannel()
-        log.addChannels(xcode)
+        LogFlume.addChannels(xcode)
     }
     
     private func setWindow() {

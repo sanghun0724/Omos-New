@@ -44,48 +44,39 @@ public class OnboardingRepositoryServiceImpl: OnboardingRepositoryService {
             }
     }
     
-    public func kakaoLogin() -> Observable<String> {
+    public func signUp() -> Observable<Bool> {
+        onboardingRepository.localSignUp(
+            request: .init(
+                email: signUpItemInfoRelay.value.email,
+                nickname: signUpItemInfoRelay.value.nickname,
+                password: signUpItemInfoRelay.value.password
+            )
+        )
+        .asObservable()
+        .map(\.state)
+    }
+    
+    public func kakaoLogin() -> Observable<Bool> {
         kakaoEmail()
             .withUnretained(self)
             .flatMap { owner, email in
-                owner.onboardingRepository
-                    .SNSlogin(request: .init(email: email, type: .KAKAO))
+                owner.updateSnsEmailWithType(email: email, type: .kakao)
+                return owner.onboardingRepository
+                    .SNSlogin(request: .init(email: email, type: .KAKAO)) // for signUp
                     .asObservable()
                     .map { owner.setAuthTokens(accessToken: $0.accessToken, refreshToken: $0.refreshToken) }
-                    .map { _ in return email }
+                    .catch { _ in .just(false) }
             }
     }
     
-    private func kakaoEmail() -> Observable<String> {
-        let kakaoToken: Observable<OAuthToken>
-        if (UserApi.isKakaoTalkLoginAvailable()) {
-            kakaoToken = UserApi.shared.rx
-                .loginWithKakaoTalk()
-        } else {
-            kakaoToken = UserApi.shared.rx
-                .loginWithKakaoAccount()
-        }
-        
-        return kakaoToken
-            .flatMap { _ in UserApi.shared.rx.me() }
-            .compactMap(\.kakaoAccount?.email)
-    }
-    
-    public func signUp() -> Observable<Bool> {
-            onboardingRepository.localSignUp(
-                request: .init(
-                    email: signUpItemInfoRelay.value.email,
-                    nickname: signUpItemInfoRelay.value.nickname,
-                    password: signUpItemInfoRelay.value.password
-                )
-            )
+    public func appleLogin(email: String) -> Observable<Bool> {
+        let _ = updateSnsEmailWithType(email: email, type: .apple) // for signUp
+        return onboardingRepository
+            .SNSlogin(request: .init(email: email, type: .APPLE))
             .asObservable()
-            .map(\.state)
-    }
-    
-    public func updateSnsEmailWithType(email: String, type: SignUpType) {
-        setSignUpEmail(by: email)
-        self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.type(type))
+            .withUnretained(self)
+            .map { owner, res in owner.setAuthTokens(accessToken: res.accessToken, refreshToken: res.refreshToken) }
+            .catch { _ in .just(false) }
     }
     
     public func checkEmailDuplication(email: String) -> Observable<Bool> {
@@ -137,9 +128,10 @@ public class OnboardingRepositoryServiceImpl: OnboardingRepositoryService {
     }
     
     /// keyChain에 토큰들을 저장
-    private func setAuthTokens(accessToken: String, refreshToken: String) {
+    private func setAuthTokens(accessToken: String, refreshToken: String) -> Bool {
         tokenUtil.create("accessToken", account: "accessToken", value: accessToken)
         tokenUtil.create("refreshToken", account: "refreshToken", value: refreshToken)
+        return true
     }
     
     // MARK: - Private methods
@@ -158,6 +150,27 @@ public class OnboardingRepositoryServiceImpl: OnboardingRepositoryService {
     
     private func setSignUpNickname(by nickname: String) {
         self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.nickname(nickname))
+    }
+    
+    /// SNS 회원가입시 필요한 이메일 저장
+    private func updateSnsEmailWithType(email: String, type: SignUpType) {
+        setSignUpEmail(by: email)
+        self.signUpItemInfoRelay.accept(self.signUpItemInfoRelayBuilder.type(type))
+    }
+    
+    private func kakaoEmail() -> Observable<String> {
+        let kakaoToken: Observable<OAuthToken>
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            kakaoToken = UserApi.shared.rx
+                .loginWithKakaoTalk()
+        } else {
+            kakaoToken = UserApi.shared.rx
+                .loginWithKakaoAccount()
+        }
+        
+        return kakaoToken
+            .flatMap { _ in UserApi.shared.rx.me() }
+            .compactMap(\.kakaoAccount?.email)
     }
     
 }
