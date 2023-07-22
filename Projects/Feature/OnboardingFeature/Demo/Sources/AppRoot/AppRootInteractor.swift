@@ -8,16 +8,18 @@
 import Foundation
 import RIBs
 
+import DesignSystem
+
 protocol AppRootRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
     func attachOnboardingRIB()
-    func detachOnobardingRIB()
+    func detachOnboardingRIB()
     
     func attachEmailSignUpRIB()
     func detachEmailSignUpRIB()
     
     func attachPasswordRIB()
-    func detachPaswwordRIB()
+    func detachPasswordRIB()
     
     func attachAgreementRIB()
     func detachAgreementRIB()
@@ -38,23 +40,27 @@ protocol AppRootListener: AnyObject {
 final class AppRootInteractor:
     PresentableInteractor<AppRootPresentable>,
     AppRootInteractable,
-    AppRootPresentableListener
+    AppRootPresentableListener,
+    AdaptivePresentationControllerDelegate
 {
+    let presentationDelegateProxy: AdaptivePresentationControllerDelegateProxy
     
     func detachSignUpRIB() {
         
     }
-    
-    
     
     weak var router: AppRootRouting?
     weak var listener: AppRootListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: AppRootPresentable) {
+    override init(
+        presenter: AppRootPresentable
+    ) {
+        self.presentationDelegateProxy = AdaptivePresentationControllerDelegateProxy()
         super.init(presenter: presenter)
         presenter.listener = self
+        self.presentationDelegateProxy.delegate = self
     }
 
     override func didBecomeActive() {
@@ -65,6 +71,14 @@ final class AppRootInteractor:
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+    
+    func presentationControllerDidDismiss() {
+        self.router?.detachOnboardingRIB()
+        self.router?.detachEmailSignUpRIB()
+        self.router?.detachPasswordRIB()
+        self.router?.detachNicknameRIB()
+        self.router?.detachAgreementRIB()
     }
     
     func attachRIB(type: DemoSingleRIBType) {

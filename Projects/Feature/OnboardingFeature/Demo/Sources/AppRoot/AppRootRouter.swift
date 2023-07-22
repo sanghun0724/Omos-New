@@ -22,6 +22,7 @@ protocol AppRootInteractable:
 {
     var router: AppRootRouting? { get set }
     var listener: AppRootListener? { get set }
+    var presentationDelegateProxy: AdaptivePresentationControllerDelegateProxy { get }
 }
 
 protocol AppRootViewControllable: ViewControllable {
@@ -83,10 +84,11 @@ final class AppRootRouter:
         )
         self.onboardingRouter = router
         attachChild(router)
+        router.viewControllable.uiviewController.presentationController?.delegate = interactor.presentationDelegateProxy
         viewController.show(router.viewControllable, animated: false, completion: nil)
     }
     
-    func detachOnobardingRIB() {
+    func detachOnboardingRIB() {
         guard let router = onboardingRouter else { return }
         detachChild(router)
         onboardingRouter = nil
@@ -104,10 +106,11 @@ final class AppRootRouter:
         )
         self.passwordRouter = router
         attachChild(router)
+        router.viewControllable.uiviewController.presentationController?.delegate = interactor.presentationDelegateProxy
         viewController.show(router.viewControllable, animated: false, completion: nil)
     }
     
-    func detachPaswwordRIB() {
+    func detachPasswordRIB() {
         guard let router = passwordRouter else { return }
         detachChild(router)
         passwordRouter = nil
@@ -122,6 +125,7 @@ final class AppRootRouter:
             )
         )
         emailSignUpRouter = router
+        router.viewControllable.uiviewController.presentationController?.delegate = interactor.presentationDelegateProxy
         viewController.show(router.viewControllable)
     }
     
@@ -140,6 +144,7 @@ final class AppRootRouter:
             )
         )
         agreementRouter = router
+        router.viewControllable.uiviewController.presentationController?.delegate = interactor.presentationDelegateProxy
         viewController.show(router.viewControllable)
     }
     
@@ -158,6 +163,7 @@ final class AppRootRouter:
             )
         )
         attachChild(router)
+        router.viewControllable.uiviewController.presentationController?.delegate = interactor.presentationDelegateProxy
         viewController.show(router.viewControllable)
     }
     
