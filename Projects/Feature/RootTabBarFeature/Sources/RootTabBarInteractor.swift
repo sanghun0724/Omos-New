@@ -9,11 +9,7 @@
 import RIBs
 import RxSwift
 
-// MARK: - RootTabBarRouting
-
-protocol RootTabBarRouting: Routing {
-    func attachTabs()
-}
+import RootTabBarFeatureInterface
 
 protocol RootTabBarViewControllable: ViewControllable {
     func setViewControllers(_ viewControllers: [ViewControllable])
@@ -22,10 +18,6 @@ protocol RootTabBarViewControllable: ViewControllable {
 protocol RootTabBarPresentable: Presentable {
   var listener: RootTabBarListener? { get set }
 }
-
-// MARK: - RootTabBarListener
-
-protocol RootTabBarListener: AnyObject {}
 
 // MARK: - RootTabBarInteractor
 

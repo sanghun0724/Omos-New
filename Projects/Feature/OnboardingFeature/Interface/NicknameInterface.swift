@@ -19,8 +19,8 @@ public protocol NicknameListener: AnyObject {
 
 /// @mockable
 public protocol NicknameRouting: ViewableRouting {
-    func attachTodayRIB()
-    func detachTodayRIB()
+    func attachRootTabBarRIB()
+    func detachRootTabBarRIB()
 }
 
 // MARK: - NicknameBuildDependency

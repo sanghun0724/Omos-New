@@ -9,11 +9,11 @@ import RIBs
 
 import DesignSystem
 import OnboardingFeatureInterface
-import TodayFeatureInterface
+import RootTabBarFeatureInterface
 
 // MARK: - NicknameInteractable
 
-protocol NicknameInteractable: Interactable, TodayListener {
+protocol NicknameInteractable: Interactable, RootTabBarListener {
     var router: NicknameRouting? { get set }
     var listener: NicknameListener? { get set }
 }
@@ -26,34 +26,32 @@ final class NicknameRouter:
   ViewableRouter<NicknameInteractable, NicknameViewControllable>,
   NicknameRouting
 {
-    private let todayBuilder: TodayBuildable
-    private var todayRouter: TodayRouting?
+    private let rootTabBarBuilder: RootTabBarBuildable
+    private var rootTabBarRouter: RootTabBarRouting?
 
     init(
       interactor: NicknameInteractable,
       viewController: NicknameViewControllable,
-      todayBuilder: TodayBuildable
+      rootTabBarBuilder: RootTabBarBuildable
     ) {
-        self.todayBuilder = todayBuilder
+        self.rootTabBarBuilder = rootTabBarBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
     
-    func attachTodayRIB() {
-        guard todayRouter == nil else { return }
-        let router = todayBuilder.build(
-            with: TodayBuildDependency(
+    func attachRootTabBarRIB() {
+        guard rootTabBarRouter == nil else { return }
+        let router = rootTabBarBuilder.build(
+            with: RootTabBarBuildDependency(
                 listener: interactor
             )
         )
-        //attachChild(router)
-        //let navigation = NavigationControllerable(root: router.viewControllable) // should tabbar
-        
+        attachChild(router) // 없어도 되는지 확인
+        viewController.presentFullScreen(router.viewControllable, animated: false, completion: nil)
     }
     
-    func detachTodayRIB() {
-        guard let router = todayRouter else { return }
-        detachChild(router)
+    func detachRootTabBarRIB() {
+   
         
     }
 }

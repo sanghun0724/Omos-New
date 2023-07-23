@@ -161,6 +161,7 @@ public class OnboardingRepositoryServiceImpl: OnboardingRepositoryService {
     }
     
     private func kakaoEmail() -> Observable<String> {
+        AuthApi.shared.refreshToken(completion: {_,_ in })
         if (UserApi.isKakaoTalkLoginAvailable()) {
            let _ = UserApi.shared.rx
                 .loginWithKakaoTalk()

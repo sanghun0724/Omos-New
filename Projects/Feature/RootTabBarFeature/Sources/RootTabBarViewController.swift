@@ -10,6 +10,8 @@ import UIKit
 
 import RIBs
 
+import RootTabBarFeatureInterface
+
 protocol AppRootPresentableListener: AnyObject {
   
 }

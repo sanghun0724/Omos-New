@@ -16,8 +16,7 @@ public protocol LoggedInRouting: ViewableRouting {
     func detachFindRIB()
     func attachSignUpRIB()
     func detachSignUpRIB()
-    func attachTodayRIB()
-    func detachTodayRIB()
+    func attachRootTabBarRIB()
 }
 
 // MARK: - LoggedInBuildDependency

@@ -21,6 +21,7 @@ public protocol OnboardingRouting: ViewableRouting {
     func detachLoggedInRIB()
     func attachAgreewmentRIB()
     func detachAgreementRIB()
+    func attachRootTabBarRIB() 
 }
 
 // MARK: - OnboardingBuildDependency

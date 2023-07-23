@@ -10,6 +10,7 @@ import RIBs
 
 import DesignSystem
 import TodayFeatureInterface
+import RootTabBarFeatureInterface
 
 // MARK: - RootTabBarInteractable
 

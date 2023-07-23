@@ -40,7 +40,7 @@ final class NicknameInteractor:
         case setError(MyError)
         case setLoading(Bool)
         case setNicknameFormatValidation(Bool)
-        case attachTodayRIB
+        case attachRootTabBarRIB
         case detach
     }
     
@@ -102,7 +102,7 @@ extension NicknameInteractor {
     
     private func signUpMutation() -> Observable<Mutation> {
         let signUpMutation: Observable<Mutation> = onboardingRepositoryService.signUp()
-            .map { $0 ? .attachTodayRIB : .setError(.duplicatedNicknameError) }
+            .map { $0 ? .attachRootTabBarRIB : .setError(.duplicatedNicknameError) }
             .catchAndReturn(.setError(.defaultError))
         
         return signUpMutation
@@ -119,23 +119,16 @@ extension NicknameInteractor {
             .withUnretained(self)
             .flatMap { owner, mutation -> Observable<Mutation> in
                 switch mutation {
-                case .attachTodayRIB:
-                    return owner.attachTodayRIB()
-                case .detach:
-                    return owner.detachTransform()
+                case .attachRootTabBarRIB:
+                    return owner.attachRootTabBarRIB()
                 default:
                     return .just(mutation)
                 }
             }
     }
     
-    private func attachTodayRIB() -> Observable<Mutation> {
-        self.router?.attachTodayRIB()
-        return .empty()
-    }
-    
-    private func detachTransform() -> Observable<Mutation> {
-        self.router?.detachTodayRIB()
+    private func attachRootTabBarRIB() -> Observable<Mutation> {
+        self.router?.attachRootTabBarRIB()
         return .empty()
     }
 }

@@ -11,13 +11,13 @@ import RIBs
 import OnboardingDomainInterface
 import OnboardingDomain
 import OnboardingFeatureInterface
-import TodayFeatureInterface
+import RootTabBarFeatureInterface
 
 // MARK: - NicknameDependency
 
 public protocol NicknameDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
-    var todayBuilder: TodayBuildable { get }
+    var rootTabBarBuilder: RootTabBarBuildable { get }
 }
 
 // MARK: - NicknameComponent
@@ -49,7 +49,7 @@ public final class NicknameBuilder:
         return NicknameRouter(
          interactor: interactor,
          viewController: viewController,
-         todayBuilder: component.todayBuilder
+         rootTabBarBuilder: component.rootTabBarBuilder
         )
     }
 }

@@ -14,6 +14,8 @@ import TodayFeature
 import TodayFeatureInterface
 import OnboardingFeature
 import OnboardingFeatureInterface
+import RootTabBarFeature
+import RootTabBarFeatureInterface
 
 // MARK: AppComponent
 
@@ -72,6 +74,12 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
     var agreementBuilder: AgreementBuildable {
         AgreementBuilder {
             AgreementComponent(parent: self)
+        }
+    }
+    
+    var rootTabBarBuilder: RootTabBarBuildable {
+        RootTabBarBuilder {
+            RootTabBarComponent(parent: self)
         }
     }
 }

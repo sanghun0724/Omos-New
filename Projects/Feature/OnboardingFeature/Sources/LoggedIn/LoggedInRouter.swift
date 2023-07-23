@@ -73,19 +73,7 @@ final class LoggedInRouter:
         viewController.pop(router.viewControllable)
     }
     
-    func attachTodayRIB() {
-        guard self.todayRouter == nil else { return }
-        let router = self.todayBuilder.build(
-            with: TodayBuildDependency(
-                listener: interactor
-            )
-        )
-        self.todayRouter = router
-        attachChild(router)
-        viewController.push(viewController: router.viewControllable)
-    }
-    
-    func detachTodayRIB() {
+    func attachRootTabBarRIB() {
         
     }
 

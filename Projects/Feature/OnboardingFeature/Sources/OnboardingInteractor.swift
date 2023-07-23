@@ -40,7 +40,7 @@ final class OnboardingInteractor:
         case attachSignUpRIB
         case attachLoggedInRIB
         case attachAgreementRIB
-        case attachTodayRIB
+        case attachRootTabBarRIB
     }
      
     // MARK: - Properties
@@ -90,7 +90,8 @@ extension OnboardingInteractor {
     
     private func kakaoAuthMutation() -> Observable<Mutation> {
         let kakaoAuthMutation: Observable<Mutation> = onboardingRepositoryService.kakaoLogin()
-            .map { $0 ? .attachTodayRIB : .attachAgreementRIB }
+            .debug("attach")
+            .map { $0 ? .attachRootTabBarRIB : .attachAgreementRIB }
         
         let sequence: [Observable<Mutation>] = [
             .just(.setLoading(true)),
@@ -103,7 +104,7 @@ extension OnboardingInteractor {
     
     private func appleAuthMutation(email: String) -> Observable<Mutation> {
         let appleAuthMutation: Observable<Mutation> = onboardingRepositoryService.appleLogin(email: email)
-            .map { $0 ? .attachTodayRIB : .attachAgreementRIB }
+            .map { $0 ? .attachRootTabBarRIB : .attachAgreementRIB }
         
         let sequence: [Observable<Mutation>] = [
             .just(.setLoading(true)),
@@ -130,9 +131,8 @@ extension OnboardingInteractor {
                     return owner.attachLoggedInRIBTransform()
                 case .attachAgreementRIB:
                     return owner.attachAgreemntRIBTransform()
-                case .attachTodayRIB:
-                    print("login suceess")
-                    return .just(mutation)
+                case .attachRootTabBarRIB:
+                    return owner.attachRootTabBarRIBTransform()
                 default:
                     return .just(mutation)
                 }
@@ -151,6 +151,11 @@ extension OnboardingInteractor {
     
     private func attachAgreemntRIBTransform() -> Observable<Mutation> {
         self.router?.attachAgreewmentRIB()
+        return .empty()
+    }
+    
+    private func attachRootTabBarRIBTransform() -> Observable<Mutation> {
+        self.router?.attachRootTabBarRIB()
         return .empty()
     }
     

@@ -2,12 +2,15 @@
 
 import AppFoundation
 import CoreKit
+import DesignSystem
 import NeedleFoundation
 import OnboardingDomain
 import OnboardingDomainInterface
 import OnboardingFeature
 import OnboardingFeatureInterface
 import RIBs
+import RootTabBarFeature
+import RootTabBarFeatureInterface
 import TodayFeature
 import TodayFeatureInterface
 
@@ -56,6 +59,9 @@ private class OnboardingDependencyf77d0055983a00cf8835Provider: OnboardingDepend
     var agreementBuilder: AgreementBuildable {
         return appComponent.agreementBuilder
     }
+    var rootTabBarBuilder: RootTabBarBuildable {
+        return appComponent.rootTabBarBuilder
+    }
     private let appComponent: AppComponent
     init(appComponent: AppComponent) {
         self.appComponent = appComponent
@@ -98,8 +104,8 @@ private class NicknameDependencyf8931c25a2fc8a703ee7Provider: NicknameDependency
     var onboardingRepositoryService: OnboardingRepositoryService {
         return appComponent.onboardingRepositoryService
     }
-    var todayBuilder: TodayBuildable {
-        return appComponent.todayBuilder
+    var rootTabBarBuilder: RootTabBarBuildable {
+        return appComponent.rootTabBarBuilder
     }
     private let appComponent: AppComponent
     init(appComponent: AppComponent) {
@@ -159,6 +165,17 @@ private class TodayDependency18dcebc0d3df0c401f0dProvider: TodayDependency {
 private func factory1ffc93d9a05b4e8720cae3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
     return TodayDependency18dcebc0d3df0c401f0dProvider()
 }
+private class RootTabBarDependencyb4448a5cad7d9b910403Provider: RootTabBarDependency {
+
+
+    init() {
+
+    }
+}
+/// ^->AppComponent->RootTabBarComponent
+private func factory63a72f654f552fbe310ee3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return RootTabBarDependencyb4448a5cad7d9b910403Provider()
+}
 
 #else
 extension AppComponent: Registration {
@@ -180,6 +197,7 @@ extension OnboardingComponent: Registration {
         keyPathToName[\OnboardingDependency.emailSignUpBuilder] = "emailSignUpBuilder-EmailSignUpBuildable"
         keyPathToName[\OnboardingDependency.loggedInBuilder] = "loggedInBuilder-LoggedInBuildable"
         keyPathToName[\OnboardingDependency.agreementBuilder] = "agreementBuilder-AgreementBuildable"
+        keyPathToName[\OnboardingDependency.rootTabBarBuilder] = "rootTabBarBuilder-RootTabBarBuildable"
     }
 }
 extension PasswordComponent: Registration {
@@ -196,7 +214,7 @@ extension AgreementComponent: Registration {
 extension NicknameComponent: Registration {
     public func registerItems() {
         keyPathToName[\NicknameDependency.onboardingRepositoryService] = "onboardingRepositoryService-OnboardingRepositoryService"
-        keyPathToName[\NicknameDependency.todayBuilder] = "todayBuilder-TodayBuildable"
+        keyPathToName[\NicknameDependency.rootTabBarBuilder] = "rootTabBarBuilder-RootTabBarBuildable"
     }
 }
 extension EmailSignUpComponent: Registration {
@@ -215,6 +233,12 @@ extension LoggedInComponent: Registration {
 }
 extension TodayComponent: Registration {
     public func registerItems() {
+
+    }
+}
+extension RootTabBarComponent: Registration {
+    public func registerItems() {
+
 
     }
 }
@@ -243,6 +267,8 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
     registerProviderFactory("^->AppComponent->EmailSignUpComponent", factory792b7e64953807cbfaf8f47b58f8f304c97af4d5)
     registerProviderFactory("^->AppComponent->LoggedInComponent", factorybe3fbfd42f44e2df6537f47b58f8f304c97af4d5)
     registerProviderFactory("^->AppComponent->TodayComponent", factory1ffc93d9a05b4e8720cae3b0c44298fc1c149afb)
+    registerProviderFactory("^->AppComponent->RootTabBarComponent->TodayComponent", factory1ffc93d9a05b4e8720cae3b0c44298fc1c149afb)
+    registerProviderFactory("^->AppComponent->RootTabBarComponent", factory63a72f654f552fbe310ee3b0c44298fc1c149afb)
 }
 #endif
 
