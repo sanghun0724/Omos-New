@@ -1,0 +1,1718 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02AF5296779DD5DF208E6213 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8082F45328818C9948F8980C /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0324F275860CFFE47CE78CCA /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69824EA255EE53CB7D4FFAE8 /* Kingfisher.framework */; platformFilter = ios; };
+		05CA75DF36EF10972AD55D20 /* RxKakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFE9E32970CB778202D01DF /* RxKakaoSDKShare.framework */; platformFilter = ios; };
+		06883459723F2D550E742734 /* libRecordDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF20199023CE11FCF181B0D4 /* libRecordDomainInterface.a */; platformFilter = ios; };
+		0727289C8302123372F56DDB /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B09CC9D18041154DB36F63E /* ReactorKit.framework */; platformFilter = ios; };
+		08D822120FD0060D8D5DAD4F /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB9B2CA7618F86090D99C29 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
+		09C4B1A725049536AABBA754 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35AF6D276941FC0586BD9F7 /* SnapKit.framework */; platformFilter = ios; };
+		0A615946ADFA00729F623F14 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EA31F694A3D0AAD3CD2022 /* Differentiator.framework */; platformFilter = ios; };
+		0DEC7A4A95D982507E56F823 /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F65F366CC69D50D0BF2DB06 /* KakaoSDKStory.framework */; platformFilter = ios; };
+		0DEF6D6BFEBF15087761946D /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578C9785DEBFE0ACEAB2B180 /* SkeletonView.framework */; platformFilter = ios; };
+		14218DB95DA21DF8C2E12C62 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2413F74F2B5C47A02B52B7B1 /* RxRelay.framework */; platformFilter = ios; };
+		1E0221D0ED748DB9CB96E540 /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ECDD793414B563C50980AC /* WeakMapTable.framework */; platformFilter = ios; };
+		1E43A744B00CA745F1ED20AE /* libRecordDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF20199023CE11FCF181B0D4 /* libRecordDomainInterface.a */; platformFilter = ios; };
+		1E65350203AEC2774AD9C42C /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9435F23151544A3EE5410CA /* KakaoSDKTalk.framework */; platformFilter = ios; };
+		21952E80319A898A6E7900AD /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53A1B8B52A158D9C2838EAF /* RxKakaoSDKUser.framework */; platformFilter = ios; };
+		236489529804B0DFE090AE15 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5E36127410AC6C34137284 /* RxSwift.framework */; platformFilter = ios; };
+		238286DA452242A09B1D718D /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50724D99F1A9B54FF84775 /* Source.swift */; };
+		299A424A1B57765CEC980882 /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E06FBEBFD822CE9375370B /* libCoreKit.a */; platformFilter = ios; };
+		2CC83FD2015B4D618136AF9C /* libMyPageFeatureInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 0692E88C0CB4C1B17141879E /* libMyPageFeatureInterface.a */; platformFilter = ios; };
+		2E6D2B3C014BE73020370AE7 /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849AB32E38FD3AD2873552D6 /* RxKakaoSDKStory.framework */; platformFilter = ios; };
+		362279E006A11668E3B634E5 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392978D79BDD7FFBD10F9D1C /* KakaoSDKAuth.framework */; platformFilter = ios; };
+		371E673DC1FE67F25396A17F /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791DE997CE7CA7D6045036A5 /* NeedleFoundation.framework */; platformFilter = ios; };
+		38F9AF46A6810771B1C16CD1 /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78255BAD9E156ED9C8EE3039 /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
+		3979E019032BB8E4BECB23C1 /* MyPageFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C17ADA6F86BB56FEEE1EBA5 /* MyPageFeatureTesting.framework */; platformFilter = ios; };
+		3B3FBF666EB5AC4704917B5A /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1120F4A861F7ABAF5D9FA68 /* KakaoSDKTemplate.framework */; platformFilter = ios; };
+		3C20D6C1F3AC2E2F3F7C85B3 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5E36127410AC6C34137284 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3DC1A9E6B688C60B921D4E3D /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 283E6DBC69514C641D359744 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
+		3E9A37ABC23C29E95E7BE850 /* libMyPageFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0692E88C0CB4C1B17141879E /* libMyPageFeatureInterface.a */; platformFilter = ios; };
+		424672E9B609E82FB7C684EE /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ECDD793414B563C50980AC /* WeakMapTable.framework */; platformFilter = ios; };
+		4841FAE2C851A71CDA727BCD /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5E36127410AC6C34137284 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		494794188222F5DF4D77FF1C /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBBDE83FCCC102BE535ACAC /* RxAlamofire.framework */; platformFilter = ios; };
+		4B5556E0DA65084CFECD98DA /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69824EA255EE53CB7D4FFAE8 /* Kingfisher.framework */; platformFilter = ios; };
+		4B5D52C9A08456B54465ABF4 /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 244A0ED96534496E835A0375 /* libBaseDomain.a */; platformFilter = ios; };
+		4C02D36E762A31EEC29DA845 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070A4D67BDC0CC8E709E6487 /* CFNetwork.framework */; };
+		4DC0BBCAADD8DCA6AD102715 /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D9A22FB6C99E72B4FA4246 /* KakaoSDKUser.framework */; platformFilter = ios; };
+		4E4FD4569254D332ED4C7FB6 /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 244A0ED96534496E835A0375 /* libBaseDomain.a */; platformFilter = ios; };
+		4ED6E0FBE2C64E68C92499B3 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2413F74F2B5C47A02B52B7B1 /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4F5F34710A4D79503E6F38D4 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90632A23C808BE4B7DF4325E /* libAppFoundation.a */; platformFilter = ios; };
+		5359FA5B39B8452FDF0C9DCB /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE114576940B731676CEA14F /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		5394B6B541855A2C83CCDAF7 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35AF6D276941FC0586BD9F7 /* SnapKit.framework */; platformFilter = ios; };
+		53E7B26D7004D762A74EE651 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF3028F5DDF135526183996 /* Interface.swift */; };
+		5503D96D4CB2F97E054261C0 /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED2DB03ADE631A01910BEAB /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		553A9000DB37317961FD57A7 /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBBDE83FCCC102BE535ACAC /* RxAlamofire.framework */; platformFilter = ios; };
+		5670CBD8FC0063AA73355196 /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1470808F10141685C83003C5 /* LogFlume.framework */; platformFilter = ios; };
+		59615EC4CAD3DEDB32E4F851 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5E36127410AC6C34137284 /* RxSwift.framework */; platformFilter = ios; };
+		5AA558EA8329F004743C1231 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2413F74F2B5C47A02B52B7B1 /* RxRelay.framework */; platformFilter = ios; };
+		5B5F5232C3A0A03B3FC76FF0 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA6CEB62DCD653658E4566A /* ReactorKitRuntime.framework */; platformFilter = ios; };
+		5E82B7450C2930F822E346ED /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F8273CCD950DA691B99E92 /* libBaseShared.a */; platformFilter = ios; };
+		6063061EDCF67FB65CA29B39 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB9B2CA7618F86090D99C29 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
+		6147811A899F775FF5D16230 /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1120F4A861F7ABAF5D9FA68 /* KakaoSDKTemplate.framework */; platformFilter = ios; };
+		644DF6EDCB4C8BB20573DBB8 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578C9785DEBFE0ACEAB2B180 /* SkeletonView.framework */; platformFilter = ios; };
+		66EC8A8FA1B2EDA6355037F4 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90632A23C808BE4B7DF4325E /* libAppFoundation.a */; platformFilter = ios; };
+		697A0F3EB02449C4ED516996 /* libBaseDomain.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 244A0ED96534496E835A0375 /* libBaseDomain.a */; platformFilter = ios; };
+		69F2BC6AC2879C63D974A454 /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0455E8A95ED0C08A5E0AC0E2 /* KakaoSDKCommon.framework */; platformFilter = ios; };
+		6B7E1734E93E92AF4D7F9B68 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F8273CCD950DA691B99E92 /* libBaseShared.a */; platformFilter = ios; };
+		74BC67C2D4F087583E8145E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA573B0F5A0074C729F5F79 /* AppDelegate.swift */; };
+		75AA5D34212FDE2115271227 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F468BBB85B0752B949010F1 /* libOnboardingDomain.a */; platformFilter = ios; };
+		76F75C0A8F32E42D4FE50C63 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E35AF6D276941FC0586BD9F7 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7CC6BD6FBB174701EAD5C35E /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53A1B8B52A158D9C2838EAF /* RxKakaoSDKUser.framework */; platformFilter = ios; };
+		7D96B8896FA9ED683F0D7DDD /* MyPageFeatureTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C17ADA6F86BB56FEEE1EBA5 /* MyPageFeatureTesting.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F99D2322A94C450EF62294B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07C9FAB2ECA579234231645 /* LaunchScreen.storyboard */; };
+		81513342B2E7B4E9673973CE /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9435F23151544A3EE5410CA /* KakaoSDKTalk.framework */; platformFilter = ios; };
+		81F61F52F4A1A09280A7E674 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA6CEB62DCD653658E4566A /* ReactorKitRuntime.framework */; platformFilter = ios; };
+		8210D9308E66F098C822E9D6 /* TuistBundle+MyPageFeatureDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6B544D5E661AA09F0BDE50 /* TuistBundle+MyPageFeatureDemoApp.swift */; };
+		8641A39157BAB7DC68B9F61E /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F65F366CC69D50D0BF2DB06 /* KakaoSDKStory.framework */; platformFilter = ios; };
+		8A3FE5961F63421E0C85F63A /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E00EAB6DD6F06B5AAA5C401 /* RxDataSources.framework */; platformFilter = ios; };
+		8A6FEA0533523AF002A71603 /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE114576940B731676CEA14F /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		8BA999F1B00BF8D6D2050C91 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8082F45328818C9948F8980C /* RxCocoa.framework */; platformFilter = ios; };
+		8C1CC4AB08040F34B11F8316 /* libMyPageFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0692E88C0CB4C1B17141879E /* libMyPageFeatureInterface.a */; platformFilter = ios; };
+		8F24A4C0E83EE159886D7909 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22497268D18AC399B37CF32F /* RIBs.framework */; platformFilter = ios; };
+		8FEE0D3585E4664059029734 /* RxKakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFE9E32970CB778202D01DF /* RxKakaoSDKShare.framework */; platformFilter = ios; };
+		93CA3CCEE23A703B8C210447 /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97D07B773BC5478E7F8BD55 /* KakaoSDKShare.framework */; platformFilter = ios; };
+		95D285CABD21F42F31700BA0 /* libMyPageFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0712A70EE128AFC66F488C /* libMyPageFeature.a */; platformFilter = ios; };
+		9711674699BFE4C0FF240430 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D446A763CDA16160E9CA5F6 /* libDesignSystem.a */; platformFilter = ios; };
+		99B356B545158E3AF509F85A /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 283E6DBC69514C641D359744 /* DesignSystem_DesignSystem.bundle */; };
+		9C900779321A51DD48BCD395 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EA31F694A3D0AAD3CD2022 /* Differentiator.framework */; platformFilter = ios; };
+		A06ED4391C717E2DDC44BBF0 /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D9A22FB6C99E72B4FA4246 /* KakaoSDKUser.framework */; platformFilter = ios; };
+		A09435F3DA73884B518CDF05 /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E668B9A18D63AF3B1B3B337D /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
+		A1132016D7FAFFA9A5733D56 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E0D887E69D6B13F407F2AB /* RxGesture.framework */; platformFilter = ios; };
+		A3CF8342B5EB7CFCD690E9EE /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 434C7ABA7E2487674BFCC34D /* libRecordDomain.a */; platformFilter = ios; };
+		A737321EC8464ADEAD5D2A3D /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78255BAD9E156ED9C8EE3039 /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
+		AB1560C5F7532AD9100B0963 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392978D79BDD7FFBD10F9D1C /* KakaoSDKAuth.framework */; platformFilter = ios; };
+		BD7ACF7643B0C71AB046FEFE /* MyPageFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C72BD231E17BF9A9BDB8414 /* MyPageFeatureTest.swift */; };
+		BDBC30DA383C5DC078BD3DD2 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E0D887E69D6B13F407F2AB /* RxGesture.framework */; platformFilter = ios; };
+		C0D08DE4F0E4B0A2A3656A59 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8082F45328818C9948F8980C /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C60B617C2E25714C99D3B26C /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED2DB03ADE631A01910BEAB /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C70307A2B4ADC6BEB110B25C /* MyPageFeatureTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C17ADA6F86BB56FEEE1EBA5 /* MyPageFeatureTesting.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C955D871050493AD8CC84398 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E35AF6D276941FC0586BD9F7 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CACEC82E66171483C60CB953 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAFA3466EA07CE976F0D59B /* Alamofire.framework */; platformFilter = ios; };
+		CD5938C18154671C1E7D9F7D /* RxKakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A2FD6A6EEDCDA5062D69E0 /* RxKakaoSDKAuth.framework */; platformFilter = ios; };
+		CE68CE7525A2FFE524230293 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E00EAB6DD6F06B5AAA5C401 /* RxDataSources.framework */; platformFilter = ios; };
+		D012315A7BB1E9DE6F203CF5 /* MyPageFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C17ADA6F86BB56FEEE1EBA5 /* MyPageFeatureTesting.framework */; platformFilter = ios; };
+		D165D361F9CAE7C9929FA4AF /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 283E6DBC69514C641D359744 /* DesignSystem_DesignSystem.bundle */; };
+		D58E2C12C882E3B8180ACEBA /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B09CC9D18041154DB36F63E /* ReactorKit.framework */; platformFilter = ios; };
+		D703B92871BA860E1141D80C /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791DE997CE7CA7D6045036A5 /* NeedleFoundation.framework */; platformFilter = ios; };
+		D88ACD2A2D6A22501D56CA87 /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 283E6DBC69514C641D359744 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
+		E04DD9C76783FA483439EB82 /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E668B9A18D63AF3B1B3B337D /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
+		E068360808F4F11FBC88BF04 /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E06FBEBFD822CE9375370B /* libCoreKit.a */; platformFilter = ios; };
+		E38B47E4CE27D5FF7A5DFC4F /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0455E8A95ED0C08A5E0AC0E2 /* KakaoSDKCommon.framework */; platformFilter = ios; };
+		E5A19EB9255A296AE4E2615B /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97D07B773BC5478E7F8BD55 /* KakaoSDKShare.framework */; platformFilter = ios; };
+		E787688C6F97BD6B6F960E6F /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849AB32E38FD3AD2873552D6 /* RxKakaoSDKStory.framework */; platformFilter = ios; };
+		EA108B0E01412C070302E8E4 /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BADFE5DB80878DA53C5357 /* Testing.swift */; };
+		EC687FF7D44BA4941EB57DDF /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1470808F10141685C83003C5 /* LogFlume.framework */; platformFilter = ios; };
+		EC98DE5458E25FE9BF4A780A /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 434C7ABA7E2487674BFCC34D /* libRecordDomain.a */; platformFilter = ios; };
+		EF887842D5C4F7D20BDD469E /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22497268D18AC399B37CF32F /* RIBs.framework */; platformFilter = ios; };
+		F042A1510BE694111F69155E /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2413F74F2B5C47A02B52B7B1 /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F062204B92D5185D2D5853EA /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F468BBB85B0752B949010F1 /* libOnboardingDomain.a */; platformFilter = ios; };
+		F0BFDCDFD56B1A29A370D95E /* MyPageFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C17ADA6F86BB56FEEE1EBA5 /* MyPageFeatureTesting.framework */; platformFilter = ios; };
+		F2D5FAE71BC1F44757DA3F53 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAFA3466EA07CE976F0D59B /* Alamofire.framework */; platformFilter = ios; };
+		F2DCAAB4A4F1F6BC96F6EB91 /* RxKakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A2FD6A6EEDCDA5062D69E0 /* RxKakaoSDKAuth.framework */; platformFilter = ios; };
+		FB447BC617A9C451121BC6A7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070A4D67BDC0CC8E709E6487 /* CFNetwork.framework */; };
+		FDAA7173761BD6486E01E5AE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8082F45328818C9948F8980C /* RxCocoa.framework */; platformFilter = ios; };
+		FE1DFB9F667D13FF385C420A /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D446A763CDA16160E9CA5F6 /* libDesignSystem.a */; platformFilter = ios; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		011E48319EEF1A07469B5B29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8565F30DCA2B8A33983B7951 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 165FF0485069FAD6E30D1EF1;
+			remoteInfo = MyPageFeature;
+		};
+		0EF87A0C63D0F1680BCEF3CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8565F30DCA2B8A33983B7951 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03E6D46CB159235B99143D55;
+			remoteInfo = MyPageFeatureDemoApp;
+		};
+		1AAD7F7B3A83C965274519C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8565F30DCA2B8A33983B7951 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC2BE7641BBCFC7E3E5CA4E0;
+			remoteInfo = MyPageFeatureTesting;
+		};
+		356DF639BCC607A03727476C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8565F30DCA2B8A33983B7951 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03E6D46CB159235B99143D55;
+			remoteInfo = MyPageFeatureDemoApp;
+		};
+		50120CA1D1F504D9B870CBEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8565F30DCA2B8A33983B7951 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 309D06068DD1002D94B61781;
+			remoteInfo = MyPageFeatureInterface;
+		};
+		73693C5249CA95F64778A918 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8565F30DCA2B8A33983B7951 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC2BE7641BBCFC7E3E5CA4E0;
+			remoteInfo = MyPageFeatureTesting;
+		};
+		84C81882DFBAB20395BD4A26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8565F30DCA2B8A33983B7951 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 309D06068DD1002D94B61781;
+			remoteInfo = MyPageFeatureInterface;
+		};
+		DC42B3CB0C3398C9ECD9A0A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8565F30DCA2B8A33983B7951 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC2BE7641BBCFC7E3E5CA4E0;
+			remoteInfo = MyPageFeatureTesting;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14743BA24DB406D96CA272C1 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				2CC83FD2015B4D618136AF9C /* libMyPageFeatureInterface.a in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		4FD651B5E0F8B965627B912F /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				697A0F3EB02449C4ED516996 /* libBaseDomain.a in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		655CABAD06707043C71A3F5C /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				3DC1A9E6B688C60B921D4E3D /* DesignSystem_DesignSystem.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		713F739B2A400BFA075BB15D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BABA31B655A5DBEB846B537 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C70307A2B4ADC6BEB110B25C /* MyPageFeatureTesting.framework in Embed Frameworks */,
+				C0D08DE4F0E4B0A2A3656A59 /* RxCocoa.framework in Embed Frameworks */,
+				C60B617C2E25714C99D3B26C /* RxCocoaRuntime.framework in Embed Frameworks */,
+				F042A1510BE694111F69155E /* RxRelay.framework in Embed Frameworks */,
+				4841FAE2C851A71CDA727BCD /* RxSwift.framework in Embed Frameworks */,
+				76F75C0A8F32E42D4FE50C63 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BFFFB08F5C8D3E571A45C93 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC59C257A8409E965A4F12EB /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				D88ACD2A2D6A22501D56CA87 /* DesignSystem_DesignSystem.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B346E162A80D47FE075C4B23 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4F8921CF5438B128A1EF5C3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7D96B8896FA9ED683F0D7DDD /* MyPageFeatureTesting.framework in Embed Frameworks */,
+				02AF5296779DD5DF208E6213 /* RxCocoa.framework in Embed Frameworks */,
+				5503D96D4CB2F97E054261C0 /* RxCocoaRuntime.framework in Embed Frameworks */,
+				4ED6E0FBE2C64E68C92499B3 /* RxRelay.framework in Embed Frameworks */,
+				3C20D6C1F3AC2E2F3F7C85B3 /* RxSwift.framework in Embed Frameworks */,
+				C955D871050493AD8CC84398 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6256D763709FD1005D4E054 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0455E8A95ED0C08A5E0AC0E2 /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0692E88C0CB4C1B17141879E /* libMyPageFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyPageFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		070A4D67BDC0CC8E709E6487 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		0BFE9E32970CB778202D01DF /* RxKakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D5E36127410AC6C34137284 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11444D8CA933E17690D32A9B /* MyPageFeatureDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPageFeatureDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1470808F10141685C83003C5 /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB9B2CA7618F86090D99C29 /* RxKakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22198B6FDDC6AA74828C61CF /* MyPageFeatureDemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyPageFeatureDemoApp-Info.plist"; sourceTree = "<group>"; };
+		22497268D18AC399B37CF32F /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2413F74F2B5C47A02B52B7B1 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		244A0ED96534496E835A0375 /* libBaseDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		283E6DBC69514C641D359744 /* DesignSystem_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystem_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D9A22FB6C99E72B4FA4246 /* KakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AAA7BB48F982AE032BE23BA /* MyPageFeatureTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyPageFeatureTesting-Info.plist"; sourceTree = "<group>"; };
+		2CA573B0F5A0074C729F5F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E00EAB6DD6F06B5AAA5C401 /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		392978D79BDD7FFBD10F9D1C /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C3C3F2394AAFD1703BE3F44 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		3C72BD231E17BF9A9BDB8414 /* MyPageFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageFeatureTest.swift; sourceTree = "<group>"; };
+		434C7ABA7E2487674BFCC34D /* libRecordDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E06FBEBFD822CE9375370B /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		49ECDD793414B563C50980AC /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		578C9785DEBFE0ACEAB2B180 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B09CC9D18041154DB36F63E /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66EA31F694A3D0AAD3CD2022 /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69824EA255EE53CB7D4FFAE8 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C17ADA6F86BB56FEEE1EBA5 /* MyPageFeatureTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyPageFeatureTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F468BBB85B0752B949010F1 /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		78255BAD9E156ED9C8EE3039 /* RxKakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		791DE997CE7CA7D6045036A5 /* NeedleFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeedleFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D446A763CDA16160E9CA5F6 /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8082F45328818C9948F8980C /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		849AB32E38FD3AD2873552D6 /* RxKakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88E0D887E69D6B13F407F2AB /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CD02ED5C28CAF5C0621BB97 /* MyPageFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPageFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E50724D99F1A9B54FF84775 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		8FA6CEB62DCD653658E4566A /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FAFA3466EA07CE976F0D59B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90632A23C808BE4B7DF4325E /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F8273CCD950DA691B99E92 /* libBaseShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		95A2FD6A6EEDCDA5062D69E0 /* RxKakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ED2DB03ADE631A01910BEAB /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F65F366CC69D50D0BF2DB06 /* KakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE114576940B731676CEA14F /* libOnboardingDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07C9FAB2ECA579234231645 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B53A1B8B52A158D9C2838EAF /* RxKakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9435F23151544A3EE5410CA /* KakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B99AC107801953AE8A4C3630 /* MyPageFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyPageFeatureTests-Info.plist"; sourceTree = "<group>"; };
+		BF20199023CE11FCF181B0D4 /* libRecordDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1120F4A861F7ABAF5D9FA68 /* KakaoSDKTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C97D07B773BC5478E7F8BD55 /* KakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB6B544D5E661AA09F0BDE50 /* TuistBundle+MyPageFeatureDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+MyPageFeatureDemoApp.swift"; sourceTree = "<group>"; };
+		E2BADFE5DB80878DA53C5357 /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
+		E35AF6D276941FC0586BD9F7 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E668B9A18D63AF3B1B3B337D /* libGlobalThirdPartyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlobalThirdPartyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA20F5E8F4E2FB542010A4D8 /* MyPageFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyPageFeatureUITests-Info.plist"; sourceTree = "<group>"; };
+		ED0712A70EE128AFC66F488C /* libMyPageFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyPageFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEF3028F5DDF135526183996 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		F6E7C2C128DD7CA8A6DA8421 /* MyPageFeatureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPageFeatureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCBBDE83FCCC102BE535ACAC /* RxAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C5C704DAE137369D6C5BD1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3979E019032BB8E4BECB23C1 /* MyPageFeatureTesting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3742BCD1AE1A4D5C44B6D87F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB447BC617A9C451121BC6A7 /* CFNetwork.framework in Frameworks */,
+				CACEC82E66171483C60CB953 /* Alamofire.framework in Frameworks */,
+				66EC8A8FA1B2EDA6355037F4 /* libAppFoundation.a in Frameworks */,
+				4E4FD4569254D332ED4C7FB6 /* libBaseDomain.a in Frameworks */,
+				5E82B7450C2930F822E346ED /* libBaseShared.a in Frameworks */,
+				299A424A1B57765CEC980882 /* libCoreKit.a in Frameworks */,
+				9711674699BFE4C0FF240430 /* libDesignSystem.a in Frameworks */,
+				0A615946ADFA00729F623F14 /* Differentiator.framework in Frameworks */,
+				A09435F3DA73884B518CDF05 /* libGlobalThirdPartyLibrary.a in Frameworks */,
+				AB1560C5F7532AD9100B0963 /* KakaoSDKAuth.framework in Frameworks */,
+				69F2BC6AC2879C63D974A454 /* KakaoSDKCommon.framework in Frameworks */,
+				93CA3CCEE23A703B8C210447 /* KakaoSDKShare.framework in Frameworks */,
+				8641A39157BAB7DC68B9F61E /* KakaoSDKStory.framework in Frameworks */,
+				81513342B2E7B4E9673973CE /* KakaoSDKTalk.framework in Frameworks */,
+				3B3FBF666EB5AC4704917B5A /* KakaoSDKTemplate.framework in Frameworks */,
+				4DC0BBCAADD8DCA6AD102715 /* KakaoSDKUser.framework in Frameworks */,
+				4B5556E0DA65084CFECD98DA /* Kingfisher.framework in Frameworks */,
+				EC687FF7D44BA4941EB57DDF /* LogFlume.framework in Frameworks */,
+				3E9A37ABC23C29E95E7BE850 /* libMyPageFeatureInterface.a in Frameworks */,
+				371E673DC1FE67F25396A17F /* NeedleFoundation.framework in Frameworks */,
+				F062204B92D5185D2D5853EA /* libOnboardingDomain.a in Frameworks */,
+				8A6FEA0533523AF002A71603 /* libOnboardingDomainInterface.a in Frameworks */,
+				8F24A4C0E83EE159886D7909 /* RIBs.framework in Frameworks */,
+				D58E2C12C882E3B8180ACEBA /* ReactorKit.framework in Frameworks */,
+				5B5F5232C3A0A03B3FC76FF0 /* ReactorKitRuntime.framework in Frameworks */,
+				A3CF8342B5EB7CFCD690E9EE /* libRecordDomain.a in Frameworks */,
+				1E43A744B00CA745F1ED20AE /* libRecordDomainInterface.a in Frameworks */,
+				553A9000DB37317961FD57A7 /* RxAlamofire.framework in Frameworks */,
+				FDAA7173761BD6486E01E5AE /* RxCocoa.framework in Frameworks */,
+				8A3FE5961F63421E0C85F63A /* RxDataSources.framework in Frameworks */,
+				BDBC30DA383C5DC078BD3DD2 /* RxGesture.framework in Frameworks */,
+				F2DCAAB4A4F1F6BC96F6EB91 /* RxKakaoSDKAuth.framework in Frameworks */,
+				38F9AF46A6810771B1C16CD1 /* RxKakaoSDKCommon.framework in Frameworks */,
+				05CA75DF36EF10972AD55D20 /* RxKakaoSDKShare.framework in Frameworks */,
+				E787688C6F97BD6B6F960E6F /* RxKakaoSDKStory.framework in Frameworks */,
+				6063061EDCF67FB65CA29B39 /* RxKakaoSDKTalk.framework in Frameworks */,
+				21952E80319A898A6E7900AD /* RxKakaoSDKUser.framework in Frameworks */,
+				14218DB95DA21DF8C2E12C62 /* RxRelay.framework in Frameworks */,
+				236489529804B0DFE090AE15 /* RxSwift.framework in Frameworks */,
+				644DF6EDCB4C8BB20573DBB8 /* SkeletonView.framework in Frameworks */,
+				5394B6B541855A2C83CCDAF7 /* SnapKit.framework in Frameworks */,
+				424672E9B609E82FB7C684EE /* WeakMapTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		624AC078BD022E84A320D3A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D480D23D6B67477F3C859AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0BFDCDFD56B1A29A370D95E /* MyPageFeatureTesting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D83FB2C606CD6C16580BD87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C02D36E762A31EEC29DA845 /* CFNetwork.framework in Frameworks */,
+				F2D5FAE71BC1F44757DA3F53 /* Alamofire.framework in Frameworks */,
+				4F5F34710A4D79503E6F38D4 /* libAppFoundation.a in Frameworks */,
+				4B5D52C9A08456B54465ABF4 /* libBaseDomain.a in Frameworks */,
+				6B7E1734E93E92AF4D7F9B68 /* libBaseShared.a in Frameworks */,
+				E068360808F4F11FBC88BF04 /* libCoreKit.a in Frameworks */,
+				FE1DFB9F667D13FF385C420A /* libDesignSystem.a in Frameworks */,
+				9C900779321A51DD48BCD395 /* Differentiator.framework in Frameworks */,
+				E04DD9C76783FA483439EB82 /* libGlobalThirdPartyLibrary.a in Frameworks */,
+				362279E006A11668E3B634E5 /* KakaoSDKAuth.framework in Frameworks */,
+				E38B47E4CE27D5FF7A5DFC4F /* KakaoSDKCommon.framework in Frameworks */,
+				E5A19EB9255A296AE4E2615B /* KakaoSDKShare.framework in Frameworks */,
+				0DEC7A4A95D982507E56F823 /* KakaoSDKStory.framework in Frameworks */,
+				1E65350203AEC2774AD9C42C /* KakaoSDKTalk.framework in Frameworks */,
+				6147811A899F775FF5D16230 /* KakaoSDKTemplate.framework in Frameworks */,
+				A06ED4391C717E2DDC44BBF0 /* KakaoSDKUser.framework in Frameworks */,
+				0324F275860CFFE47CE78CCA /* Kingfisher.framework in Frameworks */,
+				5670CBD8FC0063AA73355196 /* LogFlume.framework in Frameworks */,
+				95D285CABD21F42F31700BA0 /* libMyPageFeature.a in Frameworks */,
+				8C1CC4AB08040F34B11F8316 /* libMyPageFeatureInterface.a in Frameworks */,
+				D012315A7BB1E9DE6F203CF5 /* MyPageFeatureTesting.framework in Frameworks */,
+				D703B92871BA860E1141D80C /* NeedleFoundation.framework in Frameworks */,
+				75AA5D34212FDE2115271227 /* libOnboardingDomain.a in Frameworks */,
+				5359FA5B39B8452FDF0C9DCB /* libOnboardingDomainInterface.a in Frameworks */,
+				EF887842D5C4F7D20BDD469E /* RIBs.framework in Frameworks */,
+				0727289C8302123372F56DDB /* ReactorKit.framework in Frameworks */,
+				81F61F52F4A1A09280A7E674 /* ReactorKitRuntime.framework in Frameworks */,
+				EC98DE5458E25FE9BF4A780A /* libRecordDomain.a in Frameworks */,
+				06883459723F2D550E742734 /* libRecordDomainInterface.a in Frameworks */,
+				494794188222F5DF4D77FF1C /* RxAlamofire.framework in Frameworks */,
+				8BA999F1B00BF8D6D2050C91 /* RxCocoa.framework in Frameworks */,
+				CE68CE7525A2FFE524230293 /* RxDataSources.framework in Frameworks */,
+				A1132016D7FAFFA9A5733D56 /* RxGesture.framework in Frameworks */,
+				CD5938C18154671C1E7D9F7D /* RxKakaoSDKAuth.framework in Frameworks */,
+				A737321EC8464ADEAD5D2A3D /* RxKakaoSDKCommon.framework in Frameworks */,
+				8FEE0D3585E4664059029734 /* RxKakaoSDKShare.framework in Frameworks */,
+				2E6D2B3C014BE73020370AE7 /* RxKakaoSDKStory.framework in Frameworks */,
+				08D822120FD0060D8D5DAD4F /* RxKakaoSDKTalk.framework in Frameworks */,
+				7CC6BD6FBB174701EAD5C35E /* RxKakaoSDKUser.framework in Frameworks */,
+				5AA558EA8329F004743C1231 /* RxRelay.framework in Frameworks */,
+				59615EC4CAD3DEDB32E4F851 /* RxSwift.framework in Frameworks */,
+				0DEF6D6BFEBF15087761946D /* SkeletonView.framework in Frameworks */,
+				09C4B1A725049536AABBA754 /* SnapKit.framework in Frameworks */,
+				1E0221D0ED748DB9CB96E540 /* WeakMapTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5746FFB567145D206D074D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A486DE7551D2339B0DB3ABD /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				5A0AEC4E038BD76031213F0F /* InfoPlists */,
+				E88AC35BA10CDBC4C8EE63BF /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		14C0BE35BB9C74F509948C53 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3C72BD231E17BF9A9BDB8414 /* MyPageFeatureTest.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		2C1D0A7AA113E583CC35AB2F = {
+			isa = PBXGroup;
+			children = (
+				BB8920CBEC65B2F512493636 /* Project */,
+				6E19AF481D0F944434B205EC /* Frameworks */,
+				BA372B055647503F58027CB4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F680212FFDD9C47BEB385E6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2CA573B0F5A0074C729F5F79 /* AppDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		5A0AEC4E038BD76031213F0F /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				22198B6FDDC6AA74828C61CF /* MyPageFeatureDemoApp-Info.plist */,
+				2AAA7BB48F982AE032BE23BA /* MyPageFeatureTesting-Info.plist */,
+				B99AC107801953AE8A4C3630 /* MyPageFeatureTests-Info.plist */,
+				EA20F5E8F4E2FB542010A4D8 /* MyPageFeatureUITests-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		5EAB4F8A5FA3B0272587ED46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B07C9FAB2ECA579234231645 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6E19AF481D0F944434B205EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				070A4D67BDC0CC8E709E6487 /* CFNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90FF8F9D8234A316F8D6249A /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				3C3C3F2394AAFD1703BE3F44 /* Shared.xcconfig */,
+			);
+			name = XCConfig;
+			path = ../../../XCConfig;
+			sourceTree = "<group>";
+		};
+		996C496A05EAF1BC86DB5D4C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8E50724D99F1A9B54FF84775 /* Source.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AAECB96FBF62B3D0E48F1749 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				5EAB4F8A5FA3B0272587ED46 /* Resources */,
+				4F680212FFDD9C47BEB385E6 /* Sources */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		BA372B055647503F58027CB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FAFA3466EA07CE976F0D59B /* Alamofire.framework */,
+				283E6DBC69514C641D359744 /* DesignSystem_DesignSystem.bundle */,
+				66EA31F694A3D0AAD3CD2022 /* Differentiator.framework */,
+				392978D79BDD7FFBD10F9D1C /* KakaoSDKAuth.framework */,
+				0455E8A95ED0C08A5E0AC0E2 /* KakaoSDKCommon.framework */,
+				C97D07B773BC5478E7F8BD55 /* KakaoSDKShare.framework */,
+				9F65F366CC69D50D0BF2DB06 /* KakaoSDKStory.framework */,
+				B9435F23151544A3EE5410CA /* KakaoSDKTalk.framework */,
+				C1120F4A861F7ABAF5D9FA68 /* KakaoSDKTemplate.framework */,
+				28D9A22FB6C99E72B4FA4246 /* KakaoSDKUser.framework */,
+				69824EA255EE53CB7D4FFAE8 /* Kingfisher.framework */,
+				90632A23C808BE4B7DF4325E /* libAppFoundation.a */,
+				244A0ED96534496E835A0375 /* libBaseDomain.a */,
+				93F8273CCD950DA691B99E92 /* libBaseShared.a */,
+				45E06FBEBFD822CE9375370B /* libCoreKit.a */,
+				7D446A763CDA16160E9CA5F6 /* libDesignSystem.a */,
+				E668B9A18D63AF3B1B3B337D /* libGlobalThirdPartyLibrary.a */,
+				ED0712A70EE128AFC66F488C /* libMyPageFeature.a */,
+				0692E88C0CB4C1B17141879E /* libMyPageFeatureInterface.a */,
+				6F468BBB85B0752B949010F1 /* libOnboardingDomain.a */,
+				AE114576940B731676CEA14F /* libOnboardingDomainInterface.a */,
+				434C7ABA7E2487674BFCC34D /* libRecordDomain.a */,
+				BF20199023CE11FCF181B0D4 /* libRecordDomainInterface.a */,
+				1470808F10141685C83003C5 /* LogFlume.framework */,
+				11444D8CA933E17690D32A9B /* MyPageFeatureDemoApp.app */,
+				6C17ADA6F86BB56FEEE1EBA5 /* MyPageFeatureTesting.framework */,
+				8CD02ED5C28CAF5C0621BB97 /* MyPageFeatureTests.xctest */,
+				F6E7C2C128DD7CA8A6DA8421 /* MyPageFeatureUITests.xctest */,
+				791DE997CE7CA7D6045036A5 /* NeedleFoundation.framework */,
+				5B09CC9D18041154DB36F63E /* ReactorKit.framework */,
+				8FA6CEB62DCD653658E4566A /* ReactorKitRuntime.framework */,
+				22497268D18AC399B37CF32F /* RIBs.framework */,
+				FCBBDE83FCCC102BE535ACAC /* RxAlamofire.framework */,
+				8082F45328818C9948F8980C /* RxCocoa.framework */,
+				9ED2DB03ADE631A01910BEAB /* RxCocoaRuntime.framework */,
+				2E00EAB6DD6F06B5AAA5C401 /* RxDataSources.framework */,
+				88E0D887E69D6B13F407F2AB /* RxGesture.framework */,
+				95A2FD6A6EEDCDA5062D69E0 /* RxKakaoSDKAuth.framework */,
+				78255BAD9E156ED9C8EE3039 /* RxKakaoSDKCommon.framework */,
+				0BFE9E32970CB778202D01DF /* RxKakaoSDKShare.framework */,
+				849AB32E38FD3AD2873552D6 /* RxKakaoSDKStory.framework */,
+				1FB9B2CA7618F86090D99C29 /* RxKakaoSDKTalk.framework */,
+				B53A1B8B52A158D9C2838EAF /* RxKakaoSDKUser.framework */,
+				2413F74F2B5C47A02B52B7B1 /* RxRelay.framework */,
+				0D5E36127410AC6C34137284 /* RxSwift.framework */,
+				578C9785DEBFE0ACEAB2B180 /* SkeletonView.framework */,
+				E35AF6D276941FC0586BD9F7 /* SnapKit.framework */,
+				49ECDD793414B563C50980AC /* WeakMapTable.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB8920CBEC65B2F512493636 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				AAECB96FBF62B3D0E48F1749 /* Demo */,
+				0A486DE7551D2339B0DB3ABD /* Derived */,
+				BF321D530E9C707F2CED4AFA /* Interface */,
+				996C496A05EAF1BC86DB5D4C /* Sources */,
+				DB9CAA003DEEEB159A75B96D /* Testing */,
+				14C0BE35BB9C74F509948C53 /* Tests */,
+				90FF8F9D8234A316F8D6249A /* XCConfig */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		BF321D530E9C707F2CED4AFA /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				EEF3028F5DDF135526183996 /* Interface.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		DB9CAA003DEEEB159A75B96D /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				E2BADFE5DB80878DA53C5357 /* Testing.swift */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		E88AC35BA10CDBC4C8EE63BF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DB6B544D5E661AA09F0BDE50 /* TuistBundle+MyPageFeatureDemoApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03E6D46CB159235B99143D55 /* MyPageFeatureDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C8088B1C3CB559706CCFA0C /* Build configuration list for PBXNativeTarget "MyPageFeatureDemoApp" */;
+			buildPhases = (
+				058264DEFF40758CDC999083 /* Needle */,
+				7A38249BC11D56886D37B02D /* Sources */,
+				86D4285CABAD43D8F1F61073 /* Resources */,
+				8BABA31B655A5DBEB846B537 /* Embed Frameworks */,
+				9D83FB2C606CD6C16580BD87 /* Frameworks */,
+				AC59C257A8409E965A4F12EB /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C8271586EA67812DD1AB434 /* PBXTargetDependency */,
+				A7A9AEE66C48F852BA90EC4C /* PBXTargetDependency */,
+			);
+			name = MyPageFeatureDemoApp;
+			productName = MyPageFeatureDemoApp;
+			productReference = 11444D8CA933E17690D32A9B /* MyPageFeatureDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		165FF0485069FAD6E30D1EF1 /* MyPageFeature */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E46513EF80D1940FC5A0EE3 /* Build configuration list for PBXNativeTarget "MyPageFeature" */;
+			buildPhases = (
+				45FDB90C7659BCB54A62C4DC /* Sources */,
+				AB582F03DF4BD0F1EBFAE896 /* Resources */,
+				713F739B2A400BFA075BB15D /* Embed Frameworks */,
+				F5746FFB567145D206D074D3 /* Frameworks */,
+				14743BA24DB406D96CA272C1 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6AB81113FDD06156CA87CC9 /* PBXTargetDependency */,
+			);
+			name = MyPageFeature;
+			productName = MyPageFeature;
+			productReference = ED0712A70EE128AFC66F488C /* libMyPageFeature.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		309D06068DD1002D94B61781 /* MyPageFeatureInterface */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD28172BC13E0CDED48E5F80 /* Build configuration list for PBXNativeTarget "MyPageFeatureInterface" */;
+			buildPhases = (
+				09B4FF84D15F66B000174D72 /* Sources */,
+				A7A0DE4378D7361FEB90907B /* Resources */,
+				D6256D763709FD1005D4E054 /* Embed Frameworks */,
+				624AC078BD022E84A320D3A6 /* Frameworks */,
+				4FD651B5E0F8B965627B912F /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyPageFeatureInterface;
+			productName = MyPageFeatureInterface;
+			productReference = 0692E88C0CB4C1B17141879E /* libMyPageFeatureInterface.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		966399E342586303DC88DB86 /* MyPageFeatureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C0AD5BCF23D4A10F174D538 /* Build configuration list for PBXNativeTarget "MyPageFeatureUITests" */;
+			buildPhases = (
+				0400E4B7FB24BADC308F5A88 /* Sources */,
+				1C4ACE94DAE263CF638406F4 /* Resources */,
+				C4F8921CF5438B128A1EF5C3 /* Embed Frameworks */,
+				8D480D23D6B67477F3C859AE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44B02BE2A6CBA440E8B9A9EA /* PBXTargetDependency */,
+				3FEC7096AACB575AE225B30A /* PBXTargetDependency */,
+			);
+			name = MyPageFeatureUITests;
+			productName = MyPageFeatureUITests;
+			productReference = F6E7C2C128DD7CA8A6DA8421 /* MyPageFeatureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B87CB66F4B5D7AC2214F49C7 /* MyPageFeatureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A407FD26D90BC3155EC27904 /* Build configuration list for PBXNativeTarget "MyPageFeatureTests" */;
+			buildPhases = (
+				58AC3623405D65C0148E6997 /* Sources */,
+				FC2E38362A05FA492FB07C03 /* Resources */,
+				9BFFFB08F5C8D3E571A45C93 /* Embed Frameworks */,
+				2C5C704DAE137369D6C5BD1C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4FDC48E4EDA0FBD16E58C5B /* PBXTargetDependency */,
+				9B7F83FFAB95470937479292 /* PBXTargetDependency */,
+			);
+			name = MyPageFeatureTests;
+			productName = MyPageFeatureTests;
+			productReference = 8CD02ED5C28CAF5C0621BB97 /* MyPageFeatureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DC2BE7641BBCFC7E3E5CA4E0 /* MyPageFeatureTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 751BD9CC2BFCEE79BDE12459 /* Build configuration list for PBXNativeTarget "MyPageFeatureTesting" */;
+			buildPhases = (
+				CC5AEBFF5C1A6CD6B22E1234 /* Sources */,
+				83E9798DF7B711B42FA4C7EC /* Resources */,
+				B346E162A80D47FE075C4B23 /* Embed Frameworks */,
+				3742BCD1AE1A4D5C44B6D87F /* Frameworks */,
+				655CABAD06707043C71A3F5C /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				389670331DC7E03DE025DABF /* PBXTargetDependency */,
+			);
+			name = MyPageFeatureTesting;
+			productName = MyPageFeatureTesting;
+			productReference = 6C17ADA6F86BB56FEEE1EBA5 /* MyPageFeatureTesting.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8565F30DCA2B8A33983B7951 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Omos;
+				TargetAttributes = {
+					966399E342586303DC88DB86 = {
+						TestTargetID = 03E6D46CB159235B99143D55;
+					};
+					B87CB66F4B5D7AC2214F49C7 = {
+						TestTargetID = 03E6D46CB159235B99143D55;
+					};
+				};
+			};
+			buildConfigurationList = 8D0F546050F4438672B52400 /* Build configuration list for PBXProject "MyPageFeature" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2C1D0A7AA113E583CC35AB2F;
+			productRefGroup = BA372B055647503F58027CB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				309D06068DD1002D94B61781 /* MyPageFeatureInterface */,
+				165FF0485069FAD6E30D1EF1 /* MyPageFeature */,
+				DC2BE7641BBCFC7E3E5CA4E0 /* MyPageFeatureTesting */,
+				B87CB66F4B5D7AC2214F49C7 /* MyPageFeatureTests */,
+				966399E342586303DC88DB86 /* MyPageFeatureUITests */,
+				03E6D46CB159235B99143D55 /* MyPageFeatureDemoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C4ACE94DAE263CF638406F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83E9798DF7B711B42FA4C7EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99B356B545158E3AF509F85A /* DesignSystem_DesignSystem.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D4285CABAD43D8F1F61073 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F99D2322A94C450EF62294B /* LaunchScreen.storyboard in Resources */,
+				D165D361F9CAE7C9929FA4AF /* DesignSystem_DesignSystem.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7A0DE4378D7361FEB90907B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB582F03DF4BD0F1EBFAE896 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2E38362A05FA492FB07C03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		058264DEFF40758CDC999083 /* Needle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Needle;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0400E4B7FB24BADC308F5A88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B4FF84D15F66B000174D72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53E7B26D7004D762A74EE651 /* Interface.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FDB90C7659BCB54A62C4DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238286DA452242A09B1D718D /* Source.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58AC3623405D65C0148E6997 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD7ACF7643B0C71AB046FEFE /* MyPageFeatureTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A38249BC11D56886D37B02D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74BC67C2D4F087583E8145E1 /* AppDelegate.swift in Sources */,
+				8210D9308E66F098C822E9D6 /* TuistBundle+MyPageFeatureDemoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5AEBFF5C1A6CD6B22E1234 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA108B0E01412C070302E8E4 /* Testing.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		389670331DC7E03DE025DABF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyPageFeatureInterface;
+			target = 309D06068DD1002D94B61781 /* MyPageFeatureInterface */;
+			targetProxy = 84C81882DFBAB20395BD4A26 /* PBXContainerItemProxy */;
+		};
+		3C8271586EA67812DD1AB434 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyPageFeature;
+			target = 165FF0485069FAD6E30D1EF1 /* MyPageFeature */;
+			targetProxy = 011E48319EEF1A07469B5B29 /* PBXContainerItemProxy */;
+		};
+		3FEC7096AACB575AE225B30A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyPageFeatureTesting;
+			target = DC2BE7641BBCFC7E3E5CA4E0 /* MyPageFeatureTesting */;
+			targetProxy = DC42B3CB0C3398C9ECD9A0A0 /* PBXContainerItemProxy */;
+		};
+		44B02BE2A6CBA440E8B9A9EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyPageFeatureDemoApp;
+			target = 03E6D46CB159235B99143D55 /* MyPageFeatureDemoApp */;
+			targetProxy = 356DF639BCC607A03727476C /* PBXContainerItemProxy */;
+		};
+		9B7F83FFAB95470937479292 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyPageFeatureTesting;
+			target = DC2BE7641BBCFC7E3E5CA4E0 /* MyPageFeatureTesting */;
+			targetProxy = 73693C5249CA95F64778A918 /* PBXContainerItemProxy */;
+		};
+		A7A9AEE66C48F852BA90EC4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyPageFeatureTesting;
+			target = DC2BE7641BBCFC7E3E5CA4E0 /* MyPageFeatureTesting */;
+			targetProxy = 1AAD7F7B3A83C965274519C6 /* PBXContainerItemProxy */;
+		};
+		C4FDC48E4EDA0FBD16E58C5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyPageFeatureDemoApp;
+			target = 03E6D46CB159235B99143D55 /* MyPageFeatureDemoApp */;
+			targetProxy = 0EF87A0C63D0F1680BCEF3CC /* PBXContainerItemProxy */;
+		};
+		C6AB81113FDD06156CA87CC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyPageFeatureInterface;
+			target = 309D06068DD1002D94B61781 /* MyPageFeatureInterface */;
+			targetProxy = 50120CA1D1F504D9B870CBEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A3E001A2B25F87E370878E5 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeature;
+				PRODUCT_NAME = MyPageFeature;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		127AD81A573104E38A0DE076 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyPageFeatureTesting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureTesting;
+				PRODUCT_NAME = MyPageFeatureTesting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = STAGE;
+		};
+		1A84D64B59E321A8CD7517D5 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyPageFeatureTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureTests;
+				PRODUCT_NAME = MyPageFeatureTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPageFeatureDemoApp.app/MyPageFeatureDemoApp";
+				TEST_TARGET_NAME = MyPageFeatureDemoApp;
+			};
+			name = PROD;
+		};
+		2B28DA51AB2C1A1A592D944C /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyPageFeatureUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureUITests;
+				PRODUCT_NAME = MyPageFeatureUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyPageFeatureDemoApp;
+			};
+			name = STAGE;
+		};
+		41EA7C3EEFD4A305B220FE96 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeature;
+				PRODUCT_NAME = MyPageFeature;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = STAGE;
+		};
+		49E9FFD7412D4A76FDCE86C3 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/MyPageFeatureDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureDemoApp;
+				PRODUCT_NAME = MyPageFeatureDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = STAGE;
+		};
+		56DE934AC22609BD2E943844 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureInterface;
+				PRODUCT_NAME = MyPageFeatureInterface;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+		63FB77FF414FC3D1A315F8F9 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyPageFeatureUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureUITests;
+				PRODUCT_NAME = MyPageFeatureUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyPageFeatureDemoApp;
+			};
+			name = DEV;
+		};
+		686E1C7D2591250629A2E341 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/MyPageFeatureDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureDemoApp;
+				PRODUCT_NAME = MyPageFeatureDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+		8F5724127773BD7ABBCDE2DA /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyPageFeatureTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureTests;
+				PRODUCT_NAME = MyPageFeatureTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPageFeatureDemoApp.app/MyPageFeatureDemoApp";
+				TEST_TARGET_NAME = MyPageFeatureDemoApp;
+			};
+			name = STAGE;
+		};
+		97340FF87A37D8619CBD89CD /* DEV */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C3C3F2394AAFD1703BE3F44 /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2L2K3UD2LK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = DEV;
+		};
+		9BAF3E1B6E5AD3C844F1215A /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyPageFeatureUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureUITests;
+				PRODUCT_NAME = MyPageFeatureUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyPageFeatureDemoApp;
+			};
+			name = PROD;
+		};
+		A6588A2F1068D8019E062D6E /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyPageFeatureTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureTests;
+				PRODUCT_NAME = MyPageFeatureTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPageFeatureDemoApp.app/MyPageFeatureDemoApp";
+				TEST_TARGET_NAME = MyPageFeatureDemoApp;
+			};
+			name = DEV;
+		};
+		A7D0B156C9F040482FFFE9B7 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureInterface;
+				PRODUCT_NAME = MyPageFeatureInterface;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = STAGE;
+		};
+		BA3450DBD63340A216BE8817 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyPageFeatureTesting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureTesting;
+				PRODUCT_NAME = MyPageFeatureTesting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = PROD;
+		};
+		BEB93EC14DCC4B99739A3F53 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C3C3F2394AAFD1703BE3F44 /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2L2K3UD2LK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = STAGE;
+		};
+		BECD1C822D096EC977AD08D6 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C3C3F2394AAFD1703BE3F44 /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2L2K3UD2LK;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = PROD;
+		};
+		C1A3DF14297F8B84489F2542 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyPageFeatureTesting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureTesting;
+				PRODUCT_NAME = MyPageFeatureTesting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = DEV;
+		};
+		C31EA456F90052635FA7D284 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureInterface;
+				PRODUCT_NAME = MyPageFeatureInterface;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		E4280CFDCDB2C3EB7BB043D4 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/MyPageFeatureDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeatureDemoApp;
+				PRODUCT_NAME = MyPageFeatureDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		EB9C3B0CCEEF8F9C93D4215D /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyPageFeature;
+				PRODUCT_NAME = MyPageFeature;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C8088B1C3CB559706CCFA0C /* Build configuration list for PBXNativeTarget "MyPageFeatureDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4280CFDCDB2C3EB7BB043D4 /* DEV */,
+				686E1C7D2591250629A2E341 /* PROD */,
+				49E9FFD7412D4A76FDCE86C3 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		751BD9CC2BFCEE79BDE12459 /* Build configuration list for PBXNativeTarget "MyPageFeatureTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1A3DF14297F8B84489F2542 /* DEV */,
+				BA3450DBD63340A216BE8817 /* PROD */,
+				127AD81A573104E38A0DE076 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		7C0AD5BCF23D4A10F174D538 /* Build configuration list for PBXNativeTarget "MyPageFeatureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63FB77FF414FC3D1A315F8F9 /* DEV */,
+				9BAF3E1B6E5AD3C844F1215A /* PROD */,
+				2B28DA51AB2C1A1A592D944C /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		7E46513EF80D1940FC5A0EE3 /* Build configuration list for PBXNativeTarget "MyPageFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A3E001A2B25F87E370878E5 /* DEV */,
+				EB9C3B0CCEEF8F9C93D4215D /* PROD */,
+				41EA7C3EEFD4A305B220FE96 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		8D0F546050F4438672B52400 /* Build configuration list for PBXProject "MyPageFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97340FF87A37D8619CBD89CD /* DEV */,
+				BECD1C822D096EC977AD08D6 /* PROD */,
+				BEB93EC14DCC4B99739A3F53 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		A407FD26D90BC3155EC27904 /* Build configuration list for PBXNativeTarget "MyPageFeatureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6588A2F1068D8019E062D6E /* DEV */,
+				1A84D64B59E321A8CD7517D5 /* PROD */,
+				8F5724127773BD7ABBCDE2DA /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		BD28172BC13E0CDED48E5F80 /* Build configuration list for PBXNativeTarget "MyPageFeatureInterface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C31EA456F90052635FA7D284 /* DEV */,
+				56DE934AC22609BD2E943844 /* PROD */,
+				A7D0B156C9F040482FFFE9B7 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8565F30DCA2B8A33983B7951 /* Project object */;
+}

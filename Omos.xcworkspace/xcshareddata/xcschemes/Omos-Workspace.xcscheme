@@ -28,6 +28,90 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "838A3E626A3E94F7A6E4F905"
+               BuildableName = "libAllRecordFeature.a"
+               BlueprintName = "AllRecordFeature"
+               ReferencedContainer = "container:Projects/Feature/AllRecordFeature/AllRecordFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "51B3CF1FA6ACF0E132F12366"
+               BuildableName = "AllRecordFeatureDemoApp.app"
+               BlueprintName = "AllRecordFeatureDemoApp"
+               ReferencedContainer = "container:Projects/Feature/AllRecordFeature/AllRecordFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "151B709F77B34A37AE7B059B"
+               BuildableName = "libAllRecordFeatureInterface.a"
+               BlueprintName = "AllRecordFeatureInterface"
+               ReferencedContainer = "container:Projects/Feature/AllRecordFeature/AllRecordFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "628FD4D23A8B95370F4246FE"
+               BuildableName = "AllRecordFeatureTesting.framework"
+               BlueprintName = "AllRecordFeatureTesting"
+               ReferencedContainer = "container:Projects/Feature/AllRecordFeature/AllRecordFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "116A78917F8F20E73A2C3EE6"
+               BuildableName = "AllRecordFeatureTests.xctest"
+               BlueprintName = "AllRecordFeatureTests"
+               ReferencedContainer = "container:Projects/Feature/AllRecordFeature/AllRecordFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F219F473E3DE3EA52AF6DB64"
+               BuildableName = "AllRecordFeatureUITests.xctest"
+               BlueprintName = "AllRecordFeatureUITests"
+               ReferencedContainer = "container:Projects/Feature/AllRecordFeature/AllRecordFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "4724A585CE20791838139B29"
                BuildableName = "libAppFoundation.a"
                BlueprintName = "AppFoundation"
@@ -350,6 +434,258 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AD44F46E40C5B409D1846629"
+               BuildableName = "libMyDJFeature.a"
+               BlueprintName = "MyDJFeature"
+               ReferencedContainer = "container:Projects/Feature/MyDJFeature/MyDJFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F11292E9A41C349DEA064C7C"
+               BuildableName = "MyDJFeatureDemoApp.app"
+               BlueprintName = "MyDJFeatureDemoApp"
+               ReferencedContainer = "container:Projects/Feature/MyDJFeature/MyDJFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3FBD4F096E0747C625EEFA5B"
+               BuildableName = "libMyDJFeatureInterface.a"
+               BlueprintName = "MyDJFeatureInterface"
+               ReferencedContainer = "container:Projects/Feature/MyDJFeature/MyDJFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2A805D533ED66EB2465E0A0C"
+               BuildableName = "MyDJFeatureTesting.framework"
+               BlueprintName = "MyDJFeatureTesting"
+               ReferencedContainer = "container:Projects/Feature/MyDJFeature/MyDJFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DF38A44F0F2014D119FBE235"
+               BuildableName = "MyDJFeatureTests.xctest"
+               BlueprintName = "MyDJFeatureTests"
+               ReferencedContainer = "container:Projects/Feature/MyDJFeature/MyDJFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A6E140E7FEC7F1BA6740E3D"
+               BuildableName = "MyDJFeatureUITests.xctest"
+               BlueprintName = "MyDJFeatureUITests"
+               ReferencedContainer = "container:Projects/Feature/MyDJFeature/MyDJFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "165FF0485069FAD6E30D1EF1"
+               BuildableName = "libMyPageFeature.a"
+               BlueprintName = "MyPageFeature"
+               ReferencedContainer = "container:Projects/Feature/MyPageFeature/MyPageFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "03E6D46CB159235B99143D55"
+               BuildableName = "MyPageFeatureDemoApp.app"
+               BlueprintName = "MyPageFeatureDemoApp"
+               ReferencedContainer = "container:Projects/Feature/MyPageFeature/MyPageFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "309D06068DD1002D94B61781"
+               BuildableName = "libMyPageFeatureInterface.a"
+               BlueprintName = "MyPageFeatureInterface"
+               ReferencedContainer = "container:Projects/Feature/MyPageFeature/MyPageFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC2BE7641BBCFC7E3E5CA4E0"
+               BuildableName = "MyPageFeatureTesting.framework"
+               BlueprintName = "MyPageFeatureTesting"
+               ReferencedContainer = "container:Projects/Feature/MyPageFeature/MyPageFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B87CB66F4B5D7AC2214F49C7"
+               BuildableName = "MyPageFeatureTests.xctest"
+               BlueprintName = "MyPageFeatureTests"
+               ReferencedContainer = "container:Projects/Feature/MyPageFeature/MyPageFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "966399E342586303DC88DB86"
+               BuildableName = "MyPageFeatureUITests.xctest"
+               BlueprintName = "MyPageFeatureUITests"
+               ReferencedContainer = "container:Projects/Feature/MyPageFeature/MyPageFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "95B02AA92622EED8CD2C65C1"
+               BuildableName = "libMyRecordFeature.a"
+               BlueprintName = "MyRecordFeature"
+               ReferencedContainer = "container:Projects/Feature/MyRecordFeature/MyRecordFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CED566C029CDF37AB2835292"
+               BuildableName = "MyRecordFeatureDemoApp.app"
+               BlueprintName = "MyRecordFeatureDemoApp"
+               ReferencedContainer = "container:Projects/Feature/MyRecordFeature/MyRecordFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "90D5395B4E07E74B6FE18D74"
+               BuildableName = "libMyRecordFeatureInterface.a"
+               BlueprintName = "MyRecordFeatureInterface"
+               ReferencedContainer = "container:Projects/Feature/MyRecordFeature/MyRecordFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "79DCB6C19815CA127A017ED3"
+               BuildableName = "MyRecordFeatureTesting.framework"
+               BlueprintName = "MyRecordFeatureTesting"
+               ReferencedContainer = "container:Projects/Feature/MyRecordFeature/MyRecordFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0CBAEE5CA9907A93A8303C2E"
+               BuildableName = "MyRecordFeatureTests.xctest"
+               BlueprintName = "MyRecordFeatureTests"
+               ReferencedContainer = "container:Projects/Feature/MyRecordFeature/MyRecordFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A9F61686EED24DA3EAA913D4"
+               BuildableName = "MyRecordFeatureUITests.xctest"
+               BlueprintName = "MyRecordFeatureUITests"
+               ReferencedContainer = "container:Projects/Feature/MyRecordFeature/MyRecordFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "B7D668D851D7D81DA02681CC"
                BuildableName = "NeedleFoundation.framework"
                BlueprintName = "NeedleFoundation"
@@ -606,6 +942,90 @@
                BuildableName = "RecordDomainTests.xctest"
                BlueprintName = "RecordDomainTests"
                ReferencedContainer = "container:Projects/Domain/RecordDomain/RecordDomain.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2F81499F1679F79302E2EB12"
+               BuildableName = "libRootTabBarFeature.a"
+               BlueprintName = "RootTabBarFeature"
+               ReferencedContainer = "container:Projects/Feature/RootTabBarFeature/RootTabBarFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5F8A620C76D5F696A625C9C1"
+               BuildableName = "RootTabBarFeatureDemoApp.app"
+               BlueprintName = "RootTabBarFeatureDemoApp"
+               ReferencedContainer = "container:Projects/Feature/RootTabBarFeature/RootTabBarFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DCA80F89B869687FA2DD13D4"
+               BuildableName = "libRootTabBarFeatureInterface.a"
+               BlueprintName = "RootTabBarFeatureInterface"
+               ReferencedContainer = "container:Projects/Feature/RootTabBarFeature/RootTabBarFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DAAEB4E2A34699AFD6B4BBCA"
+               BuildableName = "RootTabBarFeatureTesting.framework"
+               BlueprintName = "RootTabBarFeatureTesting"
+               ReferencedContainer = "container:Projects/Feature/RootTabBarFeature/RootTabBarFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5FA03499E82F0701A9EC9D0C"
+               BuildableName = "RootTabBarFeatureTests.xctest"
+               BlueprintName = "RootTabBarFeatureTests"
+               ReferencedContainer = "container:Projects/Feature/RootTabBarFeature/RootTabBarFeature.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "82774CCC4F3A385D3CFE496C"
+               BuildableName = "RootTabBarFeatureUITests.xctest"
+               BlueprintName = "RootTabBarFeatureUITests"
+               ReferencedContainer = "container:Projects/Feature/RootTabBarFeature/RootTabBarFeature.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -928,6 +1348,26 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "116A78917F8F20E73A2C3EE6"
+               BuildableName = "AllRecordFeatureTests.xctest"
+               BlueprintName = "AllRecordFeatureTests"
+               ReferencedContainer = "container:Projects/Feature/AllRecordFeature/AllRecordFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F219F473E3DE3EA52AF6DB64"
+               BuildableName = "AllRecordFeatureUITests.xctest"
+               BlueprintName = "AllRecordFeatureUITests"
+               ReferencedContainer = "container:Projects/Feature/AllRecordFeature/AllRecordFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "7CB59B4EBD3703F298FE8A9E"
                BuildableName = "AppFoundationTests.xctest"
                BlueprintName = "AppFoundationTests"
@@ -968,6 +1408,66 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DF38A44F0F2014D119FBE235"
+               BuildableName = "MyDJFeatureTests.xctest"
+               BlueprintName = "MyDJFeatureTests"
+               ReferencedContainer = "container:Projects/Feature/MyDJFeature/MyDJFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A6E140E7FEC7F1BA6740E3D"
+               BuildableName = "MyDJFeatureUITests.xctest"
+               BlueprintName = "MyDJFeatureUITests"
+               ReferencedContainer = "container:Projects/Feature/MyDJFeature/MyDJFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B87CB66F4B5D7AC2214F49C7"
+               BuildableName = "MyPageFeatureTests.xctest"
+               BlueprintName = "MyPageFeatureTests"
+               ReferencedContainer = "container:Projects/Feature/MyPageFeature/MyPageFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "966399E342586303DC88DB86"
+               BuildableName = "MyPageFeatureUITests.xctest"
+               BlueprintName = "MyPageFeatureUITests"
+               ReferencedContainer = "container:Projects/Feature/MyPageFeature/MyPageFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0CBAEE5CA9907A93A8303C2E"
+               BuildableName = "MyRecordFeatureTests.xctest"
+               BlueprintName = "MyRecordFeatureTests"
+               ReferencedContainer = "container:Projects/Feature/MyRecordFeature/MyRecordFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A9F61686EED24DA3EAA913D4"
+               BuildableName = "MyRecordFeatureUITests.xctest"
+               BlueprintName = "MyRecordFeatureUITests"
+               ReferencedContainer = "container:Projects/Feature/MyRecordFeature/MyRecordFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "6A53E8E4550AA40BF7587FBC"
                BuildableName = "OnboardingDomainTests.xctest"
                BlueprintName = "OnboardingDomainTests"
@@ -1002,6 +1502,26 @@
                BuildableName = "RecordDomainTests.xctest"
                BlueprintName = "RecordDomainTests"
                ReferencedContainer = "container:Projects/Domain/RecordDomain/RecordDomain.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5FA03499E82F0701A9EC9D0C"
+               BuildableName = "RootTabBarFeatureTests.xctest"
+               BlueprintName = "RootTabBarFeatureTests"
+               ReferencedContainer = "container:Projects/Feature/RootTabBarFeature/RootTabBarFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "82774CCC4F3A385D3CFE496C"
+               BuildableName = "RootTabBarFeatureUITests.xctest"
+               BlueprintName = "RootTabBarFeatureUITests"
+               ReferencedContainer = "container:Projects/Feature/RootTabBarFeature/RootTabBarFeature.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference

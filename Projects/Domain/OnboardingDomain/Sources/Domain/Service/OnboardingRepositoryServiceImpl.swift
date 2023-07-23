@@ -63,6 +63,7 @@ public class OnboardingRepositoryServiceImpl: OnboardingRepositoryService {
                 owner.updateSnsEmailWithType(email: email, type: .kakao)
                 return owner.onboardingRepository
                     .SNSlogin(request: .init(email: email, type: .KAKAO)) // for signUp
+                    .debug("kakao")
                     .asObservable()
                     .map { owner.setAuthTokens(accessToken: $0.accessToken, refreshToken: $0.refreshToken) }
                     .catch { _ in .just(false) }
@@ -73,6 +74,7 @@ public class OnboardingRepositoryServiceImpl: OnboardingRepositoryService {
         let _ = updateSnsEmailWithType(email: email, type: .apple) // for signUp
         return onboardingRepository
             .SNSlogin(request: .init(email: email, type: .APPLE))
+            .debug("apple")
             .asObservable()
             .withUnretained(self)
             .map { owner, res in owner.setAuthTokens(accessToken: res.accessToken, refreshToken: res.refreshToken) }
@@ -159,18 +161,18 @@ public class OnboardingRepositoryServiceImpl: OnboardingRepositoryService {
     }
     
     private func kakaoEmail() -> Observable<String> {
-        let kakaoToken: Observable<OAuthToken>
         if (UserApi.isKakaoTalkLoginAvailable()) {
-            kakaoToken = UserApi.shared.rx
+           let _ = UserApi.shared.rx
                 .loginWithKakaoTalk()
         } else {
-            kakaoToken = UserApi.shared.rx
+            let _ = UserApi.shared.rx
                 .loginWithKakaoAccount()
         }
         
-        return kakaoToken
-            .flatMap { _ in UserApi.shared.rx.me() }
+         return UserApi.shared.rx.me()
+            .asObservable()
             .compactMap(\.kakaoAccount?.email)
+        
     }
     
 }

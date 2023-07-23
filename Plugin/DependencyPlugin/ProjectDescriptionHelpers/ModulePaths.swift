@@ -12,6 +12,11 @@ public enum ModulePaths {
 
 public extension ModulePaths {
     enum Feature: String {
+        case MyPageFeature
+        case MyDJFeature
+        case AllRecordFeature
+        case MyRecordFeature
+        case RootTabBarFeature
         case TodayFeature
         case OnboardingFeature
         case BaseFeature
@@ -25,7 +30,6 @@ public extension ModulePaths {
 public extension ModulePaths {
     enum Domain: String {
         case RecordDomain
-        case Record
         case OnboardingDomain
         case BaseDomain
 

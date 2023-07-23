@@ -1,0 +1,1718 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0283C38AECFDDED7A9AFA188 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61673D5FFA77BCD8D5B6B1B1 /* SkeletonView.framework */; platformFilter = ios; };
+		02F53A7EDB7022177070E5AD /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2D00EA65498B8CECBA9317 /* RIBs.framework */; platformFilter = ios; };
+		03D6FBBB0C298D9479BD06E1 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77C711FC250A199ABAD653F8 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		044B3600AB0135471A0D3B53 /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0B1862632DEAF6A1FB26A6 /* libCoreKit.a */; platformFilter = ios; };
+		0A96380DD734F622E5D58726 /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032C147380349D9A5251EA26 /* RxKakaoSDKUser.framework */; platformFilter = ios; };
+		0B01FA0D8F053FCF68A74653 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33759D98511B5665D8179A1 /* Differentiator.framework */; platformFilter = ios; };
+		13E393FCEF2AC5B5F1ABB069 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB18646CEF342E6FB02A778 /* RxDataSources.framework */; platformFilter = ios; };
+		1661F4763294B7A0B1AA7351 /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032C147380349D9A5251EA26 /* RxKakaoSDKUser.framework */; platformFilter = ios; };
+		179503B027451E24CABAB5D9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D8A2E8478B02552A2FC6BE /* Alamofire.framework */; platformFilter = ios; };
+		181D730825CB1B1C0F2454A1 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33759D98511B5665D8179A1 /* Differentiator.framework */; platformFilter = ios; };
+		1991AD46B9759F64932E893D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3481B436BB737E00E91864D /* LaunchScreen.storyboard */; };
+		1BBE453848B8E7CF3B017B82 /* MyDJFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5955E89DA268AD0A5D783A /* MyDJFeatureTesting.framework */; platformFilter = ios; };
+		1C3A890611703258DDDF70EF /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0CC1FA24E72CB5434EF934 /* libBaseDomain.a */; platformFilter = ios; };
+		1F64BD836549B425CBD32EE9 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9D190F82D0640614BCD9C0 /* libOnboardingDomain.a */; platformFilter = ios; };
+		208C6A0A3BFF2F991FADB854 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF41E7A9C7105C01AC821E67 /* RxRelay.framework */; platformFilter = ios; };
+		2129FE4581F8F50EFB21A595 /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE53BF54AAB76F999F065C9 /* RxAlamofire.framework */; platformFilter = ios; };
+		2207073BBA8E8242BCBC755D /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF41E7A9C7105C01AC821E67 /* RxRelay.framework */; platformFilter = ios; };
+		24143A6ED12A6C77DC185A8D /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2BD6AB4471564418686552 /* LogFlume.framework */; platformFilter = ios; };
+		252A5A17C0FDD69547C55362 /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35692302D9B06CA24446D959 /* libRecordDomain.a */; platformFilter = ios; };
+		25B29F3C4A91C11B5253EE83 /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 006022DB2952B5E4E30E1129 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
+		29F45C51C4CF828626BEC38B /* MyDJFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5955E89DA268AD0A5D783A /* MyDJFeatureTesting.framework */; platformFilter = ios; };
+		31EF96606BCF46B28A18F6A6 /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 006022DB2952B5E4E30E1129 /* DesignSystem_DesignSystem.bundle */; };
+		32E371DF38A0B98BC9089D93 /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5E7010FEF778C96A941B64 /* RxKakaoSDKStory.framework */; platformFilter = ios; };
+		3BAA93F8A394CBEFF6FB77FD /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C711FC250A199ABAD653F8 /* SnapKit.framework */; platformFilter = ios; };
+		3CD51CE7B92034ABD01FDB4A /* MyDJFeatureTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE5955E89DA268AD0A5D783A /* MyDJFeatureTesting.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3D5B2E4482F783B6C77D7ED9 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD9A1A5CEE4EE82A7EBB6E6 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
+		3E3D9C5F92E156C259D82EF3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50A04641C6DB86CC4068369 /* CFNetwork.framework */; };
+		40E41A9A177FF15E67D9E435 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F98F4362563C74B0588CC1 /* RxCocoa.framework */; platformFilter = ios; };
+		43C7B3A2F194A7DF72C8975B /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71F98F4362563C74B0588CC1 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43D56E868FEE6DE30F38FA88 /* libRecordDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8CBC3235081836BEA380E7 /* libRecordDomainInterface.a */; platformFilter = ios; };
+		45CB19DB08963F2C24F9EEC2 /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D248AE107C892698336AB5B9 /* KakaoSDKTalk.framework */; platformFilter = ios; };
+		46EB3D16B26F5E5673165AA1 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FF5276DD3B462FFF39628D /* NeedleFoundation.framework */; platformFilter = ios; };
+		49041C1C47AD836DDBB50E5E /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C77E8DCDBAD06981A1F9FB /* KakaoSDKShare.framework */; platformFilter = ios; };
+		4DBD27418EB1CA3DC81864DB /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FB03F8916DE77A9BC0EAF0 /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
+		514F9C4CA36D0DBD0833DBE1 /* libMyDJFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E403CD9873449E09A63DAA66 /* libMyDJFeature.a */; platformFilter = ios; };
+		51ED095AC9654FA08009BBCC /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35692302D9B06CA24446D959 /* libRecordDomain.a */; platformFilter = ios; };
+		55343BD38C883C9D83D85F2C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F7812F19108B1FA8B3CF61 /* RxSwift.framework */; platformFilter = ios; };
+		56F6CABF5E6AC177C2317AD5 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FFF4532FE4C4FAB7BED1C6 /* libAppFoundation.a */; platformFilter = ios; };
+		5795EF577A25FB612980A41A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F7812F19108B1FA8B3CF61 /* RxSwift.framework */; platformFilter = ios; };
+		58886B90DD84F7CC3A00A112 /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD529B2E5F0DCBAA1C53D52F /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		5E45F91B1AE62063B10A6EE1 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF41E7A9C7105C01AC821E67 /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E9E9354DC675D179E45A0DA /* RxKakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E211E49FD2FFB44A1B9AB039 /* RxKakaoSDKAuth.framework */; platformFilter = ios; };
+		5FAAF481C4E44A615C66E7EE /* RxKakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A7E943ECAB7435E9164EAF /* RxKakaoSDKShare.framework */; platformFilter = ios; };
+		633159489F7B297BD408D959 /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD529B2E5F0DCBAA1C53D52F /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		645A78819010E2F630C442E0 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50EF9C971FADBDE5BB3762F9 /* ReactorKit.framework */; platformFilter = ios; };
+		690FE5D815A31FF269ECB398 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F98F4362563C74B0588CC1 /* RxCocoa.framework */; platformFilter = ios; };
+		6B1B89CF0A0A49B6C331611F /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5E7010FEF778C96A941B64 /* RxKakaoSDKStory.framework */; platformFilter = ios; };
+		6B64D76D000A09FE9E14F3A2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D8A2E8478B02552A2FC6BE /* Alamofire.framework */; platformFilter = ios; };
+		6BAB28123B462FDB8E72F20A /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0CC1FA24E72CB5434EF934 /* libBaseDomain.a */; platformFilter = ios; };
+		6F9FB1EAE4A9FFFB181F0F29 /* RxKakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A7E943ECAB7435E9164EAF /* RxKakaoSDKShare.framework */; platformFilter = ios; };
+		7069E98C1BAB978C1B90FFF3 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8B4364246F90DEBEC3DA7B /* ReactorKitRuntime.framework */; platformFilter = ios; };
+		7515186AD96A0F1B57B49B9A /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F9D3252F14EFDAA4C43B90 /* KakaoSDKAuth.framework */; platformFilter = ios; };
+		785127099535A59B6412DAC9 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C711FC250A199ABAD653F8 /* SnapKit.framework */; platformFilter = ios; };
+		791AE02421E3E823A7C12A8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2EE1BAB96F3D48E38F8296 /* AppDelegate.swift */; };
+		7AB438DBEB2E62F3A0CCA781 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE2CBF1927FDAB4D278356C /* libBaseShared.a */; platformFilter = ios; };
+		7AB87F44293B21AD4E63A883 /* libBaseDomain.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 7E0CC1FA24E72CB5434EF934 /* libBaseDomain.a */; platformFilter = ios; };
+		7D58414B93BFE362373E411A /* libRecordDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8CBC3235081836BEA380E7 /* libRecordDomainInterface.a */; platformFilter = ios; };
+		838DE0C7E0E2A90D6B7E75BD /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE53BF54AAB76F999F065C9 /* RxAlamofire.framework */; platformFilter = ios; };
+		86333082780722C4807F5B19 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A126F67DBC47D33216640D9B /* libDesignSystem.a */; platformFilter = ios; };
+		86AB0EAE0D9BF2A59A2FEE1D /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2D00EA65498B8CECBA9317 /* RIBs.framework */; platformFilter = ios; };
+		86E670A3AD7CF338807A11B8 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61D1F4F270B1FF8EB20851B /* Kingfisher.framework */; platformFilter = ios; };
+		883A6FC1C07C26692D066E7A /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50EF9C971FADBDE5BB3762F9 /* ReactorKit.framework */; platformFilter = ios; };
+		8BA0B5800571BDC9233A277F /* libMyDJFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D115714458C3713A789963 /* libMyDJFeatureInterface.a */; platformFilter = ios; };
+		8C33F90A6F3BF0986E3377C8 /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCB52AE8CA5869B7D733045 /* KakaoSDKUser.framework */; platformFilter = ios; };
+		8C6FF71C49596CA88C65CC6C /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C09DD1CF0FC6B9B2023256CD /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C91ADCF9B6AE8CD3469E5BA /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE2CBF1927FDAB4D278356C /* libBaseShared.a */; platformFilter = ios; };
+		8D4B36CDADADDA6BF39466B6 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FFF4532FE4C4FAB7BED1C6 /* libAppFoundation.a */; platformFilter = ios; };
+		904F43456DE24685678FFFC9 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8B4364246F90DEBEC3DA7B /* ReactorKitRuntime.framework */; platformFilter = ios; };
+		9089478604EA080F16970839 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FF5276DD3B462FFF39628D /* NeedleFoundation.framework */; platformFilter = ios; };
+		92551701FFCAF59C1FDE1706 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50A04641C6DB86CC4068369 /* CFNetwork.framework */; };
+		94098520F9F437645FC9CA91 /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CBDB7901E2EC694F0BEDFC /* WeakMapTable.framework */; platformFilter = ios; };
+		9657C3A637FA6C63B0EF7812 /* TuistBundle+MyDJFeatureDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970A190CBCF522548B61F22E /* TuistBundle+MyDJFeatureDemoApp.swift */; };
+		9766C01277071876AF6E29E6 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F9D3252F14EFDAA4C43B90 /* KakaoSDKAuth.framework */; platformFilter = ios; };
+		97FB4F448B23661B81E08BD3 /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA9ED7CD05796D321DE429D /* KakaoSDKTemplate.framework */; platformFilter = ios; };
+		989359CCAC1CB2D134B9C0E3 /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8463A364436CEEBCCFE6D8D /* KakaoSDKStory.framework */; platformFilter = ios; };
+		9946F09FB4BC9ED752DAE4E7 /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CBDB7901E2EC694F0BEDFC /* WeakMapTable.framework */; platformFilter = ios; };
+		99A820EBEE3CA829CFCB15A5 /* RxKakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E211E49FD2FFB44A1B9AB039 /* RxKakaoSDKAuth.framework */; platformFilter = ios; };
+		9F81BAE22047338BABC8AFF5 /* libMyDJFeatureInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = A0D115714458C3713A789963 /* libMyDJFeatureInterface.a */; platformFilter = ios; };
+		A0997FAC5D08F74FE684ADBD /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7364965D68733630DF38816 /* Interface.swift */; };
+		A336738D4559BE2AE704A5B6 /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA9ED7CD05796D321DE429D /* KakaoSDKTemplate.framework */; platformFilter = ios; };
+		A629B2C854C01C36A59F33DD /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCB52AE8CA5869B7D733045 /* KakaoSDKUser.framework */; platformFilter = ios; };
+		AA142FE0F0F82456C0CA29AD /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1035CD0AE9A5850984C78879 /* RxGesture.framework */; platformFilter = ios; };
+		AAC2857B818FE73E2DC8CF4D /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C77E8DCDBAD06981A1F9FB /* KakaoSDKShare.framework */; platformFilter = ios; };
+		B0167E0D1FDD5C9BC6F07322 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54F7812F19108B1FA8B3CF61 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B815D51A9043BAACE26713C0 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9D190F82D0640614BCD9C0 /* libOnboardingDomain.a */; platformFilter = ios; };
+		BAF173990A497E05D52C8C94 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61673D5FFA77BCD8D5B6B1B1 /* SkeletonView.framework */; platformFilter = ios; };
+		BBF5D949544EA5EF75F0D943 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8005C94CB55BE82C6D5DE /* Source.swift */; };
+		C3E55F200EBB27AB5844652A /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8005B92E44AC4021D74C365 /* KakaoSDKCommon.framework */; platformFilter = ios; };
+		C687BC89F27571E6DC80E1A4 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD9A1A5CEE4EE82A7EBB6E6 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
+		C828A1BB64AF1F12FA85FD76 /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3EC2A601CE8F6D2614270E /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
+		C93E12684FF0A807120B1BFF /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB18646CEF342E6FB02A778 /* RxDataSources.framework */; platformFilter = ios; };
+		CC1DFC3081F751E7302F07C6 /* libMyDJFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D115714458C3713A789963 /* libMyDJFeatureInterface.a */; platformFilter = ios; };
+		CCBA9313B5B594B5A271AD55 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 54F7812F19108B1FA8B3CF61 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD5301CA96438E0C754B7355 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61D1F4F270B1FF8EB20851B /* Kingfisher.framework */; platformFilter = ios; };
+		CDC95C7B84CE084D9CAF6697 /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8463A364436CEEBCCFE6D8D /* KakaoSDKStory.framework */; platformFilter = ios; };
+		CFB504B88765D619FE55659A /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71F98F4362563C74B0588CC1 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CFEA71C3A112ECE60CF35199 /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 006022DB2952B5E4E30E1129 /* DesignSystem_DesignSystem.bundle */; };
+		D16BBCACBA8AF6449D2D04AB /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A126F67DBC47D33216640D9B /* libDesignSystem.a */; platformFilter = ios; };
+		D2799B15A2A80B7A02221415 /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2BD6AB4471564418686552 /* LogFlume.framework */; platformFilter = ios; };
+		D3B1DC1586F38993DE869F7D /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FB03F8916DE77A9BC0EAF0 /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
+		DC7A367A69C0F7D4682531DB /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 006022DB2952B5E4E30E1129 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
+		DDEA042BD17086C8B79B566D /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0B1862632DEAF6A1FB26A6 /* libCoreKit.a */; platformFilter = ios; };
+		DEDD98D340C8C6BF30C0A361 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77C711FC250A199ABAD653F8 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DF751A768845BF1BC526D7A7 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1035CD0AE9A5850984C78879 /* RxGesture.framework */; platformFilter = ios; };
+		E976CBC169B787BC7F73393D /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3EC2A601CE8F6D2614270E /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
+		F14AF5B6F7B8C38AFF5C4B40 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF41E7A9C7105C01AC821E67 /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F17B39F6C7D3B5A69ADE4FCF /* MyDJFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5955E89DA268AD0A5D783A /* MyDJFeatureTesting.framework */; platformFilter = ios; };
+		F5C631D63188F8ED3D9EAC5A /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C09DD1CF0FC6B9B2023256CD /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F792DE0867CED63053D8B9B0 /* MyDJFeatureTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE5955E89DA268AD0A5D783A /* MyDJFeatureTesting.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9A4440B654424B49CCD842E /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D248AE107C892698336AB5B9 /* KakaoSDKTalk.framework */; platformFilter = ios; };
+		FB8BC4864C61188CF49FA983 /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941FE3C20C52387594AC50B /* Testing.swift */; };
+		FD5857BB4362411DF86D03BE /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8005B92E44AC4021D74C365 /* KakaoSDKCommon.framework */; platformFilter = ios; };
+		FEC3C70C3CB83A6EB2B26D12 /* MyDJFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F3932DEFDB8E62572B55B3 /* MyDJFeatureTest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		004C65FDFB3503E238B7E7CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F245130A6D13AA4A24E487DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FBD4F096E0747C625EEFA5B;
+			remoteInfo = MyDJFeatureInterface;
+		};
+		099E7DEDDC1EB48D9EE14C9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F245130A6D13AA4A24E487DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD44F46E40C5B409D1846629;
+			remoteInfo = MyDJFeature;
+		};
+		25345BA6B14F410FA0C583C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F245130A6D13AA4A24E487DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FBD4F096E0747C625EEFA5B;
+			remoteInfo = MyDJFeatureInterface;
+		};
+		4275C0AFDDA685CD44FDDB42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F245130A6D13AA4A24E487DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A805D533ED66EB2465E0A0C;
+			remoteInfo = MyDJFeatureTesting;
+		};
+		6803097055F30C10632835A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F245130A6D13AA4A24E487DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F11292E9A41C349DEA064C7C;
+			remoteInfo = MyDJFeatureDemoApp;
+		};
+		80C75042850851A9A3C97683 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F245130A6D13AA4A24E487DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A805D533ED66EB2465E0A0C;
+			remoteInfo = MyDJFeatureTesting;
+		};
+		842881E393C7BE3B77AB70D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F245130A6D13AA4A24E487DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A805D533ED66EB2465E0A0C;
+			remoteInfo = MyDJFeatureTesting;
+		};
+		B91BC0C3106D36E30C72A29F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F245130A6D13AA4A24E487DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F11292E9A41C349DEA064C7C;
+			remoteInfo = MyDJFeatureDemoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14CEE8B6D7EF1BC18BE707D1 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				DC7A367A69C0F7D4682531DB /* DesignSystem_DesignSystem.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		1F04611384F041153B5AA5F9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2645BE4A1C8E165315D75CA6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		333CA68105DB42C83C6243A0 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				7AB87F44293B21AD4E63A883 /* libBaseDomain.a in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		41E541F884DC8C93D4C9FBFD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		795F0B863CA6BB45FF68E634 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				25B29F3C4A91C11B5253EE83 /* DesignSystem_DesignSystem.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C41778A83EB46E3A0082EB6C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F792DE0867CED63053D8B9B0 /* MyDJFeatureTesting.framework in Embed Frameworks */,
+				43C7B3A2F194A7DF72C8975B /* RxCocoa.framework in Embed Frameworks */,
+				8C6FF71C49596CA88C65CC6C /* RxCocoaRuntime.framework in Embed Frameworks */,
+				5E45F91B1AE62063B10A6EE1 /* RxRelay.framework in Embed Frameworks */,
+				B0167E0D1FDD5C9BC6F07322 /* RxSwift.framework in Embed Frameworks */,
+				03D6FBBB0C298D9479BD06E1 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C454864B14E27531E958EFF9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE5D3D747302FCBB686C1C50 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				9F81BAE22047338BABC8AFF5 /* libMyDJFeatureInterface.a in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F911417ECA50621B496F8062 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3CD51CE7B92034ABD01FDB4A /* MyDJFeatureTesting.framework in Embed Frameworks */,
+				CFB504B88765D619FE55659A /* RxCocoa.framework in Embed Frameworks */,
+				F5C631D63188F8ED3D9EAC5A /* RxCocoaRuntime.framework in Embed Frameworks */,
+				F14AF5B6F7B8C38AFF5C4B40 /* RxRelay.framework in Embed Frameworks */,
+				CCBA9313B5B594B5A271AD55 /* RxSwift.framework in Embed Frameworks */,
+				DEDD98D340C8C6BF30C0A361 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		006022DB2952B5E4E30E1129 /* DesignSystem_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystem_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		01A7E943ECAB7435E9164EAF /* RxKakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		032C147380349D9A5251EA26 /* RxKakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1035CD0AE9A5850984C78879 /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FF5276DD3B462FFF39628D /* NeedleFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeedleFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A3EC2A601CE8F6D2614270E /* libGlobalThirdPartyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlobalThirdPartyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D8CBC3235081836BEA380E7 /* libRecordDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2579E00AA5E2A7B8C271363E /* MyDJFeatureDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDJFeatureDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A8B4364246F90DEBEC3DA7B /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AE53BF54AAB76F999F065C9 /* RxAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EB18646CEF342E6FB02A778 /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9D190F82D0640614BCD9C0 /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		31B8FEB76D7224F1EE9FDDA3 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		35692302D9B06CA24446D959 /* libRecordDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD9A1A5CEE4EE82A7EBB6E6 /* RxKakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C77E8DCDBAD06981A1F9FB /* KakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50EF9C971FADBDE5BB3762F9 /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54F7812F19108B1FA8B3CF61 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FCB52AE8CA5869B7D733045 /* KakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61673D5FFA77BCD8D5B6B1B1 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D0067A2148CF8A2C0B7C969 /* MyDJFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyDJFeatureUITests-Info.plist"; sourceTree = "<group>"; };
+		6D28C32B2ADBE607C9FDE642 /* MyDJFeatureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDJFeatureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D5E7010FEF778C96A941B64 /* RxKakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71F98F4362563C74B0588CC1 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77C711FC250A199ABAD653F8 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E0CC1FA24E72CB5434EF934 /* libBaseDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E2EE1BAB96F3D48E38F8296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		86FB03F8916DE77A9BC0EAF0 /* RxKakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93D8A2E8478B02552A2FC6BE /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		970A190CBCF522548B61F22E /* TuistBundle+MyDJFeatureDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+MyDJFeatureDemoApp.swift"; sourceTree = "<group>"; };
+		97F3932DEFDB8E62572B55B3 /* MyDJFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDJFeatureTest.swift; sourceTree = "<group>"; };
+		98CBDB7901E2EC694F0BEDFC /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C0944C0CF4E2C237D82536F /* MyDJFeatureTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyDJFeatureTesting-Info.plist"; sourceTree = "<group>"; };
+		A0D115714458C3713A789963 /* libMyDJFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyDJFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A126F67DBC47D33216640D9B /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4F9D3252F14EFDAA4C43B90 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7364965D68733630DF38816 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		A8005B92E44AC4021D74C365 /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8463A364436CEEBCCFE6D8D /* KakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0B1862632DEAF6A1FB26A6 /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2D00EA65498B8CECBA9317 /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE5955E89DA268AD0A5D783A /* MyDJFeatureTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyDJFeatureTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B33759D98511B5665D8179A1 /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6CD21477F42E9309FC8B37A /* MyDJFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyDJFeatureTests-Info.plist"; sourceTree = "<group>"; };
+		B941FE3C20C52387594AC50B /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
+		BED8005C94CB55BE82C6D5DE /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		C09DD1CF0FC6B9B2023256CD /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3481B436BB737E00E91864D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9A55F72A3EDB2361FEA4EF3 /* MyDJFeatureDemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyDJFeatureDemoApp-Info.plist"; sourceTree = "<group>"; };
+		CD529B2E5F0DCBAA1C53D52F /* libOnboardingDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF2BD6AB4471564418686552 /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D248AE107C892698336AB5B9 /* KakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF41E7A9C7105C01AC821E67 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E211E49FD2FFB44A1B9AB039 /* RxKakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E403CD9873449E09A63DAA66 /* libMyDJFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyDJFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA9ED7CD05796D321DE429D /* KakaoSDKTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE2CBF1927FDAB4D278356C /* libBaseShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F094CC460F100DA9A83F0AF2 /* MyDJFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDJFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4FFF4532FE4C4FAB7BED1C6 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F50A04641C6DB86CC4068369 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		F61D1F4F270B1FF8EB20851B /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0BDC6FB6154F4244DF103231 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E3D9C5F92E156C259D82EF3 /* CFNetwork.framework in Frameworks */,
+				6B64D76D000A09FE9E14F3A2 /* Alamofire.framework in Frameworks */,
+				8D4B36CDADADDA6BF39466B6 /* libAppFoundation.a in Frameworks */,
+				6BAB28123B462FDB8E72F20A /* libBaseDomain.a in Frameworks */,
+				7AB438DBEB2E62F3A0CCA781 /* libBaseShared.a in Frameworks */,
+				044B3600AB0135471A0D3B53 /* libCoreKit.a in Frameworks */,
+				86333082780722C4807F5B19 /* libDesignSystem.a in Frameworks */,
+				181D730825CB1B1C0F2454A1 /* Differentiator.framework in Frameworks */,
+				E976CBC169B787BC7F73393D /* libGlobalThirdPartyLibrary.a in Frameworks */,
+				9766C01277071876AF6E29E6 /* KakaoSDKAuth.framework in Frameworks */,
+				FD5857BB4362411DF86D03BE /* KakaoSDKCommon.framework in Frameworks */,
+				49041C1C47AD836DDBB50E5E /* KakaoSDKShare.framework in Frameworks */,
+				CDC95C7B84CE084D9CAF6697 /* KakaoSDKStory.framework in Frameworks */,
+				45CB19DB08963F2C24F9EEC2 /* KakaoSDKTalk.framework in Frameworks */,
+				A336738D4559BE2AE704A5B6 /* KakaoSDKTemplate.framework in Frameworks */,
+				A629B2C854C01C36A59F33DD /* KakaoSDKUser.framework in Frameworks */,
+				86E670A3AD7CF338807A11B8 /* Kingfisher.framework in Frameworks */,
+				24143A6ED12A6C77DC185A8D /* LogFlume.framework in Frameworks */,
+				8BA0B5800571BDC9233A277F /* libMyDJFeatureInterface.a in Frameworks */,
+				9089478604EA080F16970839 /* NeedleFoundation.framework in Frameworks */,
+				B815D51A9043BAACE26713C0 /* libOnboardingDomain.a in Frameworks */,
+				633159489F7B297BD408D959 /* libOnboardingDomainInterface.a in Frameworks */,
+				02F53A7EDB7022177070E5AD /* RIBs.framework in Frameworks */,
+				645A78819010E2F630C442E0 /* ReactorKit.framework in Frameworks */,
+				904F43456DE24685678FFFC9 /* ReactorKitRuntime.framework in Frameworks */,
+				51ED095AC9654FA08009BBCC /* libRecordDomain.a in Frameworks */,
+				43D56E868FEE6DE30F38FA88 /* libRecordDomainInterface.a in Frameworks */,
+				2129FE4581F8F50EFB21A595 /* RxAlamofire.framework in Frameworks */,
+				690FE5D815A31FF269ECB398 /* RxCocoa.framework in Frameworks */,
+				C93E12684FF0A807120B1BFF /* RxDataSources.framework in Frameworks */,
+				AA142FE0F0F82456C0CA29AD /* RxGesture.framework in Frameworks */,
+				5E9E9354DC675D179E45A0DA /* RxKakaoSDKAuth.framework in Frameworks */,
+				4DBD27418EB1CA3DC81864DB /* RxKakaoSDKCommon.framework in Frameworks */,
+				6F9FB1EAE4A9FFFB181F0F29 /* RxKakaoSDKShare.framework in Frameworks */,
+				6B1B89CF0A0A49B6C331611F /* RxKakaoSDKStory.framework in Frameworks */,
+				C687BC89F27571E6DC80E1A4 /* RxKakaoSDKTalk.framework in Frameworks */,
+				1661F4763294B7A0B1AA7351 /* RxKakaoSDKUser.framework in Frameworks */,
+				2207073BBA8E8242BCBC755D /* RxRelay.framework in Frameworks */,
+				55343BD38C883C9D83D85F2C /* RxSwift.framework in Frameworks */,
+				BAF173990A497E05D52C8C94 /* SkeletonView.framework in Frameworks */,
+				3BAA93F8A394CBEFF6FB77FD /* SnapKit.framework in Frameworks */,
+				9946F09FB4BC9ED752DAE4E7 /* WeakMapTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7803D62A30C19889C2B9F729 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1E5701CB9942377C4EE7043 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F17B39F6C7D3B5A69ADE4FCF /* MyDJFeatureTesting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4D62EEAF14C36DCE8103BE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCFC3AC66875CC31329FC2F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92551701FFCAF59C1FDE1706 /* CFNetwork.framework in Frameworks */,
+				179503B027451E24CABAB5D9 /* Alamofire.framework in Frameworks */,
+				56F6CABF5E6AC177C2317AD5 /* libAppFoundation.a in Frameworks */,
+				1C3A890611703258DDDF70EF /* libBaseDomain.a in Frameworks */,
+				8C91ADCF9B6AE8CD3469E5BA /* libBaseShared.a in Frameworks */,
+				DDEA042BD17086C8B79B566D /* libCoreKit.a in Frameworks */,
+				D16BBCACBA8AF6449D2D04AB /* libDesignSystem.a in Frameworks */,
+				0B01FA0D8F053FCF68A74653 /* Differentiator.framework in Frameworks */,
+				C828A1BB64AF1F12FA85FD76 /* libGlobalThirdPartyLibrary.a in Frameworks */,
+				7515186AD96A0F1B57B49B9A /* KakaoSDKAuth.framework in Frameworks */,
+				C3E55F200EBB27AB5844652A /* KakaoSDKCommon.framework in Frameworks */,
+				AAC2857B818FE73E2DC8CF4D /* KakaoSDKShare.framework in Frameworks */,
+				989359CCAC1CB2D134B9C0E3 /* KakaoSDKStory.framework in Frameworks */,
+				F9A4440B654424B49CCD842E /* KakaoSDKTalk.framework in Frameworks */,
+				97FB4F448B23661B81E08BD3 /* KakaoSDKTemplate.framework in Frameworks */,
+				8C33F90A6F3BF0986E3377C8 /* KakaoSDKUser.framework in Frameworks */,
+				CD5301CA96438E0C754B7355 /* Kingfisher.framework in Frameworks */,
+				D2799B15A2A80B7A02221415 /* LogFlume.framework in Frameworks */,
+				514F9C4CA36D0DBD0833DBE1 /* libMyDJFeature.a in Frameworks */,
+				CC1DFC3081F751E7302F07C6 /* libMyDJFeatureInterface.a in Frameworks */,
+				29F45C51C4CF828626BEC38B /* MyDJFeatureTesting.framework in Frameworks */,
+				46EB3D16B26F5E5673165AA1 /* NeedleFoundation.framework in Frameworks */,
+				1F64BD836549B425CBD32EE9 /* libOnboardingDomain.a in Frameworks */,
+				58886B90DD84F7CC3A00A112 /* libOnboardingDomainInterface.a in Frameworks */,
+				86AB0EAE0D9BF2A59A2FEE1D /* RIBs.framework in Frameworks */,
+				883A6FC1C07C26692D066E7A /* ReactorKit.framework in Frameworks */,
+				7069E98C1BAB978C1B90FFF3 /* ReactorKitRuntime.framework in Frameworks */,
+				252A5A17C0FDD69547C55362 /* libRecordDomain.a in Frameworks */,
+				7D58414B93BFE362373E411A /* libRecordDomainInterface.a in Frameworks */,
+				838DE0C7E0E2A90D6B7E75BD /* RxAlamofire.framework in Frameworks */,
+				40E41A9A177FF15E67D9E435 /* RxCocoa.framework in Frameworks */,
+				13E393FCEF2AC5B5F1ABB069 /* RxDataSources.framework in Frameworks */,
+				DF751A768845BF1BC526D7A7 /* RxGesture.framework in Frameworks */,
+				99A820EBEE3CA829CFCB15A5 /* RxKakaoSDKAuth.framework in Frameworks */,
+				D3B1DC1586F38993DE869F7D /* RxKakaoSDKCommon.framework in Frameworks */,
+				5FAAF481C4E44A615C66E7EE /* RxKakaoSDKShare.framework in Frameworks */,
+				32E371DF38A0B98BC9089D93 /* RxKakaoSDKStory.framework in Frameworks */,
+				3D5B2E4482F783B6C77D7ED9 /* RxKakaoSDKTalk.framework in Frameworks */,
+				0A96380DD734F622E5D58726 /* RxKakaoSDKUser.framework in Frameworks */,
+				208C6A0A3BFF2F991FADB854 /* RxRelay.framework in Frameworks */,
+				5795EF577A25FB612980A41A /* RxSwift.framework in Frameworks */,
+				0283C38AECFDDED7A9AFA188 /* SkeletonView.framework in Frameworks */,
+				785127099535A59B6412DAC9 /* SnapKit.framework in Frameworks */,
+				94098520F9F437645FC9CA91 /* WeakMapTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7DD65A8666528C949D71B21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BBE453848B8E7CF3B017B82 /* MyDJFeatureTesting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07ACB103A72978CA7BE5E629 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				970A190CBCF522548B61F22E /* TuistBundle+MyDJFeatureDemoApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1FF9420E301E63071FABD537 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				31B8FEB76D7224F1EE9FDDA3 /* Shared.xcconfig */,
+			);
+			name = XCConfig;
+			path = ../../../XCConfig;
+			sourceTree = "<group>";
+		};
+		3D98165A0CD234E629294BF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93D8A2E8478B02552A2FC6BE /* Alamofire.framework */,
+				006022DB2952B5E4E30E1129 /* DesignSystem_DesignSystem.bundle */,
+				B33759D98511B5665D8179A1 /* Differentiator.framework */,
+				A4F9D3252F14EFDAA4C43B90 /* KakaoSDKAuth.framework */,
+				A8005B92E44AC4021D74C365 /* KakaoSDKCommon.framework */,
+				41C77E8DCDBAD06981A1F9FB /* KakaoSDKShare.framework */,
+				A8463A364436CEEBCCFE6D8D /* KakaoSDKStory.framework */,
+				D248AE107C892698336AB5B9 /* KakaoSDKTalk.framework */,
+				EBA9ED7CD05796D321DE429D /* KakaoSDKTemplate.framework */,
+				5FCB52AE8CA5869B7D733045 /* KakaoSDKUser.framework */,
+				F61D1F4F270B1FF8EB20851B /* Kingfisher.framework */,
+				F4FFF4532FE4C4FAB7BED1C6 /* libAppFoundation.a */,
+				7E0CC1FA24E72CB5434EF934 /* libBaseDomain.a */,
+				EEE2CBF1927FDAB4D278356C /* libBaseShared.a */,
+				AA0B1862632DEAF6A1FB26A6 /* libCoreKit.a */,
+				A126F67DBC47D33216640D9B /* libDesignSystem.a */,
+				1A3EC2A601CE8F6D2614270E /* libGlobalThirdPartyLibrary.a */,
+				E403CD9873449E09A63DAA66 /* libMyDJFeature.a */,
+				A0D115714458C3713A789963 /* libMyDJFeatureInterface.a */,
+				2F9D190F82D0640614BCD9C0 /* libOnboardingDomain.a */,
+				CD529B2E5F0DCBAA1C53D52F /* libOnboardingDomainInterface.a */,
+				35692302D9B06CA24446D959 /* libRecordDomain.a */,
+				1D8CBC3235081836BEA380E7 /* libRecordDomainInterface.a */,
+				CF2BD6AB4471564418686552 /* LogFlume.framework */,
+				2579E00AA5E2A7B8C271363E /* MyDJFeatureDemoApp.app */,
+				AE5955E89DA268AD0A5D783A /* MyDJFeatureTesting.framework */,
+				F094CC460F100DA9A83F0AF2 /* MyDJFeatureTests.xctest */,
+				6D28C32B2ADBE607C9FDE642 /* MyDJFeatureUITests.xctest */,
+				18FF5276DD3B462FFF39628D /* NeedleFoundation.framework */,
+				50EF9C971FADBDE5BB3762F9 /* ReactorKit.framework */,
+				2A8B4364246F90DEBEC3DA7B /* ReactorKitRuntime.framework */,
+				AE2D00EA65498B8CECBA9317 /* RIBs.framework */,
+				2AE53BF54AAB76F999F065C9 /* RxAlamofire.framework */,
+				71F98F4362563C74B0588CC1 /* RxCocoa.framework */,
+				C09DD1CF0FC6B9B2023256CD /* RxCocoaRuntime.framework */,
+				2EB18646CEF342E6FB02A778 /* RxDataSources.framework */,
+				1035CD0AE9A5850984C78879 /* RxGesture.framework */,
+				E211E49FD2FFB44A1B9AB039 /* RxKakaoSDKAuth.framework */,
+				86FB03F8916DE77A9BC0EAF0 /* RxKakaoSDKCommon.framework */,
+				01A7E943ECAB7435E9164EAF /* RxKakaoSDKShare.framework */,
+				6D5E7010FEF778C96A941B64 /* RxKakaoSDKStory.framework */,
+				3FD9A1A5CEE4EE82A7EBB6E6 /* RxKakaoSDKTalk.framework */,
+				032C147380349D9A5251EA26 /* RxKakaoSDKUser.framework */,
+				DF41E7A9C7105C01AC821E67 /* RxRelay.framework */,
+				54F7812F19108B1FA8B3CF61 /* RxSwift.framework */,
+				61673D5FFA77BCD8D5B6B1B1 /* SkeletonView.framework */,
+				77C711FC250A199ABAD653F8 /* SnapKit.framework */,
+				98CBDB7901E2EC694F0BEDFC /* WeakMapTable.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		431F3B33D575163942A688A9 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				70A5B99AFF1646BE7351B25D /* Demo */,
+				4EE9418CF4ADA65D4180E667 /* Derived */,
+				6D69809ED072C94B3A50A18E /* Interface */,
+				A83E57F13E7410DE39E55E20 /* Sources */,
+				74EE41675F91F31740E90525 /* Testing */,
+				E5E02FC093BBC5CD6CB0E5B4 /* Tests */,
+				1FF9420E301E63071FABD537 /* XCConfig */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		4B8B90A5D21F997682EA6506 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3481B436BB737E00E91864D /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4EE9418CF4ADA65D4180E667 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				6BF76D6AB633DFD1407C9076 /* InfoPlists */,
+				07ACB103A72978CA7BE5E629 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		5BBE7A1061EBB3FDEC62FC63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F50A04641C6DB86CC4068369 /* CFNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BF76D6AB633DFD1407C9076 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				C9A55F72A3EDB2361FEA4EF3 /* MyDJFeatureDemoApp-Info.plist */,
+				9C0944C0CF4E2C237D82536F /* MyDJFeatureTesting-Info.plist */,
+				B6CD21477F42E9309FC8B37A /* MyDJFeatureTests-Info.plist */,
+				6D0067A2148CF8A2C0B7C969 /* MyDJFeatureUITests-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		6D69809ED072C94B3A50A18E /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				A7364965D68733630DF38816 /* Interface.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		70A5B99AFF1646BE7351B25D /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				4B8B90A5D21F997682EA6506 /* Resources */,
+				72BFF743523F65765E40E33A /* Sources */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		72BFF743523F65765E40E33A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7E2EE1BAB96F3D48E38F8296 /* AppDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		74EE41675F91F31740E90525 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				B941FE3C20C52387594AC50B /* Testing.swift */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		A83E57F13E7410DE39E55E20 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BED8005C94CB55BE82C6D5DE /* Source.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C68CDCC526BAC11D7F75B9A5 = {
+			isa = PBXGroup;
+			children = (
+				431F3B33D575163942A688A9 /* Project */,
+				5BBE7A1061EBB3FDEC62FC63 /* Frameworks */,
+				3D98165A0CD234E629294BF4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E5E02FC093BBC5CD6CB0E5B4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				97F3932DEFDB8E62572B55B3 /* MyDJFeatureTest.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A805D533ED66EB2465E0A0C /* MyDJFeatureTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86B6412EE122C2A03FC5FFE9 /* Build configuration list for PBXNativeTarget "MyDJFeatureTesting" */;
+			buildPhases = (
+				43A756D66E682FF201EE087D /* Sources */,
+				5463F501F87324032A568651 /* Resources */,
+				41E541F884DC8C93D4C9FBFD /* Embed Frameworks */,
+				0BDC6FB6154F4244DF103231 /* Frameworks */,
+				14CEE8B6D7EF1BC18BE707D1 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9492E4E11498C60226B1C94B /* PBXTargetDependency */,
+			);
+			name = MyDJFeatureTesting;
+			productName = MyDJFeatureTesting;
+			productReference = AE5955E89DA268AD0A5D783A /* MyDJFeatureTesting.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3FBD4F096E0747C625EEFA5B /* MyDJFeatureInterface */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B77D84231AF4AE849E115DFB /* Build configuration list for PBXNativeTarget "MyDJFeatureInterface" */;
+			buildPhases = (
+				358D33FDFF35AF6EC70F49E5 /* Sources */,
+				F706873D67120E37F2E582EA /* Resources */,
+				2645BE4A1C8E165315D75CA6 /* Embed Frameworks */,
+				7803D62A30C19889C2B9F729 /* Frameworks */,
+				333CA68105DB42C83C6243A0 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyDJFeatureInterface;
+			productName = MyDJFeatureInterface;
+			productReference = A0D115714458C3713A789963 /* libMyDJFeatureInterface.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6A6E140E7FEC7F1BA6740E3D /* MyDJFeatureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9CA71A87C10CD4ED10F8166 /* Build configuration list for PBXNativeTarget "MyDJFeatureUITests" */;
+			buildPhases = (
+				81299646FDC6B79177CE82CE /* Sources */,
+				DC99ED5943BAB0F0DE84FB3E /* Resources */,
+				C41778A83EB46E3A0082EB6C /* Embed Frameworks */,
+				E7DD65A8666528C949D71B21 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0C55B05F91C1118309A447D /* PBXTargetDependency */,
+				134B6743BF3C88172767168E /* PBXTargetDependency */,
+			);
+			name = MyDJFeatureUITests;
+			productName = MyDJFeatureUITests;
+			productReference = 6D28C32B2ADBE607C9FDE642 /* MyDJFeatureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		AD44F46E40C5B409D1846629 /* MyDJFeature */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C86164498357FA41FB46B0D1 /* Build configuration list for PBXNativeTarget "MyDJFeature" */;
+			buildPhases = (
+				51A0E026BAD22DBE53E51E01 /* Sources */,
+				4B0006116434463948662155 /* Resources */,
+				C454864B14E27531E958EFF9 /* Embed Frameworks */,
+				A4D62EEAF14C36DCE8103BE1 /* Frameworks */,
+				DE5D3D747302FCBB686C1C50 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CB9669D30182A10323F89F3 /* PBXTargetDependency */,
+			);
+			name = MyDJFeature;
+			productName = MyDJFeature;
+			productReference = E403CD9873449E09A63DAA66 /* libMyDJFeature.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DF38A44F0F2014D119FBE235 /* MyDJFeatureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD971B81ED6ED685F946F49C /* Build configuration list for PBXNativeTarget "MyDJFeatureTests" */;
+			buildPhases = (
+				DFDE67C0AE73DE8D875901A5 /* Sources */,
+				C3C56D22ECE57E62A561E5DA /* Resources */,
+				1F04611384F041153B5AA5F9 /* Embed Frameworks */,
+				A1E5701CB9942377C4EE7043 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBFB86C8235B77A78EE1DDDE /* PBXTargetDependency */,
+				0A718AEF11BF92BBC1DE4574 /* PBXTargetDependency */,
+			);
+			name = MyDJFeatureTests;
+			productName = MyDJFeatureTests;
+			productReference = F094CC460F100DA9A83F0AF2 /* MyDJFeatureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F11292E9A41C349DEA064C7C /* MyDJFeatureDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32AB10BBE770A29FE6D495D0 /* Build configuration list for PBXNativeTarget "MyDJFeatureDemoApp" */;
+			buildPhases = (
+				86DEA7A8685D860D5B2C406C /* Needle */,
+				2CE4AC6A9B4164EF94C66716 /* Sources */,
+				0F1FD803474F920333BB9B35 /* Resources */,
+				F911417ECA50621B496F8062 /* Embed Frameworks */,
+				DCFC3AC66875CC31329FC2F0 /* Frameworks */,
+				795F0B863CA6BB45FF68E634 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FCD10EBA3B70BB002F2764F /* PBXTargetDependency */,
+				8A0844E982650646FA255852 /* PBXTargetDependency */,
+			);
+			name = MyDJFeatureDemoApp;
+			productName = MyDJFeatureDemoApp;
+			productReference = 2579E00AA5E2A7B8C271363E /* MyDJFeatureDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F245130A6D13AA4A24E487DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Omos;
+				TargetAttributes = {
+					6A6E140E7FEC7F1BA6740E3D = {
+						TestTargetID = F11292E9A41C349DEA064C7C;
+					};
+					DF38A44F0F2014D119FBE235 = {
+						TestTargetID = F11292E9A41C349DEA064C7C;
+					};
+				};
+			};
+			buildConfigurationList = E2CA6A170998890B8B28C9E2 /* Build configuration list for PBXProject "MyDJFeature" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = C68CDCC526BAC11D7F75B9A5;
+			productRefGroup = 3D98165A0CD234E629294BF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FBD4F096E0747C625EEFA5B /* MyDJFeatureInterface */,
+				AD44F46E40C5B409D1846629 /* MyDJFeature */,
+				2A805D533ED66EB2465E0A0C /* MyDJFeatureTesting */,
+				DF38A44F0F2014D119FBE235 /* MyDJFeatureTests */,
+				6A6E140E7FEC7F1BA6740E3D /* MyDJFeatureUITests */,
+				F11292E9A41C349DEA064C7C /* MyDJFeatureDemoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F1FD803474F920333BB9B35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1991AD46B9759F64932E893D /* LaunchScreen.storyboard in Resources */,
+				CFEA71C3A112ECE60CF35199 /* DesignSystem_DesignSystem.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B0006116434463948662155 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5463F501F87324032A568651 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31EF96606BCF46B28A18F6A6 /* DesignSystem_DesignSystem.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3C56D22ECE57E62A561E5DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC99ED5943BAB0F0DE84FB3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F706873D67120E37F2E582EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		86DEA7A8685D860D5B2C406C /* Needle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Needle;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CE4AC6A9B4164EF94C66716 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				791AE02421E3E823A7C12A8D /* AppDelegate.swift in Sources */,
+				9657C3A637FA6C63B0EF7812 /* TuistBundle+MyDJFeatureDemoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		358D33FDFF35AF6EC70F49E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0997FAC5D08F74FE684ADBD /* Interface.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43A756D66E682FF201EE087D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB8BC4864C61188CF49FA983 /* Testing.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A0E026BAD22DBE53E51E01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF5D949544EA5EF75F0D943 /* Source.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81299646FDC6B79177CE82CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFDE67C0AE73DE8D875901A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEC3C70C3CB83A6EB2B26D12 /* MyDJFeatureTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A718AEF11BF92BBC1DE4574 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyDJFeatureTesting;
+			target = 2A805D533ED66EB2465E0A0C /* MyDJFeatureTesting */;
+			targetProxy = 4275C0AFDDA685CD44FDDB42 /* PBXContainerItemProxy */;
+		};
+		134B6743BF3C88172767168E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyDJFeatureTesting;
+			target = 2A805D533ED66EB2465E0A0C /* MyDJFeatureTesting */;
+			targetProxy = 80C75042850851A9A3C97683 /* PBXContainerItemProxy */;
+		};
+		2FCD10EBA3B70BB002F2764F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyDJFeature;
+			target = AD44F46E40C5B409D1846629 /* MyDJFeature */;
+			targetProxy = 099E7DEDDC1EB48D9EE14C9B /* PBXContainerItemProxy */;
+		};
+		5CB9669D30182A10323F89F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyDJFeatureInterface;
+			target = 3FBD4F096E0747C625EEFA5B /* MyDJFeatureInterface */;
+			targetProxy = 25345BA6B14F410FA0C583C9 /* PBXContainerItemProxy */;
+		};
+		8A0844E982650646FA255852 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyDJFeatureTesting;
+			target = 2A805D533ED66EB2465E0A0C /* MyDJFeatureTesting */;
+			targetProxy = 842881E393C7BE3B77AB70D0 /* PBXContainerItemProxy */;
+		};
+		9492E4E11498C60226B1C94B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyDJFeatureInterface;
+			target = 3FBD4F096E0747C625EEFA5B /* MyDJFeatureInterface */;
+			targetProxy = 004C65FDFB3503E238B7E7CF /* PBXContainerItemProxy */;
+		};
+		A0C55B05F91C1118309A447D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyDJFeatureDemoApp;
+			target = F11292E9A41C349DEA064C7C /* MyDJFeatureDemoApp */;
+			targetProxy = 6803097055F30C10632835A5 /* PBXContainerItemProxy */;
+		};
+		FBFB86C8235B77A78EE1DDDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyDJFeatureDemoApp;
+			target = F11292E9A41C349DEA064C7C /* MyDJFeatureDemoApp */;
+			targetProxy = B91BC0C3106D36E30C72A29F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02E6EC159939E6CAE8C5F3A9 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyDJFeatureUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureUITests;
+				PRODUCT_NAME = MyDJFeatureUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyDJFeatureDemoApp;
+			};
+			name = DEV;
+		};
+		0CB970ECD4E37A6F921960D3 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyDJFeatureTesting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureTesting;
+				PRODUCT_NAME = MyDJFeatureTesting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = STAGE;
+		};
+		179A8B088F1B07D9FC7375EE /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyDJFeatureTesting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureTesting;
+				PRODUCT_NAME = MyDJFeatureTesting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = PROD;
+		};
+		25DFCB6D4F03D76348ADA220 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B8FEB76D7224F1EE9FDDA3 /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2L2K3UD2LK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = DEV;
+		};
+		3479BF95A4EC6F2B75175440 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyDJFeatureTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureTests;
+				PRODUCT_NAME = MyDJFeatureTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDJFeatureDemoApp.app/MyDJFeatureDemoApp";
+				TEST_TARGET_NAME = MyDJFeatureDemoApp;
+			};
+			name = PROD;
+		};
+		368395B1591275F319AC5229 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B8FEB76D7224F1EE9FDDA3 /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2L2K3UD2LK;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = PROD;
+		};
+		4DB1417D8F6AB9A2672D4990 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyDJFeatureUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureUITests;
+				PRODUCT_NAME = MyDJFeatureUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyDJFeatureDemoApp;
+			};
+			name = STAGE;
+		};
+		94E2B382ED5C97498ADE3481 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeature;
+				PRODUCT_NAME = MyDJFeature;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		AD3D170D73BB95989BD2E935 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B8FEB76D7224F1EE9FDDA3 /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2L2K3UD2LK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = STAGE;
+		};
+		B35FEADDDDA19D32B94E489D /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/MyDJFeatureDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureDemoApp;
+				PRODUCT_NAME = MyDJFeatureDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = STAGE;
+		};
+		B4234DB2E00CF26B440806CD /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/MyDJFeatureDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureDemoApp;
+				PRODUCT_NAME = MyDJFeatureDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		B7D9F28576A5A8F92375E97C /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyDJFeatureTesting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureTesting;
+				PRODUCT_NAME = MyDJFeatureTesting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = DEV;
+		};
+		C077C85EAF4B206EA83CC4DC /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/MyDJFeatureDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureDemoApp;
+				PRODUCT_NAME = MyDJFeatureDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+		CD3F05547E2E2DB63C517B27 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeature;
+				PRODUCT_NAME = MyDJFeature;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = STAGE;
+		};
+		CD80242DBE9397E91EB7E052 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyDJFeatureUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureUITests;
+				PRODUCT_NAME = MyDJFeatureUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyDJFeatureDemoApp;
+			};
+			name = PROD;
+		};
+		E4829938238BD630969E461E /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyDJFeatureTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureTests;
+				PRODUCT_NAME = MyDJFeatureTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDJFeatureDemoApp.app/MyDJFeatureDemoApp";
+				TEST_TARGET_NAME = MyDJFeatureDemoApp;
+			};
+			name = STAGE;
+		};
+		E6BCC08500BB08A6E6241F35 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureInterface;
+				PRODUCT_NAME = MyDJFeatureInterface;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = STAGE;
+		};
+		EF4A37C0083BC9DA37F288A6 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyDJFeatureTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureTests;
+				PRODUCT_NAME = MyDJFeatureTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDJFeatureDemoApp.app/MyDJFeatureDemoApp";
+				TEST_TARGET_NAME = MyDJFeatureDemoApp;
+			};
+			name = DEV;
+		};
+		F39C04D7E7717B83098F2EAE /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureInterface;
+				PRODUCT_NAME = MyDJFeatureInterface;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+		F4669958DF29C48BC82B2B33 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeatureInterface;
+				PRODUCT_NAME = MyDJFeatureInterface;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		FC4F43337103267EF8DA03F2 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyDJFeature;
+				PRODUCT_NAME = MyDJFeature;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32AB10BBE770A29FE6D495D0 /* Build configuration list for PBXNativeTarget "MyDJFeatureDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4234DB2E00CF26B440806CD /* DEV */,
+				C077C85EAF4B206EA83CC4DC /* PROD */,
+				B35FEADDDDA19D32B94E489D /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		86B6412EE122C2A03FC5FFE9 /* Build configuration list for PBXNativeTarget "MyDJFeatureTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7D9F28576A5A8F92375E97C /* DEV */,
+				179A8B088F1B07D9FC7375EE /* PROD */,
+				0CB970ECD4E37A6F921960D3 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		B77D84231AF4AE849E115DFB /* Build configuration list for PBXNativeTarget "MyDJFeatureInterface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4669958DF29C48BC82B2B33 /* DEV */,
+				F39C04D7E7717B83098F2EAE /* PROD */,
+				E6BCC08500BB08A6E6241F35 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		BD971B81ED6ED685F946F49C /* Build configuration list for PBXNativeTarget "MyDJFeatureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4A37C0083BC9DA37F288A6 /* DEV */,
+				3479BF95A4EC6F2B75175440 /* PROD */,
+				E4829938238BD630969E461E /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		C86164498357FA41FB46B0D1 /* Build configuration list for PBXNativeTarget "MyDJFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E2B382ED5C97498ADE3481 /* DEV */,
+				FC4F43337103267EF8DA03F2 /* PROD */,
+				CD3F05547E2E2DB63C517B27 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		E2CA6A170998890B8B28C9E2 /* Build configuration list for PBXProject "MyDJFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25DFCB6D4F03D76348ADA220 /* DEV */,
+				368395B1591275F319AC5229 /* PROD */,
+				AD3D170D73BB95989BD2E935 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		F9CA71A87C10CD4ED10F8166 /* Build configuration list for PBXNativeTarget "MyDJFeatureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02E6EC159939E6CAE8C5F3A9 /* DEV */,
+				CD80242DBE9397E91EB7E052 /* PROD */,
+				4DB1417D8F6AB9A2672D4990 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F245130A6D13AA4A24E487DF /* Project object */;
+}

@@ -193,31 +193,34 @@ extension OnboardingViewController {
             .rx
             .tap
             .preventDuplication()
+            .debug("kakao")
             .map { .didTapKakaoLoggedInButton }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
     
     private func bindAppleLoggedInButtonAction() {
-        appleButton
+      let credential = appleButton
             .rx
             .loginOnTap(scope: [.email])
-            .compactMap{ $0.credential as? ASAuthorizationAppleIDCredential }
+            .compactMap { $0.credential as? ASAuthorizationAppleIDCredential }
+        
+        // 1. 이메일이 있으면 회원가입
+        credential
+            .compactMap(\.email)
+            .debug("check")
+            .map { .didTapAppleLoggedInButton(email: $0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+        
+        // 2. 이메일 없으면 로그인 -> identToken 에 이메일 정보
+        credential
+            .compactMap(\.identityToken)
+            .debug("check")
+            .compactMap { String(data: $0, encoding: .utf8) }
             .withUnretained(self)
-            .map { owner, auth in
-                // 1. 이메일이 있으면 회원가입
-                // 2. 이메일 없으면 로그인 -> identtoken 에 이메일 정보
-                // 3. 혹시라도 아에 없다 -> nil -> compactMap으로 필터
-                if let email = auth.email {
-                    return .didTapAppleLoggedInButton(email: email, type: .signUp)
-                } else {
-                    if let tokenString = String(data: auth.identityToken ?? Data(), encoding: .utf8) {
-                        let email = owner.decode(jwtToken: tokenString)["email"] as? String ?? ""
-                        return .didTapAppleLoggedInButton(email: email, type: .login)
-                    }
-                }
-                return .didTapEmailSingUpButton
-            }
+            .compactMap { owner, token in owner.decode(jwtToken: token)["email"] as? String ?? "" }
+            .map { .didTapAppleLoggedInButton(email: $0) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }

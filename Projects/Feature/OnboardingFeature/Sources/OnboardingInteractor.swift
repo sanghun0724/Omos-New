@@ -130,6 +130,9 @@ extension OnboardingInteractor {
                     return owner.attachLoggedInRIBTransform()
                 case .attachAgreementRIB:
                     return owner.attachAgreemntRIBTransform()
+                case .attachTodayRIB:
+                    print("login suceess")
+                    return .just(mutation)
                 default:
                     return .just(mutation)
                 }

@@ -7,12 +7,12 @@ let project = Project.makeModule(
     product: .staticLibrary,
     targets: [.testing, .interface, .unitTest, .uiTest, .demo],
     internalDependencies: [
-        .feature(target: .TodayFeature, type: .interface)
+        .feature(target: .RootTabBarFeature, type: .interface)
     ],
     interfaceDependencies: [
         .domain(target: .BaseDomain)
     ],
     demoDependencies: [
-        .feature(target: .TodayFeature)
+        .feature(target: .RootTabBarFeature)
     ]
 )

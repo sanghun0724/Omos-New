@@ -1,0 +1,1780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		020C50ADF0459CD4A8C9C001 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE67C1EDE0FDBC0C9F2B4C1 /* RxRelay.framework */; platformFilter = ios; };
+		02962A43368F31D4B8DDFE03 /* libMyRecordFeature.a in Dependencies */ = {isa = PBXBuildFile; fileRef = AE1D26C0A7E8A7685B00AA00 /* libMyRecordFeature.a */; platformFilter = ios; };
+		05979920F2B5BD920558C22D /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BB5C024A3A45704BB5631A /* KakaoSDKTalk.framework */; platformFilter = ios; };
+		07694331F8534EFD037A4025 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80519D7E32D5B8BC6F942B90 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0AE995EBF9A0052D6431E3B4 /* RootTabBarFeatureTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9B41EC408F2DE6F173B51E7 /* RootTabBarFeatureTesting.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C864C36CEA14445158E580F /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 024BD63007A9A42665D43DA6 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
+		0DB2E7356123C215D5464A00 /* libMyPageFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A28CE38A7871302AF9A32E /* libMyPageFeature.a */; platformFilter = ios; };
+		0E6F1843962968B40F04232A /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B4C07A6DC90D9B8107CC38 /* libOnboardingDomain.a */; platformFilter = ios; };
+		0EA09E02E369B11F3D6AD89A /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78BF8ED7C9DC24615A48C447 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		11A8E7518CF4F93D3E2A0413 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE67C1EDE0FDBC0C9F2B4C1 /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		12C542519EB8813D89852955 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC14D716A435BB775A5BD320 /* Kingfisher.framework */; platformFilter = ios; };
+		15734DA7DFBEBDFA17782EB8 /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDC5B09D1AB20514DE16F99 /* libRecordDomain.a */; platformFilter = ios; };
+		15B1552A88819C3460AF5E4D /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78BF8ED7C9DC24615A48C447 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		177E318A73DBDA515E9805BF /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CA1BA3B4767316E4C9C61E /* RxDataSources.framework */; platformFilter = ios; };
+		1C0AFC603A2B7C09C8F53FC8 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB7EA89CF990228C3DA1520 /* libAppFoundation.a */; platformFilter = ios; };
+		1D14BE678579F71BBB439DE7 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E957CE7B1E61F3143CCB409A /* ReactorKit.framework */; platformFilter = ios; };
+		24958063B3223816CF74E76D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E39B03BD6FC562ACCFCCFE /* CFNetwork.framework */; };
+		276C164F10C2E4E365DE0CEA /* libBaseDomain.a in Dependencies */ = {isa = PBXBuildFile; fileRef = A6606628C78AB6E22A371504 /* libBaseDomain.a */; platformFilter = ios; };
+		278FE048AB2D82F173A0CEE1 /* TuistBundle+RootTabBarFeatureDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B00EFBE37BAD21BD632A7 /* TuistBundle+RootTabBarFeatureDemoApp.swift */; };
+		27BE4F72F650F45926A49DE2 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C98D0FC7781D4E11DE6B281 /* NeedleFoundation.framework */; platformFilter = ios; };
+		290BE3B70DF3EF3336BE12C6 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F57025215A84EBB912448303 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D693136431E5E2F0B2FF15A /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D273128F4EAD39262ED0CBAE /* RxGesture.framework */; platformFilter = ios; };
+		2D8AF76E40B8DE147B177CB2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B7E7ADE6836BA06B91CFA3 /* SnapKit.framework */; platformFilter = ios; };
+		2DD06F6213601E4C23133A3E /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6606628C78AB6E22A371504 /* libBaseDomain.a */; platformFilter = ios; };
+		311C31682A41B4EA0CBC6493 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F604752262AC1DA9B389D27 /* libBaseShared.a */; platformFilter = ios; };
+		322F8A70575E4224C8BBF8E0 /* RootTabBarFeatureTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9B41EC408F2DE6F173B51E7 /* RootTabBarFeatureTesting.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33E3C099A236B2CF54E8BBFD /* RxKakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A140B37FFA96F0501FFC03 /* RxKakaoSDKAuth.framework */; platformFilter = ios; };
+		3597FA25C6D71CB9E744BB14 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC14D716A435BB775A5BD320 /* Kingfisher.framework */; platformFilter = ios; };
+		3D8C19EA81B44C08057AB189 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E957CE7B1E61F3143CCB409A /* ReactorKit.framework */; platformFilter = ios; };
+		45D05363EAF960E587CC6AEB /* RxKakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A140B37FFA96F0501FFC03 /* RxKakaoSDKAuth.framework */; platformFilter = ios; };
+		45E2F5B20D02EC1507E31356 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E39B03BD6FC562ACCFCCFE /* CFNetwork.framework */; };
+		4753EC4D3E1B3D5F3C28B9D7 /* libAllRecordFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5DFD30518D74D914AE9F08 /* libAllRecordFeatureInterface.a */; platformFilter = ios; };
+		48F58623D8CFE09577587C05 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF34C33BB8691C771C8E4EC9 /* SkeletonView.framework */; platformFilter = ios; };
+		4BE0B75CA554EF177930BF20 /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A135B28A077D14918209D636 /* libCoreKit.a */; platformFilter = ios; };
+		4D6D673FE7AC995C417E12FE /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E77A0B3318B6022FDDDB08 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		4F2512A4DE342A06C3D33A5D /* RootTabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0E0B1B643FEC5BD00E9E95 /* RootTabBarBuilder.swift */; };
+		516F6588C527D41E770F76FB /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 024BD63007A9A42665D43DA6 /* DesignSystem_DesignSystem.bundle */; };
+		54F30CB39701E32BAA1FBCE2 /* RxKakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA4AD1513B3E49E3D888E4F /* RxKakaoSDKShare.framework */; platformFilter = ios; };
+		55D41ED9BC6D3304FF5FE3DC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C548E90D0189681549A673FD /* Alamofire.framework */; platformFilter = ios; };
+		5C7FEB70FE303412474AE5A1 /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303965F2CD5392160C0E03A1 /* WeakMapTable.framework */; platformFilter = ios; };
+		5D5B19DB2AA39C1214FE73EB /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DA8615E7EA5024EFA1D8F0 /* KakaoSDKUser.framework */; platformFilter = ios; };
+		5D5DBDCDF43EDB8D952DB2F3 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE10210CE1C8F828AD22DFD /* RIBs.framework */; platformFilter = ios; };
+		5DDD1ABD228ECEF3C2BC2E5A /* RxKakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA4AD1513B3E49E3D888E4F /* RxKakaoSDKShare.framework */; platformFilter = ios; };
+		63092B36DD6ED4A43964E8B0 /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C426959EAAF9ED758BD9E7 /* KakaoSDKStory.framework */; platformFilter = ios; };
+		67C2765A862E6234F4789039 /* libTodayFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFFE0772A50DA358AD33A32 /* libTodayFeature.a */; platformFilter = ios; };
+		69DF141E711FC4BCCBCE8A3D /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E77A0B3318B6022FDDDB08 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		6A7979E3C479A0639FDEC75A /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80519D7E32D5B8BC6F942B90 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C57DD3B88DD1308F9EB017E /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7737EC79AE19A7367ED5953 /* ReactorKitRuntime.framework */; platformFilter = ios; };
+		6EF98E74ADD9804595690E6D /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C3068E829E982CD3D252DD /* KakaoSDKShare.framework */; platformFilter = ios; };
+		724C8097AF7EC9CF92F71C5F /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 024BD63007A9A42665D43DA6 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
+		72A2EFD3EDCE3C607C7EA963 /* libRootTabBarFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2CF47526B803EB2D703E8FD /* libRootTabBarFeatureInterface.a */; platformFilter = ios; };
+		73DE13502CF87713BABE4466 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B88CBCCEBBB05D11C1A724 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
+		74A68B9893648250E8D32923 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE10210CE1C8F828AD22DFD /* RIBs.framework */; platformFilter = ios; };
+		7562BF03F9EA829AD10C4BD3 /* libRootTabBarFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A8F733CDE9CC87408502F7 /* libRootTabBarFeature.a */; platformFilter = ios; };
+		765576DF07717274FF22EFE5 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB7EA89CF990228C3DA1520 /* libAppFoundation.a */; platformFilter = ios; };
+		79E306B0B6F7A633CB2F3C22 /* libAllRecordFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09107EA4C046A49F1A9DABB5 /* libAllRecordFeature.a */; platformFilter = ios; };
+		7CE2B64591FC1B46F6EE826B /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303965F2CD5392160C0E03A1 /* WeakMapTable.framework */; platformFilter = ios; };
+		7E569DCA7FA1148AAAB6B4E1 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF34C33BB8691C771C8E4EC9 /* SkeletonView.framework */; platformFilter = ios; };
+		7F3272DC96E7106FB75F5A9F /* libMyPageFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB678CCD935ABDC62D7A941 /* libMyPageFeatureInterface.a */; platformFilter = ios; };
+		81EC5222EFCF392AB9E7438A /* libRootTabBarFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2CF47526B803EB2D703E8FD /* libRootTabBarFeatureInterface.a */; platformFilter = ios; };
+		824D51ECAC6B8EEFEE246294 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2347D359EE34B85241E3197 /* KakaoSDKAuth.framework */; platformFilter = ios; };
+		8269AB149FAA78F730FD4283 /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EECD7F5030308999E8E36A /* RxAlamofire.framework */; platformFilter = ios; };
+		83358A2A5946B85BCDE09FE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D26F194D70CE2E6361208A /* LaunchScreen.storyboard */; };
+		848EC9018CC91873AF506F8E /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B4C07A6DC90D9B8107CC38 /* libOnboardingDomain.a */; platformFilter = ios; };
+		84C4DF1EC9CC33C4DD213F16 /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B9B25C6090144BD955565F /* KakaoSDKTemplate.framework */; platformFilter = ios; };
+		8699C5981F9A8BA919DE8D3E /* RootTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDCFB92832691FB80D111BC /* RootTabBarRouter.swift */; };
+		8D5D837348B74333A1FCAE7B /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EECD7F5030308999E8E36A /* RxAlamofire.framework */; platformFilter = ios; };
+		8E0263D22C2B5DEEAC4344C0 /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53DACF0635557A8CA65663E /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
+		8E2A71DC40FA972C66C17130 /* libMyRecordFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC79BFBC87B77423741EF20 /* libMyRecordFeatureInterface.a */; platformFilter = ios; };
+		9211F09EB2AD58132EB6B6CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76937C23B66F2C9F31871EC /* AppDelegate.swift */; };
+		93E140899D43E75A58E3A268 /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DA8615E7EA5024EFA1D8F0 /* KakaoSDKUser.framework */; platformFilter = ios; };
+		9608AADC6F0B9641F7B30293 /* libMyDJFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA5DC0125B3529CD4F6A17E /* libMyDJFeature.a */; platformFilter = ios; };
+		9739B9D46C204269B4E8D5FB /* RootTabBarFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B41EC408F2DE6F173B51E7 /* RootTabBarFeatureTesting.framework */; platformFilter = ios; };
+		9CC1515D5534419909AC29F8 /* libMyDJFeature.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 9CA5DC0125B3529CD4F6A17E /* libMyDJFeature.a */; platformFilter = ios; };
+		9D0C3C7B75A8C3CAD86EB52B /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A135B28A077D14918209D636 /* libCoreKit.a */; platformFilter = ios; };
+		9F7915A8E452A38EFD08A26E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C548E90D0189681549A673FD /* Alamofire.framework */; platformFilter = ios; };
+		A15C3AF74D1509EA39FC55DD /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4452D0CF4A3F26F3956587AD /* RxKakaoSDKUser.framework */; platformFilter = ios; };
+		A22C5E57A70431CDA8958019 /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F870951F6C64E311825263B /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
+		A2E4F9126D636F3195257BAE /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0187515F3DBE86E794040445 /* libDesignSystem.a */; platformFilter = ios; };
+		A4B5D1D1FD2B2A0AA9902596 /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BB5C024A3A45704BB5631A /* KakaoSDKTalk.framework */; platformFilter = ios; };
+		A5B820E5D9DB13DE7CBC8845 /* libMyRecordFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1D26C0A7E8A7685B00AA00 /* libMyRecordFeature.a */; platformFilter = ios; };
+		A639B7A9A54A27384BF273D5 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18C284C6B9FAD792EA9F517 /* RootTabBarViewController.swift */; };
+		AB32C15284019BB5322875DC /* libRecordDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B142363FC3154A4D33A1D9 /* libRecordDomainInterface.a */; platformFilter = ios; };
+		AD15290DDEC0834D78260068 /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53DACF0635557A8CA65663E /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
+		AD64E59A9CC27A94E42C2057 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2347D359EE34B85241E3197 /* KakaoSDKAuth.framework */; platformFilter = ios; };
+		ADA35C4AE00557AC481F307D /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37D069C984B09035E123378 /* KakaoSDKCommon.framework */; platformFilter = ios; };
+		AEA0BBFBA33D25B3C10C9B33 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08606DDB1A7D76A4EAE8B204 /* Interface.swift */; };
+		B579D869686D480C9DD09592 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E09F6A812D0C532A747302FF /* Differentiator.framework */; platformFilter = ios; };
+		B7BBD0234F3DADA02BF1205F /* libTodayFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA64C8D51BFF2884B60A4DC /* libTodayFeatureInterface.a */; platformFilter = ios; };
+		BC04DBF81009B14FB6B716DB /* libAllRecordFeature.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 09107EA4C046A49F1A9DABB5 /* libAllRecordFeature.a */; platformFilter = ios; };
+		BCBA9BCFC5E41C6FD7742E34 /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4452D0CF4A3F26F3956587AD /* RxKakaoSDKUser.framework */; platformFilter = ios; };
+		BDC5149687706A49CDC20B6A /* RootTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8525000BD1D2C65CA707384 /* RootTabBarInteractor.swift */; };
+		BF6B4C27694761174E09BAF3 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE67C1EDE0FDBC0C9F2B4C1 /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C05B523028A8A8A12D71E182 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E09F6A812D0C532A747302FF /* Differentiator.framework */; platformFilter = ios; };
+		C0861F7EEF2B4D7301FBEEF1 /* libRecordDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B142363FC3154A4D33A1D9 /* libRecordDomainInterface.a */; platformFilter = ios; };
+		C50AC48821042BDFFAC6B78E /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83BB350A8AE6A0310CE44095 /* LogFlume.framework */; platformFilter = ios; };
+		C73F7C1B9CAA729C23374C74 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0187515F3DBE86E794040445 /* libDesignSystem.a */; platformFilter = ios; };
+		CAC238947AF8AE8A6133C855 /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37D069C984B09035E123378 /* KakaoSDKCommon.framework */; platformFilter = ios; };
+		CB35009353C668BD2D649C9C /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDC5B09D1AB20514DE16F99 /* libRecordDomain.a */; platformFilter = ios; };
+		CD207DB748D7B6A2880F319E /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34B7E7ADE6836BA06B91CFA3 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D24876AD83D42C89EEAA32AA /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7737EC79AE19A7367ED5953 /* ReactorKitRuntime.framework */; platformFilter = ios; };
+		D35FA67C9F5C94D23AFA663C /* libRootTabBarFeatureInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = D2CF47526B803EB2D703E8FD /* libRootTabBarFeatureInterface.a */; platformFilter = ios; };
+		D4DB2245530A979C95987351 /* libTodayFeature.a in Dependencies */ = {isa = PBXBuildFile; fileRef = EAFFE0772A50DA358AD33A32 /* libTodayFeature.a */; platformFilter = ios; };
+		D5728545AE58877D91055A96 /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C3068E829E982CD3D252DD /* KakaoSDKShare.framework */; platformFilter = ios; };
+		D7ECEAEEECA9F24624E454E4 /* libMyDJFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E88B2E7FB8FD7F30109FECF /* libMyDJFeatureInterface.a */; platformFilter = ios; };
+		D91C41324CB97FC05AE2A809 /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B9B25C6090144BD955565F /* KakaoSDKTemplate.framework */; platformFilter = ios; };
+		D98BD93EBD050EE9792C2BBF /* RootTabBarFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DCC4DD769EB14E9FEE67BB /* RootTabBarFeatureTest.swift */; };
+		D9DE16001AC9DB00C0508597 /* RootTabBarFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B41EC408F2DE6F173B51E7 /* RootTabBarFeatureTesting.framework */; platformFilter = ios; };
+		DB2260AF7442FABA0C30C64A /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702721CC44DABD274EEE32BD /* RxKakaoSDKStory.framework */; platformFilter = ios; };
+		DCAD6B7FDF83BB9310E3046D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80519D7E32D5B8BC6F942B90 /* RxSwift.framework */; platformFilter = ios; };
+		DCECCFE13F7FE6B0A23FEA0A /* libMyPageFeature.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 33A28CE38A7871302AF9A32E /* libMyPageFeature.a */; platformFilter = ios; };
+		E1FF61F17051454035CD1EAE /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C119EE7B831AEAA0CFF23 /* Testing.swift */; };
+		E3871704CE8B5436AED40B33 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F57025215A84EBB912448303 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E4978D2EB10ECA83767155FC /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57025215A84EBB912448303 /* RxCocoa.framework */; platformFilter = ios; };
+		E59777019FE82E4F9957E25C /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CA1BA3B4767316E4C9C61E /* RxDataSources.framework */; platformFilter = ios; };
+		E5EDC65FEB92E22656F462A9 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34B7E7ADE6836BA06B91CFA3 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E743E052DFFB8852D1049443 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B88CBCCEBBB05D11C1A724 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
+		EA2E5F15D191CBBB08B7D6E7 /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 024BD63007A9A42665D43DA6 /* DesignSystem_DesignSystem.bundle */; };
+		EBD7E654C2ED8A4EB460869D /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702721CC44DABD274EEE32BD /* RxKakaoSDKStory.framework */; platformFilter = ios; };
+		ED441F2EB2560061B2E7C51E /* RootTabBarFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B41EC408F2DE6F173B51E7 /* RootTabBarFeatureTesting.framework */; platformFilter = ios; };
+		EEAC0DF88C2BD3CC3685B4EB /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6606628C78AB6E22A371504 /* libBaseDomain.a */; platformFilter = ios; };
+		F00301091FA5D8F469ACBAFB /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C426959EAAF9ED758BD9E7 /* KakaoSDKStory.framework */; platformFilter = ios; };
+		F2E8A4839E000D8CD40A86AA /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D273128F4EAD39262ED0CBAE /* RxGesture.framework */; platformFilter = ios; };
+		F3037C3A14F0B692F1143100 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80519D7E32D5B8BC6F942B90 /* RxSwift.framework */; platformFilter = ios; };
+		F3A321DD837E983E1624CBCD /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83BB350A8AE6A0310CE44095 /* LogFlume.framework */; platformFilter = ios; };
+		F454529A4ABE116E68D9A933 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE67C1EDE0FDBC0C9F2B4C1 /* RxRelay.framework */; platformFilter = ios; };
+		F4C5EC45BB7FCDBCDAADC4E6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57025215A84EBB912448303 /* RxCocoa.framework */; platformFilter = ios; };
+		F53E02DA173C9E959D5170D7 /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F870951F6C64E311825263B /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
+		F7B5F6C6630E42C0B0BF0D71 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C98D0FC7781D4E11DE6B281 /* NeedleFoundation.framework */; platformFilter = ios; };
+		FCC08843BF17212AF9686B83 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F604752262AC1DA9B389D27 /* libBaseShared.a */; platformFilter = ios; };
+		FF748BD03C5CC4557A2518FF /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B7E7ADE6836BA06B91CFA3 /* SnapKit.framework */; platformFilter = ios; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1164B5DB11540B98021008F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6142ED1653FE280EEA1AF464 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F81499F1679F79302E2EB12;
+			remoteInfo = RootTabBarFeature;
+		};
+		30B6D7C6569D007D9DC5DE59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6142ED1653FE280EEA1AF464 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAAEB4E2A34699AFD6B4BBCA;
+			remoteInfo = RootTabBarFeatureTesting;
+		};
+		70B9FBD3758488CCA170190F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6142ED1653FE280EEA1AF464 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAAEB4E2A34699AFD6B4BBCA;
+			remoteInfo = RootTabBarFeatureTesting;
+		};
+		77995ECFEA1FC2D6A8253739 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6142ED1653FE280EEA1AF464 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCA80F89B869687FA2DD13D4;
+			remoteInfo = RootTabBarFeatureInterface;
+		};
+		8D24DC2EB51BF1C82A9817BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6142ED1653FE280EEA1AF464 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F8A620C76D5F696A625C9C1;
+			remoteInfo = RootTabBarFeatureDemoApp;
+		};
+		8ED29CFDD29722FB2EA9496B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6142ED1653FE280EEA1AF464 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F8A620C76D5F696A625C9C1;
+			remoteInfo = RootTabBarFeatureDemoApp;
+		};
+		BA1D879B1CED4AB0ED1EB3D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6142ED1653FE280EEA1AF464 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAAEB4E2A34699AFD6B4BBCA;
+			remoteInfo = RootTabBarFeatureTesting;
+		};
+		C394F9EFD97634F4B6A54BCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6142ED1653FE280EEA1AF464 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCA80F89B869687FA2DD13D4;
+			remoteInfo = RootTabBarFeatureInterface;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		233350274BA312BD77D1DB58 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				BC04DBF81009B14FB6B716DB /* libAllRecordFeature.a in Dependencies */,
+				9CC1515D5534419909AC29F8 /* libMyDJFeature.a in Dependencies */,
+				DCECCFE13F7FE6B0A23FEA0A /* libMyPageFeature.a in Dependencies */,
+				02962A43368F31D4B8DDFE03 /* libMyRecordFeature.a in Dependencies */,
+				D35FA67C9F5C94D23AFA663C /* libRootTabBarFeatureInterface.a in Dependencies */,
+				D4DB2245530A979C95987351 /* libTodayFeature.a in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		237BAB77CB62FDA0B4F0B0C9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E9C39AFB3E4BA6CF1A868CD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0AE995EBF9A0052D6431E3B4 /* RootTabBarFeatureTesting.framework in Embed Frameworks */,
+				E3871704CE8B5436AED40B33 /* RxCocoa.framework in Embed Frameworks */,
+				15B1552A88819C3460AF5E4D /* RxCocoaRuntime.framework in Embed Frameworks */,
+				BF6B4C27694761174E09BAF3 /* RxRelay.framework in Embed Frameworks */,
+				07694331F8534EFD037A4025 /* RxSwift.framework in Embed Frameworks */,
+				E5EDC65FEB92E22656F462A9 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C62F75882CA1B04666E9854 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				322F8A70575E4224C8BBF8E0 /* RootTabBarFeatureTesting.framework in Embed Frameworks */,
+				290BE3B70DF3EF3336BE12C6 /* RxCocoa.framework in Embed Frameworks */,
+				0EA09E02E369B11F3D6AD89A /* RxCocoaRuntime.framework in Embed Frameworks */,
+				11A8E7518CF4F93D3E2A0413 /* RxRelay.framework in Embed Frameworks */,
+				6A7979E3C479A0639FDEC75A /* RxSwift.framework in Embed Frameworks */,
+				CD207DB748D7B6A2880F319E /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		919620EF45C50E4B38BEBA4A /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				0C864C36CEA14445158E580F /* DesignSystem_DesignSystem.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		9B8498959BF7058BE35D513F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB1D32E78B8EBBC548CE8B0A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C305BDE4BA1C5A58242266 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD51A679D341E13B3F6566C3 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				276C164F10C2E4E365DE0CEA /* libBaseDomain.a in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F44E050B3D5CA635E85C6733 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				724C8097AF7EC9CF92F71C5F /* DesignSystem_DesignSystem.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0187515F3DBE86E794040445 /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		024BD63007A9A42665D43DA6 /* DesignSystem_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystem_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		05BB5C024A3A45704BB5631A /* KakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0795EE9926DD50DBAABE2A1F /* RootTabBarFeatureDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RootTabBarFeatureDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07DCC4DD769EB14E9FEE67BB /* RootTabBarFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarFeatureTest.swift; sourceTree = "<group>"; };
+		08606DDB1A7D76A4EAE8B204 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		09107EA4C046A49F1A9DABB5 /* libAllRecordFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAllRecordFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C051DA5065F6E3E2A58D196 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		0FB7EA89CF990228C3DA1520 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B142363FC3154A4D33A1D9 /* libRecordDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C3068E829E982CD3D252DD /* KakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C3982DDC2CCAEEE82E55428 /* RootTabBarFeatureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RootTabBarFeatureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F604752262AC1DA9B389D27 /* libBaseShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FE67C1EDE0FDBC0C9F2B4C1 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		303965F2CD5392160C0E03A1 /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33A28CE38A7871302AF9A32E /* libMyPageFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyPageFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		34B7E7ADE6836BA06B91CFA3 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FDC5B09D1AB20514DE16F99 /* libRecordDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4452D0CF4A3F26F3956587AD /* RxKakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5C119EE7B831AEAA0CFF23 /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
+		4C98D0FC7781D4E11DE6B281 /* NeedleFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeedleFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CB678CCD935ABDC62D7A941 /* libMyPageFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyPageFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E88B2E7FB8FD7F30109FECF /* libMyDJFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyDJFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		599250FAE5B88A22B85E7179 /* RootTabBarFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RootTabBarFeatureTests-Info.plist"; sourceTree = "<group>"; };
+		59A8F733CDE9CC87408502F7 /* libRootTabBarFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRootTabBarFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F870951F6C64E311825263B /* libGlobalThirdPartyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlobalThirdPartyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E39B03BD6FC562ACCFCCFE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		67B4C07A6DC90D9B8107CC38 /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		67E77A0B3318B6022FDDDB08 /* libOnboardingDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CDCFB92832691FB80D111BC /* RootTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarRouter.swift; sourceTree = "<group>"; };
+		702721CC44DABD274EEE32BD /* RxKakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B88CBCCEBBB05D11C1A724 /* RxKakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78BF8ED7C9DC24615A48C447 /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F5DFD30518D74D914AE9F08 /* libAllRecordFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAllRecordFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		80519D7E32D5B8BC6F942B90 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82538927CCA7216750561C67 /* RootTabBarFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RootTabBarFeatureUITests-Info.plist"; sourceTree = "<group>"; };
+		83BB350A8AE6A0310CE44095 /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CA1BA3B4767316E4C9C61E /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87DA8615E7EA5024EFA1D8F0 /* KakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8813185FB8D091B9B49EA125 /* RootTabBarFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RootTabBarFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93ACCF99E2CE29135B0E7ABC /* RootTabBarFeatureDemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RootTabBarFeatureDemoApp-Info.plist"; sourceTree = "<group>"; };
+		96B9B25C6090144BD955565F /* KakaoSDKTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B5B00EFBE37BAD21BD632A7 /* TuistBundle+RootTabBarFeatureDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+RootTabBarFeatureDemoApp.swift"; sourceTree = "<group>"; };
+		9CA5DC0125B3529CD4F6A17E /* libMyDJFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyDJFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A135B28A077D14918209D636 /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6606628C78AB6E22A371504 /* libBaseDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE1D26C0A7E8A7685B00AA00 /* libMyRecordFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE69A16087D13715CD3E9F16 /* RootTabBarFeatureTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RootTabBarFeatureTesting-Info.plist"; sourceTree = "<group>"; };
+		AF34C33BB8691C771C8E4EC9 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8525000BD1D2C65CA707384 /* RootTabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarInteractor.swift; sourceTree = "<group>"; };
+		B9C426959EAAF9ED758BD9E7 /* KakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA0E0B1B643FEC5BD00E9E95 /* RootTabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarBuilder.swift; sourceTree = "<group>"; };
+		C18C284C6B9FAD792EA9F517 /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
+		C1A140B37FFA96F0501FFC03 /* RxKakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37D069C984B09035E123378 /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4D26F194D70CE2E6361208A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C548E90D0189681549A673FD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC14D716A435BB775A5BD320 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2347D359EE34B85241E3197 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D273128F4EAD39262ED0CBAE /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2CF47526B803EB2D703E8FD /* libRootTabBarFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRootTabBarFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76937C23B66F2C9F31871EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAA4AD1513B3E49E3D888E4F /* RxKakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E09F6A812D0C532A747302FF /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4EECD7F5030308999E8E36A /* RxAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E53DACF0635557A8CA65663E /* RxKakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7737EC79AE19A7367ED5953 /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E957CE7B1E61F3143CCB409A /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B41EC408F2DE6F173B51E7 /* RootTabBarFeatureTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RootTabBarFeatureTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFFE0772A50DA358AD33A32 /* libTodayFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEC79BFBC87B77423741EF20 /* libMyRecordFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F57025215A84EBB912448303 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE10210CE1C8F828AD22DFD /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDA64C8D51BFF2884B60A4DC /* libTodayFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		069E5FCC988AA7DA49EF2B6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24958063B3223816CF74E76D /* CFNetwork.framework in Frameworks */,
+				9F7915A8E452A38EFD08A26E /* Alamofire.framework in Frameworks */,
+				79E306B0B6F7A633CB2F3C22 /* libAllRecordFeature.a in Frameworks */,
+				4753EC4D3E1B3D5F3C28B9D7 /* libAllRecordFeatureInterface.a in Frameworks */,
+				1C0AFC603A2B7C09C8F53FC8 /* libAppFoundation.a in Frameworks */,
+				EEAC0DF88C2BD3CC3685B4EB /* libBaseDomain.a in Frameworks */,
+				FCC08843BF17212AF9686B83 /* libBaseShared.a in Frameworks */,
+				9D0C3C7B75A8C3CAD86EB52B /* libCoreKit.a in Frameworks */,
+				C73F7C1B9CAA729C23374C74 /* libDesignSystem.a in Frameworks */,
+				C05B523028A8A8A12D71E182 /* Differentiator.framework in Frameworks */,
+				F53E02DA173C9E959D5170D7 /* libGlobalThirdPartyLibrary.a in Frameworks */,
+				824D51ECAC6B8EEFEE246294 /* KakaoSDKAuth.framework in Frameworks */,
+				CAC238947AF8AE8A6133C855 /* KakaoSDKCommon.framework in Frameworks */,
+				6EF98E74ADD9804595690E6D /* KakaoSDKShare.framework in Frameworks */,
+				F00301091FA5D8F469ACBAFB /* KakaoSDKStory.framework in Frameworks */,
+				A4B5D1D1FD2B2A0AA9902596 /* KakaoSDKTalk.framework in Frameworks */,
+				D91C41324CB97FC05AE2A809 /* KakaoSDKTemplate.framework in Frameworks */,
+				93E140899D43E75A58E3A268 /* KakaoSDKUser.framework in Frameworks */,
+				12C542519EB8813D89852955 /* Kingfisher.framework in Frameworks */,
+				F3A321DD837E983E1624CBCD /* LogFlume.framework in Frameworks */,
+				9608AADC6F0B9641F7B30293 /* libMyDJFeature.a in Frameworks */,
+				D7ECEAEEECA9F24624E454E4 /* libMyDJFeatureInterface.a in Frameworks */,
+				0DB2E7356123C215D5464A00 /* libMyPageFeature.a in Frameworks */,
+				7F3272DC96E7106FB75F5A9F /* libMyPageFeatureInterface.a in Frameworks */,
+				A5B820E5D9DB13DE7CBC8845 /* libMyRecordFeature.a in Frameworks */,
+				8E2A71DC40FA972C66C17130 /* libMyRecordFeatureInterface.a in Frameworks */,
+				27BE4F72F650F45926A49DE2 /* NeedleFoundation.framework in Frameworks */,
+				848EC9018CC91873AF506F8E /* libOnboardingDomain.a in Frameworks */,
+				4D6D673FE7AC995C417E12FE /* libOnboardingDomainInterface.a in Frameworks */,
+				74A68B9893648250E8D32923 /* RIBs.framework in Frameworks */,
+				1D14BE678579F71BBB439DE7 /* ReactorKit.framework in Frameworks */,
+				6C57DD3B88DD1308F9EB017E /* ReactorKitRuntime.framework in Frameworks */,
+				CB35009353C668BD2D649C9C /* libRecordDomain.a in Frameworks */,
+				C0861F7EEF2B4D7301FBEEF1 /* libRecordDomainInterface.a in Frameworks */,
+				7562BF03F9EA829AD10C4BD3 /* libRootTabBarFeature.a in Frameworks */,
+				81EC5222EFCF392AB9E7438A /* libRootTabBarFeatureInterface.a in Frameworks */,
+				9739B9D46C204269B4E8D5FB /* RootTabBarFeatureTesting.framework in Frameworks */,
+				8D5D837348B74333A1FCAE7B /* RxAlamofire.framework in Frameworks */,
+				E4978D2EB10ECA83767155FC /* RxCocoa.framework in Frameworks */,
+				177E318A73DBDA515E9805BF /* RxDataSources.framework in Frameworks */,
+				F2E8A4839E000D8CD40A86AA /* RxGesture.framework in Frameworks */,
+				33E3C099A236B2CF54E8BBFD /* RxKakaoSDKAuth.framework in Frameworks */,
+				8E0263D22C2B5DEEAC4344C0 /* RxKakaoSDKCommon.framework in Frameworks */,
+				5DDD1ABD228ECEF3C2BC2E5A /* RxKakaoSDKShare.framework in Frameworks */,
+				EBD7E654C2ED8A4EB460869D /* RxKakaoSDKStory.framework in Frameworks */,
+				73DE13502CF87713BABE4466 /* RxKakaoSDKTalk.framework in Frameworks */,
+				A15C3AF74D1509EA39FC55DD /* RxKakaoSDKUser.framework in Frameworks */,
+				020C50ADF0459CD4A8C9C001 /* RxRelay.framework in Frameworks */,
+				DCAD6B7FDF83BB9310E3046D /* RxSwift.framework in Frameworks */,
+				48F58623D8CFE09577587C05 /* SkeletonView.framework in Frameworks */,
+				2D8AF76E40B8DE147B177CB2 /* SnapKit.framework in Frameworks */,
+				67C2765A862E6234F4789039 /* libTodayFeature.a in Frameworks */,
+				B7BBD0234F3DADA02BF1205F /* libTodayFeatureInterface.a in Frameworks */,
+				7CE2B64591FC1B46F6EE826B /* WeakMapTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3664DBF2EDB7DD8AE5C6EA53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED441F2EB2560061B2E7C51E /* RootTabBarFeatureTesting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		803BB4B8946F0E72C077D1AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9DE16001AC9DB00C0508597 /* RootTabBarFeatureTesting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE3697202DF7B8FCDECBEC42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDBBC57501188DE9582C1D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED54F3F2B1878F67A343EC01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45E2F5B20D02EC1507E31356 /* CFNetwork.framework in Frameworks */,
+				55D41ED9BC6D3304FF5FE3DC /* Alamofire.framework in Frameworks */,
+				765576DF07717274FF22EFE5 /* libAppFoundation.a in Frameworks */,
+				2DD06F6213601E4C23133A3E /* libBaseDomain.a in Frameworks */,
+				311C31682A41B4EA0CBC6493 /* libBaseShared.a in Frameworks */,
+				4BE0B75CA554EF177930BF20 /* libCoreKit.a in Frameworks */,
+				A2E4F9126D636F3195257BAE /* libDesignSystem.a in Frameworks */,
+				B579D869686D480C9DD09592 /* Differentiator.framework in Frameworks */,
+				A22C5E57A70431CDA8958019 /* libGlobalThirdPartyLibrary.a in Frameworks */,
+				AD64E59A9CC27A94E42C2057 /* KakaoSDKAuth.framework in Frameworks */,
+				ADA35C4AE00557AC481F307D /* KakaoSDKCommon.framework in Frameworks */,
+				D5728545AE58877D91055A96 /* KakaoSDKShare.framework in Frameworks */,
+				63092B36DD6ED4A43964E8B0 /* KakaoSDKStory.framework in Frameworks */,
+				05979920F2B5BD920558C22D /* KakaoSDKTalk.framework in Frameworks */,
+				84C4DF1EC9CC33C4DD213F16 /* KakaoSDKTemplate.framework in Frameworks */,
+				5D5B19DB2AA39C1214FE73EB /* KakaoSDKUser.framework in Frameworks */,
+				3597FA25C6D71CB9E744BB14 /* Kingfisher.framework in Frameworks */,
+				C50AC48821042BDFFAC6B78E /* LogFlume.framework in Frameworks */,
+				F7B5F6C6630E42C0B0BF0D71 /* NeedleFoundation.framework in Frameworks */,
+				0E6F1843962968B40F04232A /* libOnboardingDomain.a in Frameworks */,
+				69DF141E711FC4BCCBCE8A3D /* libOnboardingDomainInterface.a in Frameworks */,
+				5D5DBDCDF43EDB8D952DB2F3 /* RIBs.framework in Frameworks */,
+				3D8C19EA81B44C08057AB189 /* ReactorKit.framework in Frameworks */,
+				D24876AD83D42C89EEAA32AA /* ReactorKitRuntime.framework in Frameworks */,
+				15734DA7DFBEBDFA17782EB8 /* libRecordDomain.a in Frameworks */,
+				AB32C15284019BB5322875DC /* libRecordDomainInterface.a in Frameworks */,
+				72A2EFD3EDCE3C607C7EA963 /* libRootTabBarFeatureInterface.a in Frameworks */,
+				8269AB149FAA78F730FD4283 /* RxAlamofire.framework in Frameworks */,
+				F4C5EC45BB7FCDBCDAADC4E6 /* RxCocoa.framework in Frameworks */,
+				E59777019FE82E4F9957E25C /* RxDataSources.framework in Frameworks */,
+				2D693136431E5E2F0B2FF15A /* RxGesture.framework in Frameworks */,
+				45D05363EAF960E587CC6AEB /* RxKakaoSDKAuth.framework in Frameworks */,
+				AD15290DDEC0834D78260068 /* RxKakaoSDKCommon.framework in Frameworks */,
+				54F30CB39701E32BAA1FBCE2 /* RxKakaoSDKShare.framework in Frameworks */,
+				DB2260AF7442FABA0C30C64A /* RxKakaoSDKStory.framework in Frameworks */,
+				E743E052DFFB8852D1049443 /* RxKakaoSDKTalk.framework in Frameworks */,
+				BCBA9BCFC5E41C6FD7742E34 /* RxKakaoSDKUser.framework in Frameworks */,
+				F454529A4ABE116E68D9A933 /* RxRelay.framework in Frameworks */,
+				F3037C3A14F0B692F1143100 /* RxSwift.framework in Frameworks */,
+				7E569DCA7FA1148AAAB6B4E1 /* SkeletonView.framework in Frameworks */,
+				FF748BD03C5CC4557A2518FF /* SnapKit.framework in Frameworks */,
+				5C7FEB70FE303412474AE5A1 /* WeakMapTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		020BD53DD6A2875DC8177F0F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9B5B00EFBE37BAD21BD632A7 /* TuistBundle+RootTabBarFeatureDemoApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0A6FC0139252F91C2C74A631 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				93ACCF99E2CE29135B0E7ABC /* RootTabBarFeatureDemoApp-Info.plist */,
+				AE69A16087D13715CD3E9F16 /* RootTabBarFeatureTesting-Info.plist */,
+				599250FAE5B88A22B85E7179 /* RootTabBarFeatureTests-Info.plist */,
+				82538927CCA7216750561C67 /* RootTabBarFeatureUITests-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		37E2985784B316E638830269 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C4D26F194D70CE2E6361208A /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		47B0E5A22FCD23F2DA173C4D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BA0E0B1B643FEC5BD00E9E95 /* RootTabBarBuilder.swift */,
+				B8525000BD1D2C65CA707384 /* RootTabBarInteractor.swift */,
+				6CDCFB92832691FB80D111BC /* RootTabBarRouter.swift */,
+				C18C284C6B9FAD792EA9F517 /* RootTabBarViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		484E57B11F54123499993669 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D76937C23B66F2C9F31871EC /* AppDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		4C0C7A5D7C6D04F03144F60A /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				08606DDB1A7D76A4EAE8B204 /* Interface.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		586698E3D1D728715C2C9315 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C548E90D0189681549A673FD /* Alamofire.framework */,
+				024BD63007A9A42665D43DA6 /* DesignSystem_DesignSystem.bundle */,
+				E09F6A812D0C532A747302FF /* Differentiator.framework */,
+				D2347D359EE34B85241E3197 /* KakaoSDKAuth.framework */,
+				C37D069C984B09035E123378 /* KakaoSDKCommon.framework */,
+				19C3068E829E982CD3D252DD /* KakaoSDKShare.framework */,
+				B9C426959EAAF9ED758BD9E7 /* KakaoSDKStory.framework */,
+				05BB5C024A3A45704BB5631A /* KakaoSDKTalk.framework */,
+				96B9B25C6090144BD955565F /* KakaoSDKTemplate.framework */,
+				87DA8615E7EA5024EFA1D8F0 /* KakaoSDKUser.framework */,
+				CC14D716A435BB775A5BD320 /* Kingfisher.framework */,
+				09107EA4C046A49F1A9DABB5 /* libAllRecordFeature.a */,
+				7F5DFD30518D74D914AE9F08 /* libAllRecordFeatureInterface.a */,
+				0FB7EA89CF990228C3DA1520 /* libAppFoundation.a */,
+				A6606628C78AB6E22A371504 /* libBaseDomain.a */,
+				2F604752262AC1DA9B389D27 /* libBaseShared.a */,
+				A135B28A077D14918209D636 /* libCoreKit.a */,
+				0187515F3DBE86E794040445 /* libDesignSystem.a */,
+				5F870951F6C64E311825263B /* libGlobalThirdPartyLibrary.a */,
+				9CA5DC0125B3529CD4F6A17E /* libMyDJFeature.a */,
+				4E88B2E7FB8FD7F30109FECF /* libMyDJFeatureInterface.a */,
+				33A28CE38A7871302AF9A32E /* libMyPageFeature.a */,
+				4CB678CCD935ABDC62D7A941 /* libMyPageFeatureInterface.a */,
+				AE1D26C0A7E8A7685B00AA00 /* libMyRecordFeature.a */,
+				EEC79BFBC87B77423741EF20 /* libMyRecordFeatureInterface.a */,
+				67B4C07A6DC90D9B8107CC38 /* libOnboardingDomain.a */,
+				67E77A0B3318B6022FDDDB08 /* libOnboardingDomainInterface.a */,
+				3FDC5B09D1AB20514DE16F99 /* libRecordDomain.a */,
+				19B142363FC3154A4D33A1D9 /* libRecordDomainInterface.a */,
+				59A8F733CDE9CC87408502F7 /* libRootTabBarFeature.a */,
+				D2CF47526B803EB2D703E8FD /* libRootTabBarFeatureInterface.a */,
+				EAFFE0772A50DA358AD33A32 /* libTodayFeature.a */,
+				FDA64C8D51BFF2884B60A4DC /* libTodayFeatureInterface.a */,
+				83BB350A8AE6A0310CE44095 /* LogFlume.framework */,
+				4C98D0FC7781D4E11DE6B281 /* NeedleFoundation.framework */,
+				E957CE7B1E61F3143CCB409A /* ReactorKit.framework */,
+				E7737EC79AE19A7367ED5953 /* ReactorKitRuntime.framework */,
+				FCE10210CE1C8F828AD22DFD /* RIBs.framework */,
+				0795EE9926DD50DBAABE2A1F /* RootTabBarFeatureDemoApp.app */,
+				E9B41EC408F2DE6F173B51E7 /* RootTabBarFeatureTesting.framework */,
+				8813185FB8D091B9B49EA125 /* RootTabBarFeatureTests.xctest */,
+				1C3982DDC2CCAEEE82E55428 /* RootTabBarFeatureUITests.xctest */,
+				E4EECD7F5030308999E8E36A /* RxAlamofire.framework */,
+				F57025215A84EBB912448303 /* RxCocoa.framework */,
+				78BF8ED7C9DC24615A48C447 /* RxCocoaRuntime.framework */,
+				85CA1BA3B4767316E4C9C61E /* RxDataSources.framework */,
+				D273128F4EAD39262ED0CBAE /* RxGesture.framework */,
+				C1A140B37FFA96F0501FFC03 /* RxKakaoSDKAuth.framework */,
+				E53DACF0635557A8CA65663E /* RxKakaoSDKCommon.framework */,
+				DAA4AD1513B3E49E3D888E4F /* RxKakaoSDKShare.framework */,
+				702721CC44DABD274EEE32BD /* RxKakaoSDKStory.framework */,
+				74B88CBCCEBBB05D11C1A724 /* RxKakaoSDKTalk.framework */,
+				4452D0CF4A3F26F3956587AD /* RxKakaoSDKUser.framework */,
+				2FE67C1EDE0FDBC0C9F2B4C1 /* RxRelay.framework */,
+				80519D7E32D5B8BC6F942B90 /* RxSwift.framework */,
+				AF34C33BB8691C771C8E4EC9 /* SkeletonView.framework */,
+				34B7E7ADE6836BA06B91CFA3 /* SnapKit.framework */,
+				303965F2CD5392160C0E03A1 /* WeakMapTable.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7958F950A43CEF2395C40D02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65E39B03BD6FC562ACCFCCFE /* CFNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85E73BF89A9865B633DE7F8A /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				0C051DA5065F6E3E2A58D196 /* Shared.xcconfig */,
+			);
+			name = XCConfig;
+			path = ../../../XCConfig;
+			sourceTree = "<group>";
+		};
+		958F40B46665CAAFDD83AED8 = {
+			isa = PBXGroup;
+			children = (
+				AD685DD0694DA79EA788A6DC /* Project */,
+				7958F950A43CEF2395C40D02 /* Frameworks */,
+				586698E3D1D728715C2C9315 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4487C4F23D6A98F6B66E48E /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				37E2985784B316E638830269 /* Resources */,
+				484E57B11F54123499993669 /* Sources */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		AD685DD0694DA79EA788A6DC /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				A4487C4F23D6A98F6B66E48E /* Demo */,
+				D114E3CE4172C8B8CCD8DAA2 /* Derived */,
+				4C0C7A5D7C6D04F03144F60A /* Interface */,
+				47B0E5A22FCD23F2DA173C4D /* Sources */,
+				B3E8B713571B6D77505F80D4 /* Testing */,
+				F9E03B65E974DAA75DBB4AE9 /* Tests */,
+				85E73BF89A9865B633DE7F8A /* XCConfig */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		B3E8B713571B6D77505F80D4 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				4B5C119EE7B831AEAA0CFF23 /* Testing.swift */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		D114E3CE4172C8B8CCD8DAA2 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				0A6FC0139252F91C2C74A631 /* InfoPlists */,
+				020BD53DD6A2875DC8177F0F /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		F9E03B65E974DAA75DBB4AE9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				07DCC4DD769EB14E9FEE67BB /* RootTabBarFeatureTest.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F81499F1679F79302E2EB12 /* RootTabBarFeature */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9ABCF7B66F7D9C0EF649983B /* Build configuration list for PBXNativeTarget "RootTabBarFeature" */;
+			buildPhases = (
+				C70F7B7DAF7EAE2F06164DFB /* Sources */,
+				4279366D2F5339A457A20D02 /* Resources */,
+				AB1D32E78B8EBBC548CE8B0A /* Embed Frameworks */,
+				DDBBC57501188DE9582C1D94 /* Frameworks */,
+				233350274BA312BD77D1DB58 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B283EDD05810391D4FF459DC /* PBXTargetDependency */,
+			);
+			name = RootTabBarFeature;
+			productName = RootTabBarFeature;
+			productReference = 59A8F733CDE9CC87408502F7 /* libRootTabBarFeature.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5F8A620C76D5F696A625C9C1 /* RootTabBarFeatureDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51F5267750408536797FACD0 /* Build configuration list for PBXNativeTarget "RootTabBarFeatureDemoApp" */;
+			buildPhases = (
+				D96220E4C45F9A0B997CD55C /* Needle */,
+				D466CB62573223FAD7D9EDAC /* Sources */,
+				252FA56AB220AD77A96C9363 /* Resources */,
+				2E9C39AFB3E4BA6CF1A868CD /* Embed Frameworks */,
+				069E5FCC988AA7DA49EF2B6A /* Frameworks */,
+				919620EF45C50E4B38BEBA4A /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3709EEAC6A8B947ED2EE4DE0 /* PBXTargetDependency */,
+				9A57575FEF1D8C0C087109D5 /* PBXTargetDependency */,
+			);
+			name = RootTabBarFeatureDemoApp;
+			productName = RootTabBarFeatureDemoApp;
+			productReference = 0795EE9926DD50DBAABE2A1F /* RootTabBarFeatureDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FA03499E82F0701A9EC9D0C /* RootTabBarFeatureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A92568F428194D38BB2AF801 /* Build configuration list for PBXNativeTarget "RootTabBarFeatureTests" */;
+			buildPhases = (
+				D5E41E1E1F6EA5F0FB40119D /* Sources */,
+				7C97363BF83E8369DE8556BE /* Resources */,
+				9B8498959BF7058BE35D513F /* Embed Frameworks */,
+				3664DBF2EDB7DD8AE5C6EA53 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82F4123E697C4FF5E73651F9 /* PBXTargetDependency */,
+				8CD756A220CD0A43567C4A45 /* PBXTargetDependency */,
+			);
+			name = RootTabBarFeatureTests;
+			productName = RootTabBarFeatureTests;
+			productReference = 8813185FB8D091B9B49EA125 /* RootTabBarFeatureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		82774CCC4F3A385D3CFE496C /* RootTabBarFeatureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8073AB57DB3BEF387DF2B27E /* Build configuration list for PBXNativeTarget "RootTabBarFeatureUITests" */;
+			buildPhases = (
+				9B65F2111BF8EFA8C10A41AE /* Sources */,
+				C6AFB4BF132008DE3A8EF4DD /* Resources */,
+				8C62F75882CA1B04666E9854 /* Embed Frameworks */,
+				803BB4B8946F0E72C077D1AB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63670F0B1AFD8969B6B1A79B /* PBXTargetDependency */,
+				EC0328954158094F5F39DED0 /* PBXTargetDependency */,
+			);
+			name = RootTabBarFeatureUITests;
+			productName = RootTabBarFeatureUITests;
+			productReference = 1C3982DDC2CCAEEE82E55428 /* RootTabBarFeatureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		DAAEB4E2A34699AFD6B4BBCA /* RootTabBarFeatureTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F301CACFFA360666EBF775F /* Build configuration list for PBXNativeTarget "RootTabBarFeatureTesting" */;
+			buildPhases = (
+				55840F56803366F40988CBE4 /* Sources */,
+				3792C6AFB2455F056B2247A8 /* Resources */,
+				B6C305BDE4BA1C5A58242266 /* Embed Frameworks */,
+				ED54F3F2B1878F67A343EC01 /* Frameworks */,
+				F44E050B3D5CA635E85C6733 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7597E5035778378271B1ADC6 /* PBXTargetDependency */,
+			);
+			name = RootTabBarFeatureTesting;
+			productName = RootTabBarFeatureTesting;
+			productReference = E9B41EC408F2DE6F173B51E7 /* RootTabBarFeatureTesting.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DCA80F89B869687FA2DD13D4 /* RootTabBarFeatureInterface */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79A1BED07AD5A61A7A2A7B29 /* Build configuration list for PBXNativeTarget "RootTabBarFeatureInterface" */;
+			buildPhases = (
+				03CDE93C945952B44753FDFB /* Sources */,
+				8251C7B5312A09D1664081C3 /* Resources */,
+				237BAB77CB62FDA0B4F0B0C9 /* Embed Frameworks */,
+				BE3697202DF7B8FCDECBEC42 /* Frameworks */,
+				CD51A679D341E13B3F6566C3 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RootTabBarFeatureInterface;
+			productName = RootTabBarFeatureInterface;
+			productReference = D2CF47526B803EB2D703E8FD /* libRootTabBarFeatureInterface.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6142ED1653FE280EEA1AF464 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Omos;
+				TargetAttributes = {
+					5FA03499E82F0701A9EC9D0C = {
+						TestTargetID = 5F8A620C76D5F696A625C9C1;
+					};
+					82774CCC4F3A385D3CFE496C = {
+						TestTargetID = 5F8A620C76D5F696A625C9C1;
+					};
+				};
+			};
+			buildConfigurationList = 3516DD6DE47A558DA37AD882 /* Build configuration list for PBXProject "RootTabBarFeature" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 958F40B46665CAAFDD83AED8;
+			productRefGroup = 586698E3D1D728715C2C9315 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCA80F89B869687FA2DD13D4 /* RootTabBarFeatureInterface */,
+				2F81499F1679F79302E2EB12 /* RootTabBarFeature */,
+				DAAEB4E2A34699AFD6B4BBCA /* RootTabBarFeatureTesting */,
+				5FA03499E82F0701A9EC9D0C /* RootTabBarFeatureTests */,
+				82774CCC4F3A385D3CFE496C /* RootTabBarFeatureUITests */,
+				5F8A620C76D5F696A625C9C1 /* RootTabBarFeatureDemoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		252FA56AB220AD77A96C9363 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83358A2A5946B85BCDE09FE6 /* LaunchScreen.storyboard in Resources */,
+				EA2E5F15D191CBBB08B7D6E7 /* DesignSystem_DesignSystem.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3792C6AFB2455F056B2247A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				516F6588C527D41E770F76FB /* DesignSystem_DesignSystem.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4279366D2F5339A457A20D02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C97363BF83E8369DE8556BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8251C7B5312A09D1664081C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6AFB4BF132008DE3A8EF4DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D96220E4C45F9A0B997CD55C /* Needle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Needle;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03CDE93C945952B44753FDFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA0BBFBA33D25B3C10C9B33 /* Interface.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55840F56803366F40988CBE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1FF61F17051454035CD1EAE /* Testing.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B65F2111BF8EFA8C10A41AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C70F7B7DAF7EAE2F06164DFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F2512A4DE342A06C3D33A5D /* RootTabBarBuilder.swift in Sources */,
+				BDC5149687706A49CDC20B6A /* RootTabBarInteractor.swift in Sources */,
+				8699C5981F9A8BA919DE8D3E /* RootTabBarRouter.swift in Sources */,
+				A639B7A9A54A27384BF273D5 /* RootTabBarViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D466CB62573223FAD7D9EDAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9211F09EB2AD58132EB6B6CD /* AppDelegate.swift in Sources */,
+				278FE048AB2D82F173A0CEE1 /* TuistBundle+RootTabBarFeatureDemoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5E41E1E1F6EA5F0FB40119D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D98BD93EBD050EE9792C2BBF /* RootTabBarFeatureTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3709EEAC6A8B947ED2EE4DE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RootTabBarFeature;
+			target = 2F81499F1679F79302E2EB12 /* RootTabBarFeature */;
+			targetProxy = 1164B5DB11540B98021008F8 /* PBXContainerItemProxy */;
+		};
+		63670F0B1AFD8969B6B1A79B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RootTabBarFeatureDemoApp;
+			target = 5F8A620C76D5F696A625C9C1 /* RootTabBarFeatureDemoApp */;
+			targetProxy = 8D24DC2EB51BF1C82A9817BD /* PBXContainerItemProxy */;
+		};
+		7597E5035778378271B1ADC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RootTabBarFeatureInterface;
+			target = DCA80F89B869687FA2DD13D4 /* RootTabBarFeatureInterface */;
+			targetProxy = C394F9EFD97634F4B6A54BCA /* PBXContainerItemProxy */;
+		};
+		82F4123E697C4FF5E73651F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RootTabBarFeatureDemoApp;
+			target = 5F8A620C76D5F696A625C9C1 /* RootTabBarFeatureDemoApp */;
+			targetProxy = 8ED29CFDD29722FB2EA9496B /* PBXContainerItemProxy */;
+		};
+		8CD756A220CD0A43567C4A45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RootTabBarFeatureTesting;
+			target = DAAEB4E2A34699AFD6B4BBCA /* RootTabBarFeatureTesting */;
+			targetProxy = BA1D879B1CED4AB0ED1EB3D4 /* PBXContainerItemProxy */;
+		};
+		9A57575FEF1D8C0C087109D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RootTabBarFeatureTesting;
+			target = DAAEB4E2A34699AFD6B4BBCA /* RootTabBarFeatureTesting */;
+			targetProxy = 30B6D7C6569D007D9DC5DE59 /* PBXContainerItemProxy */;
+		};
+		B283EDD05810391D4FF459DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RootTabBarFeatureInterface;
+			target = DCA80F89B869687FA2DD13D4 /* RootTabBarFeatureInterface */;
+			targetProxy = 77995ECFEA1FC2D6A8253739 /* PBXContainerItemProxy */;
+		};
+		EC0328954158094F5F39DED0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RootTabBarFeatureTesting;
+			target = DAAEB4E2A34699AFD6B4BBCA /* RootTabBarFeatureTesting */;
+			targetProxy = 70B9FBD3758488CCA170190F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		06A10C7180833FD1105EF2E4 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureInterface;
+				PRODUCT_NAME = RootTabBarFeatureInterface;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+		1A6ACEADE47F8BB191F84C43 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/RootTabBarFeatureDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureDemoApp;
+				PRODUCT_NAME = RootTabBarFeatureDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		23ADB7516552A1C41CD2BA22 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/RootTabBarFeatureTesting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureTesting;
+				PRODUCT_NAME = RootTabBarFeatureTesting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = PROD;
+		};
+		39955C19F3904F9E77E71CF1 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/RootTabBarFeatureTesting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureTesting;
+				PRODUCT_NAME = RootTabBarFeatureTesting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = STAGE;
+		};
+		444156FBEF43192DB9184E7C /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/RootTabBarFeatureUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureUITests;
+				PRODUCT_NAME = RootTabBarFeatureUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RootTabBarFeatureDemoApp;
+			};
+			name = PROD;
+		};
+		44586E3DF9A28CCE719AB37E /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeature;
+				PRODUCT_NAME = RootTabBarFeature;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		549BCEC8A777B29111555A54 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C051DA5065F6E3E2A58D196 /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2L2K3UD2LK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = DEV;
+		};
+		56F70743930B4BED6D57243D /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureInterface;
+				PRODUCT_NAME = RootTabBarFeatureInterface;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = STAGE;
+		};
+		5DECF52EB7B7484F933B62EA /* PROD */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C051DA5065F6E3E2A58D196 /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2L2K3UD2LK;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = PROD;
+		};
+		64914DEDC2255C9A35203D2C /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/RootTabBarFeatureDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureDemoApp;
+				PRODUCT_NAME = RootTabBarFeatureDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = STAGE;
+		};
+		8F98ED23E16D2EA251CCDAB5 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/RootTabBarFeatureTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureTests;
+				PRODUCT_NAME = RootTabBarFeatureTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RootTabBarFeatureDemoApp.app/RootTabBarFeatureDemoApp";
+				TEST_TARGET_NAME = RootTabBarFeatureDemoApp;
+			};
+			name = STAGE;
+		};
+		92E94580B0E69505BD7742F1 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/RootTabBarFeatureTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureTests;
+				PRODUCT_NAME = RootTabBarFeatureTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RootTabBarFeatureDemoApp.app/RootTabBarFeatureDemoApp";
+				TEST_TARGET_NAME = RootTabBarFeatureDemoApp;
+			};
+			name = DEV;
+		};
+		9D1B64236E5109309C124833 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/RootTabBarFeatureUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureUITests;
+				PRODUCT_NAME = RootTabBarFeatureUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RootTabBarFeatureDemoApp;
+			};
+			name = STAGE;
+		};
+		AFB1E78F13CCD6CAFB3EE042 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/RootTabBarFeatureTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureTests;
+				PRODUCT_NAME = RootTabBarFeatureTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RootTabBarFeatureDemoApp.app/RootTabBarFeatureDemoApp";
+				TEST_TARGET_NAME = RootTabBarFeatureDemoApp;
+			};
+			name = PROD;
+		};
+		B691F18755FD58727F874BD2 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureInterface;
+				PRODUCT_NAME = RootTabBarFeatureInterface;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		BF169870E114BDC98C38E888 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeature;
+				PRODUCT_NAME = RootTabBarFeature;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+		E24F4E0ED3A12BB1DA6FF2DC /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/RootTabBarFeatureTesting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureTesting;
+				PRODUCT_NAME = RootTabBarFeatureTesting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = DEV;
+		};
+		EA9194317FA6F6E44105A00A /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C051DA5065F6E3E2A58D196 /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2L2K3UD2LK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = STAGE;
+		};
+		EECDC2085ACD9E04902C9672 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeature;
+				PRODUCT_NAME = RootTabBarFeature;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = STAGE;
+		};
+		F7252DEFC0AB2A8E347DCF5A /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/RootTabBarFeatureDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureDemoApp;
+				PRODUCT_NAME = RootTabBarFeatureDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+		FDC6440745C20AB2DF15B9F0 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/RootTabBarFeatureUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.RootTabBarFeatureUITests;
+				PRODUCT_NAME = RootTabBarFeatureUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RootTabBarFeatureDemoApp;
+			};
+			name = DEV;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F301CACFFA360666EBF775F /* Build configuration list for PBXNativeTarget "RootTabBarFeatureTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E24F4E0ED3A12BB1DA6FF2DC /* DEV */,
+				23ADB7516552A1C41CD2BA22 /* PROD */,
+				39955C19F3904F9E77E71CF1 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		3516DD6DE47A558DA37AD882 /* Build configuration list for PBXProject "RootTabBarFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				549BCEC8A777B29111555A54 /* DEV */,
+				5DECF52EB7B7484F933B62EA /* PROD */,
+				EA9194317FA6F6E44105A00A /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		51F5267750408536797FACD0 /* Build configuration list for PBXNativeTarget "RootTabBarFeatureDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A6ACEADE47F8BB191F84C43 /* DEV */,
+				F7252DEFC0AB2A8E347DCF5A /* PROD */,
+				64914DEDC2255C9A35203D2C /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		79A1BED07AD5A61A7A2A7B29 /* Build configuration list for PBXNativeTarget "RootTabBarFeatureInterface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B691F18755FD58727F874BD2 /* DEV */,
+				06A10C7180833FD1105EF2E4 /* PROD */,
+				56F70743930B4BED6D57243D /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		8073AB57DB3BEF387DF2B27E /* Build configuration list for PBXNativeTarget "RootTabBarFeatureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC6440745C20AB2DF15B9F0 /* DEV */,
+				444156FBEF43192DB9184E7C /* PROD */,
+				9D1B64236E5109309C124833 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		9ABCF7B66F7D9C0EF649983B /* Build configuration list for PBXNativeTarget "RootTabBarFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44586E3DF9A28CCE719AB37E /* DEV */,
+				BF169870E114BDC98C38E888 /* PROD */,
+				EECDC2085ACD9E04902C9672 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		A92568F428194D38BB2AF801 /* Build configuration list for PBXNativeTarget "RootTabBarFeatureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E94580B0E69505BD7742F1 /* DEV */,
+				AFB1E78F13CCD6CAFB3EE042 /* PROD */,
+				8F98ED23E16D2EA251CCDAB5 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6142ED1653FE280EEA1AF464 /* Project object */;
+}

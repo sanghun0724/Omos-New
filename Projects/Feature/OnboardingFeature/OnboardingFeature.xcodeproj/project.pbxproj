@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,9 +17,11 @@
 		06A08F8BDC5606B1AA874725 /* OnboardingFeatureTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9A646737831F7B0EAF5A77 /* OnboardingFeatureTesting.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07E3D9840A0D667CE187043F /* AuthSupportedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F11FA47075E9DBEA01756BA /* AuthSupportedView.swift */; };
 		086BC1C77203C79ADB1C459C /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB4AE09F0ED3D696BC5AB583 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B062BB931ABC724FBE9F14F /* libMyRecordFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B36306456E16866BCE641F /* libMyRecordFeature.a */; platformFilter = ios; };
 		0BBB645819D32F0A76745DEB /* RxKakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C30C69A8A513E333551FE4 /* RxKakaoSDKShare.framework */; platformFilter = ios; };
 		0D6CA808965E61E9023E204F /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB4AE09F0ED3D696BC5AB583 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E0524FEFE0B563C3FBF5D0A /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF37252A179F73CF842E1BA /* KakaoSDKStory.framework */; platformFilter = ios; };
+		0E28F0F6E3585FB77974C0B7 /* libAllRecordFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A37858F2DBE318688A3F1AE8 /* libAllRecordFeature.a */; platformFilter = ios; };
 		0E62AE08B5E2E6ED041C58B5 /* OnboardingInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7428644BAF7508F9FCE5B1E /* OnboardingInterface.swift */; };
 		0F6FC0C2B61D368EB7D5FDED /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2264F83C6F4FC836D88101BA /* libAppFoundation.a */; platformFilter = ios; };
 		0F858995846C631E29E460AF /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5E0DC553AEFD9CCE325300 /* LogFlume.framework */; platformFilter = ios; };
@@ -52,6 +54,7 @@
 		336E151B693ED8297C6744BB /* AgreementListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07B55A917427684AD26864 /* AgreementListView.swift */; };
 		33D71BE8162D7E4A568942A9 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E7753C95E811E2DD85216F /* RIBs.framework */; platformFilter = ios; };
 		362F17BB099E905A5F57322D /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA9696D90FA8A05156E35C4 /* KakaoSDKCommon.framework */; platformFilter = ios; };
+		3BCD83009900C566F1EEA785 /* libAllRecordFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 284BAD13DFCEC52D97072958 /* libAllRecordFeatureInterface.a */; platformFilter = ios; };
 		3EA3331FA144B93F706AC926 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A19E44AFD0D025C9CE6085 /* Differentiator.framework */; platformFilter = ios; };
 		3EB00B5FC64B7705C9831840 /* LoggedInInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E903DC94FFA0E509D21D817 /* LoggedInInterface.swift */; };
 		3EDBF0458CD583C6401BFE83 /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45284B228B5E474A2B232D50 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
@@ -63,7 +66,6 @@
 		4960A2D5F2A6A9385E53E583 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806B6DAFBD72D66A6FE7C008 /* RxDataSources.framework */; platformFilter = ios; };
 		49CAB5D964FAE1FDB2F1B758 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F5F776A8262ED3473D454A /* ReactorKit.framework */; platformFilter = ios; };
 		49FE5E069421B642151422C8 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 733333D807B534B1459731F9 /* libDesignSystem.a */; platformFilter = ios; };
-		4AEB287C114AA66C9F2123D1 /* libTodayFeatureInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = D5AA7BD081697FE6AFFA9F8C /* libTodayFeatureInterface.a */; platformFilter = ios; };
 		4B13A1741F39ECB28FAB272A /* libOnboardingFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F91BC389C331264001A8DC /* libOnboardingFeature.a */; platformFilter = ios; };
 		4D4C4126471FB668D099CDFC /* OnboardingFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9A646737831F7B0EAF5A77 /* OnboardingFeatureTesting.framework */; platformFilter = ios; };
 		4E9B5EEA3678F7BDCDCD0ABC /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9017D466E74697705798439B /* SkeletonView.framework */; platformFilter = ios; };
@@ -75,6 +77,7 @@
 		57C65E0DBEF065F6EEF99529 /* EmailSignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A332562C954075C47005B80 /* EmailSignUpBuilder.swift */; };
 		57D418AD07C08A1322B8D138 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F90E33F511203EC5C08C607 /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5980821EB0D6473F8FFAD242 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21FC63EC2DC6DCB4772DD2C5 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A58F5D752F7F037882A7984 /* libMyDJFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF456F0F37E433F3C46FF14 /* libMyDJFeatureInterface.a */; platformFilter = ios; };
 		5C6AC6064F0F2C727149C03E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A38DAC55EAD22089181B106 /* Alamofire.framework */; platformFilter = ios; };
 		5C98A36FF573E7A667D4D85B /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416E5863D5608899EE889A06 /* RxKakaoSDKStory.framework */; platformFilter = ios; };
 		5D48564482CF4F20A670D975 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73BBC8DBA8CFE96E0AF61F7 /* OnboardingInteractor.swift */; };
@@ -103,6 +106,7 @@
 		7FFA6F6F38A3F642418DF35B /* AppRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122B25CC23EB1DACE12D82CB /* AppRootRouter.swift */; };
 		879945F4D339B4B0FD916A41 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A410CF9EF1871AE7DC48DBE /* Kingfisher.framework */; platformFilter = ios; };
 		88780BFDE55D921BDB0D0E53 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9241DB5F7949C5E054432204 /* AppComponent.swift */; };
+		8955C178D5DA7C95D391CEE7 /* libMyDJFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7E3E38E9303E6C0F6713D5 /* libMyDJFeature.a */; platformFilter = ios; };
 		8A33B84AE193E50E304F9CA0 /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 332538DD109211CD5FB4866D /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
 		8B7693A94FC723E7566AAD37 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF88F06AFA7D765864772231 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
 		8CD9E56A094C5C3A5ABBA551 /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F8AB373B5D19601F772CB6 /* WeakMapTable.framework */; platformFilter = ios; };
@@ -116,12 +120,14 @@
 		9A22716690167A12AF143D97 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FC63EC2DC6DCB4772DD2C5 /* SnapKit.framework */; platformFilter = ios; };
 		9A8E1AD111E3F393572EF068 /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB396925CAF1D49FC6F93C12 /* RxKakaoSDKUser.framework */; platformFilter = ios; };
 		9B302D999069BCC18B565F67 /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 018D5E50741CCDD7213EE1CF /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
+		9CB066BB7455E00E6BC3B666 /* libMyPageFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB7FB0CE485669D42F65919 /* libMyPageFeatureInterface.a */; platformFilter = ios; };
 		9F2D631C8B4CD06092782F77 /* SignUpInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3571C928D80FB78AD8CFA7D /* SignUpInterface.swift */; };
 		A0443F6C9B8D0AD4443E8423 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400DDD3CCDB0BF2CF03BA37 /* OnboardingRouter.swift */; };
 		A18F1298D4AF43D6999436E3 /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC42C35FC991C9D5A5F49B0E /* libBaseDomain.a */; platformFilter = ios; };
 		A200279B39EB8913BE4C840F /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA979152CA31393A556B401 /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
 		A377F2A5F02A61112F7644D2 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158C84E9001CA96501B11A1 /* AgreementViewController.swift */; };
 		A58955D795335A9F8AC45B9F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F334EEE4DCC5475ABFD0D793 /* OnboardingViewController.swift */; };
+		A716645961B2CF2B4509A6E1 /* libRootTabBarFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 853937BB725D4B30310782C9 /* libRootTabBarFeatureInterface.a */; platformFilter = ios; };
 		AC505145337CF7DAC03F8AAB /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E9F5CC5F45082A4921E19 /* NeedleGenerated.swift */; };
 		ACD0DF4F150F62C46C7B1952 /* PasswordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6A63A2DFA951E6E48EFAAB /* PasswordBuilder.swift */; };
 		AD0A7215C763648DFA605D0D /* BottomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3578839318BEFD216EF9EBA8 /* BottomButtonsView.swift */; };
@@ -130,6 +136,7 @@
 		B118F73F28C1C04C4EEE4966 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF157FC4A83132453835FCD7 /* SceneDelegate.swift */; };
 		B233E7BF14E5EBA316DD2365 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF331694F0499F871513003 /* LoggedInViewController.swift */; };
 		B40650A55668C8514098AD52 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF88F06AFA7D765864772231 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
+		B526A92C37ACE27430D05F41 /* libRootTabBarFeatureInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 853937BB725D4B30310782C9 /* libRootTabBarFeatureInterface.a */; platformFilter = ios; };
 		B7F95C82BC4651099D954316 /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB396925CAF1D49FC6F93C12 /* RxKakaoSDKUser.framework */; platformFilter = ios; };
 		B8110AE7024869EDDD00203C /* LoggedInStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75506F5E8A0FF055A7B162FA /* LoggedInStateAction.swift */; };
 		B843E59A07CC8D6A1EAEFB79 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 733333D807B534B1459731F9 /* libDesignSystem.a */; platformFilter = ios; };
@@ -150,6 +157,7 @@
 		D0ACC9C2E3CEB7E97C903E0E /* AgreementRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94DB2B8E7921446659F05D /* AgreementRouter.swift */; };
 		D24711C89F224260367EAE2E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E985ED1FD1437652E29EAF /* RxCocoa.framework */; platformFilter = ios; };
 		D2519F82E37530D01BDE787B /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6E077DC774E7DB71000261E /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D34B30751294C5F1E56FA8CA /* libRootTabBarFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C680543845339FCF36F5C21 /* libRootTabBarFeature.a */; platformFilter = ios; };
 		D4AB2E4484807D9630227FF0 /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DA924E38D49D9A462AB1E6 /* RxAlamofire.framework */; platformFilter = ios; };
 		D674FCD066984C76872712C0 /* libOnboardingFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F02B0217A47CC7F0FBAA503 /* libOnboardingFeatureInterface.a */; platformFilter = ios; };
 		D817C2B3F50F33C7F80F2E5B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063E04A65263220DC1C0A288 /* CFNetwork.framework */; };
@@ -161,11 +169,13 @@
 		E687F2F8D34192E08F93F8E5 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD67D44281293C6A815B50F /* RxGesture.framework */; platformFilter = ios; };
 		E7FAA43D713E0634FED60D77 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CF0E0D52FAA1D38C2736EE /* InfoViewController.swift */; };
 		E80EF21A01EF70BD5E44F708 /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2733DFAC962027A7B7C4BCE /* AppRootInteractor.swift */; };
+		EC99D7C5E8DE6F85E0F5740E /* libMyRecordFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2405ED9C346620BEDCD139 /* libMyRecordFeatureInterface.a */; platformFilter = ios; };
 		ED6E5B76859D2E1E6FF4BE69 /* libTodayFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD49DDEE58A2CFCFA388585 /* libTodayFeature.a */; platformFilter = ios; };
 		EED837E88F84C3D02D5D7567 /* EmailSignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5305DEBF50FAD7874DC396D1 /* EmailSignUpInteractor.swift */; };
 		F1E83E431273F9502CA0FCDF /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6E077DC774E7DB71000261E /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F28B10039F00C672BF8EE507 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EBAD28361CD01CDD934847 /* libBaseShared.a */; platformFilter = ios; };
 		F2CF1EEC179C770DF51C9C71 /* NicknameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129F5F5DC79D94D6C763F914 /* NicknameInteractor.swift */; };
+		F314BD0006C145C151A0E094 /* libMyPageFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD5FA5CD5789D5623D14B69 /* libMyPageFeature.a */; platformFilter = ios; };
 		F3175BCDAC781792815CB9D7 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB3FEF4FB24C9C1B198F6AD /* ReactorKitRuntime.framework */; platformFilter = ios; };
 		F33B0EE90FDC8340B0787195 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063E04A65263220DC1C0A288 /* CFNetwork.framework */; };
 		F3B70AFA387F83F4ED3ACF55 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21FC63EC2DC6DCB4772DD2C5 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -323,7 +333,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				1644E3EB1FE6740E12036877 /* libOnboardingFeatureInterface.a in Dependencies */,
-				4AEB287C114AA66C9F2123D1 /* libTodayFeatureInterface.a in Dependencies */,
+				B526A92C37ACE27430D05F41 /* libRootTabBarFeatureInterface.a in Dependencies */,
 			);
 			name = Dependencies;
 			runOnlyForDeploymentPostprocessing = 1;
@@ -367,8 +377,10 @@
 		21FC63EC2DC6DCB4772DD2C5 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2264F83C6F4FC836D88101BA /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E7753C95E811E2DD85216F /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		284BAD13DFCEC52D97072958 /* libAllRecordFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAllRecordFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		287F1F2725108C26D64FF1B0 /* OnboardingFeatureTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingFeatureTesting-Info.plist"; sourceTree = "<group>"; };
 		28E985ED1FD1437652E29EAF /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C680543845339FCF36F5C21 /* libRootTabBarFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRootTabBarFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		332538DD109211CD5FB4866D /* libGlobalThirdPartyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlobalThirdPartyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A53B8702A7EFA574C37C06 /* RxKakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3578839318BEFD216EF9EBA8 /* BottomButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtonsView.swift; sourceTree = "<group>"; };
@@ -383,6 +395,7 @@
 		47F421CBE031AC0BBB5E68AB /* libRecordDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A451C2FB0741863E9C65EC6 /* TuistBundle+OnboardingFeatureDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+OnboardingFeatureDemoApp.swift"; sourceTree = "<group>"; };
 		4AD67D44281293C6A815B50F /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7E3E38E9303E6C0F6713D5 /* libMyDJFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyDJFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF331694F0499F871513003 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		4DA9696D90FA8A05156E35C4 /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB7380A01FC4B2DA9E5D868 /* OnboardingFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingFeatureTests-Info.plist"; sourceTree = "<group>"; };
@@ -405,13 +418,16 @@
 		733333D807B534B1459731F9 /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		75506F5E8A0FF055A7B162FA /* LoggedInStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInStateAction.swift; sourceTree = "<group>"; };
 		7A410CF9EF1871AE7DC48DBE /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AF456F0F37E433F3C46FF14 /* libMyDJFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyDJFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DC988B3CF5A309E17D394A9 /* ValidationCodeAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCodeAlertView.swift; sourceTree = "<group>"; };
 		806B6DAFBD72D66A6FE7C008 /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8158C84E9001CA96501B11A1 /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		84153BCB0521B2684600E113 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		853937BB725D4B30310782C9 /* libRootTabBarFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRootTabBarFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C3126A781476433863601D /* AgreementInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementInterface.swift; sourceTree = "<group>"; };
 		8A2FE4BBA603ED5A0F701364 /* OnboardingFeatureDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardingFeatureDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D21B0B0C626328A1FE6FE2A /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E2405ED9C346620BEDCD139 /* libMyRecordFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F11FA47075E9DBEA01756BA /* AuthSupportedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSupportedView.swift; sourceTree = "<group>"; };
 		9017D466E74697705798439B /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F108A30D55193BBBC7C5BF /* AppRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewController.swift; sourceTree = "<group>"; };
@@ -422,12 +438,15 @@
 		9E903DC94FFA0E509D21D817 /* LoggedInInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInterface.swift; sourceTree = "<group>"; };
 		A210D5BF27191C637EB64F10 /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
 		A34FF508545ED4E26DD9BDAF /* OnboardingFeatureDemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OnboardingFeatureDemoApp-Info.plist"; sourceTree = "<group>"; };
+		A37858F2DBE318688A3F1AE8 /* libAllRecordFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAllRecordFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E077DC774E7DB71000261E /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7428644BAF7508F9FCE5B1E /* OnboardingInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInterface.swift; sourceTree = "<group>"; };
 		A8F8AB373B5D19601F772CB6 /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9B36306456E16866BCE641F /* libMyRecordFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB396925CAF1D49FC6F93C12 /* RxKakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA979152CA31393A556B401 /* RxKakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD637B5736C7A8967EDF0D94 /* EmailSignUpStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpStateAction.swift; sourceTree = "<group>"; };
+		ADD5FA5CD5789D5623D14B69 /* libMyPageFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyPageFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE925E17F56385C8C44D4EAD /* NicknameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRouter.swift; sourceTree = "<group>"; };
 		AF157FC4A83132453835FCD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B2C30C69A8A513E333551FE4 /* RxKakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -456,6 +475,7 @@
 		EB4AE09F0ED3D696BC5AB583 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED94DB2B8E7921446659F05D /* AgreementRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementRouter.swift; sourceTree = "<group>"; };
 		EDB3FEF4FB24C9C1B198F6AD /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEB7FB0CE485669D42F65919 /* libMyPageFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyPageFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2733DFAC962027A7B7C4BCE /* AppRootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootInteractor.swift; sourceTree = "<group>"; };
 		F334EEE4DCC5475ABFD0D793 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F5972C7D5A7A81D638CC0B6D /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -503,6 +523,8 @@
 			files = (
 				F33B0EE90FDC8340B0787195 /* CFNetwork.framework in Frameworks */,
 				5C6AC6064F0F2C727149C03E /* Alamofire.framework in Frameworks */,
+				0E28F0F6E3585FB77974C0B7 /* libAllRecordFeature.a in Frameworks */,
+				3BCD83009900C566F1EEA785 /* libAllRecordFeatureInterface.a in Frameworks */,
 				75DC8746BA81314A8963FB1C /* libAppFoundation.a in Frameworks */,
 				329E0916512DB8EB24220882 /* libBaseDomain.a in Frameworks */,
 				F28B10039F00C672BF8EE507 /* libBaseShared.a in Frameworks */,
@@ -519,6 +541,12 @@
 				66B3846CF361962FB9FAA599 /* KakaoSDKUser.framework in Frameworks */,
 				879945F4D339B4B0FD916A41 /* Kingfisher.framework in Frameworks */,
 				0F858995846C631E29E460AF /* LogFlume.framework in Frameworks */,
+				8955C178D5DA7C95D391CEE7 /* libMyDJFeature.a in Frameworks */,
+				5A58F5D752F7F037882A7984 /* libMyDJFeatureInterface.a in Frameworks */,
+				F314BD0006C145C151A0E094 /* libMyPageFeature.a in Frameworks */,
+				9CB066BB7455E00E6BC3B666 /* libMyPageFeatureInterface.a in Frameworks */,
+				0B062BB931ABC724FBE9F14F /* libMyRecordFeature.a in Frameworks */,
+				EC99D7C5E8DE6F85E0F5740E /* libMyRecordFeatureInterface.a in Frameworks */,
 				AED20FA742E66E55F46BF190 /* NeedleFoundation.framework in Frameworks */,
 				45634F13FCA1B93EEA8FAC31 /* libOnboardingDomain.a in Frameworks */,
 				3EDBF0458CD583C6401BFE83 /* libOnboardingDomainInterface.a in Frameworks */,
@@ -530,6 +558,8 @@
 				050D7478D2FE6F3EF2FE3ABA /* ReactorKitRuntime.framework in Frameworks */,
 				D0927A3001C4FC648EC68FB4 /* libRecordDomain.a in Frameworks */,
 				02FED68AAB7FF251D4D68037 /* libRecordDomainInterface.a in Frameworks */,
+				D34B30751294C5F1E56FA8CA /* libRootTabBarFeature.a in Frameworks */,
+				A716645961B2CF2B4509A6E1 /* libRootTabBarFeatureInterface.a in Frameworks */,
 				922FF2B4CC47449A37C4F57B /* RxAlamofire.framework in Frameworks */,
 				D24711C89F224260367EAE2E /* RxCocoa.framework in Frameworks */,
 				4960A2D5F2A6A9385E53E583 /* RxDataSources.framework in Frameworks */,
@@ -862,18 +892,28 @@
 				184D6841C7BBCA17A43DF14D /* KakaoSDKTemplate.framework */,
 				C631ECEE79A0F810D8F718DA /* KakaoSDKUser.framework */,
 				7A410CF9EF1871AE7DC48DBE /* Kingfisher.framework */,
+				A37858F2DBE318688A3F1AE8 /* libAllRecordFeature.a */,
+				284BAD13DFCEC52D97072958 /* libAllRecordFeatureInterface.a */,
 				2264F83C6F4FC836D88101BA /* libAppFoundation.a */,
 				CC42C35FC991C9D5A5F49B0E /* libBaseDomain.a */,
 				63EBAD28361CD01CDD934847 /* libBaseShared.a */,
 				8D21B0B0C626328A1FE6FE2A /* libCoreKit.a */,
 				733333D807B534B1459731F9 /* libDesignSystem.a */,
 				332538DD109211CD5FB4866D /* libGlobalThirdPartyLibrary.a */,
+				4C7E3E38E9303E6C0F6713D5 /* libMyDJFeature.a */,
+				7AF456F0F37E433F3C46FF14 /* libMyDJFeatureInterface.a */,
+				ADD5FA5CD5789D5623D14B69 /* libMyPageFeature.a */,
+				EEB7FB0CE485669D42F65919 /* libMyPageFeatureInterface.a */,
+				A9B36306456E16866BCE641F /* libMyRecordFeature.a */,
+				8E2405ED9C346620BEDCD139 /* libMyRecordFeatureInterface.a */,
 				BC9B78370ECC27CF0258DA84 /* libOnboardingDomain.a */,
 				45284B228B5E474A2B232D50 /* libOnboardingDomainInterface.a */,
 				50F91BC389C331264001A8DC /* libOnboardingFeature.a */,
 				3F02B0217A47CC7F0FBAA503 /* libOnboardingFeatureInterface.a */,
 				47F421CBE031AC0BBB5E68AB /* libRecordDomain.a */,
 				C76E1D2664F038CCEAAD4F8E /* libRecordDomainInterface.a */,
+				2C680543845339FCF36F5C21 /* libRootTabBarFeature.a */,
+				853937BB725D4B30310782C9 /* libRootTabBarFeatureInterface.a */,
 				FBD49DDEE58A2CFCFA388585 /* libTodayFeature.a */,
 				D5AA7BD081697FE6AFFA9F8C /* libTodayFeatureInterface.a */,
 				0F5E0DC553AEFD9CCE325300 /* LogFlume.framework */,
@@ -1150,7 +1190,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources\n";
+			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources";
 		};
 /* End PBXShellScriptBuildPhase section */
 
