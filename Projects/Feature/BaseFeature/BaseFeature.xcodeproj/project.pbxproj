@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0763E46298DAB390AB77CE32 /* keep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD02B680EE2186171834AC3 /* keep.swift */; };
 		079F0E947BA9BFE849F84EB7 /* libMyRecordFeature.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 327FD33AF1495C98BC610185 /* libMyRecordFeature.a */; platformFilter = ios; };
 		0F9C9A5A0A6056058EE5BC12 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCF6636754272E14D3D56FD /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
 		13863202A544B07A53BA3B2B /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC31856E25C9838C9B30AB8 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
@@ -56,6 +55,7 @@
 		CE9B52FFF144FA90466297F3 /* libMyRecordFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327FD33AF1495C98BC610185 /* libMyRecordFeature.a */; platformFilter = ios; };
 		D7FAF71C3E3C637CCFAC25AA /* libRootTabBarFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56823FEC50DBE7D8E0153B72 /* libRootTabBarFeatureInterface.a */; platformFilter = ios; };
 		DA477886EF815C8EAC52E964 /* libMyDJFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD68D8D0646DF2F40028999 /* libMyDJFeatureInterface.a */; platformFilter = ios; };
+		DE36707F2A76223D00E8117B /* ImagePrefetchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE36707E2A76223D00E8117B /* ImagePrefetchWorker.swift */; };
 		E05997E68E6B5B845A5F7418 /* libMyRecordFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CC3FF8A1B9E5DC146FCDA /* libMyRecordFeatureInterface.a */; platformFilter = ios; };
 		E20775696268A91E7AB17154 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBFF120CDCDA78FC140C5C5 /* NeedleFoundation.framework */; platformFilter = ios; };
 		E49B56CA7E4B8BE659F3425D /* libOnboardingFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C14F79214200815D38064B92 /* libOnboardingFeatureInterface.a */; platformFilter = ios; };
@@ -176,7 +176,6 @@
 		9BE76AE2DD7FF60C46F8D986 /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1EB8BC54E5275EE7575877 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E61D6F5C22618F3A6DCD497 /* libMyDJFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyDJFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FD02B680EE2186171834AC3 /* keep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keep.swift; sourceTree = "<group>"; };
 		AC0D1C882BC506BAF5DE17F9 /* KakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD68D8D0646DF2F40028999 /* libMyDJFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyDJFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B726FD6F494C37B0933AE2BF /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +190,7 @@
 		C93E88327264C4D19ACBAC3A /* libGlobalThirdPartyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlobalThirdPartyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBCF6636754272E14D3D56FD /* RxKakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CAA1818CA6BF2D3191A862 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE36707E2A76223D00E8117B /* ImagePrefetchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetchWorker.swift; sourceTree = "<group>"; };
 		DE65FAFCF155AB755A893DB6 /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3CC3FF8A1B9E5DC146FCDA /* libMyRecordFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9215874C66D137C692181B /* libRecordDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -358,7 +358,7 @@
 		8E91FF2A9C053B3772C7ADA0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9FD02B680EE2186171834AC3 /* keep.swift */,
+				DE36707D2A76223200E8117B /* Worker */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -389,6 +389,14 @@
 			);
 			name = XCConfig;
 			path = ../../../XCConfig;
+			sourceTree = "<group>";
+		};
+		DE36707D2A76223200E8117B /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				DE36707E2A76223D00E8117B /* ImagePrefetchWorker.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 		ECD029807238FF7190E91003 /* Derived */ = {
@@ -456,8 +464,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 4EE1677BF24D75545FB65C55 /* Build configuration list for PBXProject "BaseFeature" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -509,7 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0763E46298DAB390AB77CE32 /* keep.swift in Sources */,
+				DE36707F2A76223D00E8117B /* ImagePrefetchWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

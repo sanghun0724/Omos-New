@@ -116,7 +116,7 @@ final class OnboardingRouter:
             )
         )
         attachChild(router)
-        viewController.show(router.viewControllable)
+        viewController.presentFullScreen(router.viewControllable, animated: false, completion: nil)
     }
     
 }

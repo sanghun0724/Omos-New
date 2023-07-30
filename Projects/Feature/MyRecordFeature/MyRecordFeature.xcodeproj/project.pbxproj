@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -64,7 +64,6 @@
 		8A0C019EC2DC6751EC5E35FD /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456E541EC48148A83601D546 /* KakaoSDKShare.framework */; platformFilter = ios; };
 		8BB666A678FEF4B39157251D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA31180C07E929FE0E5EE22 /* RxCocoa.framework */; platformFilter = ios; };
 		8D9998FA010F1E58172C6C21 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FCB02DABE863D18DADD04B /* libDesignSystem.a */; platformFilter = ios; };
-		8EBB8E7073DD8FA09421E80D /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE7FCAD9882698B13954FB2 /* Source.swift */; };
 		8EFAA2830CBAEF26C0A08587 /* TuistBundle+MyRecordFeatureDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B6E5DE11AE15083CC30A1 /* TuistBundle+MyRecordFeatureDemoApp.swift */; };
 		945078A14E429A89A1730CAE /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E5D2386B6C3842B8AB12C2 /* LogFlume.framework */; platformFilter = ios; };
 		94957F0EAF961322B472D82F /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E045E23323156656DB7123F /* Differentiator.framework */; platformFilter = ios; };
@@ -100,6 +99,11 @@
 		D73F7559E639CC002A9C5598 /* libMyRecordFeatureInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 5D4BAA1711DED5432A429946 /* libMyRecordFeatureInterface.a */; platformFilter = ios; };
 		D81834D1EB444003C15AF981 /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B23A7E87919DEE950235814 /* KakaoSDKStory.framework */; platformFilter = ios; };
 		D8FF5972383EFB7BF48D5D82 /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAF45EFFA65042934D73FD47 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE3670772A750B1E00E8117B /* MyRecordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3670732A750B1E00E8117B /* MyRecordRouter.swift */; };
+		DE3670782A750B1E00E8117B /* MyRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3670742A750B1E00E8117B /* MyRecordViewController.swift */; };
+		DE3670792A750B1E00E8117B /* MyRecordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3670752A750B1E00E8117B /* MyRecordBuilder.swift */; };
+		DE36707A2A750B1E00E8117B /* MyRecordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3670762A750B1E00E8117B /* MyRecordInteractor.swift */; };
+		DE36707C2A750B2F00E8117B /* MyRecordStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE36707B2A750B2E00E8117B /* MyRecordStateAction.swift */; };
 		DE45D3BE2F73E720E747BBDA /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD34B82DEFF007E10423529C /* ReactorKit.framework */; platformFilter = ios; };
 		E21E4875A99F3B9A33AED40D /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66091008BAA8084C17C5A376 /* WeakMapTable.framework */; platformFilter = ios; };
 		E419F1BCFAA484E8A35538F3 /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E41B17A34AF069F9CEF330C9 /* libRecordDomain.a */; platformFilter = ios; };
@@ -313,7 +317,6 @@
 		436837878A5C79042E9971D3 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
 		456E541EC48148A83601D546 /* KakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4613A283C2382822E15BAC46 /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DE7FCAD9882698B13954FB2 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		5D4BAA1711DED5432A429946 /* libMyRecordFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		635F1B6DD87063B4FD8EAD12 /* libOnboardingDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66091008BAA8084C17C5A376 /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -348,6 +351,11 @@
 		CD6067E263D31B18BCB8B22C /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		D59D33261DF176DAF7240C61 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6896EF5098427DCAB4789FE /* KakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3670732A750B1E00E8117B /* MyRecordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordRouter.swift; sourceTree = "<group>"; };
+		DE3670742A750B1E00E8117B /* MyRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordViewController.swift; sourceTree = "<group>"; };
+		DE3670752A750B1E00E8117B /* MyRecordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordBuilder.swift; sourceTree = "<group>"; };
+		DE3670762A750B1E00E8117B /* MyRecordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordInteractor.swift; sourceTree = "<group>"; };
+		DE36707B2A750B2E00E8117B /* MyRecordStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordStateAction.swift; sourceTree = "<group>"; };
 		E3100724BAED5263A8427BFC /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41B17A34AF069F9CEF330C9 /* libRecordDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43B09C74EC0D81097472825 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
@@ -669,7 +677,11 @@
 		E9900C71787C31AFE06BCA51 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				4DE7FCAD9882698B13954FB2 /* Source.swift */,
+				DE3670732A750B1E00E8117B /* MyRecordRouter.swift */,
+				DE3670742A750B1E00E8117B /* MyRecordViewController.swift */,
+				DE3670752A750B1E00E8117B /* MyRecordBuilder.swift */,
+				DE3670762A750B1E00E8117B /* MyRecordInteractor.swift */,
+				DE36707B2A750B2E00E8117B /* MyRecordStateAction.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -928,7 +940,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EBB8E7073DD8FA09421E80D /* Source.swift in Sources */,
+				DE3670792A750B1E00E8117B /* MyRecordBuilder.swift in Sources */,
+				DE36707C2A750B2F00E8117B /* MyRecordStateAction.swift in Sources */,
+				DE3670782A750B1E00E8117B /* MyRecordViewController.swift in Sources */,
+				DE36707A2A750B1E00E8117B /* MyRecordInteractor.swift in Sources */,
+				DE3670772A750B1E00E8117B /* MyRecordRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

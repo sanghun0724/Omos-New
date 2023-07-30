@@ -91,3 +91,11 @@ public struct DetailRecordResponse: Codable {
         case viewsCnt
     }
 }
+
+public struct UserIDRequest: Codable {
+    let userId: Int
+    
+    public init(userId: Int) {
+        self.userId  = userId
+    }
+}

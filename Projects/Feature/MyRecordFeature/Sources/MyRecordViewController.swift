@@ -1,8 +1,9 @@
 //
-//  TodayViewController.swift
-//  omos
+//  MyRecordViewController.swift
+//  MyRecordFeature
 //
-//  Created by sangheon on 2023/05/23.
+//  Created by 이상헌 on 2023/07/29.
+//  Copyright © 2023 Omos. All rights reserved.
 //
 
 import UIKit
@@ -11,37 +12,36 @@ import RIBs
 import RxCocoa
 import RxSwift
 
-import OnboardingDomain
 import DesignSystem
-import TodayFeatureInterface
 
-// MARK: - TodayViewController
+// MARK: - MyRecordViewController
 
-final class TodayViewController:
+final class MyRecordViewController:
     BaseViewController,
-    TodayPresentable,
-    TodayViewControllable
+    MyRecordPresentable,
+    MyRecordViewControllable,
+    LoadingStreamBindable,
+    ErrorStreamBindable,
+    HasTableView
 {
     
     // MARK: - Constants
     
     private enum UI {
-        
+        static let cellHeight: CGFloat = 128
     }
     
     // MARK: - Properties
     
-    weak var listener: TodayPresentableListener?
+    weak var listener: MyRecordPresentableListener?
     
-    private let actionRelay = PublishRelay<TodayPresentableListener.Action>()
+    private let actionRelay = PublishRelay<MyRecordPresentableListener.Action>()
     
     // MARK: - UI Components
     
-    private lazy var stackView = UIStackView().builder
-        .axis(.vertical)
-        .alignment(.fill)
-        .distribution(.equalSpacing)
-        .spacing(4)
+    var tableView = UITableView().builder
+        .backgroundColor(.red)
+        .rowHeight(UI.cellHeight)
         .build()
     
     // MARK: - Initialization & Deinitialization
@@ -57,18 +57,16 @@ final class TodayViewController:
         setupUI()
         bindUI()
         bind(listener: self.listener)
-        contentView.backgroundColor = .purple
     }
 }
 
-
 // MARK: Private methods
 
-extension TodayViewController {}
+extension MyRecordViewController {}
 
 // MARK: - Bind UI
 
-extension TodayViewController {
+extension MyRecordViewController {
     private func bindUI() {
         
     }
@@ -76,9 +74,12 @@ extension TodayViewController {
 
 // MARK: - Bind listener
 
-extension TodayViewController {
-    private func bind(listener: TodayPresentableListener?) {
+extension MyRecordViewController {
+    private func bind(listener: MyRecordPresentableListener?) {
         guard let listener = listener else { return }
+        self.bindActionRelay()
+        bindActions()
+        bindState(from: listener)
     }
     
     private func bindActionRelay() {
@@ -92,7 +93,7 @@ extension TodayViewController {
 
 // MARK: - Binding Action
 
-extension TodayViewController {
+extension MyRecordViewController {
     private func bindActions() {
         
     }
@@ -100,33 +101,35 @@ extension TodayViewController {
 
 // MARK: - Binding State
 
-extension TodayViewController {
-    private func bindState(from listener: TodayListener) {
+extension MyRecordViewController {
+    private func bindState(from listener: MyRecordPresentableListener) {
         
     }
 }
 
 // MARK: - Layout
 
-extension TodayViewController {
+extension MyRecordViewController {
     private func setupUI() {
-        
+        contentView.addSubview(tableView)
         self.layout()
     }
     
     private func layout() {
-        
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 }
 
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-struct TodayPreView: PreviewProvider {
+struct MyRecordPreView: PreviewProvider {
     static var previews: some SwiftUI.View {
         ForEach(Device.deviceNames, id: \.self) { deviceName in
             UIViewControllerPreview {
-                let viewController = TodayViewController()
+                let viewController = MyRecordViewController()
                 
                 return UINavigationController(rootViewController: viewController)
             }

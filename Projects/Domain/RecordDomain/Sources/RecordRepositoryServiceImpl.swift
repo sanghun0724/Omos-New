@@ -15,11 +15,21 @@ import AppFoundation
 import CoreKit
 import RecordDomainInterface
 
-public class RecordRepositoryServiceImpl {
-    private let recordRepositoryService: RecordRepositoryService
+public class RecordRepositoryServiceImpl: RecordRepositoryService {
+    private let recordRepository : RecordRepository
     
-    public init(recordRepositoryService: RecordRepositoryService) {
-        self.recordRepositoryService = recordRepositoryService
+    public init(
+        recordRepository: RecordRepository
+    ) {
+        self.recordRepository = recordRepository
+    }
+    
+    func requestMyRecords(userID: Int) -> Observable<Bool> {
+        // we can make user info as singletone
+        let _ = recordRepository.requestMyRecord(request: UserIDRequest(userId: 22))
+            .asObservable()
+            
+        return .empty()
     }
 }
 
