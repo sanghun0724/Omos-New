@@ -13,22 +13,13 @@ import RxSwift
 import BaseDomain
 import RecordDomainInterface
 import AppFoundation
-
-// MARK: - MyRecordRouting
-
-protocol MyRecordRouting: ViewableRouting {
-    
-}
+import MyRecordFeatureInterface
 
 // MARK: - MyRecordPresentable
 
 protocol MyRecordPresentable: Presentable {
     var listener: MyRecordPresentableListener? { get set }
 }
-
-// MARK: - MyRecordListener
-
-protocol MyRecordListener: AnyObject {}
 
 // MARK: - MyRecordInteractor
 
@@ -48,7 +39,7 @@ final class MyRecordInteractor:
      case setError(MyError)
      case setLoading(Bool)
      case setRefresh(Bool)
-     case myRecordModelSection()
+     //case myRecordModelSection()
     }
     
     // MARK: - Properties

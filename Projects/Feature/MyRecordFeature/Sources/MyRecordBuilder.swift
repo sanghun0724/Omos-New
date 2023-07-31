@@ -11,6 +11,7 @@ import RIBs
 
 import BaseDomain
 import RecordDomainInterface
+import MyRecordFeatureInterface
 
 // MARK: - MyRecordDependency
 
@@ -19,24 +20,12 @@ protocol MyRecordDependency: NeedleFoundation.Dependency {
     var recordRepositoryService: RecordRepositoryService { get }
 }
 
-// MARK: - MyRecordBuildDependency
-
-struct MyRecordBuildDependency {
-    let listener: MyRecordListener
-}
-
 // MARK: - MyRecordComponent
 
 final class MyRecordComponent: NeedleFoundation.Component<MyRecordDependency> {
     fileprivate var initialState: MyRecordPresentableState {
         MyRecordPresentableState()
     }
-}
-
-// MARK: - MyRecordBuildable
-
-protocol MyRecordBuildable: Buildable {
-    func build(with dynamicBuildDependency: MyRecordBuildDependency) -> MyRecordRouting
 }
 
 // MARK: - MyRecordBuilder
@@ -59,6 +48,9 @@ final class MyRecordBuilder:
         )
         
         interactor.listener = payload.listener
-        return MyRecordRouter(interactor: interactor, viewController: viewController)
+        return MyRecordRouter(
+            interactor: interactor,
+            viewController: viewController
+        )
     }
 }

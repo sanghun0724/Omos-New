@@ -8,6 +8,8 @@
 
 import RIBs
 
+import MyRecordFeatureInterface
+
 // MARK: - MyRecordInteractable
 
 protocol MyRecordInteractable: Interactable {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,7 +23,6 @@
 		1E65350203AEC2774AD9C42C /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9435F23151544A3EE5410CA /* KakaoSDKTalk.framework */; platformFilter = ios; };
 		21952E80319A898A6E7900AD /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53A1B8B52A158D9C2838EAF /* RxKakaoSDKUser.framework */; platformFilter = ios; };
 		236489529804B0DFE090AE15 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5E36127410AC6C34137284 /* RxSwift.framework */; platformFilter = ios; };
-		238286DA452242A09B1D718D /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50724D99F1A9B54FF84775 /* Source.swift */; };
 		299A424A1B57765CEC980882 /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E06FBEBFD822CE9375370B /* libCoreKit.a */; platformFilter = ios; };
 		2CC83FD2015B4D618136AF9C /* libMyPageFeatureInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 0692E88C0CB4C1B17141879E /* libMyPageFeatureInterface.a */; platformFilter = ios; };
 		2E6D2B3C014BE73020370AE7 /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849AB32E38FD3AD2873552D6 /* RxKakaoSDKStory.framework */; platformFilter = ios; };
@@ -103,6 +102,11 @@
 		D58E2C12C882E3B8180ACEBA /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B09CC9D18041154DB36F63E /* ReactorKit.framework */; platformFilter = ios; };
 		D703B92871BA860E1141D80C /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791DE997CE7CA7D6045036A5 /* NeedleFoundation.framework */; platformFilter = ios; };
 		D88ACD2A2D6A22501D56CA87 /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 283E6DBC69514C641D359744 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
+		DE36709B2A778DA000E8117B /* MyPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3670972A778DA000E8117B /* MyPageRouter.swift */; };
+		DE36709C2A778DA000E8117B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3670982A778DA000E8117B /* MyPageViewController.swift */; };
+		DE36709D2A778DA000E8117B /* MyPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3670992A778DA000E8117B /* MyPageBuilder.swift */; };
+		DE36709E2A778DA000E8117B /* MyPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE36709A2A778DA000E8117B /* MyPageInteractor.swift */; };
+		DE3670A02A778DB000E8117B /* MyPageStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE36709F2A778DB000E8117B /* MyPageStateAction.swift */; };
 		E04DD9C76783FA483439EB82 /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E668B9A18D63AF3B1B3B337D /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
 		E068360808F4F11FBC88BF04 /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E06FBEBFD822CE9375370B /* libCoreKit.a */; platformFilter = ios; };
 		E38B47E4CE27D5FF7A5DFC4F /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0455E8A95ED0C08A5E0AC0E2 /* KakaoSDKCommon.framework */; platformFilter = ios; };
@@ -333,7 +337,6 @@
 		849AB32E38FD3AD2873552D6 /* RxKakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E0D887E69D6B13F407F2AB /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD02ED5C28CAF5C0621BB97 /* MyPageFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPageFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E50724D99F1A9B54FF84775 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		8FA6CEB62DCD653658E4566A /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAFA3466EA07CE976F0D59B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90632A23C808BE4B7DF4325E /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -350,6 +353,11 @@
 		C1120F4A861F7ABAF5D9FA68 /* KakaoSDKTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97D07B773BC5478E7F8BD55 /* KakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6B544D5E661AA09F0BDE50 /* TuistBundle+MyPageFeatureDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+MyPageFeatureDemoApp.swift"; sourceTree = "<group>"; };
+		DE3670972A778DA000E8117B /* MyPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageRouter.swift; sourceTree = "<group>"; };
+		DE3670982A778DA000E8117B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		DE3670992A778DA000E8117B /* MyPageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageBuilder.swift; sourceTree = "<group>"; };
+		DE36709A2A778DA000E8117B /* MyPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageInteractor.swift; sourceTree = "<group>"; };
+		DE36709F2A778DB000E8117B /* MyPageStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageStateAction.swift; sourceTree = "<group>"; };
 		E2BADFE5DB80878DA53C5357 /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		E35AF6D276941FC0586BD9F7 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E668B9A18D63AF3B1B3B337D /* libGlobalThirdPartyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlobalThirdPartyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -567,7 +575,11 @@
 		996C496A05EAF1BC86DB5D4C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8E50724D99F1A9B54FF84775 /* Source.swift */,
+				DE3670972A778DA000E8117B /* MyPageRouter.swift */,
+				DE3670982A778DA000E8117B /* MyPageViewController.swift */,
+				DE3670992A778DA000E8117B /* MyPageBuilder.swift */,
+				DE36709A2A778DA000E8117B /* MyPageInteractor.swift */,
+				DE36709F2A778DB000E8117B /* MyPageStateAction.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -926,7 +938,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				238286DA452242A09B1D718D /* Source.swift in Sources */,
+				DE36709D2A778DA000E8117B /* MyPageBuilder.swift in Sources */,
+				DE36709E2A778DA000E8117B /* MyPageInteractor.swift in Sources */,
+				DE3670A02A778DB000E8117B /* MyPageStateAction.swift in Sources */,
+				DE36709C2A778DA000E8117B /* MyPageViewController.swift in Sources */,
+				DE36709B2A778DA000E8117B /* MyPageRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
