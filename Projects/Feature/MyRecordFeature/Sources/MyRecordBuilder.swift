@@ -9,9 +9,15 @@
 import NeedleFoundation
 import RIBs
 
+import BaseDomain
+import RecordDomainInterface
+
 // MARK: - MyRecordDependency
 
-protocol MyRecordDependency: NeedleFoundation.Dependency {}
+protocol MyRecordDependency: NeedleFoundation.Dependency {
+    var imagePrefetchWorker: ImagePrefetchWorking { get }
+    var recordRepositoryService: RecordRepositoryService { get }
+}
 
 // MARK: - MyRecordBuildDependency
 
@@ -45,7 +51,12 @@ final class MyRecordBuilder:
       _ payload: MyRecordBuildDependency
     ) -> MyRecordRouting {
         let viewController = MyRecordViewController()
-        let interactor = MyRecordInteractor(presenter: viewController, initialState: component.initialState)
+        let interactor = MyRecordInteractor(
+            presenter: viewController,
+            initialState: component.initialState,
+            imagePrefechWorker: component.imagePrefetchWorker,
+            recordRepositoryService: component.recordRepositoryService
+        )
         
         interactor.listener = payload.listener
         return MyRecordRouter(interactor: interactor, viewController: viewController)

@@ -518,7 +518,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon.Omos;
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.Omos;
 				PRODUCT_NAME = Omos;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
@@ -604,7 +604,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon.Omos;
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.Omos;
 				PRODUCT_NAME = Omos;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
@@ -743,7 +743,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon.Omos;
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.Omos;
 				PRODUCT_NAME = Omos;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
@@ -769,7 +769,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon.Omos;
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.Omos;
 				PRODUCT_NAME = Omos;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
@@ -795,7 +795,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sangheon.Omos;
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.Omos;
 				PRODUCT_NAME = Omos;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;

@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		006A2495B1E96D25C35A8259 /* RxKakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBFE6D9310E2D3674451B1D /* RxKakaoSDKAuth.framework */; platformFilter = ios; };
 		01134C309E509984C6890324 /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5D33F889E6BE6FF7AB5042 /* Testing.swift */; };
+		01417468A57BE9F28AC17AE6 /* MyRecordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1639769153911B471A65E21 /* MyRecordInteractor.swift */; };
 		032FD6F99D8C16D9819B8282 /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F1B6DD87063B4FD8EAD12 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
 		0463968742AE430C6AC1F530 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAFB196D25E52D49DB389488 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04D8C9DDF0240ACC9E098CD1 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4613A283C2382822E15BAC46 /* RIBs.framework */; platformFilter = ios; };
@@ -16,6 +17,7 @@
 		108AA4242914BA1D08DAFB0D /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D59D33261DF176DAF7240C61 /* libAppFoundation.a */; platformFilter = ios; };
 		12168054DA0AEEAF02B87497 /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B05F9CF9F3CB6AFE048CA2 /* RxKakaoSDKStory.framework */; platformFilter = ios; };
 		138BA3E5657FF7569BA16140 /* RxKakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD4E7CD9EC7A9D470535FD2 /* RxKakaoSDKShare.framework */; platformFilter = ios; };
+		17987BB3A94C1A5C27918D4A /* MyRecordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DBA58E4C532EA15D895EC /* MyRecordRouter.swift */; };
 		181A396315571F2C4586387E /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436837878A5C79042E9971D3 /* Interface.swift */; };
 		193607F338033F0E2CB9A23D /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CB171ADB01FC6A0A9E5811 /* libOnboardingDomain.a */; platformFilter = ios; };
 		1A8795223CD342A786E13EC8 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE8DAF15495EFD468CF8835 /* libBaseShared.a */; platformFilter = ios; };
@@ -40,6 +42,7 @@
 		53A4D37C0B66B8772D6BA9DF /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAF45EFFA65042934D73FD47 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		545504EB06C63BFF756B65EA /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6896EF5098427DCAB4789FE /* KakaoSDKTalk.framework */; platformFilter = ios; };
 		578358EC2815B5D5F2572864 /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FFEF695E972BEAA68373FF /* RxAlamofire.framework */; platformFilter = ios; };
+		58DC491F7ADDDC05178C40A0 /* MyRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BD67BADB12C0889B60E798 /* MyRecordViewController.swift */; };
 		5B05571AD7B0B2B0654CCF07 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8995354C1CA8340428DACAF /* KakaoSDKAuth.framework */; platformFilter = ios; };
 		5DA6F1704FEE7761DEC0D86A /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C24948266442A871CCCC89A5 /* libBaseDomain.a */; platformFilter = ios; };
 		5DAF024F1336C5D03A2FA007 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E3100724BAED5263A8427BFC /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -99,16 +102,13 @@
 		D73F7559E639CC002A9C5598 /* libMyRecordFeatureInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 5D4BAA1711DED5432A429946 /* libMyRecordFeatureInterface.a */; platformFilter = ios; };
 		D81834D1EB444003C15AF981 /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B23A7E87919DEE950235814 /* KakaoSDKStory.framework */; platformFilter = ios; };
 		D8FF5972383EFB7BF48D5D82 /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAF45EFFA65042934D73FD47 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3670772A750B1E00E8117B /* MyRecordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3670732A750B1E00E8117B /* MyRecordRouter.swift */; };
-		DE3670782A750B1E00E8117B /* MyRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3670742A750B1E00E8117B /* MyRecordViewController.swift */; };
-		DE3670792A750B1E00E8117B /* MyRecordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3670752A750B1E00E8117B /* MyRecordBuilder.swift */; };
-		DE36707A2A750B1E00E8117B /* MyRecordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3670762A750B1E00E8117B /* MyRecordInteractor.swift */; };
-		DE36707C2A750B2F00E8117B /* MyRecordStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE36707B2A750B2E00E8117B /* MyRecordStateAction.swift */; };
+		DCA3523DC5EF942382542ECD /* MyRecordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA60E5526922BF3C386BD6F /* MyRecordBuilder.swift */; };
 		DE45D3BE2F73E720E747BBDA /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD34B82DEFF007E10423529C /* ReactorKit.framework */; platformFilter = ios; };
 		E21E4875A99F3B9A33AED40D /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66091008BAA8084C17C5A376 /* WeakMapTable.framework */; platformFilter = ios; };
 		E419F1BCFAA484E8A35538F3 /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E41B17A34AF069F9CEF330C9 /* libRecordDomain.a */; platformFilter = ios; };
 		E4DDBDB12C6BB4E2D881CC4B /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680D14E4A75CB9DBEF282B8D /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
 		E623EA268FF19535ED8D2714 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084D24F763C93105F4775486 /* RxDataSources.framework */; platformFilter = ios; };
+		E699803ECBD46270D66E88AB /* MyRecordStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B11F30ACB960089C142004 /* MyRecordStateAction.swift */; };
 		EAB1536BEB9E5AFC2DC38ADC /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B99C422F3413FBBDCDEA35C /* RxKakaoSDKUser.framework */; platformFilter = ios; };
 		EBF0BCFBD4EF0176A2E5FB59 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC01A69773339057DCBF5042 /* RxGesture.framework */; platformFilter = ios; };
 		EC11B431F8F180CD569B31E7 /* MyRecordFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9842F8CD1159CE4D894AD8ED /* MyRecordFeatureTesting.framework */; platformFilter = ios; };
@@ -318,6 +318,7 @@
 		456E541EC48148A83601D546 /* KakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4613A283C2382822E15BAC46 /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4BAA1711DED5432A429946 /* libMyRecordFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		62BD67BADB12C0889B60E798 /* MyRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordViewController.swift; sourceTree = "<group>"; };
 		635F1B6DD87063B4FD8EAD12 /* libOnboardingDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66091008BAA8084C17C5A376 /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		680D14E4A75CB9DBEF282B8D /* RxKakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,6 +333,7 @@
 		840F5361EC6A32ABE4A50600 /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B99C422F3413FBBDCDEA35C /* RxKakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9552DA8E4192CF50B9247747 /* libGlobalThirdPartyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlobalThirdPartyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		95B11F30ACB960089C142004 /* MyRecordStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordStateAction.swift; sourceTree = "<group>"; };
 		9842F8CD1159CE4D894AD8ED /* MyRecordFeatureTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyRecordFeatureTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		991088CD179D62DC0984DBE4 /* NeedleFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeedleFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E045E23323156656DB7123F /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -341,6 +343,7 @@
 		A8CB171ADB01FC6A0A9E5811 /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43353E9609825F37E7E8E3A /* libMyRecordFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD34B82DEFF007E10423529C /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFA60E5526922BF3C386BD6F /* MyRecordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordBuilder.swift; sourceTree = "<group>"; };
 		C093DED2F4824120525A6838 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24948266442A871CCCC89A5 /* libBaseDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A19CF55D4B471F32FEEA7D /* MyRecordFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyRecordFeatureTests-Info.plist"; sourceTree = "<group>"; };
@@ -351,11 +354,6 @@
 		CD6067E263D31B18BCB8B22C /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		D59D33261DF176DAF7240C61 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6896EF5098427DCAB4789FE /* KakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE3670732A750B1E00E8117B /* MyRecordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordRouter.swift; sourceTree = "<group>"; };
-		DE3670742A750B1E00E8117B /* MyRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordViewController.swift; sourceTree = "<group>"; };
-		DE3670752A750B1E00E8117B /* MyRecordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordBuilder.swift; sourceTree = "<group>"; };
-		DE3670762A750B1E00E8117B /* MyRecordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordInteractor.swift; sourceTree = "<group>"; };
-		DE36707B2A750B2E00E8117B /* MyRecordStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordStateAction.swift; sourceTree = "<group>"; };
 		E3100724BAED5263A8427BFC /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41B17A34AF069F9CEF330C9 /* libRecordDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43B09C74EC0D81097472825 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
@@ -363,6 +361,8 @@
 		E8995354C1CA8340428DACAF /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB64A3026DBE7DA5F2B92731 /* DesignSystem_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystem_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6C00D51820CFDCEA84FEE7 /* MyRecordFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyRecordFeatureUITests-Info.plist"; sourceTree = "<group>"; };
+		EE7DBA58E4C532EA15D895EC /* MyRecordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordRouter.swift; sourceTree = "<group>"; };
+		F1639769153911B471A65E21 /* MyRecordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordInteractor.swift; sourceTree = "<group>"; };
 		F5FCB02DABE863D18DADD04B /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B2293CE9782CC50475143F /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD4E7CD9EC7A9D470535FD2 /* RxKakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -677,11 +677,11 @@
 		E9900C71787C31AFE06BCA51 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DE3670732A750B1E00E8117B /* MyRecordRouter.swift */,
-				DE3670742A750B1E00E8117B /* MyRecordViewController.swift */,
-				DE3670752A750B1E00E8117B /* MyRecordBuilder.swift */,
-				DE3670762A750B1E00E8117B /* MyRecordInteractor.swift */,
-				DE36707B2A750B2E00E8117B /* MyRecordStateAction.swift */,
+				BFA60E5526922BF3C386BD6F /* MyRecordBuilder.swift */,
+				F1639769153911B471A65E21 /* MyRecordInteractor.swift */,
+				EE7DBA58E4C532EA15D895EC /* MyRecordRouter.swift */,
+				95B11F30ACB960089C142004 /* MyRecordStateAction.swift */,
+				62BD67BADB12C0889B60E798 /* MyRecordViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -940,11 +940,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE3670792A750B1E00E8117B /* MyRecordBuilder.swift in Sources */,
-				DE36707C2A750B2F00E8117B /* MyRecordStateAction.swift in Sources */,
-				DE3670782A750B1E00E8117B /* MyRecordViewController.swift in Sources */,
-				DE36707A2A750B1E00E8117B /* MyRecordInteractor.swift in Sources */,
-				DE3670772A750B1E00E8117B /* MyRecordRouter.swift in Sources */,
+				DCA3523DC5EF942382542ECD /* MyRecordBuilder.swift in Sources */,
+				01417468A57BE9F28AC17AE6 /* MyRecordInteractor.swift in Sources */,
+				17987BB3A94C1A5C27918D4A /* MyRecordRouter.swift in Sources */,
+				E699803ECBD46270D66E88AB /* MyRecordStateAction.swift in Sources */,
+				58DC491F7ADDDC05178C40A0 /* MyRecordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

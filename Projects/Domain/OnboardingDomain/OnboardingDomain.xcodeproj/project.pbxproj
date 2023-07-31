@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -257,6 +257,7 @@
 		C9DCD24F388F2AA2474D6387 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72BC70A3A4799235C3527A7 /* OnboardingDomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingDomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93EBDBF3AF568FB2FA6FB42 /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE36708F2A77767800E8117B /* ImagePrefetchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetchWorker.swift; sourceTree = "<group>"; };
 		E0BAB14952D8AAD7DEADC0BD /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DF9947BE11CA3C5C6D537C /* KakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F98095DA05954655ACFC85C9 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -436,6 +437,7 @@
 		7DCA271EE9A974D75353C7EE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				DE3670902A77767800E8117B /* Worker */,
 				54E46D577E4EF9ABB1A8ED2D /* OnboardingDomainTest.swift */,
 			);
 			path = Tests;
@@ -497,6 +499,15 @@
 			);
 			name = XCConfig;
 			path = ../../../XCConfig;
+			sourceTree = "<group>";
+		};
+		DE3670902A77767800E8117B /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				DE36708F2A77767800E8117B /* ImagePrefetchWorker.swift */,
+			);
+			name = Worker;
+			path = ../../BaseDomain/Sources/Worker;
 			sourceTree = "<group>";
 		};
 		FFA46078C450070C99B88904 /* Products */ = {
@@ -636,8 +647,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 817A0A7AB5537251D8D4C8FB /* Build configuration list for PBXProject "OnboardingDomain" */;
 			compatibilityVersion = "Xcode 13.0";

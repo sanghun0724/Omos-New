@@ -24,16 +24,17 @@ public final class RecordRepositoryServiceImpl: RecordRepositoryService {
     public init(
         recordRepository: RecordRepository,
         recordTranslator: RecordTranslator
-        
     ) {
         self.recordRepository = recordRepository
         self.recordTranslator = recordTranslator
     }
     
-    public func requestMyRecords(userId: Int) -> Observable<MyRecordModel> {
+    public func requestMyRecords(userId: Int) -> Observable<Void> {
         recordRepository.requestMyRecord(request: .init(userId: userId))
             .asObservable()
             .map(MyRecordModel.init(myRecordResponse:))
+        
+        return .empty()
     }
     
     func update() {}

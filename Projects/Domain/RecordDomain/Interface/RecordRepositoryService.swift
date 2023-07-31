@@ -11,5 +11,5 @@ public protocol RecordRepositoryService: MyRecordRepositoryService {}
 // MARK: - RecordRepositoryService
 
 public protocol MyRecordRepositoryService {
-    func requestMyRecords(userId: Int) -> Observable<MyRecordModel>
+    func requestMyRecords(userId: Int) -> Observable<Void>
 }

@@ -1,6 +1,7 @@
 
 
 import AppFoundation
+import BaseDomain
 import CoreKit
 import DesignSystem
 import NeedleFoundation
@@ -9,6 +10,8 @@ import OnboardingDomainInterface
 import OnboardingFeature
 import OnboardingFeatureInterface
 import RIBs
+import RecordDomain
+import RecordDomainInterface
 import RootTabBarFeature
 import RootTabBarFeatureInterface
 import TodayFeature

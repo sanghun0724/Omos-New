@@ -8,12 +8,15 @@
 import NeedleFoundation
 
 import CoreKit
+import BaseDomain
 import OnboardingDomain
 import OnboardingDomainInterface
 import OnboardingFeature
 import OnboardingFeatureInterface
 import TodayFeature
 import TodayFeatureInterface
+import RecordDomain
+import RecordDomainInterface
 
 // MARK: AppComponent
 

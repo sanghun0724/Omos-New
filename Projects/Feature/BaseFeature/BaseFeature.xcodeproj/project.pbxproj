@@ -55,7 +55,7 @@
 		CE9B52FFF144FA90466297F3 /* libMyRecordFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327FD33AF1495C98BC610185 /* libMyRecordFeature.a */; platformFilter = ios; };
 		D7FAF71C3E3C637CCFAC25AA /* libRootTabBarFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56823FEC50DBE7D8E0153B72 /* libRootTabBarFeatureInterface.a */; platformFilter = ios; };
 		DA477886EF815C8EAC52E964 /* libMyDJFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD68D8D0646DF2F40028999 /* libMyDJFeatureInterface.a */; platformFilter = ios; };
-		DE36707F2A76223D00E8117B /* ImagePrefetchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE36707E2A76223D00E8117B /* ImagePrefetchWorker.swift */; };
+		DE36708E2A7775F300E8117B /* keep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE36708D2A7775F200E8117B /* keep.swift */; };
 		E05997E68E6B5B845A5F7418 /* libMyRecordFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CC3FF8A1B9E5DC146FCDA /* libMyRecordFeatureInterface.a */; platformFilter = ios; };
 		E20775696268A91E7AB17154 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBFF120CDCDA78FC140C5C5 /* NeedleFoundation.framework */; platformFilter = ios; };
 		E49B56CA7E4B8BE659F3425D /* libOnboardingFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C14F79214200815D38064B92 /* libOnboardingFeatureInterface.a */; platformFilter = ios; };
@@ -170,6 +170,7 @@
 		7C97091DF1387DEDE42D5689 /* KakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF28E066549975BABE0A46F /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8458661BA4EDF69EA92C3397 /* libMyPageFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyPageFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8656C96369097C628BBD0130 /* ImagePrefetchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetchWorker.swift; sourceTree = "<group>"; };
 		8AB6DC05ACAFC02A94CDA0F5 /* RxKakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA3F410FF73D6858A79F3C4 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F64E7A53E116854BA7F55B /* libOnboardingFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,7 +191,7 @@
 		C93E88327264C4D19ACBAC3A /* libGlobalThirdPartyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlobalThirdPartyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBCF6636754272E14D3D56FD /* RxKakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CAA1818CA6BF2D3191A862 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE36707E2A76223D00E8117B /* ImagePrefetchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetchWorker.swift; sourceTree = "<group>"; };
+		DE36708D2A7775F200E8117B /* keep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keep.swift; sourceTree = "<group>"; };
 		DE65FAFCF155AB755A893DB6 /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3CC3FF8A1B9E5DC146FCDA /* libMyRecordFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9215874C66D137C692181B /* libRecordDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -347,6 +348,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		65B304D6CC5C82664909ACF1 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				8656C96369097C628BBD0130 /* ImagePrefetchWorker.swift */,
+			);
+			name = Worker;
+			path = ../../../Domain/OnboardingDomain/Tests/Worker;
+			sourceTree = "<group>";
+		};
 		7F1F8F573C6872A34BE9655D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,7 +368,8 @@
 		8E91FF2A9C053B3772C7ADA0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DE36707D2A76223200E8117B /* Worker */,
+				65B304D6CC5C82664909ACF1 /* Worker */,
+				DE36708D2A7775F200E8117B /* keep.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -389,14 +400,6 @@
 			);
 			name = XCConfig;
 			path = ../../../XCConfig;
-			sourceTree = "<group>";
-		};
-		DE36707D2A76223200E8117B /* Worker */ = {
-			isa = PBXGroup;
-			children = (
-				DE36707E2A76223D00E8117B /* ImagePrefetchWorker.swift */,
-			);
-			path = Worker;
 			sourceTree = "<group>";
 		};
 		ECD029807238FF7190E91003 /* Derived */ = {
@@ -515,7 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE36707F2A76223D00E8117B /* ImagePrefetchWorker.swift in Sources */,
+				DE36708E2A7775F300E8117B /* keep.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,9 @@ import ReactorKit
 import RIBs
 import RxSwift
 
-import BaseFeature
+import BaseDomain
+import RecordDomainInterface
+import AppFoundation
 
 // MARK: - MyRecordRouting
 
@@ -43,7 +45,10 @@ final class MyRecordInteractor:
     typealias State = MyRecordPresentableState
     
     enum Mutation {
-        
+     case setError(MyError)
+     case setLoading(Bool)
+     case setRefresh(Bool)
+     case myRecordModelSection()
     }
     
     // MARK: - Properties
@@ -52,15 +57,20 @@ final class MyRecordInteractor:
     weak var listener: MyRecordListener?
     
     let initialState: MyRecordPresentableState
+    private let imagePrefetchWorker: ImagePrefetchWorking
+    private let recordRepositoryService: RecordRepositoryService
     
     // MARK: - Initialization & Deinitialization
     
     init(
         presenter: MyRecordPresentable,
         initialState: MyRecordPresentableState,
-        imagePrefechWorker: ImagePrefet
+        imagePrefechWorker: ImagePrefetchWorking,
+        recordRepositoryService: RecordRepositoryService
     ) {
         self.initialState = initialState
+        self.imagePrefetchWorker = imagePrefechWorker
+        self.recordRepositoryService = recordRepositoryService
         
         super.init(presenter: presenter)
         presenter.listener = self
@@ -77,7 +87,8 @@ final class MyRecordInteractor:
 
 extension MyRecordInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
-        
+     
+        return .empty()
     }
 }
 
@@ -86,6 +97,8 @@ extension MyRecordInteractor {
 extension MyRecordInteractor {
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
+        
+        
         
         return newState
     }

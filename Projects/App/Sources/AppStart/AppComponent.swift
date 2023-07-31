@@ -8,6 +8,7 @@
 import NeedleFoundation
 
 import CoreKit
+import BaseDomain
 import OnboardingDomain
 import OnboardingDomainInterface
 import TodayFeature
@@ -16,6 +17,8 @@ import OnboardingFeature
 import OnboardingFeatureInterface
 import RootTabBarFeature
 import RootTabBarFeatureInterface
+import RecordDomain
+import RecordDomainInterface
 
 // MARK: AppComponent
 
@@ -82,10 +85,29 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
             RootTabBarComponent(parent: self)
         }
     }
+    
+    var imagePrefetchWorker: ImagePrefetchWorking {
+        ImagePrefetchWorker()
+    }
+    
+    var recordRepositoryService: RecordRepositoryService {
+        RecordRepositoryServiceImpl(
+            recordRepository: recordRepository,
+            recordTranslator: recordTranslator
+        )
+    }
 }
 
 extension AppComponent {
     private var onboardingRepository: OnboardingRepository {
         OnboardingRepositoryImpl(networkingProvider: Networking())
+    }
+    
+    private var recordRepository: RecordRepository {
+        RecordRepositoryImpl(networkingProvider: Networking())
+    }
+    
+    private var recordTranslator: RecordTranslator {
+        RecordTranslatorImpl()
     }
 }
