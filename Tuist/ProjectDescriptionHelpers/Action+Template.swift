@@ -17,7 +17,7 @@ public extension TargetScript {
         FILE_PATH="$SRCROOT/Demo/Sources/AppStart"
         export PATH="$PATH:/opt/homebrew/bin"
         export SOURCEKIT_LOGGING=0 && needle generate "${FILE_PATH}/NeedleGenerated.swift" \
-        "$SRCROOT/../" \
+        "$SRCROOT/Demo/Sources/" \
         --exclude-suffixes Tests Mocks \
         --exclude-paths /Sample /Tests /Resources
         """,

@@ -7,12 +7,13 @@
 
 import RIBs
 
-import TodayFeatureInterface
+import RootTabBarFeatureInterface
 import OnboardingFeatureInterface
+
 
 // MARK: - LoggedInInteractable
 
-protocol LoggedInInteractable: Interactable, TodayListener, EmailSignUpListener {
+protocol LoggedInInteractable: Interactable, RootTabBarListener, EmailSignUpListener {
     var router: LoggedInRouting? { get set }
     var listener: LoggedInListener? { get set }
 }
@@ -26,8 +27,8 @@ final class LoggedInRouter:
     LoggedInRouting
 {
     
-    private let todayBuilder: TodayBuildable
-    private var todayRouter: TodayRouting?
+    private let rootTabBarBuilder: RootTabBarBuildable
+    private var rootTabBarRouter: RootTabBarRouting?
     
     private let emailSignUpBuilder: EmailSignUpBuildable
     private var emailSignUpRouter: EmailSignUpRouting?
@@ -35,12 +36,12 @@ final class LoggedInRouter:
     // MARK: - initialization * Deinitialization
     
     init(
-        todayBuilder: TodayBuildable,
+        rootTabBarBuilder: RootTabBarBuildable,
          emailSignUpBuilder: EmailSignUpBuildable,
         interactor: LoggedInInteractable,
          viewController: LoggedInViewControllable
     ) {
-        self.todayBuilder = todayBuilder
+        self.rootTabBarBuilder = rootTabBarBuilder
         self.emailSignUpBuilder = emailSignUpBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self

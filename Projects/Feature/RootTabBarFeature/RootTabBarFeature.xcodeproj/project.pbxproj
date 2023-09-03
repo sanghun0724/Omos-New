@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -118,6 +118,12 @@
 		DB2260AF7442FABA0C30C64A /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702721CC44DABD274EEE32BD /* RxKakaoSDKStory.framework */; platformFilter = ios; };
 		DCAD6B7FDF83BB9310E3046D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80519D7E32D5B8BC6F942B90 /* RxSwift.framework */; platformFilter = ios; };
 		DCECCFE13F7FE6B0A23FEA0A /* libMyPageFeature.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 33A28CE38A7871302AF9A32E /* libMyPageFeature.a */; platformFilter = ios; };
+		DE6776162AA45F2500FBD7DF /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6776152AA45F2500FBD7DF /* AppComponent.swift */; };
+		DE67761B2AA45F5400FBD7DF /* AppRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6776172AA45F5400FBD7DF /* AppRootRouter.swift */; };
+		DE67761C2AA45F5400FBD7DF /* AppRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6776182AA45F5400FBD7DF /* AppRootViewController.swift */; };
+		DE67761D2AA45F5400FBD7DF /* AppRootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6776192AA45F5400FBD7DF /* AppRootBuilder.swift */; };
+		DE67761E2AA45F5400FBD7DF /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67761A2AA45F5400FBD7DF /* AppRootInteractor.swift */; };
+		DE6776202AA47B5000FBD7DF /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67761F2AA47B5000FBD7DF /* NeedleGenerated.swift */; };
 		E1FF61F17051454035CD1EAE /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C119EE7B831AEAA0CFF23 /* Testing.swift */; };
 		E3871704CE8B5436AED40B33 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F57025215A84EBB912448303 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E4978D2EB10ECA83767155FC /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57025215A84EBB912448303 /* RxCocoa.framework */; platformFilter = ios; };
@@ -383,6 +389,12 @@
 		D2CF47526B803EB2D703E8FD /* libRootTabBarFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRootTabBarFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76937C23B66F2C9F31871EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA4AD1513B3E49E3D888E4F /* RxKakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE6776152AA45F2500FBD7DF /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		DE6776172AA45F5400FBD7DF /* AppRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootRouter.swift; sourceTree = "<group>"; };
+		DE6776182AA45F5400FBD7DF /* AppRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewController.swift; sourceTree = "<group>"; };
+		DE6776192AA45F5400FBD7DF /* AppRootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootBuilder.swift; sourceTree = "<group>"; };
+		DE67761A2AA45F5400FBD7DF /* AppRootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootInteractor.swift; sourceTree = "<group>"; };
+		DE67761F2AA47B5000FBD7DF /* NeedleGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		E09F6A812D0C532A747302FF /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EECD7F5030308999E8E36A /* RxAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53DACF0635557A8CA65663E /* RxKakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -581,7 +593,8 @@
 		484E57B11F54123499993669 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D76937C23B66F2C9F31871EC /* AppDelegate.swift */,
+				DE6776142AA45EA900FBD7DF /* AppStart */,
+				DE6776132AA45EA200FBD7DF /* AppRoot */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -723,6 +736,27 @@
 				020BD53DD6A2875DC8177F0F /* Sources */,
 			);
 			path = Derived;
+			sourceTree = "<group>";
+		};
+		DE6776132AA45EA200FBD7DF /* AppRoot */ = {
+			isa = PBXGroup;
+			children = (
+				DE6776172AA45F5400FBD7DF /* AppRootRouter.swift */,
+				DE6776182AA45F5400FBD7DF /* AppRootViewController.swift */,
+				DE6776192AA45F5400FBD7DF /* AppRootBuilder.swift */,
+				DE67761A2AA45F5400FBD7DF /* AppRootInteractor.swift */,
+			);
+			path = AppRoot;
+			sourceTree = "<group>";
+		};
+		DE6776142AA45EA900FBD7DF /* AppStart */ = {
+			isa = PBXGroup;
+			children = (
+				DE67761F2AA47B5000FBD7DF /* NeedleGenerated.swift */,
+				D76937C23B66F2C9F31871EC /* AppDelegate.swift */,
+				DE6776152AA45F2500FBD7DF /* AppComponent.swift */,
+			);
+			path = AppStart;
 			sourceTree = "<group>";
 		};
 		F9E03B65E974DAA75DBB4AE9 /* Tests */ = {
@@ -961,7 +995,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources";
+			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/Demo/Sources\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1004,8 +1038,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE67761C2AA45F5400FBD7DF /* AppRootViewController.swift in Sources */,
+				DE67761B2AA45F5400FBD7DF /* AppRootRouter.swift in Sources */,
 				9211F09EB2AD58132EB6B6CD /* AppDelegate.swift in Sources */,
+				DE67761E2AA45F5400FBD7DF /* AppRootInteractor.swift in Sources */,
+				DE6776202AA47B5000FBD7DF /* NeedleGenerated.swift in Sources */,
 				278FE048AB2D82F173A0CEE1 /* TuistBundle+RootTabBarFeatureDemoApp.swift in Sources */,
+				DE6776162AA45F2500FBD7DF /* AppComponent.swift in Sources */,
+				DE67761D2AA45F5400FBD7DF /* AppRootBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

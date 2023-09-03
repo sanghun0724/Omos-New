@@ -11,14 +11,54 @@ import RIBs
 import OnboardingDomainInterface
 import TodayFeatureInterface
 import OnboardingFeatureInterface
+import OnboardingFeature
+import OnboardingFeatureInterface
+import RootTabBarFeature
+import RootTabBarFeatureInterface
 
 protocol AppRootDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
-    var onboardingBuilder: OnboardingBuildable { get }
-    var todayBuilder: TodayBuildable { get }
+    var rootTabBarBuilder: RootTabBarBuildable { get }
 }
 
-final class AppRootComponent: NeedleFoundation.Component<AppRootDependency> {}
+final class AppRootComponent: NeedleFoundation.Component<AppRootDependency> {
+    var onboardingBuilder: OnboardingBuildable {
+        OnboardingBuilder {
+            OnboardingComponent(parent: self)
+        }
+    }
+    
+    var nicknameBuilder: NicknameBuildable {
+        NicknameBuilder {
+            NicknameComponent(parent: self)
+        }
+    }
+    
+    var loggedInBuilder: LoggedInBuildable {
+        LoggedInBuilder {
+            LoggedInComponent(parent: self)
+        }
+    }
+    
+    var emailSignUpBuilder: EmailSignUpBuildable {
+        EmailSignUpBuilder {
+            EmailSignUpComponent(parent: self)
+        }
+    }
+    
+    var passwordBuilder: PasswordBuildable {
+        PasswordBuilder {
+            PasswordComponent(parent: self)
+        }
+    }
+    
+    var agreementBuilder: AgreementBuildable {
+        AgreementBuilder {
+            AgreementComponent(parent: self)
+        }
+    }
+    
+}
 
 // MARK: - Builder
 
@@ -39,7 +79,7 @@ final class AppRootBuilder:
             interactor: interactor,
             viewController: viewController,
             onboardingBuilder: component.onboardingBuilder,
-            todayBuilder: component.todayBuilder
+            rootTabBarBuilder: component.rootTabBarBuilder
             )
     }
 }

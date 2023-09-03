@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,6 +32,7 @@
 		8B45F2E7D34250D153CFABC1 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F751F5AC84E32819D101F9 /* SkeletonView.framework */; platformFilter = ios; };
 		8E8D6EE9382314EE99722317 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002185D7948EEAAC0DA2EF58 /* RxCocoa.framework */; platformFilter = ios; };
 		90FE3FCD0C288289D5AF2E1E /* libOnboardingDomainInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = B4F8FAD4643899D9F99B9A6A /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		91ABD7653D7E1BCD0AAF222F /* ImagePrefetchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA0DC33B974A67742DA5647 /* ImagePrefetchWorker.swift */; };
 		92CDB62DAFD4B2EF9C1BEFE8 /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2386F4DBC75FFF811A4E32E0 /* RxKakaoSDKStory.framework */; platformFilter = ios; };
 		96C99E7F55E22E4F6E36AE7E /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6EE7A181A053EB1BBD2D2F9 /* RxRelay.framework */; platformFilter = ios; };
 		9908DCF1FB36A7F75D4D4EC8 /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80839189FC3A15EE24CFF077 /* RxKakaoSDKUser.framework */; platformFilter = ios; };
@@ -51,7 +52,6 @@
 		CD8EB069F29C7FEB92309413 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52F29E896B9028187127246 /* CFNetwork.framework */; };
 		CF5132C27F9E9F3BBC7471C3 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5462335F8E239A4B45CAF9B /* libOnboardingDomain.a */; platformFilter = ios; };
 		D77854953A170BF85B9F6335 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200D5F73F86F472C97ECD971 /* ReactorKitRuntime.framework */; platformFilter = ios; };
-		DE3670932A77768400E8117B /* ImagePrefetchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3670912A77767D00E8117B /* ImagePrefetchWorker.swift */; };
 		EA4F9881019951E74998AE26 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB2E2F572075F45C09382C7 /* Differentiator.framework */; platformFilter = ios; };
 		EEFE2E242AFD9F12F02C0954 /* libCoreKit.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 25108C81C98E319EC90D3AD6 /* libCoreKit.a */; platformFilter = ios; };
 		F42498336B6DBB3DAA39AF18 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463E21A5FB0F2A04E18B39C1 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
@@ -147,13 +147,13 @@
 		A8E5A5D9EB65CA0278523B17 /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D03584D4A930051353B5F /* BaseDomainTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BaseDomainTests-Info.plist"; sourceTree = "<group>"; };
 		AF12B9E9C886AAA16A56ACA1 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFA0DC33B974A67742DA5647 /* ImagePrefetchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetchWorker.swift; sourceTree = "<group>"; };
 		B4F8FAD4643899D9F99B9A6A /* libOnboardingDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6EE7A181A053EB1BBD2D2F9 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C742DD2E3974AE64E509AE8C /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F367AB70C30A5B50D45796 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B927DE75822041B7A2C87A /* libBaseShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99033B2B209CDED9D09CED8 /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE3670912A77767D00E8117B /* ImagePrefetchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetchWorker.swift; sourceTree = "<group>"; };
 		E3BA227118B9B82FA3043B8E /* KakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5462335F8E239A4B45CAF9B /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2C49B3B0CB6CE09988AEB4 /* RxKakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +244,14 @@
 			path = InfoPlists;
 			sourceTree = "<group>";
 		};
+		231A6FFF723F91A0A7CA97A9 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				AFA0DC33B974A67742DA5647 /* ImagePrefetchWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
 		4588923DFEDB693B645AF693 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,7 +304,7 @@
 		685F2F15BB9ECCCC2D00A010 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DE3670922A77767D00E8117B /* Worker */,
+				231A6FFF723F91A0A7CA97A9 /* Worker */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -341,14 +349,6 @@
 				C8F7876901C5041D3D701A65 /* Frameworks */,
 				4588923DFEDB693B645AF693 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		DE3670922A77767D00E8117B /* Worker */ = {
-			isa = PBXGroup;
-			children = (
-				DE3670912A77767D00E8117B /* ImagePrefetchWorker.swift */,
-			);
-			path = Worker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +400,8 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 642D1B0CEE24125913472891 /* Build configuration list for PBXProject "BaseDomain" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -451,7 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE3670932A77768400E8117B /* ImagePrefetchWorker.swift in Sources */,
+				91ABD7653D7E1BCD0AAF222F /* ImagePrefetchWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +492,6 @@
 		414C6A651B48F2A12C5D7D09 /* DEV */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Derived/InfoPlists/BaseDomainTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -579,7 +580,6 @@
 		73327D6C77A764AE9EEC0759 /* PROD */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Derived/InfoPlists/BaseDomainTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -700,7 +700,6 @@
 		C0AE29986D5B6A40A540EFE7 /* STAGE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Derived/InfoPlists/BaseDomainTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;

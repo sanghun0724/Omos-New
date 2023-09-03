@@ -9,13 +9,11 @@ import RIBs
 
 import DesignSystem
 import OnboardingFeatureInterface
-import TodayFeatureInterface
 
 protocol AppRootInteractable:
     Interactable,
     OnboardingListener,
     EmailSignUpListener,
-    TodayListener,
     PasswordListener,
     AgreementListener,
     NicknameListener

@@ -20,7 +20,8 @@ protocol AppRootPresentableListener: AnyObject {
 final class AppRootViewController:
     BaseViewController,
     AppRootPresentable,
-    AppRootViewControllable {
+    AppRootViewControllable
+ {
     
     // MARK: UI Components
     

@@ -11,7 +11,7 @@ import RIBs
 protocol AppRootRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
     func attachOnboarding()
-    func attachToday()
+    func attachRootTabBar()
 }
 
 protocol AppRootPresentable: Presentable {

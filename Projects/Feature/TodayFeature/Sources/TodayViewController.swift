@@ -37,6 +37,10 @@ final class TodayViewController:
     
     // MARK: - UI Components
     
+    private lazy var scrollView = UIScrollView()
+    
+    private lazy var guideView = UIView()
+    
     private lazy var stackView = UIStackView().builder
         .axis(.vertical)
         .alignment(.fill)

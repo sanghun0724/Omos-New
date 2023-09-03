@@ -43,6 +43,7 @@ public extension ModulePaths {
 
 public extension ModulePaths {
     enum Core: String {
+        case Fetcher
         case CoreKit
         
         func targetName(type: MicroTargetType) -> String {

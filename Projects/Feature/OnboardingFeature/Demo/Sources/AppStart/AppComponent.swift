@@ -17,14 +17,22 @@ import TodayFeature
 import TodayFeatureInterface
 import RecordDomain
 import RecordDomainInterface
+import RootTabBarFeature
+import RootTabBarFeatureInterface
 
 // MARK: AppComponent
 
-final class AppComponent: BootstrapComponent, AppRootDependency {
+final class OnboardingAppComponent: BootstrapComponent, AppRootDependency {
     
     var appRootBuilder: AppRootBuildable {
         AppRootBuilder {
             AppRootComponent(parent: self)
+        }
+    }
+    
+    var rootTabBarBuilder: RootTabBarBuildable {
+        RootTabBarBuilder {
+            RootTabBarComponent(parent: self)
         }
     }
     
@@ -65,13 +73,7 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
             PasswordComponent(parent: self)
         }
     }
-    
-    var todayBuilder: TodayBuildable {
-        TodayBuilder {
-            TodayComponent(parent: self)
-        }
-    }
-    
+
     var agreementBuilder: AgreementBuildable {
         AgreementBuilder {
             AgreementComponent(parent: self)
@@ -79,7 +81,7 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
     }
 }
 
-extension AppComponent {
+extension OnboardingAppComponent {
     private var onboardingRepository: OnboardingRepository {
         OnboardingRepositoryImpl(networkingProvider: Networking())
     }
