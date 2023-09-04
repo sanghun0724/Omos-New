@@ -83,6 +83,7 @@ extension TodayViewController {
 extension TodayViewController {
     private func bind(listener: TodayPresentableListener?) {
         guard let listener = listener else { return }
+    
     }
     
     private func bindActionRelay() {

@@ -33,7 +33,12 @@ public final class RootTabBarComponent: NeedleFoundation.Component<RootTabBarDep
 // MARK: - RootTabBarBuilder
 
 public final class RootTabBarBuilder:
-    ComponentizedBuilder<RootTabBarComponent, RootTabBarRouting, RootTabBarBuildDependency, Void>,
+    ComponentizedBuilder<
+    RootTabBarComponent,
+    RootTabBarRouting,
+    RootTabBarBuildDependency,
+    Void
+    >,
     RootTabBarBuildable
 {
 

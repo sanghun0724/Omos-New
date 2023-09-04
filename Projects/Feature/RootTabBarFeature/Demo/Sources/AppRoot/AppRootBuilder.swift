@@ -9,6 +9,7 @@
 import NeedleFoundation
 import RIBs
 
+import RootTabBarFeature
 import RootTabBarFeatureInterface
 
 // MARK: - AppRootDependency
@@ -26,7 +27,11 @@ struct AppRootBuildDependency {
 // MARK: - AppRootComponent
 
 final class AppRootComponent: NeedleFoundation.Component<AppRootDependency> {
-   
+//    var rootTabBarBuilder: RootTabBarBuildable {
+//        RootTabBarBuilder {
+//            RootTabBarComponent(parent: self)
+//        }
+//    }
 }
 
 // MARK: - AppRootBuildable

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -452,6 +452,8 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 666C5BC7C8FF72ACB8022408 /* Build configuration list for PBXProject "Omos" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -510,7 +512,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2L2K3UD2LK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -596,7 +597,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2L2K3UD2LK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -735,7 +735,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2L2K3UD2LK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -761,7 +760,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2L2K3UD2LK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -787,7 +785,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2L2K3UD2LK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;

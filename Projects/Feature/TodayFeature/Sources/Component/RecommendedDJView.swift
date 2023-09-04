@@ -20,6 +20,8 @@ final class RecommendedDJView: BaseView {
     
     // MARK: - UI Components
     
+    
+    
     // MARK: - Initialization & Deinitialization
     
     override func initialize() {

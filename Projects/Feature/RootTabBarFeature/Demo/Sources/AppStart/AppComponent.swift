@@ -24,5 +24,4 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
             RootTabBarComponent(parent: self)
         }
     }
-    
 }

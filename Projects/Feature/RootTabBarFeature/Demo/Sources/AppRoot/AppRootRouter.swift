@@ -25,10 +25,11 @@ final class AppRootRouter:
   LaunchRouter<AppRootInteractable, AppRootViewControllable>,
   AppRootRouting
 {
+    
     private let rootTabBarBuilder: RootTabBarBuildable
     private var rootTabBarRouter: RootTabBarRouting?
 
-    init(
+     init(
       interactor: AppRootInteractable,
       viewController: AppRootViewControllable,
       rootTabBarBuilder: RootTabBarBuildable

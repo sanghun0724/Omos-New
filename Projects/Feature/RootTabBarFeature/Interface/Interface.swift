@@ -8,7 +8,6 @@ public protocol RootTabBarRouting: ViewableRouting {
     func attachTabs()
 }
 
-
 // MARK: - RootTabBarListener
 
 public protocol RootTabBarListener: AnyObject {}

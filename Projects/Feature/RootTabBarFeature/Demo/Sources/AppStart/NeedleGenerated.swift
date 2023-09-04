@@ -1,9 +1,12 @@
 
 
+import DesignSystem
 import NeedleFoundation
 import RIBs
 import RootTabBarFeature
 import RootTabBarFeatureInterface
+import TodayFeature
+import TodayFeatureInterface
 
 // swiftlint:disable unused_declaration
 private let needleDependenciesHash : String? = nil
@@ -31,6 +34,17 @@ private class AppRootDependency9fafbf379aae0424b417Provider: AppRootDependency {
 private func factorya90cb427e52e03443c85f47b58f8f304c97af4d5(_ component: NeedleFoundation.Scope) -> AnyObject {
     return AppRootDependency9fafbf379aae0424b417Provider(appComponent: parent1(component) as! AppComponent)
 }
+private class RootTabBarDependencyb4448a5cad7d9b910403Provider: RootTabBarDependency {
+
+
+    init() {
+
+    }
+}
+/// ^->AppComponent->RootTabBarComponent
+private func factory63a72f654f552fbe310ee3b0c44298fc1c149afb(_ component: NeedleFoundation.Scope) -> AnyObject {
+    return RootTabBarDependencyb4448a5cad7d9b910403Provider()
+}
 
 #else
 extension AppComponent: Registration {
@@ -42,6 +56,11 @@ extension AppComponent: Registration {
 extension AppRootComponent: Registration {
     public func registerItems() {
         keyPathToName[\AppRootDependency.rootTabBarBuilder] = "rootTabBarBuilder-RootTabBarBuildable"
+    }
+}
+extension RootTabBarComponent: Registration {
+    public func registerItems() {
+
     }
 }
 
@@ -62,6 +81,7 @@ private func registerProviderFactory(_ componentPath: String, _ factory: @escapi
 @inline(never) private func register1() {
     registerProviderFactory("^->AppComponent", factoryEmptyDependencyProvider)
     registerProviderFactory("^->AppComponent->AppRootComponent", factorya90cb427e52e03443c85f47b58f8f304c97af4d5)
+    registerProviderFactory("^->AppComponent->RootTabBarComponent", factory63a72f654f552fbe310ee3b0c44298fc1c149afb)
 }
 #endif
 

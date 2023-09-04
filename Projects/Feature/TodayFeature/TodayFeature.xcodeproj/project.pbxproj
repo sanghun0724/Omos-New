@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,7 @@
 		302521A79968FEF0453E4007 /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 3AFD5F8411B7F30E617EAC96 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
 		305B26F5B7349E36DC4D945E /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41A522DA473B49EF75D1503 /* RxAlamofire.framework */; platformFilter = ios; };
 		319D9FCFEE800F140E11E2F6 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FA6CD63C3A6BE88A472574 /* RxDataSources.framework */; platformFilter = ios; };
+		332DF2D39907E9F50ACF1606 /* TodayPopularRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A924405B2697A831EB9C3B /* TodayPopularRecordsView.swift */; };
 		33D6313A69418ED2534ACDF3 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6956EF1C1F4BAB077DACEE2 /* RxCocoa.framework */; platformFilter = ios; };
 		38D08359EC550D2CAD72BEBA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6956EF1C1F4BAB077DACEE2 /* RxCocoa.framework */; platformFilter = ios; };
 		39EBE7E56246E63F6B3B7802 /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA567655D61FC776B78ECE /* RxKakaoSDKStory.framework */; platformFilter = ios; };
@@ -52,6 +53,7 @@
 		476B3C3E92D47C61FC30A887 /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE2868A65B3D3D07D10EE6D /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
 		4928F52CB794EE4C50F03176 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FA6CD63C3A6BE88A472574 /* RxDataSources.framework */; platformFilter = ios; };
 		4DD605C01D1230C2A3098FBC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42F928783DAE160BA408C00 /* CFNetwork.framework */; };
+		5045788754A7A759064130FC /* TodayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B7A779BE04DD4CCBF4C95 /* TodayHeaderView.swift */; };
 		5052DD05D73A49A7FB39D68D /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA90B1AEDDB659281A76DC4 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		56E8A4F365B7432400B2DDC7 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5134F05F5D4C20EB04D8DE9F /* RxGesture.framework */; platformFilter = ios; };
 		5EF3615135AB00FCB540D6F4 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5134F05F5D4C20EB04D8DE9F /* RxGesture.framework */; platformFilter = ios; };
@@ -84,6 +86,7 @@
 		89DADB41451E325E734A1A78 /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA567655D61FC776B78ECE /* RxKakaoSDKStory.framework */; platformFilter = ios; };
 		8A0CA8D16D9A2FF7876AE3BD /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 502B67EA258333751AED986A /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8B7AC5D4D1DD4CF46F3ADF47 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 502B67EA258333751AED986A /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CDA80FA58623837698814A7 /* RecommendedDJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF12840F37B2AAEEBEC3BE43 /* RecommendedDJView.swift */; };
 		8FDB3FCDE7EB89E549674483 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0F13352560182A3FCCD419 /* RIBs.framework */; platformFilter = ios; };
 		90EECF05B2EFF6361153C297 /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9387D8F495F9E13157A751B /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91BA678FEEC4B38D27CEFE27 /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD6C763734B0BE71BA4FAA0 /* RxKakaoSDKUser.framework */; platformFilter = ios; };
@@ -114,16 +117,13 @@
 		DBB176BBB5F23EFF197A03EA /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9589188BBF043922BF14BF1 /* NeedleFoundation.framework */; platformFilter = ios; };
 		DBD26F10FC0F33A5DC5F068A /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E28C7B59C430FF6768E829A /* libRecordDomain.a */; platformFilter = ios; };
 		DD33605AAD7FA609C2EA668A /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48ECBDFE4A452124C56A0CF8 /* WeakMapTable.framework */; platformFilter = ios; };
-		DE4B6CEB2AA4135D00339ABC /* TodayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B6CEA2AA4135D00339ABC /* TodayHeaderView.swift */; };
-		DE67760E2AA41A9200FBD7DF /* TodayPopularRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67760D2AA41A9200FBD7DF /* TodayPopularRecordsView.swift */; };
-		DE6776102AA41B4B00FBD7DF /* RecommendedDJView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67760F2AA41B4B00FBD7DF /* RecommendedDJView.swift */; };
-		DE6776122AA41B6E00FBD7DF /* LovedRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6776112AA41B6E00FBD7DF /* LovedRecordView.swift */; };
 		E4536018064E2AE59066B690 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55F9F7BEDE6E8C3D5154075D /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E6EDB2280298BB4AFB7A8753 /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 3AFD5F8411B7F30E617EAC96 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
 		E7AF31CE2D52CBCAB0746C90 /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D558E4CE33A4DADF69F805 /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
 		EAA91DBAD45D2140C482EE29 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA90B1AEDDB659281A76DC4 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EECE0876021EA5C6B49B750E /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B007503299C6CC702396A4FA /* KakaoSDKTalk.framework */; platformFilter = ios; };
 		F1DE2E4455BCF1F320C91087 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC1FAB6F1EA5507307A13E0 /* Kingfisher.framework */; platformFilter = ios; };
+		F6E76706E401352FA9749CC2 /* LovedRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC423C8CF5F8A7D8B819C6F /* LovedRecordView.swift */; };
 		F98DE5A2FA2E163E77D3E9CB /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3AFD5F8411B7F30E617EAC96 /* DesignSystem_DesignSystem.bundle */; };
 		FB815041B8EA4D993AE69374 /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F8EB3CBD7ACEB92A2F74E2 /* LogFlume.framework */; platformFilter = ios; };
 		FC51D9EBA5095768EFAF9E57 /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B007503299C6CC702396A4FA /* KakaoSDKTalk.framework */; platformFilter = ios; };
@@ -362,18 +362,18 @@
 		CAC7338557F4C50FB92B2631 /* libBaseDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4245FF17618E4B75579986 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		CE9B411E725426C9060F8DEC /* RxKakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2A924405B2697A831EB9C3B /* TodayPopularRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPopularRecordsView.swift; sourceTree = "<group>"; };
 		D6956EF1C1F4BAB077DACEE2 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB1ACC0652355029921F64B /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE4B6CEA2AA4135D00339ABC /* TodayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHeaderView.swift; sourceTree = "<group>"; };
-		DE67760D2AA41A9200FBD7DF /* TodayPopularRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPopularRecordsView.swift; sourceTree = "<group>"; };
-		DE67760F2AA41B4B00FBD7DF /* RecommendedDJView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedDJView.swift; sourceTree = "<group>"; };
-		DE6776112AA41B6E00FBD7DF /* LovedRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedRecordView.swift; sourceTree = "<group>"; };
+		E42B7A779BE04DD4CCBF4C95 /* TodayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHeaderView.swift; sourceTree = "<group>"; };
 		E5CFB9FE252B58531F1DFE4A /* TodayInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayInterface.swift; sourceTree = "<group>"; };
 		E774BB249852B9BCE64D1631 /* KakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEC423C8CF5F8A7D8B819C6F /* LovedRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedRecordView.swift; sourceTree = "<group>"; };
 		F41A522DA473B49EF75D1503 /* RxAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9387D8F495F9E13157A751B /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD777098F73F6724CD61EDC2 /* TodayStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayStateAction.swift; sourceTree = "<group>"; };
 		FE5844868633B5C45373F5C0 /* TodayFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TodayFeatureUITests-Info.plist"; sourceTree = "<group>"; };
+		FF12840F37B2AAEEBEC3BE43 /* RecommendedDJView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedDJView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -554,7 +554,7 @@
 		3F7DF2F577C81384A5775A61 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7FE5AE9BE27AE6F182C4FEBB /* Component */,
+				E9FA48531984E512D5CC3D7D /* Component */,
 				BD13AFB032CEB332F355C96E /* TodayBuilder.swift */,
 				BB7C24C11F4B3747F9EE6532 /* TodayInteractor.swift */,
 				169D40C8001E8682166F3CEB /* TodayRouter.swift */,
@@ -636,17 +636,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7FE5AE9BE27AE6F182C4FEBB /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				DE4B6CEA2AA4135D00339ABC /* TodayHeaderView.swift */,
-				DE67760D2AA41A9200FBD7DF /* TodayPopularRecordsView.swift */,
-				DE67760F2AA41B4B00FBD7DF /* RecommendedDJView.swift */,
-				DE6776112AA41B6E00FBD7DF /* LovedRecordView.swift */,
-			);
-			path = Component;
-			sourceTree = "<group>";
-		};
 		94626C53719F23194202FCD7 /* XCConfig */ = {
 			isa = PBXGroup;
 			children = (
@@ -695,6 +684,17 @@
 				5CE0022EBD31629B5C95A4BA /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E9FA48531984E512D5CC3D7D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EEC423C8CF5F8A7D8B819C6F /* LovedRecordView.swift */,
+				FF12840F37B2AAEEBEC3BE43 /* RecommendedDJView.swift */,
+				E42B7A779BE04DD4CCBF4C95 /* TodayHeaderView.swift */,
+				D2A924405B2697A831EB9C3B /* TodayPopularRecordsView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		EF56E4622702845F6930839A /* Derived */ = {
@@ -934,7 +934,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources";
+			shellScript = "# needle generate Demo/Sources/AppStart/NeedleGenerated.swift .\n# use in terminal";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -967,15 +967,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE4B6CEB2AA4135D00339ABC /* TodayHeaderView.swift in Sources */,
+				F6E76706E401352FA9749CC2 /* LovedRecordView.swift in Sources */,
+				8CDA80FA58623837698814A7 /* RecommendedDJView.swift in Sources */,
+				5045788754A7A759064130FC /* TodayHeaderView.swift in Sources */,
+				332DF2D39907E9F50ACF1606 /* TodayPopularRecordsView.swift in Sources */,
 				D302C25C7B3156EB92D9B1E1 /* TodayBuilder.swift in Sources */,
 				FEFA23FF6D270E8125C78BDB /* TodayInteractor.swift in Sources */,
 				3D4737704B1C3B6AA32E1485 /* TodayRouter.swift in Sources */,
 				853543D83E8BF9BA6A888555 /* TodayStateAction.swift in Sources */,
-				DE6776122AA41B6E00FBD7DF /* LovedRecordView.swift in Sources */,
 				4550BAE2B7EA0349CE03EBF2 /* TodayViewController.swift in Sources */,
-				DE6776102AA41B4B00FBD7DF /* RecommendedDJView.swift in Sources */,
-				DE67760E2AA41A9200FBD7DF /* TodayPopularRecordsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,18 +12,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        
         registerProviderFactories()
-        setLaunchRouter()
+    
 
         return true
-    }
-    
-    private func setLaunchRouter() {
-        guard let window = self.window else { return }
-        let appComponent = AppComponent()
-        self.launchRouter = appComponent.appRootBuilder.build()
-        self.launchRouter?.launch(from: window)
     }
 }

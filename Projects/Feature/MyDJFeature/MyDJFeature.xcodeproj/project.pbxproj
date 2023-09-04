@@ -902,7 +902,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FILE_PATH=\"$SRCROOT/Demo/Sources/AppStart\"\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nexport SOURCEKIT_LOGGING=0 && needle generate \"${FILE_PATH}/NeedleGenerated.swift\" \"$SRCROOT/../\" --exclude-suffixes Tests Mocks --exclude-paths /Sample /Tests /Resources";
+			shellScript = "# needle generate Demo/Sources/AppStart/NeedleGenerated.swift .\n# use in terminal";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -13,7 +13,6 @@ import RxCocoa
 import RxSwift
 
 import DesignSystem
-import RootTabBarFeatureInterface
 
 protocol AppRootPresentableListener: AnyObject {
     

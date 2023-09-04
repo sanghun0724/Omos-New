@@ -20,11 +20,11 @@ final class TodayHeaderView: BaseView {
     
     // MARK: - UI Components
     
-    let groundView = UIView().builder
+    private lazy var groundView = UIView().builder
         .backgroundColor(.clear)
         .build()
     
-    let backImageView = UIImageView().builder
+    private lazy var backImageView = UIImageView().builder
         .contentMode(.scaleAspectFill)
         .clipsToBounds(true)
         .with {
@@ -50,65 +50,65 @@ final class TodayHeaderView: BaseView {
         }
         .build()
     
-    let backView = UIView().builder
+    private lazy var backView = UIView().builder
         .backgroundColor(.clear)
         .build()
 
-    let omosImageView = UIImageView().builder
+    private lazy var omosImageView = UIImageView().builder
         .image(UIImage(named: "logo"))
         .contentMode(.scaleAspectFit)
         .build()
 
-    let notiButton = UIButton().builder
+    private lazy var notiButton = UIButton().builder
         .isHidden(true)
         .with {
             $0.setImage(UIImage(named: "bell"), for: .normal)
         }
         .build()
 
-    let decoLabel = UILabel().builder
+    private lazy var decoLabel = UILabel().builder
         .text("현재 OMOS DJ들이\n가장 많이 기록하고 있는,")
         .textColor(.white)
         .font(.systemFont(ofSize: 16, weight: .light))
         .numberOfLines(2)
         .build()
 
-    let todayLabel = UILabel().builder
+    private lazy var todayLabel = UILabel().builder
         .text("OMOS' PICK")
         .textColor(.white)
         .font(.systemFont(ofSize: 22, weight: .medium))
         .build()
 
-    let albumImageView = UIImageView().builder
+    private lazy var albumImageView = UIImageView().builder
         .image(UIImage(named: "albumCover"))
         .contentMode(.scaleToFill)
         .build()
     
-    let spotifyImageView = UIImageView().builder
+    private lazy var spotifyImageView = UIImageView().builder
         .image(UIImage(named: "spotify"))
         .contentMode(.scaleAspectFill)
         .build()
 
-    let songTitleLabel = UILabel().builder
+    private lazy var songTitleLabel = UILabel().builder
         .text("노래 제목이 들어갑니다.")
         .textColor(.white)
         .font(.systemFont(ofSize: 16, weight: .light))
         .build()
 
-    let artistAlbumTitleLabel = UILabel().builder
+    private lazy var artistAlbumTitleLabel = UILabel().builder
         .text("가수 이름이 들어갑니다")
         .textColor(.white)
         .font(.systemFont(ofSize: 14, weight: .light))
         .build()
 
-    let createdButton = UIButton().builder
+    private lazy var createdButton = UIButton().builder
         .isHidden(true)
         .with {
             $0.setImage(UIImage(named: "edit3"), for: .normal)
         }
         .build()
     
-    let touchBindButtonView = UIButton().builder
+    private lazy var touchBindButtonView = UIButton().builder
         .backgroundColor(.clear)
         .build()
     
