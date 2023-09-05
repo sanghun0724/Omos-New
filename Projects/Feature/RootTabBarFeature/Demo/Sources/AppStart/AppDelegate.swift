@@ -14,7 +14,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         registerProviderFactories()
     
-
         return true
     }
 }

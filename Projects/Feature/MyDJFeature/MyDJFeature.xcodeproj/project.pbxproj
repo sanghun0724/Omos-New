@@ -43,6 +43,7 @@
 		4DBD27418EB1CA3DC81864DB /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FB03F8916DE77A9BC0EAF0 /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
 		514F9C4CA36D0DBD0833DBE1 /* libMyDJFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E403CD9873449E09A63DAA66 /* libMyDJFeature.a */; platformFilter = ios; };
 		51ED095AC9654FA08009BBCC /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35692302D9B06CA24446D959 /* libRecordDomain.a */; platformFilter = ios; };
+		538D1CDB666D66DAE1CF7350 /* libTodayDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C062B2DFAC550C78A86044 /* libTodayDomainInterface.a */; platformFilter = ios; };
 		55343BD38C883C9D83D85F2C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F7812F19108B1FA8B3CF61 /* RxSwift.framework */; platformFilter = ios; };
 		56F6CABF5E6AC177C2317AD5 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FFF4532FE4C4FAB7BED1C6 /* libAppFoundation.a */; platformFilter = ios; };
 		5795EF577A25FB612980A41A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F7812F19108B1FA8B3CF61 /* RxSwift.framework */; platformFilter = ios; };
@@ -77,6 +78,7 @@
 		904F43456DE24685678FFFC9 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8B4364246F90DEBEC3DA7B /* ReactorKitRuntime.framework */; platformFilter = ios; };
 		9089478604EA080F16970839 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FF5276DD3B462FFF39628D /* NeedleFoundation.framework */; platformFilter = ios; };
 		92551701FFCAF59C1FDE1706 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50A04641C6DB86CC4068369 /* CFNetwork.framework */; };
+		932C8AA26F7DC2DF24FAFEC3 /* libTodayDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 914FC17939EB5B5612CBB10B /* libTodayDomain.a */; platformFilter = ios; };
 		94098520F9F437645FC9CA91 /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CBDB7901E2EC694F0BEDFC /* WeakMapTable.framework */; platformFilter = ios; };
 		9657C3A637FA6C63B0EF7812 /* TuistBundle+MyDJFeatureDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970A190CBCF522548B61F22E /* TuistBundle+MyDJFeatureDemoApp.swift */; };
 		9766C01277071876AF6E29E6 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F9D3252F14EFDAA4C43B90 /* KakaoSDKAuth.framework */; platformFilter = ios; };
@@ -114,7 +116,9 @@
 		E976CBC169B787BC7F73393D /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3EC2A601CE8F6D2614270E /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
 		F14AF5B6F7B8C38AFF5C4B40 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF41E7A9C7105C01AC821E67 /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F17B39F6C7D3B5A69ADE4FCF /* MyDJFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5955E89DA268AD0A5D783A /* MyDJFeatureTesting.framework */; platformFilter = ios; };
+		F3FC21674A1F44E9FB7C56A2 /* libTodayDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 914FC17939EB5B5612CBB10B /* libTodayDomain.a */; platformFilter = ios; };
 		F5C631D63188F8ED3D9EAC5A /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C09DD1CF0FC6B9B2023256CD /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6B5DBBE872D22D7FB44A7A1 /* libTodayDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C062B2DFAC550C78A86044 /* libTodayDomainInterface.a */; platformFilter = ios; };
 		F792DE0867CED63053D8B9B0 /* MyDJFeatureTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE5955E89DA268AD0A5D783A /* MyDJFeatureTesting.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F9A4440B654424B49CCD842E /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D248AE107C892698336AB5B9 /* KakaoSDKTalk.framework */; platformFilter = ios; };
 		FB8BC4864C61188CF49FA983 /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B941FE3C20C52387594AC50B /* Testing.swift */; };
@@ -314,6 +318,7 @@
 		3FD9A1A5CEE4EE82A7EBB6E6 /* RxKakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C77E8DCDBAD06981A1F9FB /* KakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EF9C971FADBDE5BB3762F9 /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51C062B2DFAC550C78A86044 /* libTodayDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F7812F19108B1FA8B3CF61 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCB52AE8CA5869B7D733045 /* KakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61673D5FFA77BCD8D5B6B1B1 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,6 +330,7 @@
 		7E0CC1FA24E72CB5434EF934 /* libBaseDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2EE1BAB96F3D48E38F8296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86FB03F8916DE77A9BC0EAF0 /* RxKakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		914FC17939EB5B5612CBB10B /* libTodayDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D8A2E8478B02552A2FC6BE /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		970A190CBCF522548B61F22E /* TuistBundle+MyDJFeatureDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+MyDJFeatureDemoApp.swift"; sourceTree = "<group>"; };
 		97F3932DEFDB8E62572B55B3 /* MyDJFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDJFeatureTest.swift; sourceTree = "<group>"; };
@@ -406,6 +412,8 @@
 				55343BD38C883C9D83D85F2C /* RxSwift.framework in Frameworks */,
 				BAF173990A497E05D52C8C94 /* SkeletonView.framework in Frameworks */,
 				3BAA93F8A394CBEFF6FB77FD /* SnapKit.framework in Frameworks */,
+				F3FC21674A1F44E9FB7C56A2 /* libTodayDomain.a in Frameworks */,
+				F6B5DBBE872D22D7FB44A7A1 /* libTodayDomainInterface.a in Frameworks */,
 				9946F09FB4BC9ED752DAE4E7 /* WeakMapTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +487,8 @@
 				5795EF577A25FB612980A41A /* RxSwift.framework in Frameworks */,
 				0283C38AECFDDED7A9AFA188 /* SkeletonView.framework in Frameworks */,
 				785127099535A59B6412DAC9 /* SnapKit.framework in Frameworks */,
+				932C8AA26F7DC2DF24FAFEC3 /* libTodayDomain.a in Frameworks */,
+				538D1CDB666D66DAE1CF7350 /* libTodayDomainInterface.a in Frameworks */,
 				94098520F9F437645FC9CA91 /* WeakMapTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +547,8 @@
 				CD529B2E5F0DCBAA1C53D52F /* libOnboardingDomainInterface.a */,
 				35692302D9B06CA24446D959 /* libRecordDomain.a */,
 				1D8CBC3235081836BEA380E7 /* libRecordDomainInterface.a */,
+				914FC17939EB5B5612CBB10B /* libTodayDomain.a */,
+				51C062B2DFAC550C78A86044 /* libTodayDomainInterface.a */,
 				CF2BD6AB4471564418686552 /* LogFlume.framework */,
 				2579E00AA5E2A7B8C271363E /* MyDJFeatureDemoApp.app */,
 				AE5955E89DA268AD0A5D783A /* MyDJFeatureTesting.framework */,

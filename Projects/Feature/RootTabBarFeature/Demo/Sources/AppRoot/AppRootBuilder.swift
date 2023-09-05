@@ -15,7 +15,6 @@ import RootTabBarFeatureInterface
 // MARK: - AppRootDependency
 
 protocol AppRootDependency: NeedleFoundation.Dependency {
-    var rootTabBarBuilder: RootTabBarBuildable { get }
 }
 
 // MARK: - AppRootBuildDependency
@@ -27,11 +26,6 @@ struct AppRootBuildDependency {
 // MARK: - AppRootComponent
 
 final class AppRootComponent: NeedleFoundation.Component<AppRootDependency> {
-//    var rootTabBarBuilder: RootTabBarBuildable {
-//        RootTabBarBuilder {
-//            RootTabBarComponent(parent: self)
-//        }
-//    }
 }
 
 // MARK: - AppRootBuildable
@@ -55,8 +49,7 @@ final class AppRootBuilder:
         
         return AppRootRouter(
             interactor: interactor,
-            viewController: viewController,
-            rootTabBarBuilder: component.rootTabBarBuilder
+            viewController: viewController
         )
     }
 }

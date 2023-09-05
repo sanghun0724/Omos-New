@@ -37,11 +37,37 @@ final class TodayViewController:
     
     // MARK: - UI Components
     
-    private lazy var scrollView = UIScrollView()
+    private lazy var scrollView = UIScrollView().builder
+        .showsHorizontalScrollIndicator(false)
+        .showsVerticalScrollIndicator(false)
+        .bounces(false)
+        .build()
     
     private lazy var guideView = UIView()
     
-    private lazy var stackView = UIStackView().builder
+    private lazy var todayHeaderView = TodayHeaderView().builder
+        .backgroundColor(.orange)
+        .build()
+    
+    private lazy var todayPopularRecordsView = TodayPopularRecordsView().builder
+        .backgroundColor(.brown)
+        .build()
+    
+    private lazy var recommendedDJView = RecommendedDJView().builder
+        .backgroundColor(.red)
+        .build()
+    
+    private lazy var lovedRecordView = LovedRecordView().builder
+        .backgroundColor(.blue)
+        .build()
+    
+    private lazy var stackView = UIStackView(
+    arrangedSubviews: [
+        todayHeaderView,
+        todayPopularRecordsView,
+        recommendedDJView,
+        lovedRecordView
+    ]).builder
         .axis(.vertical)
         .alignment(.fill)
         .distribution(.equalSpacing)
@@ -62,6 +88,10 @@ final class TodayViewController:
         bindUI()
         bind(listener: self.listener)
         contentView.backgroundColor = .purple
+    }
+    
+    override func isNeedCustomNavigationBarView() -> Bool {
+        false
     }
 }
 
@@ -115,11 +145,25 @@ extension TodayViewController {
 
 extension TodayViewController {
     private func setupUI() {
-        
+        view.addSubview(scrollView)
+        scrollView.addSubview(guideView)
+        guideView.addSubview(stackView)
         self.layout()
     }
     
     private func layout() {
+        scrollView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        guideView.snp.makeConstraints {
+            $0.top.bottom.width.equalTo(view)
+            $0.height.equalTo(view).priority(250)
+        }
+        
+        stackView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
         
     }
 }

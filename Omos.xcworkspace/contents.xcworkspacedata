@@ -26,6 +26,9 @@
          <FileRef
             location = "group:RecordDomain/RecordDomain.xcodeproj">
          </FileRef>
+         <FileRef
+            location = "group:TodayDomain/TodayDomain.xcodeproj">
+         </FileRef>
       </Group>
       <Group
          location = "group:Feature"

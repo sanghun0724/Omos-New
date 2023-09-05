@@ -36,6 +36,12 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
         }
     }
     
+    var todayBuilder: TodayBuildable {
+        TodayBuilder {
+            TodayComponent(parent: self)
+        }
+    }
+    
     var rootTabBarBuilder: RootTabBarBuildable {
         RootTabBarBuilder {
             RootTabBarComponent(parent: self)

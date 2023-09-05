@@ -14,6 +14,7 @@
 		0727289C8302123372F56DDB /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B09CC9D18041154DB36F63E /* ReactorKit.framework */; platformFilter = ios; };
 		08D822120FD0060D8D5DAD4F /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB9B2CA7618F86090D99C29 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
 		09C4B1A725049536AABBA754 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35AF6D276941FC0586BD9F7 /* SnapKit.framework */; platformFilter = ios; };
+		0A053331C220FABE04B06501 /* libTodayDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFDF61028A8E5FE0658EA1E /* libTodayDomainInterface.a */; platformFilter = ios; };
 		0A615946ADFA00729F623F14 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EA31F694A3D0AAD3CD2022 /* Differentiator.framework */; platformFilter = ios; };
 		0DEC7A4A95D982507E56F823 /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F65F366CC69D50D0BF2DB06 /* KakaoSDKStory.framework */; platformFilter = ios; };
 		0DEF6D6BFEBF15087761946D /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578C9785DEBFE0ACEAB2B180 /* SkeletonView.framework */; platformFilter = ios; };
@@ -29,13 +30,16 @@
 		348A48A0BC4D9146125924F6 /* MyPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2005E39B466A9758090233 /* MyPageBuilder.swift */; };
 		362279E006A11668E3B634E5 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392978D79BDD7FFBD10F9D1C /* KakaoSDKAuth.framework */; platformFilter = ios; };
 		371E673DC1FE67F25396A17F /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791DE997CE7CA7D6045036A5 /* NeedleFoundation.framework */; platformFilter = ios; };
+		38256D431AED53458860DB71 /* libTodayDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 432EB6780130D57BD0F9F978 /* libTodayDomain.a */; platformFilter = ios; };
 		38F9AF46A6810771B1C16CD1 /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78255BAD9E156ED9C8EE3039 /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
 		3979E019032BB8E4BECB23C1 /* MyPageFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C17ADA6F86BB56FEEE1EBA5 /* MyPageFeatureTesting.framework */; platformFilter = ios; };
 		3B3FBF666EB5AC4704917B5A /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1120F4A861F7ABAF5D9FA68 /* KakaoSDKTemplate.framework */; platformFilter = ios; };
 		3C20D6C1F3AC2E2F3F7C85B3 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5E36127410AC6C34137284 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3DC1A9E6B688C60B921D4E3D /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 283E6DBC69514C641D359744 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
+		3E77D52FBF41B82BD87D1030 /* libTodayDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 432EB6780130D57BD0F9F978 /* libTodayDomain.a */; platformFilter = ios; };
 		3E9A37ABC23C29E95E7BE850 /* libMyPageFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0692E88C0CB4C1B17141879E /* libMyPageFeatureInterface.a */; platformFilter = ios; };
 		424672E9B609E82FB7C684EE /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ECDD793414B563C50980AC /* WeakMapTable.framework */; platformFilter = ios; };
+		46214E454B542BCAB387D55A /* libTodayDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFDF61028A8E5FE0658EA1E /* libTodayDomainInterface.a */; platformFilter = ios; };
 		4841FAE2C851A71CDA727BCD /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5E36127410AC6C34137284 /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		494794188222F5DF4D77FF1C /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBBDE83FCCC102BE535ACAC /* RxAlamofire.framework */; platformFilter = ios; };
 		4B5556E0DA65084CFECD98DA /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69824EA255EE53CB7D4FFAE8 /* Kingfisher.framework */; platformFilter = ios; };
@@ -322,6 +326,8 @@
 		392978D79BDD7FFBD10F9D1C /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C3C3F2394AAFD1703BE3F44 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		3C72BD231E17BF9A9BDB8414 /* MyPageFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageFeatureTest.swift; sourceTree = "<group>"; };
+		3DFDF61028A8E5FE0658EA1E /* libTodayDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		432EB6780130D57BD0F9F978 /* libTodayDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		434C7ABA7E2487674BFCC34D /* libRecordDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E06FBEBFD822CE9375370B /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		49ECDD793414B563C50980AC /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -422,6 +428,8 @@
 				236489529804B0DFE090AE15 /* RxSwift.framework in Frameworks */,
 				644DF6EDCB4C8BB20573DBB8 /* SkeletonView.framework in Frameworks */,
 				5394B6B541855A2C83CCDAF7 /* SnapKit.framework in Frameworks */,
+				38256D431AED53458860DB71 /* libTodayDomain.a in Frameworks */,
+				0A053331C220FABE04B06501 /* libTodayDomainInterface.a in Frameworks */,
 				424672E9B609E82FB7C684EE /* WeakMapTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +496,8 @@
 				59615EC4CAD3DEDB32E4F851 /* RxSwift.framework in Frameworks */,
 				0DEF6D6BFEBF15087761946D /* SkeletonView.framework in Frameworks */,
 				09C4B1A725049536AABBA754 /* SnapKit.framework in Frameworks */,
+				3E77D52FBF41B82BD87D1030 /* libTodayDomain.a in Frameworks */,
+				46214E454B542BCAB387D55A /* libTodayDomainInterface.a in Frameworks */,
 				1E0221D0ED748DB9CB96E540 /* WeakMapTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,6 +629,8 @@
 				AE114576940B731676CEA14F /* libOnboardingDomainInterface.a */,
 				434C7ABA7E2487674BFCC34D /* libRecordDomain.a */,
 				BF20199023CE11FCF181B0D4 /* libRecordDomainInterface.a */,
+				432EB6780130D57BD0F9F978 /* libTodayDomain.a */,
+				3DFDF61028A8E5FE0658EA1E /* libTodayDomainInterface.a */,
 				1470808F10141685C83003C5 /* LogFlume.framework */,
 				11444D8CA933E17690D32A9B /* MyPageFeatureDemoApp.app */,
 				6C17ADA6F86BB56FEEE1EBA5 /* MyPageFeatureTesting.framework */,

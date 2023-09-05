@@ -8,20 +8,13 @@
 
 import NeedleFoundation
 
-import RootTabBarFeature
-import RootTabBarFeatureInterface
+
 
 final class AppComponent: BootstrapComponent, AppRootDependency {
     
     var appRootBuilder: AppRootBuildable {
         AppRootBuilder {
             AppRootComponent(parent: self)
-        }
-    }
-    
-    var rootTabBarBuilder: RootTabBarBuildable {
-        RootTabBarBuilder {
-            RootTabBarComponent(parent: self)
         }
     }
 }

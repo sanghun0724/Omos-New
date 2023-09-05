@@ -50,10 +50,12 @@
 		848A9E396DCE0FEAC6A83DA3 /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E971289775DF719BC349E9 /* WeakMapTable.framework */; platformFilter = ios; };
 		89AD90EF914B0A8122094B09 /* libOnboardingFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 580FDC770878ED00AF97BAB9 /* libOnboardingFeatureInterface.a */; platformFilter = ios; };
 		8A4A56F369E2459F1990AEF2 /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C826A8A03634A49EA5F5AA5 /* KakaoSDKUser.framework */; platformFilter = ios; };
+		8E3E766B8948F6EB85E544C1 /* libTodayDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D287877CE9C7BB0FBBC3E8E /* libTodayDomain.a */; platformFilter = ios; };
 		92C90D728BF574FEC646AA1D /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247ABF188E39437F1BBAB4DF /* Differentiator.framework */; platformFilter = ios; };
 		98E7D4D43D8B1A9F2314CC1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEABA9A2C7C383FBFB9BAABC /* LaunchScreen.storyboard */; };
 		990D300B2350B351DBC5664F /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 949193658CA08ACA9D3C0C3A /* DesignSystem_DesignSystem.bundle */; };
 		9B525C715C378E59EE91D8A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAC14283CECB75004D11225 /* AppDelegate.swift */; };
+		9D70C9FF2A0D85194E31258C /* libTodayDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F0677A630FA7FE144D3DE1 /* libTodayDomainInterface.a */; platformFilter = ios; };
 		9FFC8E6338EF31B79801E727 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFF48CECD97F065A1E580E0 /* SnapKit.framework */; platformFilter = ios; };
 		A254AF21D523526A7C47EC18 /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE6677AF6A28F9FB6961062 /* LogFlume.framework */; platformFilter = ios; };
 		A3F5139CCA063416E6B212E6 /* TuistAssets+Omos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB880C4CB4E436D170DA3B3E /* TuistAssets+Omos.swift */; };
@@ -147,6 +149,8 @@
 		8213ABE0D223B60EC5E8BC1D /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E971289775DF719BC349E9 /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2E1BEBBA263B4BA466C546 /* AppRootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootInteractor.swift; sourceTree = "<group>"; };
+		8D287877CE9C7BB0FBBC3E8E /* libTodayDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F0677A630FA7FE144D3DE1 /* libTodayDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		949193658CA08ACA9D3C0C3A /* DesignSystem_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystem_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9FA0D3D70D8286BD72351C /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0793D243A463AA8298D613F /* libTodayFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +250,8 @@
 				B28E8EAD42D799037247C2F6 /* RxSwift.framework in Frameworks */,
 				B7CCCB436023A72676A9A4E7 /* SkeletonView.framework in Frameworks */,
 				9FFC8E6338EF31B79801E727 /* SnapKit.framework in Frameworks */,
+				8E3E766B8948F6EB85E544C1 /* libTodayDomain.a in Frameworks */,
+				9D70C9FF2A0D85194E31258C /* libTodayDomainInterface.a in Frameworks */,
 				DFFD2ACB22DA7F73CFE07A47 /* libTodayFeature.a in Frameworks */,
 				1380744EA5056DD06469A25D /* libTodayFeatureInterface.a in Frameworks */,
 				848A9E396DCE0FEAC6A83DA3 /* WeakMapTable.framework in Frameworks */,
@@ -395,6 +401,8 @@
 				C553D9E2779FD4FA701913B1 /* libRecordDomainInterface.a */,
 				23B58DEE207957541EBFACE9 /* libRootTabBarFeature.a */,
 				685AE2746A29F0C5CEF45163 /* libRootTabBarFeatureInterface.a */,
+				8D287877CE9C7BB0FBBC3E8E /* libTodayDomain.a */,
+				92F0677A630FA7FE144D3DE1 /* libTodayDomainInterface.a */,
 				A0793D243A463AA8298D613F /* libTodayFeature.a */,
 				75D7BCB337F8244C8EC5E04C /* libTodayFeatureInterface.a */,
 				1EE6677AF6A28F9FB6961062 /* LogFlume.framework */,

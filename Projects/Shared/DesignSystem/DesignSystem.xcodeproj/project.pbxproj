@@ -37,6 +37,7 @@
 		2E4C42BEAFBAE3B7762A7367 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B61DE926A097B970F188FF /* UIImageViewExtension.swift */; };
 		2E4DEA09C2F59A82EFACCDE9 /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D9386B13EE93C644ECE384 /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
 		32BD8F9B718D9021ABBFD838 /* SUIT-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF3794A838828536D5F77FEA /* SUIT-Regular.otf */; };
+		358BBF23F0EF2A1A459DF6DE /* PreviewRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B7F8A14D10589884DEE135 /* PreviewRecordCell.swift */; };
 		35C07B688C555FC5FD36BED1 /* SUIT-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C34D74662F13194F2FBBCA9 /* SUIT-Light.otf */; };
 		3814CA28C2CF743DA9FD7E74 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BB0B2AD3A1F10D38F5ED6D /* RxViewController.swift */; };
 		3ACA7966BE750B248CB5063E /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD8B3E9075062035C41A268 /* RxKakaoSDKStory.framework */; platformFilter = ios; };
@@ -317,6 +318,7 @@
 		87F9172F55123ECB98A8C448 /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8870763EF0375CC598D394E5 /* SUIT-Bold.otf */ = {isa = PBXFileReference; path = "SUIT-Bold.otf"; sourceTree = "<group>"; };
 		889368C22ED331F970B638EC /* HasAlertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasAlertable.swift; sourceTree = "<group>"; };
+		89B7F8A14D10589884DEE135 /* PreviewRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRecordCell.swift; sourceTree = "<group>"; };
 		8A0C4099F8DDC043E4D528B1 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8BD2A60DECA766DD714DA003 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		8C0403D76350BF7FF3B96DE0 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -500,6 +502,7 @@
 			isa = PBXGroup;
 			children = (
 				6AA99E0D2C804D693023948D /* Button */,
+				BCC944A036DD56E2C85B5A46 /* Cell */,
 				DC5F3AB67460841284CCAF70 /* CustomView */,
 				BC98E6BAB287102F4331CA11 /* TextField */,
 			);
@@ -762,6 +765,14 @@
 				99CC7597689BE006E981B97F /* RightButtonTextFieldView.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		BCC944A036DD56E2C85B5A46 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89B7F8A14D10589884DEE135 /* PreviewRecordCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		BEBBB22543846E6F05232E41 /* Ribs+Extension */ = {
@@ -1040,6 +1051,7 @@
 				8024551D1EC91753CD2A40D2 /* TuistStrings+DesignSystem.swift in Sources */,
 				9218477DBAB24AAFD390C3BC /* Colors.swift in Sources */,
 				A0BC734A34F1FAE522FEBD21 /* ConfirmButton.swift in Sources */,
+				358BBF23F0EF2A1A459DF6DE /* PreviewRecordCell.swift in Sources */,
 				57706E0F3F3D42887F2321C5 /* CustomNavigationBarView.swift in Sources */,
 				DC98EC4826AEED9F6C2F5605 /* LoadingIndicator.swift in Sources */,
 				ACD95549A6106E8FFF0D42C1 /* CustomTextField.swift in Sources */,

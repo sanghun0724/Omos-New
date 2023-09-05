@@ -17,17 +17,12 @@ import RootTabBarFeatureInterface
 // MARK: - RootTabBarDependency
 
 public protocol RootTabBarDependency: NeedleFoundation.Dependency {
-
+    var todayBuilder: TodayBuildable { get }
 }
 
 // MARK: - RootTabBarComponent
 
 public final class RootTabBarComponent: NeedleFoundation.Component<RootTabBarDependency> {
-    var todayBuilder: TodayBuildable {
-        TodayBuilder {
-            TodayComponent(parent: self)
-        }
-    }
 }
 
 // MARK: - RootTabBarBuilder

@@ -8,6 +8,8 @@
 
 import UIKit
 
+import RxDataSources
+
 import DesignSystem
 
 /// 수많은 DJ가 선택한 섹션
@@ -19,7 +21,14 @@ final class TodayPopularRecordsView: BaseView {
         
     }
     
+    //typealias popularRecordsDataSource = RxCollectionViewSectionedReloadDataSource<>
+    
     // MARK: - UI Components
+    
+    private lazy var titleLabel = UILabel()
+    
+    
+    
     
     // MARK: - Initialization & Deinitialization
     

@@ -1246,6 +1246,62 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "442454B0EB3D5DADC3FE0332"
+               BuildableName = "libTodayDomain.a"
+               BlueprintName = "TodayDomain"
+               ReferencedContainer = "container:Projects/Domain/TodayDomain/TodayDomain.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ECA6E442972B9A96FF7E526B"
+               BuildableName = "libTodayDomainInterface.a"
+               BlueprintName = "TodayDomainInterface"
+               ReferencedContainer = "container:Projects/Domain/TodayDomain/TodayDomain.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7D94584AE181274D07690663"
+               BuildableName = "TodayDomainTesting.framework"
+               BlueprintName = "TodayDomainTesting"
+               ReferencedContainer = "container:Projects/Domain/TodayDomain/TodayDomain.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C6A6EF082A9EDCDDDEEF39A1"
+               BuildableName = "TodayDomainTests.xctest"
+               BlueprintName = "TodayDomainTests"
+               ReferencedContainer = "container:Projects/Domain/TodayDomain/TodayDomain.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "89DAC7292A06F21CBB0237B6"
                BuildableName = "libTodayFeature.a"
                BlueprintName = "TodayFeature"
@@ -1522,6 +1578,16 @@
                BuildableName = "RootTabBarFeatureUITests.xctest"
                BlueprintName = "RootTabBarFeatureUITests"
                ReferencedContainer = "container:Projects/Feature/RootTabBarFeature/RootTabBarFeature.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C6A6EF082A9EDCDDDEEF39A1"
+               BuildableName = "TodayDomainTests.xctest"
+               BlueprintName = "TodayDomainTests"
+               ReferencedContainer = "container:Projects/Domain/TodayDomain/TodayDomain.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference

@@ -5,6 +5,7 @@
 //  Created by 이상헌 on 2023/07/23.
 //  Copyright © 2023 Omos. All rights reserved.
 //
+import Foundation
 
 import RIBs
 import RxSwift
@@ -16,7 +17,7 @@ protocol RootTabBarViewControllable: ViewControllable {
 }
 
 protocol RootTabBarPresentable: Presentable {
-  var listener: RootTabBarListener? { get set }
+    var listener: RootTabBarListener? { get set }
 }
 
 // MARK: - RootTabBarInteractor
@@ -40,7 +41,9 @@ final class RootTabBarInteractor:
     
     override func didBecomeActive() {
         super.didBecomeActive()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
+            self?.router?.attachTabs()
+        })
         
-        router?.attachTabs()
     }
 }

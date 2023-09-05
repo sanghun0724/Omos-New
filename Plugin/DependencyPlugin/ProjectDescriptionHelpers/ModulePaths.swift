@@ -31,6 +31,7 @@ public extension ModulePaths {
 
 public extension ModulePaths {
     enum Domain: String {
+        case TodayDomain
         case RecordDomain
         case OnboardingDomain
         case BaseDomain

@@ -33,7 +33,7 @@ public final class RecordRepositoryServiceImpl: RecordRepositoryService {
         recordRepository.requestMyRecord(request: .init(userId: userId))
             .asObservable()
             .map(MyRecordModel.init(myRecordResponse:))
-        
+            
         return .empty()
     }
     
