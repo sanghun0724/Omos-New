@@ -8,7 +8,7 @@
 import Alamofire
 import Foundation
 
-enum TodayTarget {
+public enum TodayTarget {
   case popuralRecord
   case lovedRecord(userId: Int)
   case recommendDJRecord
@@ -16,19 +16,19 @@ enum TodayTarget {
 }
 
 extension TodayTarget: TargetType {
-    var baseURL: String {
+    public var baseURL: String {
       // RestApiUrl.restUrl + "/today"
         ""
     }
 
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         switch self {
         default:
             return .get
         }
     }
 
-    var path: String {
+    public var path: String {
         switch self {
         case .popuralRecord: return "/famous-records-of-today"
         case .lovedRecord(let id): return "/music-loved/\(id)"
@@ -37,7 +37,7 @@ extension TodayTarget: TargetType {
         }
     }
 
-    var parameters: RequestParams? {
+    public var parameters: RequestParams? {
         switch self {
         default:
             return nil

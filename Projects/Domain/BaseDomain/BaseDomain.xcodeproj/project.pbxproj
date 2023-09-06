@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,6 +56,12 @@
 		CD8EB069F29C7FEB92309413 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52F29E896B9028187127246 /* CFNetwork.framework */; };
 		CF5132C27F9E9F3BBC7471C3 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5462335F8E239A4B45CAF9B /* libOnboardingDomain.a */; platformFilter = ios; };
 		D77854953A170BF85B9F6335 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200D5F73F86F472C97ECD971 /* ReactorKitRuntime.framework */; platformFilter = ios; };
+		DEC2C9582AA7596300B1C17B /* PreviewRecordModelDataStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC2C9572AA7596300B1C17B /* PreviewRecordModelDataStream.swift */; };
+		DEC2C95A2AA75A1400B1C17B /* PreviewRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC2C9592AA75A1400B1C17B /* PreviewRecordModel.swift */; };
+		DEC2C95C2AA7695300B1C17B /* SelectedPreViewRecordModelStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC2C95B2AA7695300B1C17B /* SelectedPreViewRecordModelStream.swift */; };
+		DEC2C9632AA76DBA00B1C17B /* DJModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC2C9622AA76DBA00B1C17B /* DJModel.swift */; };
+		DEC2C9652AA76E5300B1C17B /* DJModelDataStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC2C9642AA76E5300B1C17B /* DJModelDataStream.swift */; };
+		DEC2C9672AA76E7700B1C17B /* SeletedDJModelStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC2C9662AA76E7700B1C17B /* SeletedDJModelStream.swift */; };
 		EA4F9881019951E74998AE26 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB2E2F572075F45C09382C7 /* Differentiator.framework */; platformFilter = ios; };
 		EEFE2E242AFD9F12F02C0954 /* libCoreKit.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 25108C81C98E319EC90D3AD6 /* libCoreKit.a */; platformFilter = ios; };
 		F42498336B6DBB3DAA39AF18 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463E21A5FB0F2A04E18B39C1 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
@@ -162,6 +168,12 @@
 		C8F367AB70C30A5B50D45796 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B927DE75822041B7A2C87A /* libBaseShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99033B2B209CDED9D09CED8 /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEC2C9572AA7596300B1C17B /* PreviewRecordModelDataStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRecordModelDataStream.swift; sourceTree = "<group>"; };
+		DEC2C9592AA75A1400B1C17B /* PreviewRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRecordModel.swift; sourceTree = "<group>"; };
+		DEC2C95B2AA7695300B1C17B /* SelectedPreViewRecordModelStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPreViewRecordModelStream.swift; sourceTree = "<group>"; };
+		DEC2C9622AA76DBA00B1C17B /* DJModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJModel.swift; sourceTree = "<group>"; };
+		DEC2C9642AA76E5300B1C17B /* DJModelDataStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJModelDataStream.swift; sourceTree = "<group>"; };
+		DEC2C9662AA76E7700B1C17B /* SeletedDJModelStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeletedDJModelStream.swift; sourceTree = "<group>"; };
 		E3BA227118B9B82FA3043B8E /* KakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5462335F8E239A4B45CAF9B /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2C49B3B0CB6CE09988AEB4 /* RxKakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -316,6 +328,7 @@
 		685F2F15BB9ECCCC2D00A010 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DEC2C9562AA7594F00B1C17B /* Model */,
 				231A6FFF723F91A0A7CA97A9 /* Worker */,
 			);
 			path = Sources;
@@ -361,6 +374,35 @@
 				C8F7876901C5041D3D701A65 /* Frameworks */,
 				4588923DFEDB693B645AF693 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		DEC2C9562AA7594F00B1C17B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEC2C95E2AA7698200B1C17B /* DJ */,
+				DEC2C95D2AA7697900B1C17B /* PreviewRecord */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEC2C95D2AA7697900B1C17B /* PreviewRecord */ = {
+			isa = PBXGroup;
+			children = (
+				DEC2C95B2AA7695300B1C17B /* SelectedPreViewRecordModelStream.swift */,
+				DEC2C9592AA75A1400B1C17B /* PreviewRecordModel.swift */,
+				DEC2C9572AA7596300B1C17B /* PreviewRecordModelDataStream.swift */,
+			);
+			path = PreviewRecord;
+			sourceTree = "<group>";
+		};
+		DEC2C95E2AA7698200B1C17B /* DJ */ = {
+			isa = PBXGroup;
+			children = (
+				DEC2C9662AA76E7700B1C17B /* SeletedDJModelStream.swift */,
+				DEC2C9622AA76DBA00B1C17B /* DJModel.swift */,
+				DEC2C9642AA76E5300B1C17B /* DJModelDataStream.swift */,
+			);
+			path = DJ;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,8 +454,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 642D1B0CEE24125913472891 /* Build configuration list for PBXProject "BaseDomain" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -465,7 +505,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC2C95C2AA7695300B1C17B /* SelectedPreViewRecordModelStream.swift in Sources */,
 				91ABD7653D7E1BCD0AAF222F /* ImagePrefetchWorker.swift in Sources */,
+				DEC2C9672AA76E7700B1C17B /* SeletedDJModelStream.swift in Sources */,
+				DEC2C9632AA76DBA00B1C17B /* DJModel.swift in Sources */,
+				DEC2C9652AA76E5300B1C17B /* DJModelDataStream.swift in Sources */,
+				DEC2C9582AA7596300B1C17B /* PreviewRecordModelDataStream.swift in Sources */,
+				DEC2C95A2AA75A1400B1C17B /* PreviewRecordModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct PopuralResponse: Codable {
-    let music: Music
-    let nickname: String
-    let recordID: Int
-    let recordImageURL, recordTitle: String
-    let userID: Int
+public struct PopuralResponse: Codable {
+    public let music: Music
+    public let nickname: String
+    public let recordID: Int
+    public let recordImageURL, recordTitle: String
+    public let userID: Int
 
     enum CodingKeys: String, CodingKey {
         case music, nickname
@@ -23,10 +23,10 @@ struct PopuralResponse: Codable {
     }
 }
 
-struct LovedResponse: Codable {
-    let recordID: Int
-    let music: Music
-    let recordImageURL: String?
+public struct LovedResponse: Codable {
+    public let recordID: Int
+    public let music: Music
+    public let recordImageURL: String?
 
     enum CodingKeys: String, CodingKey {
         case recordID = "recordId"
@@ -35,27 +35,15 @@ struct LovedResponse: Codable {
     }
 }
 
-struct TodayTrackResponse: Codable {
-    let albumImageURL, albumTitle: String
-    let artists: [Artist]
-    let musicID, musicTitle: String
+public struct TodayTrackResponse: Codable {
+    public let albumImageURL, albumTitle: String
+    public let artists: [Artist]
+    public let musicID, musicTitle: String
 
     enum CodingKeys: String, CodingKey {
         case albumImageURL = "albumImageUrl"
         case albumTitle, artists
         case musicID = "musicId"
         case musicTitle
-    }
-}
-
-struct RecommendDjResponse: Codable {
-    let nickname: String
-    let profileURL: String?
-    let userID: Int
-
-    enum CodingKeys: String, CodingKey {
-        case nickname
-        case profileURL = "profileUrl"
-        case userID = "userId"
     }
 }

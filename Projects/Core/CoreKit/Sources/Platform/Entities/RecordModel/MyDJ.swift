@@ -12,29 +12,15 @@ public struct MyDjRequest: Codable {
     let size: Int
 }
 
-
 public struct MyDjProfileResponse: Codable {
     let count: Count
     let isFollowed: Bool?
-    let profile: MyDjListResponse
+    let profile: DJResponse
 }
 
 // MARK: - Count
 public struct Count: Codable {
     let followerCount, followingCount, recordsCount: Int
-}
-
-// MARK: - Profile
-public struct MyDjListResponse: Codable {
-    let nickname: String
-    let profileURL: String?
-    let userID: Int
-
-    public enum CodingKeys: String, CodingKey {
-        case nickname
-        case profileURL = "profileUrl"
-        case userID = "userId"
-    }
 }
 
 public struct UserRecordsResponse: Codable {
