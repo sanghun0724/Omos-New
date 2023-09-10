@@ -19,11 +19,18 @@ public final class TodayRepositoryServiceImpl: TodayRepositoryService {
     
     private let todayRepository: TodayRepository
     
-    public init(todayRepository: TodayRepository) {
+    
+    public init(
+        todayRepository: TodayRepository,
+        
+    ) {
         self.todayRepository = todayRepository
     }
     
     public func loadData() -> Observable<Void> {
+    
+        
+        
         return .empty()
     }
     
