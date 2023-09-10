@@ -14,5 +14,6 @@ struct SignUpItemInfo: PropertyBuilderCompatible {
     
     var email: String = String()
     var password: String = String()
-    var nickname: String = String() 
+    var nickname: String = String()
+    var type: SignUpType = .local
 }

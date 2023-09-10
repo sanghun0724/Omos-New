@@ -9,18 +9,18 @@ import UIKit
 
 import RxSwift
 
-class BaseLabel:
+public class BaseLabel:
     UILabel,
     BaseViewable,
     HasDisposeBag
 {
     // MARK: Properties
     
-    var disposeBag = DisposeBag()
+    public var disposeBag = DisposeBag()
     
     private(set) var didSetupConstrints: Bool = false
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.initialize()
     }
@@ -36,7 +36,7 @@ class BaseLabel:
 
     // MARK: - Layout Constraints
 
-    override func updateConstraints() {
+    public override func updateConstraints() {
       self.setupConstraintsIfNeeded()
       super.updateConstraints()
     }

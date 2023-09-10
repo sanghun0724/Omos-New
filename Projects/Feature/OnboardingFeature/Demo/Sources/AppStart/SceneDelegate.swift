@@ -1,4 +1,5 @@
 import UIKit
+
 import RIBs
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -31,7 +32,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func setLaunchRouter() {
         guard let window = self.window else { return }
-        let appComponent = AppComponent()
+        let appComponent = OnboardingAppComponent()
         self.launchRouter = appComponent.appRootBuilder.build()
         self.launchRouter?.launch(from: window)
     }

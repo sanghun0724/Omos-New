@@ -66,7 +66,10 @@ final class OnboardingViewController:
     
     private lazy var kakaoImageView = UIImageView(image: DesignSystemAsset.Login.kakao.image)
     
-    private lazy var appleButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .white)
+    private lazy var appleButton = ASAuthorizationAppleIDButton(
+        authorizationButtonType: .signIn,
+        authorizationButtonStyle: .white
+    )
     
     private lazy var signUpButton = UIButton().builder
         .with {
@@ -112,7 +115,40 @@ final class OnboardingViewController:
 
 // MARK: Private methods
 
-extension OnboardingViewController {}
+extension OnboardingViewController {
+    
+    /// JWTToken -> dictionary
+    private func decode(jwtToken jwt: String) -> [String: Any] {
+        
+        func base64UrlDecode(_ value: String) -> Data? {
+            var base64 = value
+                .replacingOccurrences(of: "-", with: "+")
+                .replacingOccurrences(of: "_", with: "/")
+
+            let length = Double(base64.lengthOfBytes(using: String.Encoding.utf8))
+            let requiredLength = 4 * ceil(length / 4.0)
+            let paddingLength = requiredLength - length
+            if paddingLength > 0 {
+                let padding = "".padding(toLength: Int(paddingLength), withPad: "=", startingAt: 0)
+                base64 = base64 + padding
+            }
+            return Data(base64Encoded: base64, options: .ignoreUnknownCharacters)
+        }
+
+        func decodeJWTPart(_ value: String) -> [String: Any]? {
+            guard let bodyData = base64UrlDecode(value),
+                  let json = try? JSONSerialization.jsonObject(with: bodyData, options: []), let payload = json as? [String: Any] else {
+                return nil
+            }
+
+            return payload
+        }
+        
+        let segments = jwt.components(separatedBy: ".")
+        return decodeJWTPart(segments[1]) ?? [:]
+    }
+    
+}
 
 // MARK: - Bind UI
 
@@ -157,16 +193,33 @@ extension OnboardingViewController {
             .rx
             .tap
             .preventDuplication()
+            .debug("kakao")
             .map { .didTapKakaoLoggedInButton }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
     
     private func bindAppleLoggedInButtonAction() {
-        appleButton
+      let credential = appleButton
             .rx
             .loginOnTap(scope: [.email])
-            .compactMap { ($0.credential as? ASAuthorizationAppleIDCredential)?.email }
+            .compactMap { $0.credential as? ASAuthorizationAppleIDCredential }
+        
+        // 1. 이메일이 있으면 회원가입
+        credential
+            .compactMap(\.email)
+            .debug("check")
+            .map { .didTapAppleLoggedInButton(email: $0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+        
+        // 2. 이메일 없으면 로그인 -> identToken 에 이메일 정보
+        credential
+            .compactMap(\.identityToken)
+            .debug("check")
+            .compactMap { String(data: $0, encoding: .utf8) }
+            .withUnretained(self)
+            .compactMap { owner, token in owner.decode(jwtToken: token)["email"] as? String ?? "" }
             .map { .didTapAppleLoggedInButton(email: $0) }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)

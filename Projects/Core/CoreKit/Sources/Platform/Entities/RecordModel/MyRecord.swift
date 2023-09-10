@@ -8,13 +8,14 @@
 import Foundation
 
 // MARK: - MyRecordElement
+
 public struct MyRecordResponse: Codable {
-    let category, createdDate: String
-    let isPublic: Bool
-    let music: Music
-    let recordContents: String
-    let recordID: Int
-    let recordTitle: String
+    public let category, createdDate: String
+    public let isPublic: Bool
+    public let music: Music
+    public let recordContents: String
+    public let recordID: Int
+    public let recordTitle: String
     
     public enum CodingKeys: String, CodingKey {
         case category, createdDate, isPublic, music, recordContents
@@ -24,6 +25,7 @@ public struct MyRecordResponse: Codable {
 }
 
 // MARK: - MyRecord
+
 public struct SaveRequest: Codable { // add imageURL or image data using form - data
     let category: String
     let isPublic: Bool
@@ -89,5 +91,13 @@ public struct DetailRecordResponse: Codable {
         case recordTitle, scrapCnt
         case userID = "userId"
         case viewsCnt
+    }
+}
+
+public struct UserIDRequest: Codable {
+    let userId: Int
+    
+    public init(userId: Int) {
+        self.userId  = userId
     }
 }

@@ -56,8 +56,8 @@ public struct Music: Codable {
 }
 
 // MARK: - Artist
-struct Artist: Codable {
-    let artistID, artistName: String
+public struct Artist: Codable {
+    public let artistID, artistName: String
     
     enum CodingKeys: String, CodingKey {
         case artistID = "artistId"

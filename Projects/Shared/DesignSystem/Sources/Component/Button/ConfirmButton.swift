@@ -24,10 +24,8 @@ public class ConfirmButton: UIButton {
     public init(_ enableText: String, disableText: String? = nil) {
         self.enableText = enableText
         self.disableText = disableText ?? enableText
-
         super.init(frame: .zero)
-        
-        setup()
+        self.setup()
     }
     
     required init?(coder: NSCoder) {
@@ -36,9 +34,10 @@ public class ConfirmButton: UIButton {
     
     private func setup() {
         titleLabel?.font = .systemFont(ofSize: 16, weight: .regular)
-        setTitleColor(DesignSystemAsset.Colors.mainGray6.color, for: .disabled)
+        setTitleColor(.white, for: .disabled)
         setTitleColor(.white, for: .normal)
         backgroundColor = DesignSystemAsset.Colors.mainGray4.color
+        setEnable(false)
     }
     
     private func setEnable(_ isEnable: Bool) {

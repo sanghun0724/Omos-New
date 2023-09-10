@@ -8,16 +8,21 @@
 import NeedleFoundation
 
 import CoreKit
+import BaseDomain
 import OnboardingDomain
 import OnboardingDomainInterface
 import OnboardingFeature
 import OnboardingFeatureInterface
 import TodayFeature
 import TodayFeatureInterface
+import RecordDomain
+import RecordDomainInterface
+import RootTabBarFeature
+import RootTabBarFeatureInterface
 
 // MARK: AppComponent
 
-final class AppComponent: BootstrapComponent, AppRootDependency {
+final class OnboardingAppComponent: BootstrapComponent, AppRootDependency {
     
     var appRootBuilder: AppRootBuildable {
         AppRootBuilder {
@@ -25,9 +30,15 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
         }
     }
     
+    var rootTabBarBuilder: RootTabBarBuildable {
+        RootTabBarBuilder {
+            RootTabBarComponent(parent: self)
+        }
+    }
+    
     var onboardingRepositoryService: OnboardingRepositoryService {
         shared {
-            OnboardingRespositoryServiceImpl(
+            OnboardingRepositoryServiceImpl(
                 onboardingRepository: onboardingRepository
             )
         }
@@ -38,16 +49,16 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
             OnboardingComponent(parent: self)
         }
     }
+
+    var emailSignUpBuilder: EmailSignUpBuildable {
+        EmailSignUpBuilder {
+            EmailSignUpComponent(parent: self)
+        }
+    }
     
     var loggedInBuilder: LoggedInBuildable {
         LoggedInBuilder {
             LoggedInComponent(parent: self)
-        }
-    }
-    
-    var signUpBuilder: EmailSignUpBuildable {
-        EmailSignUpBuilder {
-            EmailSignUpComponent(parent: self)
         }
     }
     
@@ -57,14 +68,20 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
         }
     }
     
-    var todayBuilder: TodayBuildable {
-        TodayBuilder {
-            TodayComponent(parent: self)
+    var passwordBuilder: PasswordBuildable {
+        PasswordBuilder {
+            PasswordComponent(parent: self)
+        }
+    }
+
+    var agreementBuilder: AgreementBuildable {
+        AgreementBuilder {
+            AgreementComponent(parent: self)
         }
     }
 }
 
-extension AppComponent {
+extension OnboardingAppComponent {
     private var onboardingRepository: OnboardingRepository {
         OnboardingRepositoryImpl(networkingProvider: Networking())
     }

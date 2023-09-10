@@ -11,6 +11,8 @@ let project = Project.makeModule(
         .domain(target: .OnboardingDomain),
         .domain(target: .OnboardingDomain, type: .interface),
         .domain(target: .RecordDomain),
-        .domain(target: .RecordDomain, type: .interface)
+        .domain(target: .RecordDomain, type: .interface),
+        .domain(target: .TodayDomain),
+        .domain(target: .TodayDomain, type: .interface)
     ]
 )

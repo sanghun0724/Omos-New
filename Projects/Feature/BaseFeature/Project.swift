@@ -8,6 +8,11 @@ let project = Project.makeModule(
     targets: [.unitTest],
     internalDependencies: [
         .feature(target: .OnboardingFeature),
-        .feature(target: .TodayFeature)
+        .feature(target: .RootTabBarFeature),
+        .feature(target: .TodayFeature),
+        .feature(target: .MyRecordFeature),
+        .feature(target: .MyDJFeature),
+        .feature(target: .AllRecordFeature),
+        .feature(target: .MyPageFeature)
     ]
 )

@@ -7,6 +7,7 @@
 
 import Alamofire
 import RxSwift
+import LogFlume
 
 import AppFoundation
 import GlobalThirdPartyLibrary
@@ -27,13 +28,13 @@ public class Networking<Target: TargetType> {
         let request = rxRequest(target, type: type)
             .do(onSuccess: { response in
                 let message = "SUCCESS: \(requestString) (\(response))"
-                log.debug(message, file: file, function: function, line: line)
+                LogFlume.debug(message, file: file, function: function, line: line)
             }, onError: { error in
                 let message = "FAILURE \(Self.logging(error: error))"
-                log.warning(message, file: file, function: function, line: line)
+                LogFlume.warning(message, file: file, function: function, line: line)
             }, onSubscribed: {
                 let message = "REQUEST: \(requestString)"
-                log.debug(message, file: file, function: function, line: line)
+                LogFlume.debug(message, file: file, function: function, line: line)
             })
         return request
         #else

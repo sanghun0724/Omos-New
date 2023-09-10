@@ -9,9 +9,9 @@ import RIBs
 
 import DesignSystem
 import OnboardingFeatureInterface
-import TodayFeatureInterface
+import RootTabBarFeatureInterface
 
-protocol AppRootInteractable: Interactable, OnboardingListener, TodayListener {
+protocol AppRootInteractable: Interactable, OnboardingListener, RootTabBarListener {
     var router: AppRootRouting? { get set }
     var listener: AppRootListener? { get set }
 }
@@ -23,19 +23,19 @@ protocol AppRootViewControllable: ViewControllable {
 final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControllable>, AppRootRouting {
     
     private let onboardingBuilder: OnboardingBuildable
-    private let todayBuilder: TodayBuildable
-    
     private var onboardingRouting: OnboardingRouting?
-    private var todayRouting: TodayRouting?
+    
+    private let rootTabBarBuilder: RootTabBarBuildable
+    private var rootTabBarRouting: RootTabBarRouting?
     
     init(
         interactor: AppRootInteractable,
         viewController: AppRootViewControllable,
         onboardingBuilder: OnboardingBuildable,
-        todayBuilder: TodayBuildable
+        rootTabBarBuilder: RootTabBarBuildable
     ) {
         self.onboardingBuilder = onboardingBuilder
-        self.todayBuilder = todayBuilder
+        self.rootTabBarBuilder = rootTabBarBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
@@ -61,16 +61,16 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
         viewController.presentFullScreen(navigation, animated: false, completion: nil)
     }
     
-    func attachToday() {
-        if todayRouting != nil {
+    func attachRootTabBar() {
+        if rootTabBarRouting != nil {
             return
         }
         
-        let router = todayBuilder.build(
-            with: TodayBuildDependency(
+        let router = rootTabBarBuilder.build(
+            with: RootTabBarBuildDependency(
                 listener: interactor)
         )
-        self.todayRouting = router
+        self.rootTabBarRouting = router
         attachChild(router)
         let navigation = NavigationControllerable(root: router.viewControllable)
         viewController.presentFullScreen(navigation, animated: false, completion: nil)

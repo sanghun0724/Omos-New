@@ -26,15 +26,33 @@
          <FileRef
             location = "group:RecordDomain/RecordDomain.xcodeproj">
          </FileRef>
+         <FileRef
+            location = "group:TodayDomain/TodayDomain.xcodeproj">
+         </FileRef>
       </Group>
       <Group
          location = "group:Feature"
          name = "Feature">
          <FileRef
+            location = "group:AllRecordFeature/AllRecordFeature.xcodeproj">
+         </FileRef>
+         <FileRef
             location = "group:BaseFeature/BaseFeature.xcodeproj">
          </FileRef>
          <FileRef
+            location = "group:MyDJFeature/MyDJFeature.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:MyPageFeature/MyPageFeature.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:MyRecordFeature/MyRecordFeature.xcodeproj">
+         </FileRef>
+         <FileRef
             location = "group:OnboardingFeature/OnboardingFeature.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:RootTabBarFeature/RootTabBarFeature.xcodeproj">
          </FileRef>
          <FileRef
             location = "group:TodayFeature/TodayFeature.xcodeproj">

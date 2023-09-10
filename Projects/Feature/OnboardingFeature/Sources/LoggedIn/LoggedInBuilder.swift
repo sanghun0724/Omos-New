@@ -9,7 +9,7 @@ import NeedleFoundation
 import RIBs
 
 import OnboardingDomainInterface
-import TodayFeatureInterface
+import RootTabBarFeatureInterface
 import OnboardingFeatureInterface
 
 // MARK: - LoggedInDependency
@@ -17,8 +17,8 @@ import OnboardingFeatureInterface
 public protocol LoggedInDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
     var loggedInBuilder: LoggedInBuildable { get }
-    var signUpBuilder: EmailSignUpBuildable { get }
-    var todayBuilder: TodayBuildable { get }
+    var emailSignUpBuilder: EmailSignUpBuildable { get }
+    var rootTabBarBuilder: RootTabBarBuildable { get }
 }
 
 // MARK: - DynamicComponentDependency
@@ -50,8 +50,8 @@ public final class LoggedInBuilder:
                                             onboardingRepositoryService: component.onboardingRepositoryService)
         interactor.listener = payload.listener
         
-        return LoggedInRouter(todayBuilder: component.todayBuilder,
-                              signUpBuilder: component.signUpBuilder,
+        return LoggedInRouter(rootTabBarBuilder: component.rootTabBarBuilder,
+                              emailSignUpBuilder: component.emailSignUpBuilder,
                               interactor: interactor,
                               viewController: viewController)
     }

@@ -50,10 +50,12 @@ public enum DesignSystemAsset {
   }
   public enum Common {
     public static let arrowLeft = DesignSystemImages(name: "arrow-left")
+    public static let arrowRight = DesignSystemImages(name: "arrow_right")
     public static let bell = DesignSystemImages(name: "bell ")
     public static let check = DesignSystemImages(name: "check")
+    public static let checkbox = DesignSystemImages(name: "checkbox")
     public static let empty = DesignSystemImages(name: "empty")
-    public static let keyboardArrowLeft = DesignSystemImages(name: "keyboard_arrow_left")
+    public static let emptycheck = DesignSystemImages(name: "emptycheck")
     public static let more = DesignSystemImages(name: "more")
     public static let orangeright = DesignSystemImages(name: "orangeright")
   }

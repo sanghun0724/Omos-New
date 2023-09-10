@@ -1,0 +1,1790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006A2495B1E96D25C35A8259 /* RxKakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBFE6D9310E2D3674451B1D /* RxKakaoSDKAuth.framework */; platformFilter = ios; };
+		01134C309E509984C6890324 /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5D33F889E6BE6FF7AB5042 /* Testing.swift */; };
+		01417468A57BE9F28AC17AE6 /* MyRecordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1639769153911B471A65E21 /* MyRecordInteractor.swift */; };
+		032FD6F99D8C16D9819B8282 /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F1B6DD87063B4FD8EAD12 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		0463968742AE430C6AC1F530 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAFB196D25E52D49DB389488 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04D8C9DDF0240ACC9E098CD1 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4613A283C2382822E15BAC46 /* RIBs.framework */; platformFilter = ios; };
+		1073B56575AA58900208DC4F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C093DED2F4824120525A6838 /* Alamofire.framework */; platformFilter = ios; };
+		108AA4242914BA1D08DAFB0D /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D59D33261DF176DAF7240C61 /* libAppFoundation.a */; platformFilter = ios; };
+		12168054DA0AEEAF02B87497 /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B05F9CF9F3CB6AFE048CA2 /* RxKakaoSDKStory.framework */; platformFilter = ios; };
+		138BA3E5657FF7569BA16140 /* RxKakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD4E7CD9EC7A9D470535FD2 /* RxKakaoSDKShare.framework */; platformFilter = ios; };
+		17987BB3A94C1A5C27918D4A /* MyRecordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DBA58E4C532EA15D895EC /* MyRecordRouter.swift */; };
+		181A396315571F2C4586387E /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436837878A5C79042E9971D3 /* Interface.swift */; };
+		193607F338033F0E2CB9A23D /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CB171ADB01FC6A0A9E5811 /* libOnboardingDomain.a */; platformFilter = ios; };
+		1A8795223CD342A786E13EC8 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE8DAF15495EFD468CF8835 /* libBaseShared.a */; platformFilter = ios; };
+		1DDB08973CACEAEB354DC639 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 176E75C8B491EFB032FF801B /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F8180AA18B1CD375E126C41 /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C24948266442A871CCCC89A5 /* libBaseDomain.a */; platformFilter = ios; };
+		23BAC02C8FA19A9B5F01B589 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B87E4E78E3C6EAB1266997 /* AppComponent.swift */; };
+		2D94144F65B711963EE6AC5F /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EB64A3026DBE7DA5F2B92731 /* DesignSystem_DesignSystem.bundle */; };
+		2F1CCE51EC5D8FC8FC5A35DD /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084D24F763C93105F4775486 /* RxDataSources.framework */; platformFilter = ios; };
+		2FA6FB0CEF118064A82E75DF /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456E541EC48148A83601D546 /* KakaoSDKShare.framework */; platformFilter = ios; };
+		33F1A983EFE34E0EF3C30644 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E530ABB0CC3AD4E778D6284D /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
+		34B41D68C76F7DCC2F10D5AA /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92BA5E787251979C9286CDB /* KakaoSDKCommon.framework */; platformFilter = ios; };
+		35C23E3F571B79AE2544804B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3100724BAED5263A8427BFC /* RxSwift.framework */; platformFilter = ios; };
+		36D872B4B881EF2593F5507E /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFB196D25E52D49DB389488 /* SnapKit.framework */; platformFilter = ios; };
+		383691F9C02954ACB393CFB3 /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = EB64A3026DBE7DA5F2B92731 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
+		39FC85E175C620AC80D88BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8314EDF0470A9F954776E000 /* LaunchScreen.storyboard */; };
+		3C01B0FCE7E8F78282FDD3CB /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FCB02DABE863D18DADD04B /* libDesignSystem.a */; platformFilter = ios; };
+		42A73EF947C314EA2877F415 /* libMyRecordFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4BAA1711DED5432A429946 /* libMyRecordFeatureInterface.a */; platformFilter = ios; };
+		42EAD20ED4574ECD89397383 /* AppRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D0928E32853278F7596104 /* AppRootRouter.swift */; };
+		447206987893E423EB685ED6 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E530ABB0CC3AD4E778D6284D /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
+		447F1746EF33F3457C8C2775 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D59D33261DF176DAF7240C61 /* libAppFoundation.a */; platformFilter = ios; };
+		467067350589902F6CB80318 /* libMyRecordFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4BAA1711DED5432A429946 /* libMyRecordFeatureInterface.a */; platformFilter = ios; };
+		4A557F72EBD28967EAC2DFD1 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E75C8B491EFB032FF801B /* RxRelay.framework */; platformFilter = ios; };
+		4C10D105CA69EE24108FD712 /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66091008BAA8084C17C5A376 /* WeakMapTable.framework */; platformFilter = ios; };
+		4E5804C2188F1CC2B0BB9ADB /* AppRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FB0AF1765E60832C06A8CE /* AppRootViewController.swift */; };
+		53A4D37C0B66B8772D6BA9DF /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAF45EFFA65042934D73FD47 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		545504EB06C63BFF756B65EA /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6896EF5098427DCAB4789FE /* KakaoSDKTalk.framework */; platformFilter = ios; };
+		578358EC2815B5D5F2572864 /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FFEF695E972BEAA68373FF /* RxAlamofire.framework */; platformFilter = ios; };
+		58DC491F7ADDDC05178C40A0 /* MyRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BD67BADB12C0889B60E798 /* MyRecordViewController.swift */; };
+		5B05571AD7B0B2B0654CCF07 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8995354C1CA8340428DACAF /* KakaoSDKAuth.framework */; platformFilter = ios; };
+		5DA6F1704FEE7761DEC0D86A /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C24948266442A871CCCC89A5 /* libBaseDomain.a */; platformFilter = ios; };
+		5DAF024F1336C5D03A2FA007 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E3100724BAED5263A8427BFC /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		60382AABB2BD88C0F47AB0F9 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD34B82DEFF007E10423529C /* ReactorKit.framework */; platformFilter = ios; };
+		6051C0ECD96C624DF400DBC0 /* RxKakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD4E7CD9EC7A9D470535FD2 /* RxKakaoSDKShare.framework */; platformFilter = ios; };
+		62527E452B441E72D0FB0815 /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FFEF695E972BEAA68373FF /* RxAlamofire.framework */; platformFilter = ios; };
+		687EFA2F7A2357157CF6222B /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 176E75C8B491EFB032FF801B /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6972186741A9496BF5E735C3 /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680D14E4A75CB9DBEF282B8D /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
+		699EE7F9B01B7BBBB2B3D38E /* MyRecordFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9842F8CD1159CE4D894AD8ED /* MyRecordFeatureTesting.framework */; platformFilter = ios; };
+		6AE194C257F9989E44D806C9 /* libRecordDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A43F5DC09548D9186280B4E2 /* libRecordDomainInterface.a */; platformFilter = ios; };
+		6E44245F14721B6DDCBD8446 /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B05F9CF9F3CB6AFE048CA2 /* RxKakaoSDKStory.framework */; platformFilter = ios; };
+		7050551134242168390E08F3 /* libTodayDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D721385B3AD694E5B63186A4 /* libTodayDomain.a */; platformFilter = ios; };
+		76C1036E63779A5EEF61FD2A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3100724BAED5263A8427BFC /* RxSwift.framework */; platformFilter = ios; };
+		7C148245DFF442B6968EAA0D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFB196D25E52D49DB389488 /* SnapKit.framework */; platformFilter = ios; };
+		80FB35A7D499FBB510247EF0 /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761E712360A54B8EB1D939B8 /* KakaoSDKUser.framework */; platformFilter = ios; };
+		8298D4777704B6CC4F96A03B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C093DED2F4824120525A6838 /* Alamofire.framework */; platformFilter = ios; };
+		834DE8DF259D0BB747EEEC02 /* libRecordDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A43F5DC09548D9186280B4E2 /* libRecordDomainInterface.a */; platformFilter = ios; };
+		85025D08D58878C6B479FECD /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E3100724BAED5263A8427BFC /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85EFD06D16630E8685AF16B1 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAFB196D25E52D49DB389488 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		865B1BBF1730AA8661A69D31 /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6896EF5098427DCAB4789FE /* KakaoSDKTalk.framework */; platformFilter = ios; };
+		8883DDC8558C7350275F61A6 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991088CD179D62DC0984DBE4 /* NeedleFoundation.framework */; platformFilter = ios; };
+		89E1482DD9A0CD66554AAC9A /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC01A69773339057DCBF5042 /* RxGesture.framework */; platformFilter = ios; };
+		8A0C019EC2DC6751EC5E35FD /* KakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456E541EC48148A83601D546 /* KakaoSDKShare.framework */; platformFilter = ios; };
+		8BB666A678FEF4B39157251D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA31180C07E929FE0E5EE22 /* RxCocoa.framework */; platformFilter = ios; };
+		8D9998FA010F1E58172C6C21 /* libDesignSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FCB02DABE863D18DADD04B /* libDesignSystem.a */; platformFilter = ios; };
+		8EFAA2830CBAEF26C0A08587 /* TuistBundle+MyRecordFeatureDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B6E5DE11AE15083CC30A1 /* TuistBundle+MyRecordFeatureDemoApp.swift */; };
+		945078A14E429A89A1730CAE /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E5D2386B6C3842B8AB12C2 /* LogFlume.framework */; platformFilter = ios; };
+		94957F0EAF961322B472D82F /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E045E23323156656DB7123F /* Differentiator.framework */; platformFilter = ios; };
+		9590332747C26D1D79AD61FB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43B09C74EC0D81097472825 /* CFNetwork.framework */; };
+		98E60FFBAA6F226CB62A339E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1980116C086B951040C46B /* SceneDelegate.swift */; };
+		9DB31E7556D1E2A5B2F009D2 /* libOnboardingDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CB171ADB01FC6A0A9E5811 /* libOnboardingDomain.a */; platformFilter = ios; };
+		A1691D9AC51C70EC02015320 /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 635F1B6DD87063B4FD8EAD12 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		A21D3A1E1006E49BE8CE8A00 /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8995354C1CA8340428DACAF /* KakaoSDKAuth.framework */; platformFilter = ios; };
+		A246CD51C7E0420133CA3614 /* MyRecordFeatureTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9842F8CD1159CE4D894AD8ED /* MyRecordFeatureTesting.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2A56F34E7F814F441E52CC0 /* libTodayDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D721385B3AD694E5B63186A4 /* libTodayDomain.a */; platformFilter = ios; };
+		A2BAFF1470EEA1287FCE7E19 /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7CD1DBFA90B06E0969BFEFC /* KakaoSDKTemplate.framework */; platformFilter = ios; };
+		A3D68FA9AFDEAF516BB4BAE5 /* RxKakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBFE6D9310E2D3674451B1D /* RxKakaoSDKAuth.framework */; platformFilter = ios; };
+		A7639DA449AF4095B3DF43D1 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE8DAF15495EFD468CF8835 /* libBaseShared.a */; platformFilter = ios; };
+		A9DA8EDF493A3E96138D508A /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EB64A3026DBE7DA5F2B92731 /* DesignSystem_DesignSystem.bundle */; };
+		ABCCE4A3878D9AA58B85E1F3 /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F5361EC6A32ABE4A50600 /* libCoreKit.a */; platformFilter = ios; };
+		AC6E233606C1D30306E2C835 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD323CB294BA07FF4D7845B /* ReactorKitRuntime.framework */; platformFilter = ios; };
+		ACD452327998CF3C4DADA70E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B2293CE9782CC50475143F /* Kingfisher.framework */; platformFilter = ios; };
+		AD1544D92154157E35C3C03C /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B23A7E87919DEE950235814 /* KakaoSDKStory.framework */; platformFilter = ios; };
+		B02FF1402FBF9B326B1E7761 /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E41B17A34AF069F9CEF330C9 /* libRecordDomain.a */; platformFilter = ios; };
+		B81187CAF8D0704413607594 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176E75C8B491EFB032FF801B /* RxRelay.framework */; platformFilter = ios; };
+		B934822390BE3153FDA49AE5 /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E5D2386B6C3842B8AB12C2 /* LogFlume.framework */; platformFilter = ios; };
+		BD13A639BF78A79F7399C696 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E045E23323156656DB7123F /* Differentiator.framework */; platformFilter = ios; };
+		BD4835F94E96955198DCBBD6 /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F5361EC6A32ABE4A50600 /* libCoreKit.a */; platformFilter = ios; };
+		BF6E0698967372A522BF003D /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991088CD179D62DC0984DBE4 /* NeedleFoundation.framework */; platformFilter = ios; };
+		C027A6B545607BE3C4D2DD7E /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92BA5E787251979C9286CDB /* KakaoSDKCommon.framework */; platformFilter = ios; };
+		C060F3FD8EA67F17A2641B31 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C28C477E07FC2CF0ECB9A95 /* SkeletonView.framework */; platformFilter = ios; };
+		C24ECA6C00183BA1DB06A5EB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43B09C74EC0D81097472825 /* CFNetwork.framework */; };
+		C8E3CBEE14C713AC5DC0532F /* MyRecordFeatureTesting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9842F8CD1159CE4D894AD8ED /* MyRecordFeatureTesting.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA792AD9C2F5153A25261294 /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7CD1DBFA90B06E0969BFEFC /* KakaoSDKTemplate.framework */; platformFilter = ios; };
+		CC26AA6667D05AD09B3E84A0 /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9552DA8E4192CF50B9247747 /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
+		CCDE373654FDBE3D677D7B3D /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEAD5DADBE3750C2D6A9EB /* AppRootInteractor.swift */; };
+		D031324039DB1646865DC7A9 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA31180C07E929FE0E5EE22 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D439F0797BE486D8D46BAA67 /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9552DA8E4192CF50B9247747 /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
+		D571501E22F6C868675DB160 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A2686AA5C0C3D71A0F3047 /* AppDelegate.swift */; };
+		D6087DCFA756096A155CADFF /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B2293CE9782CC50475143F /* Kingfisher.framework */; platformFilter = ios; };
+		D73F7559E639CC002A9C5598 /* libMyRecordFeatureInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 5D4BAA1711DED5432A429946 /* libMyRecordFeatureInterface.a */; platformFilter = ios; };
+		D81834D1EB444003C15AF981 /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B23A7E87919DEE950235814 /* KakaoSDKStory.framework */; platformFilter = ios; };
+		D8FF5972383EFB7BF48D5D82 /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAF45EFFA65042934D73FD47 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D96BB8DA94631ED7E5B0E6B4 /* libTodayDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B150B3031145D268F3D15B /* libTodayDomainInterface.a */; platformFilter = ios; };
+		DCA3523DC5EF942382542ECD /* MyRecordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA60E5526922BF3C386BD6F /* MyRecordBuilder.swift */; };
+		DE45D3BE2F73E720E747BBDA /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD34B82DEFF007E10423529C /* ReactorKit.framework */; platformFilter = ios; };
+		E21E4875A99F3B9A33AED40D /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66091008BAA8084C17C5A376 /* WeakMapTable.framework */; platformFilter = ios; };
+		E419F1BCFAA484E8A35538F3 /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E41B17A34AF069F9CEF330C9 /* libRecordDomain.a */; platformFilter = ios; };
+		E4DDBDB12C6BB4E2D881CC4B /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680D14E4A75CB9DBEF282B8D /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
+		E623EA268FF19535ED8D2714 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084D24F763C93105F4775486 /* RxDataSources.framework */; platformFilter = ios; };
+		E699803ECBD46270D66E88AB /* MyRecordStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B11F30ACB960089C142004 /* MyRecordStateAction.swift */; };
+		E8AA7769F0806821BED1485D /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3182B9E5752FF7814506446C /* NeedleGenerated.swift */; };
+		EAB1536BEB9E5AFC2DC38ADC /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B99C422F3413FBBDCDEA35C /* RxKakaoSDKUser.framework */; platformFilter = ios; };
+		EBF0BCFBD4EF0176A2E5FB59 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC01A69773339057DCBF5042 /* RxGesture.framework */; platformFilter = ios; };
+		EC11B431F8F180CD569B31E7 /* MyRecordFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9842F8CD1159CE4D894AD8ED /* MyRecordFeatureTesting.framework */; platformFilter = ios; };
+		EC1246AB4C8171E0B36F7E3A /* AppRootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B787D6060FAD0A947C8F8F1B /* AppRootBuilder.swift */; };
+		ED145E80865B6CC0934B5582 /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761E712360A54B8EB1D939B8 /* KakaoSDKUser.framework */; platformFilter = ios; };
+		EED1BEFF56734E5AB060FEC5 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD323CB294BA07FF4D7845B /* ReactorKitRuntime.framework */; platformFilter = ios; };
+		EFA96B8FAB395F361955E277 /* MyRecordFeatureTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9842F8CD1159CE4D894AD8ED /* MyRecordFeatureTesting.framework */; platformFilter = ios; };
+		F24302D92F730176A708F7D3 /* libTodayDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B150B3031145D268F3D15B /* libTodayDomainInterface.a */; platformFilter = ios; };
+		F36454F34D5522B37790EC42 /* libMyRecordFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B43353E9609825F37E7E8E3A /* libMyRecordFeature.a */; platformFilter = ios; };
+		F417244DE93A7DD4DC25D71A /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4613A283C2382822E15BAC46 /* RIBs.framework */; platformFilter = ios; };
+		F581E0139AB5B8A7B78CCA4B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA31180C07E929FE0E5EE22 /* RxCocoa.framework */; platformFilter = ios; };
+		F5FEFCB04F59B9D6B619672E /* RxKakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B99C422F3413FBBDCDEA35C /* RxKakaoSDKUser.framework */; platformFilter = ios; };
+		F6B9B11E20F7DDC38B016AE5 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA31180C07E929FE0E5EE22 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8B60225664A16649D2ABBD2 /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = EB64A3026DBE7DA5F2B92731 /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
+		F9B9F842388FB309EE65F3BB /* MyRecordFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15172B6CF5B6EC391F349EF3 /* MyRecordFeatureTest.swift */; };
+		FBC907F382AEF566F7D0BD24 /* libBaseDomain.a in Dependencies */ = {isa = PBXBuildFile; fileRef = C24948266442A871CCCC89A5 /* libBaseDomain.a */; platformFilter = ios; };
+		FF683C9782E29194D1CB65EF /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C28C477E07FC2CF0ECB9A95 /* SkeletonView.framework */; platformFilter = ios; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		082A1CD9640356547C6DB9DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 378CE40B3BF37A07896C419E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CED566C029CDF37AB2835292;
+			remoteInfo = MyRecordFeatureDemoApp;
+		};
+		39D8B2D80F1FACC142F12804 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 378CE40B3BF37A07896C419E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90D5395B4E07E74B6FE18D74;
+			remoteInfo = MyRecordFeatureInterface;
+		};
+		3EEE03584ADA14949C358E1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 378CE40B3BF37A07896C419E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79DCB6C19815CA127A017ED3;
+			remoteInfo = MyRecordFeatureTesting;
+		};
+		6EA71380F56643B5C2887A92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 378CE40B3BF37A07896C419E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79DCB6C19815CA127A017ED3;
+			remoteInfo = MyRecordFeatureTesting;
+		};
+		862CFB40740AD80DFF5A825D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 378CE40B3BF37A07896C419E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95B02AA92622EED8CD2C65C1;
+			remoteInfo = MyRecordFeature;
+		};
+		CDC46748D084EC3902F51851 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 378CE40B3BF37A07896C419E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90D5395B4E07E74B6FE18D74;
+			remoteInfo = MyRecordFeatureInterface;
+		};
+		DDBAE56C0ED661CE2E846B0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 378CE40B3BF37A07896C419E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79DCB6C19815CA127A017ED3;
+			remoteInfo = MyRecordFeatureTesting;
+		};
+		E23A3147E56F49E57469D690 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 378CE40B3BF37A07896C419E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CED566C029CDF37AB2835292;
+			remoteInfo = MyRecordFeatureDemoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0406CA72C6D6C17B128778E0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1197E1181DA6428E682F5C7D /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				F8B60225664A16649D2ABBD2 /* DesignSystem_DesignSystem.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		39E71D31CED06F2581419E99 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				FBC907F382AEF566F7D0BD24 /* libBaseDomain.a in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		4F09580F444DDD66CE507E8C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C8E3CBEE14C713AC5DC0532F /* MyRecordFeatureTesting.framework in Embed Frameworks */,
+				D031324039DB1646865DC7A9 /* RxCocoa.framework in Embed Frameworks */,
+				53A4D37C0B66B8772D6BA9DF /* RxCocoaRuntime.framework in Embed Frameworks */,
+				1DDB08973CACEAEB354DC639 /* RxRelay.framework in Embed Frameworks */,
+				85025D08D58878C6B479FECD /* RxSwift.framework in Embed Frameworks */,
+				85EFD06D16630E8685AF16B1 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51630BFDBC41AE814CE4CE32 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				383691F9C02954ACB393CFB3 /* DesignSystem_DesignSystem.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5BD262A48157C6F01B8055B0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC289CBFAC1432D815DD7484 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C10E55E7CCA58E9711D30E8F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00FF851FAC04786665A06B5 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				D73F7559E639CC002A9C5598 /* libMyRecordFeatureInterface.a in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F4DE5784B03009F4325E5A0C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A246CD51C7E0420133CA3614 /* MyRecordFeatureTesting.framework in Embed Frameworks */,
+				F6B9B11E20F7DDC38B016AE5 /* RxCocoa.framework in Embed Frameworks */,
+				D8FF5972383EFB7BF48D5D82 /* RxCocoaRuntime.framework in Embed Frameworks */,
+				687EFA2F7A2357157CF6222B /* RxRelay.framework in Embed Frameworks */,
+				5DAF024F1336C5D03A2FA007 /* RxSwift.framework in Embed Frameworks */,
+				0463968742AE430C6AC1F530 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		084D24F763C93105F4775486 /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12E32BCA0F55F29A166B696A /* MyRecordFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRecordFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15172B6CF5B6EC391F349EF3 /* MyRecordFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordFeatureTest.swift; sourceTree = "<group>"; };
+		176E75C8B491EFB032FF801B /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E5D33F889E6BE6FF7AB5042 /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
+		1FD323CB294BA07FF4D7845B /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		200B6E5DE11AE15083CC30A1 /* TuistBundle+MyRecordFeatureDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+MyRecordFeatureDemoApp.swift"; sourceTree = "<group>"; };
+		22E5D2386B6C3842B8AB12C2 /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EDEAD5DADBE3750C2D6A9EB /* AppRootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootInteractor.swift; sourceTree = "<group>"; };
+		3182B9E5752FF7814506446C /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
+		342D58B6A1953BF790B4B834 /* MyRecordFeatureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRecordFeatureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34B05F9CF9F3CB6AFE048CA2 /* RxKakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B23A7E87919DEE950235814 /* KakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C28C477E07FC2CF0ECB9A95 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FBFE6D9310E2D3674451B1D /* RxKakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		436837878A5C79042E9971D3 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		456E541EC48148A83601D546 /* KakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4613A283C2382822E15BAC46 /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55A2686AA5C0C3D71A0F3047 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57FB0AF1765E60832C06A8CE /* AppRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewController.swift; sourceTree = "<group>"; };
+		58B87E4E78E3C6EAB1266997 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		5D4BAA1711DED5432A429946 /* libMyRecordFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		62BD67BADB12C0889B60E798 /* MyRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordViewController.swift; sourceTree = "<group>"; };
+		635F1B6DD87063B4FD8EAD12 /* libOnboardingDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		66091008BAA8084C17C5A376 /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		680D14E4A75CB9DBEF282B8D /* RxKakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AA31180C07E929FE0E5EE22 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CE8DAF15495EFD468CF8835 /* libBaseShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DBCB2FBF2AF2C554CEEDE7C /* MyRecordFeatureTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyRecordFeatureTesting-Info.plist"; sourceTree = "<group>"; };
+		75FFEF695E972BEAA68373FF /* RxAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		761E712360A54B8EB1D939B8 /* KakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AFC8727D98E49D3E6CA70F2 /* MyRecordFeatureDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRecordFeatureDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8314EDF0470A9F954776E000 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		840F5361EC6A32ABE4A50600 /* libCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B99C422F3413FBBDCDEA35C /* RxKakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9552DA8E4192CF50B9247747 /* libGlobalThirdPartyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGlobalThirdPartyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		95B11F30ACB960089C142004 /* MyRecordStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordStateAction.swift; sourceTree = "<group>"; };
+		9842F8CD1159CE4D894AD8ED /* MyRecordFeatureTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyRecordFeatureTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		991088CD179D62DC0984DBE4 /* NeedleFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeedleFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1980116C086B951040C46B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9E045E23323156656DB7123F /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A12C5765311A0594A327D35B /* MyRecordFeatureDemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyRecordFeatureDemoApp-Info.plist"; sourceTree = "<group>"; };
+		A43F5DC09548D9186280B4E2 /* libRecordDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7CD1DBFA90B06E0969BFEFC /* KakaoSDKTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8CB171ADB01FC6A0A9E5811 /* libOnboardingDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43353E9609825F37E7E8E3A /* libMyRecordFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B787D6060FAD0A947C8F8F1B /* AppRootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootBuilder.swift; sourceTree = "<group>"; };
+		BD34B82DEFF007E10423529C /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFA60E5526922BF3C386BD6F /* MyRecordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordBuilder.swift; sourceTree = "<group>"; };
+		C093DED2F4824120525A6838 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C24948266442A871CCCC89A5 /* libBaseDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5A19CF55D4B471F32FEEA7D /* MyRecordFeatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyRecordFeatureTests-Info.plist"; sourceTree = "<group>"; };
+		C92BA5E787251979C9286CDB /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF45EFFA65042934D73FD47 /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAFB196D25E52D49DB389488 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC01A69773339057DCBF5042 /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6067E263D31B18BCB8B22C /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		D4B150B3031145D268F3D15B /* libTodayDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D59D33261DF176DAF7240C61 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6896EF5098427DCAB4789FE /* KakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D721385B3AD694E5B63186A4 /* libTodayDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D0928E32853278F7596104 /* AppRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootRouter.swift; sourceTree = "<group>"; };
+		E3100724BAED5263A8427BFC /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E41B17A34AF069F9CEF330C9 /* libRecordDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E43B09C74EC0D81097472825 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		E530ABB0CC3AD4E778D6284D /* RxKakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8995354C1CA8340428DACAF /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB64A3026DBE7DA5F2B92731 /* DesignSystem_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystem_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6C00D51820CFDCEA84FEE7 /* MyRecordFeatureUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyRecordFeatureUITests-Info.plist"; sourceTree = "<group>"; };
+		EE7DBA58E4C532EA15D895EC /* MyRecordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordRouter.swift; sourceTree = "<group>"; };
+		F1639769153911B471A65E21 /* MyRecordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordInteractor.swift; sourceTree = "<group>"; };
+		F5FCB02DABE863D18DADD04B /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B2293CE9782CC50475143F /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD4E7CD9EC7A9D470535FD2 /* RxKakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27D65C7854639BA02EAB1E0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9590332747C26D1D79AD61FB /* CFNetwork.framework in Frameworks */,
+				8298D4777704B6CC4F96A03B /* Alamofire.framework in Frameworks */,
+				108AA4242914BA1D08DAFB0D /* libAppFoundation.a in Frameworks */,
+				5DA6F1704FEE7761DEC0D86A /* libBaseDomain.a in Frameworks */,
+				A7639DA449AF4095B3DF43D1 /* libBaseShared.a in Frameworks */,
+				ABCCE4A3878D9AA58B85E1F3 /* libCoreKit.a in Frameworks */,
+				3C01B0FCE7E8F78282FDD3CB /* libDesignSystem.a in Frameworks */,
+				BD13A639BF78A79F7399C696 /* Differentiator.framework in Frameworks */,
+				CC26AA6667D05AD09B3E84A0 /* libGlobalThirdPartyLibrary.a in Frameworks */,
+				5B05571AD7B0B2B0654CCF07 /* KakaoSDKAuth.framework in Frameworks */,
+				34B41D68C76F7DCC2F10D5AA /* KakaoSDKCommon.framework in Frameworks */,
+				8A0C019EC2DC6751EC5E35FD /* KakaoSDKShare.framework in Frameworks */,
+				AD1544D92154157E35C3C03C /* KakaoSDKStory.framework in Frameworks */,
+				865B1BBF1730AA8661A69D31 /* KakaoSDKTalk.framework in Frameworks */,
+				CA792AD9C2F5153A25261294 /* KakaoSDKTemplate.framework in Frameworks */,
+				ED145E80865B6CC0934B5582 /* KakaoSDKUser.framework in Frameworks */,
+				D6087DCFA756096A155CADFF /* Kingfisher.framework in Frameworks */,
+				B934822390BE3153FDA49AE5 /* LogFlume.framework in Frameworks */,
+				F36454F34D5522B37790EC42 /* libMyRecordFeature.a in Frameworks */,
+				42A73EF947C314EA2877F415 /* libMyRecordFeatureInterface.a in Frameworks */,
+				699EE7F9B01B7BBBB2B3D38E /* MyRecordFeatureTesting.framework in Frameworks */,
+				BF6E0698967372A522BF003D /* NeedleFoundation.framework in Frameworks */,
+				193607F338033F0E2CB9A23D /* libOnboardingDomain.a in Frameworks */,
+				032FD6F99D8C16D9819B8282 /* libOnboardingDomainInterface.a in Frameworks */,
+				04D8C9DDF0240ACC9E098CD1 /* RIBs.framework in Frameworks */,
+				60382AABB2BD88C0F47AB0F9 /* ReactorKit.framework in Frameworks */,
+				AC6E233606C1D30306E2C835 /* ReactorKitRuntime.framework in Frameworks */,
+				E419F1BCFAA484E8A35538F3 /* libRecordDomain.a in Frameworks */,
+				6AE194C257F9989E44D806C9 /* libRecordDomainInterface.a in Frameworks */,
+				62527E452B441E72D0FB0815 /* RxAlamofire.framework in Frameworks */,
+				8BB666A678FEF4B39157251D /* RxCocoa.framework in Frameworks */,
+				E623EA268FF19535ED8D2714 /* RxDataSources.framework in Frameworks */,
+				EBF0BCFBD4EF0176A2E5FB59 /* RxGesture.framework in Frameworks */,
+				006A2495B1E96D25C35A8259 /* RxKakaoSDKAuth.framework in Frameworks */,
+				6972186741A9496BF5E735C3 /* RxKakaoSDKCommon.framework in Frameworks */,
+				138BA3E5657FF7569BA16140 /* RxKakaoSDKShare.framework in Frameworks */,
+				6E44245F14721B6DDCBD8446 /* RxKakaoSDKStory.framework in Frameworks */,
+				447206987893E423EB685ED6 /* RxKakaoSDKTalk.framework in Frameworks */,
+				EAB1536BEB9E5AFC2DC38ADC /* RxKakaoSDKUser.framework in Frameworks */,
+				4A557F72EBD28967EAC2DFD1 /* RxRelay.framework in Frameworks */,
+				35C23E3F571B79AE2544804B /* RxSwift.framework in Frameworks */,
+				C060F3FD8EA67F17A2641B31 /* SkeletonView.framework in Frameworks */,
+				36D872B4B881EF2593F5507E /* SnapKit.framework in Frameworks */,
+				A2A56F34E7F814F441E52CC0 /* libTodayDomain.a in Frameworks */,
+				F24302D92F730176A708F7D3 /* libTodayDomainInterface.a in Frameworks */,
+				E21E4875A99F3B9A33AED40D /* WeakMapTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D545ABC1536012048785027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24ECA6C00183BA1DB06A5EB /* CFNetwork.framework in Frameworks */,
+				1073B56575AA58900208DC4F /* Alamofire.framework in Frameworks */,
+				447F1746EF33F3457C8C2775 /* libAppFoundation.a in Frameworks */,
+				1F8180AA18B1CD375E126C41 /* libBaseDomain.a in Frameworks */,
+				1A8795223CD342A786E13EC8 /* libBaseShared.a in Frameworks */,
+				BD4835F94E96955198DCBBD6 /* libCoreKit.a in Frameworks */,
+				8D9998FA010F1E58172C6C21 /* libDesignSystem.a in Frameworks */,
+				94957F0EAF961322B472D82F /* Differentiator.framework in Frameworks */,
+				D439F0797BE486D8D46BAA67 /* libGlobalThirdPartyLibrary.a in Frameworks */,
+				A21D3A1E1006E49BE8CE8A00 /* KakaoSDKAuth.framework in Frameworks */,
+				C027A6B545607BE3C4D2DD7E /* KakaoSDKCommon.framework in Frameworks */,
+				2FA6FB0CEF118064A82E75DF /* KakaoSDKShare.framework in Frameworks */,
+				D81834D1EB444003C15AF981 /* KakaoSDKStory.framework in Frameworks */,
+				545504EB06C63BFF756B65EA /* KakaoSDKTalk.framework in Frameworks */,
+				A2BAFF1470EEA1287FCE7E19 /* KakaoSDKTemplate.framework in Frameworks */,
+				80FB35A7D499FBB510247EF0 /* KakaoSDKUser.framework in Frameworks */,
+				ACD452327998CF3C4DADA70E /* Kingfisher.framework in Frameworks */,
+				945078A14E429A89A1730CAE /* LogFlume.framework in Frameworks */,
+				467067350589902F6CB80318 /* libMyRecordFeatureInterface.a in Frameworks */,
+				8883DDC8558C7350275F61A6 /* NeedleFoundation.framework in Frameworks */,
+				9DB31E7556D1E2A5B2F009D2 /* libOnboardingDomain.a in Frameworks */,
+				A1691D9AC51C70EC02015320 /* libOnboardingDomainInterface.a in Frameworks */,
+				F417244DE93A7DD4DC25D71A /* RIBs.framework in Frameworks */,
+				DE45D3BE2F73E720E747BBDA /* ReactorKit.framework in Frameworks */,
+				EED1BEFF56734E5AB060FEC5 /* ReactorKitRuntime.framework in Frameworks */,
+				B02FF1402FBF9B326B1E7761 /* libRecordDomain.a in Frameworks */,
+				834DE8DF259D0BB747EEEC02 /* libRecordDomainInterface.a in Frameworks */,
+				578358EC2815B5D5F2572864 /* RxAlamofire.framework in Frameworks */,
+				F581E0139AB5B8A7B78CCA4B /* RxCocoa.framework in Frameworks */,
+				2F1CCE51EC5D8FC8FC5A35DD /* RxDataSources.framework in Frameworks */,
+				89E1482DD9A0CD66554AAC9A /* RxGesture.framework in Frameworks */,
+				A3D68FA9AFDEAF516BB4BAE5 /* RxKakaoSDKAuth.framework in Frameworks */,
+				E4DDBDB12C6BB4E2D881CC4B /* RxKakaoSDKCommon.framework in Frameworks */,
+				6051C0ECD96C624DF400DBC0 /* RxKakaoSDKShare.framework in Frameworks */,
+				12168054DA0AEEAF02B87497 /* RxKakaoSDKStory.framework in Frameworks */,
+				33F1A983EFE34E0EF3C30644 /* RxKakaoSDKTalk.framework in Frameworks */,
+				F5FEFCB04F59B9D6B619672E /* RxKakaoSDKUser.framework in Frameworks */,
+				B81187CAF8D0704413607594 /* RxRelay.framework in Frameworks */,
+				76C1036E63779A5EEF61FD2A /* RxSwift.framework in Frameworks */,
+				FF683C9782E29194D1CB65EF /* SkeletonView.framework in Frameworks */,
+				7C148245DFF442B6968EAA0D /* SnapKit.framework in Frameworks */,
+				7050551134242168390E08F3 /* libTodayDomain.a in Frameworks */,
+				D96BB8DA94631ED7E5B0E6B4 /* libTodayDomainInterface.a in Frameworks */,
+				4C10D105CA69EE24108FD712 /* WeakMapTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B56867A059C911B692D001F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC11B431F8F180CD569B31E7 /* MyRecordFeatureTesting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C128846C7C579C1BA86C16B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFA96B8FAB395F361955E277 /* MyRecordFeatureTesting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A194D77A4F81558DA661A3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7C845C7C7EEA6ABDC687085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08E5F92143FB0CBA43BC539B /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				E8554D7E1BFC8158A9E72310 /* Demo */,
+				A238A061E97E7E95B32F9540 /* Derived */,
+				09C55806B6ADC4F43221C293 /* Interface */,
+				E9900C71787C31AFE06BCA51 /* Sources */,
+				CEEB0A5E930B1CB4373D298E /* Testing */,
+				CF674A39B8064C3EF1E75A56 /* Tests */,
+				74E6C7CED8E5743389877B2C /* XCConfig */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		09C55806B6ADC4F43221C293 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				436837878A5C79042E9971D3 /* Interface.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		1CF91CFE90B2BC10FB99089E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C093DED2F4824120525A6838 /* Alamofire.framework */,
+				EB64A3026DBE7DA5F2B92731 /* DesignSystem_DesignSystem.bundle */,
+				9E045E23323156656DB7123F /* Differentiator.framework */,
+				E8995354C1CA8340428DACAF /* KakaoSDKAuth.framework */,
+				C92BA5E787251979C9286CDB /* KakaoSDKCommon.framework */,
+				456E541EC48148A83601D546 /* KakaoSDKShare.framework */,
+				3B23A7E87919DEE950235814 /* KakaoSDKStory.framework */,
+				D6896EF5098427DCAB4789FE /* KakaoSDKTalk.framework */,
+				A7CD1DBFA90B06E0969BFEFC /* KakaoSDKTemplate.framework */,
+				761E712360A54B8EB1D939B8 /* KakaoSDKUser.framework */,
+				F7B2293CE9782CC50475143F /* Kingfisher.framework */,
+				D59D33261DF176DAF7240C61 /* libAppFoundation.a */,
+				C24948266442A871CCCC89A5 /* libBaseDomain.a */,
+				6CE8DAF15495EFD468CF8835 /* libBaseShared.a */,
+				840F5361EC6A32ABE4A50600 /* libCoreKit.a */,
+				F5FCB02DABE863D18DADD04B /* libDesignSystem.a */,
+				9552DA8E4192CF50B9247747 /* libGlobalThirdPartyLibrary.a */,
+				B43353E9609825F37E7E8E3A /* libMyRecordFeature.a */,
+				5D4BAA1711DED5432A429946 /* libMyRecordFeatureInterface.a */,
+				A8CB171ADB01FC6A0A9E5811 /* libOnboardingDomain.a */,
+				635F1B6DD87063B4FD8EAD12 /* libOnboardingDomainInterface.a */,
+				E41B17A34AF069F9CEF330C9 /* libRecordDomain.a */,
+				A43F5DC09548D9186280B4E2 /* libRecordDomainInterface.a */,
+				D721385B3AD694E5B63186A4 /* libTodayDomain.a */,
+				D4B150B3031145D268F3D15B /* libTodayDomainInterface.a */,
+				22E5D2386B6C3842B8AB12C2 /* LogFlume.framework */,
+				7AFC8727D98E49D3E6CA70F2 /* MyRecordFeatureDemoApp.app */,
+				9842F8CD1159CE4D894AD8ED /* MyRecordFeatureTesting.framework */,
+				12E32BCA0F55F29A166B696A /* MyRecordFeatureTests.xctest */,
+				342D58B6A1953BF790B4B834 /* MyRecordFeatureUITests.xctest */,
+				991088CD179D62DC0984DBE4 /* NeedleFoundation.framework */,
+				BD34B82DEFF007E10423529C /* ReactorKit.framework */,
+				1FD323CB294BA07FF4D7845B /* ReactorKitRuntime.framework */,
+				4613A283C2382822E15BAC46 /* RIBs.framework */,
+				75FFEF695E972BEAA68373FF /* RxAlamofire.framework */,
+				6AA31180C07E929FE0E5EE22 /* RxCocoa.framework */,
+				CAF45EFFA65042934D73FD47 /* RxCocoaRuntime.framework */,
+				084D24F763C93105F4775486 /* RxDataSources.framework */,
+				CC01A69773339057DCBF5042 /* RxGesture.framework */,
+				3FBFE6D9310E2D3674451B1D /* RxKakaoSDKAuth.framework */,
+				680D14E4A75CB9DBEF282B8D /* RxKakaoSDKCommon.framework */,
+				FCD4E7CD9EC7A9D470535FD2 /* RxKakaoSDKShare.framework */,
+				34B05F9CF9F3CB6AFE048CA2 /* RxKakaoSDKStory.framework */,
+				E530ABB0CC3AD4E778D6284D /* RxKakaoSDKTalk.framework */,
+				8B99C422F3413FBBDCDEA35C /* RxKakaoSDKUser.framework */,
+				176E75C8B491EFB032FF801B /* RxRelay.framework */,
+				E3100724BAED5263A8427BFC /* RxSwift.framework */,
+				3C28C477E07FC2CF0ECB9A95 /* SkeletonView.framework */,
+				CAFB196D25E52D49DB389488 /* SnapKit.framework */,
+				66091008BAA8084C17C5A376 /* WeakMapTable.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BE7CEAEA684BD0E72F70DFE /* AppRoot */ = {
+			isa = PBXGroup;
+			children = (
+				B787D6060FAD0A947C8F8F1B /* AppRootBuilder.swift */,
+				2EDEAD5DADBE3750C2D6A9EB /* AppRootInteractor.swift */,
+				E1D0928E32853278F7596104 /* AppRootRouter.swift */,
+				57FB0AF1765E60832C06A8CE /* AppRootViewController.swift */,
+			);
+			path = AppRoot;
+			sourceTree = "<group>";
+		};
+		5038980CE645D24CBD191FFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E43B09C74EC0D81097472825 /* CFNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74E6C7CED8E5743389877B2C /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				CD6067E263D31B18BCB8B22C /* Shared.xcconfig */,
+			);
+			name = XCConfig;
+			path = ../../../XCConfig;
+			sourceTree = "<group>";
+		};
+		A238A061E97E7E95B32F9540 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				BE12837C468FADEFE2D2C428 /* InfoPlists */,
+				D1F5A779FFBDE542C79958DF /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		BE12837C468FADEFE2D2C428 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				A12C5765311A0594A327D35B /* MyRecordFeatureDemoApp-Info.plist */,
+				6DBCB2FBF2AF2C554CEEDE7C /* MyRecordFeatureTesting-Info.plist */,
+				C5A19CF55D4B471F32FEEA7D /* MyRecordFeatureTests-Info.plist */,
+				EC6C00D51820CFDCEA84FEE7 /* MyRecordFeatureUITests-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		C1733A4283837178C47CA541 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4BE7CEAEA684BD0E72F70DFE /* AppRoot */,
+				FA161AA94DD1435B7B5D2666 /* AppStart */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C52A66BAFF86478E7D5B0491 = {
+			isa = PBXGroup;
+			children = (
+				08E5F92143FB0CBA43BC539B /* Project */,
+				5038980CE645D24CBD191FFD /* Frameworks */,
+				1CF91CFE90B2BC10FB99089E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEEB0A5E930B1CB4373D298E /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				1E5D33F889E6BE6FF7AB5042 /* Testing.swift */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		CF674A39B8064C3EF1E75A56 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				15172B6CF5B6EC391F349EF3 /* MyRecordFeatureTest.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D1F5A779FFBDE542C79958DF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				200B6E5DE11AE15083CC30A1 /* TuistBundle+MyRecordFeatureDemoApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DC1991CD7459F38AA8C64F9F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8314EDF0470A9F954776E000 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E8554D7E1BFC8158A9E72310 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DC1991CD7459F38AA8C64F9F /* Resources */,
+				C1733A4283837178C47CA541 /* Sources */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		E9900C71787C31AFE06BCA51 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BFA60E5526922BF3C386BD6F /* MyRecordBuilder.swift */,
+				F1639769153911B471A65E21 /* MyRecordInteractor.swift */,
+				EE7DBA58E4C532EA15D895EC /* MyRecordRouter.swift */,
+				95B11F30ACB960089C142004 /* MyRecordStateAction.swift */,
+				62BD67BADB12C0889B60E798 /* MyRecordViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FA161AA94DD1435B7B5D2666 /* AppStart */ = {
+			isa = PBXGroup;
+			children = (
+				58B87E4E78E3C6EAB1266997 /* AppComponent.swift */,
+				55A2686AA5C0C3D71A0F3047 /* AppDelegate.swift */,
+				3182B9E5752FF7814506446C /* NeedleGenerated.swift */,
+				9C1980116C086B951040C46B /* SceneDelegate.swift */,
+			);
+			path = AppStart;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0CBAEE5CA9907A93A8303C2E /* MyRecordFeatureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 081E20C174E6EA9BD177B766 /* Build configuration list for PBXNativeTarget "MyRecordFeatureTests" */;
+			buildPhases = (
+				3B70384057016BF3F831A7E6 /* Sources */,
+				0787B3A9178E77C9934F3546 /* Resources */,
+				0406CA72C6D6C17B128778E0 /* Embed Frameworks */,
+				4B56867A059C911B692D001F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				646F63CB4393C10CA212EAC3 /* PBXTargetDependency */,
+				53316D7DA8011C9F29D55299 /* PBXTargetDependency */,
+			);
+			name = MyRecordFeatureTests;
+			productName = MyRecordFeatureTests;
+			productReference = 12E32BCA0F55F29A166B696A /* MyRecordFeatureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		79DCB6C19815CA127A017ED3 /* MyRecordFeatureTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55D6778E37C2FD8862A6376A /* Build configuration list for PBXNativeTarget "MyRecordFeatureTesting" */;
+			buildPhases = (
+				D5C9124AA106F83B7A2D63AB /* Sources */,
+				4251512A810B9109960C13B2 /* Resources */,
+				AC289CBFAC1432D815DD7484 /* Embed Frameworks */,
+				2D545ABC1536012048785027 /* Frameworks */,
+				51630BFDBC41AE814CE4CE32 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E701952440445D46BBF0EC6C /* PBXTargetDependency */,
+			);
+			name = MyRecordFeatureTesting;
+			productName = MyRecordFeatureTesting;
+			productReference = 9842F8CD1159CE4D894AD8ED /* MyRecordFeatureTesting.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		90D5395B4E07E74B6FE18D74 /* MyRecordFeatureInterface */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C793B6DF9BC2CE9321D670B4 /* Build configuration list for PBXNativeTarget "MyRecordFeatureInterface" */;
+			buildPhases = (
+				D783B3EC40A6366BB335E6FA /* Sources */,
+				CD1455BAE169CC46E7FA9D32 /* Resources */,
+				C10E55E7CCA58E9711D30E8F /* Embed Frameworks */,
+				8A194D77A4F81558DA661A3C /* Frameworks */,
+				39E71D31CED06F2581419E99 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyRecordFeatureInterface;
+			productName = MyRecordFeatureInterface;
+			productReference = 5D4BAA1711DED5432A429946 /* libMyRecordFeatureInterface.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		95B02AA92622EED8CD2C65C1 /* MyRecordFeature */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B99FAD79A40A602D7BB9503 /* Build configuration list for PBXNativeTarget "MyRecordFeature" */;
+			buildPhases = (
+				8BB3E37CFAFA5BD06B824C5E /* Sources */,
+				F48E81B03931F055852A4A4C /* Resources */,
+				5BD262A48157C6F01B8055B0 /* Embed Frameworks */,
+				A7C845C7C7EEA6ABDC687085 /* Frameworks */,
+				F00FF851FAC04786665A06B5 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				141875AE0A6A58115C9CFCEB /* PBXTargetDependency */,
+			);
+			name = MyRecordFeature;
+			productName = MyRecordFeature;
+			productReference = B43353E9609825F37E7E8E3A /* libMyRecordFeature.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A9F61686EED24DA3EAA913D4 /* MyRecordFeatureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D23ABC036DDA3553077AE83F /* Build configuration list for PBXNativeTarget "MyRecordFeatureUITests" */;
+			buildPhases = (
+				D2277D26425FE58B9A3BD8B3 /* Sources */,
+				4BAE51BAA34A1FA12F520EEE /* Resources */,
+				4F09580F444DDD66CE507E8C /* Embed Frameworks */,
+				6C128846C7C579C1BA86C16B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C686179E7838FAEA6C75C1B /* PBXTargetDependency */,
+				CA18CD6E24E15B75401A0565 /* PBXTargetDependency */,
+			);
+			name = MyRecordFeatureUITests;
+			productName = MyRecordFeatureUITests;
+			productReference = 342D58B6A1953BF790B4B834 /* MyRecordFeatureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CED566C029CDF37AB2835292 /* MyRecordFeatureDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F44FE04331DBE8CDD8EE5E0 /* Build configuration list for PBXNativeTarget "MyRecordFeatureDemoApp" */;
+			buildPhases = (
+				CAC20D5F83F4882F36C8F7CA /* Needle */,
+				77FFFBB6B88B27E0AD751753 /* Sources */,
+				87C8F4FFB5174EA412133948 /* Resources */,
+				F4DE5784B03009F4325E5A0C /* Embed Frameworks */,
+				27D65C7854639BA02EAB1E0D /* Frameworks */,
+				1197E1181DA6428E682F5C7D /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95CD030CE5A895011D4714B4 /* PBXTargetDependency */,
+				CA7FC3DF655415C42317D2B1 /* PBXTargetDependency */,
+			);
+			name = MyRecordFeatureDemoApp;
+			productName = MyRecordFeatureDemoApp;
+			productReference = 7AFC8727D98E49D3E6CA70F2 /* MyRecordFeatureDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		378CE40B3BF37A07896C419E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Omos;
+				TargetAttributes = {
+					0CBAEE5CA9907A93A8303C2E = {
+						TestTargetID = CED566C029CDF37AB2835292;
+					};
+					A9F61686EED24DA3EAA913D4 = {
+						TestTargetID = CED566C029CDF37AB2835292;
+					};
+				};
+			};
+			buildConfigurationList = A2D3D86E4CD0C903380552BD /* Build configuration list for PBXProject "MyRecordFeature" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = C52A66BAFF86478E7D5B0491;
+			productRefGroup = 1CF91CFE90B2BC10FB99089E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90D5395B4E07E74B6FE18D74 /* MyRecordFeatureInterface */,
+				95B02AA92622EED8CD2C65C1 /* MyRecordFeature */,
+				79DCB6C19815CA127A017ED3 /* MyRecordFeatureTesting */,
+				0CBAEE5CA9907A93A8303C2E /* MyRecordFeatureTests */,
+				A9F61686EED24DA3EAA913D4 /* MyRecordFeatureUITests */,
+				CED566C029CDF37AB2835292 /* MyRecordFeatureDemoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0787B3A9178E77C9934F3546 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4251512A810B9109960C13B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9DA8EDF493A3E96138D508A /* DesignSystem_DesignSystem.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BAE51BAA34A1FA12F520EEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87C8F4FFB5174EA412133948 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39FC85E175C620AC80D88BC6 /* LaunchScreen.storyboard in Resources */,
+				2D94144F65B711963EE6AC5F /* DesignSystem_DesignSystem.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1455BAE169CC46E7FA9D32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F48E81B03931F055852A4A4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CAC20D5F83F4882F36C8F7CA /* Needle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Needle;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# needle generate Demo/Sources/AppStart/NeedleGenerated.swift .\n# use in terminal";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B70384057016BF3F831A7E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9B9F842388FB309EE65F3BB /* MyRecordFeatureTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77FFFBB6B88B27E0AD751753 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1246AB4C8171E0B36F7E3A /* AppRootBuilder.swift in Sources */,
+				CCDE373654FDBE3D677D7B3D /* AppRootInteractor.swift in Sources */,
+				42EAD20ED4574ECD89397383 /* AppRootRouter.swift in Sources */,
+				4E5804C2188F1CC2B0BB9ADB /* AppRootViewController.swift in Sources */,
+				23BAC02C8FA19A9B5F01B589 /* AppComponent.swift in Sources */,
+				D571501E22F6C868675DB160 /* AppDelegate.swift in Sources */,
+				E8AA7769F0806821BED1485D /* NeedleGenerated.swift in Sources */,
+				98E60FFBAA6F226CB62A339E /* SceneDelegate.swift in Sources */,
+				8EFAA2830CBAEF26C0A08587 /* TuistBundle+MyRecordFeatureDemoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB3E37CFAFA5BD06B824C5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA3523DC5EF942382542ECD /* MyRecordBuilder.swift in Sources */,
+				01417468A57BE9F28AC17AE6 /* MyRecordInteractor.swift in Sources */,
+				17987BB3A94C1A5C27918D4A /* MyRecordRouter.swift in Sources */,
+				E699803ECBD46270D66E88AB /* MyRecordStateAction.swift in Sources */,
+				58DC491F7ADDDC05178C40A0 /* MyRecordViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2277D26425FE58B9A3BD8B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C9124AA106F83B7A2D63AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01134C309E509984C6890324 /* Testing.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D783B3EC40A6366BB335E6FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181A396315571F2C4586387E /* Interface.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C686179E7838FAEA6C75C1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyRecordFeatureDemoApp;
+			target = CED566C029CDF37AB2835292 /* MyRecordFeatureDemoApp */;
+			targetProxy = E23A3147E56F49E57469D690 /* PBXContainerItemProxy */;
+		};
+		141875AE0A6A58115C9CFCEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyRecordFeatureInterface;
+			target = 90D5395B4E07E74B6FE18D74 /* MyRecordFeatureInterface */;
+			targetProxy = 39D8B2D80F1FACC142F12804 /* PBXContainerItemProxy */;
+		};
+		53316D7DA8011C9F29D55299 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyRecordFeatureTesting;
+			target = 79DCB6C19815CA127A017ED3 /* MyRecordFeatureTesting */;
+			targetProxy = DDBAE56C0ED661CE2E846B0E /* PBXContainerItemProxy */;
+		};
+		646F63CB4393C10CA212EAC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyRecordFeatureDemoApp;
+			target = CED566C029CDF37AB2835292 /* MyRecordFeatureDemoApp */;
+			targetProxy = 082A1CD9640356547C6DB9DE /* PBXContainerItemProxy */;
+		};
+		95CD030CE5A895011D4714B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyRecordFeature;
+			target = 95B02AA92622EED8CD2C65C1 /* MyRecordFeature */;
+			targetProxy = 862CFB40740AD80DFF5A825D /* PBXContainerItemProxy */;
+		};
+		CA18CD6E24E15B75401A0565 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyRecordFeatureTesting;
+			target = 79DCB6C19815CA127A017ED3 /* MyRecordFeatureTesting */;
+			targetProxy = 6EA71380F56643B5C2887A92 /* PBXContainerItemProxy */;
+		};
+		CA7FC3DF655415C42317D2B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyRecordFeatureTesting;
+			target = 79DCB6C19815CA127A017ED3 /* MyRecordFeatureTesting */;
+			targetProxy = 3EEE03584ADA14949C358E1B /* PBXContainerItemProxy */;
+		};
+		E701952440445D46BBF0EC6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MyRecordFeatureInterface;
+			target = 90D5395B4E07E74B6FE18D74 /* MyRecordFeatureInterface */;
+			targetProxy = CDC46748D084EC3902F51851 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		065C5C664D38E46431061424 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureInterface;
+				PRODUCT_NAME = MyRecordFeatureInterface;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = STAGE;
+		};
+		0BA3CF8C8C9C6DCD16562BEB /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyRecordFeatureTesting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureTesting;
+				PRODUCT_NAME = MyRecordFeatureTesting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = DEV;
+		};
+		0C847DFCF4AEABDDBA429F47 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD6067E263D31B18BCB8B22C /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2L2K3UD2LK;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = PROD;
+		};
+		1488E543E512F63028D930FD /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureInterface;
+				PRODUCT_NAME = MyRecordFeatureInterface;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		15E79DEE630980B8B5B066D0 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/MyRecordFeatureDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureDemoApp;
+				PRODUCT_NAME = MyRecordFeatureDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = STAGE;
+		};
+		576772BA8BAE1E0A51AF698D /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyRecordFeatureTesting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureTesting;
+				PRODUCT_NAME = MyRecordFeatureTesting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = STAGE;
+		};
+		5929D2D6655DC04FBA012592 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyRecordFeatureUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureUITests;
+				PRODUCT_NAME = MyRecordFeatureUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyRecordFeatureDemoApp;
+			};
+			name = STAGE;
+		};
+		5D90328AF5AD91594D66CBD5 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/MyRecordFeatureDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureDemoApp;
+				PRODUCT_NAME = MyRecordFeatureDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+		5E79E60FF472FB540082BFFA /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeature;
+				PRODUCT_NAME = MyRecordFeature;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = STAGE;
+		};
+		5F39C3548A3E45E124F8680E /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureInterface;
+				PRODUCT_NAME = MyRecordFeatureInterface;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+		68BE7117EB689A8909989A37 /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD6067E263D31B18BCB8B22C /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2L2K3UD2LK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = STAGE;
+		};
+		6B563906136FC9EF44F14DB7 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/MyRecordFeatureDemoApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureDemoApp;
+				PRODUCT_NAME = MyRecordFeatureDemoApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		74C3C8E7C01C7BEFF590E061 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD6067E263D31B18BCB8B22C /* Shared.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2L2K3UD2LK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = DEV;
+		};
+		77DCE7BCD52C026CDB2691BD /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyRecordFeatureTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureTests;
+				PRODUCT_NAME = MyRecordFeatureTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyRecordFeatureDemoApp.app/MyRecordFeatureDemoApp";
+				TEST_TARGET_NAME = MyRecordFeatureDemoApp;
+			};
+			name = PROD;
+		};
+		7CD4A8E859A56B35EF445C4D /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyRecordFeatureTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureTests;
+				PRODUCT_NAME = MyRecordFeatureTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyRecordFeatureDemoApp.app/MyRecordFeatureDemoApp";
+				TEST_TARGET_NAME = MyRecordFeatureDemoApp;
+			};
+			name = DEV;
+		};
+		9996CF0FEE52822B60B5B8E6 /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyRecordFeatureUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureUITests;
+				PRODUCT_NAME = MyRecordFeatureUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyRecordFeatureDemoApp;
+			};
+			name = DEV;
+		};
+		A243C87AE8D44CA70239A790 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyRecordFeatureUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureUITests;
+				PRODUCT_NAME = MyRecordFeatureUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyRecordFeatureDemoApp;
+			};
+			name = PROD;
+		};
+		B25D6EF21A31BE00766441FD /* STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyRecordFeatureTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureTests;
+				PRODUCT_NAME = MyRecordFeatureTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyRecordFeatureDemoApp.app/MyRecordFeatureDemoApp";
+				TEST_TARGET_NAME = MyRecordFeatureDemoApp;
+			};
+			name = STAGE;
+		};
+		D7DBFACDB70F860753A5EF0C /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeature;
+				PRODUCT_NAME = MyRecordFeature;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DEV;
+		};
+		DF74979F0DDA7AB9B8C320AD /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Derived/InfoPlists/MyRecordFeatureTesting-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeatureTesting;
+				PRODUCT_NAME = MyRecordFeatureTesting;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = PROD;
+		};
+		E85E35E01AAA1A533C50B578 /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = Omos.MyRecordFeature;
+				PRODUCT_NAME = MyRecordFeature;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PROD;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		081E20C174E6EA9BD177B766 /* Build configuration list for PBXNativeTarget "MyRecordFeatureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CD4A8E859A56B35EF445C4D /* DEV */,
+				77DCE7BCD52C026CDB2691BD /* PROD */,
+				B25D6EF21A31BE00766441FD /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		0F44FE04331DBE8CDD8EE5E0 /* Build configuration list for PBXNativeTarget "MyRecordFeatureDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B563906136FC9EF44F14DB7 /* DEV */,
+				5D90328AF5AD91594D66CBD5 /* PROD */,
+				15E79DEE630980B8B5B066D0 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		3B99FAD79A40A602D7BB9503 /* Build configuration list for PBXNativeTarget "MyRecordFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7DBFACDB70F860753A5EF0C /* DEV */,
+				E85E35E01AAA1A533C50B578 /* PROD */,
+				5E79E60FF472FB540082BFFA /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		55D6778E37C2FD8862A6376A /* Build configuration list for PBXNativeTarget "MyRecordFeatureTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BA3CF8C8C9C6DCD16562BEB /* DEV */,
+				DF74979F0DDA7AB9B8C320AD /* PROD */,
+				576772BA8BAE1E0A51AF698D /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		A2D3D86E4CD0C903380552BD /* Build configuration list for PBXProject "MyRecordFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C3C8E7C01C7BEFF590E061 /* DEV */,
+				0C847DFCF4AEABDDBA429F47 /* PROD */,
+				68BE7117EB689A8909989A37 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		C793B6DF9BC2CE9321D670B4 /* Build configuration list for PBXNativeTarget "MyRecordFeatureInterface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1488E543E512F63028D930FD /* DEV */,
+				5F39C3548A3E45E124F8680E /* PROD */,
+				065C5C664D38E46431061424 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+		D23ABC036DDA3553077AE83F /* Build configuration list for PBXNativeTarget "MyRecordFeatureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9996CF0FEE52822B60B5B8E6 /* DEV */,
+				A243C87AE8D44CA70239A790 /* PROD */,
+				5929D2D6655DC04FBA012592 /* STAGE */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = PROD;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 378CE40B3BF37A07896C419E /* Project object */;
+}

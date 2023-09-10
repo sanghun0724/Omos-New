@@ -10,6 +10,7 @@ import Foundation
 import ReactorKit
 import RIBs
 import RxSwift
+import LogFlume
 
 import AppFoundation
 import OnboardingDomainInterface
@@ -46,7 +47,7 @@ final class LoggedInInteractor:
         case setEmailFormatValidation(Bool)
         case setPasswordFormatValidation(Bool)
         case attachSignUpRIB
-        case attachTodayRIB
+        case attachRootTabBarRIB
         case attachFindRIB
     }
     
@@ -162,7 +163,7 @@ extension LoggedInInteractor {
             .login(email: email, password: password)
             .flatMap { isSuccess in
                 if isSuccess {
-                    return Observable<Mutation>.just(.attachTodayRIB)
+                    return Observable<Mutation>.just(.attachRootTabBarRIB)
                 } else {
                     return Observable<Mutation>.just(.setError(.loggedInError))
                 }
@@ -191,8 +192,8 @@ extension LoggedInInteractor {
                 switch mutation {
                 case .attachSignUpRIB:
                     return owner.attachSignUpRIBTransform()
-                case .attachTodayRIB:
-                    return owner.attachTodayRIBTransform()
+                case .attachRootTabBarRIB:
+                    return owner.attachRootTabBarRIBransform()
                 default:
                     return .just(mutation)
                 }
@@ -211,8 +212,8 @@ extension LoggedInInteractor {
     }
     
     /// Show Today Page
-    private func attachTodayRIBTransform() -> Observable<Mutation> {
-        self.router?.attachTodayRIB()
+    private func attachRootTabBarRIBransform() -> Observable<Mutation> {
+        self.router?.attachRootTabBarRIB()
         return .empty()
     }
 }
@@ -236,7 +237,7 @@ extension LoggedInInteractor {
         case let .setHasLoggedInInput(validation):
             newState.hasLoggedInInput = validation
         default:
-            log.debug("Do Nothing when \(mutation)")
+            LogFlume.debug("Do Nothing when \(mutation)")
         }
         
         return newState

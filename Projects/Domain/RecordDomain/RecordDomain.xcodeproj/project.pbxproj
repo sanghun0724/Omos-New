@@ -52,6 +52,7 @@
 		7A835A580EE974DCC83C47B4 /* RxKakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C2249E090F9E60D07C1DBC /* RxKakaoSDKAuth.framework */; platformFilter = ios; };
 		7B215E5C8256172F62C2AF3A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54486657EEB71BA0A139C5D7 /* SnapKit.framework */; platformFilter = ios; };
 		7BEAC9D7A6722FBF3986B2C6 /* RecordRepositoryServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B7151BF6C426DE9B322F4 /* RecordRepositoryServiceImpl.swift */; };
+		7EA9EC025644B4FDBC741C1E /* RecordTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9477477A5F051F70A9CE53E /* RecordTranslator.swift */; };
 		8127ECB462819BE8F131F3CA /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BC4D042E978EC938333878 /* libBaseShared.a */; platformFilter = ios; };
 		82EDEA4A2223856AFBF336D5 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3E4BE3C51DAF4091A40FAA /* NeedleFoundation.framework */; platformFilter = ios; };
 		83E325327BB10B60B51928C9 /* RxKakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AD5782A9A8EDA4C248A51C /* RxKakaoSDKStory.framework */; platformFilter = ios; };
@@ -66,6 +67,7 @@
 		9E455E6A68A3C72D1334F91A /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68867847F5619A666C894217 /* RIBs.framework */; platformFilter = ios; };
 		AEF742CBB5374DBF1F3CF356 /* libCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DCA2AA669288792484B25F /* libCoreKit.a */; platformFilter = ios; };
 		AF26549C9C150525B67C446C /* libRecordDomainInterface.a in Dependencies */ = {isa = PBXBuildFile; fileRef = 798D0C10D9FB1EA9BE56DC89 /* libRecordDomainInterface.a */; platformFilter = ios; };
+		B0B229276DC590FAD07340B2 /* MyRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BE82F8A31158E46F0EA8E6 /* MyRecordModel.swift */; };
 		B14EDDF00A613039E478F0A1 /* RxKakaoSDKShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F019225608B0EDBBDB03F9 /* RxKakaoSDKShare.framework */; platformFilter = ios; };
 		B2817034E235868375A5D889 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412FF8158E45CBA6F175F527 /* Alamofire.framework */; platformFilter = ios; };
 		B35ECEF0A4F4BED471B2EB3A /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3113931E3E59EB6F5959159F /* KakaoSDKUser.framework */; platformFilter = ios; };
@@ -81,6 +83,7 @@
 		CC627B2D0BBB4643A44BEC14 /* KakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0A426142C77B8171D64C38 /* KakaoSDKTalk.framework */; platformFilter = ios; };
 		CD3EE002DA821B3BC31DEB0D /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D5C1CE706C61A073097A30 /* RxRelay.framework */; platformFilter = ios; };
 		D1018C42B7A52B458C5E7ADB /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E9820FA236FCC566E2DB38 /* LogFlume.framework */; platformFilter = ios; };
+		D7C0F0B1F4764C03357FA0CC /* RecordType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFD1628BD7E24C4845FD8BE /* RecordType.swift */; };
 		D92650BE0D3055ADE234F160 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BC4D042E978EC938333878 /* libBaseShared.a */; platformFilter = ios; };
 		DA27245D882A2B1C3CE91FE2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709A4243A046165D3A16C044 /* RxSwift.framework */; platformFilter = ios; };
 		DA9616DAE74A7CFCB5EE5BFC /* libRecordDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D0C10D9FB1EA9BE56DC89 /* libRecordDomainInterface.a */; platformFilter = ios; };
@@ -245,7 +248,9 @@
 		9670A2FC852367C7566EEC43 /* KakaoSDKTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7966A4042BD18224A2D7CA /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0373502C96B3732204BC1FB /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9477477A5F051F70A9CE53E /* RecordTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTranslator.swift; sourceTree = "<group>"; };
 		AD7E632A2052DA0FF37A6D38 /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
+		AFFD1628BD7E24C4845FD8BE /* RecordType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordType.swift; sourceTree = "<group>"; };
 		B83B7151BF6C426DE9B322F4 /* RecordRepositoryServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRepositoryServiceImpl.swift; sourceTree = "<group>"; };
 		C6BBB5B742118A1DCEDC984A /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7159CA90BF77E485A567CB3 /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +258,7 @@
 		D0034DD57AB51AF166034064 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34AEACC33E4F05A87D7131F /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E45C5FFBD5B3A9870CF674CF /* RecordDomainTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RecordDomainTesting-Info.plist"; sourceTree = "<group>"; };
+		E4BE82F8A31158E46F0EA8E6 /* MyRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecordModel.swift; sourceTree = "<group>"; };
 		E6B48CC8F6AE3957C3B81866 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		E7D5C1CE706C61A073097A30 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0A426142C77B8171D64C38 /* KakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -398,6 +404,23 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		4C3560314E66522738D16171 /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+				A9477477A5F051F70A9CE53E /* RecordTranslator.swift */,
+			);
+			path = Translator;
+			sourceTree = "<group>";
+		};
+		5F84B3B51CB6E27C723F38EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4BE82F8A31158E46F0EA8E6 /* MyRecordModel.swift */,
+				AFFD1628BD7E24C4845FD8BE /* RecordType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		70213CF9C3F197EC71D656AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,6 +496,8 @@
 		8A825F05386EC459A2DBF241 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5F84B3B51CB6E27C723F38EF /* Model */,
+				4C3560314E66522738D16171 /* Translator */,
 				B83B7151BF6C426DE9B322F4 /* RecordRepositoryServiceImpl.swift */,
 			);
 			path = Sources;
@@ -655,7 +680,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B229276DC590FAD07340B2 /* MyRecordModel.swift in Sources */,
+				D7C0F0B1F4764C03357FA0CC /* RecordType.swift in Sources */,
 				7BEAC9D7A6722FBF3986B2C6 /* RecordRepositoryServiceImpl.swift in Sources */,
+				7EA9EC025644B4FDBC741C1E /* RecordTranslator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

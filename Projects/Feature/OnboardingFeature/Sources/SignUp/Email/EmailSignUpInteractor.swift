@@ -45,10 +45,9 @@ final class EmailSignUpInteractor:
         case setIsEmailDuplication(Bool)
         case setEmailFormatValidation(Bool)
         case setCurrentEmailTextFieldIsEmpty(Bool)
-        case setPasswordFormatValidation(Bool)
-        case setPasswordReconfirm(Bool)
+        case setValidationCodeFormat(Bool)
         case setEmailReigisterValidation(Bool)
-        case attachNicknameRIB
+        case attachPasswordRIB
         case detach
     }
     
@@ -81,7 +80,7 @@ final class EmailSignUpInteractor:
     }
     
     deinit {
-        //log.verbose(type(of: self))
+        LogFlume.verbose(type(of: self))
     }
 }
 
@@ -96,10 +95,10 @@ extension EmailSignUpInteractor {
             return .just(.setCurrentEmailTextFieldIsEmpty(email.isEmpty))
         case let .validationCodeConfirmButtonDidTap(inputCode):
             return emailReigisterValidation(inputCode: inputCode)
-        case let .passwordsDidChange(password, repassword):
-            return passwordValidationMutation(password: password, repassword: repassword)
+        case let .validationCodeTextFieldDidChanged(code):
+            return validationCodeDidChangedMutation(code: code)
         case .confirmButtonDidTap:
-            return .just(.attachNicknameRIB)
+            return .just(.attachPasswordRIB)
         case .detach:
             return .just(.detach)
         }
@@ -202,53 +201,10 @@ extension EmailSignUpInteractor {
         return emailReigisterValidation
     }
     
-    private func passwordFormatValidationMutation(password: String) -> Observable<Mutation> {
-        let passwordValidationMutation: Observable<Mutation> =
-        self.onboardingRepositoryService.isValidPassword(password: password)
-            .map { .setPasswordFormatValidation($0) }
-            .catchAndReturn(.setPasswordFormatValidation(false))
-        
-        return passwordValidationMutation
-    }
+    // MARK: - Validation
     
-    // MARK: Password
-    
-    private func passwordValidationMutation(password: String, repassword: String) -> Observable<Mutation> {
-        return Observable<Mutation>.create { [weak self] observer in
-            let _ = self?.passwordFormatValidationMutation(password: password)
-                .flatMap {
-                    observer.onNext($0)
-                    switch $0 {
-                    case let .setPasswordFormatValidation(validation):
-                        if validation {
-                            return Observable<Void>.just(Void())
-                        } else {
-                            observer.onCompleted()
-                            return Observable<Void>.never()
-                        }
-                    default: return Observable<Void>.never()
-                    }
-                }
-                .flatMap {
-                    self?.passwordEqualMutation(password: password, repassword: repassword) ?? .empty()
-                }
-                .flatMap {
-                    observer.onNext($0)
-                    return Observable<Void>.empty()
-                }
-                .subscribe()
-
-                return Disposables.create()
-        }
-    }
-    
-    private func passwordEqualMutation(password: String, repassword: String) -> Observable<Mutation> {
-        let passwordEqualMutation: Observable<Mutation> =
-        self.onboardingRepositoryService.isEqualInputPasswords(password: password, repassword: repassword)
-            .map { .setPasswordReconfirm($0) }
-            .catchAndReturn(.setError(.defaultError))
-        
-        return passwordEqualMutation
+    private func validationCodeDidChangedMutation(code: String) -> Observable<Mutation> {
+        return .just(.setValidationCodeFormat(code.count >= 6))
     }
     
 }
@@ -262,8 +218,8 @@ extension EmailSignUpInteractor {
             .withUnretained(self)
             .flatMap { owner, mutation -> Observable<Mutation> in
                 switch mutation {
-                case .attachNicknameRIB:
-                    return owner.attachNicknameRIBTransform()
+                case .attachPasswordRIB:
+                    return owner.attachPasswordRIBTransform()
                 case .detach:
                     return owner.detachTransform()
                 default:
@@ -272,8 +228,8 @@ extension EmailSignUpInteractor {
             }
     }
     
-    private func attachNicknameRIBTransform() -> Observable<Mutation> {
-        self.router?.attachNicknameRIB()
+    private func attachPasswordRIBTransform() -> Observable<Mutation> {
+        self.router?.attachPasswordRIB()
         return .empty()
     }
     
@@ -306,12 +262,8 @@ extension EmailSignUpInteractor {
         case let .setEmailReigisterValidation(validation):
             newState.revision = state.revision + 1
             newState.isSuccessEmailCertification = ReactorValue(revision: newState.revision, value: validation)
-        case let .setPasswordFormatValidation(validation):
-           // newState.isValidPasswordFormat = validation
-            print()
-        case let .setPasswordReconfirm(validation):
-          //  newState.isValidRepasswordConfirm = validation
-            print()
+        case let .setValidationCodeFormat(validation):
+            newState.isValidCodeFormat = validation
         default:
           //  log.debug("Do Nothing when \(mutation)")
             print()

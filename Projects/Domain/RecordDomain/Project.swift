@@ -10,5 +10,4 @@ let project = Project.makeModule(
     interfaceDependencies: [
         .core(target: .CoreKit)
     ]
-    
 )

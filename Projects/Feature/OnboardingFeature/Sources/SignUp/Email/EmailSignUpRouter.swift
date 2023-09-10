@@ -14,7 +14,7 @@ import OnboardingFeatureInterface
 
 // MARK: - SignUpInteractable
 
-protocol EmailSignUpInteractable: Interactable, NicknameListener {
+protocol EmailSignUpInteractable: Interactable, PasswordListener {
     var router: EmailSignUpRouting? { get set }
     var listener: EmailSignUpListener? { get set }
 }
@@ -27,33 +27,36 @@ final class EmailSignUpRouter:
   ViewableRouter<EmailSignUpInteractable, EmailSignUpViewControllable>,
   EmailSignUpRouting
 {
-    private let nicknameBuilder: NicknameBuildable
-    private var nicknameRouter: NicknameRouting?
+    private let passwordBuilder: PasswordBuildable
+    private var passwordRouter: PasswordRouting?
 
     init(
-      nicknameBuilder: NicknameBuildable,
+      passwordBuilder: PasswordBuildable,
       interactor: EmailSignUpInteractable,
       viewController: EmailSignUpViewControllable
     ) {
-        self.nicknameBuilder = nicknameBuilder
+        self.passwordBuilder = passwordBuilder
         
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
     
-    func attachNicknameRIB() {
-        guard self.nicknameRouter == nil else { return }
-        let router = self.nicknameBuilder.build(
-            with: NicknameBuildDependency(
+    func attachPasswordRIB() {
+        guard self.passwordRouter == nil else { return }
+        let router = self.passwordBuilder.build(
+            with: PasswordBuildDependency(
                 listener: interactor
             )
         )
-        self.nicknameRouter = router
+        self.passwordRouter = router
         attachChild(router)
         viewController.push(viewController: router.viewControllable)
     }
     
-    func detachNicknameRIB() {
-        log.warning("detachNicknameRIB")
+    func detachPasswordRIB() {
+        guard let router = passwordRouter else { return }
+        self.passwordRouter = nil
+        detachChild(router)
+        viewController.pop(router.viewControllable)
     }
 }

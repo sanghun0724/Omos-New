@@ -11,13 +11,16 @@ import RIBs
 
 import OnboardingFeatureInterface
 import OnboardingDomainInterface
+import RootTabBarFeatureInterface
 
 // MARK: - OnboardingDependency
 
 public protocol OnboardingDependency: NeedleFoundation.Dependency {
     var onboardingRepositoryService: OnboardingRepositoryService { get }
-    var signUpBuilder: EmailSignUpBuildable { get }
+    var emailSignUpBuilder: EmailSignUpBuildable { get }
     var loggedInBuilder: LoggedInBuildable { get }
+    var agreementBuilder: AgreementBuildable { get }
+    var rootTabBarBuilder: RootTabBarBuildable { get }
 }
 
 // MARK: - OnboardingComponent
@@ -34,7 +37,6 @@ public final class OnboardingBuilder:
     ComponentizedBuilder<OnboardingComponent, OnboardingRouting, OnboardingBuildDependency, Void>,
     OnboardingBuildable
 {
-
     override public func build(
       with component: OnboardingComponent,
       _ payload: OnboardingBuildDependency
@@ -49,9 +51,10 @@ public final class OnboardingBuilder:
         interactor.listener = payload.listener
         return OnboardingRouter(
             interactor: interactor,
-            signUpBuilder: component.signUpBuilder,
+            viewController: viewController, signUpBuilder: component.emailSignUpBuilder,
             loggedInBuilder: component.loggedInBuilder,
-            viewController: viewController
+            agreementBuilder: component.agreementBuilder,
+            rootTabBarBuilder: component.rootTabBarBuilder
         )
     }
 }

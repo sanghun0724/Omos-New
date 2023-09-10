@@ -28,7 +28,6 @@ final class EmailSignUpViewController:
     // MARK: - Constants
     
     private enum UI {
-        static let headerViewHeight = 173
         static let emailValidationButtonHeight = 20
         static let emailValidationButtonWidth = 100
         static let leadingTrailingMargin = 16
@@ -50,22 +49,22 @@ final class EmailSignUpViewController:
         .font(.boldSystemFont(ofSize: 24))
         .build()
     
-    private lazy var emailTextFieldView = EmailTextFieldView()
+    private lazy var emailTextFieldView = RightButtonTextFieldView()
         .builder
         .with {
+            $0.textField.fetchPlaceHolderText(text: "이메일을 입력해주세요.")
             $0.fetchLeftTopLabelText(text: .email)
             $0.fetchLeftBottomLabelText(text: .emailFormatWarning)
-            $0.rightButton.setTitle("인증요청", for: .normal)
         }
         .build()
     
-    private lazy var validationCodeConfirmTextFieldView = EmailTextFieldView()
+    private lazy var validationCodeConfirmTextFieldView = RightButtonTextFieldView()
         .builder
         .with {
             $0.textField.fetchPlaceHolderText(text: "인증코드를 입력해주세요.")
             $0.fetchLeftTopLabelText(text: "인증코드")
-            $0.fetchLeftBottomLabelText(text: .emailFormatWarning)
-            $0.rightButton.setTitle("확인", for: .normal)
+            $0.fetchLeftBottomLabelText(text: "인증코드를 확인해 주세요.")
+            $0.setRightButtonTitle(to: "확인")
         }
         .build()
     
@@ -123,15 +122,16 @@ extension EmailSignUpViewController {
 
 extension EmailSignUpViewController {
     private func bindActions() {
-        bindEmailValidationRequestButtonDidTapAction()
-        bindValidationPopupButtonDidTap()
-        bindConfirmButtonDidTap()
-        bindDetachAction()
         bindCloseButtonTapAction()
-        bindEmailTextFieldDidChanged()
+        bindEmailTextFieldDidChangedAction()
+        bindEmailValidationRequestButtonTapAction()
+        bindValidationCodeConfirmTextAction()
+        bindValidationCodeConfirmButtonTapAction()
+        bindConfirmButtonTapAction()
+        bindDetachAction()
     }
     
-    private func bindEmailTextFieldDidChanged() {
+    private func bindEmailTextFieldDidChangedAction() {
         emailTextFieldView.textField.rx
             .text
             .orEmpty
@@ -141,7 +141,7 @@ extension EmailSignUpViewController {
             .disposed(by: disposeBag)
     }
     
-    private func bindEmailValidationRequestButtonDidTapAction() {
+    private func bindEmailValidationRequestButtonTapAction() {
         emailTextFieldView.rightButton
             .rx
             .tapWithPreventDuplication()
@@ -154,7 +154,17 @@ extension EmailSignUpViewController {
             
     }
     
-    private func bindValidationPopupButtonDidTap() {
+    private func bindValidationCodeConfirmTextAction() {
+        validationCodeConfirmTextFieldView.textField.rx
+            .text
+            .orEmpty
+            .changed
+            .map { .validationCodeTextFieldDidChanged(code: $0) }
+            .bind(to: self.actionRelay)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindValidationCodeConfirmButtonTapAction() {
         validationCodeConfirmTextFieldView.rightButton
             .rx
             .tapWithPreventDuplication()
@@ -164,7 +174,7 @@ extension EmailSignUpViewController {
             .disposed(by: disposeBag)
     }
     
-    private func bindConfirmButtonDidTap() {
+    private func bindConfirmButtonTapAction() {
         confirmButton
             .rx
             .tapWithPreventDuplication()
@@ -192,6 +202,7 @@ extension EmailSignUpViewController {
         bindEmailRegisterValidation(from: listener)
         bindIsEnableConfirmValidation(from: listener)
         bindIsEmailTextFieldEmpty(from: listener)
+        bindIsValidateCodeFormate(from: listener)
     }
     
     private func bindIsEmailTextFieldEmpty(from listener: EmailSignUpPresentableListener) {
@@ -231,8 +242,16 @@ extension EmailSignUpViewController {
             .asDriver(onErrorDriveWith: .empty())
             .drive(with: self) { owner, _ in
                 owner.emailTextFieldView.isUserInteractionEnabled = false
-                // todo
             }
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindIsValidateCodeFormate(from listener: EmailSignUpPresentableListener) {
+        listener.state
+            .map(\.isValidCodeFormat)
+            .distinctUntilChanged()
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(self.validationCodeConfirmTextFieldView.rightButton.rx.isEnabled)
             .disposed(by: disposeBag)
     }
     
@@ -241,7 +260,7 @@ extension EmailSignUpViewController {
             .compactMap(\.isSuccessEmailCertification.value)
             .distinctUntilChanged()
             .asDriver(onErrorDriveWith: .empty())
-            .drive(self.confirmButton.rx.isEnabled)
+            .drive(self.confirmButton.rx.isEnabled, self.validationCodeConfirmTextFieldView.rx.isValidState)
             .disposed(by: disposeBag)
     }
 }

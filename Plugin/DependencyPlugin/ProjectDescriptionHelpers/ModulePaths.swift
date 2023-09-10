@@ -12,6 +12,13 @@ public enum ModulePaths {
 
 public extension ModulePaths {
     enum Feature: String {
+        case UserProfileFeature
+        case SearchingFeature
+        case MyPageFeature
+        case MyDJFeature
+        case AllRecordFeature
+        case MyRecordFeature
+        case RootTabBarFeature
         case TodayFeature
         case OnboardingFeature
         case BaseFeature
@@ -24,8 +31,8 @@ public extension ModulePaths {
 
 public extension ModulePaths {
     enum Domain: String {
+        case TodayDomain
         case RecordDomain
-        case Record
         case OnboardingDomain
         case BaseDomain
 
@@ -37,6 +44,7 @@ public extension ModulePaths {
 
 public extension ModulePaths {
     enum Core: String {
+        case Fetcher
         case CoreKit
         
         func targetName(type: MicroTargetType) -> String {

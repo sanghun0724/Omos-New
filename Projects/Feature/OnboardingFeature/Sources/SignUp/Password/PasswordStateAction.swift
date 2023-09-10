@@ -25,12 +25,13 @@ struct PasswordPresentableState: HasLoadingState, HasErrorState {
 // MARK: - AgreementPresentableAction
 
 enum PasswordPresentableAction {
-    
+    case passwordsDidChange(password: String, repassword: String)
+    case confirmButtonDidTap(email: String)
 }
 
 // MARK: - PasswordPresentableListener
 
-protocol PasswordPresentableListener: AnyObject {
+protocol PasswordPresentableListener: AnyObject, HasErrorStream, HasLoadingStream {
     typealias Action = PasswordPresentableAction
     typealias State = PasswordPresentableState
     

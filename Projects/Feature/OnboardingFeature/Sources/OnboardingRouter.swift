@@ -9,10 +9,11 @@
 import RIBs
 
 import OnboardingFeatureInterface
+import RootTabBarFeatureInterface
 
 // MARK: - OnboardingInteractable
 
-protocol OnboardingInteractable: Interactable, EmailSignUpListener, LoggedInListener {
+protocol OnboardingInteractable: Interactable, EmailSignUpListener, LoggedInListener, AgreementListener, RootTabBarListener {
     var router: OnboardingRouting? { get set }
     var listener: OnboardingListener? { get set }
 }
@@ -31,19 +32,29 @@ final class OnboardingRouter:
     private let loggedInBuilder: LoggedInBuildable
     private var loggedInRouter: LoggedInRouting?
     
+    private let agreementBuilder: AgreementBuildable
+    private var agreementRouter: AgreementRouting?
+    
+    private let rootTabBarBuilder: RootTabBarBuildable
+    private var rootTabBarRouter: RootTabBarRouting?
+    
     init(
       interactor: OnboardingInteractable,
+      viewController: OnboardingViewControllable,
       signUpBuilder: EmailSignUpBuildable,
       loggedInBuilder: LoggedInBuildable,
-      viewController: OnboardingViewControllable
+      agreementBuilder: AgreementBuildable,
+      rootTabBarBuilder: RootTabBarBuildable
     ) {
         self.signUpBuilder = signUpBuilder
         self.loggedInBuilder = loggedInBuilder
+        self.agreementBuilder = agreementBuilder
+        self.rootTabBarBuilder = rootTabBarBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
     
-    func attachSignUpRIB() {
+    func attachEmailSignUpRIB() {
         guard self.signUpRouter == nil else { return }
         let router = self.signUpBuilder.build(
             with: EmailSignUpBuildDependency(
@@ -55,7 +66,7 @@ final class OnboardingRouter:
         viewController.push(viewController: router.viewControllable)
     }
     
-    func detachSignUpRIB() {
+    func detachEmailSignUpRIB() {
         guard let router = signUpRouter else { return }
         self.signUpRouter = nil
         detachChild(router)
@@ -79,4 +90,33 @@ final class OnboardingRouter:
         detachChild(router)
         viewController.pop(router.viewControllable)
     }
+    
+    func attachAgreewmentRIB() {
+        guard self.agreementRouter == nil else { return }
+        let router = self.agreementBuilder.build(
+            with: AgreementBuildDependency(
+                listener: interactor
+            )
+        )
+        attachChild(router)
+        viewController.push(viewController: router.viewControllable)
+    }
+    
+    func detachAgreementRIB() {
+        guard let router = agreementRouter else { return }
+        detachChild(router)
+        viewController.pop(router.viewControllable)
+    }
+    
+    func attachRootTabBarRIB() {
+        guard self.rootTabBarRouter == nil else { return }
+        let router = rootTabBarBuilder.build(
+            with: RootTabBarBuildDependency(
+                listener: interactor
+            )
+        )
+        attachChild(router)
+        viewController.presentFullScreen(router.viewControllable, animated: false, completion: nil)
+    }
+    
 }

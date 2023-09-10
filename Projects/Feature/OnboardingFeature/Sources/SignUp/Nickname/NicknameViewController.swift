@@ -44,33 +44,18 @@ final class NicknameViewController:
     
     // MARK: - UI Components
     
-    private lazy var headerView = OnBoardingHeaderView().builder
-        .with {
-            $0.fetchTitle(text: .signUp)
-        }
+    private lazy var headerTitleLabel = BaseLabel().builder
+        .text("OMOS에서 사용할\n이름을 입력해주세요.")
+        .textColor(.white)
+        .font(.boldSystemFont(ofSize: 24))
+        .numberOfLines(2)
         .build()
     
     private lazy var nicknameTextFieldView = CustomTextFieldView()
         .builder
         .with {
             $0.fetchLeftTopLabelText(text: .nickname)
-            $0.fetchLeftBottomLabelText(text: .nicknameWarning)
-        }
-        .build()
-    
-    private lazy var separatedLineView = UIView().builder
-        .backgroundColor(.mainGray7)
-        .build()
-    
-    private lazy var termAgreementView = AgreementView().builder
-        .with {
-            $0.setTermsGuideLabelText()
-        }
-        .build()
-    
-    private lazy var policyAgreementView = AgreementView().builder
-        .with {
-            $0.setPolicyGuideLabelText()
+            $0.fetchLeftBottomLabelText(text: "2~12자 이내로 입력해주세요." )
         }
         .build()
     
@@ -112,8 +97,9 @@ extension NicknameViewController {
 extension NicknameViewController {
     private func bind(listener: NicknamePresentableListener?) {
         guard let listener = listener else { return }
-        bindLoadingStream(from: listener)
-        bindErrorStream(from: listener)
+        bindActions()
+        bindActionRelay()
+        bindState(from: listener)
     }
     
     private func bindActionRelay() {
@@ -129,12 +115,8 @@ extension NicknameViewController {
 
 extension NicknameViewController {
     private func bindActions() {
-        self.bindNicknameTextFieldDidChange()
-        self.bindToggleTerms()
-        self.bindTogglePolicy()
-        self.bindShowTermsDetail()
-        self.bindShowPolicyDetail()
-        self.bindConfirmButton()
+        bindNicknameTextFieldDidChange()
+        bindConfirmButton()
     }
     
     private func bindNicknameTextFieldDidChange() {
@@ -144,48 +126,6 @@ extension NicknameViewController {
             .orEmpty
             .changed
             .map { .nicknameTextFieldDidChange(nickname: $0) }
-            .bind(to: self.actionRelay)
-            .disposed(by: disposeBag)
-    }
-    
-    private func bindToggleTerms() {
-        termAgreementView.checkCircleView
-            .rx
-            .tap
-            .preventDuplication()
-            .scan(false) { lastState, _ in !lastState }
-            .map { .toggleTerms(toggled: $0) }
-            .bind(to: self.actionRelay)
-            .disposed(by: disposeBag)
-    }
-    
-    private func bindTogglePolicy() {
-        policyAgreementView.checkCircleView
-            .rx
-            .tap
-            .preventDuplication()
-            .scan(false) { lastState, _ in !lastState }
-            .map { .togglePolicy(toggled: $0) }
-            .bind(to: self.actionRelay)
-            .disposed(by: disposeBag)
-    }
-    
-    private func bindShowTermsDetail() {
-        termAgreementView.showButton
-            .rx
-            .tap
-            .preventDuplication()
-            .map { .showTermsDetail }
-            .bind(to: self.actionRelay)
-            .disposed(by: disposeBag)
-    }
-    
-    private func bindShowPolicyDetail() {
-        policyAgreementView.showButton
-            .rx
-            .tap
-            .preventDuplication()
-            .map { .showPolicyDetail }
             .bind(to: self.actionRelay)
             .disposed(by: disposeBag)
     }
@@ -206,50 +146,40 @@ extension NicknameViewController {
 
 extension NicknameViewController {
     private func bindState(from listener: NicknamePresentableListener) {
-        
+        bindLoadingStream(from: listener)
+        bindErrorStream(from: listener)
+        bindisValidNicknameFormat(from: listener)
     }
+    
+    private func bindisValidNicknameFormat(from listener: NicknamePresentableListener) {
+        listener.state.map(\.isValidNicknameFormat)
+            .distinctUntilChanged()
+            .bind(to: self.nicknameTextFieldView.rx.isValidState, self.confirmButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+    }
+
 }
 
 // MARK: - Layout
 
 extension NicknameViewController {
     private func setupUI() {
-        contentView.addSubview(headerView)
+        contentView.addSubview(headerTitleLabel)
         contentView.addSubview(nicknameTextFieldView)
-        contentView.addSubview(separatedLineView)
-        contentView.addSubview(termAgreementView)
-        contentView.addSubview(policyAgreementView)
         contentView.addSubview(confirmButton)
         self.layout()
     }
     
     private func layout() {
-        headerView.snp.makeConstraints {
-            $0.height.equalTo(UI.headerViewHeight)
-            $0.leading.trailing.top.equalToSuperview()
+        headerTitleLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(30)
+            $0.left.equalToSuperview().offset(16)
         }
         nicknameTextFieldView.snp.makeConstraints {
-            $0.top.equalTo(headerView.snp.bottom).offset(20)
-            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
-        }
-        separatedLineView.snp.makeConstraints {
-            $0.top.equalTo(nicknameTextFieldView.snp.bottom).offset(26)
-            $0.height.equalTo(UI.separatedLineHeight)
-            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
-        }
-        termAgreementView.snp.makeConstraints {
-            $0.top.equalTo(separatedLineView.snp.bottom).offset(24)
-            $0.height.equalTo(UI.agreementHeight)
-            $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
-        }
-        policyAgreementView.snp.makeConstraints {
-            $0.top.equalTo(termAgreementView.snp.bottom).offset(12)
-            $0.height.equalTo(UI.agreementHeight)
+            $0.top.equalTo(headerTitleLabel.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
         }
         confirmButton.snp.makeConstraints {
-            $0.top.greaterThanOrEqualTo(policyAgreementView.snp.bottom).offset(100)
-                .priority(249)
             $0.height.equalTo(UI.confirmButtonHeight)
             $0.leading.trailing.equalToSuperview().inset(UI.leadingTrailingMargin)
             $0.bottom.equalToSuperview().offset(-34).priority(750)

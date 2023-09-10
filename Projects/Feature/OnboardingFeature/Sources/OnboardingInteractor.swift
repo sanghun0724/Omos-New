@@ -39,8 +39,8 @@ final class OnboardingInteractor:
         case setLoading(Bool)
         case attachSignUpRIB
         case attachLoggedInRIB
-        case attachAgreementRIB(email: String)
-        case attachTodayRIB
+        case attachAgreementRIB
+        case attachRootTabBarRIB
     }
      
     // MARK: - Properties
@@ -78,9 +78,9 @@ extension OnboardingInteractor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .didTapKakaoLoggedInButton:
-            return kakaoLoginMutation()
-        case .didTapAppleLoggedInButton:
-            return .empty()
+            return kakaoAuthMutation()
+        case let .didTapAppleLoggedInButton(email):
+            return appleAuthMutation(email: email)
         case .didTapEmailSingUpButton:
             return .just(.attachSignUpRIB)
         case .didTapEmailLoggedInButton:
@@ -88,22 +88,31 @@ extension OnboardingInteractor {
         }
     }
     
-    private func kakaoLoginMutation() -> Observable<Mutation> {
-        let kakaoLoginMutation: Observable<Mutation> = onboardingRepositoryService.kakaoLogin()
-            .map{ .attachAgreementRIB(email: $0) }
-            .catchAndReturn( .setError(.defaultError))
+    private func kakaoAuthMutation() -> Observable<Mutation> {
+        let kakaoAuthMutation: Observable<Mutation> = onboardingRepositoryService.kakaoLogin()
+            .debug("attach")
+            .map { $0 ? .attachRootTabBarRIB : .attachAgreementRIB }
         
         let sequence: [Observable<Mutation>] = [
             .just(.setLoading(true)),
-             kakaoLoginMutation,
+            kakaoAuthMutation,
             .just(.setLoading(false))
         ]
         
         return .concat(sequence)
     }
     
-    private func appleLogin() -> Observable<Mutation> {
-        return .empty()
+    private func appleAuthMutation(email: String) -> Observable<Mutation> {
+        let appleAuthMutation: Observable<Mutation> = onboardingRepositoryService.appleLogin(email: email)
+            .map { $0 ? .attachRootTabBarRIB : .attachAgreementRIB }
+        
+        let sequence: [Observable<Mutation>] = [
+            .just(.setLoading(true)),
+            appleAuthMutation,
+            .just(.setLoading(false))
+        ]
+        
+        return .concat(sequence)
     }
     
 }
@@ -120,6 +129,10 @@ extension OnboardingInteractor {
                     return owner.attachSignUpRIBTransform()
                 case .attachLoggedInRIB:
                     return owner.attachLoggedInRIBTransform()
+                case .attachAgreementRIB:
+                    return owner.attachAgreemntRIBTransform()
+                case .attachRootTabBarRIB:
+                    return owner.attachRootTabBarRIBTransform()
                 default:
                     return .just(mutation)
                 }
@@ -127,7 +140,7 @@ extension OnboardingInteractor {
     }
     
     private func attachSignUpRIBTransform() -> Observable<Mutation> {
-        self.router?.attachSignUpRIB()
+        self.router?.attachEmailSignUpRIB()
         return .empty()
     }
     
@@ -137,7 +150,12 @@ extension OnboardingInteractor {
     }
     
     private func attachAgreemntRIBTransform() -> Observable<Mutation> {
-        //self.router?.att()
+        self.router?.attachAgreewmentRIB()
+        return .empty()
+    }
+    
+    private func attachRootTabBarRIBTransform() -> Observable<Mutation> {
+        self.router?.attachRootTabBarRIB()
         return .empty()
     }
     
@@ -149,20 +167,13 @@ extension OnboardingInteractor {
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         
-//        switch mutation {
-//        case let .attachAgreementRIB(email):
-//            newState.testEmail = email
-//        default:
-//            print()
-//        }
-        
         return newState
     }
 }
 
 extension OnboardingInteractor {
     func detachSignUpRIB() {
-        self.router?.detachSignUpRIB()
+        self.router?.detachEmailSignUpRIB()
     }
     
     func detachLoggedInRIB() {

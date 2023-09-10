@@ -1,9 +1,15 @@
 // This is for Tuist
 
-// MARK: RecordRepositoryService
-
 import RxSwift
 
-public protocol RecordRepositoryService {
-    
+import CoreKit
+
+// MARK: - RecordRepositoryService
+
+public protocol RecordRepositoryService: MyRecordRepositoryService {}
+
+// MARK: - RecordRepositoryService
+
+public protocol MyRecordRepositoryService {
+    func requestMyRecords(userId: Int) -> Observable<Void>
 }

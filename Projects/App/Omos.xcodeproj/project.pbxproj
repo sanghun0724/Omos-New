@@ -11,11 +11,15 @@
 		03F3A8824729D43CD3164DCB /* KakaoSDKTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAFC68EF401055C943EADB2 /* KakaoSDKTemplate.framework */; platformFilter = ios; };
 		053741269F87BE410D32589D /* KakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC4FFA6C9F81106BB7817B6 /* KakaoSDKCommon.framework */; platformFilter = ios; };
 		0A40C79161523A984D1302EE /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3876FC3FB27253716E573AAD /* RxRelay.framework */; platformFilter = ios; };
+		0AB8CDC937D27BF180F95984 /* libMyDJFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8145CA7D0C006C17978EB0C /* libMyDJFeature.a */; platformFilter = ios; };
 		0EE00FA28B77FBEFE641139D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABDD4078CF7D17DE6B45A51 /* Alamofire.framework */; platformFilter = ios; };
 		0F109488CE3F91960CAC8865 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A74B82801B5EF3CE410687 /* Kingfisher.framework */; platformFilter = ios; };
 		0F346DB30214B040BF3D5EBF /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3876FC3FB27253716E573AAD /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0F517BABC429C19B8697D595 /* libMyRecordFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D067AF196B2F5C3E7B7CF70 /* libMyRecordFeature.a */; platformFilter = ios; };
 		1380744EA5056DD06469A25D /* libTodayFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D7BCB337F8244C8EC5E04C /* libTodayFeatureInterface.a */; platformFilter = ios; };
 		13D33BEE052D9FF1888A822E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E8905F662EA1075BDA0DC1 /* SceneDelegate.swift */; };
+		16537D7055DC784A7ECADD4C /* libMyPageFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A88C2CAFC85F41B3E754FBFB /* libMyPageFeature.a */; platformFilter = ios; };
+		25D016A4C46356FFC382A9D0 /* libRootTabBarFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 685AE2746A29F0C5CEF45163 /* libRootTabBarFeatureInterface.a */; platformFilter = ios; };
 		28B6EB70EA2D23021641DC53 /* libAppFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 637268A3C51591F755658002 /* libAppFoundation.a */; platformFilter = ios; };
 		2C88489C9E45AF5BF045AFAA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E017FF22B129F1A71DFFED4 /* RxCocoa.framework */; platformFilter = ios; };
 		30BEBD56CBBAEDA136D5E003 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8213ABE0D223B60EC5E8BC1D /* RxDataSources.framework */; platformFilter = ios; };
@@ -24,6 +28,8 @@
 		3BA5B9E7BD96DF85DB91BE4F /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2D53F6F351F4A88A2B22D1C /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E012176CDE27DC568639C16 /* libBaseFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2317EA32AF5DA3D02DFA86 /* libBaseFeature.a */; platformFilter = ios; };
 		40081EE34DE93DABB92C72B4 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7356AD78E8DB9CB1D99AE2 /* AppComponent.swift */; };
+		42446F0686B362ED26263691 /* libAllRecordFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA924B47E830E62701D4ED6 /* libAllRecordFeatureInterface.a */; platformFilter = ios; };
+		521206FDBAC72201E4AD164E /* libRootTabBarFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B58DEE207957541EBFACE9 /* libRootTabBarFeature.a */; platformFilter = ios; };
 		5A12966616E47F06C9B26649 /* KakaoSDKStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D10CB255A92621ACD0F83EB9 /* KakaoSDKStory.framework */; platformFilter = ios; };
 		5E8135D6B6240BB4E2E076B5 /* libBaseDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F405E7F266B542AC546336EB /* libBaseDomain.a */; platformFilter = ios; };
 		5EBC8F067DE9B7AE1219DFBB /* AppRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4037F1C2BB601FB6B4278C9B /* AppRootViewController.swift */; };
@@ -35,17 +41,21 @@
 		70C3783D35D2AD87255BE6E1 /* NeedleFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FBEC0A4D64373B977FA357 /* NeedleFoundation.framework */; platformFilter = ios; };
 		73C4738C7D527445D943854B /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 949193658CA08ACA9D3C0C3A /* DesignSystem_DesignSystem.bundle */; platformFilter = ios; };
 		7421CF2A2151EC24D71D121B /* libGlobalThirdPartyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1A892B4CB5512A8DA3189F /* libGlobalThirdPartyLibrary.a */; platformFilter = ios; };
+		7D8D67966B01AFDDAD712A34 /* libMyRecordFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2CB83203FA2FFAB67984C4 /* libMyRecordFeatureInterface.a */; platformFilter = ios; };
 		7DD0DF41C9863E5896E9CA6B /* KakaoSDKAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0E68589ABFF8F7670A7714 /* KakaoSDKAuth.framework */; platformFilter = ios; };
 		7E0EC3E6DF887B95EAE15E80 /* libOnboardingFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A84ABC3F53EFBDE33F142D60 /* libOnboardingFeature.a */; platformFilter = ios; };
 		7F6A3146B08F1CB86D3227C7 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377F62FB0F38A7B71038D80A /* RIBs.framework */; platformFilter = ios; };
+		7FCFF3ED84611BE5AA8943FE /* libMyDJFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC370163F6FDB67E75D8574E /* libMyDJFeatureInterface.a */; platformFilter = ios; };
 		83705DD68E68E3EB45259AA0 /* RxKakaoSDKTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222853300665B7F32A167F79 /* RxKakaoSDKTalk.framework */; platformFilter = ios; };
 		848A9E396DCE0FEAC6A83DA3 /* WeakMapTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E971289775DF719BC349E9 /* WeakMapTable.framework */; platformFilter = ios; };
 		89AD90EF914B0A8122094B09 /* libOnboardingFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 580FDC770878ED00AF97BAB9 /* libOnboardingFeatureInterface.a */; platformFilter = ios; };
 		8A4A56F369E2459F1990AEF2 /* KakaoSDKUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C826A8A03634A49EA5F5AA5 /* KakaoSDKUser.framework */; platformFilter = ios; };
+		8E3E766B8948F6EB85E544C1 /* libTodayDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D287877CE9C7BB0FBBC3E8E /* libTodayDomain.a */; platformFilter = ios; };
 		92C90D728BF574FEC646AA1D /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247ABF188E39437F1BBAB4DF /* Differentiator.framework */; platformFilter = ios; };
 		98E7D4D43D8B1A9F2314CC1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEABA9A2C7C383FBFB9BAABC /* LaunchScreen.storyboard */; };
 		990D300B2350B351DBC5664F /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 949193658CA08ACA9D3C0C3A /* DesignSystem_DesignSystem.bundle */; };
 		9B525C715C378E59EE91D8A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAC14283CECB75004D11225 /* AppDelegate.swift */; };
+		9D70C9FF2A0D85194E31258C /* libTodayDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F0677A630FA7FE144D3DE1 /* libTodayDomainInterface.a */; platformFilter = ios; };
 		9FFC8E6338EF31B79801E727 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFF48CECD97F065A1E580E0 /* SnapKit.framework */; platformFilter = ios; };
 		A254AF21D523526A7C47EC18 /* LogFlume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE6677AF6A28F9FB6961062 /* LogFlume.framework */; platformFilter = ios; };
 		A3F5139CCA063416E6B212E6 /* TuistAssets+Omos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB880C4CB4E436D170DA3B3E /* TuistAssets+Omos.swift */; };
@@ -55,6 +65,7 @@
 		B2325C229B8D09E0FDFF5719 /* RxKakaoSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79CC3B1401C3633C0D73C62 /* RxKakaoSDKCommon.framework */; platformFilter = ios; };
 		B28E8EAD42D799037247C2F6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D53F6F351F4A88A2B22D1C /* RxSwift.framework */; platformFilter = ios; };
 		B2A1A07804870913EF938BD2 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E017FF22B129F1A71DFFED4 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B34B02B15C63074787ABDC23 /* libAllRecordFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F932BE16F02FE773D5E029E5 /* libAllRecordFeature.a */; platformFilter = ios; };
 		B7CCCB436023A72676A9A4E7 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC117193BDD96B3DF6977E8A /* SkeletonView.framework */; platformFilter = ios; };
 		C142E6B1D4418C09D58E3C92 /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2E1BEBBA263B4BA466C546 /* AppRootInteractor.swift */; };
 		C89B897CA9339C241B59CC38 /* libRecordDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 420697B096057DA4FA7D602C /* libRecordDomain.a */; platformFilter = ios; };
@@ -67,6 +78,7 @@
 		DFFD2ACB22DA7F73CFE07A47 /* libTodayFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0793D243A463AA8298D613F /* libTodayFeature.a */; platformFilter = ios; };
 		E268D2826BE9CB93CC296F6E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2B728921F036B2337BAB1B /* CFNetwork.framework */; };
 		E4B682BF127DC2486F60823B /* libOnboardingDomainInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E73DB3A3CBDC6B2E31B4140 /* libOnboardingDomainInterface.a */; platformFilter = ios; };
+		E8FF88F24FCEC7F1CAEA88BE /* libMyPageFeatureInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E77BC14A8413378890EFD7 /* libMyPageFeatureInterface.a */; platformFilter = ios; };
 		F38EE96BC6E7B38656108546 /* libBaseShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B68A62B787657B5F5BF2A907 /* libBaseShared.a */; platformFilter = ios; };
 		F7979D9C149FC0FAC756110C /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAFF48CECD97F065A1E580E0 /* SnapKit.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7F8F299271C9D058F5C32E1 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70403215A94A6C3084293C67 /* ReactorKit.framework */; platformFilter = ios; };
@@ -109,11 +121,13 @@
 		1EE6677AF6A28F9FB6961062 /* LogFlume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogFlume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EC0B2676F2342A3B24ADA0 /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		222853300665B7F32A167F79 /* RxKakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B58DEE207957541EBFACE9 /* libRootTabBarFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRootTabBarFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		247ABF188E39437F1BBAB4DF /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2758EC3F561D4F7008FAABB6 /* Omos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28AA039154BA7252DE42107D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		377F62FB0F38A7B71038D80A /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3876FC3FB27253716E573AAD /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2CB83203FA2FFAB67984C4 /* libMyRecordFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4037F1C2BB601FB6B4278C9B /* AppRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewController.swift; sourceTree = "<group>"; };
 		41B8FF7940D72656A1303AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		420697B096057DA4FA7D602C /* libRecordDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +137,8 @@
 		580FDC770878ED00AF97BAB9 /* libOnboardingFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2317EA32AF5DA3D02DFA86 /* libBaseFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		637268A3C51591F755658002 /* libAppFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		685AE2746A29F0C5CEF45163 /* libRootTabBarFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRootTabBarFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D067AF196B2F5C3E7B7CF70 /* libMyRecordFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyRecordFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E017FF22B129F1A71DFFED4 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70403215A94A6C3084293C67 /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D7BCB337F8244C8EC5E04C /* libTodayFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,11 +149,14 @@
 		8213ABE0D223B60EC5E8BC1D /* RxDataSources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDataSources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E971289775DF719BC349E9 /* WeakMapTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeakMapTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2E1BEBBA263B4BA466C546 /* AppRootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootInteractor.swift; sourceTree = "<group>"; };
+		8D287877CE9C7BB0FBBC3E8E /* libTodayDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F0677A630FA7FE144D3DE1 /* libTodayDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		949193658CA08ACA9D3C0C3A /* DesignSystem_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystem_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9FA0D3D70D8286BD72351C /* libDesignSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDesignSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0793D243A463AA8298D613F /* libTodayFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTodayFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60EC534FEFBF0FFD9BF2861 /* KakaoSDKTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84ABC3F53EFBDE33F142D60 /* libOnboardingFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnboardingFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A88C2CAFC85F41B3E754FBFB /* libMyPageFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyPageFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A74B82801B5EF3CE410687 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96DA0076A6D28DD5E58F85C /* RxKakaoSDKUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE0E68589ABFF8F7670A7714 /* KakaoSDKAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +164,7 @@
 		B36D951AE88840CE59C0ACD8 /* KakaoSDKShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6834307758ED8B4AF29C593 /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactorKitRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68A62B787657B5F5BF2A907 /* libBaseShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8145CA7D0C006C17978EB0C /* libMyDJFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyDJFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC117193BDD96B3DF6977E8A /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCAD8577C94E5B9911392CE1 /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C553D9E2779FD4FA701913B1 /* libRecordDomainInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRecordDomainInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,12 +179,16 @@
 		DCC4FFA6C9F81106BB7817B6 /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE64B846B46E0A9C9E23AE92 /* RxKakaoSDKStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKakaoSDKStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D53F6F351F4A88A2B22D1C /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E77BC14A8413378890EFD7 /* libMyPageFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyPageFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E8905F662EA1075BDA0DC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E8454080427ADA90ECBB2DAA /* TuistBundle+Omos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Omos.swift"; sourceTree = "<group>"; };
+		EC370163F6FDB67E75D8574E /* libMyDJFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyDJFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2B728921F036B2337BAB1B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		F2763B110DE66D545494E2AC /* RxAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405E7F266B542AC546336EB /* libBaseDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBaseDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D6307A8145B393203D2931 /* AppRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootRouter.swift; sourceTree = "<group>"; };
+		F932BE16F02FE773D5E029E5 /* libAllRecordFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAllRecordFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEA924B47E830E62701D4ED6 /* libAllRecordFeatureInterface.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAllRecordFeatureInterface.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAC14283CECB75004D11225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +199,8 @@
 			files = (
 				E268D2826BE9CB93CC296F6E /* CFNetwork.framework in Frameworks */,
 				0EE00FA28B77FBEFE641139D /* Alamofire.framework in Frameworks */,
+				B34B02B15C63074787ABDC23 /* libAllRecordFeature.a in Frameworks */,
+				42446F0686B362ED26263691 /* libAllRecordFeatureInterface.a in Frameworks */,
 				28B6EB70EA2D23021641DC53 /* libAppFoundation.a in Frameworks */,
 				5E8135D6B6240BB4E2E076B5 /* libBaseDomain.a in Frameworks */,
 				3E012176CDE27DC568639C16 /* libBaseFeature.a in Frameworks */,
@@ -192,6 +218,12 @@
 				8A4A56F369E2459F1990AEF2 /* KakaoSDKUser.framework in Frameworks */,
 				0F109488CE3F91960CAC8865 /* Kingfisher.framework in Frameworks */,
 				A254AF21D523526A7C47EC18 /* LogFlume.framework in Frameworks */,
+				0AB8CDC937D27BF180F95984 /* libMyDJFeature.a in Frameworks */,
+				7FCFF3ED84611BE5AA8943FE /* libMyDJFeatureInterface.a in Frameworks */,
+				16537D7055DC784A7ECADD4C /* libMyPageFeature.a in Frameworks */,
+				E8FF88F24FCEC7F1CAEA88BE /* libMyPageFeatureInterface.a in Frameworks */,
+				0F517BABC429C19B8697D595 /* libMyRecordFeature.a in Frameworks */,
+				7D8D67966B01AFDDAD712A34 /* libMyRecordFeatureInterface.a in Frameworks */,
 				70C3783D35D2AD87255BE6E1 /* NeedleFoundation.framework in Frameworks */,
 				6C10078D7C03F2B0BB6D370A /* libOnboardingDomain.a in Frameworks */,
 				E4B682BF127DC2486F60823B /* libOnboardingDomainInterface.a in Frameworks */,
@@ -202,6 +234,8 @@
 				61B4583AA678AD543E10FCA9 /* ReactorKitRuntime.framework in Frameworks */,
 				C89B897CA9339C241B59CC38 /* libRecordDomain.a in Frameworks */,
 				B0CF1649A6B757BE66485224 /* libRecordDomainInterface.a in Frameworks */,
+				521206FDBAC72201E4AD164E /* libRootTabBarFeature.a in Frameworks */,
+				25D016A4C46356FFC382A9D0 /* libRootTabBarFeatureInterface.a in Frameworks */,
 				CA9AEF18B55B111DD37D081F /* RxAlamofire.framework in Frameworks */,
 				2C88489C9E45AF5BF045AFAA /* RxCocoa.framework in Frameworks */,
 				30BEBD56CBBAEDA136D5E003 /* RxDataSources.framework in Frameworks */,
@@ -216,6 +250,8 @@
 				B28E8EAD42D799037247C2F6 /* RxSwift.framework in Frameworks */,
 				B7CCCB436023A72676A9A4E7 /* SkeletonView.framework in Frameworks */,
 				9FFC8E6338EF31B79801E727 /* SnapKit.framework in Frameworks */,
+				8E3E766B8948F6EB85E544C1 /* libTodayDomain.a in Frameworks */,
+				9D70C9FF2A0D85194E31258C /* libTodayDomainInterface.a in Frameworks */,
 				DFFD2ACB22DA7F73CFE07A47 /* libTodayFeature.a in Frameworks */,
 				1380744EA5056DD06469A25D /* libTodayFeatureInterface.a in Frameworks */,
 				848A9E396DCE0FEAC6A83DA3 /* WeakMapTable.framework in Frameworks */,
@@ -342,6 +378,8 @@
 				7EAFC68EF401055C943EADB2 /* KakaoSDKTemplate.framework */,
 				4C826A8A03634A49EA5F5AA5 /* KakaoSDKUser.framework */,
 				A8A74B82801B5EF3CE410687 /* Kingfisher.framework */,
+				F932BE16F02FE773D5E029E5 /* libAllRecordFeature.a */,
+				FEA924B47E830E62701D4ED6 /* libAllRecordFeatureInterface.a */,
 				637268A3C51591F755658002 /* libAppFoundation.a */,
 				F405E7F266B542AC546336EB /* libBaseDomain.a */,
 				5A2317EA32AF5DA3D02DFA86 /* libBaseFeature.a */,
@@ -349,12 +387,22 @@
 				7E98D24A5213E68BF2B75A98 /* libCoreKit.a */,
 				9A9FA0D3D70D8286BD72351C /* libDesignSystem.a */,
 				0A1A892B4CB5512A8DA3189F /* libGlobalThirdPartyLibrary.a */,
+				B8145CA7D0C006C17978EB0C /* libMyDJFeature.a */,
+				EC370163F6FDB67E75D8574E /* libMyDJFeatureInterface.a */,
+				A88C2CAFC85F41B3E754FBFB /* libMyPageFeature.a */,
+				E5E77BC14A8413378890EFD7 /* libMyPageFeatureInterface.a */,
+				6D067AF196B2F5C3E7B7CF70 /* libMyRecordFeature.a */,
+				3B2CB83203FA2FFAB67984C4 /* libMyRecordFeatureInterface.a */,
 				7CA1B46C5F7F9A2048EF250E /* libOnboardingDomain.a */,
 				1E73DB3A3CBDC6B2E31B4140 /* libOnboardingDomainInterface.a */,
 				A84ABC3F53EFBDE33F142D60 /* libOnboardingFeature.a */,
 				580FDC770878ED00AF97BAB9 /* libOnboardingFeatureInterface.a */,
 				420697B096057DA4FA7D602C /* libRecordDomain.a */,
 				C553D9E2779FD4FA701913B1 /* libRecordDomainInterface.a */,
+				23B58DEE207957541EBFACE9 /* libRootTabBarFeature.a */,
+				685AE2746A29F0C5CEF45163 /* libRootTabBarFeatureInterface.a */,
+				8D287877CE9C7BB0FBBC3E8E /* libTodayDomain.a */,
+				92F0677A630FA7FE144D3DE1 /* libTodayDomainInterface.a */,
 				A0793D243A463AA8298D613F /* libTodayFeature.a */,
 				75D7BCB337F8244C8EC5E04C /* libTodayFeatureInterface.a */,
 				1EE6677AF6A28F9FB6961062 /* LogFlume.framework */,

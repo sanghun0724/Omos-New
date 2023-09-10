@@ -8,12 +8,15 @@
 import NeedleFoundation
 
 import CoreKit
+import BaseDomain
 import OnboardingDomain
 import OnboardingDomainInterface
 import TodayFeature
 import TodayFeatureInterface
-import OnboardingFeature
-import OnboardingFeatureInterface
+import RootTabBarFeature
+import RootTabBarFeatureInterface
+import RecordDomain
+import RecordDomainInterface
 
 // MARK: AppComponent
 
@@ -27,45 +30,46 @@ final class AppComponent: BootstrapComponent, AppRootDependency {
     
     var onboardingRepositoryService: OnboardingRepositoryService {
         shared {
-            OnboardingRespositoryServiceImpl(
+            OnboardingRepositoryServiceImpl(
                 onboardingRepository: onboardingRepository
             )
         }
     }
     
-    var onboardingBuilder: OnboardingBuildable {
-        OnboardingBuilder {
-            OnboardingComponent(parent: self)
-        }
-    }
-    
-    var loggedInBuilder: LoggedInBuildable {
-        LoggedInBuilder {
-            LoggedInComponent(parent: self)
-        }
-    }
-    
-    var signUpBuilder: EmailSignUpBuildable {
-        EmailSignUpBuilder {
-            EmailSignUpComponent(parent: self)
-        }
-    }
-    
     var todayBuilder: TodayBuildable {
-      TodayBuilder {
-        TodayComponent(parent: self)
-      }
+        TodayBuilder {
+            TodayComponent(parent: self)
+        }
     }
     
-    var nicknameBuilder: NicknameBuildable {
-        NicknameBuilder {
-            NicknameComponent(parent: self)
+    var rootTabBarBuilder: RootTabBarBuildable {
+        RootTabBarBuilder {
+            RootTabBarComponent(parent: self)
         }
+    }
+    
+    var imagePrefetchWorker: ImagePrefetchWorking {
+        ImagePrefetchWorker()
+    }
+    
+    var recordRepositoryService: RecordRepositoryService {
+        RecordRepositoryServiceImpl(
+            recordRepository: recordRepository,
+            recordTranslator: recordTranslator
+        )
     }
 }
 
 extension AppComponent {
     private var onboardingRepository: OnboardingRepository {
         OnboardingRepositoryImpl(networkingProvider: Networking())
+    }
+    
+    private var recordRepository: RecordRepository {
+        RecordRepositoryImpl(networkingProvider: Networking())
+    }
+    
+    private var recordTranslator: RecordTranslator {
+        RecordTranslatorImpl()
     }
 }

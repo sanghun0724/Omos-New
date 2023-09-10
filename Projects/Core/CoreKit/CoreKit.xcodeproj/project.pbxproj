@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -45,6 +45,8 @@
 		D816B1780E843083DE00764E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487B4F323788166A17E3A12C /* NetworkError.swift */; };
 		DAC9719F7B20B3BB5B1D3154 /* FollowTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E56C195F9258C5DC09581 /* FollowTarget.swift */; };
 		DC6006CD69243C308A6A5C6A /* MyProfileTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F58394A1C1BE1152F8B2D9 /* MyProfileTarget.swift */; };
+		DEC2C9542AA749F500B1C17B /* TodayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC2C9532AA749F500B1C17B /* TodayRepository.swift */; };
+		DEC2C9612AA76AE200B1C17B /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC2C9602AA76AE200B1C17B /* Common.swift */; };
 		DF52B0CF131CC5CD34AA2548 /* ArtistDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078BF909A104365502169B8C /* ArtistDetail.swift */; };
 		E7B70C5326C3EF36F05E7CE1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04118D6F3865B3B58BE3C2AB /* Networking.swift */; };
 		E9A145F9A55ABD2ED860A9D1 /* AwsS3Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DE057BEF51F394CF319B63 /* AwsS3Target.swift */; };
@@ -121,6 +123,8 @@
 		D9D021161D60715A436AC0DA /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
 		DC0575BD15390ED22D354CE0 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		DC2E56C195F9258C5DC09581 /* FollowTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTarget.swift; sourceTree = "<group>"; };
+		DEC2C9532AA749F500B1C17B /* TodayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRepository.swift; sourceTree = "<group>"; };
+		DEC2C9602AA76AE200B1C17B /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		E99133C7BB8685E94473F870 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		F8F58394A1C1BE1152F8B2D9 /* MyProfileTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTarget.swift; sourceTree = "<group>"; };
 		FA98E8D867FD0FFCEFE5E29E /* MyRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestInterceptor.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		24C64756D1ABCD593F208830 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				DEC2C95F2AA76AD700B1C17B /* Common */,
 				B2226179B23DBCBC9E7486F4 /* AuthModel */,
 				4CB5DD402BD96D9F7948D4E3 /* Others */,
 				EF2E28B694240727B1D6C8FF /* RecordModel */,
@@ -321,6 +326,7 @@
 				BCE3A9F4489BE41CA910EEDC /* NetworkRepository.swift */,
 				9756D67C025C8CF4D2333D09 /* OnboardingRepository.swift */,
 				83273A73048ECAE12F1C27F1 /* RecordRepository.swift */,
+				DEC2C9532AA749F500B1C17B /* TodayRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -340,6 +346,14 @@
 				5EB3402BBA6312A8B7B880C4 /* NetworkError */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DEC2C95F2AA76AD700B1C17B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DEC2C9602AA76AE200B1C17B /* Common.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		EB9FA7D16BAC6FC2787DE78C /* Record */ = {
@@ -421,8 +435,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Omos;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = D8FC987517002C0F6AD061BF /* Build configuration list for PBXProject "CoreKit" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -473,6 +485,7 @@
 				7D13E0EB6A0F5DE495BDDFBF /* MyProfileAPI.swift in Sources */,
 				DC6006CD69243C308A6A5C6A /* MyProfileTarget.swift in Sources */,
 				E9A145F9A55ABD2ED860A9D1 /* AwsS3Target.swift in Sources */,
+				DEC2C9612AA76AE200B1C17B /* Common.swift in Sources */,
 				88D0E5CEC3832BBFB07047D4 /* RecordAPI.swift in Sources */,
 				C06D4E41C39564BEB8208A9F /* RecordTarget.swift in Sources */,
 				05FDE3614AE6501CF1E70CB6 /* SearchAPI.swift in Sources */,
@@ -487,6 +500,7 @@
 				51A0C13C046A9DE82C0AE56D /* UserDetail.swift in Sources */,
 				B137A168EA073C26B61B0CFD /* Lists.swift in Sources */,
 				F7747FD6FDE1644DA23A9D9D /* MyProfile.swift in Sources */,
+				DEC2C9542AA749F500B1C17B /* TodayRepository.swift in Sources */,
 				C76250D2EBE358CE1F21FD23 /* Today.swift in Sources */,
 				0CCFEBCD8A65443F3F5D67FE /* Category.swift in Sources */,
 				286CAE611CDD0C18C9AE28C6 /* MyDJ.swift in Sources */,

@@ -15,11 +15,34 @@ import AppFoundation
 import CoreKit
 import RecordDomainInterface
 
-public class RecordRepositoryServiceImpl {
-    private let recordRepositoryService: RecordRepositoryService
+// MARK: - RecordRepositoryServiceImpl
+
+public final class RecordRepositoryServiceImpl: RecordRepositoryService {
+    private let recordRepository: RecordRepository
+    private let recordTranslator: RecordTranslator
     
-    public init(recordRepositoryService: RecordRepositoryService) {
-        self.recordRepositoryService = recordRepositoryService
+    public init(
+        recordRepository: RecordRepository,
+        recordTranslator: RecordTranslator
+    ) {
+        self.recordRepository = recordRepository
+        self.recordTranslator = recordTranslator
     }
+    
+    public func requestMyRecords(userId: Int) -> Observable<Void> {
+        recordRepository.requestMyRecord(request: .init(userId: userId))
+            .asObservable()
+            .map(MyRecordModel.init(myRecordResponse:))
+            
+        return .empty()
+    }
+    
+    func update() {}
+    
+    func remove() {}
+    
+    func create() {}
+    
 }
+
 

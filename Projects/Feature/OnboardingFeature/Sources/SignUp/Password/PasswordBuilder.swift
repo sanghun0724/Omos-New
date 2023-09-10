@@ -10,15 +10,19 @@ import NeedleFoundation
 import RIBs
 
 import OnboardingFeatureInterface
+import OnboardingDomainInterface
 
 // MARK: - PasswordDependency
 
-protocol PasswordDependency: NeedleFoundation.Dependency {}
+public protocol PasswordDependency: NeedleFoundation.Dependency {
+    var onboardingRepositoryService: OnboardingRepositoryService { get }
+    var agreementBuilder: AgreementBuildable { get }
+}
 
 
 // MARK: - PasswordComponent
 
-final class PasswordComponent: NeedleFoundation.Component<PasswordDependency> {
+public final class PasswordComponent: NeedleFoundation.Component<PasswordDependency> {
     fileprivate var initialState: PasswordPresentableState {
         PasswordPresentableState()
     }
@@ -26,19 +30,27 @@ final class PasswordComponent: NeedleFoundation.Component<PasswordDependency> {
 
 // MARK: - PasswordBuilder
 
-final class PasswordBuilder:
+public final class PasswordBuilder:
     ComponentizedBuilder<PasswordComponent, PasswordRouting, PasswordBuildDependency, Void>,
     PasswordBuildable
 {
 
-    override func build(
+    public override func build(
       with component: PasswordComponent,
       _ payload: PasswordBuildDependency
     ) -> PasswordRouting {
         let viewController = PasswordViewController()
-        let interactor = PasswordInteractor(presenter: viewController, initialState: component.initialState)
+        let interactor = PasswordInteractor(
+            onboardingRepositoryService: component.onboardingRepositoryService,
+            presenter: viewController,
+            initialState: component.initialState
+        )
         
         interactor.listener = payload.listener
-        return PasswordRouter(interactor: interactor, viewController: viewController)
+        return PasswordRouter(
+            interactor: interactor,
+            viewController: viewController,
+            agreementBuilder: component.agreementBuilder
+        )
     }
 }

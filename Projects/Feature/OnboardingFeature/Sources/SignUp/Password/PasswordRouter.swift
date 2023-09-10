@@ -12,7 +12,7 @@ import OnboardingFeatureInterface
 
 // MARK: - PasswordInteractable
 
-protocol PasswordInteractable: Interactable {
+protocol PasswordInteractable: Interactable, AgreementListener {
     var router: PasswordRouting? { get set }
     var listener: PasswordListener? { get set }
 }
@@ -25,12 +25,35 @@ final class PasswordRouter:
   ViewableRouter<PasswordInteractable, PasswordViewControllable>,
   PasswordRouting
 {
+    private let agreementBuilder: AgreementBuildable
+    private var agreementRouter: AgreementRouting?
 
-    override init(
+     init(
       interactor: PasswordInteractable,
-      viewController: PasswordViewControllable
+      viewController: PasswordViewControllable,
+      agreementBuilder: AgreementBuildable
     ) {
+        self.agreementBuilder = agreementBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
+    }
+    
+    func attachAgreementRIB() {
+        guard self.agreementRouter == nil else { return }
+        let router = self.agreementBuilder.build(
+            with: AgreementBuildDependency(
+                listener: interactor
+            )
+        )
+        self.agreementRouter = router
+        attachChild(router)
+        viewController.push(viewController: router.viewControllable)
+    }
+    
+    func detachAgreementRIB() {
+        guard let router = agreementRouter else { return }
+        self.agreementRouter = nil
+        detachChild(router)
+        viewController.pop(router.viewControllable)
     }
 }
